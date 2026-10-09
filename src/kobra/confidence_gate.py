@@ -5,6 +5,8 @@ not the probability that an individual sentence is correct. No calibration is
 inferred from successful schema checks or reused development scores.
 """
 from dataclasses import dataclass
+from copy import deepcopy
+from .context_ledger import context_snapshot
 import math
 import re
 from .selection_read import ACTS, SLOTS, SPECIAL
@@ -114,8 +116,10 @@ class GatedRuleReader:
         self.assigner, self.gate, self.resolver = assigner, gate, resolver
         self.model_cohort = model_cohort
 
-    def read(self, text, *, world=None, history=(), missing_context=()):
-        world = world or {}
+    def read(self, text, *, world=None, history=(), missing_context=(), context_claims=()):
+        world = deepcopy(world or {})
+        history = deepcopy(list(history))
+        ledger = context_snapshot(history, world, context_claims)
         code = self.assigner.assign(text)
         proposal = code
         origin = 'code' if code['route'] == 'code' else 'unresolved'
@@ -125,11 +129,13 @@ class GatedRuleReader:
             if self.resolver is not None:
                 origin = 'AI'
                 try:
-                    proposal = self.resolver({'source':text, 'code_proposal':code,
-                                              'world':world, 'history':list(history)})
+                    proposal = self.resolver({'source':text, 'code_proposal':deepcopy(code),
+                                              'world':deepcopy(world), 'history':deepcopy(history),
+                                              'context_ledger':deepcopy(ledger)})
                 except Exception as exc:
                     proposal = {'error_type':type(exc).__name__}
         result = self.gate.assess(text, proposal, cohort=cohort, world_ids=tuple(world), missing_context=missing_context)
+        result['context_ledger'] = ledger
         result['assignment_source'] = origin
         result['code_proposal'] = code
         return result

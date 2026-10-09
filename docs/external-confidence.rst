@@ -54,3 +54,13 @@ score. The gate wrapper records whether a proposal came from code or AI.
 Tests exercise all three routes and the error categories with fixture resolvers
 and explicitly synthetic calibration. These are contract tests, not measured AI
 accuracy. No live three-way accuracy or held-out calibration is claimed.
+
+Prior-context evidence
+----------------------
+
+The gated reader now attaches context_ledger to every result. It preserves exact
+supplied history, WORLD entity records and mention spans, and optional explicit
+context_claims with source quotes/status/correction links. No context is invented
+when history is absent. Both source snapshots and resolver inputs are copied so
+a resolver cannot rewrite the evidence against which its output is checked.
+See current-state.rst for integration boundaries and unmigrated memory components.

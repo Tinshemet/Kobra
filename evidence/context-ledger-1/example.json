@@ -1,0 +1,55 @@
+{
+  "version": "context-ledger-1",
+  "previous_turns": [
+    {
+      "id": "u1",
+      "role": "user",
+      "content": "Use the blue box.",
+      "sha256": "d8d5cc4ba70b16136b5418f340fcf241d3728a2b32f5b3f0695f2f9754eab725"
+    },
+    {
+      "id": "u2",
+      "role": "user",
+      "content": "Correction: use the red box.",
+      "sha256": "5dfb4b6d91261ca9f3d78109e0375012da5076d2339704fafb66ed6a31ac216e"
+    }
+  ],
+  "world_entities": [
+    {
+      "id": "blue-box",
+      "record": {
+        "name": "blue box"
+      },
+      "mentions": [
+        {
+          "turn_id": "u1",
+          "start": 8,
+          "end": 16,
+          "text": "blue box"
+        }
+      ],
+      "provenance": "caller_supplied_WORLD",
+      "truth_status": "not_verified_by_READ"
+    },
+    {
+      "id": "red-box",
+      "record": {
+        "name": "red box"
+      },
+      "mentions": [
+        {
+          "turn_id": "u2",
+          "start": 20,
+          "end": 27,
+          "text": "red box"
+        }
+      ],
+      "provenance": "caller_supplied_WORLD",
+      "truth_status": "not_verified_by_READ"
+    }
+  ],
+  "claims": [],
+  "history_supplied": true,
+  "world_supplied": true,
+  "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+}

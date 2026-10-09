@@ -1,0 +1,28 @@
+{
+  "scope": [
+    "src/kobra/context_ledger.py",
+    "src/kobra/confidence_gate.py",
+    "tests/test_context_ledger.py",
+    "reports/read-pipeline-current.html"
+  ],
+  "outcome": "reviewed; identified mutations and correction-cycle risks addressed before commit",
+  "checks": [
+    "Source quotes and turn IDs validated; absent history stays absent",
+    "Entity mentions explicitly distinguished from facts and identity resolution",
+    "Resolver receives copies of WORLD, history, code proposal and context snapshot",
+    "Supersession cannot reference missing claims or form cycles",
+    "HTML distinguishes implemented paths from missing archive, active library, memory and dialogue loop",
+    "Serpent companion reverse-apply check passed; original sealed files unchanged"
+  ],
+  "validation": "147 Kobra tests run: 146 passed, 1 optional skip; 179 Serpent tests passed; HTML syntax parsed and stage links checked",
+  "source_sha256": {
+    "src/kobra/context_ledger.py": "af65340227950da8cde5be0175ff7e8a5d7dc6f7d2c940944a4fade27895000f",
+    "src/kobra/confidence_gate.py": "d4ef0cea3b3a499a91e3871033ca473c717209142ea9a9fdc17a158cf56e048c",
+    "tests/test_context_ledger.py": "f857de46beadb8c70ee2eb3bc4068a790278f53bb501df040f690356154a5250",
+    "reports/read-pipeline-current.html": "f4a60f636ff03b0408f71560c6f01a70b65127a3a56aa3a77809c166d19603b5"
+  },
+  "limitations": [
+    "No automatic fact extraction, persistence, truth verification or archive lookup",
+    "No new language-accuracy experiment; prior development scores remain development evidence"
+  ]
+}
