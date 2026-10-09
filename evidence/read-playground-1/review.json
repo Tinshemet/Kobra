@@ -1,0 +1,27 @@
+{
+  "scope": [
+    "tools/read_playground.py",
+    "tests/test_read_playground.py",
+    "reports/read-pipeline-current.html"
+  ],
+  "review": "Reviewed local request boundary, parser serialization, no-model path, response rendering and stale-result handling before commit.",
+  "checks": [
+    "Loopback bind; origin and host checked; no arbitrary file serving",
+    "Only text input accepted; size and shape bounded; no text logging or storage",
+    "GatedRuleReader constructed with resolver=None",
+    "API returns code proposal separately from gate decision",
+    "Browser uses textContent, abort and revision checks for responses",
+    "Actual endpoint tests and live API smoke passed; embedded JSON and JavaScript syntax validated"
+  ],
+  "validation": "152 tests run: 151 passed, 1 optional skip; five live-server tests included",
+  "limitations": [
+    "Learned grammatical parser remains in use",
+    "No held-out calibration installed; uncalibrated results route to ASK",
+    "No history or WORLD editor in this textbox version"
+  ],
+  "hashes": {
+    "tools/read_playground.py": "b70e7359dd75acb2ed337a0753e892c8d18253d688aa21e73972160258351d2f",
+    "tests/test_read_playground.py": "59828687aa5c237893ae4f281d9380aff6c563d6314730d65e527d761abcd1b8",
+    "reports/read-pipeline-current.html": "e6665f601ec0f69169ee3a669b0870ed8f4e84cad36256e770eeaed55fdb21d5"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "source": "Cancel the subscription.",
+  "generative_ai_called": false,
+  "parser": "spaCy en_core_web_sm (learned grammar parser)",
+  "code_proposal": {
+    "source": "Cancel the subscription.",
+    "frames": [
+      {
+        "predicate": "Cancel",
+        "agent": "NONE",
+        "patient": "the subscription",
+        "recipient": "NONE",
+        "negation": "NONE",
+        "condition": "NONE",
+        "time": "NONE",
+        "quantity": "NONE",
+        "attribution": "NONE",
+        "modality": "NONE",
+        "act": "request"
+      }
+    ],
+    "route": "code",
+    "rules": [
+      "C002-active-roles"
+    ],
+    "reasons": [],
+    "semantic_verified": false,
+    "version": "rule-assignment-1"
+  },
+  "tokens": [
+    {
+      "text": "Cancel",
+      "pos": "VERB",
+      "dependency": "ROOT",
+      "head": "Cancel"
+    },
+    {
+      "text": "the",
+      "pos": "DET",
+      "dependency": "det",
+      "head": "subscription"
+    },
+    {
+      "text": "subscription",
+      "pos": "NOUN",
+      "dependency": "dobj",
+      "head": "Cancel"
+    },
+    {
+      "text": ".",
+      "pos": "PUNCT",
+      "dependency": "punct",
+      "head": "Cancel"
+    }
+  ],
+  "final_result": {
+    "route": "ASK",
+    "source": "Cancel the subscription.",
+    "proposal": {
+      "source": "Cancel the subscription.",
+      "frames": [
+        {
+          "predicate": "Cancel",
+          "agent": "NONE",
+          "patient": "the subscription",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C002-active-roles"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-1"
+    },
+    "reasons": [
+      "uncalibrated_cohort"
+    ],
+    "external_score": null,
+    "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+    "calibration_evidence": null,
+    "cohort": "code:C002-active-roles",
+    "model_self_confidence_used": false,
+    "context_ledger": {
+      "version": "context-ledger-1",
+      "previous_turns": [],
+      "world_entities": [],
+      "claims": [],
+      "history_supplied": false,
+      "world_supplied": false,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "assignment_source": "code",
+    "code_proposal": {
+      "source": "Cancel the subscription.",
+      "frames": [
+        {
+          "predicate": "Cancel",
+          "agent": "NONE",
+          "patient": "the subscription",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C002-active-roles"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-1"
+    }
+  }
+}
