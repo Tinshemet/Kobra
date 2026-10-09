@@ -26,7 +26,10 @@ def main():
              world={'box-1':{'name':'blue box'}},
              explanation='The ledger preserves the prior turn and box-1, including the exact mention span. The code does not automatically bind “it” to box-1. The gate still reports an ungrounded reference. Having context available is not the same as using it correctly.'),
         dict(title='Provisioning: code abstains, no AI connected', text='Create three Debian VMs with 16 GB of RAM each.',
-             explanation='The current rules abstain on the prepositional attachment. A resolver would be called here if supplied. This trace supplies none, so it ends at ASK with no valid frames. The complete instruction survives.'),
+             explanation='The current rules abstain on the prepositional attachment. A resolver would be called here if supplied. This trace supplies none, so it ends at ASK with no complete supported interpretation. Partial frames and the complete instruction survive.'),
+        dict(title='Nested instructions: VM group and sentence-local references',
+             text='Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.',
+             explanation='Code preserves three action chunks and a three-member VM group. Both occurrences of them link to local entity e1; it is a description within this sentence, not an existing WORLD object. The network constraint and the original OS spelling survive. Only missing calibration blocks the final gate.'),
         dict(title='Model branch: reject a nonexistent WORLD reference', text='Refund the order if it was cancelled.',
              scripted=True, world={'order-1':{'name':'order'}},
              explanation='Code abstains on the conditional clause. A scripted resolver returns a source-based frame but cites order-ghost, which is absent from supplied WORLD. The real gate rejects it. This illustrates the model interface and validation; it is not a live AI answer or a model-accuracy result.'),
@@ -44,7 +47,7 @@ def main():
         parser=[dict(text=t.text,pos=t.pos_,dependency=t.dep_,head=t.head.text) for t in assigner.nlp(e['text'])]
         context_input=dict(source=e['text'],history=e.get('history',[]),world=e.get('world',{}))
         ledger=result['context_ledger']
-        gate_input=dict(source=e['text'],proposal=result['proposal'],cohort=result['cohort'],world_ids=list(e.get('world',{})),missing_context=[],calibration_registry={})
+        gate_input=dict(source=e['text'],proposal=result['proposal'],cohort=result['cohort'],world_ids=list(e.get('world',{})),missing_context=[],calibration_registry={},local_bindings=code.get('local_references',[]) if result['assignment_source']=='code' else [])
         ai_state='Scripted resolver called — no live AI' if calls else 'AI skipped: code assigned roles' if code['route']=='code' else 'AI unavailable: no resolver supplied'
         traces.append(dict(title=e['title'],source=e['text'],explanation=e['explanation'],ai_state=ai_state,
             steps=[
@@ -67,7 +70,7 @@ def main():
     if start in text:text=text[:text.index(start)]+text[text.index(end)+len(end):]
     section='''<!-- WORKED-EXAMPLES-START -->
 <section id="worked-examples"><h2>Watch a sentence move through READ</h2>
-<p>These six traces were run through the current local code. Every stage shows its input, output and handoff. No live generative AI was called. The last trace uses an explicitly scripted invalid response to demonstrate the resolver branch.</p>
+<p>These seven traces were run through the current local code. Every stage shows its input, output and handoff. No live generative AI was called. The last trace uses an explicitly scripted invalid response to demonstrate the resolver branch.</p>
 <p class="note"><b>Why do all these real traces end in ASK?</b> No external calibration is installed yet. Even a correct code interpretation cannot currently receive ACCEPT. Some examples also fail grounding or structural checks. The page shows the actual result rather than silently adding artificial confidence.</p>
 <label for="example-select">Choose an example</label><select id="example-select" style="display:block;width:100%;padding:14px;margin:12px 0;background:#1e3149;color:#e9eff8;border:1px solid #67849e;border-radius:8px;font:inherit"></select>
 <div id="example-intro" class="detail" aria-live="polite"></div><div id="example-trace"></div>

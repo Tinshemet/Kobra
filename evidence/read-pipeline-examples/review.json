@@ -1,6 +1,6 @@
 {
   "scope": "HTML worked examples and reproducible local trace exporter",
-  "examples": 6,
+  "examples": 7,
   "live_model_calls": 0,
   "scripted_resolver_calls": 1,
   "checks": [
@@ -8,7 +8,8 @@
     "Checked passive actor Alex and nonexistent-world rejection",
     "Verified context-present pronoun does not call resolver",
     "Every current trace ends in ASK; acceptance illustration is explicitly hypothetical",
-    "Parsed embedded JSON; unique element IDs; JavaScript syntax checked"
+    "Parsed embedded JSON; unique element IDs; JavaScript syntax checked",
+    "Updated traces with three-action VM request and trusted local reference links"
   ],
   "not_claimed": "No new accuracy result, no live-model trace, no calibration installed"
 }

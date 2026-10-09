@@ -3,8 +3,8 @@
   "new_model_calls": 0,
   "scripted_resolver_calls": 1,
   "source_hashes": {
-    "src/kobra/rule_assignment.py": "dd5a942a526efdb8f8f47cad179035bdff4672e273ed1bbb6252f3e0a9b8ebf3",
-    "src/kobra/confidence_gate.py": "d4ef0cea3b3a499a91e3871033ca473c717209142ea9a9fdc17a158cf56e048c",
+    "src/kobra/rule_assignment.py": "1196707b99afcd9c11ab8baf8501958a5fb31680024e92da74042c438d2e3f4e",
+    "src/kobra/confidence_gate.py": "63c7e672b5f85709cafc22e0cb99067f915dfddd624a9076ebd9ddfadf3f594f",
     "src/kobra/context_ledger.py": "af65340227950da8cde5be0175ff7e8a5d7dc6f7d2c940944a4fade27895000f"
   },
   "examples": [
@@ -93,7 +93,7 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-1"
+            "version": "rule-assignment-2"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -135,12 +135,13 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             },
             "cohort": "code:C002-active-roles",
             "world_ids": [],
             "missing_context": [],
-            "calibration_registry": {}
+            "calibration_registry": {},
+            "local_bindings": []
           },
           "output": {
             "route": "ASK",
@@ -186,7 +187,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             },
             "reasons": [
               "uncalibrated_cohort"
@@ -229,7 +230,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -345,7 +346,7 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-1"
+            "version": "rule-assignment-2"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -387,12 +388,13 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             },
             "cohort": "code:C001-passive-roles",
             "world_ids": [],
             "missing_context": [],
-            "calibration_registry": {}
+            "calibration_registry": {},
+            "local_bindings": []
           },
           "output": {
             "route": "ASK",
@@ -438,7 +440,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             },
             "reasons": [
               "uncalibrated_cohort"
@@ -481,7 +483,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -567,7 +569,7 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-1"
+            "version": "rule-assignment-2"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -609,12 +611,13 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             },
             "cohort": "code:C002-active-roles",
             "world_ids": [],
             "missing_context": [],
-            "calibration_registry": {}
+            "calibration_registry": {},
+            "local_bindings": []
           },
           "output": {
             "route": "ASK",
@@ -661,7 +664,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             },
             "reasons": [
               "uncalibrated_cohort",
@@ -705,7 +708,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -825,7 +828,7 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-1"
+            "version": "rule-assignment-2"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -867,14 +870,15 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             },
             "cohort": "code:C002-active-roles",
             "world_ids": [
               "box-1"
             ],
             "missing_context": [],
-            "calibration_registry": {}
+            "calibration_registry": {},
+            "local_bindings": []
           },
           "output": {
             "route": "ASK",
@@ -921,7 +925,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             },
             "reasons": [
               "uncalibrated_cohort",
@@ -989,7 +993,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -999,7 +1003,7 @@
     {
       "title": "Provisioning: code abstains, no AI connected",
       "source": "Create three Debian VMs with 16 GB of RAM each.",
-      "explanation": "The current rules abstain on the prepositional attachment. A resolver would be called here if supplied. This trace supplies none, so it ends at ASK with no valid frames. The complete instruction survives.",
+      "explanation": "The current rules abstain on the prepositional attachment. A resolver would be called here if supplied. This trace supplies none, so it ends at ASK with no complete supported interpretation. Partial frames and the complete instruction survive.",
       "ai_state": "AI unavailable: no resolver supplied",
       "steps": [
         {
@@ -1102,16 +1106,90 @@
           },
           "output": {
             "source": "Create three Debian VMs with 16 GB of RAM each.",
-            "frames": [],
+            "frames": [
+              {
+                "predicate": "Create",
+                "agent": "NONE",
+                "patient": "three Debian VMs",
+                "recipient": "NONE",
+                "negation": "NONE",
+                "condition": "NONE",
+                "time": "NONE",
+                "quantity": "three",
+                "attribution": "NONE",
+                "modality": "NONE",
+                "act": "request"
+              }
+            ],
             "route": "unresolved",
             "rules": [
-              "C002-active-roles"
+              "C011-structured-imperative"
             ],
             "reasons": [
-              "unresolved prepositional attachment"
+              "c1:unresolved_attachment"
             ],
             "semantic_verified": false,
-            "version": "rule-assignment-1"
+            "version": "rule-assignment-2",
+            "chunks": [
+              {
+                "id": "c1",
+                "kind": "action",
+                "span": {
+                  "start": 0,
+                  "end": 46,
+                  "text": "Create three Debian VMs with 16 GB of RAM each"
+                },
+                "frame": 0,
+                "modifiers": [
+                  {
+                    "kind": "unresolved_attachment",
+                    "span": {
+                      "start": 23,
+                      "end": 46,
+                      "text": " with 16 GB of RAM each"
+                    }
+                  }
+                ],
+                "members": [],
+                "patient_span": {
+                  "start": 7,
+                  "end": 23,
+                  "text": "three Debian VMs"
+                },
+                "entity_id": "e1"
+              }
+            ],
+            "local_entities": [
+              {
+                "id": "e1",
+                "span": {
+                  "start": 7,
+                  "end": 23,
+                  "text": "three Debian VMs"
+                },
+                "number": "plural",
+                "quantity": 3,
+                "introduced_in": "c1",
+                "status": "sentence_local_description_not_WORLD_object",
+                "members": []
+              }
+            ],
+            "local_references": [],
+            "chunk_relations": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 46,
+                "text": "Create three Debian VMs with 16 GB of RAM each",
+                "label": "action_chunk"
+              },
+              {
+                "start": 46,
+                "end": 47,
+                "text": ".",
+                "label": "connective_or_unassigned"
+              }
+            ]
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -1132,27 +1210,102 @@
             "source": "Create three Debian VMs with 16 GB of RAM each.",
             "proposal": {
               "source": "Create three Debian VMs with 16 GB of RAM each.",
-              "frames": [],
+              "frames": [
+                {
+                  "predicate": "Create",
+                  "agent": "NONE",
+                  "patient": "three Debian VMs",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "three",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                }
+              ],
               "route": "unresolved",
               "rules": [
-                "C002-active-roles"
+                "C011-structured-imperative"
               ],
               "reasons": [
-                "unresolved prepositional attachment"
+                "c1:unresolved_attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "kind": "action",
+                  "span": {
+                    "start": 0,
+                    "end": 46,
+                    "text": "Create three Debian VMs with 16 GB of RAM each"
+                  },
+                  "frame": 0,
+                  "modifiers": [
+                    {
+                      "kind": "unresolved_attachment",
+                      "span": {
+                        "start": 23,
+                        "end": 46,
+                        "text": " with 16 GB of RAM each"
+                      }
+                    }
+                  ],
+                  "members": [],
+                  "patient_span": {
+                    "start": 7,
+                    "end": 23,
+                    "text": "three Debian VMs"
+                  },
+                  "entity_id": "e1"
+                }
+              ],
+              "local_entities": [
+                {
+                  "id": "e1",
+                  "span": {
+                    "start": 7,
+                    "end": 23,
+                    "text": "three Debian VMs"
+                  },
+                  "number": "plural",
+                  "quantity": 3,
+                  "introduced_in": "c1",
+                  "status": "sentence_local_description_not_WORLD_object",
+                  "members": []
+                }
+              ],
+              "local_references": [],
+              "chunk_relations": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 46,
+                  "text": "Create three Debian VMs with 16 GB of RAM each",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 46,
+                  "end": 47,
+                  "text": ".",
+                  "label": "connective_or_unassigned"
+                }
+              ]
             },
             "cohort": "model-unresolved-v1",
             "world_ids": [],
             "missing_context": [],
-            "calibration_registry": {}
+            "calibration_registry": {},
+            "local_bindings": []
           },
           "output": {
             "route": "ASK",
             "reasons": [
-              "missing_or_invalid_frames",
-              "uncalibrated_cohort"
+              "uncalibrated_cohort",
+              "unsupported_read_structure"
             ],
             "external_score": null,
             "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
@@ -1172,20 +1325,94 @@
             "source": "Create three Debian VMs with 16 GB of RAM each.",
             "proposal": {
               "source": "Create three Debian VMs with 16 GB of RAM each.",
-              "frames": [],
+              "frames": [
+                {
+                  "predicate": "Create",
+                  "agent": "NONE",
+                  "patient": "three Debian VMs",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "three",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                }
+              ],
               "route": "unresolved",
               "rules": [
-                "C002-active-roles"
+                "C011-structured-imperative"
               ],
               "reasons": [
-                "unresolved prepositional attachment"
+                "c1:unresolved_attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "kind": "action",
+                  "span": {
+                    "start": 0,
+                    "end": 46,
+                    "text": "Create three Debian VMs with 16 GB of RAM each"
+                  },
+                  "frame": 0,
+                  "modifiers": [
+                    {
+                      "kind": "unresolved_attachment",
+                      "span": {
+                        "start": 23,
+                        "end": 46,
+                        "text": " with 16 GB of RAM each"
+                      }
+                    }
+                  ],
+                  "members": [],
+                  "patient_span": {
+                    "start": 7,
+                    "end": 23,
+                    "text": "three Debian VMs"
+                  },
+                  "entity_id": "e1"
+                }
+              ],
+              "local_entities": [
+                {
+                  "id": "e1",
+                  "span": {
+                    "start": 7,
+                    "end": 23,
+                    "text": "three Debian VMs"
+                  },
+                  "number": "plural",
+                  "quantity": 3,
+                  "introduced_in": "c1",
+                  "status": "sentence_local_description_not_WORLD_object",
+                  "members": []
+                }
+              ],
+              "local_references": [],
+              "chunk_relations": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 46,
+                  "text": "Create three Debian VMs with 16 GB of RAM each",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 46,
+                  "end": 47,
+                  "text": ".",
+                  "label": "connective_or_unassigned"
+                }
+              ]
             },
             "reasons": [
-              "missing_or_invalid_frames",
-              "uncalibrated_cohort"
+              "uncalibrated_cohort",
+              "unsupported_read_structure"
             ],
             "external_score": null,
             "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
@@ -1204,16 +1431,1648 @@
             "assignment_source": "unresolved",
             "code_proposal": {
               "source": "Create three Debian VMs with 16 GB of RAM each.",
-              "frames": [],
+              "frames": [
+                {
+                  "predicate": "Create",
+                  "agent": "NONE",
+                  "patient": "three Debian VMs",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "three",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                }
+              ],
               "route": "unresolved",
               "rules": [
-                "C002-active-roles"
+                "C011-structured-imperative"
               ],
               "reasons": [
-                "unresolved prepositional attachment"
+                "c1:unresolved_attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "kind": "action",
+                  "span": {
+                    "start": 0,
+                    "end": 46,
+                    "text": "Create three Debian VMs with 16 GB of RAM each"
+                  },
+                  "frame": 0,
+                  "modifiers": [
+                    {
+                      "kind": "unresolved_attachment",
+                      "span": {
+                        "start": 23,
+                        "end": 46,
+                        "text": " with 16 GB of RAM each"
+                      }
+                    }
+                  ],
+                  "members": [],
+                  "patient_span": {
+                    "start": 7,
+                    "end": 23,
+                    "text": "three Debian VMs"
+                  },
+                  "entity_id": "e1"
+                }
+              ],
+              "local_entities": [
+                {
+                  "id": "e1",
+                  "span": {
+                    "start": 7,
+                    "end": 23,
+                    "text": "three Debian VMs"
+                  },
+                  "number": "plural",
+                  "quantity": 3,
+                  "introduced_in": "c1",
+                  "status": "sentence_local_description_not_WORLD_object",
+                  "members": []
+                }
+              ],
+              "local_references": [],
+              "chunk_relations": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 46,
+                  "text": "Create three Debian VMs with 16 GB of RAM each",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 46,
+                  "end": 47,
+                  "text": ".",
+                  "label": "connective_or_unassigned"
+                }
+              ]
+            }
+          },
+          "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
+        }
+      ]
+    },
+    {
+      "title": "Nested instructions: VM group and sentence-local references",
+      "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
+      "explanation": "Code preserves three action chunks and a three-member VM group. Both occurrences of them link to local entity e1; it is a description within this sentence, not an existing WORLD object. The network constraint and the original OS spelling survive. Only missing calibration blocks the final gate.",
+      "ai_state": "AI skipped: code assigned roles",
+      "steps": [
+        {
+          "title": "1 · Receive the source and supplied context",
+          "input": {
+            "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
+            "history": [],
+            "world": {}
+          },
+          "output": {
+            "version": "context-ledger-1",
+            "previous_turns": [],
+            "world_entities": [],
+            "claims": [],
+            "history_supplied": false,
+            "world_supplied": false,
+            "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+          },
+          "passes": "The original sentence goes to the assigner. A preserved context snapshot is retained; copied context is available if the resolver is needed."
+        },
+        {
+          "title": "2 · Dependency parser proposes syntax",
+          "input": {
+            "text": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them."
+          },
+          "output": [
+            {
+              "text": "Good",
+              "pos": "ADJ",
+              "dependency": "amod",
+              "head": "morning"
+            },
+            {
+              "text": "morning",
+              "pos": "NOUN",
+              "dependency": "compound",
+              "head": "gorgon"
+            },
+            {
+              "text": "gorgon",
+              "pos": "NOUN",
+              "dependency": "npadvmod",
+              "head": "create"
+            },
+            {
+              "text": ",",
+              "pos": "PUNCT",
+              "dependency": "punct",
+              "head": "create"
+            },
+            {
+              "text": "please",
+              "pos": "INTJ",
+              "dependency": "intj",
+              "head": "create"
+            },
+            {
+              "text": "create",
+              "pos": "VERB",
+              "dependency": "ROOT",
+              "head": "create"
+            },
+            {
+              "text": "3",
+              "pos": "NUM",
+              "dependency": "nummod",
+              "head": "one"
+            },
+            {
+              "text": "vms",
+              "pos": "ADJ",
+              "dependency": "compound",
+              "head": "one"
+            },
+            {
+              "text": "one",
+              "pos": "NUM",
+              "dependency": "dobj",
+              "head": "create"
+            },
+            {
+              "text": "with",
+              "pos": "ADP",
+              "dependency": "prep",
+              "head": "create"
+            },
+            {
+              "text": "windows",
+              "pos": "NOUN",
+              "dependency": "pobj",
+              "head": "with"
+            },
+            {
+              "text": ",",
+              "pos": "PUNCT",
+              "dependency": "punct",
+              "head": "windows"
+            },
+            {
+              "text": "one",
+              "pos": "NUM",
+              "dependency": "appos",
+              "head": "windows"
+            },
+            {
+              "text": "with",
+              "pos": "ADP",
+              "dependency": "prep",
+              "head": "one"
+            },
+            {
+              "text": "metaspoitable",
+              "pos": "ADJ",
+              "dependency": "pobj",
+              "head": "with"
+            },
+            {
+              "text": "and",
+              "pos": "CCONJ",
+              "dependency": "cc",
+              "head": "one"
+            },
+            {
+              "text": "one",
+              "pos": "NUM",
+              "dependency": "conj",
+              "head": "one"
+            },
+            {
+              "text": "with",
+              "pos": "ADP",
+              "dependency": "prep",
+              "head": "one"
+            },
+            {
+              "text": "kali",
+              "pos": "PROPN",
+              "dependency": "pobj",
+              "head": "with"
+            },
+            {
+              "text": ",",
+              "pos": "PUNCT",
+              "dependency": "punct",
+              "head": "create"
+            },
+            {
+              "text": "set",
+              "pos": "VERB",
+              "dependency": "conj",
+              "head": "create"
+            },
+            {
+              "text": "them",
+              "pos": "PRON",
+              "dependency": "dobj",
+              "head": "set"
+            },
+            {
+              "text": " ",
+              "pos": "SPACE",
+              "dependency": "dep",
+              "head": "them"
+            },
+            {
+              "text": "all",
+              "pos": "PRON",
+              "dependency": "dobj",
+              "head": "set"
+            },
+            {
+              "text": "in",
+              "pos": "ADP",
+              "dependency": "prep",
+              "head": "set"
+            },
+            {
+              "text": "the",
+              "pos": "DET",
+              "dependency": "det",
+              "head": "network"
+            },
+            {
+              "text": "same",
+              "pos": "ADJ",
+              "dependency": "amod",
+              "head": "network"
+            },
+            {
+              "text": "network",
+              "pos": "NOUN",
+              "dependency": "pobj",
+              "head": "in"
+            },
+            {
+              "text": "and",
+              "pos": "CCONJ",
+              "dependency": "cc",
+              "head": "set"
+            },
+            {
+              "text": "launch",
+              "pos": "VERB",
+              "dependency": "conj",
+              "head": "set"
+            },
+            {
+              "text": "them",
+              "pos": "PRON",
+              "dependency": "dobj",
+              "head": "launch"
+            },
+            {
+              "text": ".",
+              "pos": "PUNCT",
+              "dependency": "punct",
+              "head": "create"
+            }
+          ],
+          "passes": "Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver."
+        },
+        {
+          "title": "3 · Code constructs the interpretation",
+          "input": {
+            "syntax": "Exact token records shown in stage 2"
+          },
+          "output": {
+            "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
+            "frames": [
+              {
+                "predicate": "create",
+                "agent": "NONE",
+                "patient": "3 vms",
+                "recipient": "NONE",
+                "negation": "NONE",
+                "condition": "NONE",
+                "time": "NONE",
+                "quantity": "3",
+                "attribution": "NONE",
+                "modality": "NONE",
+                "act": "request"
+              },
+              {
+                "predicate": "set",
+                "agent": "NONE",
+                "patient": "them",
+                "recipient": "NONE",
+                "negation": "NONE",
+                "condition": "NONE",
+                "time": "NONE",
+                "quantity": "all",
+                "attribution": "NONE",
+                "modality": "NONE",
+                "act": "request"
+              },
+              {
+                "predicate": "launch",
+                "agent": "NONE",
+                "patient": "them",
+                "recipient": "NONE",
+                "negation": "NONE",
+                "condition": "NONE",
+                "time": "NONE",
+                "quantity": "NONE",
+                "attribution": "NONE",
+                "modality": "NONE",
+                "act": "request"
+              }
+            ],
+            "route": "code",
+            "rules": [
+              "C010-imperative-coordination",
+              "C012-counted-member-specifications",
+              "C013-shared-location-constraint",
+              "C014-unique-local-number-agreement"
+            ],
+            "reasons": [],
+            "semantic_verified": false,
+            "version": "rule-assignment-2",
+            "chunks": [
+              {
+                "id": "c1",
+                "kind": "action",
+                "span": {
+                  "start": 28,
+                  "end": 99,
+                  "text": "create 3 vms one with windows, one with metaspoitable and one with kali"
+                },
+                "frame": 0,
+                "modifiers": [],
+                "members": [
+                  {
+                    "id": "c1.member1",
+                    "quantity": 1,
+                    "span": {
+                      "start": 41,
+                      "end": 57,
+                      "text": "one with windows"
+                    },
+                    "specification": {
+                      "start": 50,
+                      "end": 57,
+                      "text": "windows"
+                    }
+                  },
+                  {
+                    "id": "c1.member2",
+                    "quantity": 1,
+                    "span": {
+                      "start": 59,
+                      "end": 81,
+                      "text": "one with metaspoitable"
+                    },
+                    "specification": {
+                      "start": 68,
+                      "end": 81,
+                      "text": "metaspoitable"
+                    }
+                  },
+                  {
+                    "id": "c1.member3",
+                    "quantity": 1,
+                    "span": {
+                      "start": 86,
+                      "end": 99,
+                      "text": "one with kali"
+                    },
+                    "specification": {
+                      "start": 95,
+                      "end": 99,
+                      "text": "kali"
+                    }
+                  }
+                ],
+                "patient_span": {
+                  "start": 35,
+                  "end": 40,
+                  "text": "3 vms"
+                },
+                "entity_id": "e1"
+              },
+              {
+                "id": "c2",
+                "kind": "action",
+                "span": {
+                  "start": 101,
+                  "end": 134,
+                  "text": "set them  all in the same network"
+                },
+                "frame": 1,
+                "modifiers": [
+                  {
+                    "kind": "shared_location",
+                    "span": {
+                      "start": 109,
+                      "end": 134,
+                      "text": "  all in the same network"
+                    },
+                    "relation": "in",
+                    "value": "the same network",
+                    "scope": "all_members",
+                    "status": "source_constraint_not_WORLD_identity"
+                  }
+                ],
+                "members": [],
+                "patient_span": {
+                  "start": 105,
+                  "end": 109,
+                  "text": "them"
+                }
+              },
+              {
+                "id": "c3",
+                "kind": "action",
+                "span": {
+                  "start": 139,
+                  "end": 150,
+                  "text": "launch them"
+                },
+                "frame": 2,
+                "modifiers": [],
+                "members": [],
+                "patient_span": {
+                  "start": 146,
+                  "end": 150,
+                  "text": "them"
+                }
+              }
+            ],
+            "local_entities": [
+              {
+                "id": "e1",
+                "span": {
+                  "start": 35,
+                  "end": 40,
+                  "text": "3 vms"
+                },
+                "number": "plural",
+                "quantity": 3,
+                "introduced_in": "c1",
+                "status": "sentence_local_description_not_WORLD_object",
+                "members": [
+                  {
+                    "id": "c1.member1",
+                    "quantity": 1,
+                    "span": {
+                      "start": 41,
+                      "end": 57,
+                      "text": "one with windows"
+                    },
+                    "specification": {
+                      "start": 50,
+                      "end": 57,
+                      "text": "windows"
+                    }
+                  },
+                  {
+                    "id": "c1.member2",
+                    "quantity": 1,
+                    "span": {
+                      "start": 59,
+                      "end": 81,
+                      "text": "one with metaspoitable"
+                    },
+                    "specification": {
+                      "start": 68,
+                      "end": 81,
+                      "text": "metaspoitable"
+                    }
+                  },
+                  {
+                    "id": "c1.member3",
+                    "quantity": 1,
+                    "span": {
+                      "start": 86,
+                      "end": 99,
+                      "text": "one with kali"
+                    },
+                    "specification": {
+                      "start": 95,
+                      "end": 99,
+                      "text": "kali"
+                    }
+                  }
+                ]
+              }
+            ],
+            "local_references": [
+              {
+                "frame": 1,
+                "slot": "patient",
+                "mention": {
+                  "start": 105,
+                  "end": 109,
+                  "text": "them"
+                },
+                "candidates": [
+                  "e1"
+                ],
+                "status": "resolved",
+                "entity_id": "e1"
+              },
+              {
+                "frame": 2,
+                "slot": "patient",
+                "mention": {
+                  "start": 146,
+                  "end": 150,
+                  "text": "them"
+                },
+                "candidates": [
+                  "e1"
+                ],
+                "status": "resolved",
+                "entity_id": "e1"
+              }
+            ],
+            "chunk_relations": [
+              {
+                "from_chunk": "c1",
+                "to_chunk": "c2",
+                "kind": "coordination_source_order_only"
+              },
+              {
+                "from_chunk": "c2",
+                "to_chunk": "c3",
+                "kind": "coordination_source_order_only"
+              }
+            ],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 28,
+                "text": "Good morning gorgon, please ",
+                "label": "greeting_or_politeness"
+              },
+              {
+                "start": 28,
+                "end": 99,
+                "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                "label": "action_chunk"
+              },
+              {
+                "start": 99,
+                "end": 101,
+                "text": ", ",
+                "label": "connective_or_unassigned"
+              },
+              {
+                "start": 101,
+                "end": 134,
+                "text": "set them  all in the same network",
+                "label": "action_chunk"
+              },
+              {
+                "start": 134,
+                "end": 139,
+                "text": " and ",
+                "label": "connective_or_unassigned"
+              },
+              {
+                "start": 139,
+                "end": 150,
+                "text": "launch them",
+                "label": "action_chunk"
+              },
+              {
+                "start": 150,
+                "end": 151,
+                "text": ".",
+                "label": "connective_or_unassigned"
+              }
+            ]
+          },
+          "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
+        },
+        {
+          "title": "4 · Optional AI / resolver branch",
+          "input": {
+            "called": false,
+            "reason": "AI skipped: code assigned roles"
+          },
+          "output": {
+            "called": false
+          },
+          "passes": "A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal."
+        },
+        {
+          "title": "5 · External validation and confidence",
+          "input": {
+            "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
+            "proposal": {
+              "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
+              "frames": [
+                {
+                  "predicate": "create",
+                  "agent": "NONE",
+                  "patient": "3 vms",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "3",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                },
+                {
+                  "predicate": "set",
+                  "agent": "NONE",
+                  "patient": "them",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "all",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                },
+                {
+                  "predicate": "launch",
+                  "agent": "NONE",
+                  "patient": "them",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "NONE",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                }
+              ],
+              "route": "code",
+              "rules": [
+                "C010-imperative-coordination",
+                "C012-counted-member-specifications",
+                "C013-shared-location-constraint",
+                "C014-unique-local-number-agreement"
+              ],
+              "reasons": [],
+              "semantic_verified": false,
+              "version": "rule-assignment-2",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "kind": "action",
+                  "span": {
+                    "start": 28,
+                    "end": 99,
+                    "text": "create 3 vms one with windows, one with metaspoitable and one with kali"
+                  },
+                  "frame": 0,
+                  "modifiers": [],
+                  "members": [
+                    {
+                      "id": "c1.member1",
+                      "quantity": 1,
+                      "span": {
+                        "start": 41,
+                        "end": 57,
+                        "text": "one with windows"
+                      },
+                      "specification": {
+                        "start": 50,
+                        "end": 57,
+                        "text": "windows"
+                      }
+                    },
+                    {
+                      "id": "c1.member2",
+                      "quantity": 1,
+                      "span": {
+                        "start": 59,
+                        "end": 81,
+                        "text": "one with metaspoitable"
+                      },
+                      "specification": {
+                        "start": 68,
+                        "end": 81,
+                        "text": "metaspoitable"
+                      }
+                    },
+                    {
+                      "id": "c1.member3",
+                      "quantity": 1,
+                      "span": {
+                        "start": 86,
+                        "end": 99,
+                        "text": "one with kali"
+                      },
+                      "specification": {
+                        "start": 95,
+                        "end": 99,
+                        "text": "kali"
+                      }
+                    }
+                  ],
+                  "patient_span": {
+                    "start": 35,
+                    "end": 40,
+                    "text": "3 vms"
+                  },
+                  "entity_id": "e1"
+                },
+                {
+                  "id": "c2",
+                  "kind": "action",
+                  "span": {
+                    "start": 101,
+                    "end": 134,
+                    "text": "set them  all in the same network"
+                  },
+                  "frame": 1,
+                  "modifiers": [
+                    {
+                      "kind": "shared_location",
+                      "span": {
+                        "start": 109,
+                        "end": 134,
+                        "text": "  all in the same network"
+                      },
+                      "relation": "in",
+                      "value": "the same network",
+                      "scope": "all_members",
+                      "status": "source_constraint_not_WORLD_identity"
+                    }
+                  ],
+                  "members": [],
+                  "patient_span": {
+                    "start": 105,
+                    "end": 109,
+                    "text": "them"
+                  }
+                },
+                {
+                  "id": "c3",
+                  "kind": "action",
+                  "span": {
+                    "start": 139,
+                    "end": 150,
+                    "text": "launch them"
+                  },
+                  "frame": 2,
+                  "modifiers": [],
+                  "members": [],
+                  "patient_span": {
+                    "start": 146,
+                    "end": 150,
+                    "text": "them"
+                  }
+                }
+              ],
+              "local_entities": [
+                {
+                  "id": "e1",
+                  "span": {
+                    "start": 35,
+                    "end": 40,
+                    "text": "3 vms"
+                  },
+                  "number": "plural",
+                  "quantity": 3,
+                  "introduced_in": "c1",
+                  "status": "sentence_local_description_not_WORLD_object",
+                  "members": [
+                    {
+                      "id": "c1.member1",
+                      "quantity": 1,
+                      "span": {
+                        "start": 41,
+                        "end": 57,
+                        "text": "one with windows"
+                      },
+                      "specification": {
+                        "start": 50,
+                        "end": 57,
+                        "text": "windows"
+                      }
+                    },
+                    {
+                      "id": "c1.member2",
+                      "quantity": 1,
+                      "span": {
+                        "start": 59,
+                        "end": 81,
+                        "text": "one with metaspoitable"
+                      },
+                      "specification": {
+                        "start": 68,
+                        "end": 81,
+                        "text": "metaspoitable"
+                      }
+                    },
+                    {
+                      "id": "c1.member3",
+                      "quantity": 1,
+                      "span": {
+                        "start": 86,
+                        "end": 99,
+                        "text": "one with kali"
+                      },
+                      "specification": {
+                        "start": 95,
+                        "end": 99,
+                        "text": "kali"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "local_references": [
+                {
+                  "frame": 1,
+                  "slot": "patient",
+                  "mention": {
+                    "start": 105,
+                    "end": 109,
+                    "text": "them"
+                  },
+                  "candidates": [
+                    "e1"
+                  ],
+                  "status": "resolved",
+                  "entity_id": "e1"
+                },
+                {
+                  "frame": 2,
+                  "slot": "patient",
+                  "mention": {
+                    "start": 146,
+                    "end": 150,
+                    "text": "them"
+                  },
+                  "candidates": [
+                    "e1"
+                  ],
+                  "status": "resolved",
+                  "entity_id": "e1"
+                }
+              ],
+              "chunk_relations": [
+                {
+                  "from_chunk": "c1",
+                  "to_chunk": "c2",
+                  "kind": "coordination_source_order_only"
+                },
+                {
+                  "from_chunk": "c2",
+                  "to_chunk": "c3",
+                  "kind": "coordination_source_order_only"
+                }
+              ],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 28,
+                  "text": "Good morning gorgon, please ",
+                  "label": "greeting_or_politeness"
+                },
+                {
+                  "start": 28,
+                  "end": 99,
+                  "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 99,
+                  "end": 101,
+                  "text": ", ",
+                  "label": "connective_or_unassigned"
+                },
+                {
+                  "start": 101,
+                  "end": 134,
+                  "text": "set them  all in the same network",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 134,
+                  "end": 139,
+                  "text": " and ",
+                  "label": "connective_or_unassigned"
+                },
+                {
+                  "start": 139,
+                  "end": 150,
+                  "text": "launch them",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 150,
+                  "end": 151,
+                  "text": ".",
+                  "label": "connective_or_unassigned"
+                }
+              ]
+            },
+            "cohort": "code:C010-imperative-coordination+C012-counted-member-specifications+C013-shared-location-constraint+C014-unique-local-number-agreement",
+            "world_ids": [],
+            "missing_context": [],
+            "calibration_registry": {},
+            "local_bindings": [
+              {
+                "frame": 1,
+                "slot": "patient",
+                "mention": {
+                  "start": 105,
+                  "end": 109,
+                  "text": "them"
+                },
+                "candidates": [
+                  "e1"
+                ],
+                "status": "resolved",
+                "entity_id": "e1"
+              },
+              {
+                "frame": 2,
+                "slot": "patient",
+                "mention": {
+                  "start": 146,
+                  "end": 150,
+                  "text": "them"
+                },
+                "candidates": [
+                  "e1"
+                ],
+                "status": "resolved",
+                "entity_id": "e1"
+              }
+            ]
+          },
+          "output": {
+            "route": "ASK",
+            "reasons": [
+              "uncalibrated_cohort"
+            ],
+            "external_score": null,
+            "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+            "calibration_evidence": null,
+            "model_self_confidence_used": false
+          },
+          "passes": "The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null."
+        },
+        {
+          "title": "6 · Final READ product",
+          "input": {
+            "gate_route": "ASK",
+            "assignment_source": "code"
+          },
+          "output": {
+            "route": "ASK",
+            "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
+            "proposal": {
+              "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
+              "frames": [
+                {
+                  "predicate": "create",
+                  "agent": "NONE",
+                  "patient": "3 vms",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "3",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                },
+                {
+                  "predicate": "set",
+                  "agent": "NONE",
+                  "patient": "them",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "all",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                },
+                {
+                  "predicate": "launch",
+                  "agent": "NONE",
+                  "patient": "them",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "NONE",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                }
+              ],
+              "route": "code",
+              "rules": [
+                "C010-imperative-coordination",
+                "C012-counted-member-specifications",
+                "C013-shared-location-constraint",
+                "C014-unique-local-number-agreement"
+              ],
+              "reasons": [],
+              "semantic_verified": false,
+              "version": "rule-assignment-2",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "kind": "action",
+                  "span": {
+                    "start": 28,
+                    "end": 99,
+                    "text": "create 3 vms one with windows, one with metaspoitable and one with kali"
+                  },
+                  "frame": 0,
+                  "modifiers": [],
+                  "members": [
+                    {
+                      "id": "c1.member1",
+                      "quantity": 1,
+                      "span": {
+                        "start": 41,
+                        "end": 57,
+                        "text": "one with windows"
+                      },
+                      "specification": {
+                        "start": 50,
+                        "end": 57,
+                        "text": "windows"
+                      }
+                    },
+                    {
+                      "id": "c1.member2",
+                      "quantity": 1,
+                      "span": {
+                        "start": 59,
+                        "end": 81,
+                        "text": "one with metaspoitable"
+                      },
+                      "specification": {
+                        "start": 68,
+                        "end": 81,
+                        "text": "metaspoitable"
+                      }
+                    },
+                    {
+                      "id": "c1.member3",
+                      "quantity": 1,
+                      "span": {
+                        "start": 86,
+                        "end": 99,
+                        "text": "one with kali"
+                      },
+                      "specification": {
+                        "start": 95,
+                        "end": 99,
+                        "text": "kali"
+                      }
+                    }
+                  ],
+                  "patient_span": {
+                    "start": 35,
+                    "end": 40,
+                    "text": "3 vms"
+                  },
+                  "entity_id": "e1"
+                },
+                {
+                  "id": "c2",
+                  "kind": "action",
+                  "span": {
+                    "start": 101,
+                    "end": 134,
+                    "text": "set them  all in the same network"
+                  },
+                  "frame": 1,
+                  "modifiers": [
+                    {
+                      "kind": "shared_location",
+                      "span": {
+                        "start": 109,
+                        "end": 134,
+                        "text": "  all in the same network"
+                      },
+                      "relation": "in",
+                      "value": "the same network",
+                      "scope": "all_members",
+                      "status": "source_constraint_not_WORLD_identity"
+                    }
+                  ],
+                  "members": [],
+                  "patient_span": {
+                    "start": 105,
+                    "end": 109,
+                    "text": "them"
+                  }
+                },
+                {
+                  "id": "c3",
+                  "kind": "action",
+                  "span": {
+                    "start": 139,
+                    "end": 150,
+                    "text": "launch them"
+                  },
+                  "frame": 2,
+                  "modifiers": [],
+                  "members": [],
+                  "patient_span": {
+                    "start": 146,
+                    "end": 150,
+                    "text": "them"
+                  }
+                }
+              ],
+              "local_entities": [
+                {
+                  "id": "e1",
+                  "span": {
+                    "start": 35,
+                    "end": 40,
+                    "text": "3 vms"
+                  },
+                  "number": "plural",
+                  "quantity": 3,
+                  "introduced_in": "c1",
+                  "status": "sentence_local_description_not_WORLD_object",
+                  "members": [
+                    {
+                      "id": "c1.member1",
+                      "quantity": 1,
+                      "span": {
+                        "start": 41,
+                        "end": 57,
+                        "text": "one with windows"
+                      },
+                      "specification": {
+                        "start": 50,
+                        "end": 57,
+                        "text": "windows"
+                      }
+                    },
+                    {
+                      "id": "c1.member2",
+                      "quantity": 1,
+                      "span": {
+                        "start": 59,
+                        "end": 81,
+                        "text": "one with metaspoitable"
+                      },
+                      "specification": {
+                        "start": 68,
+                        "end": 81,
+                        "text": "metaspoitable"
+                      }
+                    },
+                    {
+                      "id": "c1.member3",
+                      "quantity": 1,
+                      "span": {
+                        "start": 86,
+                        "end": 99,
+                        "text": "one with kali"
+                      },
+                      "specification": {
+                        "start": 95,
+                        "end": 99,
+                        "text": "kali"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "local_references": [
+                {
+                  "frame": 1,
+                  "slot": "patient",
+                  "mention": {
+                    "start": 105,
+                    "end": 109,
+                    "text": "them"
+                  },
+                  "candidates": [
+                    "e1"
+                  ],
+                  "status": "resolved",
+                  "entity_id": "e1"
+                },
+                {
+                  "frame": 2,
+                  "slot": "patient",
+                  "mention": {
+                    "start": 146,
+                    "end": 150,
+                    "text": "them"
+                  },
+                  "candidates": [
+                    "e1"
+                  ],
+                  "status": "resolved",
+                  "entity_id": "e1"
+                }
+              ],
+              "chunk_relations": [
+                {
+                  "from_chunk": "c1",
+                  "to_chunk": "c2",
+                  "kind": "coordination_source_order_only"
+                },
+                {
+                  "from_chunk": "c2",
+                  "to_chunk": "c3",
+                  "kind": "coordination_source_order_only"
+                }
+              ],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 28,
+                  "text": "Good morning gorgon, please ",
+                  "label": "greeting_or_politeness"
+                },
+                {
+                  "start": 28,
+                  "end": 99,
+                  "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 99,
+                  "end": 101,
+                  "text": ", ",
+                  "label": "connective_or_unassigned"
+                },
+                {
+                  "start": 101,
+                  "end": 134,
+                  "text": "set them  all in the same network",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 134,
+                  "end": 139,
+                  "text": " and ",
+                  "label": "connective_or_unassigned"
+                },
+                {
+                  "start": 139,
+                  "end": 150,
+                  "text": "launch them",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 150,
+                  "end": 151,
+                  "text": ".",
+                  "label": "connective_or_unassigned"
+                }
+              ]
+            },
+            "reasons": [
+              "uncalibrated_cohort"
+            ],
+            "external_score": null,
+            "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+            "calibration_evidence": null,
+            "cohort": "code:C010-imperative-coordination+C012-counted-member-specifications+C013-shared-location-constraint+C014-unique-local-number-agreement",
+            "model_self_confidence_used": false,
+            "context_ledger": {
+              "version": "context-ledger-1",
+              "previous_turns": [],
+              "world_entities": [],
+              "claims": [],
+              "history_supplied": false,
+              "world_supplied": false,
+              "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+            },
+            "assignment_source": "code",
+            "code_proposal": {
+              "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
+              "frames": [
+                {
+                  "predicate": "create",
+                  "agent": "NONE",
+                  "patient": "3 vms",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "3",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                },
+                {
+                  "predicate": "set",
+                  "agent": "NONE",
+                  "patient": "them",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "all",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                },
+                {
+                  "predicate": "launch",
+                  "agent": "NONE",
+                  "patient": "them",
+                  "recipient": "NONE",
+                  "negation": "NONE",
+                  "condition": "NONE",
+                  "time": "NONE",
+                  "quantity": "NONE",
+                  "attribution": "NONE",
+                  "modality": "NONE",
+                  "act": "request"
+                }
+              ],
+              "route": "code",
+              "rules": [
+                "C010-imperative-coordination",
+                "C012-counted-member-specifications",
+                "C013-shared-location-constraint",
+                "C014-unique-local-number-agreement"
+              ],
+              "reasons": [],
+              "semantic_verified": false,
+              "version": "rule-assignment-2",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "kind": "action",
+                  "span": {
+                    "start": 28,
+                    "end": 99,
+                    "text": "create 3 vms one with windows, one with metaspoitable and one with kali"
+                  },
+                  "frame": 0,
+                  "modifiers": [],
+                  "members": [
+                    {
+                      "id": "c1.member1",
+                      "quantity": 1,
+                      "span": {
+                        "start": 41,
+                        "end": 57,
+                        "text": "one with windows"
+                      },
+                      "specification": {
+                        "start": 50,
+                        "end": 57,
+                        "text": "windows"
+                      }
+                    },
+                    {
+                      "id": "c1.member2",
+                      "quantity": 1,
+                      "span": {
+                        "start": 59,
+                        "end": 81,
+                        "text": "one with metaspoitable"
+                      },
+                      "specification": {
+                        "start": 68,
+                        "end": 81,
+                        "text": "metaspoitable"
+                      }
+                    },
+                    {
+                      "id": "c1.member3",
+                      "quantity": 1,
+                      "span": {
+                        "start": 86,
+                        "end": 99,
+                        "text": "one with kali"
+                      },
+                      "specification": {
+                        "start": 95,
+                        "end": 99,
+                        "text": "kali"
+                      }
+                    }
+                  ],
+                  "patient_span": {
+                    "start": 35,
+                    "end": 40,
+                    "text": "3 vms"
+                  },
+                  "entity_id": "e1"
+                },
+                {
+                  "id": "c2",
+                  "kind": "action",
+                  "span": {
+                    "start": 101,
+                    "end": 134,
+                    "text": "set them  all in the same network"
+                  },
+                  "frame": 1,
+                  "modifiers": [
+                    {
+                      "kind": "shared_location",
+                      "span": {
+                        "start": 109,
+                        "end": 134,
+                        "text": "  all in the same network"
+                      },
+                      "relation": "in",
+                      "value": "the same network",
+                      "scope": "all_members",
+                      "status": "source_constraint_not_WORLD_identity"
+                    }
+                  ],
+                  "members": [],
+                  "patient_span": {
+                    "start": 105,
+                    "end": 109,
+                    "text": "them"
+                  }
+                },
+                {
+                  "id": "c3",
+                  "kind": "action",
+                  "span": {
+                    "start": 139,
+                    "end": 150,
+                    "text": "launch them"
+                  },
+                  "frame": 2,
+                  "modifiers": [],
+                  "members": [],
+                  "patient_span": {
+                    "start": 146,
+                    "end": 150,
+                    "text": "them"
+                  }
+                }
+              ],
+              "local_entities": [
+                {
+                  "id": "e1",
+                  "span": {
+                    "start": 35,
+                    "end": 40,
+                    "text": "3 vms"
+                  },
+                  "number": "plural",
+                  "quantity": 3,
+                  "introduced_in": "c1",
+                  "status": "sentence_local_description_not_WORLD_object",
+                  "members": [
+                    {
+                      "id": "c1.member1",
+                      "quantity": 1,
+                      "span": {
+                        "start": 41,
+                        "end": 57,
+                        "text": "one with windows"
+                      },
+                      "specification": {
+                        "start": 50,
+                        "end": 57,
+                        "text": "windows"
+                      }
+                    },
+                    {
+                      "id": "c1.member2",
+                      "quantity": 1,
+                      "span": {
+                        "start": 59,
+                        "end": 81,
+                        "text": "one with metaspoitable"
+                      },
+                      "specification": {
+                        "start": 68,
+                        "end": 81,
+                        "text": "metaspoitable"
+                      }
+                    },
+                    {
+                      "id": "c1.member3",
+                      "quantity": 1,
+                      "span": {
+                        "start": 86,
+                        "end": 99,
+                        "text": "one with kali"
+                      },
+                      "specification": {
+                        "start": 95,
+                        "end": 99,
+                        "text": "kali"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "local_references": [
+                {
+                  "frame": 1,
+                  "slot": "patient",
+                  "mention": {
+                    "start": 105,
+                    "end": 109,
+                    "text": "them"
+                  },
+                  "candidates": [
+                    "e1"
+                  ],
+                  "status": "resolved",
+                  "entity_id": "e1"
+                },
+                {
+                  "frame": 2,
+                  "slot": "patient",
+                  "mention": {
+                    "start": 146,
+                    "end": 150,
+                    "text": "them"
+                  },
+                  "candidates": [
+                    "e1"
+                  ],
+                  "status": "resolved",
+                  "entity_id": "e1"
+                }
+              ],
+              "chunk_relations": [
+                {
+                  "from_chunk": "c1",
+                  "to_chunk": "c2",
+                  "kind": "coordination_source_order_only"
+                },
+                {
+                  "from_chunk": "c2",
+                  "to_chunk": "c3",
+                  "kind": "coordination_source_order_only"
+                }
+              ],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 28,
+                  "text": "Good morning gorgon, please ",
+                  "label": "greeting_or_politeness"
+                },
+                {
+                  "start": 28,
+                  "end": 99,
+                  "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 99,
+                  "end": 101,
+                  "text": ", ",
+                  "label": "connective_or_unassigned"
+                },
+                {
+                  "start": 101,
+                  "end": 134,
+                  "text": "set them  all in the same network",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 134,
+                  "end": 139,
+                  "text": " and ",
+                  "label": "connective_or_unassigned"
+                },
+                {
+                  "start": 139,
+                  "end": 150,
+                  "text": "launch them",
+                  "label": "action_chunk"
+                },
+                {
+                  "start": 150,
+                  "end": 151,
+                  "text": ".",
+                  "label": "connective_or_unassigned"
+                }
+              ]
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -1329,7 +3188,7 @@
               "multiple predicates or clause attachment"
             ],
             "semantic_verified": false,
-            "version": "rule-assignment-1"
+            "version": "rule-assignment-2"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -1346,7 +3205,7 @@
                 "multiple predicates or clause attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             },
             "world": {
               "order-1": {
@@ -1427,7 +3286,8 @@
               "order-1"
             ],
             "missing_context": [],
-            "calibration_registry": {}
+            "calibration_registry": {},
+            "local_bindings": []
           },
           "output": {
             "route": "ASK",
@@ -1510,7 +3370,7 @@
                 "multiple predicates or clause attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-1"
+              "version": "rule-assignment-2"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."

@@ -5,7 +5,7 @@ is not calibrated confidence. Original text always accompanies the proposal.
 """
 from .selection_read import SLOTS
 
-VERSION = 'rule-assignment-1'
+VERSION = 'rule-assignment-2'
 
 class RuleAssigner:
     def __init__(self, nlp=None):
@@ -15,6 +15,14 @@ class RuleAssigner:
         self.nlp = nlp
 
     def assign(self, text):
+        simple = self._assign_simple(text)
+        if simple['route'] == 'code':
+            return simple
+        from .structural_read import assign_structure
+        structured = assign_structure(self.nlp(text))
+        return structured if structured is not None else simple
+
+    def _assign_simple(self, text):
         doc = self.nlp(text)
         out = dict(source=text, frames=[], route='unresolved', rules=[], reasons=[],
                    semantic_verified=False, version=VERSION)

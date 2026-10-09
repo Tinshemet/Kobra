@@ -65,3 +65,13 @@ Three-way evaluation distinguishes correct code, correct AI and justified ASK
 from wrong accepts, unnecessary ASK and unrelated failure-based ASK. Contract
 tests are not empirical model accuracy. The 97.67% result remains a reused-data
 routing simulation with saved model answers, not a fresh multi-turn evaluation.
+
+Structural extension (rule-assignment-2)
+--------------------------------------
+
+A fallback rule pass now parses bounded imperative coordination, counted member
+specifications and explicit shared-location constraints. Unique compatible it/them
+references link to earlier sentence-local descriptions, without creating WORLD
+objects. Chunks retain original spans and a complete character ledger. Ambiguous
+links and unsupported structures remain unresolved. See structural-read.rst for
+primary references, regression evidence and the deliberately limited rule scope.

@@ -39,10 +39,12 @@ class ConfidenceGate:
         self.min_cases = min_cases
         self.validators = tuple(validators)
 
-    def assess(self, text, proposal, *, cohort, world_ids=(), missing_context=()):
+    def assess(self, text, proposal, *, cohort, world_ids=(), missing_context=(), local_bindings=()):
         # cohort, world_ids and missing_context come from application code, not
         # fields inside the untrusted model proposal or Serpent teacher labels.
         reasons = [f'missing_context:{x}' for x in missing_context]
+        if isinstance(proposal, dict) and proposal.get('route') == 'unresolved':
+            reasons.append('unsupported_read_structure')
         frames = proposal.get('frames') if isinstance(proposal, dict) else None
         if not isinstance(frames, list) or not 1 <= len(frames) <= 4:
             reasons.append('missing_or_invalid_frames')
@@ -69,13 +71,16 @@ class ConfidenceGate:
             reasons.append('invalid_grounding')
             groundings = {}
         if isinstance(frames, list):
-            for frame in frames:
+            for frame_index, frame in enumerate(frames):
                 if not isinstance(frame, dict):
                     continue
                 for slot in ('agent', 'patient', 'recipient'):
                     value = frame.get(slot)
                     if isinstance(value, str) and re.match(r'^(it|them|he|she|they|this|that|these|those|here|there)(?:\s|$)', value, re.I):
-                        if value not in groundings:
+                        local_match = any(r.get('frame') == frame_index and r.get('slot') == slot
+                            and r.get('status') == 'resolved' and r.get('mention',{}).get('text') == value
+                            for r in local_bindings)
+                        if value not in groundings and not local_match:
                             reasons.append(f'ungrounded_reference:{slot}')
         references = proposal.get('world_references', []) if isinstance(proposal, dict) else []
         if not isinstance(references, list) or any(not isinstance(r, str) or r not in world_ids for r in references):
@@ -134,7 +139,11 @@ class GatedRuleReader:
                                               'context_ledger':deepcopy(ledger)})
                 except Exception as exc:
                     proposal = {'error_type':type(exc).__name__}
-        result = self.gate.assess(text, proposal, cohort=cohort, world_ids=tuple(world), missing_context=missing_context)
+        # Only trusted code-side links may satisfy a local reference. A model
+        # cannot authorize invented local IDs by including them in its proposal.
+        local_bindings = code.get('local_references', ()) if origin == 'code' else ()
+        result = self.gate.assess(text, proposal, cohort=cohort, world_ids=tuple(world),
+                                 missing_context=missing_context, local_bindings=local_bindings)
         result['context_ledger'] = ledger
         result['assignment_source'] = origin
         result['code_proposal'] = code

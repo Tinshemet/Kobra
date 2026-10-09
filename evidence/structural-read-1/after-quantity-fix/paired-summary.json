@@ -1,0 +1,12 @@
+{
+  "kind": "paired reused development; code routing and literal-slot scoring only; does not score new chunk metadata or reference correctness",
+  "cases": 600,
+  "new_model_calls": 0,
+  "before_code_routed": 371,
+  "after_code_routed": 387,
+  "before_correct": 371,
+  "after_correct": 387,
+  "ticks": 16,
+  "regressions": 0,
+  "newly_routed_incorrect": 0
+}

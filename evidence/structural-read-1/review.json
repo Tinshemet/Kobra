@@ -1,0 +1,40 @@
+{
+  "scope": [
+    "src/kobra/structural_read.py",
+    "src/kobra/rule_assignment.py",
+    "src/kobra/confidence_gate.py",
+    "tests/test_structural_read.py",
+    "tools/export_read_examples.py"
+  ],
+  "sources": [
+    "https://universaldependencies.org/u/dep/conj.html",
+    "https://universaldependencies.org/u/overview/enhanced-syntax.html",
+    "https://aclanthology.org/J13-4004/",
+    "https://spacy.io/usage/linguistic-features#dependency-parse"
+  ],
+  "checks": [
+    "Reviewed action versus member-list boundaries and original character spans",
+    "Kept shared-location constraints separate from invented WORLD identities",
+    "Only unique number-compatible earlier local descriptions bind it/them; competing candidates abstain",
+    "Model proposals cannot authorize their own local IDs",
+    "Partial unresolved structures fail the gate even with calibration",
+    "Negation, modal and conditional scope not flattened by these rules",
+    "Final suite: 165 run, 164 passed, one optional skip; 600 paired reused development cases; no model calls",
+    "Playground process stopped at user request; HTML syntax and updated saved traces checked"
+  ],
+  "findings_fixed": [
+    "Two new code routes dropped explicit all quantity; first comparison retained, general quantity rule added, both recovered"
+  ],
+  "limits": [
+    "Number agreement and bounded grammar are not complete coreference",
+    "600-case slot comparison does not score new metadata or demonstrate fresh accuracy",
+    "External confidence calibration remains absent"
+  ],
+  "hashes": {
+    "src/kobra/structural_read.py": "fa38019aec9ece4082cd0bba75bb2dc4c6bfda922be5f1c340674784a9ec1f26",
+    "src/kobra/rule_assignment.py": "1196707b99afcd9c11ab8baf8501958a5fb31680024e92da74042c438d2e3f4e",
+    "src/kobra/confidence_gate.py": "63c7e672b5f85709cafc22e0cb99067f915dfddd624a9076ebd9ddfadf3f594f",
+    "tests/test_structural_read.py": "bbd2d5efee231b92ed83a0935283d21b9119fee80fd28ad14bd9d5443b8eca0a",
+    "tools/export_read_examples.py": "b029d6fe157237bee062f597c24cbab72d682b122b23abd239403b9637ff323d"
+  }
+}
