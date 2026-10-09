@@ -1,0 +1,13 @@
+{
+  "generator_version": "1.2.0",
+  "inventory_cases": 2607,
+  "requires_context": 263,
+  "by_ambiguity_level": {
+    "0": 2344,
+    "1": 231,
+    "3": 26,
+    "2": 6
+  },
+  "source": "independent Serpent graphs; no Kobra outputs",
+  "model_calls": 0
+}

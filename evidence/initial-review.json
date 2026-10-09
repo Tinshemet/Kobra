@@ -1,0 +1,41 @@
+{
+  "stage": "initial extraction only",
+  "review": {
+    "scope": "all new package source, package metadata, tests, inventory and provenance verifier",
+    "reviewer": "implementing agent; not independent audit",
+    "outcome": "12 extracted definitions preserve source AST; imports restricted to standard library and Kobra vocabulary; no model calls or tool execution; Gorgon source unmodified",
+    "known_limits": [
+      "Full front-door/READ/RESOLVE/ROUTE extraction remains pending",
+      "Clock detection retains invalid-time recognition",
+      "Static import inventory does not establish runtime dependency closure",
+      "Gorgon integration has not been performed"
+    ]
+  },
+  "checks": [
+    {
+      "command": ".venv/bin/python -m pip install --no-deps .",
+      "exit_status": 0,
+      "result": "wheel built and installed in dedicated virtual environment"
+    },
+    {
+      "command": ".venv/bin/python -I -m unittest discover -s tests -v",
+      "exit_status": 0,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "python3 tools/verify_extraction.py ../gorgon",
+      "exit_status": 0,
+      "matched_definitions": 12,
+      "failures": 0
+    },
+    {
+      "command": "ruff format --check src tests tools",
+      "exit_status": 0,
+      "checked_files": 6
+    }
+  ],
+  "inventory_files": 39,
+  "next_step": "Trace Board and model-channel dependencies to define client-provided interfaces before extracting the front door and READ."
+}

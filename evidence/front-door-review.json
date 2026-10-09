@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-08",
+  "scope": "Stage 2: standalone English front door with explicit client vocabulary",
+  "review": {
+    "reviewer": "implementing agent; not independent audit",
+    "scope": [
+      "public vocabulary and normalization adapter",
+      "ported front-door rules and helper dependencies",
+      "selected English lexicon and noise catalogue",
+      "compatibility fixtures and cross-domain tests",
+      "source attribution and packaging",
+      "Medusa architecture decision and README"
+    ],
+    "outcome": "No Gorgon imports or implicit client vocabulary in normalization. All eight recorded source-file hashes unchanged. Historical source attribution retained. Explicit vocabulary replaces planner defaults; original transformation order and helper rules retained.",
+    "alternatives": "Direct copying would retain planner and pass2 imports; rewriting would change denoising behavior. Selected local rule extraction with explicit vocabulary, verified against source outputs.",
+    "limits": [
+      "542 cases establish bounded compatibility, not complete behavioral equivalence or correctness",
+      "Inherited English heuristic limitations remain",
+      "Client vocabulary requires exact forms and explicit configuration",
+      "READ distillation source binding and semantic implementation remain pending",
+      "Medusa ownership is documented; runtime interfaces are not implemented"
+    ]
+  },
+  "checks": [
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v",
+      "exit_status": 0,
+      "passed": 34,
+      "failed": 0,
+      "skipped": 0,
+      "artifact": "evidence/front-door-tests.log"
+    },
+    {
+      "command": ".venv/bin/python -I -m unittest discover -s tests -v",
+      "exit_status": 0,
+      "passed": 34,
+      "failed": 0,
+      "skipped": 0,
+      "artifact": "evidence/front-door-installed-tests.log"
+    },
+    {
+      "check": "Gorgon compatibility: original text, normalized text, offset map and notice messages",
+      "cases": 542,
+      "mismatches": 0,
+      "missing": 0,
+      "fixtures": {
+        "tests/fixtures/front-door-gorgon-characterization.json": "b5c4e4f0ba9176495618d9ab4d818b5e55c1d71371ddf4f89c2f5f373444aa2a",
+        "tests/fixtures/front-door-boundaries.json": "6f163ea7d787e0505bef3b3a1f5c220e4bb903fa17a5ae135c03a897d1cd1c47"
+      }
+    },
+    {
+      "check": "Cross-client vocabulary isolation and application-import blocking",
+      "result": "passed within test suite"
+    },
+    {
+      "command": "python3 -m pip wheel --no-deps --no-build-isolation --no-index . -w dist",
+      "exit_status": 0,
+      "sha256": "3104bde705cef70af5431bfe83937d574a1b39929416240a8c94910321038c16"
+    },
+    {
+      "check": "Wheel LICENSE/NOTICE bytes match source files",
+      "result": "passed"
+    },
+    {
+      "check": "Ruff F/E9 lint and formatting",
+      "result": "passed"
+    }
+  ],
+  "next": "Review cross-domain normalization behavior, bind READ source evidence to the original input envelope, and generalize existing READ into faithful distilled points.",
+  "git": "Local work only; no commit or push; Gorgon production code and historical captures unchanged."
+}

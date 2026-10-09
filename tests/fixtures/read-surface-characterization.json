@@ -1,0 +1,160 @@
+{
+  "purpose": "Inherited READ surface compatibility, not semantic gold",
+  "nouns": [
+    "appointment",
+    "appointments",
+    "document",
+    "documents",
+    "meeting",
+    "meetings",
+    "report",
+    "reports"
+  ],
+  "cases": [
+    {
+      "text": "Send the report because it is ready.",
+      "anchors": [
+        "report"
+      ],
+      "reasons": [
+        {
+          "family": "cause",
+          "span": "it is ready",
+          "start": 24,
+          "end": 35
+        }
+      ]
+    },
+    {
+      "text": "Keep the appointment although it is late.",
+      "anchors": [
+        "appointment"
+      ],
+      "reasons": [
+        {
+          "family": "concession",
+          "span": "it is late",
+          "start": 30,
+          "end": 40
+        }
+      ]
+    },
+    {
+      "text": "Save the report to reduce duplicated work.",
+      "anchors": [
+        "report"
+      ],
+      "reasons": [
+        {
+          "family": "purpose",
+          "span": "to reduce duplicated work",
+          "start": 16,
+          "end": 41
+        }
+      ]
+    },
+    {
+      "text": "Move the report to the folder.",
+      "anchors": [
+        "report"
+      ],
+      "reasons": []
+    },
+    {
+      "text": "Send the report so that everyone can review it.",
+      "anchors": [
+        "report"
+      ],
+      "reasons": [
+        {
+          "family": "purpose",
+          "span": "so that everyone can review it",
+          "start": 16,
+          "end": 46
+        }
+      ]
+    },
+    {
+      "text": "Compare the report and the document.",
+      "anchors": [
+        "report",
+        "document"
+      ],
+      "reasons": []
+    },
+    {
+      "text": "List every appointment except the meeting.",
+      "anchors": [
+        "appointment",
+        "meeting"
+      ],
+      "reasons": []
+    },
+    {
+      "text": "Do not send the report.",
+      "anchors": [
+        "report"
+      ],
+      "reasons": []
+    },
+    {
+      "text": "The report is late.",
+      "anchors": [
+        "report"
+      ],
+      "reasons": []
+    },
+    {
+      "text": "Why is the report late?",
+      "anchors": [
+        "report"
+      ],
+      "reasons": []
+    },
+    {
+      "text": "Send the report even though it is incomplete.",
+      "anchors": [
+        "report"
+      ],
+      "reasons": [
+        {
+          "family": "concession",
+          "span": "it is incomplete",
+          "start": 28,
+          "end": 44
+        }
+      ]
+    },
+    {
+      "text": "Set the value to 4 cores.",
+      "anchors": [],
+      "reasons": []
+    },
+    {
+      "text": "Send the report to Mina.",
+      "anchors": [
+        "report"
+      ],
+      "reasons": []
+    },
+    {
+      "text": "Quote \"because it is ready\" in the report.",
+      "anchors": [
+        "report"
+      ],
+      "reasons": [
+        {
+          "family": "cause",
+          "span": "it is ready\" in the report",
+          "start": 15,
+          "end": 41
+        }
+      ]
+    },
+    {
+      "text": "",
+      "anchors": [],
+      "reasons": []
+    }
+  ]
+}

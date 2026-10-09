@@ -1,0 +1,107 @@
+{
+  "source_repository": "https://github.com/Tinshemet/Gorgon.git",
+  "source_head": "7793b44cf71b189578cff3fd2c3274f5b2535d9a",
+  "basis": "working tree, not assumed identical to HEAD",
+  "extracted_symbols": [
+    {
+      "source": "orchestrator/languages/english/codex.py",
+      "line": 873,
+      "symbols": [
+        "UNITS"
+      ],
+      "sha256": "c70b9200b9582ff390cb25839f9516ffb9b680055914ccade493e97861988db7"
+    },
+    {
+      "source": "orchestrator/languages/english/codex.py",
+      "line": 879,
+      "symbols": [
+        "COARSE"
+      ],
+      "sha256": "a5c516286bf2e7d0cbeef4db9699bc95b6fc1ddbff3b5bd8bad9b4d370aa694b"
+    },
+    {
+      "source": "orchestrator/languages/english/codex.py",
+      "line": 883,
+      "symbols": [
+        "FREQUENCY_ADVERBS"
+      ],
+      "sha256": "f25646dc82fd6320db3a13be11c95159c2101d89a4a53b31adfb7607d4afdada"
+    },
+    {
+      "source": "orchestrator/languages/english/codex.py",
+      "line": 889,
+      "symbols": [
+        "DEICTIC"
+      ],
+      "sha256": "145b0bc50f1156e2ac70f42c5f070dc6dcab34c5aa634c99d2a1e8e2a6be32a3"
+    },
+    {
+      "source": "orchestrator/languages/english/codex.py",
+      "line": 892,
+      "symbols": [
+        "WEEKDAYS"
+      ],
+      "sha256": "e9ab4fb99e335a1201662f48e66306b060fe32aeab03bde09e591e42d18a9cb0"
+    },
+    {
+      "source": "orchestrator/languages/english/codex.py",
+      "line": 895,
+      "symbols": [
+        "MONTHS"
+      ],
+      "sha256": "fb30c7e2d2646df9fd23e0a8b6c0d6d0fcb726629388b38c499046cf9e421b05"
+    },
+    {
+      "source": "orchestrator/languages/english/codex.py",
+      "line": 901,
+      "symbols": [
+        "RECURRING"
+      ],
+      "sha256": "9680bdcdff21b8cc67c567e57f41de040669b0fa9cf0e522d6b5bd9e8c82d05d"
+    },
+    {
+      "source": "orchestrator/languages/english/seam/temporal.py",
+      "line": 70,
+      "symbols": [
+        "CLOCK"
+      ],
+      "sha256": "f7e060fd1bd69b5fbe9f3e62f2529567b458ac5725aaecc1a4f14845122904a5"
+    },
+    {
+      "source": "orchestrator/languages/english/seam/temporal.py",
+      "line": 88,
+      "symbols": [
+        "EVENT",
+        "INSTANT",
+        "RECURRENCE"
+      ],
+      "sha256": "4419e2182e2735249bf982893ab96064436fda3216e15ecec7ad2a32cd1f2723"
+    },
+    {
+      "source": "orchestrator/languages/english/seam/temporal.py",
+      "line": 91,
+      "symbols": [
+        "_words"
+      ],
+      "sha256": "6485d0c52097fa484054367db138b9357f2f1832b0aad6e56d7ce7feb2fe0ad5"
+    },
+    {
+      "source": "orchestrator/languages/english/seam/temporal.py",
+      "line": 97,
+      "symbols": [
+        "clock_in"
+      ],
+      "sha256": "325df08321ef2ca349f8bfc645195bf51bee9bc658f03343fd97ea40d5f4119f"
+    },
+    {
+      "source": "orchestrator/languages/english/seam/temporal.py",
+      "line": 134,
+      "symbols": [
+        "clock_tail"
+      ],
+      "sha256": "8d13cfea99c0f11ef6d7dab812116cc9e489996aa9da3098d29795cf22db45ae"
+    }
+  ],
+  "scope": "clock detection only; no Gorgon integration or quality claims",
+  "test_source": "files/tests/test_temporal_clock.py: eight clock-tail cases adapted to unittest"
+}

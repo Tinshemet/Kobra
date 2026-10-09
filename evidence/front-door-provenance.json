@@ -1,0 +1,263 @@
+{
+  "source_head": "7793b44cf71b189578cff3fd2c3274f5b2535d9a",
+  "basis": "Gorgon working tree, read-only",
+  "symbols": [
+    {
+      "source": "seam/front_door.py",
+      "symbol": "View",
+      "line": 62,
+      "sha256": "d040746f29b0f8f03cfe960f9d12d954eb696cda65c150aaa3d477d9cab08298"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "Repair",
+      "line": 69,
+      "sha256": "2130e63b2624b899fa2640f4b0057c79fc588252c3186c5a79f09e6fb0b020ee"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_phrase_force",
+      "line": 79,
+      "sha256": "0ba30d8ca5736b296aee8b7b3ed7d8e035f496cceb33b6c80799969fa7ac50ff"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_despace",
+      "line": 103,
+      "sha256": "2ac6d61bd71c94f376af183bc6378656544c1b3cdd49b2e01a3125756cc1d302"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "read",
+      "line": 113,
+      "sha256": "34dab6dc84d585b7fe5bc6c1057df1a005e3c6d1799dec52edfbcc3bb3c6989d"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "defused",
+      "line": 150,
+      "sha256": "578d9372fcd703b44aedb71c30b0239d5d871b9d5ebdd1ad0dc5272acb3b8631"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_shape_pass",
+      "line": 178,
+      "sha256": "4a6023cb67e2b6e352de9d530217a81cef310cd7eec1761ddc1541725c707395"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_shape_spans",
+      "line": 212,
+      "sha256": "91ae666e9ab09aea50c11f220ab0f7d41cf08ac7d41a099f69f87340b57b0795"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_separator_pass",
+      "line": 238,
+      "sha256": "282764ad6f11d571a7f36ccbc29596dadb986abf92f1603f1fb54226b98c8f97"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_split_pass",
+      "line": 321,
+      "sha256": "2d16f608fbc9aef87a12a7e9d52a613b1f3bea06b689f7fc138ae1f79a8bdd4f"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_read_stages",
+      "line": 427,
+      "sha256": "666bd87d38cfaec2e09e19a4071b2f0b9f01dc35cea1801a1812c5b6538fb992"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_vocab",
+      "line": 609,
+      "sha256": "63b195b0b485e8751960bf2da0de63625c371ccf94f286f7f76e4b90bb96d19f"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_board",
+      "line": 648,
+      "sha256": "16a6bde939800bcb7a527591a30d0a0b113f98247e7c7340eb298f9132df69ba"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_statuses",
+      "line": 653,
+      "sha256": "2f9efa942c117a8d566fd6788dcdc613e5994114430e8675d0a0b5fe204496ae"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_recognise",
+      "line": 673,
+      "sha256": "819c93b8450e60992ca81a5469b39431304996b735779707d963bbb008aa941a"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_tokens",
+      "line": 841,
+      "sha256": "9cdf9117acad7df7764aa1c60f85bbe3d6a690514604fdd484e0c115d00f1f24"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_quoted",
+      "line": 845,
+      "sha256": "b6b8581e02d207d72d5264d7a97a23179e86e75b82fe97165263100726418fc3"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_damerau1",
+      "line": 854,
+      "sha256": "8b8bd8e4c56dfb7ae9575b578bf4b52fed55c615f5c35cf3df72418e0ea86c37"
+    },
+    {
+      "source": "seam/front_door.py",
+      "symbol": "_apply",
+      "line": 875,
+      "sha256": "add815ad21072010a326544bdbc1b80b2e2302fe3510e1420c76038e4ef86d71"
+    },
+    {
+      "source": "seam/pass2.py",
+      "symbol": "_outside_quotes",
+      "line": 269,
+      "sha256": "1e69a983f3bd02d9631bcfda63b4ecd013b17f7581d6ea2b126e61e633493b47"
+    },
+    {
+      "source": "seam/pass2.py",
+      "symbol": "merge_cut_points",
+      "line": 310,
+      "sha256": "f98048599608578592d2ef0e9f24162d0ba76196a5afbdc5a3a38337d0a733a6"
+    },
+    {
+      "source": "seam/pass2.py",
+      "symbol": "_first_cut",
+      "line": 346,
+      "sha256": "093456a0b8cd7a8c6d42388a768720d237f7be6d11c462ff7220543a6f01b998"
+    },
+    {
+      "source": "seam/testimony.py",
+      "symbol": "predicate_end",
+      "line": 97,
+      "sha256": "101e467dd5cef6e00e347cec4cc376f3420db586993107d0ce3d4752edd0f19a"
+    },
+    {
+      "source": "seam/speech_act.py",
+      "symbol": "words_of",
+      "line": 144,
+      "sha256": "226c4decfe90119fca562a352f51c90df08e1f1261a6ae40eee737853786f946"
+    },
+    {
+      "source": "seam/speech_act.py",
+      "symbol": "_after_openers",
+      "line": 163,
+      "sha256": "34fb3c25c8988c3e9381c63831ad027a1fc76dc63185bc9b9e79aadade564620"
+    },
+    {
+      "source": "seam/iso.py",
+      "symbol": "is_condition",
+      "line": 222,
+      "sha256": "e00fc0bfbbde5c9d8e0a80e807553fba6fbd2f0f4cd256f4c5bc79f80bf7b380"
+    },
+    {
+      "source": "seam/temporal.py",
+      "symbol": "_words",
+      "line": 91,
+      "sha256": "6485d0c52097fa484054367db138b9357f2f1832b0aad6e56d7ce7feb2fe0ad5"
+    },
+    {
+      "source": "seam/temporal.py",
+      "symbol": "events_in",
+      "line": 149,
+      "sha256": "76c67038349165be4fb4ab7cb6d26a6cf5bc6a9666c00a2e903f9909d9bb4bac"
+    }
+  ],
+  "lexicon_names": [
+    "ACHIEVE_MARKERS",
+    "AFFIRMATION",
+    "ALWAYS_STANDING_PHRASES",
+    "APOLOGY",
+    "AUXILIARIES",
+    "BACKCHANNEL",
+    "BOUNDARY_WORDS",
+    "CLAUSE_WORDS",
+    "CONTRACTIONS",
+    "CORRECTIONS",
+    "COURTESY",
+    "CUT_DETERMINERS",
+    "CUT_NEGATION",
+    "DISTINCT",
+    "EMPHATIC",
+    "EVENTS",
+    "EVENT_PHRASES",
+    "FALSE_FUSIONS",
+    "FALSE_PRINTS",
+    "FALSE_TYPOS",
+    "FILLED_PAUSE",
+    "FOCUS_PARTICLES",
+    "FUNCTION_WORDS",
+    "GRAMMAR",
+    "HEDGES",
+    "INDEFINITES",
+    "LIGHT_VERBS",
+    "LOCATIVE_PREPOSITIONS",
+    "NAMING_CUES",
+    "NEGATION",
+    "NEG_DO",
+    "NEG_MODALS",
+    "OBJECT_OPENERS",
+    "OBJECT_PRONOUNS",
+    "OPENERS",
+    "ORDINALS",
+    "PARTICLES",
+    "PLURAL_PROFORMS",
+    "PLURAL_PRONOUNS",
+    "REASON_MARKER_WORDS",
+    "RELATIVIZERS",
+    "RETRACTIONS",
+    "SELECTOR_PREPOSITIONS",
+    "SEQUENCE_ORDINALS",
+    "SIMILE",
+    "SINGULAR_PROFORMS",
+    "STANDING",
+    "SUBJECT_PRONOUNS",
+    "SUPERLATIVES",
+    "TESTIMONY_COPULAS",
+    "TRANSFER_VERBS",
+    "TROUBLE",
+    "WHETHER_HOSTS",
+    "WH_WORDS",
+    "WRAPPERS"
+  ],
+  "source_files": {
+    "seam/front_door.py": "3e331d314edbab482136e03de9d9f5ed0014eca9be92a3f1d02bff89012e3ac4",
+    "seam/pass2.py": "952985712d988ec85fe69a7a5b4239e4b031aea4b83d347a45460812176ffa7f",
+    "seam/testimony.py": "eab025abc536f0331d661e6c49a2fac0608116038cc5e4f4b6259078fe7062ee",
+    "seam/speech_act.py": "dd540cef131774c5b310d9358dca8863f0a942446b21e17636e4dc5eed19e9b9",
+    "seam/iso.py": "8c0b8acc7d697da5a6b48ccf7d7dc9d98da511d7a0acbe034cacbf8cf171b8c0",
+    "seam/temporal.py": "78b59674e0cc59a948daa6d4aa59a2527c1dd19e8a727550ed72185b67c8b04e",
+    "codex.py": "c1e83ef55ad176cbcc1fe141af95bf06fce2ccf97169b150197c99c52473eafc",
+    "noise_prints.py": "fa1e72a9623757f902ff7d12c666688ac037dec9b1faa22937562f1137ca87bb"
+  },
+  "changes": [
+    "Copied rule functions through AST; historical comments omitted, function docstrings retained.",
+    "Replaced sibling imports with local pure vocabulary and functions.",
+    "Replaced Board/planner/global operation lookups with explicit per-instance vocabulary.",
+    "Removed implicit vms and vm possessive protection; clients supply protected words.",
+    "Threaded vocabulary through clause splitting and testimony predicate boundary.",
+    "Retained linguistic order; no model calls or storage."
+  ],
+  "replacement_helpers": [
+    "_vocab",
+    "_statuses"
+  ],
+  "removed_helpers": [
+    "_board"
+  ],
+  "copied_module_sha256": {
+    "src/kobra/_english_front_door.py": "e8aac24af92d422009374a854947c6aac4ea0a483f4263be657d70284860eae7",
+    "src/kobra/_english_lexicon.py": "aab51343908e55dcc3894f04f43e4b7838234725dd8c64c2e00e2556a2f8a29f",
+    "src/kobra/_noise_prints.py": "0e781354bd025637e47927287c85d8ed34f74d2d2e6640db522a4d5855167498"
+  },
+  "test_corpus_source_sha256": "1bc8d88ddb7ec7951c991be98cffa6d87a1568434447e3ea9b30d852a64836d3",
+  "source_notice_preserved": true
+}

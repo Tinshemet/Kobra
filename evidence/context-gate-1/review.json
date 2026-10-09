@@ -1,0 +1,30 @@
+{
+  "scope": "External confidence gate, routing evaluator, pre-reader Serpent integration; current local Kobra baseline included because repository previously tracked only LICENSE.",
+  "checks": [
+    "Inspected trusted calibration versus model-input boundary",
+    "Checked source and WORLD-ID grounding, fail-closed missing calibration, exception handling",
+    "Checked teacher labels excluded from inference inputs and filtering denominator recorded",
+    "Checked fixed reference labels versus route outcomes, including unnecessary and unjustified ASK",
+    "Reviewed staged paths, provenance notices and credential-pattern scan; raw model captures are not part of this commit"
+  ],
+  "findings_fixed": [
+    "Context sidecar hash added to offline replay validation",
+    "Accepted malformed proposals classified as invalid rather than crashing the routing evaluator",
+    "Removed pre-existing trailing blank line caught by git diff --check"
+  ],
+  "limitations": [
+    "No live AI evaluation or held-out confidence calibration performed",
+    "Synthetic routing fixtures test implementation; they do not establish language accuracy",
+    "Serpent 1.2.0 companion patch is local in sibling repository; sealed artifacts unchanged"
+  ],
+  "source_sha256": {
+    "src/kobra/confidence_gate.py": "d5e6188707d4b23594b35c603a48827bb231cf67f28f8c38c60d25dcc4621cc3",
+    "src/kobra/rule_assignment.py": "dd5a942a526efdb8f8f47cad179035bdff4672e273ed1bbb6252f3e0a9b8ebf3",
+    "tools/evaluate_routing.py": "12437e327974ba64c32480a1abb4a16f999b9490ee232a67356516769e3994d6",
+    "tools/generate_read300.py": "d8c9cc33d45b854b6925a8a27a8629d641eb3470469839b6dd2c16d250465b90",
+    "tools/run_read300.py": "9276cd5d2524f574af8050537a23853e59af2275ab5e3eca7765aa0c15ffff27",
+    "tools/audit_read300.py": "45575cbff5b4eb87b4327d6e2a1f99557c74e387822ed6a8aadb1e582d5e1bd6",
+    "tests/test_confidence_gate.py": "28bf858536fbfb6b4c3bd4693dabed126f720a8ed3478f69a13a2766c33b6608",
+    "tests/test_routing_evaluation.py": "8012bdfdd03321a508716bc23139bacfe76144357178c6a19c5f44f2562a23e2"
+  }
+}

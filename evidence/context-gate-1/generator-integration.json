@@ -1,0 +1,8 @@
+{
+  "kind": "temporary integration smoke; not a Kobra inference batch",
+  "selected_cases": 300,
+  "labels_before_inference": true,
+  "teacher_labels_absent_from_inputs": true,
+  "excluded_count": 263,
+  "model_calls": 0
+}

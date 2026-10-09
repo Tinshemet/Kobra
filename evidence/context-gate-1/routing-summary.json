@@ -1,0 +1,51 @@
+{
+  "cases": 7,
+  "counts": {
+    "correct_code": 1,
+    "wrong_code": 1,
+    "correct_AI": 1,
+    "wrong_AI": 1,
+    "correct_ASK": 1,
+    "unnecessary_ASK": 1,
+    "unjustified_ASK": 1
+  },
+  "correct_code": 1,
+  "correct_AI": 1,
+  "correct_ASK": 1,
+  "ask_precision": 0.3333333333333333,
+  "ask_recall": 0.5,
+  "correct": 3,
+  "accepted": 4,
+  "ask": 3,
+  "records": [
+    {
+      "id": "code-True",
+      "outcome": "correct_code"
+    },
+    {
+      "id": "code-False",
+      "outcome": "wrong_code"
+    },
+    {
+      "id": "AI-True",
+      "outcome": "correct_AI"
+    },
+    {
+      "id": "AI-False",
+      "outcome": "wrong_AI"
+    },
+    {
+      "id": "ASK-True-missing_context:target",
+      "outcome": "correct_ASK"
+    },
+    {
+      "id": "ASK-False-missing_context:target",
+      "outcome": "unnecessary_ASK"
+    },
+    {
+      "id": "ASK-True-uncalibrated_cohort",
+      "outcome": "unjustified_ASK"
+    }
+  ],
+  "evidence_kind": "synthetic_contract_fixture; deliberately includes errors; not model accuracy"
+}

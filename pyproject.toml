@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kobra-linguistics"
+version = "0.1.0.dev0"
+description = "Application-independent linguistic pipeline contracts through routing"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+candidates = ["spacy>=3.8,<3.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
