@@ -1,0 +1,824 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "meduza.program/0.2-draft"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "mode": {
+      "enum": [
+        "fetch",
+        "ensure",
+        "achieve"
+      ]
+    },
+    "origin": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "read",
+            "meduza"
+          ]
+        },
+        "artifact_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "decision_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+        }
+      },
+      "required": [
+        "kind",
+        "artifact_sha256",
+        "decision_id"
+      ],
+      "additionalProperties": false
+    },
+    "objective": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "id",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "id",
+          "version",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "policy_ref": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/type"
+      }
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "max_steps": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_calls": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_wall_ms": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "max_steps",
+        "max_calls",
+        "max_wall_ms"
+      ],
+      "additionalProperties": false
+    },
+    "body": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/statement"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "revision",
+    "mode",
+    "origin",
+    "objective",
+    "dependencies",
+    "policy_ref",
+    "parameters",
+    "limits",
+    "body"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kobra:meduza:program:0.2-draft",
+  "$comment": "Draft shape contract only. No semantic typechecker, compiler, capability implementation or authorization is supplied by this schema. No remote references required.",
+  "$defs": {
+    "type": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "bool",
+                "int",
+                "number",
+                "string",
+                "bytes",
+                "duration",
+                "timestamp",
+                "evidence"
+              ]
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "entity",
+                "record"
+              ]
+            },
+            "name": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            }
+          },
+          "required": [
+            "kind",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "set",
+                "list"
+              ]
+            },
+            "items": {
+              "$ref": "#/$defs/type"
+            }
+          },
+          "required": [
+            "kind",
+            "items"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "value": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "literal": {}
+          },
+          "required": [
+            "literal"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ref": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            }
+          },
+          "required": [
+            "ref"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "parameter": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            }
+          },
+          "required": [
+            "parameter"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entity": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            }
+          },
+          "required": [
+            "entity"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/value"
+                },
+                "path": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+                  },
+                  "minItems": 1
+                }
+              },
+              "required": [
+                "value",
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "field"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "predicate": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "test": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "args": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/value"
+              }
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/value"
+              },
+              "minItems": 0
+            },
+            "max_age_ms": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "test",
+            "args",
+            "evidence",
+            "max_age_ms"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "all": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/predicate"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "all"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "any": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/predicate"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "any"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "not": {
+              "$ref": "#/$defs/predicate"
+            }
+          },
+          "required": [
+            "not"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "statement": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "new"
+            },
+            "factory": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "args": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/value"
+              }
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bind": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op",
+            "factory",
+            "args",
+            "count",
+            "bind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "fetch"
+            },
+            "capability": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "args": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/value"
+              }
+            },
+            "bind": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op",
+            "capability",
+            "args",
+            "bind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "query"
+            },
+            "capability": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "args": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/value"
+              }
+            },
+            "bind": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op",
+            "capability",
+            "args",
+            "bind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "call"
+            },
+            "capability": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "args": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/value"
+              }
+            },
+            "bind": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op",
+            "capability",
+            "args",
+            "bind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "publish"
+            },
+            "value": {
+              "$ref": "#/$defs/value"
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "foreach"
+            },
+            "items": {
+              "$ref": "#/$defs/value"
+            },
+            "item": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "max_items": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "selection": {
+              "enum": [
+                "snapshot"
+              ]
+            },
+            "body": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/statement"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op",
+            "items",
+            "item",
+            "max_items",
+            "selection",
+            "body"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "break"
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "ensure"
+            },
+            "predicate": {
+              "$ref": "#/$defs/predicate"
+            },
+            "on_false": {
+              "enum": [
+                "suspend",
+                "fail"
+              ]
+            },
+            "on_unknown": {
+              "enum": [
+                "suspend"
+              ]
+            },
+            "on_conflict": {
+              "enum": [
+                "suspend"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op",
+            "predicate",
+            "on_false",
+            "on_unknown",
+            "on_conflict"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "achieve"
+            },
+            "predicate": {
+              "$ref": "#/$defs/predicate"
+            },
+            "obligation": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "max_rounds": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "on_unknown": {
+              "enum": [
+                "suspend"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op",
+            "predicate",
+            "obligation",
+            "max_rounds",
+            "on_unknown"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+            },
+            "origins": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 1
+            },
+            "op": {
+              "const": "if"
+            },
+            "predicate": {
+              "$ref": "#/$defs/predicate"
+            },
+            "then": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/statement"
+              },
+              "minItems": 0
+            },
+            "else": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/statement"
+              },
+              "minItems": 0
+            },
+            "on_unknown": {
+              "enum": [
+                "suspend"
+              ]
+            },
+            "on_conflict": {
+              "enum": [
+                "suspend"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "origins",
+            "op",
+            "predicate",
+            "then",
+            "else",
+            "on_unknown",
+            "on_conflict"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

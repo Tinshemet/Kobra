@@ -1,0 +1,68 @@
+{
+  "schema": "meduza.program/0.2-draft",
+  "id": "start-explicit-set",
+  "revision": 0,
+  "mode": "achieve",
+  "origin": {
+    "kind": "read",
+    "artifact_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "decision_id": "fixture:d1"
+  },
+  "objective": {
+    "id": "objective:fixture",
+    "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "dependencies": [
+    {
+      "id": "fixture:catalog",
+      "version": "1",
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+    }
+  ],
+  "policy_ref": "policy:fixture",
+  "parameters": {
+    "targets": {
+      "kind": "set",
+      "items": {
+        "kind": "entity",
+        "name": "lab.vm"
+      }
+    }
+  },
+  "limits": {
+    "max_steps": 100,
+    "max_calls": 20,
+    "max_wall_ms": 60000
+  },
+  "body": [
+    {
+      "id": "s1",
+      "origins": [
+        "point:p1"
+      ],
+      "op": "foreach",
+      "items": {
+        "parameter": "targets"
+      },
+      "item": "vm",
+      "max_items": 3,
+      "selection": "snapshot",
+      "body": [
+        {
+          "id": "s2",
+          "origins": [
+            "point:p1"
+          ],
+          "op": "call",
+          "capability": "lab.vm.start",
+          "args": {
+            "target": {
+              "ref": "vm"
+            }
+          },
+          "bind": "start_result"
+        }
+      ]
+    }
+  ]
+}

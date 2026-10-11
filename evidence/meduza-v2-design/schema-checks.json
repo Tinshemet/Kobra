@@ -1,0 +1,136 @@
+{
+  "kind": "draft schema conformance, not language/runtime correctness",
+  "checks": 25,
+  "passed": 25,
+  "failed": [],
+  "examples": 8,
+  "runtime_tests": 0,
+  "model_calls": 0,
+  "details": [
+    {
+      "case": "achieve",
+      "expected": "valid_shape",
+      "passed": true
+    },
+    {
+      "case": "conditional",
+      "expected": "valid_shape",
+      "passed": true
+    },
+    {
+      "case": "creation",
+      "expected": "valid_shape",
+      "passed": true
+    },
+    {
+      "case": "ensure",
+      "expected": "valid_shape",
+      "passed": true
+    },
+    {
+      "case": "fetch",
+      "expected": "valid_shape",
+      "passed": true
+    },
+    {
+      "case": "method",
+      "expected": "valid_shape",
+      "passed": true
+    },
+    {
+      "case": "query",
+      "expected": "valid_shape",
+      "passed": true
+    },
+    {
+      "case": "set",
+      "expected": "valid_shape",
+      "passed": true
+    },
+    {
+      "case": "unknown-version",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "self-issued-grant",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "bad-mode",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "unknown-operation",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "empty-dependencies",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "bad-hash",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "unknown-as-false",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "conflict-as-true",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "implicit-reference",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "missing-provenance",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "unbounded-loop",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "live-loop-selection",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "unbounded-achieve",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "boolean-count",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "negative-time-budget",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "mixed-value-tags",
+      "expected": "invalid_shape",
+      "passed": true
+    },
+    {
+      "case": "undefined-reference-needs-future-semantic-checker",
+      "expected": "valid_shape_only",
+      "passed": true
+    }
+  ]
+}

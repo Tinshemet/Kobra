@@ -1,0 +1,26 @@
+{
+  "status": "design and shape grammar only",
+  "checks": 25,
+  "passed": 25,
+  "runtime_tests": 0,
+  "source_hashes": {
+    "docs/meduza-v2-design.rst": "bab34206813e5fab0779e94389e8c8a4e82be2f6a59c141d429f776f8f998dd0",
+    "schemas/meduza-program-0.2.schema.json": "32d0c2cb8b2aeea8de3432016a0cc126230f89b80c7c10dac2274310665b9905",
+    "tools/check_meduza_draft.py": "53aa379680f6f391aec396252b6139b6f8b9cb80b2e66dfa78ab2d7c29bf705c",
+    "examples/meduza-v2/query.json": "5f30985a610308b19c2aa14acfed76f83895fddef9a1fa402e61418198949858",
+    "examples/meduza-v2/set.json": "8a08743e4349972af2555745cda4f74082eaac8de7c54d221ff6801d04606be5",
+    "examples/meduza-v2/method.json": "e7ddfe3742cb3ca84f801e5c923371d17d2bbe8585c28ec4888ff7153d0106ac",
+    "examples/meduza-v2/ensure.json": "8a6050c4a306301a5f1b4e22425b8b91d6df877dcd503a46fd5adf37aeb75500",
+    "examples/meduza-v2/creation.json": "fdacb59089958e254d1171c7a6729dc5512c2a8032f248899fbb2ee649bb20cc",
+    "examples/meduza-v2/conditional.json": "370875cb18c722b663c47c460c696fc0cef5aefc6723b403d26a943d7a6852db",
+    "examples/meduza-v2/README.rst": "19f38ea39cca9c8bdfa612ac02fd9fe1729fb82af46d7065b59d666fdb7d5817",
+    "examples/meduza-v2/fetch.json": "897aef0d1012c758033108f43270c20be29ff30bedad875a2f787ab27d1badb5",
+    "examples/meduza-v2/achieve.json": "ba1a9355bc34cef30e121de9468355852c811f03cae5363d0a0b443531f8d50a"
+  },
+  "references": [
+    "https://json-schema.org/draft/2020-12",
+    "https://www.w3.org/TR/scxml/"
+  ],
+  "command": "/home/tinshemet/Desktop/serpent/.venv/bin/python tools/check_meduza_draft.py",
+  "exit_code": 0
+}

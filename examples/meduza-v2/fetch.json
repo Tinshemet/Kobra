@@ -1,0 +1,60 @@
+{
+  "schema": "meduza.program/0.2-draft",
+  "id": "read-status",
+  "revision": 0,
+  "mode": "fetch",
+  "origin": {
+    "kind": "read",
+    "artifact_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "decision_id": "fixture:d1"
+  },
+  "objective": {
+    "id": "objective:fixture",
+    "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "dependencies": [
+    {
+      "id": "fixture:catalog",
+      "version": "1",
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+    }
+  ],
+  "policy_ref": "policy:fixture",
+  "parameters": {
+    "target": {
+      "kind": "entity",
+      "name": "lab.vm"
+    }
+  },
+  "limits": {
+    "max_steps": 100,
+    "max_calls": 20,
+    "max_wall_ms": 60000
+  },
+  "body": [
+    {
+      "id": "s1",
+      "origins": [
+        "point:p1"
+      ],
+      "op": "fetch",
+      "capability": "lab.vm.observe",
+      "args": {
+        "target": {
+          "parameter": "target"
+        }
+      },
+      "bind": "observation"
+    },
+    {
+      "id": "s2",
+      "origins": [
+        "point:p1"
+      ],
+      "op": "publish",
+      "value": {
+        "ref": "observation"
+      }
+    }
+  ]
+}
