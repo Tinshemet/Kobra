@@ -1,0 +1,41 @@
+{
+  "stage": "1: faithful distillation",
+  "status": "draft_pending_user_semantic_review",
+  "artifacts": [
+    "src/kobra/distillation.py",
+    "tests/fixtures/distillation-draft-1.json",
+    "tests/test_distillation.py",
+    "docs/distillation-contract.rst",
+    "docs/distillation-examples.rst"
+  ],
+  "review": {
+    "reviewer": "implementing agent, not independent reviewer",
+    "scope": "New contract, examples, structural tests and documentation",
+    "outcome": "Prose meaning kept open; immutable evidence and links checked; no semantic correctness claimed from structure. Reworded one quantification fixture to remove unintended only-scope ambiguity. Explicit ambiguity example retained.",
+    "limits": [
+      "Examples are development material, not held-out gold",
+      "No READ parser or front-door integration implemented",
+      "Input source identity must be checked at future model decoding boundary",
+      "User review of meanings remains pending"
+    ]
+  },
+  "checks": [
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v",
+      "exit_status": 0,
+      "passed": 25,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "ruff check src/kobra/distillation.py tests/test_distillation.py",
+      "exit_status": 0
+    },
+    {
+      "command": "ruff format --check src/kobra/distillation.py tests/test_distillation.py",
+      "exit_status": 0
+    }
+  ],
+  "next": "Review worked examples with user; preserve draft history when freezing a reviewed version. Then generalize existing front door and READ; RESOLVE reasons and ROUTE owns security.",
+  "implementation_limits": "No model calls, no Gorgon changes, no commits or pushes"
+}

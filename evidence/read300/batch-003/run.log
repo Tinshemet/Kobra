@@ -1,0 +1,104 @@
+STARTED 2026-10-09T15:58:51.416259+00:00 batch=3 model=qwen3.5:4b
+{"batch": 3, "completed": 10, "total": 300, "exact": 1, "retained": 10, "elapsed_seconds": 37.42610291299934, "updated_utc": "2026-10-09T15:59:28.858724+00:00"}
+{"batch": 3, "completed": 20, "total": 300, "exact": 5, "retained": 20, "elapsed_seconds": 52.78156947200114, "updated_utc": "2026-10-09T15:59:44.214191+00:00"}
+{"batch": 3, "completed": 30, "total": 300, "exact": 10, "retained": 30, "elapsed_seconds": 68.19021548900128, "updated_utc": "2026-10-09T15:59:59.622837+00:00"}
+{"batch": 3, "completed": 40, "total": 300, "exact": 14, "retained": 40, "elapsed_seconds": 82.77421380799933, "updated_utc": "2026-10-09T16:00:14.206836+00:00"}
+{"batch": 3, "completed": 50, "total": 300, "exact": 17, "retained": 50, "elapsed_seconds": 99.26618603500174, "updated_utc": "2026-10-09T16:00:30.698808+00:00"}
+{"batch": 3, "completed": 60, "total": 300, "exact": 20, "retained": 60, "elapsed_seconds": 116.38826513000095, "updated_utc": "2026-10-09T16:00:47.820887+00:00"}
+{"batch": 3, "completed": 70, "total": 300, "exact": 23, "retained": 70, "elapsed_seconds": 133.07593445699968, "updated_utc": "2026-10-09T16:01:04.508556+00:00"}
+{"batch": 3, "completed": 80, "total": 300, "exact": 26, "retained": 80, "elapsed_seconds": 150.96627705100036, "updated_utc": "2026-10-09T16:01:22.398899+00:00"}
+{"batch": 3, "completed": 90, "total": 300, "exact": 28, "retained": 90, "elapsed_seconds": 168.27312523100045, "updated_utc": "2026-10-09T16:01:39.705747+00:00"}
+{"batch": 3, "completed": 100, "total": 300, "exact": 32, "retained": 100, "elapsed_seconds": 188.35559062999891, "updated_utc": "2026-10-09T16:01:59.788213+00:00"}
+{"batch": 3, "completed": 110, "total": 300, "exact": 36, "retained": 110, "elapsed_seconds": 205.87811814700035, "updated_utc": "2026-10-09T16:02:17.310740+00:00"}
+{"batch": 3, "completed": 120, "total": 300, "exact": 39, "retained": 120, "elapsed_seconds": 224.19461554900045, "updated_utc": "2026-10-09T16:02:35.627237+00:00"}
+{"batch": 3, "completed": 130, "total": 300, "exact": 41, "retained": 130, "elapsed_seconds": 243.2921016750006, "updated_utc": "2026-10-09T16:02:54.724723+00:00"}
+{"batch": 3, "completed": 140, "total": 300, "exact": 45, "retained": 140, "elapsed_seconds": 263.2477369519984, "updated_utc": "2026-10-09T16:03:14.680359+00:00"}
+{"batch": 3, "completed": 150, "total": 300, "exact": 47, "retained": 150, "elapsed_seconds": 281.7774466289993, "updated_utc": "2026-10-09T16:03:33.210068+00:00"}
+{"batch": 3, "completed": 160, "total": 300, "exact": 50, "retained": 160, "elapsed_seconds": 301.0759798520012, "updated_utc": "2026-10-09T16:03:52.508602+00:00"}
+{"batch": 3, "completed": 170, "total": 300, "exact": 53, "retained": 170, "elapsed_seconds": 319.2508429469999, "updated_utc": "2026-10-09T16:04:10.683465+00:00"}
+{"batch": 3, "completed": 180, "total": 300, "exact": 56, "retained": 180, "elapsed_seconds": 338.0447071189992, "updated_utc": "2026-10-09T16:04:29.477329+00:00"}
+{"batch": 3, "completed": 190, "total": 300, "exact": 61, "retained": 190, "elapsed_seconds": 358.5000369699992, "updated_utc": "2026-10-09T16:04:49.932659+00:00"}
+{"batch": 3, "completed": 200, "total": 300, "exact": 65, "retained": 200, "elapsed_seconds": 377.630964906999, "updated_utc": "2026-10-09T16:05:09.063587+00:00"}
+{"batch": 3, "completed": 210, "total": 300, "exact": 68, "retained": 210, "elapsed_seconds": 396.9174086940002, "updated_utc": "2026-10-09T16:05:28.350030+00:00"}
+{"batch": 3, "completed": 220, "total": 300, "exact": 71, "retained": 220, "elapsed_seconds": 417.56493990799936, "updated_utc": "2026-10-09T16:05:48.997562+00:00"}
+{"batch": 3, "completed": 230, "total": 300, "exact": 73, "retained": 230, "elapsed_seconds": 436.67963677900116, "updated_utc": "2026-10-09T16:06:08.112259+00:00"}
+{"batch": 3, "completed": 240, "total": 300, "exact": 74, "retained": 240, "elapsed_seconds": 454.7389593830012, "updated_utc": "2026-10-09T16:06:26.171581+00:00"}
+{"batch": 3, "completed": 250, "total": 300, "exact": 75, "retained": 250, "elapsed_seconds": 473.82369842999833, "updated_utc": "2026-10-09T16:06:45.256321+00:00"}
+{"batch": 3, "completed": 260, "total": 300, "exact": 77, "retained": 260, "elapsed_seconds": 492.5365482499983, "updated_utc": "2026-10-09T16:07:03.969170+00:00"}
+{"batch": 3, "completed": 270, "total": 300, "exact": 79, "retained": 270, "elapsed_seconds": 512.0151703859992, "updated_utc": "2026-10-09T16:07:23.447792+00:00"}
+{"batch": 3, "completed": 280, "total": 300, "exact": 83, "retained": 280, "elapsed_seconds": 529.4969088229991, "updated_utc": "2026-10-09T16:07:40.929531+00:00"}
+{"batch": 3, "completed": 290, "total": 300, "exact": 85, "retained": 290, "elapsed_seconds": 549.4318475709988, "updated_utc": "2026-10-09T16:08:00.864469+00:00"}
+{"batch": 3, "completed": 300, "total": 300, "exact": 88, "retained": 300, "elapsed_seconds": 569.6936613969992, "updated_utc": "2026-10-09T16:08:21.126284+00:00"}
+{
+  "state": "complete",
+  "batch": 3,
+  "split": "fresh",
+  "cases": 300,
+  "exact_cases": 88,
+  "source_unchanged": true,
+  "source_retention_cases": 300,
+  "source_characters": 8468,
+  "seconds": 569.6957930239987,
+  "adapter_errors": 0,
+  "candidate_coverage": {
+    "covered": 1087,
+    "total": 1087
+  },
+  "errors": {
+    "arranged": 266,
+    "needs_review": 34
+  },
+  "slots_correct": 2220,
+  "slots_total": 3641,
+  "required_preserved": 1054,
+  "required_total": 1417,
+  "by_group": {
+    "clause_forms": {
+      "exact": 16,
+      "cases": 30
+    },
+    "comparison": {
+      "exact": 0,
+      "cases": 9
+    },
+    "distributive": {
+      "exact": 0,
+      "cases": 30
+    },
+    "fronting": {
+      "exact": 5,
+      "cases": 30
+    },
+    "modifiers": {
+      "exact": 15,
+      "cases": 18
+    },
+    "noun_phrases": {
+      "exact": 30,
+      "cases": 30
+    },
+    "quantifiers": {
+      "exact": 11,
+      "cases": 30
+    },
+    "relative": {
+      "exact": 0,
+      "cases": 30
+    },
+    "scope": {
+      "exact": 0,
+      "cases": 31
+    },
+    "verb_frames": {
+      "exact": 9,
+      "cases": 31
+    },
+    "voice_tense": {
+      "exact": 2,
+      "cases": 31
+    }
+  },
+  "passing_threshold": 285,
+  "needs_offline_audit": true,
+  "scope": "Bounded 11-slot projection, not full graph accuracy or meaning preservation"
+}

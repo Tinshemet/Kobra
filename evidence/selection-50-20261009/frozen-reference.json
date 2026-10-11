@@ -1,0 +1,2343 @@
+{
+  "version": "selection-pilot-gold-1",
+  "annotation": "Agent-authored before inference; not independently reviewed; bounded slot contract, not all meaning.",
+  "contract": "One main frame per action; attributed/conditional content is preserved in slots. Articles may be included or omitted in listed noun variants. Explicitly modal declaratives are assertions. Pronouns remain source-bound, unresolved. Phrasal verbs are whole predicates.",
+  "cases": [
+    {
+      "id": "C001",
+      "group": "simple",
+      "text": "Open the window.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Open"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the window",
+            "window"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C002",
+      "group": "simple",
+      "text": "Delete the draft.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Delete"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the draft",
+            "draft"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C003",
+      "group": "simple",
+      "text": "Send Maya the invoice.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Send"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the invoice",
+            "invoice"
+          ],
+          "recipient": [
+            "Maya"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C004",
+      "group": "simple",
+      "text": "Lena repaired the bicycle.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Lena"
+          ],
+          "patient": [
+            "the bicycle",
+            "bicycle"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C005",
+      "group": "simple",
+      "text": "The alarm rang.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "rang"
+          ],
+          "agent": [
+            "The alarm",
+            "alarm"
+          ],
+          "patient": [
+            "NONE"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C006",
+      "group": "question",
+      "text": "Did Maya send the invoice?",
+      "expected": [
+        {
+          "act": [
+            "question"
+          ],
+          "predicate": [
+            "send"
+          ],
+          "agent": [
+            "Maya"
+          ],
+          "patient": [
+            "the invoice",
+            "invoice"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C007",
+      "group": "question",
+      "text": "Did you lock the cabinet?",
+      "expected": [
+        {
+          "act": [
+            "question"
+          ],
+          "predicate": [
+            "lock"
+          ],
+          "agent": [
+            "you"
+          ],
+          "patient": [
+            "the cabinet",
+            "cabinet"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C008",
+      "group": "question",
+      "text": "Is the server running?",
+      "expected": [
+        {
+          "act": [
+            "question"
+          ],
+          "predicate": [
+            "running"
+          ],
+          "agent": [
+            "the server",
+            "server"
+          ],
+          "patient": [
+            "NONE"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C009",
+      "group": "question",
+      "text": "Who deleted the file?",
+      "expected": [
+        {
+          "act": [
+            "question"
+          ],
+          "predicate": [
+            "deleted"
+          ],
+          "agent": [
+            "Who"
+          ],
+          "patient": [
+            "the file",
+            "file"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C010",
+      "group": "question",
+      "text": "Has Lena checked the schedule?",
+      "expected": [
+        {
+          "act": [
+            "question"
+          ],
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Lena"
+          ],
+          "patient": [
+            "the schedule",
+            "schedule"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C011",
+      "group": "negation",
+      "text": "Do not erase the logs.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "erase"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the logs",
+            "logs"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C012",
+      "group": "negation",
+      "text": "Never share the password.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "share"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the password",
+            "password"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "Never"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C013",
+      "group": "negation",
+      "text": "Maya did not sign the contract.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "sign"
+          ],
+          "agent": [
+            "Maya"
+          ],
+          "patient": [
+            "the contract",
+            "contract"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C014",
+      "group": "negation",
+      "text": "Don't move the chair.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "move"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the chair",
+            "chair"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "Don't"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C015",
+      "group": "negation",
+      "text": "The lamp is not working.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "working"
+          ],
+          "agent": [
+            "The lamp",
+            "lamp"
+          ],
+          "patient": [
+            "NONE"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C016",
+      "group": "condition",
+      "text": "Send the invoice if Maya approves.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Send"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the invoice",
+            "invoice"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "if Maya approves"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C017",
+      "group": "condition",
+      "text": "Do not unlock the door unless I agree.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "unlock"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the door",
+            "door"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "unless I agree"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C018",
+      "group": "condition",
+      "text": "If it rains, close the windows.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "close"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the windows",
+            "windows"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "If it rains"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C019",
+      "group": "condition",
+      "text": "Publish the article only if Lena agrees.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Publish"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the article",
+            "article"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "only if Lena agrees"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C020",
+      "group": "condition",
+      "text": "Restart the service unless the backup fails.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Restart"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the service",
+            "service"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "unless the backup fails"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C021",
+      "group": "time",
+      "text": "Send the package tomorrow.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Send"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the package",
+            "package"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "tomorrow"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C022",
+      "group": "time",
+      "text": "Finish the report before noon.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Finish"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the report",
+            "report"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "before noon"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C023",
+      "group": "time",
+      "text": "After the meeting, call Maya.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "call"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "Maya"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "After the meeting"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C024",
+      "group": "time",
+      "text": "Lena submitted the form yesterday.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "submitted"
+          ],
+          "agent": [
+            "Lena"
+          ],
+          "patient": [
+            "the form",
+            "form"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "yesterday"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C025",
+      "group": "time",
+      "text": "Back up the files every Friday.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Back up"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the files",
+            "files"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "every Friday"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C026",
+      "group": "quantity",
+      "text": "Print three copies.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Print"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "three copies",
+            "copies"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "three"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C027",
+      "group": "quantity",
+      "text": "Order exactly two batteries.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Order"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "exactly two batteries",
+            "two batteries",
+            "batteries"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "exactly two"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C028",
+      "group": "quantity",
+      "text": "Maya bought five notebooks.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "bought"
+          ],
+          "agent": [
+            "Maya"
+          ],
+          "patient": [
+            "five notebooks",
+            "notebooks"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "five"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C029",
+      "group": "quantity",
+      "text": "Keep at least four backups.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Keep"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "at least four backups",
+            "four backups",
+            "backups"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "at least four"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C030",
+      "group": "quantity",
+      "text": "Do not send more than ten messages.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "send"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "more than ten messages",
+            "ten messages",
+            "messages"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "more than ten"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C031",
+      "group": "attribution",
+      "text": "Maya says the backup failed.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "failed"
+          ],
+          "agent": [
+            "the backup",
+            "backup"
+          ],
+          "patient": [
+            "NONE"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "Maya",
+            "Maya says"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C032",
+      "group": "attribution",
+      "text": "According to Lena, the server crashed.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "crashed"
+          ],
+          "agent": [
+            "the server",
+            "server"
+          ],
+          "patient": [
+            "NONE"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "According to Lena",
+            "Lena"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C033",
+      "group": "attribution",
+      "text": "Omar reports that the parcel arrived.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "arrived"
+          ],
+          "agent": [
+            "the parcel",
+            "parcel"
+          ],
+          "patient": [
+            "NONE"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "Omar",
+            "Omar reports"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C034",
+      "group": "attribution",
+      "text": "Maya believes the alarm is broken.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "broken"
+          ],
+          "agent": [
+            "the alarm",
+            "alarm"
+          ],
+          "patient": [
+            "NONE"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "Maya",
+            "Maya believes"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C035",
+      "group": "attribution",
+      "text": "According to Omar, Lena did not sign the form.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "sign"
+          ],
+          "agent": [
+            "Lena"
+          ],
+          "patient": [
+            "the form",
+            "form"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "According to Omar",
+            "Omar"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C036",
+      "group": "modality",
+      "text": "You may open the window.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "open"
+          ],
+          "agent": [
+            "You"
+          ],
+          "patient": [
+            "the window",
+            "window"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "may"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C037",
+      "group": "modality",
+      "text": "Maya must submit the form.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "submit"
+          ],
+          "agent": [
+            "Maya"
+          ],
+          "patient": [
+            "the form",
+            "form"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "must"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C038",
+      "group": "modality",
+      "text": "The server might fail.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "fail"
+          ],
+          "agent": [
+            "The server",
+            "server"
+          ],
+          "patient": [
+            "NONE"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "might"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C039",
+      "group": "modality",
+      "text": "Lena can repair the bicycle.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Lena"
+          ],
+          "patient": [
+            "the bicycle",
+            "bicycle"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "can"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C040",
+      "group": "modality",
+      "text": "You must not disclose the code.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "disclose"
+          ],
+          "agent": [
+            "You"
+          ],
+          "patient": [
+            "the code",
+            "code"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "must"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C041",
+      "group": "coordination",
+      "text": "Copy the file and rename the folder.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Copy"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the file",
+            "file"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        },
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "rename"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the folder",
+            "folder"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C042",
+      "group": "coordination",
+      "text": "Maya opened the door and closed the window.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "opened"
+          ],
+          "agent": [
+            "Maya"
+          ],
+          "patient": [
+            "the door",
+            "door"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        },
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "closed"
+          ],
+          "agent": [
+            "Maya"
+          ],
+          "patient": [
+            "the window",
+            "window"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C043",
+      "group": "coordination",
+      "text": "Save the document, then close the editor.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Save"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the document",
+            "document"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        },
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "close"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the editor",
+            "editor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "then"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C044",
+      "group": "coordination",
+      "text": "Do not print the memo or send the email.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "print"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the memo",
+            "memo"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        },
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "send"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the email",
+            "email"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C045",
+      "group": "coordination",
+      "text": "If Maya agrees, archive the folder and delete the draft.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "archive"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the folder",
+            "folder"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "If Maya agrees"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        },
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "delete"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the draft",
+            "draft"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "If Maya agrees"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C046",
+      "group": "voice_reference",
+      "text": "The report was approved by Maya.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "approved"
+          ],
+          "agent": [
+            "Maya"
+          ],
+          "patient": [
+            "The report",
+            "report"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C047",
+      "group": "voice_reference",
+      "text": "The parcel was not delivered by Omar.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "delivered"
+          ],
+          "agent": [
+            "Omar"
+          ],
+          "patient": [
+            "The parcel",
+            "parcel"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C048",
+      "group": "voice_reference",
+      "text": "She repaired it.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "She"
+          ],
+          "patient": [
+            "it"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C049",
+      "group": "voice_reference",
+      "text": "Send him the receipt.",
+      "expected": [
+        {
+          "act": [
+            "request"
+          ],
+          "predicate": [
+            "Send"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "the receipt",
+            "receipt"
+          ],
+          "recipient": [
+            "him"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C050",
+      "group": "voice_reference",
+      "text": "Those files were deleted yesterday.",
+      "expected": [
+        {
+          "act": [
+            "assertion"
+          ],
+          "predicate": [
+            "deleted"
+          ],
+          "agent": [
+            "NONE"
+          ],
+          "patient": [
+            "Those files",
+            "files"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "yesterday"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+STARTED 2026-10-09T16:14:44.222805+00:00 batch=4 model=qwen3.5:4b
+Traceback (most recent call last):
+  File "/home/tinshemet/Desktop/kobra/tools/run_read300.py", line 132, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/tinshemet/Desktop/kobra/tools/run_read300.py", line 81, in main
+    result = reader.read(view, request, services)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tinshemet/Desktop/kobra/src/kobra/candidate_read.py", line 321, in read
+    proposal=services.model.select(prompt=PROMPT,text=json.dumps({'sentence':view.text},ensure_ascii=False),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tinshemet/Desktop/kobra/src/kobra/ollama.py", line 164, in select
+    result = self.complete(prompt=instruction,text=json.dumps(payload,ensure_ascii=False),schema=envelope)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tinshemet/Desktop/kobra/src/kobra/ollama.py", line 87, in complete
+    reply = self._request("/api/chat", payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tinshemet/Desktop/kobra/src/kobra/ollama.py", line 50, in _request
+    with urlopen(request, timeout=self.timeout) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1457, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

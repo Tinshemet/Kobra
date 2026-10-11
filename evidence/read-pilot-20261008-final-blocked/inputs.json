@@ -1,0 +1,82 @@
+[
+  {
+    "id": "S000001",
+    "sentence": "Did you sort the documents?"
+  },
+  {
+    "id": "S000002",
+    "sentence": "Always draft the reply before checking the appointments."
+  },
+  {
+    "id": "S000003",
+    "sentence": "Do not review the budget."
+  },
+  {
+    "id": "S000004",
+    "sentence": "Check the appointments at 16:30."
+  },
+  {
+    "id": "S000005",
+    "sentence": "Show your progress."
+  },
+  {
+    "id": "S000006",
+    "sentence": "Archive the receipts before updating the reminders."
+  },
+  {
+    "id": "S000007",
+    "sentence": "Review the travel plan every 1 hour."
+  },
+  {
+    "id": "S000008",
+    "sentence": "Review the budget."
+  },
+  {
+    "id": "S000009",
+    "sentence": "Cancel the pending task."
+  },
+  {
+    "id": "S000010",
+    "sentence": "Return only the results."
+  },
+  {
+    "id": "S000011",
+    "sentence": "Undo the recent change."
+  },
+  {
+    "id": "S000012",
+    "sentence": "Did you summarize the report?"
+  },
+  {
+    "id": "S000013",
+    "sentence": "Always read the message before summarizing the report."
+  },
+  {
+    "id": "S000014",
+    "sentence": "Review the agenda at 16:30."
+  },
+  {
+    "id": "S000015",
+    "sentence": "Do not save the contact details."
+  },
+  {
+    "id": "S000016",
+    "sentence": "Check the appointments every 12 hours."
+  },
+  {
+    "id": "S000017",
+    "sentence": "Archive the completed tasks."
+  },
+  {
+    "id": "S000018",
+    "sentence": "Review your assumptions."
+  },
+  {
+    "id": "S000019",
+    "sentence": "Review the agenda before organizing the notes."
+  },
+  {
+    "id": "S000020",
+    "sentence": "Return only the summary."
+  }
+]

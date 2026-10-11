@@ -1,0 +1,30 @@
+{
+  "version": "serpent-read-slots-1",
+  "generator": "Serpent 1.1.0 unmodified core grammar; planner.build_pool + planner.select",
+  "batch_size": 300,
+  "passing_count": 285,
+  "seed_base": 2026100900,
+  "options": {
+    "distribution": "balanced",
+    "noise": "off",
+    "typos": "off",
+    "strength": 2
+  },
+  "filters": [],
+  "freshness": "NFKC/casefold/whitespace-normalized sentence absent from prior Kobra inputs and all prior batches; finite Serpent inventory, no pretraining novelty claim",
+  "scoring": "11-slot exact frame agreement; all 300 included; adapter failures count as failures",
+  "projection": "All event and predicative-property frames except condition subordinate events. Relative and coordinated claims separate. Copular property is predicate, property bearer is agent. Imperatives request, interrogatives question, declaratives assertion. Source noun phrase includes local adjectives, determiner and quantity; head-only is not accepted. Pronouns unresolved. Elided predicate and deliberately missing patient MISSING. Negation and modality follow scope chain. Conditional phrase includes if. quantity prioritizes patient quantity (recipient distributivity remains in recipient phrase). Temporal yesterday retained. Attribution NONE in this generator.",
+  "limitations": [
+    "NOT full Serpent graph accuracy or proof of semantic preservation",
+    "Comparison relations, causal links, relative attachment, scope ordering, manner, degree, event locations and unresolved attachment graphs are outside the 11-slot metric; full source graph retained separately",
+    "No attribution examples in core grammar; this cannot establish attribution accuracy",
+    "Same generator grammar across batches; new sentence is not new construction"
+  ],
+  "ticks": {
+    "flip": "previous failure becomes exact on a separately labelled development replay",
+    "later_batch": "fresh sentence exact with fix and non-exact in frozen ablation without fix",
+    "coverage": "rule fired, without causal check; separate from verified ticks",
+    "regression": "previous exact becomes incorrect, counted alongside gains"
+  },
+  "no_midrun_changes": true
+}

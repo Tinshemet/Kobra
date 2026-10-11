@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-09",
+  "status": "prototype implemented; live extraction not operational",
+  "targets": {
+    "meaning_preservation": ">99%",
+    "complete_request_accuracy": ">95%",
+    "established": false
+  },
+  "tests": {
+    "command": "PYTHONPATH=src python -m unittest discover -s tests -v",
+    "exit_status": 0,
+    "run": 73,
+    "passed": 72,
+    "failed": 0,
+    "skipped": 1,
+    "artifact": "evidence/structured-read-final-tests.log",
+    "skip": "optional jsonschema dependency unavailable"
+  },
+  "live_runs": [
+    {
+      "directory": "evidence/read-structured-smoke-20261009",
+      "exit_status": 1,
+      "summary": {
+        "state": "capture_complete",
+        "planned": 3,
+        "attempted": 3,
+        "structurally_accepted": 0,
+        "errors": 3,
+        "semantic_review": "pending",
+        "semantic_accuracy": null,
+        "regression_delta": null
+      },
+      "errors": [
+        {
+          "id": "S000001",
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        },
+        {
+          "id": "S000002",
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        },
+        {
+          "id": "S000003",
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        }
+      ]
+    },
+    {
+      "directory": "evidence/read-structured-smoke-v2-20261009",
+      "exit_status": 1,
+      "summary": {
+        "state": "capture_complete",
+        "planned": 3,
+        "attempted": 3,
+        "structurally_accepted": 0,
+        "errors": 3,
+        "semantic_review": "pending",
+        "semantic_accuracy": null,
+        "regression_delta": null
+      },
+      "errors": [
+        {
+          "id": "S000001",
+          "error": "ReadContractError: response has missing or unexpected fields"
+        },
+        {
+          "id": "S000002",
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1623 (char 1622)"
+        },
+        {
+          "id": "S000003",
+          "error": "ReadContractError: response has missing or unexpected fields"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "kind": "same-agent review, not independent audit",
+    "observations": [
+      "Invalid graphs fail before RESOLVE.",
+      "Wrong source-grounded semantic attachments can still pass structural validation.",
+      "Unknown and ambiguous content remains diagnostic.",
+      "No semantic score or target achievement is established.",
+      "The existing distillation capture also records 20 errors out of 20; this does not prove a shared root cause."
+    ],
+    "next_check": "Isolate local provider schema enforcement and message/template handling with a minimal known response contract before further READ prompt changes; then compare all three readers using independently reviewed references."
+  },
+  "source_hashes": {
+    "src/kobra/structured_read.py": "51fc9439ba82401b73c7dd5c9a1a7f9817b31b80cbd8ce6de9d1c894ae28c69b",
+    "src/kobra/__init__.py": "848244cbbda190823358585619e20fe77da54a876503e410262418e4bd952551",
+    "tools/read_serpent.py": "b57c2bcee86da334a847a3243a1ada550fe048d50b1f0bd273e48253d5a58cb8",
+    "tests/test_structured_read.py": "6665aed8ec4e38f134fa7754bac39bb85688d9fa2a12c53567c0408bdd65322a",
+    "docs/structured-read.rst": "13d4e51176149d7a1f858fcb0e37e89be91b1c42ebd670cfd8fe26f8004a9925"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "llama3.1:8b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Return the color requested by the user, one word only."
+      },
+      {
+        "role": "user",
+        "content": "BLUE"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 0,
+      "num_predict": 100
+    }
+  },
+  "response": {
+    "model": "llama3.1:8b",
+    "created_at": "2026-10-09T10:18:31.867180728Z",
+    "message": {
+      "role": "assistant",
+      "content": "Blue"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 619015958,
+    "load_duration": 250943664,
+    "prompt_eval_count": 28,
+    "prompt_eval_duration": 327528000,
+    "eval_count": 2,
+    "eval_duration": 37219000
+  },
+  "seconds": 0.6198706469995159
+}

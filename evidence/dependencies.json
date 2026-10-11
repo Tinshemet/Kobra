@@ -1,0 +1,4370 @@
+{
+  "scope": "static import sites only; working-tree snapshot",
+  "files": [
+    {
+      "file": "files/engines/executor.py",
+      "sha256": "d438d7dc9b8af44b3764d7f68d560987e5e27146a4b66fb994168558b4462d4d",
+      "imports": [
+        {
+          "line": 37,
+          "module": "__future__",
+          "names": [
+            "annotations"
+          ]
+        },
+        {
+          "line": 39,
+          "module": "typing",
+          "names": [
+            "Any",
+            "Dict",
+            "List",
+            "Optional"
+          ]
+        },
+        {
+          "line": 41,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 42,
+          "module": "planner.ir",
+          "names": [
+            "consent"
+          ]
+        },
+        {
+          "line": 43,
+          "module": "planner.ir",
+          "names": [
+            "effects"
+          ]
+        },
+        {
+          "line": 44,
+          "module": ".base",
+          "names": [
+            "Engine"
+          ]
+        },
+        {
+          "line": 75,
+          "module": ".qemu",
+          "names": [
+            "LabWorld"
+          ]
+        },
+        {
+          "line": 86,
+          "module": "planner.procedures",
+          "names": [
+            "LIBRARY"
+          ]
+        },
+        {
+          "line": 143,
+          "module": "planner.ir",
+          "names": [
+            "consent"
+          ]
+        },
+        {
+          "line": 153,
+          "module": ".insession",
+          "names": [
+            "RUN",
+            "STOP",
+            "Publish",
+            "Step"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/engines/orchestrator.py",
+      "sha256": "efe85480161ba006a1b0e56280658ffc73c58c87130e1e4aa4735eca5b0353cc",
+      "imports": [
+        {
+          "line": 27,
+          "module": "__future__",
+          "names": [
+            "annotations"
+          ]
+        },
+        {
+          "line": 29,
+          "module": "typing",
+          "names": [
+            "Any",
+            "Callable",
+            "Dict",
+            "List",
+            "Optional"
+          ]
+        },
+        {
+          "line": 31,
+          "module": "planner",
+          "names": [
+            "reading_gate"
+          ]
+        },
+        {
+          "line": 33,
+          "module": ".",
+          "names": [
+            "insession"
+          ]
+        },
+        {
+          "line": 34,
+          "module": ".channel",
+          "names": [
+            "Channel"
+          ]
+        },
+        {
+          "line": 35,
+          "module": ".registry",
+          "names": [
+            "Registry"
+          ]
+        },
+        {
+          "line": 36,
+          "module": ".session",
+          "names": [
+            "Session"
+          ]
+        },
+        {
+          "line": 68,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 216,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 217,
+          "module": "planner.ir",
+          "names": [
+            "effects"
+          ]
+        },
+        {
+          "line": 218,
+          "module": "planner",
+          "names": [
+            "stand_in"
+          ]
+        },
+        {
+          "line": 434,
+          "module": null,
+          "names": [
+            "os"
+          ]
+        },
+        {
+          "line": 436,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 568,
+          "module": ".session",
+          "names": [
+            "Session"
+          ]
+        },
+        {
+          "line": 620,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 646,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 906,
+          "module": "planner",
+          "names": [
+            "procedures"
+          ]
+        },
+        {
+          "line": 907,
+          "module": "planner.ir.render",
+          "names": [
+            "render"
+          ]
+        },
+        {
+          "line": 918,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 973,
+          "module": "planner",
+          "names": [
+            "stand_in"
+          ]
+        },
+        {
+          "line": 1023,
+          "module": "planner",
+          "names": [
+            "clause_ledger"
+          ]
+        },
+        {
+          "line": 1067,
+          "module": "planner.ir",
+          "names": [
+            "intent"
+          ]
+        },
+        {
+          "line": 1212,
+          "module": ".",
+          "names": [
+            "reporter"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/door.py",
+      "sha256": "60a7fc2e89579e0b6d105e131412627804b33412e4c7bd08829be9f8e0b216b9",
+      "imports": [
+        {
+          "line": 84,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 85,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "NamedTuple",
+            "Optional",
+            "Sequence",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 87,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 201,
+          "module": ".languages.english.seam",
+          "names": [
+            "scan",
+            "speech_act",
+            "temporal"
+          ]
+        },
+        {
+          "line": 202,
+          "module": ".languages.english.seam.linguistics",
+          "names": [
+            "mood_of"
+          ]
+        },
+        {
+          "line": 219,
+          "module": ".languages.english.seam",
+          "names": [
+            "front_door"
+          ]
+        },
+        {
+          "line": 311,
+          "module": ".languages.english.seam.scan",
+          "names": [
+            "_index"
+          ]
+        },
+        {
+          "line": 382,
+          "module": ".languages.english.seam.scan",
+          "names": [
+            "ENUMERATORS"
+          ]
+        },
+        {
+          "line": 728,
+          "module": ".languages.english.seam.pass1",
+          "names": [
+            "agent_name"
+          ]
+        },
+        {
+          "line": 747,
+          "module": ".languages.english.seam.governing",
+          "names": [
+            "rules_from"
+          ]
+        },
+        {
+          "line": 766,
+          "module": ".ai.chat.shortcuts",
+          "names": [
+            "_REGISTRY"
+          ]
+        },
+        {
+          "line": 800,
+          "module": "planner.procedures",
+          "names": [
+            "LIBRARY"
+          ]
+        },
+        {
+          "line": 845,
+          "module": ".languages.english.seam.temporal",
+          "names": [
+            "CLOCK"
+          ]
+        },
+        {
+          "line": 896,
+          "module": ".languages.english.seam",
+          "names": [
+            "scan",
+            "speech_act"
+          ]
+        },
+        {
+          "line": 897,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 912,
+          "module": ".languages.english.seam",
+          "names": [
+            "temporal"
+          ]
+        },
+        {
+          "line": 939,
+          "module": ".languages.english.seam.archive",
+          "names": [
+            "ARCHIVE"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/executor_client.py",
+      "sha256": "f69a96181e2d219175a4a6bfa9254479452683329f433c18d2ea3c2b7bc1c837",
+      "imports": [
+        {
+          "line": 15,
+          "module": null,
+          "names": [
+            "json"
+          ]
+        },
+        {
+          "line": 16,
+          "module": null,
+          "names": [
+            "os"
+          ]
+        },
+        {
+          "line": 17,
+          "module": null,
+          "names": [
+            "time"
+          ]
+        },
+        {
+          "line": 19,
+          "module": null,
+          "names": [
+            "requests"
+          ]
+        },
+        {
+          "line": 21,
+          "module": "orchestrator",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 75,
+          "module": "executor.api.qemu_config",
+          "names": [
+            "get_all_profiles",
+            "list_profiles",
+            "OVMF",
+            "check_system_capabilities"
+          ]
+        },
+        {
+          "line": 109,
+          "module": "executor.api.qemu_config",
+          "names": [
+            "list_profiles"
+          ]
+        },
+        {
+          "line": 128,
+          "module": "executor.api.qemu_config",
+          "names": [
+            "get_all_profiles"
+          ]
+        },
+        {
+          "line": 147,
+          "module": "executor.api.qemu_config",
+          "names": [
+            "OVMF"
+          ]
+        },
+        {
+          "line": 166,
+          "module": "executor.api.qemu_config",
+          "names": [
+            "check_system_capabilities"
+          ]
+        },
+        {
+          "line": 190,
+          "module": "executor.command_catalog",
+          "names": [
+            "VM_SCOPED_TOOLS"
+          ]
+        },
+        {
+          "line": 192,
+          "module": "orchestrator.event_log",
+          "names": [
+            "log_event"
+          ]
+        },
+        {
+          "line": 198,
+          "module": "orchestrator.pipeline",
+          "names": [
+            "execute_tool"
+          ]
+        },
+        {
+          "line": 243,
+          "module": "orchestrator",
+          "names": [
+            "run_command_grants"
+          ]
+        },
+        {
+          "line": 275,
+          "module": "orchestrator.pipeline",
+          "names": [
+            "execute_tool"
+          ]
+        },
+        {
+          "line": 283,
+          "module": null,
+          "names": [
+            "urllib.parse"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/__init__.py",
+      "sha256": "9b21611fda2480176bccf58fcc8e498abea35409b023fc83b06006801810ffd0",
+      "imports": []
+    },
+    {
+      "file": "files/orchestrator/languages/english/__init__.py",
+      "sha256": "7a8453ed74d25f20adb0d4cc741c55cd54a8f48fb78f9f44f16df5dff5e40bbf",
+      "imports": []
+    },
+    {
+      "file": "files/orchestrator/languages/english/codex.py",
+      "sha256": "c1e83ef55ad176cbcc1fe141af95bf06fce2ccf97169b150197c99c52473eafc",
+      "imports": [
+        {
+          "line": 24,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "Tuple"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/noise_prints.py",
+      "sha256": "fa1e72a9623757f902ff7d12c666688ac037dec9b1faa22937562f1137ca87bb",
+      "imports": [
+        {
+          "line": 29,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional",
+            "Tuple"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/rungs.py",
+      "sha256": "ea4e6e8d6fca16e5bfb29bb64f92b47d9c67ecc283f185b59f13f177b9e9ac60",
+      "imports": [
+        {
+          "line": 16,
+          "module": "typing",
+          "names": [
+            "Dict"
+          ]
+        },
+        {
+          "line": 18,
+          "module": ".seam.pass1",
+          "names": [
+            "EXPECTED"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "imports": []
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/archive.py",
+      "sha256": "9053969ce08ee37ba90209b19cdca0839fa29c8710b87f361d27ec80f02dfc4c",
+      "imports": [
+        {
+          "line": 71,
+          "module": null,
+          "names": [
+            "json"
+          ]
+        },
+        {
+          "line": 72,
+          "module": null,
+          "names": [
+            "pathlib"
+          ]
+        },
+        {
+          "line": 73,
+          "module": null,
+          "names": [
+            "time"
+          ]
+        },
+        {
+          "line": 74,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 401,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 402,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 446,
+          "module": "..codex",
+          "names": [
+            "FORGET_VERBS"
+          ]
+        },
+        {
+          "line": 496,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 497,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 498,
+          "module": ".issues",
+          "names": [
+            "word_of"
+          ]
+        },
+        {
+          "line": 499,
+          "module": ".reading_answers",
+          "names": [
+            "NEGATION"
+          ]
+        },
+        {
+          "line": 508,
+          "module": "planner.ir",
+          "names": [
+            "config",
+            "effects"
+          ]
+        },
+        {
+          "line": 553,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        },
+        {
+          "line": 607,
+          "module": null,
+          "names": [
+            "os"
+          ]
+        },
+        {
+          "line": 634,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 635,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 636,
+          "module": ".issues",
+          "names": [
+            "word_of"
+          ]
+        },
+        {
+          "line": 703,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 704,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 705,
+          "module": ".reading_answers",
+          "names": [
+            "NEGATION"
+          ]
+        },
+        {
+          "line": 706,
+          "module": ".scan",
+          "names": [
+            "DEFINITE",
+            "INDEFINITE",
+            "NOVEL",
+            "UNIVERSAL"
+          ]
+        },
+        {
+          "line": 744,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/asking.py",
+      "sha256": "e745069ba80d9f8e1f2fd0df26acf9fb992444162744da8944c84bcd052b94f8",
+      "imports": [
+        {
+          "line": 28,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/effects.py",
+      "sha256": "6879b93db72a2e5250ed9fc644b25512a11b17d27391115c67255bdfbff727ca",
+      "imports": [
+        {
+          "line": 35,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 37,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 53,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 116,
+          "module": ".pass1",
+          "names": [
+            "EXPECTED"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/front_door.py",
+      "sha256": "3e331d314edbab482136e03de9d9f5ed0014eca9be92a3f1d02bff89012e3ac4",
+      "imports": [
+        {
+          "line": 58,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 59,
+          "module": "typing",
+          "names": [
+            "List",
+            "NamedTuple",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 86,
+          "module": ".speech_act",
+          "names": [
+            "WRAPPERS",
+            "COURTESY"
+          ]
+        },
+        {
+          "line": 87,
+          "module": ".",
+          "names": [
+            "self_repair"
+          ]
+        },
+        {
+          "line": 165,
+          "module": "..codex",
+          "names": [
+            "FUNCTION_WORDS"
+          ]
+        },
+        {
+          "line": 252,
+          "module": ".scan",
+          "names": [
+            "PARTICLES"
+          ]
+        },
+        {
+          "line": 359,
+          "module": "..noise_prints",
+          "names": [
+            "explain"
+          ]
+        },
+        {
+          "line": 360,
+          "module": ".scan",
+          "names": [
+            "BOUNDARIES",
+            "PARTICLES"
+          ]
+        },
+        {
+          "line": 377,
+          "module": "...english.codex",
+          "names": [
+            "FALSE_FUSIONS"
+          ]
+        },
+        {
+          "line": 442,
+          "module": ".",
+          "names": [
+            "iso"
+          ]
+        },
+        {
+          "line": 456,
+          "module": ".",
+          "names": [
+            "self_repair"
+          ]
+        },
+        {
+          "line": 457,
+          "module": ".speech_act",
+          "names": [
+            "WRAPPERS",
+            "COURTESY"
+          ]
+        },
+        {
+          "line": 480,
+          "module": "...english.codex",
+          "names": [
+            "FALSE_TYPOS"
+          ]
+        },
+        {
+          "line": 588,
+          "module": ".pass2",
+          "names": [
+            "merge_cut_points"
+          ]
+        },
+        {
+          "line": 611,
+          "module": ".scan",
+          "names": [
+            "OBJECT_OPENERS",
+            "GRAMMAR",
+            "_index",
+            "_operation_words",
+            "PARTICLES"
+          ]
+        },
+        {
+          "line": 612,
+          "module": ".",
+          "names": [
+            "self_repair",
+            "iso"
+          ]
+        },
+        {
+          "line": 613,
+          "module": ".speech_act",
+          "names": [
+            "WRAPPERS",
+            "COURTESY",
+            "AUXILIARIES",
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 624,
+          "module": "...english.codex",
+          "names": [
+            "DUAL_CLASS_VERBS"
+          ]
+        },
+        {
+          "line": 632,
+          "module": "...english",
+          "names": [
+            "codex"
+          ]
+        },
+        {
+          "line": 649,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 682,
+          "module": ".scan",
+          "names": [
+            "OBJECT_OPENERS"
+          ]
+        },
+        {
+          "line": 688,
+          "module": "...english.codex",
+          "names": [
+            "FALSE_PRINTS"
+          ]
+        },
+        {
+          "line": 703,
+          "module": "..noise_prints",
+          "names": [
+            "explain"
+          ]
+        },
+        {
+          "line": 704,
+          "module": "..codex",
+          "names": [
+            "DUAL_CLASS_VERBS"
+          ]
+        },
+        {
+          "line": 727,
+          "module": "..codex",
+          "names": [
+            "CUT_DETERMINERS"
+          ]
+        },
+        {
+          "line": 780,
+          "module": ".speech_act",
+          "names": [
+            "AUXILIARIES"
+          ]
+        },
+        {
+          "line": 781,
+          "module": "..codex",
+          "names": [
+            "SUBJECT_PRONOUNS"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/gate3.py",
+      "sha256": "fb62626a4b07753f175c3abfcf200ed4e3b1a9dd0900ca3d30d1976c5a52104e",
+      "imports": [
+        {
+          "line": 45,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 47,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 48,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 49,
+          "module": ".effects",
+          "names": [
+            "Operation"
+          ]
+        },
+        {
+          "line": 72,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 127,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 145,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 163,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 164,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 177,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 202,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 243,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 455,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/gate4.py",
+      "sha256": "3ccba1a058cb0312280cf5836c38824818d08048cfb3db273a7502e2763259a7",
+      "imports": [
+        {
+          "line": 39,
+          "module": "typing",
+          "names": [
+            "List",
+            "Optional"
+          ]
+        },
+        {
+          "line": 41,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 42,
+          "module": ".effects",
+          "names": [
+            "Operation"
+          ]
+        },
+        {
+          "line": 44,
+          "module": "..codex",
+          "names": [
+            "RECIPROCAL"
+          ]
+        },
+        {
+          "line": 46,
+          "module": "..codex",
+          "names": [
+            "DESTRUCTIVE_WORDS"
+          ]
+        },
+        {
+          "line": 51,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 103,
+          "module": ".values",
+          "names": [
+            "_superlative_word"
+          ]
+        },
+        {
+          "line": 139,
+          "module": ".proforms",
+          "names": [
+            "unbound"
+          ]
+        },
+        {
+          "line": 163,
+          "module": null,
+          "names": [
+            "importlib"
+          ]
+        },
+        {
+          "line": 165,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 205,
+          "module": ".gate3",
+          "names": [
+            "_makers"
+          ]
+        },
+        {
+          "line": 240,
+          "module": null,
+          "names": [
+            "importlib"
+          ]
+        },
+        {
+          "line": 245,
+          "module": "planner.ir.intent",
+          "names": [
+            "ACHIEVE"
+          ]
+        },
+        {
+          "line": 310,
+          "module": ".",
+          "names": [
+            "schema",
+            "speech_act"
+          ]
+        },
+        {
+          "line": 366,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 367,
+          "module": ".linguistics",
+          "names": [
+            "ACHIEVE",
+            "ACHIEVE_MARKERS",
+            "mood_of"
+          ]
+        },
+        {
+          "line": 434,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 454,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 488,
+          "module": null,
+          "names": [
+            "importlib"
+          ]
+        },
+        {
+          "line": 490,
+          "module": ".linguistics",
+          "names": [
+            "ACHIEVE"
+          ]
+        },
+        {
+          "line": 492,
+          "module": "planner.ir.intent",
+          "names": [
+            "ACHIEVE"
+          ]
+        },
+        {
+          "line": 609,
+          "module": "planner.ir",
+          "names": [
+            "config",
+            "effects"
+          ]
+        },
+        {
+          "line": 610,
+          "module": ".residue",
+          "names": [
+            "kindless"
+          ]
+        },
+        {
+          "line": 678,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 700,
+          "module": "planner.ghost_writer",
+          "names": [
+            "queryable"
+          ]
+        },
+        {
+          "line": 701,
+          "module": "planner.ir",
+          "names": [
+            "intent"
+          ]
+        },
+        {
+          "line": 751,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 752,
+          "module": "planner.ir",
+          "names": [
+            "config",
+            "effects"
+          ]
+        },
+        {
+          "line": 790,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 791,
+          "module": "planner.ir",
+          "names": [
+            "config",
+            "effects"
+          ]
+        },
+        {
+          "line": 868,
+          "module": "planner.ir",
+          "names": [
+            "consent"
+          ]
+        },
+        {
+          "line": 869,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/gates12.py",
+      "sha256": "be1acc5193409d683cf62e2989893a97e7416578e7db5e2c5d910382647fc663",
+      "imports": [
+        {
+          "line": 29,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 31,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 32,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 115,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 116,
+          "module": ".scan",
+          "names": [
+            "scan",
+            "uncovered"
+          ]
+        },
+        {
+          "line": 158,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 187,
+          "module": ".gate3",
+          "names": [
+            "_made_kind"
+          ]
+        },
+        {
+          "line": 287,
+          "module": ".residue",
+          "names": [
+            "ASK",
+            "BOUNCE",
+            "REJECT",
+            "report"
+          ]
+        },
+        {
+          "line": 301,
+          "module": ".scan",
+          "names": [
+            "scan"
+          ]
+        },
+        {
+          "line": 374,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/governing.py",
+      "sha256": "006366bbaaacc3a05a269532ffa2705d524103a4dcda8df0c9a808bbdfb312f7",
+      "imports": [
+        {
+          "line": 42,
+          "module": "typing",
+          "names": [
+            "List",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 44,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 50,
+          "module": "..codex",
+          "names": [
+            "CONTRACT_VERBS"
+          ]
+        },
+        {
+          "line": 61,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 63,
+          "module": ".linguistics",
+          "names": [
+            "manifest_verbs"
+          ]
+        },
+        {
+          "line": 96,
+          "module": "orchestrator.ai.agent",
+          "names": [
+            "proposals"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/housekeeping.py",
+      "sha256": "0f363606e7fb8e86a2e861329ab0e6738ea16947ad7616ec14da21021be95e9a",
+      "imports": [
+        {
+          "line": 41,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 43,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 44,
+          "module": "orchestrator.languages.english.seam.effects",
+          "names": [
+            "Operation",
+            "effect_of"
+          ]
+        },
+        {
+          "line": 63,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 73,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 84,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/iso.py",
+      "sha256": "8c0b8acc7d697da5a6b48ccf7d7dc9d98da511d7a0acbe034cacbf8cf171b8c0",
+      "imports": [
+        {
+          "line": 44,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 45,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 47,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 84,
+          "module": "..codex",
+          "names": [
+            "HEDGES"
+          ]
+        },
+        {
+          "line": 85,
+          "module": "..codex",
+          "names": [
+            "EMPHATIC"
+          ]
+        },
+        {
+          "line": 88,
+          "module": "..codex",
+          "names": [
+            "BACKCHANNEL"
+          ]
+        },
+        {
+          "line": 90,
+          "module": "..codex",
+          "names": [
+            "TROUBLE"
+          ]
+        },
+        {
+          "line": 92,
+          "module": "..codex",
+          "names": [
+            "APOLOGY"
+          ]
+        },
+        {
+          "line": 94,
+          "module": "..codex",
+          "names": [
+            "FILLED_PAUSE"
+          ]
+        },
+        {
+          "line": 108,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 198,
+          "module": ".scan",
+          "names": [
+            "PARTIAL"
+          ]
+        },
+        {
+          "line": 199,
+          "module": ".",
+          "names": [
+            "speech_act",
+            "temporal"
+          ]
+        },
+        {
+          "line": 234,
+          "module": ".",
+          "names": [
+            "speech_act",
+            "temporal"
+          ]
+        },
+        {
+          "line": 257,
+          "module": "..codex",
+          "names": [
+            "WHETHER_HOSTS"
+          ]
+        },
+        {
+          "line": 258,
+          "module": "..codex",
+          "names": [
+            "FOCUS_PARTICLES"
+          ]
+        },
+        {
+          "line": 280,
+          "module": ".",
+          "names": [
+            "speech_act",
+            "temporal"
+          ]
+        },
+        {
+          "line": 309,
+          "module": ".",
+          "names": [
+            "self_repair",
+            "speech_act"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/issues.py",
+      "sha256": "d430dc872afd99a4f4429395ac4b02798965ab93611bdb0028d209d90c5675dd",
+      "imports": [
+        {
+          "line": 30,
+          "module": null,
+          "names": [
+            "json"
+          ]
+        },
+        {
+          "line": 31,
+          "module": null,
+          "names": [
+            "pathlib"
+          ]
+        },
+        {
+          "line": 32,
+          "module": null,
+          "names": [
+            "time"
+          ]
+        },
+        {
+          "line": 33,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 149,
+          "module": ".",
+          "names": [
+            "scan"
+          ]
+        },
+        {
+          "line": 150,
+          "module": ".scan",
+          "names": [
+            "_operation_words"
+          ]
+        },
+        {
+          "line": 176,
+          "module": ".",
+          "names": [
+            "asking"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/linguistics.py",
+      "sha256": "f023ef4e34cc9d393a1e7d56852f67f842e9eb7d58dacf7728c7c5d3bb8b8b39",
+      "imports": [
+        {
+          "line": 40,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 42,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 43,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 44,
+          "module": ".effects",
+          "names": [
+            "Operation"
+          ]
+        },
+        {
+          "line": 46,
+          "module": "..codex",
+          "names": [
+            "LIGHT_VERBS"
+          ]
+        },
+        {
+          "line": 50,
+          "module": "..codex",
+          "names": [
+            "ACHIEVE_MARKERS"
+          ]
+        },
+        {
+          "line": 93,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 143,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 144,
+          "module": ".scan",
+          "names": [
+            "_stem"
+          ]
+        },
+        {
+          "line": 147,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        },
+        {
+          "line": 177,
+          "module": ".scan",
+          "names": [
+            "GRAMMAR"
+          ]
+        },
+        {
+          "line": 235,
+          "module": ".pass2",
+          "names": [
+            "clauses_of"
+          ]
+        },
+        {
+          "line": 236,
+          "module": ".scan",
+          "names": [
+            "_stem"
+          ]
+        },
+        {
+          "line": 280,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 401,
+          "module": ".scan",
+          "names": [
+            "magnitudes_in"
+          ]
+        },
+        {
+          "line": 422,
+          "module": ".self_repair",
+          "names": [
+            "REPAIRED",
+            "RETRACTED",
+            "read"
+          ]
+        },
+        {
+          "line": 449,
+          "module": ".scan",
+          "names": [
+            "quoted_clauses"
+          ]
+        },
+        {
+          "line": 471,
+          "module": ".speech_act",
+          "names": [
+            "words_of"
+          ]
+        },
+        {
+          "line": 552,
+          "module": ".scan",
+          "names": [
+            "_stem"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/pass1.py",
+      "sha256": "92ad312e0af4c08d4683946a2dd457e78835ed802a6330141934e9989ea96726",
+      "imports": [
+        {
+          "line": 104,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 105,
+          "module": "collections",
+          "names": [
+            "Counter"
+          ]
+        },
+        {
+          "line": 106,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 108,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 109,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 136,
+          "module": "planner.formula.slots",
+          "names": [
+            "reduce"
+          ]
+        },
+        {
+          "line": 145,
+          "module": "tests.test_ghost_writer",
+          "names": [
+            "GOALS"
+          ]
+        },
+        {
+          "line": 246,
+          "module": "engines.channel",
+          "names": [
+            "constrained"
+          ]
+        },
+        {
+          "line": 247,
+          "module": ".scan",
+          "names": [
+            "conditions_from",
+            "existence_from_determiner",
+            "scan_all"
+          ]
+        },
+        {
+          "line": 266,
+          "module": ".",
+          "names": [
+            "self_repair"
+          ]
+        },
+        {
+          "line": 295,
+          "module": ".scan",
+          "names": [
+            "anchors_in",
+            "kinds_named"
+          ]
+        },
+        {
+          "line": 298,
+          "module": ".scan",
+          "names": [
+            "clause_around",
+            "uncovered",
+            "scan"
+          ]
+        },
+        {
+          "line": 328,
+          "module": ".speech_act",
+          "names": [
+            "AUXILIARIES",
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 329,
+          "module": ".scan",
+          "names": [
+            "_tokens",
+            "BOUNDARIES"
+          ]
+        },
+        {
+          "line": 346,
+          "module": ".",
+          "names": [
+            "testimony"
+          ]
+        },
+        {
+          "line": 359,
+          "module": ".",
+          "names": [
+            "iso"
+          ]
+        },
+        {
+          "line": 360,
+          "module": ".",
+          "names": [
+            "testimony"
+          ]
+        },
+        {
+          "line": 395,
+          "module": ".",
+          "names": [
+            "iso",
+            "self_repair"
+          ]
+        },
+        {
+          "line": 396,
+          "module": ".speech_act",
+          "names": [
+            "WRAPPERS",
+            "COURTESY"
+          ]
+        },
+        {
+          "line": 406,
+          "module": ".scan",
+          "names": [
+            "_operation_words",
+            "_tokens",
+            "BOUNDARIES",
+            "ENUMERATORS"
+          ]
+        },
+        {
+          "line": 407,
+          "module": ".speech_act",
+          "names": [
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 417,
+          "module": ".scan",
+          "names": [
+            "attribute_words"
+          ]
+        },
+        {
+          "line": 431,
+          "module": ".scan",
+          "names": [
+            "verb_position_words"
+          ]
+        },
+        {
+          "line": 444,
+          "module": ".temporal",
+          "names": [
+            "adjunct_regions"
+          ]
+        },
+        {
+          "line": 702,
+          "module": ".scan",
+          "names": [
+            "GRAMMAR",
+            "_operation_words"
+          ]
+        },
+        {
+          "line": 768,
+          "module": ".reasons",
+          "names": [
+            "strip"
+          ]
+        },
+        {
+          "line": 772,
+          "module": ".temporal",
+          "names": [
+            "strip_adjuncts"
+          ]
+        },
+        {
+          "line": 778,
+          "module": ".proforms",
+          "names": [
+            "bind_mentions"
+          ]
+        },
+        {
+          "line": 782,
+          "module": ".values",
+          "names": [
+            "read_values"
+          ]
+        },
+        {
+          "line": 817,
+          "module": "..codex",
+          "names": [
+            "DISTINCT"
+          ]
+        },
+        {
+          "line": 849,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 911,
+          "module": "..codex",
+          "names": [
+            "EXCLUDERS"
+          ]
+        },
+        {
+          "line": 920,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 988,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 989,
+          "module": ".scan",
+          "names": [
+            "GRAMMAR",
+            "_operation_words"
+          ]
+        },
+        {
+          "line": 1005,
+          "module": ".pass2",
+          "names": [
+            "clauses_of"
+          ]
+        },
+        {
+          "line": 1055,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 1098,
+          "module": ".scan",
+          "names": [
+            "NOVEL"
+          ]
+        },
+        {
+          "line": 1115,
+          "module": "shared",
+          "names": [
+            "agent_select"
+          ]
+        },
+        {
+          "line": 1187,
+          "module": ".archive",
+          "names": [
+            "ARCHIVE"
+          ]
+        },
+        {
+          "line": 1205,
+          "module": ".issues",
+          "names": [
+            "word_of"
+          ]
+        },
+        {
+          "line": 1299,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 1317,
+          "module": ".residue",
+          "names": [
+            "lab_has"
+          ]
+        },
+        {
+          "line": 1347,
+          "module": ".scan",
+          "names": [
+            "attribute_words"
+          ]
+        },
+        {
+          "line": 1353,
+          "module": ".archive",
+          "names": [
+            "ARCHIVE"
+          ]
+        },
+        {
+          "line": 1407,
+          "module": ".gate4",
+          "names": [
+            "RECIPROCAL"
+          ]
+        },
+        {
+          "line": 1408,
+          "module": ".scan",
+          "names": [
+            "GRAMMAR",
+            "_operation_words"
+          ]
+        },
+        {
+          "line": 1526,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 1559,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 1561,
+          "module": ".",
+          "names": [
+            "reading_answers"
+          ]
+        },
+        {
+          "line": 1692,
+          "module": null,
+          "names": [
+            "os"
+          ]
+        },
+        {
+          "line": 1694,
+          "module": "engines.channel",
+          "names": [
+            "constrained"
+          ]
+        },
+        {
+          "line": 1747,
+          "module": "..codex",
+          "names": [
+            "PLURAL_PRONOUNS"
+          ]
+        },
+        {
+          "line": 1774,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        },
+        {
+          "line": 1804,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 1828,
+          "module": ".scan",
+          "names": [
+            "_stem"
+          ]
+        },
+        {
+          "line": 1869,
+          "module": ".scan",
+          "names": [
+            "scan"
+          ]
+        },
+        {
+          "line": 1883,
+          "module": "engines.channel",
+          "names": [
+            "constrained"
+          ]
+        },
+        {
+          "line": 1971,
+          "module": "copy",
+          "names": [
+            "deepcopy"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/pass2.py",
+      "sha256": "952985712d988ec85fe69a7a5b4239e4b031aea4b83d347a45460812176ffa7f",
+      "imports": [
+        {
+          "line": 58,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 59,
+          "module": "collections",
+          "names": [
+            "Counter"
+          ]
+        },
+        {
+          "line": 60,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 62,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 63,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 64,
+          "module": ".effects",
+          "names": [
+            "Operation"
+          ]
+        },
+        {
+          "line": 99,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 124,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 125,
+          "module": ".scan",
+          "names": [
+            "GRAMMAR",
+            "_operation_words"
+          ]
+        },
+        {
+          "line": 204,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 230,
+          "module": ".linguistics",
+          "names": [
+            "evidence_for"
+          ]
+        },
+        {
+          "line": 231,
+          "module": ".scan",
+          "names": [
+            "_stem"
+          ]
+        },
+        {
+          "line": 262,
+          "module": "..codex",
+          "names": [
+            "CLAUSE_WORDS"
+          ]
+        },
+        {
+          "line": 265,
+          "module": "..codex",
+          "names": [
+            "CUT_DETERMINERS"
+          ]
+        },
+        {
+          "line": 266,
+          "module": "..codex",
+          "names": [
+            "CUT_NEGATION"
+          ]
+        },
+        {
+          "line": 278,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 279,
+          "module": ".front_door",
+          "names": [
+            "_quoted"
+          ]
+        },
+        {
+          "line": 290,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 318,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 376,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 381,
+          "module": ".front_door",
+          "names": [
+            "_quoted"
+          ]
+        },
+        {
+          "line": 389,
+          "module": ".speech_act",
+          "names": [
+            "COURTESY",
+            "WRAPPERS",
+            "AUXILIARIES"
+          ]
+        },
+        {
+          "line": 390,
+          "module": ".",
+          "names": [
+            "iso",
+            "temporal"
+          ]
+        },
+        {
+          "line": 391,
+          "module": ".scan",
+          "names": [
+            "GRAMMAR",
+            "NON_VERB_SEGMENTS"
+          ]
+        },
+        {
+          "line": 401,
+          "module": ".speech_act",
+          "names": [
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 420,
+          "module": ".scan",
+          "names": [
+            "NAMING_CUES"
+          ]
+        },
+        {
+          "line": 432,
+          "module": "..codex",
+          "names": [
+            "ACHIEVE_MARKERS"
+          ]
+        },
+        {
+          "line": 437,
+          "module": ".scan",
+          "names": [
+            "_operation_words"
+          ]
+        },
+        {
+          "line": 443,
+          "module": "..codex",
+          "names": [
+            "DUAL_CLASS_VERBS"
+          ]
+        },
+        {
+          "line": 473,
+          "module": ".",
+          "names": [
+            "testimony"
+          ]
+        },
+        {
+          "line": 494,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 515,
+          "module": ".linguistics",
+          "names": [
+            "manifest_verbs"
+          ]
+        },
+        {
+          "line": 516,
+          "module": ".scan",
+          "names": [
+            "GRAMMAR"
+          ]
+        },
+        {
+          "line": 533,
+          "module": ".speech_act",
+          "names": [
+            "COPULA"
+          ]
+        },
+        {
+          "line": 750,
+          "module": ".linguistics",
+          "names": [
+            "anchor_to_clauses"
+          ]
+        },
+        {
+          "line": 751,
+          "module": ".gate3",
+          "names": [
+            "_made_kind",
+            "_takes_a_source"
+          ]
+        },
+        {
+          "line": 803,
+          "module": ".gate3",
+          "names": [
+            "_makers"
+          ]
+        },
+        {
+          "line": 842,
+          "module": ".gate3",
+          "names": [
+            "_takes_a_source"
+          ]
+        },
+        {
+          "line": 877,
+          "module": ".gate3",
+          "names": [
+            "_makers"
+          ]
+        },
+        {
+          "line": 926,
+          "module": null,
+          "names": [
+            "importlib"
+          ]
+        },
+        {
+          "line": 954,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 963,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 1081,
+          "module": "engines.channel",
+          "names": [
+            "constrained"
+          ]
+        },
+        {
+          "line": 1100,
+          "module": ".scan",
+          "names": [
+            "GRAMMAR"
+          ]
+        },
+        {
+          "line": 1113,
+          "module": ".",
+          "names": [
+            "iso",
+            "speech_act"
+          ]
+        },
+        {
+          "line": 1123,
+          "module": ".",
+          "names": [
+            "testimony"
+          ]
+        },
+        {
+          "line": 1143,
+          "module": ".scan",
+          "names": [
+            "_operation_words",
+            "opens_imperative"
+          ]
+        },
+        {
+          "line": 1151,
+          "module": ".speech_act",
+          "names": [
+            "AUXILIARIES",
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 1180,
+          "module": ".",
+          "names": [
+            "self_repair"
+          ]
+        },
+        {
+          "line": 1221,
+          "module": ".speech_act",
+          "names": [
+            "AUXILIARIES",
+            "WH_WORDS",
+            "WRAPPERS"
+          ]
+        },
+        {
+          "line": 1260,
+          "module": ".scan",
+          "names": [
+            "NON_VERB_SEGMENTS"
+          ]
+        },
+        {
+          "line": 1461,
+          "module": "engines.channel",
+          "names": [
+            "constrained"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/pipeline.py",
+      "sha256": "cb9ac0e2ddba387c18e7daed088bbbd6e085b900783bb43b86eedd23cffb557c",
+      "imports": [
+        {
+          "line": 54,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 56,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 57,
+          "module": ".",
+          "names": [
+            "asking",
+            "gate3",
+            "gate4",
+            "gates12",
+            "linguistics",
+            "pass1",
+            "pass2",
+            "repair",
+            "schema",
+            "surface"
+          ]
+        },
+        {
+          "line": 58,
+          "module": ".effects",
+          "names": [
+            "Operation",
+            "conditions_after",
+            "flatten"
+          ]
+        },
+        {
+          "line": 111,
+          "module": "planner.ghost_writer",
+          "names": [
+            "queryable"
+          ]
+        },
+        {
+          "line": 112,
+          "module": "planner.ir",
+          "names": [
+            "config",
+            "effects"
+          ]
+        },
+        {
+          "line": 196,
+          "module": "planner.score._deps",
+          "names": [
+            "_legal_default"
+          ]
+        },
+        {
+          "line": 271,
+          "module": ".",
+          "names": [
+            "verb_alias"
+          ]
+        },
+        {
+          "line": 287,
+          "module": ".",
+          "names": [
+            "front_door"
+          ]
+        },
+        {
+          "line": 347,
+          "module": ".",
+          "names": [
+            "archive"
+          ]
+        },
+        {
+          "line": 400,
+          "module": ".",
+          "names": [
+            "archive"
+          ]
+        },
+        {
+          "line": 406,
+          "module": ".",
+          "names": [
+            "governing"
+          ]
+        },
+        {
+          "line": 665,
+          "module": ".linguistics",
+          "names": [
+            "anchor_to_clauses"
+          ]
+        },
+        {
+          "line": 716,
+          "module": ".housekeeping",
+          "names": [
+            "CANCEROUS",
+            "GOOD",
+            "RISKY",
+            "sort_out"
+          ]
+        },
+        {
+          "line": 754,
+          "module": ".pass1",
+          "names": [
+            "names_an_attribute"
+          ]
+        },
+        {
+          "line": 757,
+          "module": ".",
+          "names": [
+            "speech_act"
+          ]
+        },
+        {
+          "line": 758,
+          "module": ".pass1",
+          "names": [
+            "BUILDS"
+          ]
+        },
+        {
+          "line": 867,
+          "module": "planner.ir",
+          "names": [
+            "consent"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/proforms.py",
+      "sha256": "409fbe440509de9aca786e19d09b63b191ca44b5e0eac342419716ae29ae3aa2",
+      "imports": [
+        {
+          "line": 32,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 33,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 35,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 36,
+          "module": "..codex",
+          "names": [
+            "DEMONSTRATIVES",
+            "PLURAL_PROFORMS",
+            "RESTRICTORS",
+            "SINGULAR_PROFORMS"
+          ]
+        },
+        {
+          "line": 55,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        },
+        {
+          "line": 115,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 116,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/reading_answers.py",
+      "sha256": "e53eafaec9fa1aebb4cc2fe6de76ebdb41b180eb3cf7a9d9583088fb60338d7c",
+      "imports": [
+        {
+          "line": 41,
+          "module": "typing",
+          "names": [
+            "List",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 43,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 45,
+          "module": "..codex",
+          "names": [
+            "NEGATION"
+          ]
+        },
+        {
+          "line": 46,
+          "module": "..codex",
+          "names": [
+            "SIMILE"
+          ]
+        },
+        {
+          "line": 51,
+          "module": "..codex",
+          "names": [
+            "AFFIRMATION"
+          ]
+        },
+        {
+          "line": 93,
+          "module": ".",
+          "names": [
+            "pass1",
+            "front_door"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/reasons.py",
+      "sha256": "95c29c739df6673360bfc5619cccb7fee4cf65b9128812f04fada0f0ff84c7e9",
+      "imports": [
+        {
+          "line": 26,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 27,
+          "module": "typing",
+          "names": [
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 29,
+          "module": "..codex",
+          "names": [
+            "CUT_DETERMINERS",
+            "DEFINITE",
+            "INDEFINITE",
+            "OBJECT_PRONOUNS",
+            "REASON_CAUSE",
+            "REASON_CONCESSION",
+            "REASON_MARKER_WORDS",
+            "REASON_PURPOSE_SO",
+            "TRANSFER_VERBS"
+          ]
+        },
+        {
+          "line": 55,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        },
+        {
+          "line": 102,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/repair.py",
+      "sha256": "89c9a218a512113696f8f580badd484236e4860198528bd048ac943996412fb6",
+      "imports": [
+        {
+          "line": 38,
+          "module": "typing",
+          "names": [
+            "List",
+            "NamedTuple",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 40,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 41,
+          "module": ".",
+          "names": [
+            "gate3"
+          ]
+        },
+        {
+          "line": 42,
+          "module": ".effects",
+          "names": [
+            "Operation"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/residue.py",
+      "sha256": "3081ea4759d99c9d992d19617b0cb11c253e7a443831190e75fe77bfdb1f9d1c",
+      "imports": [
+        {
+          "line": 51,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 52,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 54,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 55,
+          "module": "orchestrator.languages.english.seam",
+          "names": [
+            "pass1",
+            "schema"
+          ]
+        },
+        {
+          "line": 56,
+          "module": "orchestrator.languages.english.seam.scan",
+          "names": [
+            "COMPARATORS",
+            "GRAMMAR",
+            "LINKING",
+            "NAMING_CUES",
+            "_operation_words",
+            "_stem",
+            "scan"
+          ]
+        },
+        {
+          "line": 60,
+          "module": "..codex",
+          "names": [
+            "RELATIONAL_WORDS"
+          ]
+        },
+        {
+          "line": 83,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 137,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 180,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 272,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 323,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/scan.py",
+      "sha256": "5ec3f4e69ea673f7825b1d6eb73c541a6e2c247c99fa3f55d65ba4d685bdddfc",
+      "imports": [
+        {
+          "line": 40,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 41,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 43,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 45,
+          "module": "..codex",
+          "names": [
+            "COMPARATORS"
+          ]
+        },
+        {
+          "line": 47,
+          "module": "..codex",
+          "names": [
+            "ENUMERATORS"
+          ]
+        },
+        {
+          "line": 49,
+          "module": "..codex",
+          "names": [
+            "BOUNDARY_WORDS"
+          ]
+        },
+        {
+          "line": 79,
+          "module": "..codex",
+          "names": [
+            "PARTICLES"
+          ]
+        },
+        {
+          "line": 81,
+          "module": "..codex",
+          "names": [
+            "OBJECT_OPENERS"
+          ]
+        },
+        {
+          "line": 82,
+          "module": "..codex",
+          "names": [
+            "SHAPE_NEGATION"
+          ]
+        },
+        {
+          "line": 97,
+          "module": ".speech_act",
+          "names": [
+            "AUXILIARIES",
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 323,
+          "module": "..codex",
+          "names": [
+            "GRAMMAR"
+          ]
+        },
+        {
+          "line": 328,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 412,
+          "module": "..codex",
+          "names": [
+            "NON_VERB_SEGMENTS"
+          ]
+        },
+        {
+          "line": 415,
+          "module": "..codex",
+          "names": [
+            "INDEFINITE"
+          ]
+        },
+        {
+          "line": 416,
+          "module": "..codex",
+          "names": [
+            "DEFINITE"
+          ]
+        },
+        {
+          "line": 417,
+          "module": "..codex",
+          "names": [
+            "UNIVERSAL"
+          ]
+        },
+        {
+          "line": 419,
+          "module": "..codex",
+          "names": [
+            "PARTIAL"
+          ]
+        },
+        {
+          "line": 420,
+          "module": "..codex",
+          "names": [
+            "NOVEL"
+          ]
+        },
+        {
+          "line": 438,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 541,
+          "module": ".speech_act",
+          "names": [
+            "AUXILIARIES",
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 552,
+          "module": ".speech_act",
+          "names": [
+            "DIRECTIVE_ACT",
+            "_verb_ops",
+            "act_of"
+          ]
+        },
+        {
+          "line": 733,
+          "module": ".",
+          "names": [
+            "testimony"
+          ]
+        },
+        {
+          "line": 745,
+          "module": ".",
+          "names": [
+            "iso"
+          ]
+        },
+        {
+          "line": 775,
+          "module": ".speech_act",
+          "names": [
+            "DEONTIC"
+          ]
+        },
+        {
+          "line": 788,
+          "module": ".temporal",
+          "names": [
+            "CLOCK"
+          ]
+        },
+        {
+          "line": 838,
+          "module": "..codex",
+          "names": [
+            "UNITS"
+          ]
+        },
+        {
+          "line": 974,
+          "module": "..codex",
+          "names": [
+            "LINKING"
+          ]
+        },
+        {
+          "line": 984,
+          "module": "..codex",
+          "names": [
+            "NAMING_CUES"
+          ]
+        },
+        {
+          "line": 988,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 1055,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 1068,
+          "module": "..codex",
+          "names": [
+            "MAGNITUDE"
+          ]
+        },
+        {
+          "line": 1088,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 1118,
+          "module": "..codex",
+          "names": [
+            "NEGATOR_TOKENS"
+          ]
+        },
+        {
+          "line": 1158,
+          "module": "planner.ir",
+          "names": [
+            "config"
+          ]
+        },
+        {
+          "line": 1208,
+          "module": ".pass1",
+          "names": [
+            "DISTINCT"
+          ]
+        },
+        {
+          "line": 1209,
+          "module": ".speech_act",
+          "names": [
+            "ANAPHORA",
+            "PRONOUNS"
+          ]
+        },
+        {
+          "line": 1212,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/schema.py",
+      "sha256": "54e0dfe5e71f55bf96a153e9d16532d90f0289ae9f95804a67718cd6dfe880c9",
+      "imports": [
+        {
+          "line": 36,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "NamedTuple",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 38,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 480,
+          "module": "..codex",
+          "names": [
+            "REFERRING_PRONOUNS"
+          ]
+        },
+        {
+          "line": 482,
+          "module": "..codex",
+          "names": [
+            "RESTRICTORS"
+          ]
+        },
+        {
+          "line": 533,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 570,
+          "module": "..codex",
+          "names": [
+            "DETERMINERS"
+          ]
+        },
+        {
+          "line": 571,
+          "module": "..codex",
+          "names": [
+            "BOUNDARY_SEPARATORS"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/self_repair.py",
+      "sha256": "05ebad41098a65c506b72b6f329447c211af073116be9d6f5b7a8396bc85015e",
+      "imports": [
+        {
+          "line": 52,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 53,
+          "module": "typing",
+          "names": [
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 55,
+          "module": "..codex",
+          "names": [
+            "RETRACTIONS"
+          ]
+        },
+        {
+          "line": 57,
+          "module": "..codex",
+          "names": [
+            "CORRECTIONS"
+          ]
+        },
+        {
+          "line": 66,
+          "module": "..codex",
+          "names": [
+            "DANGLING"
+          ]
+        },
+        {
+          "line": 138,
+          "module": ".scan",
+          "names": [
+            "_tokens"
+          ]
+        },
+        {
+          "line": 162,
+          "module": ".scan",
+          "names": [
+            "_tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/speech_act.py",
+      "sha256": "dd540cef131774c5b310d9358dca8863f0a942446b21e17636e4dc5eed19e9b9",
+      "imports": [
+        {
+          "line": 74,
+          "module": "typing",
+          "names": [
+            "List",
+            "Optional",
+            "Sequence",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 76,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 95,
+          "module": "..codex",
+          "names": [
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 97,
+          "module": "..codex",
+          "names": [
+            "AUXILIARIES"
+          ]
+        },
+        {
+          "line": 99,
+          "module": "..codex",
+          "names": [
+            "COPULA"
+          ]
+        },
+        {
+          "line": 101,
+          "module": "..codex",
+          "names": [
+            "ADDRESSEE"
+          ]
+        },
+        {
+          "line": 102,
+          "module": "..codex",
+          "names": [
+            "FIRST_PERSON"
+          ]
+        },
+        {
+          "line": 104,
+          "module": "..codex",
+          "names": [
+            "PARTICIPANTS"
+          ]
+        },
+        {
+          "line": 119,
+          "module": "..codex",
+          "names": [
+            "WRAPPERS"
+          ]
+        },
+        {
+          "line": 121,
+          "module": "..codex",
+          "names": [
+            "COURTESY"
+          ]
+        },
+        {
+          "line": 123,
+          "module": "..codex",
+          "names": [
+            "RECIPIENT"
+          ]
+        },
+        {
+          "line": 125,
+          "module": "..codex",
+          "names": [
+            "DEONTIC"
+          ]
+        },
+        {
+          "line": 127,
+          "module": "..codex",
+          "names": [
+            "ALWAYS_NEVER"
+          ]
+        },
+        {
+          "line": 129,
+          "module": "..codex",
+          "names": [
+            "OPENERS"
+          ]
+        },
+        {
+          "line": 131,
+          "module": "..codex",
+          "names": [
+            "ANAPHORA"
+          ]
+        },
+        {
+          "line": 133,
+          "module": "..codex",
+          "names": [
+            "RELATIVIZERS"
+          ]
+        },
+        {
+          "line": 135,
+          "module": "..codex",
+          "names": [
+            "PREPOSITIONS"
+          ]
+        },
+        {
+          "line": 136,
+          "module": "..codex",
+          "names": [
+            "CONJUNCTIONS"
+          ]
+        },
+        {
+          "line": 137,
+          "module": "..codex",
+          "names": [
+            "PRONOUNS"
+          ]
+        },
+        {
+          "line": 139,
+          "module": "..codex",
+          "names": [
+            "NEGATORS"
+          ]
+        },
+        {
+          "line": 141,
+          "module": "..codex",
+          "names": [
+            "CONTRACTIONS"
+          ]
+        },
+        {
+          "line": 146,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 184,
+          "module": "planner.ir",
+          "names": [
+            "config",
+            "effects"
+          ]
+        },
+        {
+          "line": 190,
+          "module": "planner.ir",
+          "names": [
+            "config",
+            "effects"
+          ]
+        },
+        {
+          "line": 209,
+          "module": "planner.ir",
+          "names": [
+            "config",
+            "effects"
+          ]
+        },
+        {
+          "line": 225,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        },
+        {
+          "line": 339,
+          "module": ".scan",
+          "names": [
+            "DEFINITE",
+            "UNIVERSAL"
+          ]
+        },
+        {
+          "line": 397,
+          "module": ".scan",
+          "names": [
+            "INDEFINITE",
+            "_index"
+          ]
+        },
+        {
+          "line": 418,
+          "module": ".linguistics",
+          "names": [
+            "ACHIEVE",
+            "mood_of"
+          ]
+        },
+        {
+          "line": 499,
+          "module": "..codex",
+          "names": [
+            "MEMBER_WORDS"
+          ]
+        },
+        {
+          "line": 548,
+          "module": "..codex",
+          "names": [
+            "SUBJECT_PRONOUNS"
+          ]
+        },
+        {
+          "line": 604,
+          "module": ".scan",
+          "names": [
+            "UNIVERSAL"
+          ]
+        },
+        {
+          "line": 610,
+          "module": ".scan",
+          "names": [
+            "DEFINITE",
+            "INDEFINITE",
+            "NOVEL",
+            "UNIVERSAL"
+          ]
+        },
+        {
+          "line": 617,
+          "module": ".scan",
+          "names": [
+            "DEFINITE",
+            "INDEFINITE",
+            "NOVEL",
+            "UNIVERSAL"
+          ]
+        },
+        {
+          "line": 624,
+          "module": "..codex",
+          "names": [
+            "SUBORDINATING"
+          ]
+        },
+        {
+          "line": 833,
+          "module": ".linguistics",
+          "names": [
+            "manifest_verbs"
+          ]
+        },
+        {
+          "line": 853,
+          "module": ".pass2",
+          "names": [
+            "clauses_of"
+          ]
+        },
+        {
+          "line": 900,
+          "module": ".scan",
+          "names": [
+            "_index",
+            "_operation_words",
+            "_stem"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/surface.py",
+      "sha256": "ca1274b95f039584102d7c96fbef9b78abc631ce773310ddd00a9b554eb11cb7",
+      "imports": [
+        {
+          "line": 23,
+          "module": "typing",
+          "names": [
+            "List",
+            "Optional"
+          ]
+        },
+        {
+          "line": 25,
+          "module": ".effects",
+          "names": [
+            "Operation"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/temporal.py",
+      "sha256": "78b59674e0cc59a948daa6d4aa59a2527c1dd19e8a727550ed72185b67c8b04e",
+      "imports": [
+        {
+          "line": 52,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 53,
+          "module": "typing",
+          "names": [
+            "Optional",
+            "Sequence",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 57,
+          "module": "..codex",
+          "names": [
+            "UNITS"
+          ]
+        },
+        {
+          "line": 59,
+          "module": "..codex",
+          "names": [
+            "COARSE"
+          ]
+        },
+        {
+          "line": 61,
+          "module": "..codex",
+          "names": [
+            "FREQUENCY_ADVERBS"
+          ]
+        },
+        {
+          "line": 63,
+          "module": "..codex",
+          "names": [
+            "DEICTIC"
+          ]
+        },
+        {
+          "line": 65,
+          "module": "..codex",
+          "names": [
+            "WEEKDAYS"
+          ]
+        },
+        {
+          "line": 66,
+          "module": "..codex",
+          "names": [
+            "MONTHS"
+          ]
+        },
+        {
+          "line": 72,
+          "module": "..codex",
+          "names": [
+            "RECURRING"
+          ]
+        },
+        {
+          "line": 76,
+          "module": "..codex",
+          "names": [
+            "EVENTS"
+          ]
+        },
+        {
+          "line": 77,
+          "module": "..codex",
+          "names": [
+            "EVENT_PHRASES"
+          ]
+        },
+        {
+          "line": 84,
+          "module": "..codex",
+          "names": [
+            "ALWAYS_STANDING_PHRASES"
+          ]
+        },
+        {
+          "line": 86,
+          "module": "..codex",
+          "names": [
+            "STANDING"
+          ]
+        },
+        {
+          "line": 142,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 204,
+          "module": ".scan",
+          "names": [
+            "INDEFINITE"
+          ]
+        },
+        {
+          "line": 253,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 256,
+          "module": "..codex",
+          "names": [
+            "COARSE",
+            "UNITS"
+          ]
+        },
+        {
+          "line": 267,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/testimony.py",
+      "sha256": "eab025abc536f0331d661e6c49a2fac0608116038cc5e4f4b6259078fe7062ee",
+      "imports": [
+        {
+          "line": 36,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 37,
+          "module": "typing",
+          "names": [
+            "List",
+            "NamedTuple",
+            "Optional"
+          ]
+        },
+        {
+          "line": 39,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 41,
+          "module": "..codex",
+          "names": [
+            "NEG_MODALS"
+          ]
+        },
+        {
+          "line": 42,
+          "module": "..codex",
+          "names": [
+            "NEG_DO"
+          ]
+        },
+        {
+          "line": 43,
+          "module": "..codex",
+          "names": [
+            "TESTIMONY_COPULAS"
+          ]
+        },
+        {
+          "line": 44,
+          "module": "..codex",
+          "names": [
+            "ITERATIVES"
+          ]
+        },
+        {
+          "line": 46,
+          "module": "..codex",
+          "names": [
+            "INDEFINITES"
+          ]
+        },
+        {
+          "line": 48,
+          "module": "..codex",
+          "names": [
+            "RELATIVIZERS"
+          ]
+        },
+        {
+          "line": 106,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 117,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        },
+        {
+          "line": 118,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 154,
+          "module": ".scan",
+          "names": [
+            "_operation_words"
+          ]
+        },
+        {
+          "line": 189,
+          "module": ".scan",
+          "names": [
+            "opens_imperative"
+          ]
+        },
+        {
+          "line": 190,
+          "module": ".speech_act",
+          "names": [
+            "AUXILIARIES",
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 196,
+          "module": ".",
+          "names": [
+            "iso"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/values.py",
+      "sha256": "e11299d43a318ac0babdd14a89c04fe950f023d0651c3f3009712c8dde8ad147",
+      "imports": [
+        {
+          "line": 80,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 81,
+          "module": "typing",
+          "names": [
+            "Dict",
+            "List",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 83,
+          "module": ".",
+          "names": [
+            "schema"
+          ]
+        },
+        {
+          "line": 84,
+          "module": "..codex",
+          "names": [
+            "ATTRIBUTE_LINKERS",
+            "CONTRACTIONS",
+            "CUT_DETERMINERS",
+            "DEFINITE",
+            "GENITIVE_CLITICS",
+            "INDEFINITE",
+            "NAMING_CUES",
+            "NUMERAL_WORDS",
+            "SELECTOR_PREPOSITIONS",
+            "VALUE_CONNECTORS"
+          ]
+        },
+        {
+          "line": 104,
+          "module": ".pass1",
+          "names": [
+            "names_an_attribute"
+          ]
+        },
+        {
+          "line": 144,
+          "module": ".scan",
+          "names": [
+            "GRAMMAR",
+            "_operation_words"
+          ]
+        },
+        {
+          "line": 145,
+          "module": "..codex",
+          "names": [
+            "EXCLUDERS",
+            "RELATIONAL_WORDS"
+          ]
+        },
+        {
+          "line": 155,
+          "module": ".pass2",
+          "names": [
+            "CLAUSE_MARKS"
+          ]
+        },
+        {
+          "line": 219,
+          "module": "..codex",
+          "names": [
+            "NON_VERB_SEGMENTS"
+          ]
+        },
+        {
+          "line": 234,
+          "module": ".scan",
+          "names": [
+            "clause_around"
+          ]
+        },
+        {
+          "line": 246,
+          "module": "planner.gates",
+          "names": [
+            "claims"
+          ]
+        },
+        {
+          "line": 353,
+          "module": ".scan",
+          "names": [
+            "_index"
+          ]
+        },
+        {
+          "line": 354,
+          "module": ".temporal",
+          "names": [
+            "clock_in"
+          ]
+        },
+        {
+          "line": 412,
+          "module": ".scan",
+          "names": [
+            "_index",
+            "_kind_of"
+          ]
+        },
+        {
+          "line": 485,
+          "module": ".scan",
+          "names": [
+            "_index",
+            "_kind_of"
+          ]
+        },
+        {
+          "line": 515,
+          "module": ".scan",
+          "names": [
+            "_index",
+            "_kind_of"
+          ]
+        },
+        {
+          "line": 537,
+          "module": ".scan",
+          "names": [
+            "_index",
+            "_operation_words"
+          ]
+        },
+        {
+          "line": 539,
+          "module": ".speech_act",
+          "names": [
+            "_verb_ops"
+          ]
+        },
+        {
+          "line": 585,
+          "module": "..codex",
+          "names": [
+            "MAGNITUDE"
+          ]
+        },
+        {
+          "line": 596,
+          "module": ".speech_act",
+          "names": [
+            "AUXILIARIES",
+            "WH_WORDS"
+          ]
+        },
+        {
+          "line": 603,
+          "module": ".scan",
+          "names": [
+            "clause_around"
+          ]
+        },
+        {
+          "line": 655,
+          "module": "..codex",
+          "names": [
+            "MAGNITUDE"
+          ]
+        },
+        {
+          "line": 758,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 761,
+          "module": ".archive",
+          "names": [
+            "ARCHIVE"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "files/orchestrator/languages/english/seam/verb_alias.py",
+      "sha256": "d3210b21d95779aee026c36dcd83eb965804053133cf04f9b9374a0bf9119f6d",
+      "imports": [
+        {
+          "line": 35,
+          "module": null,
+          "names": [
+            "json"
+          ]
+        },
+        {
+          "line": 36,
+          "module": null,
+          "names": [
+            "os"
+          ]
+        },
+        {
+          "line": 37,
+          "module": null,
+          "names": [
+            "pathlib"
+          ]
+        },
+        {
+          "line": 38,
+          "module": null,
+          "names": [
+            "time"
+          ]
+        },
+        {
+          "line": 39,
+          "module": "typing",
+          "names": [
+            "List",
+            "NamedTuple",
+            "Optional",
+            "Tuple"
+          ]
+        },
+        {
+          "line": 203,
+          "module": null,
+          "names": [
+            "re"
+          ]
+        },
+        {
+          "line": 205,
+          "module": "..codex",
+          "names": [
+            "ALIAS_VERBS"
+          ]
+        },
+        {
+          "line": 219,
+          "module": ".linguistics",
+          "names": [
+            "manifest_verbs"
+          ]
+        },
+        {
+          "line": 220,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        },
+        {
+          "line": 274,
+          "module": "..codex",
+          "names": [
+            "CLAUSE_CONNECTIVES"
+          ]
+        },
+        {
+          "line": 292,
+          "module": ".linguistics",
+          "names": [
+            "manifest_verbs"
+          ]
+        },
+        {
+          "line": 293,
+          "module": "planner.formula.legal",
+          "names": [
+            "Board"
+          ]
+        }
+      ]
+    }
+  ]
+}

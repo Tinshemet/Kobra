@@ -1,0 +1,112 @@
+{
+  "state": "complete",
+  "batch": 1,
+  "cases": 300,
+  "exact_cases": 79,
+  "source_unchanged": true,
+  "source_retention_cases": 300,
+  "source_characters": 9044,
+  "seconds": 1268.8353512620015,
+  "adapter_errors": 0,
+  "candidate_coverage": {
+    "covered": 1086,
+    "total": 1142
+  },
+  "errors": {
+    "arranged": 205,
+    "needs_review": 95
+  },
+  "slots_correct": 2158,
+  "slots_total": 4246,
+  "required_preserved": 768,
+  "required_total": 1550,
+  "by_group": {
+    "clausal_coordination": {
+      "exact": 2,
+      "cases": 11
+    },
+    "clause_forms": {
+      "exact": 11,
+      "cases": 16
+    },
+    "comparison": {
+      "exact": 0,
+      "cases": 15
+    },
+    "conditional": {
+      "exact": 0,
+      "cases": 15
+    },
+    "distributive": {
+      "exact": 0,
+      "cases": 15
+    },
+    "ellipsis": {
+      "exact": 0,
+      "cases": 15
+    },
+    "fronting": {
+      "exact": 1,
+      "cases": 16
+    },
+    "missing": {
+      "exact": 0,
+      "cases": 7
+    },
+    "modifiers": {
+      "exact": 0,
+      "cases": 15
+    },
+    "nominal_coordination": {
+      "exact": 0,
+      "cases": 15
+    },
+    "noun_phrases": {
+      "exact": 14,
+      "cases": 16
+    },
+    "polite": {
+      "exact": 0,
+      "cases": 15
+    },
+    "pronoun": {
+      "exact": 9,
+      "cases": 15
+    },
+    "quantifiers": {
+      "exact": 14,
+      "cases": 16
+    },
+    "relative": {
+      "exact": 0,
+      "cases": 15
+    },
+    "scope": {
+      "exact": 6,
+      "cases": 16
+    },
+    "subordination": {
+      "exact": 0,
+      "cases": 15
+    },
+    "unresolved": {
+      "exact": 4,
+      "cases": 5
+    },
+    "verb_frames": {
+      "exact": 7,
+      "cases": 16
+    },
+    "verbal_coordination": {
+      "exact": 0,
+      "cases": 15
+    },
+    "voice_tense": {
+      "exact": 11,
+      "cases": 16
+    }
+  },
+  "passing_threshold": 285,
+  "needs_offline_audit": true,
+  "scope": "Bounded 11-slot projection, not full graph accuracy or meaning preservation"
+}

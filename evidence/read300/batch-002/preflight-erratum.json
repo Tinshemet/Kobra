@@ -1,0 +1,11 @@
+{
+  "issue": "Runner launch was not gated on test exit status. A nominal PP candidate test failed; the manifest fix-metadata test claim was written incorrectly before the result was inspected.",
+  "actual_tests": {
+    "run": 115,
+    "passed": 113,
+    "failed": 1,
+    "skipped": 1
+  },
+  "failing_test": "test_nominal_groups_and_fronted_phrase_remain_selectable: The server in the archive restarts.",
+  "action": "Keep batch 2 reader frozen, retain every result and this erratum; no passing-test claim. Correct candidate boundary between batches and gate future launches on successful preflight."
+}

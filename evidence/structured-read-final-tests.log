@@ -1,0 +1,79 @@
+test_clock_tail_source_cases (test_clock.ClockTests.test_clock_tail_source_cases) ... ok
+test_empty (test_clock.ClockTests.test_empty) ... ok
+test_inherited_limit_is_visible (test_clock.ClockTests.test_inherited_limit_is_visible) ... ok
+test_quantification_is_not_recurrence (test_clock.ClockTests.test_quantification_is_not_recurrence) ... ok
+test_second_domain (test_clock.ClockTests.test_second_domain) ... ok
+test_dangling_and_self_links_rejected (test_distillation.DistillationTests.test_dangling_and_self_links_rejected) ... ok
+test_draft_examples_have_valid_references (test_distillation.DistillationTests.test_draft_examples_have_valid_references) ... ok
+test_duplicate_ids_rejected (test_distillation.DistillationTests.test_duplicate_ids_rejected) ... ok
+test_empty_input_can_have_no_points (test_distillation.DistillationTests.test_empty_input_can_have_no_points) ... ok
+test_invalid_offsets_rejected (test_distillation.DistillationTests.test_invalid_offsets_rejected) ... ok
+test_missing_sources_and_out_of_bounds_evidence_rejected (test_distillation.DistillationTests.test_missing_sources_and_out_of_bounds_evidence_rejected) ... ok
+test_multiple_sources_and_discontinuous_evidence (test_distillation.DistillationTests.test_multiple_sources_and_discontinuous_evidence) ... ok
+test_nested_collections_are_immutable (test_distillation.DistillationTests.test_nested_collections_are_immutable) ... ok
+test_points_require_evidence (test_distillation.DistillationTests.test_points_require_evidence) ... ok
+test_structure_does_not_establish_semantic_support (test_distillation.DistillationTests.test_structure_does_not_establish_semantic_support) ... ok
+test_unknown_contract_version_rejected (test_distillation.DistillationTests.test_unknown_contract_version_rejected) ... ok
+test_conditional_clause_boundary (test_front_door.FrontDoorTests.test_conditional_clause_boundary) ... ok
+test_configuration_is_immutable_and_explicit (test_front_door.FrontDoorTests.test_configuration_is_immutable_and_explicit) ... ok
+test_flags_and_identifiers_remain_intact (test_front_door.FrontDoorTests.test_flags_and_identifiers_remain_intact) ... ok
+test_known_names_are_per_client (test_front_door.FrontDoorTests.test_known_names_are_per_client) ... ok
+test_no_application_imports (test_front_door.FrontDoorTests.test_no_application_imports) ... ok
+test_pause_removal_keeps_original_offsets (test_front_door.FrontDoorTests.test_pause_removal_keeps_original_offsets) ... ok
+test_quoted_instructions_are_not_rewritten (test_front_door.FrontDoorTests.test_quoted_instructions_are_not_rewritten) ... ok
+test_source_compatibility (test_front_door.FrontDoorTests.test_source_compatibility) ... ok
+test_unicode_whitespace_is_announced (test_front_door.FrontDoorTests.test_unicode_whitespace_is_announced) ... ok
+test_bad_evidence_stops_before_resolve (test_live_read.LiveReadBoundaryTests.test_bad_evidence_stops_before_resolve) ... ok
+test_mock_pipeline_and_transport_preserve_read (test_live_read.LiveReadBoundaryTests.test_mock_pipeline_and_transport_preserve_read) ... ok
+test_runner_captures_mocked_transport_end_to_end (test_live_read.LiveReadBoundaryTests.test_runner_captures_mocked_transport_end_to_end) ... 1/1 a: structurally_accepted
+ok
+test_transport_failure_is_not_retried (test_live_read.LiveReadBoundaryTests.test_transport_failure_is_not_retried) ... ok
+test_truncation_is_rejected_even_if_json_valid (test_live_read.LiveReadBoundaryTests.test_truncation_is_rejected_even_if_json_valid) ... ok
+test_invalid_client_contracts_rejected (test_pipeline.ContractTests.test_invalid_client_contracts_rejected) ... ok
+test_invalid_maps_and_silent_changes_rejected (test_pipeline.ContractTests.test_invalid_maps_and_silent_changes_rejected) ... ok
+test_route_requires_reason_and_consistent_destination (test_pipeline.ContractTests.test_route_requires_reason_and_consistent_destination) ... ok
+test_identity_preserves_unicode_and_empty_text (test_pipeline.PipelineTests.test_identity_preserves_unicode_and_empty_text) ... ok
+test_original_request_cannot_be_replaced (test_pipeline.PipelineTests.test_original_request_cannot_be_replaced) ... ok
+test_policy_decision_keeps_original_route (test_pipeline.PipelineTests.test_policy_decision_keeps_original_route) ... ok
+test_reader_failure_stops_later_stages (test_pipeline.PipelineTests.test_reader_failure_stops_later_stages) ... ok
+test_stage_order_and_intermediate_results_for_two_clients (test_pipeline.PipelineTests.test_stage_order_and_intermediate_results_for_two_clients) ... ok
+test_undeclared_capability_rejected_from_router_or_policy (test_pipeline.PipelineTests.test_undeclared_capability_rejected_from_router_or_policy) ... ok
+test_bad_structure_is_rejected_atomically (test_read.ReadTests.test_bad_structure_is_rejected_atomically) ... ok
+test_citing_everything_does_not_prove_entailment (test_read.ReadTests.test_citing_everything_does_not_prove_entailment) ... ok
+test_empty_output_is_explicit_and_empty_input_skips_model (test_read.ReadTests.test_empty_output_is_explicit_and_empty_input_skips_model) ... ok
+test_existing_linguistic_observations_reach_provider_and_result (test_read.ReadTests.test_existing_linguistic_observations_reach_provider_and_result) ... ok
+test_explicit_provider_required (test_read.ReadTests.test_explicit_provider_required) ... ok
+test_failure_stops_pipeline_before_resolve (test_read.ReadTests.test_failure_stops_pipeline_before_resolve) ... ok
+test_input_and_output_limits (test_read.ReadTests.test_input_and_output_limits) ... ok
+test_inserted_text_cannot_be_sole_evidence (test_read.ReadTests.test_inserted_text_cannot_be_sole_evidence) ... ok
+test_invalid_links_fail (test_read.ReadTests.test_invalid_links_fail) ... ok
+test_missing_or_wrong_occurrence_fails (test_read.ReadTests.test_missing_or_wrong_occurrence_fails) ... ok
+test_model_cannot_replace_sources_or_ids (test_read.ReadTests.test_model_cannot_replace_sources_or_ids) ... ok
+test_normalized_proposal_maps_to_original (test_read.ReadTests.test_normalized_proposal_maps_to_original) ... ok
+test_preserved_read_helpers_match_source_cases (test_read.ReadTests.test_preserved_read_helpers_match_source_cases) ... ok
+test_proposals_from_twelve_draft_examples_bind_without_changing_meaning (test_read.ReadTests.test_proposals_from_twelve_draft_examples_bind_without_changing_meaning) ... ok
+test_provider_failure_is_not_a_successful_empty_read (test_read.ReadTests.test_provider_failure_is_not_a_successful_empty_read) ... ok
+test_repeated_quote_uses_explicit_occurrence (test_read.ReadTests.test_repeated_quote_uses_explicit_occurrence) ... ok
+test_uncited_constraint_is_visible (test_read.ReadTests.test_uncited_constraint_is_visible) ... ok
+test_wrong_original_rejected_before_call (test_read.ReadTests.test_wrong_original_rejected_before_call) ... ok
+test_adversarial_fields_and_references_rejected (test_structured_read.StructuredReadTests.test_adversarial_fields_and_references_rejected) ... ok
+test_blanket_edge_evidence_does_not_hide_missing_node_content (test_structured_read.StructuredReadTests.test_blanket_edge_evidence_does_not_hide_missing_node_content) ... ok
+test_empty_nonblank_is_diagnostic_and_blank_skips_model (test_structured_read.StructuredReadTests.test_empty_nonblank_is_diagnostic_and_blank_skips_model) ... ok
+test_graph_reaches_resolve_with_original_and_no_semantic_approval (test_structured_read.StructuredReadTests.test_graph_reaches_resolve_with_original_and_no_semantic_approval) ... ok
+test_hint_ablation_changes_only_prompt_and_observations (test_structured_read.StructuredReadTests.test_hint_ablation_changes_only_prompt_and_observations) ... ok
+test_input_mismatch_and_limits_rejected_before_model (test_structured_read.StructuredReadTests.test_input_mismatch_and_limits_rejected_before_model) ... ok
+test_inserted_only_evidence_rejected (test_structured_read.StructuredReadTests.test_inserted_only_evidence_rejected) ... ok
+test_invalid_graph_never_reaches_resolver (test_structured_read.StructuredReadTests.test_invalid_graph_never_reaches_resolver) ... ok
+test_missing_provider_and_transport_failure_propagate (test_structured_read.StructuredReadTests.test_missing_provider_and_transport_failure_propagate) ... ok
+test_multiple_possible_antecedents_are_retained (test_structured_read.StructuredReadTests.test_multiple_possible_antecedents_are_retained) ... ok
+test_original_offsets_with_unicode_and_normalization (test_structured_read.StructuredReadTests.test_original_offsets_with_unicode_and_normalization) ... ok
+test_overlapping_occurrence_binding (test_structured_read.StructuredReadTests.test_overlapping_occurrence_binding) ... ok
+test_per_node_outgoing_limit_is_enforced (test_structured_read.StructuredReadTests.test_per_node_outgoing_limit_is_enforced) ... ok
+test_schema_matches_fixture_when_jsonschema_available (test_structured_read.StructuredReadTests.test_schema_matches_fixture_when_jsonschema_available) ... skipped 'optional jsonschema is not installed'
+test_unknown_and_ambiguity_remain_diagnostic (test_structured_read.StructuredReadTests.test_unknown_and_ambiguity_remain_diagnostic) ... ok
+test_wrong_attachment_is_not_falsely_claimed_detectable (test_structured_read.StructuredReadTests.test_wrong_attachment_is_not_falsely_claimed_detectable) ... ok
+
+----------------------------------------------------------------------
+Ran 73 tests in 0.964s
+
+OK (skipped=1)

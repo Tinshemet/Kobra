@@ -1,0 +1,561 @@
+{
+  "format": "serpent-exam",
+  "version": "1.0",
+  "source_sha256": "ba026fc0a82db3059f846d1f2a00376677bcb96ace667b8892e6b85e03a74b6a",
+  "prediction_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:serpent:schema:predictions-v1",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "format",
+      "version",
+      "cases"
+    ],
+    "properties": {
+      "format": {
+        "const": "serpent-predictions"
+      },
+      "version": {
+        "const": "1.0"
+      },
+      "cases": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "atoms",
+            "relations",
+            "gaps"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "atoms": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "type",
+                  "features",
+                  "intervals"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "type": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "features": {
+                    "type": "object"
+                  },
+                  "intervals": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "maxItems": 2,
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "relations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "type",
+                  "from",
+                  "to",
+                  "intervals"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "type": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "from": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "to": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "intervals": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "maxItems": 2,
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "gaps": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "kind",
+                  "anchor",
+                  "candidates"
+                ],
+                "properties": {
+                  "kind": {
+                    "type": "string"
+                  },
+                  "anchor": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "candidates": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "inputs": [
+    {
+      "id": "S000001",
+      "sentence": "Perhaps describe the document."
+    },
+    {
+      "id": "S000002",
+      "sentence": "Uh, did you read the appointment details?"
+    },
+    {
+      "id": "S000003",
+      "sentence": "Well, write the note before reading the appointment details."
+    },
+    {
+      "id": "S000004",
+      "sentence": "Okay, do not check the reminders."
+    },
+    {
+      "id": "S000005",
+      "sentence": "Perhaps explain your plan."
+    },
+    {
+      "id": "S000006",
+      "sentence": "Okay, always describe the document before summarizing the email."
+    },
+    {
+      "id": "S000007",
+      "sentence": "Well, review the calendar at 16:30."
+    },
+    {
+      "id": "S000008",
+      "sentence": "Please, review the calendar every 4 hours."
+    },
+    {
+      "id": "S000009",
+      "sentence": "Please, undo the recent change."
+    },
+    {
+      "id": "S000010",
+      "sentence": "Uh, return only the results."
+    },
+    {
+      "id": "S000011",
+      "sentence": "Okay, cancel the pending task."
+    },
+    {
+      "id": "S000012",
+      "sentence": "Well, did you summarize the email?"
+    },
+    {
+      "id": "S000013",
+      "sentence": "Uh, do not summarize the email."
+    },
+    {
+      "id": "S000014",
+      "sentence": "Okay, organize the notes every 4 hours."
+    },
+    {
+      "id": "S000015",
+      "sentence": "Please, organize the notes at 09:15."
+    },
+    {
+      "id": "S000016",
+      "sentence": "Okay, read the message before describing the screen."
+    },
+    {
+      "id": "S000017",
+      "sentence": "Uh, organize the notes."
+    },
+    {
+      "id": "S000018",
+      "sentence": "Uh, review your assumptions."
+    },
+    {
+      "id": "S000019",
+      "sentence": "Please, always write the note before reading the appointment details."
+    },
+    {
+      "id": "S000020",
+      "sentence": "Perhaps return only the summary."
+    },
+    {
+      "id": "S000021",
+      "sentence": "Well, summarize the report at 16:30."
+    },
+    {
+      "id": "S000022",
+      "sentence": "Well, describe the document every 1 hour."
+    },
+    {
+      "id": "S000023",
+      "sentence": "Well, did you show your progress?"
+    },
+    {
+      "id": "S000024",
+      "sentence": "Uh, do not review the agenda."
+    },
+    {
+      "id": "S000025",
+      "sentence": "Uh, write the note."
+    },
+    {
+      "id": "S000026",
+      "sentence": "Okay, always summarize the notification before reviewing the agenda."
+    },
+    {
+      "id": "S000027",
+      "sentence": "Well, show your progress."
+    },
+    {
+      "id": "S000028",
+      "sentence": "Well, describe the document before summarizing the email."
+    },
+    {
+      "id": "S000029",
+      "sentence": "Okay, read the message at 09:15."
+    },
+    {
+      "id": "S000030",
+      "sentence": "Well, review the calendar every 12 hours."
+    },
+    {
+      "id": "S000031",
+      "sentence": "Okay, did you save the message?"
+    },
+    {
+      "id": "S000032",
+      "sentence": "Well, do not write the note."
+    },
+    {
+      "id": "S000033",
+      "sentence": "Okay, review the shopping list."
+    },
+    {
+      "id": "S000034",
+      "sentence": "Well, always read the message before describing the screen."
+    },
+    {
+      "id": "S000035",
+      "sentence": "Please, summarize the notification before reviewing the agenda."
+    },
+    {
+      "id": "S000036",
+      "sentence": "Please, save the message at 09:15."
+    },
+    {
+      "id": "S000037",
+      "sentence": "Please, read the message every 4 hours."
+    },
+    {
+      "id": "S000038",
+      "sentence": "Okay, did you return the summary?"
+    },
+    {
+      "id": "S000039",
+      "sentence": "Please, list the pending tasks."
+    },
+    {
+      "id": "S000040",
+      "sentence": "Please, do not save the message."
+    },
+    {
+      "id": "S000041",
+      "sentence": "Well, summarize the report every 4 hours."
+    },
+    {
+      "id": "S000042",
+      "sentence": "Please, organize the notes at 16:30."
+    },
+    {
+      "id": "S000043",
+      "sentence": "Uh, do not review the calendar."
+    },
+    {
+      "id": "S000044",
+      "sentence": "Okay, read the appointment details."
+    },
+    {
+      "id": "S000045",
+      "sentence": "Uh, did you undo the recent change?"
+    },
+    {
+      "id": "S000046",
+      "sentence": "Okay, read the headings every 1 hour."
+    },
+    {
+      "id": "S000047",
+      "sentence": "Okay, describe the screen."
+    },
+    {
+      "id": "S000048",
+      "sentence": "Okay, read the message at 16:30."
+    },
+    {
+      "id": "S000049",
+      "sentence": "Well, did you read the message?"
+    },
+    {
+      "id": "S000050",
+      "sentence": "Well, do not read the headings."
+    },
+    {
+      "id": "S000051",
+      "sentence": "Uh, read the appointment details every 12 hours."
+    },
+    {
+      "id": "S000052",
+      "sentence": "Uh, describe the document at 09:15."
+    },
+    {
+      "id": "S000053",
+      "sentence": "Well, did you cancel the pending task?"
+    },
+    {
+      "id": "S000054",
+      "sentence": "Uh, do not review the shopping list."
+    },
+    {
+      "id": "S000055",
+      "sentence": "Okay, review the calendar."
+    },
+    {
+      "id": "S000056",
+      "sentence": "Maybe list the pending tasks every 12 hours."
+    },
+    {
+      "id": "S000057",
+      "sentence": "Uh, describe the screen at 16:30."
+    },
+    {
+      "id": "S000058",
+      "sentence": "Uh, do not read the message."
+    },
+    {
+      "id": "S000059",
+      "sentence": "Uh, did you list the pending tasks?"
+    },
+    {
+      "id": "S000060",
+      "sentence": "Maybe check the reminders."
+    },
+    {
+      "id": "S000061",
+      "sentence": "Maybe summarize the email every 1 hour."
+    },
+    {
+      "id": "S000062",
+      "sentence": "Well, save the message at 16:30."
+    },
+    {
+      "id": "S000063",
+      "sentence": "Well, did you read the headings?"
+    },
+    {
+      "id": "S000064",
+      "sentence": "Uh, do not read the appointment details."
+    },
+    {
+      "id": "S000065",
+      "sentence": "Please, save the message."
+    },
+    {
+      "id": "S000066",
+      "sentence": "Uh, describe the screen every 4 hours."
+    },
+    {
+      "id": "S000067",
+      "sentence": "Please, read the appointment details at 09:15."
+    },
+    {
+      "id": "S000068",
+      "sentence": "Please, do not summarize the report."
+    },
+    {
+      "id": "S000069",
+      "sentence": "Uh, did you check the reminders?"
+    },
+    {
+      "id": "S000070",
+      "sentence": "Please, summarize the report."
+    },
+    {
+      "id": "S000071",
+      "sentence": "Uh, read the appointment details every 1 hour."
+    },
+    {
+      "id": "S000072",
+      "sentence": "Please, summarize the email at 09:15."
+    },
+    {
+      "id": "S000073",
+      "sentence": "Well, did you summarize the report?"
+    },
+    {
+      "id": "S000074",
+      "sentence": "Okay, do not organize the notes."
+    },
+    {
+      "id": "S000075",
+      "sentence": "Okay, summarize the email."
+    },
+    {
+      "id": "S000076",
+      "sentence": "Okay, check the reminders every 1 hour."
+    },
+    {
+      "id": "S000077",
+      "sentence": "Perhaps review the shopping list at 16:30."
+    },
+    {
+      "id": "S000078",
+      "sentence": "Well, did you return the results?"
+    },
+    {
+      "id": "S000079",
+      "sentence": "Please, do not describe the document."
+    },
+    {
+      "id": "S000080",
+      "sentence": "Perhaps read the message."
+    },
+    {
+      "id": "S000081",
+      "sentence": "Uh, organize the notes every 12 hours."
+    },
+    {
+      "id": "S000082",
+      "sentence": "Uh, describe the document at 16:30."
+    },
+    {
+      "id": "S000083",
+      "sentence": "Uh, did you describe the document?"
+    },
+    {
+      "id": "S000084",
+      "sentence": "Okay, do not summarize the notification."
+    },
+    {
+      "id": "S000085",
+      "sentence": "Perhaps summarize the notification."
+    },
+    {
+      "id": "S000086",
+      "sentence": "Perhaps review the calendar every 1 hour."
+    },
+    {
+      "id": "S000087",
+      "sentence": "Please, list the pending tasks at 16:30."
+    },
+    {
+      "id": "S000088",
+      "sentence": "Okay, did you summarize the notification?"
+    },
+    {
+      "id": "S000089",
+      "sentence": "Please, do not list the pending tasks."
+    },
+    {
+      "id": "S000090",
+      "sentence": "Uh, review the agenda."
+    },
+    {
+      "id": "S000091",
+      "sentence": "Maybe review the shopping list every 1 hour."
+    },
+    {
+      "id": "S000092",
+      "sentence": "Uh, review the shopping list at 09:15."
+    },
+    {
+      "id": "S000093",
+      "sentence": "Okay, did you review the calendar?"
+    },
+    {
+      "id": "S000094",
+      "sentence": "Maybe read the headings."
+    },
+    {
+      "id": "S000095",
+      "sentence": "Please, do not describe the screen."
+    },
+    {
+      "id": "S000096",
+      "sentence": "Please, summarize the report every 12 hours."
+    },
+    {
+      "id": "S000097",
+      "sentence": "Perhaps summarize the notification at 16:30."
+    },
+    {
+      "id": "S000098",
+      "sentence": "Uh, did you review the agenda?"
+    },
+    {
+      "id": "S000099",
+      "sentence": "Well, write the note every 4 hours."
+    },
+    {
+      "id": "S000100",
+      "sentence": "Maybe check the reminders at 09:15."
+    }
+  ],
+  "task": "Return graph annotations using the published serpent-predictions 1.0 contract. For scenarios also return reference-resolution predictions. No teacher answers are included."
+}

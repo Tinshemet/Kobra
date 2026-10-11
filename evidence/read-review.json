@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-08",
+  "scope": "First READ distilled-output path plus preserved noun-anchor and reason-clause helpers",
+  "review": {
+    "reviewer": "implementing agent; not independent audit",
+    "scope": [
+      "injected model proposal call",
+      "strict response decoding and exact quote occurrence binding",
+      "original-source mapping and immutable distillation",
+      "uncited-text and empty-proposal diagnostics",
+      "READ helper relocation and client vocabulary",
+      "tests, authored-response example and documentation"
+    ],
+    "outcome": "All source symbol hashes unchanged. No world lookup, planner import, resolution, security policy decision or tool execution. Point/source identities are assigned by Kobra. Malformed proposals reject atomically and provider failures propagate. Output retains uncertainty and explicit unevaluated semantic status.",
+    "limitations": [
+      "A quote existing in input does not prove the point follows from it",
+      "Lexical coverage does not prove semantic completeness",
+      "One-sentence requirement is not mechanically proven",
+      "Responses in tests are authored, not live model predictions",
+      "Other legacy object/relation readers remain to be generalized",
+      "This new output adapter is not equivalent to all of Gorgon pass1"
+    ],
+    "review_correction": "Corrected a test expectation for the second Jo occurrence from offset 16 (space) to 17 (J); implementation was already correct."
+  },
+  "checks": [
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v",
+      "exit_status": 0,
+      "passed": 52,
+      "failed": 0,
+      "skipped": 0,
+      "artifact": "evidence/read-tests.log"
+    },
+    {
+      "command": ".venv/bin/python -I -m unittest discover -s tests -v",
+      "exit_status": 0,
+      "passed": 52,
+      "failed": 0,
+      "skipped": 0,
+      "artifact": "evidence/read-installed-tests.log"
+    },
+    {
+      "check": "Inherited READ surface comparison",
+      "cases": 15,
+      "mismatches": 0,
+      "fixture": "tests/fixtures/read-surface-characterization.json"
+    },
+    {
+      "check": "Front-door compatibility regression remains included",
+      "cases": 542,
+      "mismatches": 0
+    },
+    {
+      "command": ".venv/bin/python -I examples/read_distillation.py",
+      "exit_status": 0,
+      "mode": "authored response, no inference"
+    },
+    {
+      "command": "python3 -m pip wheel --no-deps --no-build-isolation --no-index . -w dist",
+      "exit_status": 0
+    },
+    {
+      "check": "Ruff F/E9 lint and formatting",
+      "result": "passed"
+    }
+  ],
+  "next": "Generalize remaining existing READ object/relation extraction; evaluate actual provider proposals separately from binding tests.",
+  "git": "Local only; not committed or pushed; no Gorgon source changes or paused-run resumption."
+}

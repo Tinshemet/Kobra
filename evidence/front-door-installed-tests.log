@@ -1,0 +1,39 @@
+test_clock_tail_source_cases (test_clock.ClockTests.test_clock_tail_source_cases) ... ok
+test_empty (test_clock.ClockTests.test_empty) ... ok
+test_inherited_limit_is_visible (test_clock.ClockTests.test_inherited_limit_is_visible) ... ok
+test_quantification_is_not_recurrence (test_clock.ClockTests.test_quantification_is_not_recurrence) ... ok
+test_second_domain (test_clock.ClockTests.test_second_domain) ... ok
+test_dangling_and_self_links_rejected (test_distillation.DistillationTests.test_dangling_and_self_links_rejected) ... ok
+test_draft_examples_have_valid_references (test_distillation.DistillationTests.test_draft_examples_have_valid_references) ... ok
+test_duplicate_ids_rejected (test_distillation.DistillationTests.test_duplicate_ids_rejected) ... ok
+test_empty_input_can_have_no_points (test_distillation.DistillationTests.test_empty_input_can_have_no_points) ... ok
+test_invalid_offsets_rejected (test_distillation.DistillationTests.test_invalid_offsets_rejected) ... ok
+test_missing_sources_and_out_of_bounds_evidence_rejected (test_distillation.DistillationTests.test_missing_sources_and_out_of_bounds_evidence_rejected) ... ok
+test_multiple_sources_and_discontinuous_evidence (test_distillation.DistillationTests.test_multiple_sources_and_discontinuous_evidence) ... ok
+test_nested_collections_are_immutable (test_distillation.DistillationTests.test_nested_collections_are_immutable) ... ok
+test_points_require_evidence (test_distillation.DistillationTests.test_points_require_evidence) ... ok
+test_structure_does_not_establish_semantic_support (test_distillation.DistillationTests.test_structure_does_not_establish_semantic_support) ... ok
+test_unknown_contract_version_rejected (test_distillation.DistillationTests.test_unknown_contract_version_rejected) ... ok
+test_conditional_clause_boundary (test_front_door.FrontDoorTests.test_conditional_clause_boundary) ... ok
+test_configuration_is_immutable_and_explicit (test_front_door.FrontDoorTests.test_configuration_is_immutable_and_explicit) ... ok
+test_flags_and_identifiers_remain_intact (test_front_door.FrontDoorTests.test_flags_and_identifiers_remain_intact) ... ok
+test_known_names_are_per_client (test_front_door.FrontDoorTests.test_known_names_are_per_client) ... ok
+test_no_application_imports (test_front_door.FrontDoorTests.test_no_application_imports) ... ok
+test_pause_removal_keeps_original_offsets (test_front_door.FrontDoorTests.test_pause_removal_keeps_original_offsets) ... ok
+test_quoted_instructions_are_not_rewritten (test_front_door.FrontDoorTests.test_quoted_instructions_are_not_rewritten) ... ok
+test_source_compatibility (test_front_door.FrontDoorTests.test_source_compatibility) ... ok
+test_unicode_whitespace_is_announced (test_front_door.FrontDoorTests.test_unicode_whitespace_is_announced) ... ok
+test_invalid_client_contracts_rejected (test_pipeline.ContractTests.test_invalid_client_contracts_rejected) ... ok
+test_invalid_maps_and_silent_changes_rejected (test_pipeline.ContractTests.test_invalid_maps_and_silent_changes_rejected) ... ok
+test_route_requires_reason_and_consistent_destination (test_pipeline.ContractTests.test_route_requires_reason_and_consistent_destination) ... ok
+test_identity_preserves_unicode_and_empty_text (test_pipeline.PipelineTests.test_identity_preserves_unicode_and_empty_text) ... ok
+test_original_request_cannot_be_replaced (test_pipeline.PipelineTests.test_original_request_cannot_be_replaced) ... ok
+test_policy_decision_keeps_original_route (test_pipeline.PipelineTests.test_policy_decision_keeps_original_route) ... ok
+test_reader_failure_stops_later_stages (test_pipeline.PipelineTests.test_reader_failure_stops_later_stages) ... ok
+test_stage_order_and_intermediate_results_for_two_clients (test_pipeline.PipelineTests.test_stage_order_and_intermediate_results_for_two_clients) ... ok
+test_undeclared_capability_rejected_from_router_or_policy (test_pipeline.PipelineTests.test_undeclared_capability_rejected_from_router_or_policy) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.723s
+
+OK

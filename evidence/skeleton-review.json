@@ -1,0 +1,44 @@
+{
+  "scope": "Kobra skeleton; front door through ROUTE; no Gorgon integration",
+  "review": {
+    "reviewer": "implementing agent",
+    "outcome": "Reviewed contracts, coordinator, exports, fixture, tests and README. No application imports, persistent stores, tool dispatch or default model calls. Route capabilities validated before and after policy. Earlier clock extraction retained separately.",
+    "limits": [
+      "Provisional API; linguistic READ/RESOLVE schemas pending",
+      "Stages and providers are trusted, not sandboxed",
+      "Generic stage results may be mutable; preservation is a documented stage responsibility",
+      "Fixture demonstrates wiring only"
+    ]
+  },
+  "checks": [
+    {
+      "command": ".venv/bin/python -m pip install --no-deps .",
+      "exit_status": 0
+    },
+    {
+      "command": ".venv/bin/python -I -m unittest discover -s tests -v",
+      "exit_status": 0,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": ".venv/bin/python -I examples/minimal_client.py",
+      "exit_status": 0
+    },
+    {
+      "check": "Installed fixture executed with planner, engines, orchestrator and executor imports blocked",
+      "exit_status": 0
+    },
+    {
+      "check": "Ruff lint on five new/modified skeleton Python files",
+      "exit_status": 0
+    },
+    {
+      "command": "ruff format --check src tests examples",
+      "exit_status": 0,
+      "files": 8
+    }
+  ],
+  "git": "Local only; not committed or pushed"
+}

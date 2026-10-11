@@ -1,0 +1,365 @@
+Oct 09 11:54:00 tinshemet ollama[1277]: common_memory_breakdown_print: | memory breakdown [MiB]          | total   free    self   model   context   compute    unaccounted |
+Oct 09 11:54:00 tinshemet ollama[1277]: common_memory_breakdown_print: |   - CUDA0 (RTX 3060 Laptop GPU) |  5804 = 5322 + (4442 =  3506 +     800 +     135) +       -3960 |
+Oct 09 11:54:00 tinshemet ollama[1277]: common_memory_breakdown_print: |   - Host                        |                 1426 =  1178 +     224 +      24                |
+Oct 09 11:54:00 tinshemet ollama[1277]: common_params_fit_impl: memory for test allocation by device:
+Oct 09 11:54:00 tinshemet ollama[1277]: common_params_fit_impl: id=0, n_layer=26, n_part= 0, overflow_type=4, mem=  4442 MiB
+Oct 09 11:54:00 tinshemet ollama[1277]: common_params_fit_impl: set ngl_per_device_high[0].n_layer=26
+Oct 09 11:54:00 tinshemet ollama[1277]: common_params_fit_impl:   - CUDA0 (NVIDIA GeForce RTX 3060 Laptop GPU): 25 layers,   4293 MiB used,   1028 MiB free
+Oct 09 11:54:00 tinshemet ollama[1277]: common_fit_params: successfully fit params to free device memory
+Oct 09 11:54:00 tinshemet ollama[1277]: common_fit_params: fitting params to free memory took 1.42 seconds
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: loaded meta data with 29 key-value pairs and 292 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29 (version GGUF V3 (latest))
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   0:                       general.architecture str              = llama
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   1:                               general.type str              = model
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   2:                               general.name str              = Meta Llama 3.1 8B Instruct
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   3:                           general.finetune str              = Instruct
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   4:                           general.basename str              = Meta-Llama-3.1
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   5:                         general.size_label str              = 8B
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   6:                            general.license str              = llama3.1
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   7:                               general.tags arr[str,6]       = ["facebook", "meta", "pytorch", "llam...
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   8:                          general.languages arr[str,8]       = ["en", "de", "fr", "it", "pt", "hi", ...
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv   9:                          llama.block_count u32              = 32
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  10:                       llama.context_length u32              = 131072
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  11:                     llama.embedding_length u32              = 4096
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  12:                  llama.feed_forward_length u32              = 14336
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  13:                 llama.attention.head_count u32              = 32
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  14:              llama.attention.head_count_kv u32              = 8
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  15:                       llama.rope.freq_base f32              = 500000.000000
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  16:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  17:                          general.file_type u32              = 15
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  18:                           llama.vocab_size u32              = 128256
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  19:                 llama.rope.dimension_count u32              = 128
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  20:                       tokenizer.ggml.model str              = gpt2
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  21:                         tokenizer.ggml.pre str              = llama-bpe
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  22:                      tokenizer.ggml.tokens arr[str,128256]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  23:                  tokenizer.ggml.token_type arr[i32,128256]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  24:                      tokenizer.ggml.merges arr[str,280147]  = ["Ġ Ġ", "Ġ ĠĠĠ", "ĠĠ ĠĠ", "...
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  25:                tokenizer.ggml.bos_token_id u32              = 128000
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  26:                tokenizer.ggml.eos_token_id u32              = 128009
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  27:                    tokenizer.chat_template str              = {{- bos_token }}\n{%- if custom_tools ...
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - kv  28:               general.quantization_version u32              = 2
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - type  f32:   66 tensors
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - type q4_K:  193 tensors
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_model_loader: - type q6_K:   33 tensors
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: file format = GGUF V3 (latest)
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: file type   = Q4_K - Medium
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: file size   = 4.58 GiB (4.89 BPW)
+Oct 09 11:54:00 tinshemet ollama[1277]: llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 3060 Laptop GPU) (0000:01:00.0) - 5322 MiB free
+Oct 09 11:54:00 tinshemet ollama[1277]: load: 0 unused tokens
+Oct 09 11:54:00 tinshemet ollama[1277]: load: printing all EOG tokens:
+Oct 09 11:54:00 tinshemet ollama[1277]: load:   - 128001 ('<|end_of_text|>')
+Oct 09 11:54:00 tinshemet ollama[1277]: load:   - 128008 ('<|eom_id|>')
+Oct 09 11:54:00 tinshemet ollama[1277]: load:   - 128009 ('<|eot_id|>')
+Oct 09 11:54:00 tinshemet ollama[1277]: load: special tokens cache size = 256
+Oct 09 11:54:00 tinshemet ollama[1277]: load: token to piece cache size = 0.7999 MB
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: arch                  = llama
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: vocab_only            = 0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: no_alloc              = 0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_ctx_train           = 131072
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_embd                = 4096
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_embd_inp            = 4096
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_layer               = 32
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_head                = 32
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_head_kv             = 8
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_rot                 = 128
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_swa                 = 0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: is_swa_any            = 0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_embd_head_k         = 128
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_embd_head_v         = 128
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_gqa                 = 4
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_embd_k_gqa          = 1024
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_embd_v_gqa          = 1024
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: f_norm_eps            = 0.0e+00
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: f_norm_rms_eps        = 1.0e-05
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: f_clamp_kqv           = 0.0e+00
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: f_max_alibi_bias      = 0.0e+00
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: f_logit_scale         = 0.0e+00
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: f_attn_scale          = 0.0e+00
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: f_attn_value_scale    = 0.0000
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_ff                  = 14336
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_expert              = 0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_expert_used         = 0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_expert_groups       = 0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_group_used          = 0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: causal attn           = 1
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: pooling type          = -1
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: rope type             = 0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: rope scaling          = linear
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: freq_base_train       = 500000.0
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: freq_scale_train      = 1
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_ctx_orig_yarn       = 131072
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: rope_yarn_log_mul     = 0.0000
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: rope_finetuned        = unknown
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: model type            = 8B
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: model params          = 8.03 B
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: general.name          = Meta Llama 3.1 8B Instruct
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: vocab type            = BPE
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_vocab               = 128256
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: n_merges              = 280147
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: BOS token             = 128000 '<|begin_of_text|>'
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: EOS token             = 128009 '<|eot_id|>'
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: EOT token             = 128009 '<|eot_id|>'
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: EOM token             = 128008 '<|eom_id|>'
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: LF token              = 198 'Ċ'
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: EOG token             = 128001 '<|end_of_text|>'
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: EOG token             = 128008 '<|eom_id|>'
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: EOG token             = 128009 '<|eot_id|>'
+Oct 09 11:54:00 tinshemet ollama[1277]: print_info: max token length      = 256
+Oct 09 11:54:00 tinshemet ollama[1277]: load_tensors: loading model tensors, this can take a while... (mmap = true, direct_io = false)
+Oct 09 11:54:04 tinshemet ollama[1277]: load_tensors: offloading output layer to GPU
+Oct 09 11:54:04 tinshemet ollama[1277]: load_tensors: offloading 24 repeating layers to GPU
+Oct 09 11:54:04 tinshemet ollama[1277]: load_tensors: offloaded 25/33 layers to GPU
+Oct 09 11:54:04 tinshemet ollama[1277]: load_tensors:   CPU_Mapped model buffer size =  1295.41 MiB
+Oct 09 11:54:04 tinshemet ollama[1277]: load_tensors:        CUDA0 model buffer size =  3389.90 MiB
+Oct 09 11:54:05 tinshemet ollama[1277]: .......................................................................................
+Oct 09 11:54:05 tinshemet ollama[1277]: common_init_result: added <|end_of_text|> logit bias = -inf
+Oct 09 11:54:05 tinshemet ollama[1277]: common_init_result: added <|eom_id|> logit bias = -inf
+Oct 09 11:54:05 tinshemet ollama[1277]: common_init_result: added <|eot_id|> logit bias = -inf
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: constructing llama_context
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: n_seq_max     = 1
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: n_ctx         = 8192
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: n_ctx_seq     = 8192
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: n_batch       = 512
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: n_ubatch      = 512
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: causal_attn   = 1
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: flash_attn    = auto
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: kv_unified    = false
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: freq_base     = 500000.0
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: freq_scale    = 1
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: n_rs_seq      = 0
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: n_outputs_max = 1
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context: n_ctx_seq (8192) < n_ctx_train (131072) -- the full capacity of the model will not be utilized
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_context:  CUDA_Host  output buffer size =     0.49 MiB
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_kv_cache:        CPU KV buffer size =   256.00 MiB
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_kv_cache:      CUDA0 KV buffer size =   768.00 MiB
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_kv_cache: size = 1024.00 MiB (  8192 cells,  32 layers,  1/1 seqs), K (f16):  512.00 MiB, V (f16):  512.00 MiB
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_kv_cache: attn_rot_k = 0, n_embd_head_k_all = 128
+Oct 09 11:54:05 tinshemet ollama[1277]: llama_kv_cache: attn_rot_v = 0, n_embd_head_k_all = 128
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve: reserving ...
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve: Flash Attention was auto, set to enabled
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve: resolving fused Gated Delta Net support:
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve: fused Gated Delta Net (autoregressive) enabled
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve: fused Gated Delta Net (chunked) enabled
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve:      CUDA0 compute buffer size =   135.50 MiB
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve:  CUDA_Host compute buffer size =    24.01 MiB
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve: graph nodes  = 998
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve: graph splits = 99 (with bs=512), 2 (with bs=1)
+Oct 09 11:54:05 tinshemet ollama[1277]: sched_reserve: reserve took 8.78 ms, sched copies = 1
+Oct 09 11:54:05 tinshemet ollama[1277]: common_init_from_params: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+Oct 09 11:54:05 tinshemet ollama[1277]: srv    load_model: initializing slots, n_slots = 1
+Oct 09 11:54:06 tinshemet ollama[1277]: common_speculative_init: no implementations specified for speculative decoding
+Oct 09 11:54:06 tinshemet ollama[1277]: slot   load_model: id  0 | task -1 | new slot, n_ctx = 8192
+Oct 09 11:54:06 tinshemet ollama[1277]: srv    load_model: prompt cache is enabled, size limit: 8192 MiB
+Oct 09 11:54:06 tinshemet ollama[1277]: srv    load_model: use `--cache-ram 0` to disable the prompt cache
+Oct 09 11:54:06 tinshemet ollama[1277]: srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391
+Oct 09 11:54:06 tinshemet ollama[1277]: srv    load_model: context checkpoints enabled, max = 32, min spacing = 256
+Oct 09 11:54:06 tinshemet ollama[1277]: srv          init: --cache-idle-slots requires --kv-unified, disabling
+Oct 09 11:54:06 tinshemet ollama[1277]: init: chat template, example_format: '<|im_start|>system
+Oct 09 11:54:06 tinshemet ollama[1277]: You are a helpful assistant<|im_end|>
+Oct 09 11:54:06 tinshemet ollama[1277]: <|im_start|>user
+Oct 09 11:54:06 tinshemet ollama[1277]: Hello<|im_end|>
+Oct 09 11:54:06 tinshemet ollama[1277]: <|im_start|>assistant
+Oct 09 11:54:06 tinshemet ollama[1277]: Hi there<|im_end|>
+Oct 09 11:54:06 tinshemet ollama[1277]: <|im_start|>user
+Oct 09 11:54:06 tinshemet ollama[1277]: How are you?<|im_end|>
+Oct 09 11:54:06 tinshemet ollama[1277]: <|im_start|>assistant
+Oct 09 11:54:06 tinshemet ollama[1277]: '
+Oct 09 11:54:06 tinshemet ollama[1277]: srv          init: init: chat template, thinking = 0
+Oct 09 11:54:06 tinshemet ollama[1277]: srv  llama_server: model loaded
+Oct 09 11:54:06 tinshemet ollama[1277]: srv  llama_server: server is listening on http://127.0.0.1:33221
+Oct 09 11:54:06 tinshemet ollama[1277]: srv  update_slots: all slots are idle
+Oct 09 11:54:06 tinshemet ollama[1277]: time=2026-10-09T11:54:06.169+03:00 level=INFO source=llama_server.go:1198 msg="llama-server started in 7.55 seconds"
+Oct 09 11:54:06 tinshemet ollama[1277]: time=2026-10-09T11:54:06.204+03:00 level=INFO source=images.go:354 msg="template selection" model=registry.ollama.ai/library/llama3.1:8b selected=go_template renderer="" parser="" go_template="[completion tools]" chat_template="[tools completion]" harmony=null renderer_parser=null
+Oct 09 11:54:06 tinshemet ollama[1277]: time=2026-10-09T11:54:06.204+03:00 level=INFO source=sched.go:729 msg="loaded runners" count=1
+Oct 09 11:54:06 tinshemet ollama[1277]: time=2026-10-09T11:54:06.204+03:00 level=INFO source=llama_server.go:1131 msg="waiting for llama-server to start responding"
+Oct 09 11:54:06 tinshemet ollama[1277]: time=2026-10-09T11:54:06.204+03:00 level=INFO source=llama_server.go:1198 msg="llama-server started in 7.58 seconds"
+Oct 09 11:54:06 tinshemet ollama[1277]: srv  log_server_r: done request: POST /tokenize 127.0.0.1 200
+Oct 09 11:54:06 tinshemet ollama[1277]: slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+Oct 09 11:54:06 tinshemet ollama[1277]: srv  get_availabl: updating prompt cache
+Oct 09 11:54:06 tinshemet ollama[1277]: srv          load:  - looking for better prompt, base f_keep = -1.000, sim = 0.000
+Oct 09 11:54:06 tinshemet ollama[1277]: srv        update:  - cache state: 0 prompts, 0.000 MiB (limits: 8192.000 MiB, 8192 tokens, 8589934592 est)
+Oct 09 11:54:06 tinshemet ollama[1277]: srv  get_availabl: prompt cache update took 0.01 ms
+Oct 09 11:54:06 tinshemet ollama[1277]: parse: error parsing grammar: number of repetitions exceeds sane defaults, please reduce the number of repetitions
+Oct 09 11:54:06 tinshemet ollama[1277]: char ::= [^"\\\x7F\x00-\x1F] | [\\] (["\\bfnrt] | "u" [0-9a-fA-F]{4})
+Oct 09 11:54:06 tinshemet ollama[1277]: edges ::= "[" space (edges-item ("," space edges-item){0,2047})? "]" space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item ::= "{" space edges-item-source-kv "," space edges-item-target-kv "," space edges-item-relation-kv "," space edges-item-status-kv "," space edges-item-evidence-kv "}" space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-evidence ::= "[" space edges-item-evidence-item ("," space edges-item-evidence-item){0,15} "]" space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-evidence-item ::= "{" space edges-item-evidence-item-quote-kv "," space edges-item-evidence-item-occurrence-kv "}" space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-evidence-item-occurrence ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | ([1-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9])) | ([1-8] [0-9]{3} | [9] ([0-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9]))) | ([1] [0-9]{4} | [2] "0000")) space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-evidence-item-occurrence-kv ::= "\"occurrence\"" space ":" space edges-item-evidence-item-occurrence
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-evidence-item-quote ::= "\"" char{1,20000} "\"" space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-evidence-item-quote-kv ::= "\"quote\"" space ":" space edges-item-evidence-item-quote
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-evidence-kv ::= "\"evidence\"" space ":" space edges-item-evidence
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-relation ::= ("\"predicate\"" | "\"agent\"" | "\"patient\"" | "\"recipient\"" | "\"qualifies\"" | "\"negates\"" | "\"condition\"" | "\"exception\"" | "\"quantity\"" | "\"time\"" | "\"modality\"" | "\"attribution\"" | "\"quoted_content\"" | "\"refers_to\"" | "\"and\"" | "\"or\"" | "\"corrects\"" | "\"unknown\"") space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-relation-kv ::= "\"relation\"" space ":" space edges-item-relation
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-source ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | "1" ([0-1] [0-9] | [2] [0-7])) space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-source-kv ::= "\"source\"" space ":" space edges-item-source
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-status ::= ("\"proposed\"" | "\"uncertain\"") space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-status-kv ::= "\"status\"" space ":" space edges-item-status
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-target ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | "1" ([0-1] [0-9] | [2] [0-7])) space
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-item-target-kv ::= "\"target\"" space ":" space edges-item-target
+Oct 09 11:54:06 tinshemet ollama[1277]: edges-kv ::= "\"edges\"" space ":" space edges
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes ::= "[" space (nodes-item ("," space nodes-item){0,127})? "]" space
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item ::= "{" space nodes-item-kind-kv "," space nodes-item-evidence-kv "," space nodes-item-uncertainty-kv "}" space
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-evidence ::= "[" space nodes-item-evidence-item ("," space nodes-item-evidence-item){0,15} "]" space
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-evidence-item ::= "{" space nodes-item-evidence-item-quote-kv "," space nodes-item-evidence-item-occurrence-kv "}" space
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-evidence-item-occurrence ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | ([1-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9])) | ([1-8] [0-9]{3} | [9] ([0-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9]))) | ([1] [0-9]{4} | [2] "0000")) space
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-evidence-item-occurrence-kv ::= "\"occurrence\"" space ":" space nodes-item-evidence-item-occurrence
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-evidence-item-quote ::= "\"" char{1,20000} "\"" space
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-evidence-item-quote-kv ::= "\"quote\"" space ":" space nodes-item-evidence-item-quote
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-evidence-kv ::= "\"evidence\"" space ":" space nodes-item-evidence
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-kind ::= ("\"request\"" | "\"question\"" | "\"assertion\"" | "\"predicate\"" | "\"participant\"" | "\"negation\"" | "\"condition\"" | "\"exception\"" | "\"quantity\"" | "\"time\"" | "\"modality\"" | "\"attribution\"" | "\"quotation\"" | "\"reference\"" | "\"unrepresented\"") space
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-kind-kv ::= "\"kind\"" space ":" space nodes-item-kind
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-uncertainty ::= "[" space (nodes-item-uncertainty-item ("," space nodes-item-uncertainty-item){0,15})? "]" space
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-uncertainty-item ::= "\"" char{1,4000} "\"" space
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-item-uncertainty-kv ::= "\"uncertainty\"" space ":" space nodes-item-uncertainty
+Oct 09 11:54:06 tinshemet ollama[1277]: nodes-kv ::= "\"nodes\"" space ":" space nodes
+Oct 09 11:54:06 tinshemet ollama[1277]: root ::= "{" space nodes-kv "," space edges-kv "}" space
+Oct 09 11:54:06 tinshemet ollama[1277]: space ::= | " " | "\n"{1,2} [ \t]{0,20}
+Oct 09 11:54:06 tinshemet ollama[1277]: failed to parse grammar
+Oct 09 11:54:06 tinshemet ollama[1277]: slot launch_slot_: id  0 | task -1 | sampler chain: logits -> penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist
+Oct 09 11:54:06 tinshemet ollama[1277]: slot launch_slot_: id  0 | task -1 | sampler params:
+Oct 09 11:54:06 tinshemet ollama[1277]:         repeat_last_n = 64, repeat_penalty = 1.100, frequency_penalty = 0.000, presence_penalty = 0.000
+Oct 09 11:54:06 tinshemet ollama[1277]:         dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 8192
+Oct 09 11:54:06 tinshemet ollama[1277]:         top_k = 40, top_p = 0.900, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+Oct 09 11:54:06 tinshemet ollama[1277]:         mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+Oct 09 11:54:06 tinshemet ollama[1277]: slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+Oct 09 11:54:06 tinshemet ollama[1277]: slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 315
+Oct 09 11:54:06 tinshemet ollama[1277]: slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+Oct 09 11:54:06 tinshemet ollama[1277]: slot init_sampler: id  0 | task 0 | init sampler, took 0.05 ms, tokens: text = 315, total = 315
+Oct 09 11:54:06 tinshemet ollama[1277]: srv  log_server_r: done request: POST /completion 127.0.0.1 200
+Oct 09 11:54:10 tinshemet ollama[1277]: slot print_timing: id  0 | task 0 | n_decoded =    100, tg =  23.90 t/s
+Oct 09 11:54:13 tinshemet ollama[1277]: slot print_timing: id  0 | task 0 | n_decoded =    171, tg =  23.77 t/s
+Oct 09 11:54:16 tinshemet ollama[1277]: slot print_timing: id  0 | task 0 | n_decoded =    241, tg =  23.60 t/s
+Oct 09 11:54:19 tinshemet ollama[1277]: slot print_timing: id  0 | task 0 | n_decoded =    310, tg =  23.44 t/s
+Oct 09 11:54:20 tinshemet ollama[1277]: slot print_timing: id  0 | task 0 | prompt eval time =     480.32 ms /   315 tokens (    1.52 ms per token,   655.82 tokens per second)
+Oct 09 11:54:20 tinshemet ollama[1277]: slot print_timing: id  0 | task 0 |        eval time =   13447.49 ms /   315 tokens (   42.69 ms per token,    23.42 tokens per second)
+Oct 09 11:54:20 tinshemet ollama[1277]: slot print_timing: id  0 | task 0 |       total time =   13927.81 ms /   630 tokens
+Oct 09 11:54:20 tinshemet ollama[1277]: slot print_timing: id  0 | task 0 |    graphs reused =        313
+Oct 09 11:54:20 tinshemet ollama[1277]: slot      release: id  0 | task 0 | stop processing: n_tokens = 629, truncated = 0
+Oct 09 11:54:20 tinshemet ollama[1277]: srv  update_slots: all slots are idle
+Oct 09 11:54:20 tinshemet ollama[1277]: [GIN] 2026/10/09 - 11:54:20 | 200 | 22.500587743s |       127.0.0.1 | POST     "/api/chat"
+Oct 09 11:54:20 tinshemet ollama[1277]: srv  log_server_r: done request: POST /tokenize 127.0.0.1 200
+Oct 09 11:54:20 tinshemet ollama[1277]: slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 0.956 (> 0.100 thold), f_keep = 0.483
+Oct 09 11:54:20 tinshemet ollama[1277]: srv  get_availabl: updating prompt cache
+Oct 09 11:54:20 tinshemet ollama[1277]: srv   prompt_save:  - saving prompt with length 629, total state size = 78.633 MiB (draft: 0.000 MiB)
+Oct 09 11:54:20 tinshemet ollama[1277]: srv          load:  - looking for better prompt, base f_keep = 0.483, sim = 0.956
+Oct 09 11:54:20 tinshemet ollama[1277]: srv        update:  - cache state: 1 prompts, 78.633 MiB (limits: 8192.000 MiB, 8192 tokens, 65529 est)
+Oct 09 11:54:20 tinshemet ollama[1277]: srv        update:    - prompt 0x3f621f60:     629 tokens, checkpoints:  0,    78.633 MiB
+Oct 09 11:54:20 tinshemet ollama[1277]: srv  get_availabl: prompt cache update took 38.06 ms
+Oct 09 11:54:20 tinshemet ollama[1277]: parse: error parsing grammar: number of repetitions exceeds sane defaults, please reduce the number of repetitions
+Oct 09 11:54:20 tinshemet ollama[1277]: char ::= [^"\\\x7F\x00-\x1F] | [\\] (["\\bfnrt] | "u" [0-9a-fA-F]{4})
+Oct 09 11:54:20 tinshemet ollama[1277]: edges ::= "[" space (edges-item ("," space edges-item){0,2047})? "]" space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item ::= "{" space edges-item-source-kv "," space edges-item-target-kv "," space edges-item-relation-kv "," space edges-item-status-kv "," space edges-item-evidence-kv "}" space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-evidence ::= "[" space edges-item-evidence-item ("," space edges-item-evidence-item){0,15} "]" space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-evidence-item ::= "{" space edges-item-evidence-item-quote-kv "," space edges-item-evidence-item-occurrence-kv "}" space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-evidence-item-occurrence ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | ([1-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9])) | ([1-8] [0-9]{3} | [9] ([0-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9]))) | ([1] [0-9]{4} | [2] "0000")) space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-evidence-item-occurrence-kv ::= "\"occurrence\"" space ":" space edges-item-evidence-item-occurrence
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-evidence-item-quote ::= "\"" char{1,20000} "\"" space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-evidence-item-quote-kv ::= "\"quote\"" space ":" space edges-item-evidence-item-quote
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-evidence-kv ::= "\"evidence\"" space ":" space edges-item-evidence
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-relation ::= ("\"predicate\"" | "\"agent\"" | "\"patient\"" | "\"recipient\"" | "\"qualifies\"" | "\"negates\"" | "\"condition\"" | "\"exception\"" | "\"quantity\"" | "\"time\"" | "\"modality\"" | "\"attribution\"" | "\"quoted_content\"" | "\"refers_to\"" | "\"and\"" | "\"or\"" | "\"corrects\"" | "\"unknown\"") space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-relation-kv ::= "\"relation\"" space ":" space edges-item-relation
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-source ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | "1" ([0-1] [0-9] | [2] [0-7])) space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-source-kv ::= "\"source\"" space ":" space edges-item-source
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-status ::= ("\"proposed\"" | "\"uncertain\"") space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-status-kv ::= "\"status\"" space ":" space edges-item-status
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-target ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | "1" ([0-1] [0-9] | [2] [0-7])) space
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-item-target-kv ::= "\"target\"" space ":" space edges-item-target
+Oct 09 11:54:20 tinshemet ollama[1277]: edges-kv ::= "\"edges\"" space ":" space edges
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes ::= "[" space (nodes-item ("," space nodes-item){0,127})? "]" space
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item ::= "{" space nodes-item-kind-kv "," space nodes-item-evidence-kv "," space nodes-item-uncertainty-kv "}" space
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-evidence ::= "[" space nodes-item-evidence-item ("," space nodes-item-evidence-item){0,15} "]" space
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-evidence-item ::= "{" space nodes-item-evidence-item-quote-kv "," space nodes-item-evidence-item-occurrence-kv "}" space
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-evidence-item-occurrence ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | ([1-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9])) | ([1-8] [0-9]{3} | [9] ([0-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9]))) | ([1] [0-9]{4} | [2] "0000")) space
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-evidence-item-occurrence-kv ::= "\"occurrence\"" space ":" space nodes-item-evidence-item-occurrence
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-evidence-item-quote ::= "\"" char{1,20000} "\"" space
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-evidence-item-quote-kv ::= "\"quote\"" space ":" space nodes-item-evidence-item-quote
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-evidence-kv ::= "\"evidence\"" space ":" space nodes-item-evidence
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-kind ::= ("\"request\"" | "\"question\"" | "\"assertion\"" | "\"predicate\"" | "\"participant\"" | "\"negation\"" | "\"condition\"" | "\"exception\"" | "\"quantity\"" | "\"time\"" | "\"modality\"" | "\"attribution\"" | "\"quotation\"" | "\"reference\"" | "\"unrepresented\"") space
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-kind-kv ::= "\"kind\"" space ":" space nodes-item-kind
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-uncertainty ::= "[" space (nodes-item-uncertainty-item ("," space nodes-item-uncertainty-item){0,15})? "]" space
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-uncertainty-item ::= "\"" char{1,4000} "\"" space
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-item-uncertainty-kv ::= "\"uncertainty\"" space ":" space nodes-item-uncertainty
+Oct 09 11:54:20 tinshemet ollama[1277]: nodes-kv ::= "\"nodes\"" space ":" space nodes
+Oct 09 11:54:20 tinshemet ollama[1277]: root ::= "{" space nodes-kv "," space edges-kv "}" space
+Oct 09 11:54:20 tinshemet ollama[1277]: space ::= | " " | "\n"{1,2} [ \t]{0,20}
+Oct 09 11:54:20 tinshemet ollama[1277]: failed to parse grammar
+Oct 09 11:54:20 tinshemet ollama[1277]: slot launch_slot_: id  0 | task -1 | sampler chain: logits -> penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist
+Oct 09 11:54:20 tinshemet ollama[1277]: slot launch_slot_: id  0 | task -1 | sampler params:
+Oct 09 11:54:20 tinshemet ollama[1277]:         repeat_last_n = 64, repeat_penalty = 1.100, frequency_penalty = 0.000, presence_penalty = 0.000
+Oct 09 11:54:20 tinshemet ollama[1277]:         dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 8192
+Oct 09 11:54:20 tinshemet ollama[1277]:         top_k = 40, top_p = 0.900, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+Oct 09 11:54:20 tinshemet ollama[1277]:         mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+Oct 09 11:54:20 tinshemet ollama[1277]: slot launch_slot_: id  0 | task 316 | processing task, is_child = 0
+Oct 09 11:54:20 tinshemet ollama[1277]: slot update_slots: id  0 | task 316 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 318
+Oct 09 11:54:20 tinshemet ollama[1277]: slot update_slots: id  0 | task 316 | cached n_tokens = 304, memory_seq_rm [304, end)
+Oct 09 11:54:20 tinshemet ollama[1277]: srv  log_server_r: done request: POST /completion 127.0.0.1 200
+Oct 09 11:54:20 tinshemet ollama[1277]: slot init_sampler: id  0 | task 316 | init sampler, took 0.05 ms, tokens: text = 318, total = 318
+Oct 09 11:54:24 tinshemet ollama[1277]: slot print_timing: id  0 | task 316 | n_decoded =    100, tg =  23.58 t/s
+Oct 09 11:54:25 tinshemet ollama[1277]: slot print_timing: id  0 | task 316 | prompt eval time =     221.63 ms /    14 tokens (   15.83 ms per token,    63.17 tokens per second)
+Oct 09 11:54:25 tinshemet ollama[1277]: slot print_timing: id  0 | task 316 |        eval time =    5249.95 ms /   124 tokens (   42.34 ms per token,    23.62 tokens per second)
+Oct 09 11:54:25 tinshemet ollama[1277]: slot print_timing: id  0 | task 316 |       total time =    5471.58 ms /   138 tokens
+Oct 09 11:54:25 tinshemet ollama[1277]: slot print_timing: id  0 | task 316 |    graphs reused =        435
+Oct 09 11:54:25 tinshemet ollama[1277]: slot      release: id  0 | task 316 | stop processing: n_tokens = 441, truncated = 0
+Oct 09 11:54:25 tinshemet ollama[1277]: srv  update_slots: all slots are idle
+Oct 09 11:54:25 tinshemet ollama[1277]: [GIN] 2026/10/09 - 11:54:25 | 200 |  5.689590263s |       127.0.0.1 | POST     "/api/chat"
+Oct 09 11:54:26 tinshemet ollama[1277]: srv  log_server_r: done request: POST /tokenize 127.0.0.1 200
+Oct 09 11:54:26 tinshemet ollama[1277]: slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, sim_best = 0.965 (> 0.100 thold), f_keep = 0.689
+Oct 09 11:54:26 tinshemet ollama[1277]: parse: error parsing grammar: number of repetitions exceeds sane defaults, please reduce the number of repetitions
+Oct 09 11:54:26 tinshemet ollama[1277]: char ::= [^"\\\x7F\x00-\x1F] | [\\] (["\\bfnrt] | "u" [0-9a-fA-F]{4})
+Oct 09 11:54:26 tinshemet ollama[1277]: edges ::= "[" space (edges-item ("," space edges-item){0,2047})? "]" space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item ::= "{" space edges-item-source-kv "," space edges-item-target-kv "," space edges-item-relation-kv "," space edges-item-status-kv "," space edges-item-evidence-kv "}" space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-evidence ::= "[" space edges-item-evidence-item ("," space edges-item-evidence-item){0,15} "]" space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-evidence-item ::= "{" space edges-item-evidence-item-quote-kv "," space edges-item-evidence-item-occurrence-kv "}" space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-evidence-item-occurrence ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | ([1-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9])) | ([1-8] [0-9]{3} | [9] ([0-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9]))) | ([1] [0-9]{4} | [2] "0000")) space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-evidence-item-occurrence-kv ::= "\"occurrence\"" space ":" space edges-item-evidence-item-occurrence
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-evidence-item-quote ::= "\"" char{1,20000} "\"" space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-evidence-item-quote-kv ::= "\"quote\"" space ":" space edges-item-evidence-item-quote
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-evidence-kv ::= "\"evidence\"" space ":" space edges-item-evidence
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-relation ::= ("\"predicate\"" | "\"agent\"" | "\"patient\"" | "\"recipient\"" | "\"qualifies\"" | "\"negates\"" | "\"condition\"" | "\"exception\"" | "\"quantity\"" | "\"time\"" | "\"modality\"" | "\"attribution\"" | "\"quoted_content\"" | "\"refers_to\"" | "\"and\"" | "\"or\"" | "\"corrects\"" | "\"unknown\"") space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-relation-kv ::= "\"relation\"" space ":" space edges-item-relation
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-source ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | "1" ([0-1] [0-9] | [2] [0-7])) space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-source-kv ::= "\"source\"" space ":" space edges-item-source
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-status ::= ("\"proposed\"" | "\"uncertain\"") space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-status-kv ::= "\"status\"" space ":" space edges-item-status
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-target ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | "1" ([0-1] [0-9] | [2] [0-7])) space
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-item-target-kv ::= "\"target\"" space ":" space edges-item-target
+Oct 09 11:54:26 tinshemet ollama[1277]: edges-kv ::= "\"edges\"" space ":" space edges
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes ::= "[" space (nodes-item ("," space nodes-item){0,127})? "]" space
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item ::= "{" space nodes-item-kind-kv "," space nodes-item-evidence-kv "," space nodes-item-uncertainty-kv "}" space
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-evidence ::= "[" space nodes-item-evidence-item ("," space nodes-item-evidence-item){0,15} "]" space
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-evidence-item ::= "{" space nodes-item-evidence-item-quote-kv "," space nodes-item-evidence-item-occurrence-kv "}" space
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-evidence-item-occurrence ::= ([0-9] | ([1-8] [0-9] | [9] [0-9]) | ([1-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9])) | ([1-8] [0-9]{3} | [9] ([0-8] [0-9]{2} | [9] ([0-8] [0-9] | [9] [0-9]))) | ([1] [0-9]{4} | [2] "0000")) space
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-evidence-item-occurrence-kv ::= "\"occurrence\"" space ":" space nodes-item-evidence-item-occurrence
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-evidence-item-quote ::= "\"" char{1,20000} "\"" space
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-evidence-item-quote-kv ::= "\"quote\"" space ":" space nodes-item-evidence-item-quote
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-evidence-kv ::= "\"evidence\"" space ":" space nodes-item-evidence
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-kind ::= ("\"request\"" | "\"question\"" | "\"assertion\"" | "\"predicate\"" | "\"participant\"" | "\"negation\"" | "\"condition\"" | "\"exception\"" | "\"quantity\"" | "\"time\"" | "\"modality\"" | "\"attribution\"" | "\"quotation\"" | "\"reference\"" | "\"unrepresented\"") space
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-kind-kv ::= "\"kind\"" space ":" space nodes-item-kind
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-uncertainty ::= "[" space (nodes-item-uncertainty-item ("," space nodes-item-uncertainty-item){0,15})? "]" space
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-uncertainty-item ::= "\"" char{1,4000} "\"" space
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-item-uncertainty-kv ::= "\"uncertainty\"" space ":" space nodes-item-uncertainty
+Oct 09 11:54:26 tinshemet ollama[1277]: nodes-kv ::= "\"nodes\"" space ":" space nodes
+Oct 09 11:54:26 tinshemet ollama[1277]: root ::= "{" space nodes-kv "," space edges-kv "}" space
+Oct 09 11:54:26 tinshemet ollama[1277]: space ::= | " " | "\n"{1,2} [ \t]{0,20}
+Oct 09 11:54:26 tinshemet ollama[1277]: failed to parse grammar
+Oct 09 11:54:26 tinshemet ollama[1277]: slot launch_slot_: id  0 | task -1 | sampler chain: logits -> penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist
+Oct 09 11:54:26 tinshemet ollama[1277]: slot launch_slot_: id  0 | task -1 | sampler params:
+Oct 09 11:54:26 tinshemet ollama[1277]:         repeat_last_n = 64, repeat_penalty = 1.100, frequency_penalty = 0.000, presence_penalty = 0.000
+Oct 09 11:54:26 tinshemet ollama[1277]:         dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 8192
+Oct 09 11:54:26 tinshemet ollama[1277]:         top_k = 40, top_p = 0.900, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+Oct 09 11:54:26 tinshemet ollama[1277]:         mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+Oct 09 11:54:26 tinshemet ollama[1277]: slot launch_slot_: id  0 | task 441 | processing task, is_child = 0
+Oct 09 11:54:26 tinshemet ollama[1277]: slot update_slots: id  0 | task 441 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 315
+Oct 09 11:54:26 tinshemet ollama[1277]: slot update_slots: id  0 | task 441 | cached n_tokens = 304, memory_seq_rm [304, end)
+Oct 09 11:54:26 tinshemet ollama[1277]: srv  log_server_r: done request: POST /completion 127.0.0.1 200
+Oct 09 11:54:26 tinshemet ollama[1277]: slot init_sampler: id  0 | task 441 | init sampler, took 0.06 ms, tokens: text = 315, total = 315
+Oct 09 11:54:30 tinshemet ollama[1277]: slot print_timing: id  0 | task 441 | n_decoded =    100, tg =  23.56 t/s
+Oct 09 11:54:30 tinshemet ollama[1277]: slot print_timing: id  0 | task 441 | prompt eval time =     166.41 ms /    11 tokens (   15.13 ms per token,    66.10 tokens per second)
+Oct 09 11:54:30 tinshemet ollama[1277]: slot print_timing: id  0 | task 441 |        eval time =    4546.85 ms /   107 tokens (   42.49 ms per token,    23.53 tokens per second)
+Oct 09 11:54:30 tinshemet ollama[1277]: slot print_timing: id  0 | task 441 |       total time =    4713.25 ms /   118 tokens
+Oct 09 11:54:30 tinshemet ollama[1277]: slot print_timing: id  0 | task 441 |    graphs reused =        540
+Oct 09 11:54:30 tinshemet ollama[1277]: slot      release: id  0 | task 441 | stop processing: n_tokens = 421, truncated = 0
+Oct 09 11:54:30 tinshemet ollama[1277]: srv  update_slots: all slots are idle
+Oct 09 11:54:30 tinshemet ollama[1277]: [GIN] 2026/10/09 - 11:54:30 | 200 |  4.900880597s |       127.0.0.1 | POST     "/api/chat"

@@ -1,0 +1,119 @@
+{
+  "state": "verified",
+  "kind": "synthetic transport probe, not semantic accuracy",
+  "exchange": {
+    "request": {
+      "model": "qwen3.5:4b",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Return only the JSON requested by the user. Be brief."
+        },
+        {
+          "role": "user",
+          "content": "Return {\"frames\":[{\"choice\":\"FORBIDDEN_RED\"}]} exactly."
+        }
+      ],
+      "format": {
+        "type": "object",
+        "properties": {
+          "frames": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "choice": {
+                  "type": "string",
+                  "enum": [
+                    "ALLOWED_BLUE"
+                  ]
+                },
+                "required_marker": {
+                  "type": "string",
+                  "enum": [
+                    "PRESENT"
+                  ]
+                }
+              },
+              "required": [
+                "choice",
+                "required_marker"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "frames"
+        ],
+        "additionalProperties": false
+      },
+      "stream": false,
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_predict": 2048,
+        "num_ctx": 8192,
+        "presence_penalty": 0,
+        "repeat_penalty": 1
+      },
+      "think": true
+    },
+    "validation_schema": {
+      "type": "object",
+      "properties": {
+        "frames": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "choice": {
+                "type": "string",
+                "enum": [
+                  "ALLOWED_BLUE"
+                ]
+              },
+              "required_marker": {
+                "type": "string",
+                "enum": [
+                  "PRESENT"
+                ]
+              }
+            },
+            "required": [
+              "choice",
+              "required_marker"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "frames"
+      ],
+      "additionalProperties": false
+    },
+    "schema_projection": "llama-repeat-compatible-1",
+    "response": {
+      "model": "qwen3.5:4b",
+      "created_at": "2026-10-09T16:14:44.206801636Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"frames\":[{\"choice\":\"ALLOWED_BLUE\",\"required_marker\":\"PRESENT\"}]}",
+        "thinking": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: \"Return {\"frames\":[{\"choice\":\"FORBIDDEN_RED\"}]} exactly.\"\n    *   Constraint: \"Return only the JSON requested by the user. Be brief.\"\n    *   Task: Output the specific JSON structure provided in the prompt.\n\n2.  **Verify the Content:**\n    *   The user wants a JSON object.\n    *   The structure is `{\"frames\":[{\"choice\":\"FORBIDDEN_RED\"}]}`.\n    *   The instruction says \"exactly\", implying no extra text, no markdown code blocks (unless implied by \"JSON\", but usually \"only the JSON\" means raw text), no explanations.\n\n3.  **Check for Safety/Policy:**\n    *   The content \"FORBIDDEN_RED\" looks like a specific token or value, possibly related to safety filters (e.g., \"Forbidden\" content). However, the user is asking me to return a specific JSON string as a task, not asking me to generate forbidden content.\n    *   The prompt itself is a formatting instruction.\n    *   There is no actual harmful content being requested, just a JSON structure with a specific string value.\n    *   I should follow the instruction to output the JSON.\n\n4.  **Format Output:**\n    *   Raw JSON string.\n    *   No markdown fencing (```json ... ```).\n    *   No introductory text.\n\n5.  **Final Decision:**\n    *   Output: `{\"frames\":[{\"choice\":\"FORBIDDEN_RED\"}]}`\n\n6.  **Double Check:**\n    *   Does it match the request \"exactly\"? Yes.\n    *   Is it brief? Yes.\n    *   Is it valid JSON? Yes.\n\n7.  **Execution:**\n    *   Generate the string.\n\n*Self-Correction on Markdown:*\nSometimes \"Return only the JSON\" implies raw text. However, often LLM interfaces render markdown. To be safe and strictly follow \"only the JSON\", I will output the raw text without markdown code blocks.\n\n*Wait, one more consideration:*\nThe value \"FORBIDDEN_RED\" might trigger a safety filter if interpreted as a command to bypass safety. But here it's just a string value in a JSON object. It's not a request to *do* anything forbidden. It's a data structure. I will proceed.\n\n*Final check on constraints:*\n\"Return only the JSON requested by the user.\"\n\"Be brief.\"\n\nOkay, I will output the JSON string directly.cw"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 8228452171,
+      "load_duration": 212744248,
+      "prompt_eval_count": 590,
+      "prompt_eval_duration": 281342000,
+      "eval_count": 22,
+      "eval_duration": 482682000
+    }
+  }
+}

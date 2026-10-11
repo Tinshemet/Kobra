@@ -1,0 +1,13 @@
+1/1 a: structurally_accepted
+======================================================================
+FAIL: test_nominal_groups_and_fronted_phrase_remain_selectable (test_candidate_read.ParserCandidateTests.test_nominal_groups_and_fronted_phrase_remain_selectable) (text='The server in the archive restarts.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tinshemet/Desktop/kobra/tests/test_candidate_read.py", line 148, in test_nominal_groups_and_fronted_phrase_remain_selectable
+    self.assertIn(phrase,inv.menus[slot])
+AssertionError: 'The server in the archive' not found in {'The server': Candidate(id='c0_10', text='The server', start=0, end=10, original_start=0, original_end=10), 'The server in the archive restarts': Candidate(id='c0_34', text='The server in the archive restarts', start=0, end=34, original_start=0, original_end=34), 'server': Candidate(id='c4_10', text='server', start=4, end=10, original_start=4, original_end=10), 'the archive restarts': Candidate(id='c14_34', text='the archive restarts', start=14, end=34, original_start=14, original_end=34), 'restarts': Candidate(id='c26_34', text='restarts', start=26, end=34, original_start=26, original_end=34)}
+
+----------------------------------------------------------------------
+Ran 115 tests in 1.366s
+
+FAILED (failures=1, skipped=1)

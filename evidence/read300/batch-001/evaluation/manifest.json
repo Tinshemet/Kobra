@@ -1,0 +1,119 @@
+{
+  "started_utc": "2026-10-09T13:34:07.805858+00:00",
+  "prompt_version": "read-arrangement-2",
+  "model": {
+    "server": {
+      "version": "0.30.7"
+    },
+    "model": {
+      "name": "llama3.1:8b",
+      "model": "llama3.1:8b",
+      "modified_at": "2026-06-08T14:19:24.578594934+03:00",
+      "size": 4920753328,
+      "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "8.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 131072,
+        "embedding_length": 4096
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    }
+  },
+  "source_hashes": {
+    "src/kobra/_english_lexicon.py": "ced88da2b05864b80bf8050ce12e6ece692b87008b1a9e575fdc0ba3b921f117",
+    "src/kobra/_noise_prints.py": "0e781354bd025637e47927287c85d8ed34f74d2d2e6640db522a4d5855167498",
+    "src/kobra/__init__.py": "56e9c82fe051076ce6de091c9ede2d819a432447f8492794cbc5f115462d742b",
+    "src/kobra/clock_vocabulary.py": "5061846e7a8ab9f293ee2f949034baaa19a1a15232d52a9022d0cdd02b888373",
+    "src/kobra/pipeline.py": "2d87f690b1eeca4048ca6eb985355d1b5a1902e060f8693999744d82f1fdc7a9",
+    "src/kobra/mocks.py": "93120388623ad14dffb226035f4050a7523038b3f066fc59f1b28e3affb0c4f9",
+    "src/kobra/front_door.py": "dca5caebf5504b7bd3ca674986c0a24f97d485946c8bc0c544ea65cddebad90d",
+    "src/kobra/distillation.py": "0f712a2189e8e4d3f9df02bbd32461ef7ea47c00ccc2cf3a402a72fbeb3faebe",
+    "src/kobra/read.py": "c79f9bef0111b4b19119148da5ae85aa1cdef346ba6b48f1e5ed90c06d9fbcf4",
+    "src/kobra/_english_front_door.py": "e8aac24af92d422009374a854947c6aac4ea0a483f4263be657d70284860eae7",
+    "src/kobra/selection_read.py": "b71059de32f84d0cd5aaebb7955f5e9fe26379be4ac5c940c892f1206b9f4088",
+    "src/kobra/structured_read.py": "5f581e524fa9930ecf6b417b1c47605395ec145708c79fd212916c035a0d73de",
+    "src/kobra/_read_surface.py": "cf09ef74ff9cfb6054fbbe8a223938c92d1b2deee9e989da6a77919ba8654d42",
+    "src/kobra/clock.py": "8ee12ed2b5d83fd0bd116ee37ab4563f542340e0ae0c5432867e03b20041ae6e",
+    "src/kobra/candidate_read.py": "8a964a2d58f44e4e5eec882d5beb206b2500a2a834944ed644e4efef360a403f",
+    "src/kobra/contracts.py": "8f0db23f34b4900eb21bc0c8662c1681fe9cf0a4f143a831c2135d72ed27ebd3",
+    "src/kobra/ollama.py": "cd29b75ee357bdab01e771ed544f596c36ff5770d29f5412f2be0bf317e3d7f1",
+    "tools/verify_extraction.py": "d1bf46cc61e0c7a4c18044aed1eb71c8230784271d972e6f3c9f2897779a215b",
+    "tools/serpent_slots.py": "a234e214571083d9dc97619f0e323200988950b8686869e9a74416f2300f4a81",
+    "tools/evaluate_selection.py": "f920c612d937d728e7e942b68b6c8576dd844a4f3a306b43ebdc75424507ad3f",
+    "tools/compare_read_runs.py": "213d2c9d2b71d471db64f208f86738a366c37c55c2269a17a278738993a5637e",
+    "tools/audit_arrangement.py": "7121c9c73abde52865d181868c9526ca6074d11f9bc8178ac2f91fc5d956e2ff",
+    "tools/generate_read300.py": "75b80525da1a0ecf58dfbdf291af366fd2453677d17ae104a7b41ba61932ad99",
+    "tools/audit_read300.py": "281f105037505522034de282b62d0e630549ee32afa06b55eddc1f332a7761e7",
+    "tools/build_selection_fixture.py": "5d2b3cb63107a2a748acbd35dbe05457f3aef4a2b6f99f28e8e21e00f117b1bf",
+    "tools/evaluate_arrangement.py": "ce2134e484e06aa8478cb4d11f97fccf8cbba183b05dc52c9084c5e56a6b6824",
+    "tools/capture_front_door_reference.py": "e8ff82acb4b53172f84ecd8b91bf310f8330ab6843b3259e2496c6103cf521c9",
+    "tools/read_serpent.py": "b57c2bcee86da334a847a3243a1ada550fe048d50b1f0bd273e48253d5a58cb8",
+    "tools/inventory.py": "74c5a44e168a849804115b992bf8a6bd6ecd87f2ab97b9562c32ab557a8a0869",
+    "tools/run_read300.py": "3e02e309b5dbf1cb5e7c46fd83345aee6b13eecf2bd64eec11a33449d6a6555a",
+    "benchmarks/read300/protocol.json": "ce0a66f7bbe2a3185dfbafb34915652388d21cc76f4c2a5fc3cb89b4bc456ac8"
+  },
+  "parser_hashes": {
+    "LICENSE": "3933c176979b68bc6d0bcc902c7d6c130f1d127f476f17ba5cdba8d99cfd0012",
+    "config.cfg": "65c545ca2da5bd4b87b22d4917318605360b37dee6ed6b18516a036f87319f79",
+    "tokenizer": "b014e8bba4958b120af2d0c1c63eabb7c00379f2bacaf10df7c5325efd2ea467",
+    "accuracy.json": "e7572d7f2f3c18e9921471f9d0b3424f8cf7f1a909ae484fa10b780a13f4c676",
+    "LICENSES_SOURCES": "20d9dfacd215112251f15341edd1a47b1f98bf393a212f10f194ffdc7ee98a90",
+    "README.md": "91b0ed1742ea0803034b4d769c4536e88d9d4da7808d833f2a804b6c54aae220",
+    "meta.json": "7456349002fa8cf31111051bd37fdbea67a1b7f7a0a60ce235466f98a6758125",
+    "parser/moves": "ec41318c32eb7f9e4d8f050b2e8466ee67954d2d3455c1aec73abf46c82dd67f",
+    "parser/cfg": "e2a240ef01f95e58f5dd4c9d6e90d61f597b8d998966570d3009dd81e8879780",
+    "parser/model": "e0098910535a863d430082ece57455d5fa071cd4ca3a0054e80582076c752b1e",
+    "ner/moves": "d82b13473ebd33e0396004dd22f00c71fe3c1251742bf1f7c4554f23fd3b0af4",
+    "ner/cfg": "a7172edadafba9f472e9ac0f2660eec04b6405e471be9e20267b79c67288d22d",
+    "ner/model": "cd93e9ca9126c69f1d10a1039ef67c3d9ec1223b44d079856705970f0f19ff4e",
+    "tagger/cfg": "d484c3d9391f37bf9c727aa2eb4c477a24cb103020f95e52dc37842818b50118",
+    "tagger/model": "1ec3d93f38cebe172f2b5c89d84be72856ce42c8f1a64f1699f1d98a771f36b7",
+    "attribute_ruler/patterns": "f8b97f7ebef9b8536bba5f0fc1e73af6183563e96e2325bcbb021b8c6dbc6683",
+    "senter/cfg": "2a4db4a729b6469da1f87d71cc7cd3ed2a73360cc85326821e850836c4671103",
+    "senter/model": "b69e7174a0b6307739adec3c8053ac45fdbad7171c4d3d8bfcd9713ecbc01f8c",
+    "vocab/lookups.bin": "fce9c883c56165f29573cc938c2a1c9d417ac61bd8f56b671dd5f7996de70682",
+    "vocab/vectors": "14772b683e726436d5948ad3fff2b43d036ef2ebbe3458aafed6004e05a40706",
+    "vocab/strings.json": "b1966d1f07a05b68576df07f43f40203b4e11124ad82cc839e8312ad8d7fdae7",
+    "vocab/key2row": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+    "vocab/vectors.cfg": "ff4359091952c8cd16f1f0482f5770fb82d1707368d5cca3c46aa501f552e3c5",
+    "tok2vec/cfg": "f8a5a26e3056eb6fb06deeb3dbccfd88ae74900200c98c70b5966bbb7ec9d4de",
+    "tok2vec/model": "e84fc06eb319c94d28e460fc334e292120b01f18baa5dc8b50c977459820a090",
+    "lemmatizer/lookups/lookups.bin": "eb64f40c0f8396d1762730c0ddf4dad2a52d138f5a389f71a1a1d088173b7737"
+  },
+  "parser": {
+    "name": "core_web_sm",
+    "version": "3.8.0",
+    "language": "en",
+    "pipeline": [
+      "tok2vec",
+      "tagger",
+      "parser",
+      "attribute_ruler",
+      "lemmatizer",
+      "ner"
+    ]
+  },
+  "fixture_sha256": "4491b6b5705c4349d24aeac0cde3e508f46485be8acc44651c7c148a61ab53e9",
+  "generator_manifest_sha256": "811e7e619cd010d0388b8e6d7e95984655073110819971891ce4288a7b3bfb39",
+  "source_cases_sha256": "5ca5520fb0dae9508c5439cfeb33ee50439d134e4b3cbab8bdfa2df8d93c8795",
+  "batch": 1,
+  "label": "evaluation",
+  "cases": 300,
+  "no_retries": true,
+  "gold_excluded_from_reader": true,
+  "fixes": {
+    "version": "read300-fix-ledger-1",
+    "fixes": [],
+    "tick_policy": "A matched rule is coverage only. Verified ticks require paired before/after correctness. Record regressions as well as gains. Fresh batch accuracy excludes all development replays."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "src/kobra/rule_assignment.py": "dd5a942a526efdb8f8f47cad179035bdff4672e273ed1bbb6252f3e0a9b8ebf3",
+  "tools/evaluate_rule_assignment.py": "6740db538336614238393cbf9ab3df6145fa52e70a7313689c9e93fdf0485a73",
+  "tools/evaluate_selection.py": "f920c612d937d728e7e942b68b6c8576dd844a4f3a306b43ebdc75424507ad3f",
+  "evidence/read300/batch-001/frozen-reference.json": "4491b6b5705c4349d24aeac0cde3e508f46485be8acc44651c7c148a61ab53e9",
+  "evidence/read300/batch-001/evaluation/cases.jsonl": "bfead24c57fed61a2276d6fb66390e01305d9c1ccc6ea50babb18dde62a15ac3",
+  "evidence/read300/batch-005/frozen-reference.json": "79ca77eb6de6ecdc3fa7050782277946cc730a98684e4284d9823c72b2b2e07d",
+  "evidence/read300/batch-005/evaluation/cases.jsonl": "f1ad3918d12c8d5a1e7776b2aaf2afbacbbbd295b18cdf96e3f4ab1cb7a07396"
+}

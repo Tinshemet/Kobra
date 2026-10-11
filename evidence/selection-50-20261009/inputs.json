@@ -1,0 +1,202 @@
+[
+  {
+    "id": "C001",
+    "text": "Open the window."
+  },
+  {
+    "id": "C002",
+    "text": "Delete the draft."
+  },
+  {
+    "id": "C003",
+    "text": "Send Maya the invoice."
+  },
+  {
+    "id": "C004",
+    "text": "Lena repaired the bicycle."
+  },
+  {
+    "id": "C005",
+    "text": "The alarm rang."
+  },
+  {
+    "id": "C006",
+    "text": "Did Maya send the invoice?"
+  },
+  {
+    "id": "C007",
+    "text": "Did you lock the cabinet?"
+  },
+  {
+    "id": "C008",
+    "text": "Is the server running?"
+  },
+  {
+    "id": "C009",
+    "text": "Who deleted the file?"
+  },
+  {
+    "id": "C010",
+    "text": "Has Lena checked the schedule?"
+  },
+  {
+    "id": "C011",
+    "text": "Do not erase the logs."
+  },
+  {
+    "id": "C012",
+    "text": "Never share the password."
+  },
+  {
+    "id": "C013",
+    "text": "Maya did not sign the contract."
+  },
+  {
+    "id": "C014",
+    "text": "Don't move the chair."
+  },
+  {
+    "id": "C015",
+    "text": "The lamp is not working."
+  },
+  {
+    "id": "C016",
+    "text": "Send the invoice if Maya approves."
+  },
+  {
+    "id": "C017",
+    "text": "Do not unlock the door unless I agree."
+  },
+  {
+    "id": "C018",
+    "text": "If it rains, close the windows."
+  },
+  {
+    "id": "C019",
+    "text": "Publish the article only if Lena agrees."
+  },
+  {
+    "id": "C020",
+    "text": "Restart the service unless the backup fails."
+  },
+  {
+    "id": "C021",
+    "text": "Send the package tomorrow."
+  },
+  {
+    "id": "C022",
+    "text": "Finish the report before noon."
+  },
+  {
+    "id": "C023",
+    "text": "After the meeting, call Maya."
+  },
+  {
+    "id": "C024",
+    "text": "Lena submitted the form yesterday."
+  },
+  {
+    "id": "C025",
+    "text": "Back up the files every Friday."
+  },
+  {
+    "id": "C026",
+    "text": "Print three copies."
+  },
+  {
+    "id": "C027",
+    "text": "Order exactly two batteries."
+  },
+  {
+    "id": "C028",
+    "text": "Maya bought five notebooks."
+  },
+  {
+    "id": "C029",
+    "text": "Keep at least four backups."
+  },
+  {
+    "id": "C030",
+    "text": "Do not send more than ten messages."
+  },
+  {
+    "id": "C031",
+    "text": "Maya says the backup failed."
+  },
+  {
+    "id": "C032",
+    "text": "According to Lena, the server crashed."
+  },
+  {
+    "id": "C033",
+    "text": "Omar reports that the parcel arrived."
+  },
+  {
+    "id": "C034",
+    "text": "Maya believes the alarm is broken."
+  },
+  {
+    "id": "C035",
+    "text": "According to Omar, Lena did not sign the form."
+  },
+  {
+    "id": "C036",
+    "text": "You may open the window."
+  },
+  {
+    "id": "C037",
+    "text": "Maya must submit the form."
+  },
+  {
+    "id": "C038",
+    "text": "The server might fail."
+  },
+  {
+    "id": "C039",
+    "text": "Lena can repair the bicycle."
+  },
+  {
+    "id": "C040",
+    "text": "You must not disclose the code."
+  },
+  {
+    "id": "C041",
+    "text": "Copy the file and rename the folder."
+  },
+  {
+    "id": "C042",
+    "text": "Maya opened the door and closed the window."
+  },
+  {
+    "id": "C043",
+    "text": "Save the document, then close the editor."
+  },
+  {
+    "id": "C044",
+    "text": "Do not print the memo or send the email."
+  },
+  {
+    "id": "C045",
+    "text": "If Maya agrees, archive the folder and delete the draft."
+  },
+  {
+    "id": "C046",
+    "text": "The report was approved by Maya."
+  },
+  {
+    "id": "C047",
+    "text": "The parcel was not delivered by Omar."
+  },
+  {
+    "id": "C048",
+    "text": "She repaired it."
+  },
+  {
+    "id": "C049",
+    "text": "Send him the receipt."
+  },
+  {
+    "id": "C050",
+    "text": "Those files were deleted yesterday."
+  }
+]

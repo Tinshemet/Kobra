@@ -1,0 +1,53 @@
+{
+  "cases_replayed": 50,
+  "scores_matched": 50,
+  "source_ledgers_matched": 50,
+  "characters_reconstructed": 1487,
+  "model_calls": 0,
+  "code_and_parser_hashes_matched": true,
+  "errors": {
+    "ReadContractError: unlisted candidate for condition": 11,
+    "ReadContractError: unlisted candidate for predicate": 1,
+    "ReadContractError: unlisted candidate for patient": 1
+  },
+  "wrong_slots": {
+    "agent": 30,
+    "patient": 22,
+    "recipient": 21,
+    "act": 24,
+    "predicate": 18,
+    "negation": 17,
+    "condition": 18,
+    "time": 17,
+    "quantity": 17,
+    "attribution": 17,
+    "modality": 17
+  },
+  "missing_candidates": [
+    {
+      "id": "C025",
+      "frame": 0,
+      "slot": "predicate",
+      "available": false,
+      "expected": [
+        "Back up"
+      ]
+    },
+    {
+      "id": "C026",
+      "frame": 0,
+      "slot": "predicate",
+      "available": false,
+      "expected": [
+        "Print"
+      ]
+    }
+  ],
+  "source_characters_by_provisional_label": {
+    "noise_candidate": 222,
+    "arranged": 801,
+    "unassigned_meaningful": 459,
+    "possibly_missing_context": 5
+  },
+  "limitation": "Same-agent replay verifies reproducibility and text retention, not independent reference correctness."
+}

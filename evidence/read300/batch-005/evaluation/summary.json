@@ -1,0 +1,52 @@
+{
+  "state": "complete",
+  "batch": 5,
+  "split": "fresh",
+  "cases": 300,
+  "exact_cases": 260,
+  "source_unchanged": true,
+  "source_retention_cases": 300,
+  "source_characters": 7723,
+  "seconds": 562.7118897020009,
+  "adapter_errors": 0,
+  "candidate_coverage": {
+    "covered": 1035,
+    "total": 1035
+  },
+  "errors": {
+    "arranged": 300
+  },
+  "slots_correct": 3240,
+  "slots_total": 3300,
+  "required_preserved": 1278,
+  "required_total": 1335,
+  "by_group": {
+    "clause_forms": {
+      "exact": 29,
+      "cases": 29
+    },
+    "fronting": {
+      "exact": 10,
+      "cases": 10
+    },
+    "noun_phrases": {
+      "exact": 60,
+      "cases": 60
+    },
+    "scope": {
+      "exact": 59,
+      "cases": 67
+    },
+    "verb_frames": {
+      "exact": 45,
+      "cases": 67
+    },
+    "voice_tense": {
+      "exact": 57,
+      "cases": 67
+    }
+  },
+  "passing_threshold": 285,
+  "needs_offline_audit": true,
+  "scope": "Bounded 11-slot projection, not full graph accuracy or meaning preservation"
+}

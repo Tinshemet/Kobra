@@ -1,0 +1,561 @@
+{
+  "format": "serpent-exam",
+  "version": "1.0",
+  "source_sha256": "3bcf4fd115b8b59c0fca59676d73b1f7abc7e80f487d5163e22fd15ea0934ec9",
+  "prediction_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:serpent:schema:predictions-v1",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "format",
+      "version",
+      "cases"
+    ],
+    "properties": {
+      "format": {
+        "const": "serpent-predictions"
+      },
+      "version": {
+        "const": "1.0"
+      },
+      "cases": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "atoms",
+            "relations",
+            "gaps"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "atoms": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "type",
+                  "features",
+                  "intervals"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "type": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "features": {
+                    "type": "object"
+                  },
+                  "intervals": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "maxItems": 2,
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "relations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "id",
+                  "type",
+                  "from",
+                  "to",
+                  "intervals"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "type": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "from": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "to": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "intervals": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "maxItems": 2,
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "gaps": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "kind",
+                  "anchor",
+                  "candidates"
+                ],
+                "properties": {
+                  "kind": {
+                    "type": "string"
+                  },
+                  "anchor": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "candidates": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "inputs": [
+    {
+      "id": "S000001",
+      "sentence": "Did you sort the documents?"
+    },
+    {
+      "id": "S000002",
+      "sentence": "Always draft the reply before checking the appointments."
+    },
+    {
+      "id": "S000003",
+      "sentence": "Do not review the budget."
+    },
+    {
+      "id": "S000004",
+      "sentence": "Check the appointments at 16:30."
+    },
+    {
+      "id": "S000005",
+      "sentence": "Show your progress."
+    },
+    {
+      "id": "S000006",
+      "sentence": "Archive the receipts before updating the reminders."
+    },
+    {
+      "id": "S000007",
+      "sentence": "Review the travel plan every 1 hour."
+    },
+    {
+      "id": "S000008",
+      "sentence": "Review the budget."
+    },
+    {
+      "id": "S000009",
+      "sentence": "Cancel the pending task."
+    },
+    {
+      "id": "S000010",
+      "sentence": "Return only the results."
+    },
+    {
+      "id": "S000011",
+      "sentence": "Undo the recent change."
+    },
+    {
+      "id": "S000012",
+      "sentence": "Did you summarize the report?"
+    },
+    {
+      "id": "S000013",
+      "sentence": "Always read the message before summarizing the report."
+    },
+    {
+      "id": "S000014",
+      "sentence": "Review the agenda at 16:30."
+    },
+    {
+      "id": "S000015",
+      "sentence": "Do not save the contact details."
+    },
+    {
+      "id": "S000016",
+      "sentence": "Check the appointments every 12 hours."
+    },
+    {
+      "id": "S000017",
+      "sentence": "Archive the completed tasks."
+    },
+    {
+      "id": "S000018",
+      "sentence": "Review your assumptions."
+    },
+    {
+      "id": "S000019",
+      "sentence": "Review the agenda before organizing the notes."
+    },
+    {
+      "id": "S000020",
+      "sentence": "Return only the summary."
+    },
+    {
+      "id": "S000021",
+      "sentence": "Read the message before summarizing the report."
+    },
+    {
+      "id": "S000022",
+      "sentence": "Always archive the receipts before updating the reminders."
+    },
+    {
+      "id": "S000023",
+      "sentence": "Read the message at 09:15."
+    },
+    {
+      "id": "S000024",
+      "sentence": "Organize the notes every 4 hours."
+    },
+    {
+      "id": "S000025",
+      "sentence": "Did you draft the reply?"
+    },
+    {
+      "id": "S000026",
+      "sentence": "Do not summarize the report."
+    },
+    {
+      "id": "S000027",
+      "sentence": "Organize the calendar."
+    },
+    {
+      "id": "S000028",
+      "sentence": "Explain your plan."
+    },
+    {
+      "id": "S000029",
+      "sentence": "Update the reminders at 09:15."
+    },
+    {
+      "id": "S000030",
+      "sentence": "Review the budget every 12 hours."
+    },
+    {
+      "id": "S000031",
+      "sentence": "Do not draft the reply."
+    },
+    {
+      "id": "S000032",
+      "sentence": "Review the travel plan."
+    },
+    {
+      "id": "S000033",
+      "sentence": "Did you cancel the pending task?"
+    },
+    {
+      "id": "S000034",
+      "sentence": "Always review the agenda before organizing the notes."
+    },
+    {
+      "id": "S000035",
+      "sentence": "Draft the reply before checking the appointments."
+    },
+    {
+      "id": "S000036",
+      "sentence": "Do not organize the shopping list."
+    },
+    {
+      "id": "S000037",
+      "sentence": "Review the travel plan at 09:15."
+    },
+    {
+      "id": "S000038",
+      "sentence": "Update the reminders every 12 hours."
+    },
+    {
+      "id": "S000039",
+      "sentence": "Review the agenda."
+    },
+    {
+      "id": "S000040",
+      "sentence": "Did you organize the notes?"
+    },
+    {
+      "id": "S000041",
+      "sentence": "Do not review the travel plan."
+    },
+    {
+      "id": "S000042",
+      "sentence": "List the pending tasks at 09:15."
+    },
+    {
+      "id": "S000043",
+      "sentence": "Organize the calendar every 1 hour."
+    },
+    {
+      "id": "S000044",
+      "sentence": "Read the message."
+    },
+    {
+      "id": "S000045",
+      "sentence": "Did you read the message?"
+    },
+    {
+      "id": "S000046",
+      "sentence": "Organize the shopping list at 09:15."
+    },
+    {
+      "id": "S000047",
+      "sentence": "Do not check the appointments."
+    },
+    {
+      "id": "S000048",
+      "sentence": "Read the message every 1 hour."
+    },
+    {
+      "id": "S000049",
+      "sentence": "Update the reminders."
+    },
+    {
+      "id": "S000050",
+      "sentence": "Did you check the appointments?"
+    },
+    {
+      "id": "S000051",
+      "sentence": "Archive the receipts at 16:30."
+    },
+    {
+      "id": "S000052",
+      "sentence": "Organize the shopping list every 4 hours."
+    },
+    {
+      "id": "S000053",
+      "sentence": "Do not organize the notes."
+    },
+    {
+      "id": "S000054",
+      "sentence": "Summarize the report."
+    },
+    {
+      "id": "S000055",
+      "sentence": "Did you explain your plan?"
+    },
+    {
+      "id": "S000056",
+      "sentence": "Save the contact details every 12 hours."
+    },
+    {
+      "id": "S000057",
+      "sentence": "Organize the notes at 16:30."
+    },
+    {
+      "id": "S000058",
+      "sentence": "Save the contact details."
+    },
+    {
+      "id": "S000059",
+      "sentence": "Do not archive the completed tasks."
+    },
+    {
+      "id": "S000060",
+      "sentence": "Did you review the agenda?"
+    },
+    {
+      "id": "S000061",
+      "sentence": "List the pending tasks every 12 hours."
+    },
+    {
+      "id": "S000062",
+      "sentence": "Read the message at 16:30."
+    },
+    {
+      "id": "S000063",
+      "sentence": "Do not organize the calendar."
+    },
+    {
+      "id": "S000064",
+      "sentence": "Did you review the budget?"
+    },
+    {
+      "id": "S000065",
+      "sentence": "Sort the documents."
+    },
+    {
+      "id": "S000066",
+      "sentence": "Summarize the report at 16:30."
+    },
+    {
+      "id": "S000067",
+      "sentence": "List the pending tasks every 4 hours."
+    },
+    {
+      "id": "S000068",
+      "sentence": "Do not list the pending tasks."
+    },
+    {
+      "id": "S000069",
+      "sentence": "Did you return the summary?"
+    },
+    {
+      "id": "S000070",
+      "sentence": "Organize the notes."
+    },
+    {
+      "id": "S000071",
+      "sentence": "Archive the receipts every 12 hours."
+    },
+    {
+      "id": "S000072",
+      "sentence": "Sort the documents at 16:30."
+    },
+    {
+      "id": "S000073",
+      "sentence": "Did you archive the receipts?"
+    },
+    {
+      "id": "S000074",
+      "sentence": "Do not update the reminders."
+    },
+    {
+      "id": "S000075",
+      "sentence": "Check the appointments."
+    },
+    {
+      "id": "S000076",
+      "sentence": "Archive the completed tasks every 4 hours."
+    },
+    {
+      "id": "S000077",
+      "sentence": "Summarize the report at 09:15."
+    },
+    {
+      "id": "S000078",
+      "sentence": "Did you save the contact details?"
+    },
+    {
+      "id": "S000079",
+      "sentence": "Do not read the message."
+    },
+    {
+      "id": "S000080",
+      "sentence": "Draft the reply."
+    },
+    {
+      "id": "S000081",
+      "sentence": "Draft the reply every 1 hour."
+    },
+    {
+      "id": "S000082",
+      "sentence": "Save the contact details at 09:15."
+    },
+    {
+      "id": "S000083",
+      "sentence": "Do not review the agenda."
+    },
+    {
+      "id": "S000084",
+      "sentence": "Did you organize the shopping list?"
+    },
+    {
+      "id": "S000085",
+      "sentence": "Organize the shopping list."
+    },
+    {
+      "id": "S000086",
+      "sentence": "Organize the calendar every 12 hours."
+    },
+    {
+      "id": "S000087",
+      "sentence": "Update the reminders at 16:30."
+    },
+    {
+      "id": "S000088",
+      "sentence": "Do not archive the receipts."
+    },
+    {
+      "id": "S000089",
+      "sentence": "Did you undo the recent change?"
+    },
+    {
+      "id": "S000090",
+      "sentence": "List the pending tasks."
+    },
+    {
+      "id": "S000091",
+      "sentence": "Draft the reply every 12 hours."
+    },
+    {
+      "id": "S000092",
+      "sentence": "Archive the completed tasks at 09:15."
+    },
+    {
+      "id": "S000093",
+      "sentence": "Did you organize the calendar?"
+    },
+    {
+      "id": "S000094",
+      "sentence": "Do not sort the documents."
+    },
+    {
+      "id": "S000095",
+      "sentence": "Archive the receipts."
+    },
+    {
+      "id": "S000096",
+      "sentence": "Update the reminders every 1 hour."
+    },
+    {
+      "id": "S000097",
+      "sentence": "Check the appointments at 09:15."
+    },
+    {
+      "id": "S000098",
+      "sentence": "Did you review the travel plan?"
+    },
+    {
+      "id": "S000099",
+      "sentence": "Update the reminders every 4 hours."
+    },
+    {
+      "id": "S000100",
+      "sentence": "Draft the reply at 16:30."
+    }
+  ],
+  "task": "Return graph annotations using the published serpent-predictions 1.0 contract. For scenarios also return reference-resolution predictions. No teacher answers are included."
+}

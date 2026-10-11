@@ -1,0 +1,73 @@
+{
+  "state": "complete",
+  "source_unchanged": true,
+  "cases": 50,
+  "accepted": 37,
+  "errors": 13,
+  "exact_cases": 15,
+  "slots_correct": 387,
+  "slots_total": 605,
+  "required_preserved": 132,
+  "required_total": 226,
+  "candidate_coverage": {
+    "covered": 169,
+    "total": 171
+  },
+  "source_retention": {
+    "cases": 50,
+    "total": 50,
+    "original_characters": 1487
+  },
+  "median_seconds": 4.046648472000015,
+  "total_seconds": 204.67784165200283,
+  "baseline_common_score": {
+    "exact_cases": 0,
+    "slots_correct": 223,
+    "slots_total": 605,
+    "required_preserved": 47,
+    "required_total": 226
+  },
+  "by_group": {
+    "attribution": {
+      "exact": 1,
+      "cases": 5
+    },
+    "condition": {
+      "exact": 0,
+      "cases": 5
+    },
+    "coordination": {
+      "exact": 0,
+      "cases": 5
+    },
+    "modality": {
+      "exact": 1,
+      "cases": 5
+    },
+    "negation": {
+      "exact": 4,
+      "cases": 5
+    },
+    "quantity": {
+      "exact": 2,
+      "cases": 5
+    },
+    "question": {
+      "exact": 1,
+      "cases": 5
+    },
+    "simple": {
+      "exact": 4,
+      "cases": 5
+    },
+    "time": {
+      "exact": 0,
+      "cases": 5
+    },
+    "voice_reference": {
+      "exact": 2,
+      "cases": 5
+    }
+  },
+  "limitation": "Same reused agent-authored references. Exact slot accuracy and required-slot retention are not full READ accuracy or all meaning preservation. Source retention is exact text accounting only."
+}

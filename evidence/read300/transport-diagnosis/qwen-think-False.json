@@ -1,0 +1,54 @@
+{
+  "request": {
+    "model": "qwen3.5:4b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Return only JSON with choice set to RED."
+      }
+    ],
+    "format": {
+      "type": "object",
+      "properties": {
+        "choice": {
+          "type": "string",
+          "enum": [
+            "BLUE"
+          ]
+        }
+      },
+      "required": [
+        "choice"
+      ],
+      "additionalProperties": false
+    },
+    "think": false,
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 0,
+      "num_ctx": 4096,
+      "num_predict": 1024,
+      "presence_penalty": 0,
+      "repeat_penalty": 1
+    }
+  },
+  "response": {
+    "model": "qwen3.5:4b",
+    "created_at": "2026-10-09T16:09:29.800466259Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"choice\": \"RED\"\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 4626592371,
+    "load_duration": 4346676247,
+    "prompt_eval_count": 21,
+    "prompt_eval_duration": 103714000,
+    "eval_count": 12,
+    "eval_duration": 141817000
+  },
+  "seconds": 4.640856948000874,
+  "kind": "synthetic transport conformance probe, not READ accuracy"
+}

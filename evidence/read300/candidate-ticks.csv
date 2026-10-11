@@ -1,0 +1,328 @@
+batch,case_id,sentence,fix,coverage_tick,verified_binding_tick,regression,before_correct,after_correct,evidence
+1,S000001,Check the key.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000002,The trains that Mira checks restarted.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000003,"Mira checked a box, and Nia a box.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000004,Will the servers not be checked by Alex?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000005,This server is quieter than the old server.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000007,Nia gives each engineer four keys.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000008,Nia saw the engineer with the sensor.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000009,"This train, Nia did not check.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000010,"Nia checked the servers, and Nia moved them.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000011,Mira arrives and waits.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000012,"If the sensor fails, do not restart the sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000013,This train was the quietest among the trains.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000014,Check all disks.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000015,Mira hums quietly.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000016,Alex and Mira check the train.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000017,Nia waits because the train fails.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000018,Mira hums quietly in the room.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000019,Can you check the keys?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000020,The sensor that Alex checked will restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000021,The servers were not very large.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000022,Check these old lamps.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000023,Was the book carried by Mira?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000024,"If the train fails, Nia will check the train.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000025,"Mira waits, and Nia reads the book.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000026,Mira gave Nia a disk.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000027,Mira waits in the room.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000028,"This quill, Alex checks.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000029,Check the one sensor.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000030,This train was faster than the old train.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000031,Mira moved and hummed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000032,"Alex checked a sensor, and Mira a sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000033,Alex gives each student one disk.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000034,Nia waited because the sensor failed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000035,The train that Nia checked restarts.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000036,The books are not carried by Alex.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000037,This server is the quietest among the servers.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000038,Nia waited yesterday.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000039,Check the old disk.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000040,Can you check the disk?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000041,Alex and Nia check the server.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000042,Mira will give Nia a key.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000043,Check all trains.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000044,The servers in the archive restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000045,Mira checks the server carefully.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000046,Nia waits quietly in the room.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000047,Must Nia not check the disk?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000048,Does Mira not check the box?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000049,Mira must not check the server.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000050,"Nia checked the server, and Nia moved it.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000052,"Nia waited, and Alex read the book.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000053,Alex saw the student with the sensor.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000054,"This lamp, Nia checked.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000055,Check these old disks.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000056,"If the sensor fails, Nia will not check the sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000057,Check the zorbin.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000058,Nia gives each engineer four books.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000059,Must Alex check the disk?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000060,"Mira checked the box, and Mira moved it.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000061,Can you check the key?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000062,Mira moves and hums.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000063,"Nia checked a sensor, and Mira a sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000064,Mira and Nia check the train.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000065,Mira waits because the server fails.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000066,"Nia waits, and Mira reads the book.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000068,Mira saw the engineer with the sensor.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000069,Nia moves.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000070,Will Alex not move the box?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000071,Do not check the quill.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000072,Check zorbins.,R001-content-predicate-fallback,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000073,"This server, Alex checks.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000074,Check the three keys.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000075,Nia gives each engineer three keys.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000076,Mira must check the lamp.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000077,The sensors that Mira checked will restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000078,"If the server fails, Nia will not check the server.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000079,"Mira checked a sensor, and Nia a sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000080,Alex moved and hummed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000081,Can you check the lamps?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000082,Alex and Nia check the key.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000083,"Alex checked the box, and Alex moved it.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000084,Nia waited because the train failed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000085,"Mira waits, and Alex reads the book.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000087,Nia saw the student with the sensor.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000088,The books were not read by Mira.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000089,This train is smaller than the old train.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000090,Does Alex not check the key?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000091,Check the trains.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000092,The server was not very quiet.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000093,Nia gives each student two keys.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000094,"This key, Alex does not check.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000095,Mira must not check the lamp.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000096,The server that Mira checked restarted.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000097,Check the four keys.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000098,"If the server fails, Alex will not check the server.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000099,Nia moves and hums.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000100,"Mira checked a sensor, and Alex a sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000101,Alex and Mira check the lamp.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000102,Can you check the disks?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000103,"Nia checked the box, and Nia moved it.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000104,Mira waits because the sensor fails.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000105,"Alex waited, and Mira read the book.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000107,Mira saw the student with the sensor.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000108,The lamp will be repaired by Mira.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000109,Does Nia check the train?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000110,Check servers.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000111,Mira restarts the server.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000112,Alex gives each student three disks.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000113,Can Mira check the zorbin?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000114,"This server, Nia does not check.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000115,This sensor is smaller than the old sensor.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000116,The servers that Mira checks restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000117,Check the two disks.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000118,"If the sensor fails, Alex will check the sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000119,Can you check the sensors?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000120,"Nia checked the key, and Nia moved it.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000121,Alex waited because the server failed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000122,Mira and Nia check the lamp.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000123,"Mira checked a server, and Alex a server.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000124,Alex arrived and waited.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000125,"Nia waited, and Mira read the book.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000127,Nia will not see the sensor.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000128,Mira checks the quill.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000129,Check a small old blue server.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000130,Nia gives Mira a book.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000131,"This book, Alex does not check.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000132,Can Nia check the key?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000133,Alex gives each student two keys.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000134,This train is faster than the old train.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000135,Check four servers.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000136,The trains that Nia checks restarted.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000137,"If the sensor fails, Mira will check the sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000138,Can you check the trains?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000139,Nia waited because the server failed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000140,"Mira checked a box, and Alex a box.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000141,Mira waited and hummed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000142,"Alex checked the key, and Alex moved it.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000143,Mira and Nia check the quill.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000144,"Mira waited, and Nia read the book.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000146,Mira will configure the sensor.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000147,Mira does not check the box.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000148,Alex hums in the room.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000149,The rooms were not very large.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000150,Check the old train.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000151,Might Nia check the server?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000152,"This lamp, Nia does not check.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000153,Check two sensors.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000154,Alex gives each student three books.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000155,The trains that Alex checks restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000156,This server was smaller than the old server.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000157,"If the train fails, restart the train.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000158,Can you check the zorbins?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000159,"Alex checked a box, and Nia a box.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000160,"Alex checked the books, and Alex moved them.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000161,Alex and Nia check the disk.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000162,Mira arrived and waited.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000163,Alex waits because the train fails.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000164,"Alex waits, and Nia reads the book.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000165,Will the sensor not be seen by Alex?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000166,Does Nia check the book?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000167,Alex arrives.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000168,Check trains.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000169,Might Alex not check the key?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000170,The train in the archive restarts.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000171,"This book, Alex checks.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000172,Check one quill.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000173,Alex gives each engineer four books.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000174,The servers that Mira checked restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000175,This server was the smallest among the servers.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000176,"If the server fails, do not restart the server.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000177,Can you check the books?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000178,"Nia checked the books, and Nia moved them.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000179,"Nia checked a server, and Mira a server.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000180,Mira and Nia check the key.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000181,Nia arrives and waits.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000182,Mira waited because the train failed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000183,"Nia waits, and Alex reads the book.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000184,Will Mira not move the box?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000185,Does Alex check the train?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000186,Mira sees the sensor.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000187,Check a disk.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000188,Can Nia check the quill?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000189,"This box, Alex checked.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000190,Check one zorbin.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000191,Alex gives each student two disks.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000192,Nia waits in the archive.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000193,The sensors that Mira checks restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000194,This server was the fastest among the servers.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000195,"If the train fails, Mira will not check the train.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000196,Can you check the book?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000197,"Nia checked the boxes, and Nia moved them.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000198,"Mira checked a server, and Nia a server.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000199,Mira and Nia check the server.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000200,Nia waits because the server fails.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000201,"Mira waited, and Alex read the book.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000202,Mira waits and hums.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000203,Does Nia not carry the book?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000204,Nia restarts the server.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000205,Nia checks the disk.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000206,Check these boxes.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000207,Must Nia check the quill?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000208,"This zorbin, Mira checks.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000209,Alex gives each engineer two keys.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000210,Check two books.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000211,The servers that Alex checked will restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000212,The server in the archive restarts.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000213,This train is the largest among the trains.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000214,"If the train fails, do not restart the train.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000215,Can you check the train?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000216,"Mira checked the server, and Mira moved it.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000217,Alex and Mira check the key.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000218,"Nia checked a sensor, and Alex a sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000219,Mira waited because the sensor failed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000220,Alex waited and hummed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000221,"Alex waited, and Nia read the book.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000222,Nia does not carry the books.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000223,Does Nia not check the lamp?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000224,Nia will show Alex a key.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000225,Must Nia check the box?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000226,Check a small old blue train.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000227,"This train, Alex does not check.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000228,Check the three zorbins.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000229,Nia gives each engineer two books.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000230,Alex hums quietly in the room.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000231,The train that Nia checked restarted.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000232,This sensor was the quietest among the sensors.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000233,"If the train fails, Nia will not check the train.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000234,Mira and Nia check the disk.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000235,"Alex checked the book, and Alex moved it.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000236,"Nia checked a server, and Alex a server.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000237,Can you check the server?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000238,Alex waits because the sensor fails.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000239,Nia arrived and waited.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000240,Alex checked the server.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000241,Alex gave Nia a disk.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000242,Mira does not check the key.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000243,Check the small old blue box.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000244,Must Mira check the server?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000245,"This sensor, Alex checked.",R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000246,Check one box.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000247,Alex gives each student one key.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000248,Nia waits quietly.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000249,The trains that Mira checked restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000250,This sensor was larger than the old sensor.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000251,Mira and Nia check the book.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000252,"If the sensor fails, Mira will not check the sensor.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000253,"Nia checked the keys, and Nia moved them.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000254,Can you check the sensor?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000255,"Alex checked a box, and Mira a box.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000256,Nia waits and hums.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000257,Nia waits because the sensor fails.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000258,Are the boxes not moved by Mira?,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000259,Does Alex not check the zorbin?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000260,Alex moves the box.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000261,Check the zorbins.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000262,Must Nia check the book?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000263,Check one key.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000264,"This disk, Alex checked.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000265,Mira gives each engineer four keys.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000266,Alex hums quickly.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000267,The trains that Alex checked restart.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000268,This server is larger than the old server.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000269,"Mira checked the keys, and Mira moved them.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000270,"If the train fails, Mira will check the train.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000271,Alex and Mira check the box.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000272,Can you check the boxes?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000273,"Nia checked a box, and Mira a box.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000274,Alex waited because the train failed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000275,Alex arrives and waits.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000276,The books will be read by Mira.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000277,Check boxes.,R001-content-predicate-fallback,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000278,Mira shows Alex a key.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000279,Alex checks the lamp.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000280,Nia can check the key.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000281,"This book, Mira does not check.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000282,Check three lamps.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000283,Mira waits quietly in the archive.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000284,The train that Nia checks restarts.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000285,Alex gives each student three keys.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000286,This train is the fastest among the trains.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000287,"If the server fails, Mira will check the server.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000288,"Mira checked the key, and Mira moved it.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000289,Mira and Nia check the box.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000290,Can you check the quill?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000291,Alex moves and hums.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000292,"Alex checked a server, and Nia a server.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000293,Alex waited because the sensor failed.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000294,Are the books not carried by Alex?,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000295,Alex shows Nia a book.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000296,Check the boxes.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000297,Alex might check the zorbin.,R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000298,Alex checks the disk.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000299,"This quill, Nia checked.",R001-content-predicate-fallback,✓,,False,False,False,evidence/read300/batch-001/development-binding-R001.json
+1,S000300,Check four boxes.,R001-content-predicate-fallback,✓,,False,True,True,evidence/read300/batch-001/development-binding-R001.json
+1,S000009,"This train, Nia did not check.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000016,Alex and Mira check the train.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000018,Mira hums quietly in the room.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000028,"This quill, Alex checks.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000041,Alex and Nia check the server.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000044,The servers in the archive restart.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000054,"This lamp, Nia checked.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000062,Mira moves and hums.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000064,Mira and Nia check the train.,R002-expanded-nominal,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R002.json
+1,S000082,Alex and Nia check the key.,R002-expanded-nominal,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R002.json
+1,S000094,"This key, Alex does not check.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000101,Alex and Mira check the lamp.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000114,"This server, Nia does not check.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000122,Mira and Nia check the lamp.,R002-expanded-nominal,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R002.json
+1,S000131,"This book, Alex does not check.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000143,Mira and Nia check the quill.,R002-expanded-nominal,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R002.json
+1,S000148,Alex hums in the room.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000152,"This lamp, Nia does not check.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000161,Alex and Nia check the disk.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000170,The train in the archive restarts.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000180,Mira and Nia check the key.,R002-expanded-nominal,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R002.json
+1,S000189,"This box, Alex checked.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000199,Mira and Nia check the server.,R002-expanded-nominal,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R002.json
+1,S000212,The server in the archive restarts.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000217,Alex and Mira check the key.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000227,"This train, Alex does not check.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000230,Alex hums quietly in the room.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000234,Mira and Nia check the disk.,R002-expanded-nominal,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R002.json
+1,S000251,Mira and Nia check the book.,R002-expanded-nominal,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R002.json
+1,S000264,"This disk, Alex checked.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000271,Alex and Mira check the box.,R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000281,"This book, Mira does not check.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json
+1,S000289,Mira and Nia check the box.,R002-expanded-nominal,✓,✓,False,False,True,evidence/read300/batch-001/development-binding-R002.json
+1,S000299,"This quill, Nia checked.",R002-expanded-nominal,✓,,False,False,False,evidence/read300/batch-001/development-binding-R002.json

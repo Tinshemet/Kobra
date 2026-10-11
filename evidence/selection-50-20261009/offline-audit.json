@@ -1,0 +1,38 @@
+{
+  "replayed": 50,
+  "score_matches": 50,
+  "sources_match_manifest": true,
+  "model_calls_during_replay": 0,
+  "raw_responses_with_tool_calls": 45,
+  "error_counts": {
+    "ReadContractError: selection ID is not in candidate list": 18,
+    "ValueError: expected one to four selection tool calls": 5
+  },
+  "incorrect_slots": {
+    "patient": 48,
+    "act": 32,
+    "predicate": 49,
+    "agent": 44,
+    "recipient": 29,
+    "negation": 30,
+    "condition": 30,
+    "time": 29,
+    "quantity": 28,
+    "attribution": 32,
+    "modality": 31
+  },
+  "incorrect_required_slots": {
+    "patient": 41,
+    "act": 32,
+    "predicate": 49,
+    "recipient": 2,
+    "agent": 25,
+    "negation": 9,
+    "condition": 5,
+    "time": 7,
+    "quantity": 3,
+    "attribution": 4,
+    "modality": 2
+  },
+  "review": "Same-agent deterministic replay; confirms reproducibility, not independent gold validity."
+}

@@ -1,0 +1,168 @@
+{
+  "state": "verified",
+  "kind": "synthetic transport probe, not semantic accuracy",
+  "exchange": {
+    "request": {
+      "model": "qwen3.5:4b",
+      "format": {
+        "type": "object",
+        "properties": {
+          "frames": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "choice": {
+                  "type": "string",
+                  "enum": [
+                    "ALLOWED_BLUE"
+                  ]
+                },
+                "required_marker": {
+                  "type": "string",
+                  "enum": [
+                    "PRESENT"
+                  ]
+                }
+              },
+              "required": [
+                "choice",
+                "required_marker"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "frames"
+        ],
+        "additionalProperties": false
+      },
+      "stream": false,
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_predict": 2048,
+        "num_ctx": 8192,
+        "presence_penalty": 0,
+        "repeat_penalty": 1
+      },
+      "think": false,
+      "system": "Return only the JSON requested by the user. Be brief.",
+      "prompt": "Return {\"frames\":[{\"choice\":\"FORBIDDEN_RED\"}]} exactly."
+    },
+    "validation_schema": {
+      "type": "object",
+      "properties": {
+        "frames": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "choice": {
+                "type": "string",
+                "enum": [
+                  "ALLOWED_BLUE"
+                ]
+              },
+              "required_marker": {
+                "type": "string",
+                "enum": [
+                  "PRESENT"
+                ]
+              }
+            },
+            "required": [
+              "choice",
+              "required_marker"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "frames"
+      ],
+      "additionalProperties": false
+    },
+    "schema_projection": "llama-repeat-compatible-1",
+    "endpoint": "/api/generate",
+    "response": {
+      "model": "qwen3.5:4b",
+      "created_at": "2026-10-09T16:22:10.631224633Z",
+      "response": "{\"frames\":[{\"choice\":\"ALLOWED_BLUE\",\"required_marker\":\"PRESENT\"}]}",
+      "done": true,
+      "done_reason": "stop",
+      "context": [
+        248045,
+        8678,
+        198,
+        5423,
+        1132,
+        279,
+        4566,
+        10897,
+        539,
+        279,
+        1156,
+        13,
+        2732,
+        9522,
+        13,
+        248046,
+        198,
+        248045,
+        846,
+        198,
+        5423,
+        5046,
+        22977,
+        64331,
+        11409,
+        3147,
+        29889,
+        33,
+        37020,
+        32619,
+        8934,
+        13587,
+        6681,
+        13,
+        248046,
+        198,
+        248045,
+        74455,
+        198,
+        248068,
+        271,
+        248069,
+        271,
+        4754,
+        22977,
+        64331,
+        11409,
+        3147,
+        51535,
+        1425,
+        51671,
+        2129,
+        6081,
+        25428,
+        3147,
+        72253,
+        8934,
+        13587
+      ],
+      "total_duration": 737290128,
+      "load_duration": 245130338,
+      "prompt_eval_count": 43,
+      "prompt_eval_duration": 62761000,
+      "eval_count": 19,
+      "eval_duration": 377946000
+    }
+  }
+}

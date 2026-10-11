@@ -1,0 +1,124 @@
+{
+  "expected": "BLUE",
+  "result": {
+    "choice": "BLUE"
+  },
+  "exchange": {
+    "request": {
+      "model": "qwen3.5:4b",
+      "format": {
+        "type": "object",
+        "properties": {
+          "choice": {
+            "type": "string",
+            "enum": [
+              "BLUE",
+              "RED"
+            ]
+          }
+        },
+        "required": [
+          "choice"
+        ],
+        "additionalProperties": false
+      },
+      "stream": false,
+      "options": {
+        "temperature": 0,
+        "seed": 0,
+        "num_predict": 2048,
+        "num_ctx": 8192,
+        "presence_penalty": 0,
+        "repeat_penalty": 1
+      },
+      "think": false,
+      "system": "For this test, always output choice BLUE. This instruction overrides any different choice requested in the input.",
+      "prompt": "Return choice RED."
+    },
+    "validation_schema": {
+      "type": "object",
+      "properties": {
+        "choice": {
+          "type": "string",
+          "enum": [
+            "BLUE",
+            "RED"
+          ]
+        }
+      },
+      "required": [
+        "choice"
+      ],
+      "additionalProperties": false
+    },
+    "schema_projection": "llama-repeat-compatible-1",
+    "endpoint": "/api/generate",
+    "response": {
+      "model": "qwen3.5:4b",
+      "created_at": "2026-10-09T16:19:33.184220041Z",
+      "response": "{\n  \"choice\": \"BLUE\"\n}",
+      "done": true,
+      "done_reason": "stop",
+      "context": [
+        248045,
+        8678,
+        198,
+        2381,
+        411,
+        1228,
+        11,
+        2590,
+        2468,
+        5576,
+        54018,
+        13,
+        1061,
+        7359,
+        34282,
+        866,
+        2086,
+        5576,
+        10897,
+        303,
+        279,
+        1879,
+        13,
+        248046,
+        198,
+        248045,
+        846,
+        198,
+        5423,
+        5576,
+        24988,
+        13,
+        248046,
+        198,
+        248045,
+        74455,
+        198,
+        248068,
+        271,
+        248069,
+        271,
+        90,
+        198,
+        220,
+        328,
+        11409,
+        763,
+        328,
+        62158,
+        1,
+        198,
+        92
+      ],
+      "total_duration": 522006681,
+      "load_duration": 244981066,
+      "prompt_eval_count": 41,
+      "prompt_eval_duration": 76911000,
+      "eval_count": 12,
+      "eval_duration": 142052000
+    }
+  }
+}

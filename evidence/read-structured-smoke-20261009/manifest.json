@@ -1,0 +1,35 @@
+{
+  "format": "kobra-read-pilot-1",
+  "started_utc": "2026-10-09T08:53:57.613313+00:00",
+  "model_requested": "llama3.1:8b",
+  "reader": "structured",
+  "source_sha256": "3bcf4fd115b8b59c0fca59676d73b1f7abc7e80f487d5163e22fd15ea0934ec9",
+  "exam_sha256": "611c1e27627a5c4a382a7c3c0b38646616f292d701f5798b59c2c387b397496e",
+  "selected_ids": [
+    "S000001",
+    "S000002",
+    "S000003"
+  ],
+  "vocabulary": "empty application-independent profile",
+  "source_files": {
+    "src/kobra/__init__.py": "848244cbbda190823358585619e20fe77da54a876503e410262418e4bd952551",
+    "src/kobra/_english_front_door.py": "e8aac24af92d422009374a854947c6aac4ea0a483f4263be657d70284860eae7",
+    "src/kobra/_english_lexicon.py": "ced88da2b05864b80bf8050ce12e6ece692b87008b1a9e575fdc0ba3b921f117",
+    "src/kobra/_noise_prints.py": "0e781354bd025637e47927287c85d8ed34f74d2d2e6640db522a4d5855167498",
+    "src/kobra/_read_surface.py": "cf09ef74ff9cfb6054fbbe8a223938c92d1b2deee9e989da6a77919ba8654d42",
+    "src/kobra/clock.py": "8ee12ed2b5d83fd0bd116ee37ab4563f542340e0ae0c5432867e03b20041ae6e",
+    "src/kobra/clock_vocabulary.py": "5061846e7a8ab9f293ee2f949034baaa19a1a15232d52a9022d0cdd02b888373",
+    "src/kobra/contracts.py": "8f0db23f34b4900eb21bc0c8662c1681fe9cf0a4f143a831c2135d72ed27ebd3",
+    "src/kobra/distillation.py": "0f712a2189e8e4d3f9df02bbd32461ef7ea47c00ccc2cf3a402a72fbeb3faebe",
+    "src/kobra/front_door.py": "dca5caebf5504b7bd3ca674986c0a24f97d485946c8bc0c544ea65cddebad90d",
+    "src/kobra/mocks.py": "93120388623ad14dffb226035f4050a7523038b3f066fc59f1b28e3affb0c4f9",
+    "src/kobra/ollama.py": "37df59669bc76a66c2bbbcd9cb55ee7656c1a74aa4256851ebf5423cf3ccbf3a",
+    "src/kobra/pipeline.py": "2d87f690b1eeca4048ca6eb985355d1b5a1902e060f8693999744d82f1fdc7a9",
+    "src/kobra/read.py": "c79f9bef0111b4b19119148da5ae85aa1cdef346ba6b48f1e5ed90c06d9fbcf4",
+    "src/kobra/structured_read.py": "9d595797aa3955b9c8327613e86a2303a58a6affc71c088d57bd8392456e25ea"
+  },
+  "runner_sha256": "b57c2bcee86da334a847a3243a1ada550fe048d50b1f0bd273e48253d5a58cb8",
+  "semantic_accuracy": null,
+  "regression_delta": null,
+  "limitation": "Structural acceptance is not semantic accuracy; no comparable baseline."
+}

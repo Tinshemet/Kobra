@@ -1,0 +1,61 @@
+{
+  "state": "complete",
+  "source_unchanged": true,
+  "cases": 50,
+  "accepted": 27,
+  "errors": 23,
+  "exact_cases": 0,
+  "slots_correct": 223,
+  "slots_total": 605,
+  "required_preserved": 47,
+  "required_total": 226,
+  "candidate_coverage": {
+    "covered": 171,
+    "total": 171
+  },
+  "median_seconds": 5.101818923000792,
+  "total_seconds": 278.10720383799526,
+  "by_group": {
+    "attribution": {
+      "exact": 0,
+      "cases": 5
+    },
+    "condition": {
+      "exact": 0,
+      "cases": 5
+    },
+    "coordination": {
+      "exact": 0,
+      "cases": 5
+    },
+    "modality": {
+      "exact": 0,
+      "cases": 5
+    },
+    "negation": {
+      "exact": 0,
+      "cases": 5
+    },
+    "quantity": {
+      "exact": 0,
+      "cases": 5
+    },
+    "question": {
+      "exact": 0,
+      "cases": 5
+    },
+    "simple": {
+      "exact": 0,
+      "cases": 5
+    },
+    "time": {
+      "exact": 0,
+      "cases": 5
+    },
+    "voice_reference": {
+      "exact": 0,
+      "cases": 5
+    }
+  },
+  "limitation": "Agent-authored fixed references, not independent gold; bounded slot accuracy and required-slot retention, not full READ meaning preservation."
+}

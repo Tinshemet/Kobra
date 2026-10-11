@@ -1,0 +1,33 @@
+{
+  "split": "reused development",
+  "new_model_calls": 0,
+  "mode": "routing simulation using saved original model answers; no new model receives code proposals",
+  "parser": "en_core_web_sm: learned parser, not model-free NLP",
+  "batches": [
+    {
+      "batch": 1,
+      "cases": 300,
+      "code_routed": 91,
+      "code_correct": 91,
+      "fallback_cases": 209,
+      "fallback_correct": 31,
+      "baseline_exact": 79,
+      "hybrid_exact": 122,
+      "ticks": 43,
+      "regressions": 0
+    },
+    {
+      "batch": 5,
+      "cases": 300,
+      "code_routed": 280,
+      "code_correct": 280,
+      "fallback_cases": 20,
+      "fallback_correct": 13,
+      "baseline_exact": 260,
+      "hybrid_exact": 293,
+      "ticks": 33,
+      "regressions": 0
+    }
+  ],
+  "source_sha256": "dd5a942a526efdb8f8f47cad179035bdff4672e273ed1bbb6252f3e0a9b8ebf3"
+}

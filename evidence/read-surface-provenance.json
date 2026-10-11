@@ -1,0 +1,34 @@
+{
+  "symbols": [
+    {
+      "source": "seam/reasons.py",
+      "symbol": "Reason",
+      "line": 34,
+      "sha256": "fe64eef78d7bc5297cc58f1463f06a29fd5ed9c0f9fcd5d8d2fb61c8e75ee206"
+    },
+    {
+      "source": "seam/reasons.py",
+      "symbol": "_tail",
+      "line": 48,
+      "sha256": "f3b784b60780d70cb7e20ca106b84bc165d7d9e441180c5e04827f7cb95d1314"
+    },
+    {
+      "source": "seam/reasons.py",
+      "symbol": "read",
+      "line": 53,
+      "sha256": "c12417d44b00470562468c7e85f283c0df69a5b3b965dfeec31cfd3ec672521b"
+    },
+    {
+      "source": "seam/scan.py",
+      "symbol": "anchors_in",
+      "line": 211,
+      "sha256": "fc06308a1822a3fc7e294900608f8d8eb71121bcf9f32ca06a3b29647eef5aa0"
+    }
+  ],
+  "changes": [
+    "Replace Board and scan._index imports with explicit noun surface forms.",
+    "Rename read to reasons_in; preserve rule bodies and order.",
+    "Reuse the central ported lexicon, adding the three reason marker constants."
+  ],
+  "basis": "read-only Gorgon working tree; original files not modified"
+}

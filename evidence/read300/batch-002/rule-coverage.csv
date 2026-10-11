@@ -1,0 +1,347 @@
+batch,case_id,sentence,rule,offered,selected_coverage_tick,exact_case,verified_flip_tick,selected_candidates
+2,S000001,The sensor was not configured by Mira.,R001-content-predicate-fallback,True,,True,,
+2,S000002,Check these old books.,R001-content-predicate-fallback,True,,False,,
+2,S000003,The trains that Alex checked will restart.,R001-content-predicate-fallback,True,,False,,
+2,S000004,"Nia checked a box, and Alex a box.",R001-content-predicate-fallback,True,,False,,
+2,S000005,This sensor is the largest among the sensors.,R001-content-predicate-fallback,True,,False,,
+2,S000006,Nia gives each student one disk.,R001-content-predicate-fallback,True,,False,,
+2,S000007,Can you check the servers?,R001-content-predicate-fallback,True,,True,,
+2,S000008,This sensor was quieter than the old sensor.,R001-content-predicate-fallback,True,✓,False,,predicate:c16_23|predicate:c33_36|predicate:c37_43
+2,S000009,"If the train fails, Alex will not check the train.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_2|predicate:c7_12
+2,S000010,Nia waited and hummed.,R001-content-predicate-fallback,True,,True,,
+2,S000011,Check four sensors.,R001-content-predicate-fallback,True,,False,,
+2,S000012,Mira waits because the train fails.,R001-content-predicate-fallback,True,,False,,
+2,S000013,Alex and Nia check the box.,R001-content-predicate-fallback,True,,False,,
+2,S000013,Alex and Nia check the box.,R002-expanded-nominal,True,✓,False,,agent:c0_12
+2,S000014,"This zorbin, Nia does not check.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000014,"This zorbin, Nia does not check.",R002-expanded-nominal,True,,False,,
+2,S000015,Alex hums quietly.,R001-content-predicate-fallback,True,,False,,
+2,S000016,Check all boxes.,R001-content-predicate-fallback,True,,False,,
+2,S000017,Mira hums quickly in the room.,R001-content-predicate-fallback,True,,False,,
+2,S000017,Mira hums quickly in the room.,R002-expanded-nominal,True,✓,False,,agent:c0_29
+2,S000018,Nia waits in the room.,R001-content-predicate-fallback,True,,False,,
+2,S000019,"Alex checked the servers, and Alex moved them.",R001-content-predicate-fallback,True,,True,,
+2,S000020,Will the lamps not be repaired by Mira?,R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000021,The rooms were not quiet.,R001-content-predicate-fallback,True,,False,,
+2,S000022,"If the sensor fails, restart the sensor.",R001-content-predicate-fallback,True,,False,,
+2,S000023,The train that Mira checks restarted.,R001-content-predicate-fallback,True,✓,False,,predicate:c20_26
+2,S000024,Nia gives each student four books.,R001-content-predicate-fallback,True,,False,,
+2,S000025,Can you check the box?,R001-content-predicate-fallback,True,,False,,
+2,S000026,"This lamp, Mira checked.",R001-content-predicate-fallback,True,,True,,
+2,S000026,"This lamp, Mira checked.",R002-expanded-nominal,True,✓,True,,patient:c0_9
+2,S000027,Nia will give Alex a book.,R001-content-predicate-fallback,True,,True,,
+2,S000028,Mira waited because the server failed.,R001-content-predicate-fallback,True,,False,,
+2,S000029,"Alex checked a sensor, and Nia a sensor.",R001-content-predicate-fallback,True,,False,,
+2,S000030,The servers that Alex checked restart.,R001-content-predicate-fallback,True,✓,False,,predicate:c30_37
+2,S000031,Is the box moved by Alex?,R001-content-predicate-fallback,True,,True,,
+2,S000032,Check one lamp.,R001-content-predicate-fallback,True,,False,,
+2,S000033,This train is larger than the old train.,R001-content-predicate-fallback,True,✓,False,,predicate:c30_33
+2,S000034,The servers in the room restart.,R001-content-predicate-fallback,True,✓,False,,predicate:c24_31
+2,S000034,The servers in the room restart.,R002-expanded-nominal,True,✓,False,,agent:c0_31|patient:c0_31
+2,S000035,This train was the largest among the trains.,R001-content-predicate-fallback,True,,False,,
+2,S000036,Mira waited yesterday.,R001-content-predicate-fallback,True,,True,,
+2,S000037,Do not check the disk.,R001-content-predicate-fallback,True,,True,,
+2,S000038,Check small old blue trains.,R001-content-predicate-fallback,True,,False,,
+2,S000039,Mira and Nia check the zorbin.,R001-content-predicate-fallback,True,,False,,
+2,S000039,Mira and Nia check the zorbin.,R002-expanded-nominal,True,✓,False,,agent:c0_12
+2,S000040,Nia showed Alex a book.,R001-content-predicate-fallback,True,,True,,
+2,S000041,Was the box not moved by Alex?,R001-content-predicate-fallback,True,,False,,
+2,S000042,Check all quills.,R001-content-predicate-fallback,True,,False,,
+2,S000043,Alex checks the server carefully.,R001-content-predicate-fallback,True,,False,,
+2,S000044,Mira waits quietly in the room.,R001-content-predicate-fallback,True,,False,,
+2,S000045,Mira must not check the disk.,R001-content-predicate-fallback,True,,False,,
+2,S000046,Does Alex check the server?,R001-content-predicate-fallback,True,,True,,
+2,S000047,Mira might not check the box.,R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000048,"Mira checked the servers, and Mira moved them.",R001-content-predicate-fallback,True,,True,,
+2,S000049,Nia moved and hummed.,R001-content-predicate-fallback,True,,True,,
+2,S000050,Might Nia not check the sensor?,R001-content-predicate-fallback,True,,False,,
+2,S000051,"This key, Alex checks.",R001-content-predicate-fallback,True,✓,False,,predicate:c15_21
+2,S000052,Alex does not check the key.,R001-content-predicate-fallback,True,,True,,
+2,S000053,Check these small old blue keys.,R001-content-predicate-fallback,True,,False,,
+2,S000054,Mira gives each student one disk.,R001-content-predicate-fallback,True,,False,,
+2,S000055,Can you check the quills?,R001-content-predicate-fallback,True,,False,,
+2,S000056,"If the sensor fails, Nia will check the sensor.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_2|predicate:c7_13
+2,S000057,Alex and Nia check the quill.,R001-content-predicate-fallback,True,,False,,
+2,S000057,Alex and Nia check the quill.,R002-expanded-nominal,True,✓,False,,agent:c0_12
+2,S000058,"Nia checked the book, and Nia moved it.",R001-content-predicate-fallback,True,,True,,
+2,S000059,Does Alex not check the train?,R001-content-predicate-fallback,True,,True,,
+2,S000060,"This server, Nia checked.",R001-content-predicate-fallback,True,,True,,
+2,S000060,"This server, Nia checked.",R002-expanded-nominal,True,✓,True,,patient:c0_11
+2,S000061,Mira will give Nia a book.,R001-content-predicate-fallback,True,,True,,
+2,S000062,Check these small old blue sensors.,R001-content-predicate-fallback,True,,False,,
+2,S000063,Alex might check the disk.,R001-content-predicate-fallback,True,,False,,
+2,S000064,The sensors that Mira checked restart.,R001-content-predicate-fallback,True,✓,False,,predicate:c30_37
+2,S000065,Mira gives each engineer two keys.,R001-content-predicate-fallback,True,,False,,
+2,S000066,Alex and Nia check the zorbin.,R001-content-predicate-fallback,True,,False,,
+2,S000066,Alex and Nia check the zorbin.,R002-expanded-nominal,True,✓,False,,agent:c0_12
+2,S000067,Can you check the zorbin?,R001-content-predicate-fallback,True,,False,,
+2,S000068,"Alex checked the keys, and Alex moved them.",R001-content-predicate-fallback,True,,True,,
+2,S000069,"If the train fails, Alex will check the train.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_2
+2,S000070,Is the server not checked by Mira?,R001-content-predicate-fallback,True,,False,,
+2,S000071,This sensor is quieter than the old sensor.,R001-content-predicate-fallback,True,✓,False,,predicate:c15_22|predicate:c32_35
+2,S000072,Check the one server.,R001-content-predicate-fallback,True,,False,,
+2,S000073,The rooms are very large.,R001-content-predicate-fallback,True,,False,,
+2,S000074,Might Nia check the quill?,R001-content-predicate-fallback,True,,False,,
+2,S000075,Mira does not check the zorbin.,R001-content-predicate-fallback,True,,True,,
+2,S000076,Check the disks.,R001-content-predicate-fallback,True,,True,,
+2,S000077,"This train, Mira checks.",R001-content-predicate-fallback,True,✓,False,,predicate:c17_23
+2,S000078,The server that Nia checks will restart.,R001-content-predicate-fallback,True,,False,,
+2,S000079,Alex gives each engineer two books.,R001-content-predicate-fallback,True,,False,,
+2,S000080,Alex and Mira check the zorbin.,R001-content-predicate-fallback,True,,False,,
+2,S000080,Alex and Mira check the zorbin.,R002-expanded-nominal,True,✓,False,,agent:c0_13
+2,S000081,"If the server fails, Mira will not check the server.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_2
+2,S000082,"Mira checked the boxes, and Mira moved them.",R001-content-predicate-fallback,True,,True,,
+2,S000083,Can you check the lamp?,R001-content-predicate-fallback,True,,False,,
+2,S000084,Are the books not carried by Mira?,R001-content-predicate-fallback,True,,False,,
+2,S000085,Mira does not check the quill.,R001-content-predicate-fallback,True,,False,,
+2,S000086,Check three sensors.,R001-content-predicate-fallback,True,,False,,
+2,S000087,Alex must not check the disk.,R001-content-predicate-fallback,True,,False,,
+2,S000088,Mira reads the book.,R001-content-predicate-fallback,True,,True,,
+2,S000089,Check this small old blue lamp.,R001-content-predicate-fallback,True,,True,,
+2,S000090,"This server, Mira did not check.",R001-content-predicate-fallback,True,,False,,
+2,S000090,"This server, Mira did not check.",R002-expanded-nominal,True,✓,False,,patient:c0_11
+2,S000091,The sensors that Mira checks restarted.,R001-content-predicate-fallback,True,✓,False,,predicate:c0_3|predicate:c22_28
+2,S000092,This server is smaller than the old server.,R001-content-predicate-fallback,True,✓,False,,predicate:c32_35
+2,S000093,Nia gives each engineer one key.,R001-content-predicate-fallback,True,,False,,
+2,S000094,Alex and Mira check the sensor.,R001-content-predicate-fallback,True,,False,,
+2,S000094,Alex and Mira check the sensor.,R002-expanded-nominal,True,✓,False,,agent:c0_13
+2,S000095,"If the server fails, restart the server.",R001-content-predicate-fallback,True,,False,,
+2,S000096,"Mira checked the books, and Mira moved them.",R001-content-predicate-fallback,True,,True,,
+2,S000097,Nia will not restart the servers.,R001-content-predicate-fallback,True,,False,,
+2,S000098,Mira must not check the box.,R001-content-predicate-fallback,True,,False,,
+2,S000099,The rooms are not large.,R001-content-predicate-fallback,True,,False,,
+2,S000100,Check all books.,R001-content-predicate-fallback,True,,False,,
+2,S000101,Does Mira not check the book?,R001-content-predicate-fallback,True,,True,,
+2,S000102,Check these small old blue lamps.,R001-content-predicate-fallback,True,,False,,
+2,S000103,"This box, Mira checked.",R001-content-predicate-fallback,True,,True,,
+2,S000103,"This box, Mira checked.",R002-expanded-nominal,True,✓,True,,patient:c0_8
+2,S000104,The sensors that Nia checked restart.,R001-content-predicate-fallback,True,✓,False,,predicate:c29_36
+2,S000105,Mira gives each engineer four disks.,R001-content-predicate-fallback,True,,False,,
+2,S000106,This sensor is the smallest among the sensors.,R001-content-predicate-fallback,True,,False,,
+2,S000107,Alex and Nia check the train.,R001-content-predicate-fallback,True,,False,,
+2,S000107,Alex and Nia check the train.,R002-expanded-nominal,True,✓,False,,agent:c0_12
+2,S000108,"If the sensor fails, Alex will not check the sensor.",R001-content-predicate-fallback,True,,False,,
+2,S000109,"Mira checked the book, and Mira moved it.",R001-content-predicate-fallback,True,,True,,
+2,S000110,Did Mira repair the lamps?,R001-content-predicate-fallback,True,,True,,
+2,S000111,Must Alex check the quill?,R001-content-predicate-fallback,True,,False,,
+2,S000112,Mira repairs the lamp.,R001-content-predicate-fallback,True,,True,,
+2,S000113,Check the four boxes.,R001-content-predicate-fallback,True,,True,,
+2,S000114,Does Nia check the key?,R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000115,Check these small old blue trains.,R001-content-predicate-fallback,True,,False,,
+2,S000116,The train that Mira checked will restart.,R001-content-predicate-fallback,True,,False,,
+2,S000117,Alex gives each engineer three disks.,R001-content-predicate-fallback,True,,False,,
+2,S000118,"This sensor, Mira checked.",R001-content-predicate-fallback,True,,True,,
+2,S000118,"This sensor, Mira checked.",R002-expanded-nominal,True,✓,True,,patient:c0_11
+2,S000119,Nia hums quickly in the archive.,R001-content-predicate-fallback,True,,False,,
+2,S000119,Nia hums quickly in the archive.,R002-expanded-nominal,True,,False,,
+2,S000120,This server was the quietest among the servers.,R001-content-predicate-fallback,True,,False,,
+2,S000121,Alex and Nia check the sensor.,R001-content-predicate-fallback,True,,False,,
+2,S000121,Alex and Nia check the sensor.,R002-expanded-nominal,True,✓,False,,agent:c0_12
+2,S000122,"If the server fails, Nia will check the server.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_2|predicate:c7_13
+2,S000123,"Alex checked the boxes, and Alex moved them.",R001-content-predicate-fallback,True,,True,,
+2,S000124,Will the servers not be restarted by Mira?,R001-content-predicate-fallback,True,✓,False,,predicate:c9_16
+2,S000125,Can Nia check the sensor?,R001-content-predicate-fallback,True,,False,,
+2,S000126,The servers are not large.,R001-content-predicate-fallback,True,,False,,
+2,S000127,Check the three quills.,R001-content-predicate-fallback,True,,True,,
+2,S000128,Does Mira not check the lamp?,R001-content-predicate-fallback,True,,True,,
+2,S000129,Check this old disk.,R001-content-predicate-fallback,True,,False,,
+2,S000130,The trains that Nia checks will restart.,R001-content-predicate-fallback,True,,False,,
+2,S000131,Alex gives each engineer three books.,R001-content-predicate-fallback,True,,False,,
+2,S000132,"This book, Alex did not check.",R001-content-predicate-fallback,True,,False,,
+2,S000132,"This book, Alex did not check.",R002-expanded-nominal,True,✓,False,,patient:c0_9
+2,S000133,Mira waits in the archive.,R001-content-predicate-fallback,True,,False,,
+2,S000134,This sensor was the largest among the sensors.,R001-content-predicate-fallback,True,,False,,
+2,S000135,Alex and Nia check the book.,R001-content-predicate-fallback,True,,False,,
+2,S000135,Alex and Nia check the book.,R002-expanded-nominal,True,✓,False,,agent:c0_12
+2,S000136,Nia does not read the book.,R001-content-predicate-fallback,True,,False,,
+2,S000137,Nia might not check the lamp.,R001-content-predicate-fallback,True,,False,,
+2,S000138,Check the two trains.,R001-content-predicate-fallback,True,,False,,
+2,S000139,The servers are large.,R001-content-predicate-fallback,True,,False,,
+2,S000140,Nia checks the lamp.,R001-content-predicate-fallback,True,,True,,
+2,S000141,Check the old quills.,R001-content-predicate-fallback,True,,True,,
+2,S000142,Nia gives each engineer one book.,R001-content-predicate-fallback,True,,False,,
+2,S000143,The sensor that Nia checked restarts.,R001-content-predicate-fallback,True,✓,False,,predicate:c28_36
+2,S000144,"This book, Alex checked.",R001-content-predicate-fallback,True,,True,,
+2,S000144,"This book, Alex checked.",R002-expanded-nominal,True,✓,True,,patient:c0_9
+2,S000145,The trains in the room restart.,R001-content-predicate-fallback,True,✓,False,,predicate:c23_30
+2,S000145,The trains in the room restart.,R002-expanded-nominal,True,✓,False,,agent:c0_30|patient:c0_30
+2,S000146,This sensor was the smallest among the sensors.,R001-content-predicate-fallback,True,✓,False,,predicate:c39_46
+2,S000147,Mira and Nia check the sensor.,R001-content-predicate-fallback,True,,False,,
+2,S000147,Mira and Nia check the sensor.,R002-expanded-nominal,True,✓,False,,agent:c0_12
+2,S000148,Will Alex not restart the servers?,R001-content-predicate-fallback,True,,True,,
+2,S000149,Might Alex not check the train?,R001-content-predicate-fallback,True,,True,,
+2,S000150,The rooms are not very quiet.,R001-content-predicate-fallback,True,,False,,
+2,S000151,Check an old book.,R001-content-predicate-fallback,True,,False,,
+2,S000152,Alex does not check the server.,R001-content-predicate-fallback,True,,True,,
+2,S000153,The sensors that Alex checks restarted.,R001-content-predicate-fallback,True,✓,False,,predicate:c17_21|predicate:c22_28
+2,S000154,Check four trains.,R001-content-predicate-fallback,True,,False,,
+2,S000155,"This lamp, Alex checked.",R001-content-predicate-fallback,True,,True,,
+2,S000155,"This lamp, Alex checked.",R002-expanded-nominal,True,✓,True,,patient:c0_9
+2,S000156,Alex gives each engineer one book.,R001-content-predicate-fallback,True,,False,,
+2,S000157,Nia hums quickly.,R001-content-predicate-fallback,True,,False,,
+2,S000158,This train is the smallest among the trains.,R001-content-predicate-fallback,True,,False,,
+2,S000159,Alex and Nia check the lamp.,R001-content-predicate-fallback,True,,False,,
+2,S000159,Alex and Nia check the lamp.,R002-expanded-nominal,True,✓,False,,agent:c0_12
+2,S000160,Mira does not configure the sensors.,R001-content-predicate-fallback,True,,False,,
+2,S000161,Might Alex not check the server?,R001-content-predicate-fallback,True,,True,,
+2,S000162,Alex shows Nia a key.,R001-content-predicate-fallback,True,,False,,
+2,S000163,Check these disks.,R001-content-predicate-fallback,True,,False,,
+2,S000164,Alex does not check the zorbin.,R001-content-predicate-fallback,True,,False,,
+2,S000165,The servers that Nia checks restart.,R001-content-predicate-fallback,True,✓,False,,predicate:c28_35
+2,S000166,Check three disks.,R001-content-predicate-fallback,True,,False,,
+2,S000167,"This sensor, Mira does not check.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000167,"This sensor, Mira does not check.",R002-expanded-nominal,True,,False,,
+2,S000168,Mira gives each student one book.,R001-content-predicate-fallback,True,,False,,
+2,S000169,Alex hums quietly in the archive.,R001-content-predicate-fallback,True,✓,False,,predicate:c10_17|predicate:c25_32
+2,S000169,Alex hums quietly in the archive.,R002-expanded-nominal,True,✓,False,,agent:c0_32
+2,S000170,This train was the smallest among the trains.,R001-content-predicate-fallback,True,,False,,
+2,S000171,Alex and Mira check the book.,R001-content-predicate-fallback,True,,False,,
+2,S000171,Alex and Mira check the book.,R002-expanded-nominal,True,✓,False,,agent:c0_13
+2,S000172,Will Alex not configure the sensor?,R001-content-predicate-fallback,True,,False,,
+2,S000173,Alex might not check the zorbin.,R001-content-predicate-fallback,True,,False,,
+2,S000174,Alex will give Mira a book.,R001-content-predicate-fallback,True,,True,,
+2,S000175,Check an old lamp.,R001-content-predicate-fallback,True,,False,,
+2,S000176,Mira checks the book.,R001-content-predicate-fallback,True,,True,,
+2,S000177,The servers that Nia checked restarted.,R001-content-predicate-fallback,True,,False,,
+2,S000178,"This train, Nia checked.",R001-content-predicate-fallback,True,,True,,
+2,S000178,"This train, Nia checked.",R002-expanded-nominal,True,✓,True,,patient:c0_10
+2,S000179,Check two zorbins.,R001-content-predicate-fallback,True,,False,,
+2,S000180,Mira gives each engineer one book.,R001-content-predicate-fallback,True,,False,,
+2,S000181,Alex hums in the archive.,R001-content-predicate-fallback,True,,False,,
+2,S000181,Alex hums in the archive.,R002-expanded-nominal,True,,False,,
+2,S000182,This train was smaller than the old train.,R001-content-predicate-fallback,True,✓,False,,predicate:c32_35
+2,S000183,Alex and Mira check the quill.,R001-content-predicate-fallback,True,,False,,
+2,S000183,Alex and Mira check the quill.,R002-expanded-nominal,True,✓,False,,agent:c0_13
+2,S000184,Alex will not check the server.,R001-content-predicate-fallback,True,,True,,
+2,S000185,Nia might check the lamp.,R001-content-predicate-fallback,True,,True,,
+2,S000186,Mira will give Nia a disk.,R001-content-predicate-fallback,True,,True,,
+2,S000187,Check old sensors.,R001-content-predicate-fallback,True,,False,,
+2,S000188,Alex checks the key.,R001-content-predicate-fallback,True,,False,,
+2,S000189,The sensors that Alex checks will restart.,R001-content-predicate-fallback,True,,False,,
+2,S000190,"This zorbin, Mira checked.",R001-content-predicate-fallback,True,,True,,
+2,S000190,"This zorbin, Mira checked.",R002-expanded-nominal,True,✓,True,,patient:c0_11
+2,S000191,Check the two zorbins.,R001-content-predicate-fallback,True,,False,,
+2,S000192,Nia gives each student two books.,R001-content-predicate-fallback,True,,False,,
+2,S000193,Nia hums in the archive.,R001-content-predicate-fallback,True,,False,,
+2,S000193,Nia hums in the archive.,R002-expanded-nominal,True,,False,,
+2,S000194,This server was quieter than the old server.,R001-content-predicate-fallback,True,✓,False,,predicate:c16_23|predicate:c33_36|predicate:c37_43
+2,S000195,Alex and Mira check the disk.,R001-content-predicate-fallback,True,,False,,
+2,S000195,Alex and Mira check the disk.,R002-expanded-nominal,True,✓,False,,agent:c0_13
+2,S000196,Will Nia see the sensor?,R001-content-predicate-fallback,True,,True,,
+2,S000197,Must Mira check the sensor?,R001-content-predicate-fallback,True,,False,,
+2,S000198,The servers were not quiet.,R001-content-predicate-fallback,True,,False,,
+2,S000199,Check the small old blue trains.,R001-content-predicate-fallback,True,,False,,
+2,S000200,Does Nia check the quill?,R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000201,The server that Alex checks will restart.,R001-content-predicate-fallback,True,,False,,
+2,S000202,"This quill, Alex checked.",R001-content-predicate-fallback,True,,True,,
+2,S000202,"This quill, Alex checked.",R002-expanded-nominal,True,✓,True,,patient:c0_10
+2,S000203,Check the three lamps.,R001-content-predicate-fallback,True,,True,,
+2,S000204,Nia hums quietly in the archive.,R001-content-predicate-fallback,True,,False,,
+2,S000204,Nia hums quietly in the archive.,R002-expanded-nominal,True,✓,False,,agent:c0_31
+2,S000205,Nia gives each student one book.,R001-content-predicate-fallback,True,,False,,
+2,S000206,This train was larger than the old train.,R001-content-predicate-fallback,True,✓,False,,predicate:c31_34
+2,S000207,Will Mira not restart the server?,R001-content-predicate-fallback,True,,True,,
+2,S000208,Can Nia check the zorbin?,R001-content-predicate-fallback,True,,False,,
+2,S000209,Nia gave Mira a disk.,R001-content-predicate-fallback,True,,True,,
+2,S000210,Check a small old blue quill.,R001-content-predicate-fallback,True,,True,,
+2,S000211,Alex checks the train.,R001-content-predicate-fallback,True,,False,,
+2,S000212,The sensors that Nia checks will restart.,R001-content-predicate-fallback,True,,False,,
+2,S000213,"This zorbin, Alex checked.",R001-content-predicate-fallback,True,,True,,
+2,S000213,"This zorbin, Alex checked.",R002-expanded-nominal,True,✓,True,,patient:c0_11
+2,S000214,Check two lamps.,R001-content-predicate-fallback,True,,False,,
+2,S000215,Alex gives each engineer three keys.,R001-content-predicate-fallback,True,,False,,
+2,S000216,The trains in the archive restart.,R001-content-predicate-fallback,True,✓,False,,predicate:c26_33
+2,S000216,The trains in the archive restart.,R002-expanded-nominal,True,✓,False,,patient:c0_33
+2,S000217,This sensor was smaller than the old sensor.,R001-content-predicate-fallback,True,✓,False,,predicate:c33_36|predicate:c5_11
+2,S000218,Will the book be carried by Nia?,R001-content-predicate-fallback,True,,True,,
+2,S000219,Might Mira not check the server?,R001-content-predicate-fallback,True,,False,,
+2,S000220,Mira will show Alex a book.,R001-content-predicate-fallback,True,,True,,
+2,S000221,Check the small old blue lamps.,R001-content-predicate-fallback,True,,True,,
+2,S000222,Nia does not check the sensor.,R001-content-predicate-fallback,True,,False,,
+2,S000223,The server that Alex checks restarts.,R001-content-predicate-fallback,True,✓,False,,predicate:c28_36
+2,S000224,"This box, Mira does not check.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000224,"This box, Mira does not check.",R002-expanded-nominal,True,,False,,
+2,S000225,Check the one key.,R001-content-predicate-fallback,True,,False,,
+2,S000226,Nia gives each student three books.,R001-content-predicate-fallback,True,,False,,
+2,S000227,Alex waits quietly.,R001-content-predicate-fallback,True,,False,,
+2,S000228,This server was larger than the old server.,R001-content-predicate-fallback,True,✓,False,,predicate:c32_35
+2,S000229,The sensor will not be configured by Nia.,R001-content-predicate-fallback,True,,True,,
+2,S000230,Might Alex not check the box?,R001-content-predicate-fallback,True,,False,,
+2,S000231,Alex showed Nia a disk.,R001-content-predicate-fallback,True,,False,,
+2,S000232,Check this zorbin.,R001-content-predicate-fallback,True,,False,,
+2,S000233,Nia checks the box.,R001-content-predicate-fallback,True,,True,,
+2,S000234,"This sensor, Alex does not check.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000234,"This sensor, Alex does not check.",R002-expanded-nominal,True,,False,,
+2,S000235,The sensor that Alex checks restarted.,R001-content-predicate-fallback,True,✓,False,,predicate:c0_3|predicate:c21_27
+2,S000236,Check one sensor.,R001-content-predicate-fallback,True,,False,,
+2,S000237,Nia gives each engineer two keys.,R001-content-predicate-fallback,True,,False,,
+2,S000238,The server in the room restarts.,R001-content-predicate-fallback,True,✓,False,,predicate:c23_31
+2,S000238,The server in the room restarts.,R002-expanded-nominal,True,✓,False,,agent:c0_31
+2,S000239,This server was faster than the old server.,R001-content-predicate-fallback,True,,False,,
+2,S000240,Will the box be moved by Nia?,R001-content-predicate-fallback,True,,True,,
+2,S000241,Might Mira check the lamp?,R001-content-predicate-fallback,True,,True,,
+2,S000242,Mira gives Alex a book.,R001-content-predicate-fallback,True,,True,,
+2,S000243,Check a small old blue key.,R001-content-predicate-fallback,True,,False,,
+2,S000244,Does Nia not check the sensor?,R001-content-predicate-fallback,True,,True,,
+2,S000245,"This zorbin, Nia checks.",R001-content-predicate-fallback,True,✓,False,,predicate:c17_23
+2,S000246,The sensors that Mira checks will restart.,R001-content-predicate-fallback,True,,False,,
+2,S000247,Check the three disks.,R001-content-predicate-fallback,True,,False,,
+2,S000248,Alex gives each engineer one disk.,R001-content-predicate-fallback,True,,False,,
+2,S000249,Alex waits in the archive.,R001-content-predicate-fallback,True,,False,,
+2,S000250,This sensor was faster than the old sensor.,R001-content-predicate-fallback,True,✓,False,,predicate:c32_35
+2,S000251,Alex will configure the sensors.,R001-content-predicate-fallback,True,,False,,
+2,S000252,Must Alex not check the key?,R001-content-predicate-fallback,True,,False,,
+2,S000253,Alex will give Mira a key.,R001-content-predicate-fallback,True,,True,,
+2,S000254,Check this small old blue key.,R001-content-predicate-fallback,True,,True,,
+2,S000255,Does Mira not check the server?,R001-content-predicate-fallback,True,,True,,
+2,S000256,"This book, Mira checks.",R001-content-predicate-fallback,True,✓,False,,predicate:c16_22
+2,S000257,The servers that Alex checks will restart.,R001-content-predicate-fallback,True,,False,,
+2,S000258,Check one book.,R001-content-predicate-fallback,True,,False,,
+2,S000259,Mira gives each student four keys.,R001-content-predicate-fallback,True,,False,,
+2,S000260,Alex hums quickly in the room.,R001-content-predicate-fallback,True,,False,,
+2,S000260,Alex hums quickly in the room.,R002-expanded-nominal,True,,False,,
+2,S000261,This sensor is faster than the old sensor.,R001-content-predicate-fallback,True,✓,False,,predicate:c31_34
+2,S000262,The boxes will not be moved by Alex.,R001-content-predicate-fallback,True,,True,,
+2,S000263,Alex must not check the key.,R001-content-predicate-fallback,True,,False,,
+2,S000264,Alex hums.,R001-content-predicate-fallback,True,,True,,
+2,S000265,Check lamps.,R001-content-predicate-fallback,True,,True,,
+2,S000266,Does Alex check the lamp?,R001-content-predicate-fallback,True,,True,,
+2,S000267,"This box, Nia does not check.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000267,"This box, Nia does not check.",R002-expanded-nominal,True,,False,,
+2,S000268,The sensor that Alex checks restarts.,R001-content-predicate-fallback,True,✓,False,,predicate:c28_36
+2,S000269,Check the one disk.,R001-content-predicate-fallback,True,,False,,
+2,S000270,Mira gives each engineer two disks.,R001-content-predicate-fallback,True,,False,,
+2,S000271,Alex waits in the room.,R001-content-predicate-fallback,True,,False,,
+2,S000272,This server is the smallest among the servers.,R001-content-predicate-fallback,True,,False,,
+2,S000273,Did Nia carry the book?,R001-content-predicate-fallback,True,,True,,
+2,S000274,Nia must check the key.,R001-content-predicate-fallback,True,,False,,
+2,S000275,Alex showed Mira a book.,R001-content-predicate-fallback,True,,True,,
+2,S000276,Check this small old blue train.,R001-content-predicate-fallback,True,,False,,
+2,S000277,Nia checks the server.,R001-content-predicate-fallback,True,,False,,
+2,S000278,"This disk, Mira does not check.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000278,"This disk, Mira does not check.",R002-expanded-nominal,True,,False,,
+2,S000279,The train that Nia checks restarted.,R001-content-predicate-fallback,True,✓,False,,predicate:c19_25
+2,S000280,Check three books.,R001-content-predicate-fallback,True,,False,,
+2,S000281,Alex gives each engineer one key.,R001-content-predicate-fallback,True,,False,,
+2,S000282,The sensors in the room restart.,R001-content-predicate-fallback,True,✓,False,,predicate:c24_31
+2,S000282,The sensors in the room restart.,R002-expanded-nominal,True,✓,False,,agent:c0_31|patient:c0_31
+2,S000283,This sensor is larger than the old sensor.,R001-content-predicate-fallback,True,✓,False,,predicate:c31_34
+2,S000284,Does Alex check the servers?,R001-content-predicate-fallback,True,,True,,
+2,S000285,Alex might check the quill.,R001-content-predicate-fallback,True,,False,,
+2,S000286,The room was not large.,R001-content-predicate-fallback,True,,False,,
+2,S000287,Check the small old blue lamp.,R001-content-predicate-fallback,True,,True,,
+2,S000288,Mira checks the zorbin.,R001-content-predicate-fallback,True,,False,,
+2,S000289,"This key, Alex checked.",R001-content-predicate-fallback,True,,True,,
+2,S000289,"This key, Alex checked.",R002-expanded-nominal,True,✓,True,,patient:c0_8
+2,S000290,The server that Mira checks restarted.,R001-content-predicate-fallback,True,✓,False,,predicate:c0_3|predicate:c21_27
+2,S000291,Check the one lamp.,R001-content-predicate-fallback,True,,False,,
+2,S000292,Alex gives each student one book.,R001-content-predicate-fallback,True,,False,,
+2,S000293,Alex waited yesterday.,R001-content-predicate-fallback,True,,True,,
+2,S000294,This server was the largest among the servers.,R001-content-predicate-fallback,True,,False,,
+2,S000295,The lamps were repaired by Nia.,R001-content-predicate-fallback,True,,True,,
+2,S000296,Mira must check the sensor.,R001-content-predicate-fallback,True,,False,,
+2,S000297,Alex will give Mira a disk.,R001-content-predicate-fallback,True,,False,,
+2,S000298,Check the small old blue train.,R001-content-predicate-fallback,True,,True,,
+2,S000299,Does Alex check the box?,R001-content-predicate-fallback,True,,True,,
+2,S000300,"This zorbin, Alex does not check.",R001-content-predicate-fallback,True,✓,False,,predicate:c0_4
+2,S000300,"This zorbin, Alex does not check.",R002-expanded-nominal,True,,False,,

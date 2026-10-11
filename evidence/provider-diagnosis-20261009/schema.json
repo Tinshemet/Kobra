@@ -1,0 +1,49 @@
+{
+  "request": {
+    "model": "llama3.1:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Return JSON with color set to BLUE."
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 0,
+      "num_predict": 100
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "enum": [
+            "BLUE"
+          ]
+        }
+      },
+      "required": [
+        "color"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "response": {
+    "model": "llama3.1:8b",
+    "created_at": "2026-10-09T10:18:32.472673929Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"color\": \"BLUE\"}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 604314125,
+    "load_duration": 207671685,
+    "prompt_eval_count": 18,
+    "prompt_eval_duration": 167403000,
+    "eval_count": 7,
+    "eval_duration": 225266000
+  },
+  "seconds": 0.6049703010003213
+}

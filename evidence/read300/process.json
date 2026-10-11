@@ -1,0 +1,72 @@
+{
+  "version": "read300-process-1",
+  "status": "paused_user_returned",
+  "goal": "at least 285 exact cases out of each fresh batch of 300",
+  "batch_size": 300,
+  "passing_count": 285,
+  "next_batch": 6,
+  "completed_batches": [
+    {
+      "batch": 1,
+      "exact": 79,
+      "total": 300,
+      "accuracy": 0.2633333333333333,
+      "source_retained": 300,
+      "audit": "verified",
+      "retired_to_development": true
+    },
+    {
+      "batch": 2,
+      "exact": 82,
+      "total": 300,
+      "accuracy": 0.2733333333333333,
+      "source_retained": 300,
+      "audit": "verified",
+      "retired_to_development": true
+    },
+    {
+      "batch": 3,
+      "exact": 88,
+      "total": 300,
+      "accuracy": 0.29333333333333333,
+      "source_retained": 300,
+      "audit": "verified",
+      "retired_to_development": true
+    },
+    {
+      "batch": 5,
+      "exact": 260,
+      "total": 300,
+      "accuracy": 0.8666666666666667,
+      "source_retained": 300,
+      "source_unchanged": true,
+      "audit": "pending",
+      "retired_to_development": false
+    }
+  ],
+  "contract": "serpent-read-slots-1",
+  "freshness": "no duplicate normalized sentence across batches or known development inputs; not a claim about pretraining",
+  "distribution": "Serpent core grammar balanced planner; no family filters; previously seen normalized sentences excluded",
+  "retention": "all original source characters must survive, including failures",
+  "no_midrun_changes": true,
+  "stop_only_after": "passing fresh batch, frozen-source verification and offline replay",
+  "current_batch": 5,
+  "protocol": "benchmarks/read300/protocol.json",
+  "fix_ledger": "benchmarks/read300/fixes.json",
+  "evaluation": "evidence/read300/batch-005/evaluation",
+  "persistent_goal_status": "paused",
+  "continuation_note": "User returned, satisfying their explicit stop condition. No evaluation running. Batch 5 completed; offline replay audit and failure review pending. 95% target not reached.",
+  "aborted_batches": [
+    {
+      "batch": 4,
+      "state": "aborted_infrastructure",
+      "planned_cases": 300,
+      "completed_cases": 4,
+      "exact_completed": 0,
+      "reason": "Every completed call ended with length before a usable answer; thinking-enabled transport exhausted the generation cap.",
+      "retired_sentences": 300,
+      "no_300_case_accuracy_claim": true,
+      "source_retained_completed": 4
+    }
+  ]
+}

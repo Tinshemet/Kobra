@@ -1,0 +1,130 @@
+STARTED 2026-10-09T15:24:17.540381+00:00 batch=2 model=llama3.1:8b
+{"batch": 2, "completed": 10, "total": 300, "exact": 3, "retained": 10, "elapsed_seconds": 85.423521566001, "updated_utc": "2026-10-09T15:25:42.980414+00:00"}
+{"batch": 2, "completed": 20, "total": 300, "exact": 4, "retained": 20, "elapsed_seconds": 152.45462719699935, "updated_utc": "2026-10-09T15:26:50.011520+00:00"}
+{"batch": 2, "completed": 30, "total": 300, "exact": 6, "retained": 30, "elapsed_seconds": 217.06619977800074, "updated_utc": "2026-10-09T15:27:54.623092+00:00"}
+{"batch": 2, "completed": 40, "total": 300, "exact": 10, "retained": 40, "elapsed_seconds": 281.8822878840001, "updated_utc": "2026-10-09T15:28:59.439181+00:00"}
+{"batch": 2, "completed": 50, "total": 300, "exact": 13, "retained": 50, "elapsed_seconds": 339.30585282500033, "updated_utc": "2026-10-09T15:29:56.862745+00:00"}
+{"batch": 2, "completed": 60, "total": 300, "exact": 17, "retained": 60, "elapsed_seconds": 405.5793315939991, "updated_utc": "2026-10-09T15:31:03.136224+00:00"}
+{"batch": 2, "completed": 70, "total": 300, "exact": 19, "retained": 70, "elapsed_seconds": 463.95251692799866, "updated_utc": "2026-10-09T15:32:01.509410+00:00"}
+{"batch": 2, "completed": 80, "total": 300, "exact": 21, "retained": 80, "elapsed_seconds": 514.2985066340007, "updated_utc": "2026-10-09T15:32:51.855400+00:00"}
+{"batch": 2, "completed": 90, "total": 300, "exact": 24, "retained": 90, "elapsed_seconds": 578.0868525510014, "updated_utc": "2026-10-09T15:33:55.643746+00:00"}
+{"batch": 2, "completed": 100, "total": 300, "exact": 25, "retained": 100, "elapsed_seconds": 656.0964777930021, "updated_utc": "2026-10-09T15:35:13.653371+00:00"}
+{"batch": 2, "completed": 110, "total": 300, "exact": 29, "retained": 110, "elapsed_seconds": 716.3745085379996, "updated_utc": "2026-10-09T15:36:13.931401+00:00"}
+{"batch": 2, "completed": 120, "total": 300, "exact": 32, "retained": 120, "elapsed_seconds": 767.8291378450012, "updated_utc": "2026-10-09T15:37:05.386030+00:00"}
+{"batch": 2, "completed": 130, "total": 300, "exact": 35, "retained": 130, "elapsed_seconds": 827.5798158840007, "updated_utc": "2026-10-09T15:38:05.136709+00:00"}
+{"batch": 2, "completed": 140, "total": 300, "exact": 36, "retained": 140, "elapsed_seconds": 881.5385841409989, "updated_utc": "2026-10-09T15:38:59.095477+00:00"}
+{"batch": 2, "completed": 150, "total": 300, "exact": 40, "retained": 150, "elapsed_seconds": 938.9589425890008, "updated_utc": "2026-10-09T15:39:56.515835+00:00"}
+{"batch": 2, "completed": 160, "total": 300, "exact": 42, "retained": 160, "elapsed_seconds": 1011.5819394700011, "updated_utc": "2026-10-09T15:41:09.138832+00:00"}
+{"batch": 2, "completed": 170, "total": 300, "exact": 43, "retained": 170, "elapsed_seconds": 1073.2395529220012, "updated_utc": "2026-10-09T15:42:10.796446+00:00"}
+{"batch": 2, "completed": 180, "total": 300, "exact": 46, "retained": 180, "elapsed_seconds": 1123.9937919660006, "updated_utc": "2026-10-09T15:43:01.550684+00:00"}
+{"batch": 2, "completed": 190, "total": 300, "exact": 50, "retained": 190, "elapsed_seconds": 1184.4249608930004, "updated_utc": "2026-10-09T15:44:01.981854+00:00"}
+{"batch": 2, "completed": 200, "total": 300, "exact": 51, "retained": 200, "elapsed_seconds": 1244.9219854420007, "updated_utc": "2026-10-09T15:45:02.478878+00:00"}
+{"batch": 2, "completed": 210, "total": 300, "exact": 56, "retained": 210, "elapsed_seconds": 1311.9841596510014, "updated_utc": "2026-10-09T15:46:09.541052+00:00"}
+{"batch": 2, "completed": 220, "total": 300, "exact": 59, "retained": 220, "elapsed_seconds": 1374.9935078960007, "updated_utc": "2026-10-09T15:47:12.550400+00:00"}
+{"batch": 2, "completed": 230, "total": 300, "exact": 61, "retained": 230, "elapsed_seconds": 1433.202494330999, "updated_utc": "2026-10-09T15:48:10.759387+00:00"}
+{"batch": 2, "completed": 240, "total": 300, "exact": 63, "retained": 240, "elapsed_seconds": 1496.047732070001, "updated_utc": "2026-10-09T15:49:13.604625+00:00"}
+{"batch": 2, "completed": 250, "total": 300, "exact": 66, "retained": 250, "elapsed_seconds": 1546.8774139870002, "updated_utc": "2026-10-09T15:50:04.434307+00:00"}
+{"batch": 2, "completed": 260, "total": 300, "exact": 69, "retained": 260, "elapsed_seconds": 1592.729323847001, "updated_utc": "2026-10-09T15:50:50.286217+00:00"}
+{"batch": 2, "completed": 270, "total": 300, "exact": 73, "retained": 270, "elapsed_seconds": 1651.7711652469989, "updated_utc": "2026-10-09T15:51:49.328057+00:00"}
+{"batch": 2, "completed": 280, "total": 300, "exact": 75, "retained": 280, "elapsed_seconds": 1705.7970226010002, "updated_utc": "2026-10-09T15:52:43.353924+00:00"}
+{"batch": 2, "completed": 290, "total": 300, "exact": 78, "retained": 290, "elapsed_seconds": 1796.2149127400007, "updated_utc": "2026-10-09T15:54:13.771806+00:00"}
+{"batch": 2, "completed": 300, "total": 300, "exact": 82, "retained": 300, "elapsed_seconds": 1849.9087944800012, "updated_utc": "2026-10-09T15:55:07.465687+00:00"}
+{
+  "state": "complete",
+  "batch": 2,
+  "cases": 300,
+  "exact_cases": 82,
+  "source_unchanged": true,
+  "source_retention_cases": 300,
+  "source_characters": 9090,
+  "seconds": 1849.9102747239995,
+  "adapter_errors": 0,
+  "candidate_coverage": {
+    "covered": 1082,
+    "total": 1088
+  },
+  "errors": {
+    "arranged": 300
+  },
+  "slots_correct": 3170,
+  "slots_total": 4686,
+  "required_preserved": 1149,
+  "required_total": 1427,
+  "by_group": {
+    "clause_forms": {
+      "exact": 15,
+      "cases": 24
+    },
+    "comparison": {
+      "exact": 0,
+      "cases": 23
+    },
+    "conditional": {
+      "exact": 0,
+      "cases": 8
+    },
+    "distributive": {
+      "exact": 0,
+      "cases": 23
+    },
+    "ellipsis": {
+      "exact": 0,
+      "cases": 2
+    },
+    "fronting": {
+      "exact": 11,
+      "cases": 24
+    },
+    "modifiers": {
+      "exact": 2,
+      "cases": 23
+    },
+    "nominal_coordination": {
+      "exact": 0,
+      "cases": 14
+    },
+    "noun_phrases": {
+      "exact": 9,
+      "cases": 24
+    },
+    "polite": {
+      "exact": 1,
+      "cases": 5
+    },
+    "pronoun": {
+      "exact": 8,
+      "cases": 8
+    },
+    "quantifiers": {
+      "exact": 3,
+      "cases": 23
+    },
+    "relative": {
+      "exact": 0,
+      "cases": 23
+    },
+    "scope": {
+      "exact": 4,
+      "cases": 24
+    },
+    "subordination": {
+      "exact": 0,
+      "cases": 2
+    },
+    "verb_frames": {
+      "exact": 13,
+      "cases": 24
+    },
+    "verbal_coordination": {
+      "exact": 2,
+      "cases": 2
+    },
+    "voice_tense": {
+      "exact": 14,
+      "cases": 24
+    }
+  },
+  "passing_threshold": 285,
+  "needs_offline_audit": true,
+  "scope": "Bounded 11-slot projection, not full graph accuracy or meaning preservation"
+}

@@ -1,0 +1,53 @@
+{
+  "request": {
+    "model": "llama3.1:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Return exactly {\"color\":\"RED\",\"note\":\"ok\"}"
+      }
+    ],
+    "format": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "enum": [
+            "BLUE"
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "color",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 0,
+      "num_predict": 100,
+      "num_ctx": 8192
+    }
+  },
+  "response": {
+    "model": "llama3.1:8b",
+    "created_at": "2026-10-09T10:23:21.336409434Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"color\": \"BLUE\", \"note\": \"ok\"}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 14846128440,
+    "load_duration": 248868990,
+    "prompt_eval_count": 21,
+    "prompt_eval_duration": 678972000,
+    "eval_count": 13,
+    "eval_duration": 779860000
+  }
+}

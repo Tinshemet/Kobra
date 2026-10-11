@@ -1,0 +1,9 @@
+{
+  "state": "verified",
+  "response_replays": 300,
+  "transport_failures": [],
+  "source_hashes_verified": true,
+  "new_model_calls": 0,
+  "cases": 300,
+  "exact_cases": 82
+}

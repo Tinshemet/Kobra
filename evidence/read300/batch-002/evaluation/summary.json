@@ -1,0 +1,99 @@
+{
+  "state": "complete",
+  "batch": 2,
+  "cases": 300,
+  "exact_cases": 82,
+  "source_unchanged": true,
+  "source_retention_cases": 300,
+  "source_characters": 9090,
+  "seconds": 1849.9102747239995,
+  "adapter_errors": 0,
+  "candidate_coverage": {
+    "covered": 1082,
+    "total": 1088
+  },
+  "errors": {
+    "arranged": 300
+  },
+  "slots_correct": 3170,
+  "slots_total": 4686,
+  "required_preserved": 1149,
+  "required_total": 1427,
+  "by_group": {
+    "clause_forms": {
+      "exact": 15,
+      "cases": 24
+    },
+    "comparison": {
+      "exact": 0,
+      "cases": 23
+    },
+    "conditional": {
+      "exact": 0,
+      "cases": 8
+    },
+    "distributive": {
+      "exact": 0,
+      "cases": 23
+    },
+    "ellipsis": {
+      "exact": 0,
+      "cases": 2
+    },
+    "fronting": {
+      "exact": 11,
+      "cases": 24
+    },
+    "modifiers": {
+      "exact": 2,
+      "cases": 23
+    },
+    "nominal_coordination": {
+      "exact": 0,
+      "cases": 14
+    },
+    "noun_phrases": {
+      "exact": 9,
+      "cases": 24
+    },
+    "polite": {
+      "exact": 1,
+      "cases": 5
+    },
+    "pronoun": {
+      "exact": 8,
+      "cases": 8
+    },
+    "quantifiers": {
+      "exact": 3,
+      "cases": 23
+    },
+    "relative": {
+      "exact": 0,
+      "cases": 23
+    },
+    "scope": {
+      "exact": 4,
+      "cases": 24
+    },
+    "subordination": {
+      "exact": 0,
+      "cases": 2
+    },
+    "verb_frames": {
+      "exact": 13,
+      "cases": 24
+    },
+    "verbal_coordination": {
+      "exact": 2,
+      "cases": 2
+    },
+    "voice_tense": {
+      "exact": 14,
+      "cases": 24
+    }
+  },
+  "passing_threshold": 285,
+  "needs_offline_audit": true,
+  "scope": "Bounded 11-slot projection, not full graph accuracy or meaning preservation"
+}

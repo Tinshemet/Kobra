@@ -1,0 +1,10 @@
+{
+  "state": "capture_complete",
+  "planned": 20,
+  "attempted": 20,
+  "structurally_accepted": 0,
+  "errors": 20,
+  "semantic_review": "pending",
+  "semantic_accuracy": null,
+  "regression_delta": null
+}

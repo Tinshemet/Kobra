@@ -1,0 +1,10 @@
+{
+  "state": "aborted_infrastructure",
+  "planned_cases": 300,
+  "completed_cases": 4,
+  "exact_completed": 0,
+  "reason": "Every completed call ended with length before a usable answer; thinking-enabled transport exhausted the generation cap.",
+  "retired_sentences": 300,
+  "no_300_case_accuracy_claim": true,
+  "source_retained_completed": 4
+}
