@@ -30,7 +30,9 @@ DistillingReader retains the earlier source-bound prose output path, and
 StructuredReader, SelectingReader and ArrangingReader retain subsequent
 experimental alternatives. These are not all executed in sequence.
 
-Not migrated: the earlier active library/archive, read_and_settle, automatic
+Partially migrated: explicit active-library/archive snapshots and exact lookups
+are now available through KnowledgeSnapshot; see knowledge-read.rst.
+Not migrated: the full live refresh/persistence machinery, read_and_settle, automatic
 learned-knowledge or WORLD lookup, persistent conversational state, or the full
 set of old specialized readers. ContextProvider is a lookup interface. New
 code-assignment rules and external gating are additions, not proof of complete
@@ -50,8 +52,9 @@ confirmation is performed automatically.
 GatedRuleReader records this snapshot on every outcome, including ASK and model
 failure, and sends a separate copy to its optional resolver. Resolver mutation
 cannot alter retained evidence or the WORLD IDs subsequently checked by the gate.
-The client must resupply or persist this context. There is no database, archive
-retrieval, automatic fact promotion, or automatic append of each completed turn.
+The client must resupply or persist this context. Knowledge-enabled reads can
+retrieve supplied archive definitions and live name candidates. There is no
+database, automatic fact promotion, or automatic append of each completed turn.
 The per-input source ledger and this prior-context ledger have separate purposes.
 
 Confidence and evaluation
@@ -66,7 +69,7 @@ from wrong accepts, unnecessary ASK and unrelated failure-based ASK. Contract
 tests are not empirical model accuracy. The 97.67% result remains a reused-data
 routing simulation with saved model answers, not a fresh multi-turn evaluation.
 
-Structural extension (rule-assignment-2)
+Structural extension (rule-assignment-3)
 --------------------------------------
 
 A fallback rule pass now parses bounded imperative coordination, counted member

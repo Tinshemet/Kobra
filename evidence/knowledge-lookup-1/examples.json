@@ -1,0 +1,2700 @@
+{
+  "kind": "development examples; fixture inventories; actual local code; not accuracy",
+  "new_model_calls": 0,
+  "source_hashes": {
+    "src/kobra/knowledge.py": "3533bb71c51bab1f7d91ccd06d257317a96d06beac0829d7c20385152d15a666",
+    "src/kobra/knowledge_resolution.py": "4d25509e09590f2cbccfa5d333d5ab6d33a16d8fab4a8961d476042d1d4c33e8",
+    "src/kobra/confidence_gate.py": "9b24dce9fed8d955cd506f7379315b0c8154fab0add8ec79adfa174672ec09e1",
+    "src/kobra/rule_assignment.py": "d3da5e17393419c475f26c74dd6a145b8c43b263c152c93d851bce3d13b3e48a",
+    "tools/export_knowledge_examples.py": "09d25eaad5a8100970328b00d7d99a77dbbdab9857806f80775a99599f15d44c"
+  },
+  "examples": [
+    {
+      "title": "Unique live alias",
+      "source": "Restart the server.",
+      "result": {
+        "route": "ASK",
+        "source": "Restart the server.",
+        "proposal": {
+          "source": "Restart the server.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "the server",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "label": "chunk"
+              },
+              {
+                "start": 18,
+                "end": 19,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          },
+          "groundings": {
+            "the server": "vm-1"
+          }
+        },
+        "reasons": [
+          "uncalibrated_cohort"
+        ],
+        "external_score": null,
+        "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+        "calibration_evidence": null,
+        "cohort": "code:C002-active-roles:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+        "model_self_confidence_used": false,
+        "context_ledger": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [
+            {
+              "id": "vm-1",
+              "record": {
+                "name": "Alpha",
+                "aliases": [
+                  "lab machine",
+                  "server"
+                ]
+              },
+              "mentions": [],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            },
+            {
+              "id": "vm-2",
+              "record": {
+                "name": "Beta",
+                "aliases": [
+                  "lab machine"
+                ]
+              },
+              "mentions": [],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            }
+          ],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": true,
+          "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+        },
+        "assignment_source": "code",
+        "code_proposal": {
+          "source": "Restart the server.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "the server",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "label": "chunk"
+              },
+              {
+                "start": 18,
+                "end": 19,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "knowledge_evidence": {
+          "version": "knowledge-resolution-1",
+          "revision": "beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+          "snapshot": {
+            "version": "knowledge-snapshot-1",
+            "sources": {
+              "live": {
+                "revision": "example-live-1",
+                "source": "explicit-example-fixture",
+                "status": "current",
+                "entities": {
+                  "vm-1": {
+                    "name": "Alpha",
+                    "aliases": [
+                      "lab machine",
+                      "server"
+                    ]
+                  },
+                  "vm-2": {
+                    "name": "Beta",
+                    "aliases": [
+                      "lab machine"
+                    ]
+                  }
+                }
+              }
+            },
+            "revision": {
+              "live": "example-live-1",
+              "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+            },
+            "freshness": "caller_attestation_only"
+          },
+          "matches": [
+            {
+              "frame": 0,
+              "slot": "patient",
+              "mention": "the server",
+              "lookup": {
+                "term": "server",
+                "owner": null,
+                "status": "resolved",
+                "selected": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "candidates": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "live": "example-live-1",
+                  "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+                }
+              },
+              "live_candidates": [
+                "vm-1"
+              ],
+              "creates_description": false
+            }
+          ],
+          "bindings": [
+            {
+              "frame": 0,
+              "slot": "patient",
+              "mention": "the server",
+              "entity_id": "vm-1",
+              "spans": [
+                {
+                  "start": 8,
+                  "end": 18,
+                  "text": "the server"
+                }
+              ],
+              "evidence": "exact_current_name_or_alias"
+            }
+          ],
+          "lexical_mentions": [
+            {
+              "start": 12,
+              "end": 18,
+              "text": "server",
+              "lookup": {
+                "term": "server",
+                "owner": null,
+                "status": "resolved",
+                "selected": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "candidates": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "live": "example-live-1",
+                  "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+                }
+              }
+            }
+          ],
+          "issues": [],
+          "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+        }
+      }
+    },
+    {
+      "title": "Duplicate alias stays ambiguous",
+      "source": "Restart the lab machine.",
+      "result": {
+        "route": "ASK",
+        "source": "Restart the lab machine.",
+        "proposal": {
+          "source": "Restart the lab machine.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "the lab machine",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 23,
+                "text": "Restart the lab machine",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 23,
+                "text": "Restart the lab machine",
+                "label": "chunk"
+              },
+              {
+                "start": 23,
+                "end": 24,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "reasons": [
+          "knowledge_ambiguous:0:patient",
+          "uncalibrated_cohort"
+        ],
+        "external_score": null,
+        "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+        "calibration_evidence": null,
+        "cohort": "code:C002-active-roles:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+        "model_self_confidence_used": false,
+        "context_ledger": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [
+            {
+              "id": "vm-1",
+              "record": {
+                "name": "Alpha",
+                "aliases": [
+                  "lab machine",
+                  "server"
+                ]
+              },
+              "mentions": [],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            },
+            {
+              "id": "vm-2",
+              "record": {
+                "name": "Beta",
+                "aliases": [
+                  "lab machine"
+                ]
+              },
+              "mentions": [],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            }
+          ],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": true,
+          "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+        },
+        "assignment_source": "code",
+        "code_proposal": {
+          "source": "Restart the lab machine.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "the lab machine",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 23,
+                "text": "Restart the lab machine",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 23,
+                "text": "Restart the lab machine",
+                "label": "chunk"
+              },
+              {
+                "start": 23,
+                "end": 24,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "knowledge_evidence": {
+          "version": "knowledge-resolution-1",
+          "revision": "beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+          "snapshot": {
+            "version": "knowledge-snapshot-1",
+            "sources": {
+              "live": {
+                "revision": "example-live-1",
+                "source": "explicit-example-fixture",
+                "status": "current",
+                "entities": {
+                  "vm-1": {
+                    "name": "Alpha",
+                    "aliases": [
+                      "lab machine",
+                      "server"
+                    ]
+                  },
+                  "vm-2": {
+                    "name": "Beta",
+                    "aliases": [
+                      "lab machine"
+                    ]
+                  }
+                }
+              }
+            },
+            "revision": {
+              "live": "example-live-1",
+              "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+            },
+            "freshness": "caller_attestation_only"
+          },
+          "matches": [
+            {
+              "frame": 0,
+              "slot": "patient",
+              "mention": "the lab machine",
+              "lookup": {
+                "term": "lab machine",
+                "owner": null,
+                "status": "ambiguous",
+                "selected": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "vm-2",
+                    "layer": "live",
+                    "record": {
+                      "name": "Beta",
+                      "aliases": [
+                        "lab machine"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "candidates": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "vm-2",
+                    "layer": "live",
+                    "record": {
+                      "name": "Beta",
+                      "aliases": [
+                        "lab machine"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "vm-2",
+                    "layer": "live",
+                    "record": {
+                      "name": "Beta",
+                      "aliases": [
+                        "lab machine"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "live": "example-live-1",
+                  "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+                }
+              },
+              "live_candidates": [
+                "vm-1",
+                "vm-2"
+              ],
+              "creates_description": false
+            }
+          ],
+          "bindings": [],
+          "lexical_mentions": [
+            {
+              "start": 12,
+              "end": 23,
+              "text": "lab machine",
+              "lookup": {
+                "term": "lab machine",
+                "owner": null,
+                "status": "ambiguous",
+                "selected": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "vm-2",
+                    "layer": "live",
+                    "record": {
+                      "name": "Beta",
+                      "aliases": [
+                        "lab machine"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "candidates": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "vm-2",
+                    "layer": "live",
+                    "record": {
+                      "name": "Beta",
+                      "aliases": [
+                        "lab machine"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "vm-2",
+                    "layer": "live",
+                    "record": {
+                      "name": "Beta",
+                      "aliases": [
+                        "lab machine"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "live": "example-live-1",
+                  "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+                }
+              }
+            }
+          ],
+          "issues": [
+            "knowledge_ambiguous:0:patient"
+          ],
+          "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+        }
+      }
+    },
+    {
+      "title": "Definition does not create an identity",
+      "source": "Create a jumpbox.",
+      "result": {
+        "route": "ASK",
+        "source": "Create a jumpbox.",
+        "proposal": {
+          "source": "Create a jumpbox.",
+          "frames": [
+            {
+              "predicate": "Create",
+              "agent": "NONE",
+              "patient": "a jumpbox",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 16,
+                "text": "Create a jumpbox",
+                "predicate": {
+                  "start": 0,
+                  "end": 6,
+                  "text": "Create"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 16,
+                "text": "Create a jumpbox",
+                "label": "chunk"
+              },
+              {
+                "start": 16,
+                "end": 17,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "reasons": [
+          "uncalibrated_cohort"
+        ],
+        "external_score": null,
+        "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+        "calibration_evidence": null,
+        "cohort": "code:C002-active-roles:knowledge-resolution-1:4a9a1a6b5a443894c869c7e8fb743a8155908ee23afb2a98270c69c2f24bd192",
+        "model_self_confidence_used": false,
+        "context_ledger": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": false,
+          "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+        },
+        "assignment_source": "code",
+        "code_proposal": {
+          "source": "Create a jumpbox.",
+          "frames": [
+            {
+              "predicate": "Create",
+              "agent": "NONE",
+              "patient": "a jumpbox",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 16,
+                "text": "Create a jumpbox",
+                "predicate": {
+                  "start": 0,
+                  "end": 6,
+                  "text": "Create"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 16,
+                "text": "Create a jumpbox",
+                "label": "chunk"
+              },
+              {
+                "start": 16,
+                "end": 17,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "knowledge_evidence": {
+          "version": "knowledge-resolution-1",
+          "revision": "4a9a1a6b5a443894c869c7e8fb743a8155908ee23afb2a98270c69c2f24bd192",
+          "snapshot": {
+            "version": "knowledge-snapshot-1",
+            "sources": {
+              "archive": {
+                "revision": "example-archive-1",
+                "source": "explicit-example-fixture",
+                "records": [
+                  {
+                    "id": "definition-1",
+                    "word": "jumpbox",
+                    "type": "class",
+                    "kind": "vm",
+                    "source": "told",
+                    "status": "ratified",
+                    "provenance": "explicit-example-fixture"
+                  }
+                ]
+              }
+            },
+            "revision": {
+              "archive": "example-archive-1",
+              "sha256": "b30736f2155e0cf69f0f30de9874c0965c2bbd153d4e470ebf281dee8662d534"
+            },
+            "freshness": "caller_attestation_only"
+          },
+          "matches": [
+            {
+              "frame": 0,
+              "slot": "patient",
+              "mention": "a jumpbox",
+              "lookup": {
+                "term": "jumpbox",
+                "owner": null,
+                "status": "resolved",
+                "selected": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "candidates": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "archive": "example-archive-1",
+                  "sha256": "b30736f2155e0cf69f0f30de9874c0965c2bbd153d4e470ebf281dee8662d534"
+                }
+              },
+              "live_candidates": [],
+              "creates_description": true
+            }
+          ],
+          "bindings": [],
+          "lexical_mentions": [
+            {
+              "start": 9,
+              "end": 16,
+              "text": "jumpbox",
+              "lookup": {
+                "term": "jumpbox",
+                "owner": null,
+                "status": "resolved",
+                "selected": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "candidates": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "archive": "example-archive-1",
+                  "sha256": "b30736f2155e0cf69f0f30de9874c0965c2bbd153d4e470ebf281dee8662d534"
+                }
+              }
+            }
+          ],
+          "issues": [],
+          "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+        }
+      }
+    },
+    {
+      "title": "Pending definition cannot settle",
+      "source": "Create a jumpbox.",
+      "result": {
+        "route": "ASK",
+        "source": "Create a jumpbox.",
+        "proposal": {
+          "source": "Create a jumpbox.",
+          "frames": [
+            {
+              "predicate": "Create",
+              "agent": "NONE",
+              "patient": "a jumpbox",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 16,
+                "text": "Create a jumpbox",
+                "predicate": {
+                  "start": 0,
+                  "end": 6,
+                  "text": "Create"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 16,
+                "text": "Create a jumpbox",
+                "label": "chunk"
+              },
+              {
+                "start": 16,
+                "end": 17,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "reasons": [
+          "knowledge_unsupported:0:patient",
+          "uncalibrated_cohort"
+        ],
+        "external_score": null,
+        "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+        "calibration_evidence": null,
+        "cohort": "code:C002-active-roles:knowledge-resolution-1:b490c780e8146a0fc93cdb711cc1d2e3cff05054a4fad7b65664ac100a54c27c",
+        "model_self_confidence_used": false,
+        "context_ledger": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": false,
+          "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+        },
+        "assignment_source": "code",
+        "code_proposal": {
+          "source": "Create a jumpbox.",
+          "frames": [
+            {
+              "predicate": "Create",
+              "agent": "NONE",
+              "patient": "a jumpbox",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 16,
+                "text": "Create a jumpbox",
+                "predicate": {
+                  "start": 0,
+                  "end": 6,
+                  "text": "Create"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 16,
+                "text": "Create a jumpbox",
+                "label": "chunk"
+              },
+              {
+                "start": 16,
+                "end": 17,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "knowledge_evidence": {
+          "version": "knowledge-resolution-1",
+          "revision": "b490c780e8146a0fc93cdb711cc1d2e3cff05054a4fad7b65664ac100a54c27c",
+          "snapshot": {
+            "version": "knowledge-snapshot-1",
+            "sources": {
+              "archive": {
+                "revision": "example-archive-1",
+                "source": "explicit-example-fixture",
+                "records": [
+                  {
+                    "id": "definition-1",
+                    "word": "jumpbox",
+                    "type": "class",
+                    "kind": "vm",
+                    "source": "told",
+                    "status": "pending",
+                    "provenance": "explicit-example-fixture"
+                  }
+                ]
+              }
+            },
+            "revision": {
+              "archive": "example-archive-1",
+              "sha256": "41071947a64271d8b0062d42ca044b7dce2de9b82ce8f3581adc7af74d1d9124"
+            },
+            "freshness": "caller_attestation_only"
+          },
+          "matches": [
+            {
+              "frame": 0,
+              "slot": "patient",
+              "mention": "a jumpbox",
+              "lookup": {
+                "term": "jumpbox",
+                "owner": null,
+                "status": "unsupported",
+                "selected": [],
+                "candidates": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "pending",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": false,
+                    "reasons": [
+                      "pending"
+                    ]
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "pending",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": false,
+                    "reasons": [
+                      "pending"
+                    ]
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "archive": "example-archive-1",
+                  "sha256": "41071947a64271d8b0062d42ca044b7dce2de9b82ce8f3581adc7af74d1d9124"
+                }
+              },
+              "live_candidates": [],
+              "creates_description": true
+            }
+          ],
+          "bindings": [],
+          "lexical_mentions": [
+            {
+              "start": 9,
+              "end": 16,
+              "text": "jumpbox",
+              "lookup": {
+                "term": "jumpbox",
+                "owner": null,
+                "status": "unsupported",
+                "selected": [],
+                "candidates": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "pending",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": false,
+                    "reasons": [
+                      "pending"
+                    ]
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "jumpbox",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "pending",
+                      "provenance": "explicit-example-fixture"
+                    },
+                    "eligible": false,
+                    "reasons": [
+                      "pending"
+                    ]
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "archive": "example-archive-1",
+                  "sha256": "41071947a64271d8b0062d42ca044b7dce2de9b82ce8f3581adc7af74d1d9124"
+                }
+              }
+            }
+          ],
+          "issues": [
+            "knowledge_unsupported:0:patient"
+          ],
+          "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+        }
+      }
+    },
+    {
+      "title": "Stale inventory cannot bind",
+      "source": "Restart the server.",
+      "result": {
+        "route": "ASK",
+        "source": "Restart the server.",
+        "proposal": {
+          "source": "Restart the server.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "the server",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "label": "chunk"
+              },
+              {
+                "start": 18,
+                "end": 19,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "reasons": [
+          "knowledge_live_stale",
+          "knowledge_unsupported:0:patient",
+          "uncalibrated_cohort"
+        ],
+        "external_score": null,
+        "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+        "calibration_evidence": null,
+        "cohort": "code:C002-active-roles:knowledge-resolution-1:0d2d1e7dbca0fa9bbbd830c302ab7774a5158e6805673e289ece48b2c8a57732",
+        "model_self_confidence_used": false,
+        "context_ledger": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": false,
+          "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+        },
+        "assignment_source": "code",
+        "code_proposal": {
+          "source": "Restart the server.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "the server",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "label": "chunk"
+              },
+              {
+                "start": 18,
+                "end": 19,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "knowledge_evidence": {
+          "version": "knowledge-resolution-1",
+          "revision": "0d2d1e7dbca0fa9bbbd830c302ab7774a5158e6805673e289ece48b2c8a57732",
+          "snapshot": {
+            "version": "knowledge-snapshot-1",
+            "sources": {
+              "live": {
+                "revision": "example-live-1",
+                "source": "explicit-example-fixture",
+                "status": "stale",
+                "entities": {
+                  "vm-1": {
+                    "name": "Alpha",
+                    "aliases": [
+                      "lab machine",
+                      "server"
+                    ]
+                  },
+                  "vm-2": {
+                    "name": "Beta",
+                    "aliases": [
+                      "lab machine"
+                    ]
+                  }
+                }
+              }
+            },
+            "revision": {
+              "live": "example-live-1",
+              "sha256": "1ed52d5108f89013b7702d2089696043318c0a85cdb84d4053e67279ca07f68d"
+            },
+            "freshness": "caller_attestation_only"
+          },
+          "matches": [
+            {
+              "frame": 0,
+              "slot": "patient",
+              "mention": "the server",
+              "lookup": {
+                "term": "server",
+                "owner": null,
+                "status": "unsupported",
+                "selected": [],
+                "candidates": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": false,
+                    "reasons": [
+                      "live_stale"
+                    ]
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": false,
+                    "reasons": [
+                      "live_stale"
+                    ]
+                  }
+                ],
+                "issues": [
+                  "live_stale"
+                ],
+                "revision": {
+                  "live": "example-live-1",
+                  "sha256": "1ed52d5108f89013b7702d2089696043318c0a85cdb84d4053e67279ca07f68d"
+                }
+              },
+              "live_candidates": [],
+              "creates_description": false
+            }
+          ],
+          "bindings": [],
+          "lexical_mentions": [
+            {
+              "start": 12,
+              "end": 18,
+              "text": "server",
+              "lookup": {
+                "term": "server",
+                "owner": null,
+                "status": "unsupported",
+                "selected": [],
+                "candidates": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": false,
+                    "reasons": [
+                      "live_stale"
+                    ]
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": false,
+                    "reasons": [
+                      "live_stale"
+                    ]
+                  }
+                ],
+                "issues": [
+                  "live_stale"
+                ],
+                "revision": {
+                  "live": "example-live-1",
+                  "sha256": "1ed52d5108f89013b7702d2089696043318c0a85cdb84d4053e67279ca07f68d"
+                }
+              }
+            }
+          ],
+          "issues": [
+            "knowledge_live_stale",
+            "knowledge_unsupported:0:patient"
+          ],
+          "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+        }
+      }
+    },
+    {
+      "title": "Current entity outranks remembered meaning",
+      "source": "Restart the server.",
+      "result": {
+        "route": "ASK",
+        "source": "Restart the server.",
+        "proposal": {
+          "source": "Restart the server.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "the server",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "label": "chunk"
+              },
+              {
+                "start": 18,
+                "end": 19,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          },
+          "groundings": {
+            "the server": "vm-1"
+          }
+        },
+        "reasons": [
+          "uncalibrated_cohort"
+        ],
+        "external_score": null,
+        "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+        "calibration_evidence": null,
+        "cohort": "code:C002-active-roles:knowledge-resolution-1:9601e82ff9ce3811c3d9deb3f5db0a5e62b70772493f6acaaefea256054a2e16",
+        "model_self_confidence_used": false,
+        "context_ledger": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [
+            {
+              "id": "vm-1",
+              "record": {
+                "name": "Alpha",
+                "aliases": [
+                  "lab machine",
+                  "server"
+                ]
+              },
+              "mentions": [],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            },
+            {
+              "id": "vm-2",
+              "record": {
+                "name": "Beta",
+                "aliases": [
+                  "lab machine"
+                ]
+              },
+              "mentions": [],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            }
+          ],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": true,
+          "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+        },
+        "assignment_source": "code",
+        "code_proposal": {
+          "source": "Restart the server.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "the server",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 18,
+                "text": "Restart the server",
+                "label": "chunk"
+              },
+              {
+                "start": 18,
+                "end": 19,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "knowledge_evidence": {
+          "version": "knowledge-resolution-1",
+          "revision": "9601e82ff9ce3811c3d9deb3f5db0a5e62b70772493f6acaaefea256054a2e16",
+          "snapshot": {
+            "version": "knowledge-snapshot-1",
+            "sources": {
+              "live": {
+                "revision": "example-live-1",
+                "source": "explicit-example-fixture",
+                "status": "current",
+                "entities": {
+                  "vm-1": {
+                    "name": "Alpha",
+                    "aliases": [
+                      "lab machine",
+                      "server"
+                    ]
+                  },
+                  "vm-2": {
+                    "name": "Beta",
+                    "aliases": [
+                      "lab machine"
+                    ]
+                  }
+                }
+              },
+              "archive": {
+                "revision": "example-archive-1",
+                "source": "explicit-example-fixture",
+                "records": [
+                  {
+                    "id": "definition-1",
+                    "word": "server",
+                    "type": "class",
+                    "kind": "vm",
+                    "source": "told",
+                    "status": "ratified",
+                    "provenance": "explicit-example-fixture",
+                    "holds": false
+                  }
+                ]
+              }
+            },
+            "revision": {
+              "live": "example-live-1",
+              "archive": "example-archive-1",
+              "sha256": "2bbfc8eadb9c956e8340fda2c8b5066f1cc8bec656ffcbcd440f892b10865688"
+            },
+            "freshness": "caller_attestation_only"
+          },
+          "matches": [
+            {
+              "frame": 0,
+              "slot": "patient",
+              "mention": "the server",
+              "lookup": {
+                "term": "server",
+                "owner": null,
+                "status": "resolved",
+                "selected": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "candidates": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "server",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture",
+                      "holds": false
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "server",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture",
+                      "holds": false
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "live": "example-live-1",
+                  "archive": "example-archive-1",
+                  "sha256": "2bbfc8eadb9c956e8340fda2c8b5066f1cc8bec656ffcbcd440f892b10865688"
+                }
+              },
+              "live_candidates": [
+                "vm-1"
+              ],
+              "creates_description": false
+            }
+          ],
+          "bindings": [
+            {
+              "frame": 0,
+              "slot": "patient",
+              "mention": "the server",
+              "entity_id": "vm-1",
+              "spans": [
+                {
+                  "start": 8,
+                  "end": 18,
+                  "text": "the server"
+                }
+              ],
+              "evidence": "exact_current_name_or_alias"
+            }
+          ],
+          "lexical_mentions": [
+            {
+              "start": 12,
+              "end": 18,
+              "text": "server",
+              "lookup": {
+                "term": "server",
+                "owner": null,
+                "status": "resolved",
+                "selected": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "candidates": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "server",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture",
+                      "holds": false
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  },
+                  {
+                    "id": "definition-1",
+                    "layer": "archive",
+                    "record": {
+                      "id": "definition-1",
+                      "word": "server",
+                      "type": "class",
+                      "kind": "vm",
+                      "source": "told",
+                      "status": "ratified",
+                      "provenance": "explicit-example-fixture",
+                      "holds": false
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "live": "example-live-1",
+                  "archive": "example-archive-1",
+                  "sha256": "2bbfc8eadb9c956e8340fda2c8b5066f1cc8bec656ffcbcd440f892b10865688"
+                }
+              }
+            }
+          ],
+          "issues": [],
+          "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+        }
+      }
+    },
+    {
+      "title": "Parser gap: name evidence survives unresolved roles",
+      "source": "Restart Alpha.",
+      "result": {
+        "route": "ASK",
+        "source": "Restart Alpha.",
+        "proposal": {
+          "source": "Restart Alpha.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "NONE",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "unresolved",
+          "rules": [
+            "C011-structured-imperative"
+          ],
+          "reasons": [
+            "c1:missing_or_multiple_objects"
+          ],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "chunking_method": "deterministic_surface_rules",
+          "chunks": [
+            {
+              "id": "c1",
+              "kind": "action",
+              "span": {
+                "start": 0,
+                "end": 13,
+                "text": "Restart Alpha"
+              },
+              "frame": 0,
+              "modifiers": [],
+              "members": []
+            }
+          ],
+          "local_entities": [],
+          "local_references": [],
+          "chunk_relations": [],
+          "source_ledger": [
+            {
+              "start": 0,
+              "end": 13,
+              "text": "Restart Alpha",
+              "label": "action_chunk"
+            },
+            {
+              "start": 13,
+              "end": 14,
+              "text": ".",
+              "label": "connective_or_unassigned"
+            }
+          ],
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 13,
+                "text": "Restart Alpha",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 13,
+                "text": "Restart Alpha",
+                "label": "chunk"
+              },
+              {
+                "start": 13,
+                "end": 14,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "reasons": [
+          "uncalibrated_cohort",
+          "unsupported_read_structure"
+        ],
+        "external_score": null,
+        "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+        "calibration_evidence": null,
+        "cohort": "model-unresolved-v1:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+        "model_self_confidence_used": false,
+        "context_ledger": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [
+            {
+              "id": "vm-1",
+              "record": {
+                "name": "Alpha",
+                "aliases": [
+                  "lab machine",
+                  "server"
+                ]
+              },
+              "mentions": [],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            },
+            {
+              "id": "vm-2",
+              "record": {
+                "name": "Beta",
+                "aliases": [
+                  "lab machine"
+                ]
+              },
+              "mentions": [],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            }
+          ],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": true,
+          "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+        },
+        "assignment_source": "unresolved",
+        "code_proposal": {
+          "source": "Restart Alpha.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "NONE",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "unresolved",
+          "rules": [
+            "C011-structured-imperative"
+          ],
+          "reasons": [
+            "c1:missing_or_multiple_objects"
+          ],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "chunking_method": "deterministic_surface_rules",
+          "chunks": [
+            {
+              "id": "c1",
+              "kind": "action",
+              "span": {
+                "start": 0,
+                "end": 13,
+                "text": "Restart Alpha"
+              },
+              "frame": 0,
+              "modifiers": [],
+              "members": []
+            }
+          ],
+          "local_entities": [],
+          "local_references": [],
+          "chunk_relations": [],
+          "source_ledger": [
+            {
+              "start": 0,
+              "end": 13,
+              "text": "Restart Alpha",
+              "label": "action_chunk"
+            },
+            {
+              "start": 13,
+              "end": 14,
+              "text": ".",
+              "label": "connective_or_unassigned"
+            }
+          ],
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 13,
+                "text": "Restart Alpha",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 13,
+                "text": "Restart Alpha",
+                "label": "chunk"
+              },
+              {
+                "start": 13,
+                "end": 14,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "knowledge_evidence": {
+          "version": "knowledge-resolution-1",
+          "revision": "beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+          "snapshot": {
+            "version": "knowledge-snapshot-1",
+            "sources": {
+              "live": {
+                "revision": "example-live-1",
+                "source": "explicit-example-fixture",
+                "status": "current",
+                "entities": {
+                  "vm-1": {
+                    "name": "Alpha",
+                    "aliases": [
+                      "lab machine",
+                      "server"
+                    ]
+                  },
+                  "vm-2": {
+                    "name": "Beta",
+                    "aliases": [
+                      "lab machine"
+                    ]
+                  }
+                }
+              }
+            },
+            "revision": {
+              "live": "example-live-1",
+              "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+            },
+            "freshness": "caller_attestation_only"
+          },
+          "matches": [],
+          "bindings": [],
+          "lexical_mentions": [
+            {
+              "start": 8,
+              "end": 13,
+              "text": "Alpha",
+              "lookup": {
+                "term": "Alpha",
+                "owner": null,
+                "status": "resolved",
+                "selected": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "candidates": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "evidence": [
+                  {
+                    "id": "vm-1",
+                    "layer": "live",
+                    "record": {
+                      "name": "Alpha",
+                      "aliases": [
+                        "lab machine",
+                        "server"
+                      ]
+                    },
+                    "eligible": true,
+                    "reasons": []
+                  }
+                ],
+                "issues": [],
+                "revision": {
+                  "live": "example-live-1",
+                  "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+                }
+              }
+            }
+          ],
+          "issues": [],
+          "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+        }
+      }
+    },
+    {
+      "title": "Previous turn retained; pronoun still unresolved",
+      "source": "Restart it.",
+      "result": {
+        "route": "ASK",
+        "source": "Restart it.",
+        "proposal": {
+          "source": "Restart it.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "it",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 10,
+                "text": "Restart it",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 10,
+                "text": "Restart it",
+                "label": "chunk"
+              },
+              {
+                "start": 10,
+                "end": 11,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "reasons": [
+          "uncalibrated_cohort",
+          "ungrounded_reference:patient"
+        ],
+        "external_score": null,
+        "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+        "calibration_evidence": null,
+        "cohort": "code:C002-active-roles:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+        "model_self_confidence_used": false,
+        "context_ledger": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are working with Alpha.",
+              "sha256": "f085eb57877dacb96eb7d8dea1fb972b969a2ed986250222532ed6eea25976b3"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "vm-1",
+              "record": {
+                "name": "Alpha",
+                "aliases": [
+                  "lab machine",
+                  "server"
+                ]
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 20,
+                  "end": 25,
+                  "text": "Alpha"
+                }
+              ],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            },
+            {
+              "id": "vm-2",
+              "record": {
+                "name": "Beta",
+                "aliases": [
+                  "lab machine"
+                ]
+              },
+              "mentions": [],
+              "provenance": "caller_supplied_WORLD",
+              "truth_status": "not_verified_by_READ"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+        },
+        "assignment_source": "code",
+        "code_proposal": {
+          "source": "Restart it.",
+          "frames": [
+            {
+              "predicate": "Restart",
+              "agent": "NONE",
+              "patient": "it",
+              "recipient": "NONE",
+              "negation": "NONE",
+              "condition": "NONE",
+              "time": "NONE",
+              "quantity": "NONE",
+              "attribution": "NONE",
+              "modality": "NONE",
+              "act": "request"
+            }
+          ],
+          "route": "code",
+          "rules": [
+            "C002-active-roles"
+          ],
+          "reasons": [],
+          "semantic_verified": false,
+          "version": "rule-assignment-3",
+          "surface_structure": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 10,
+                "text": "Restart it",
+                "predicate": {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Restart"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 10,
+                "text": "Restart it",
+                "label": "chunk"
+              },
+              {
+                "start": 10,
+                "end": 11,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          }
+        },
+        "knowledge_evidence": {
+          "version": "knowledge-resolution-1",
+          "revision": "beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+          "snapshot": {
+            "version": "knowledge-snapshot-1",
+            "sources": {
+              "live": {
+                "revision": "example-live-1",
+                "source": "explicit-example-fixture",
+                "status": "current",
+                "entities": {
+                  "vm-1": {
+                    "name": "Alpha",
+                    "aliases": [
+                      "lab machine",
+                      "server"
+                    ]
+                  },
+                  "vm-2": {
+                    "name": "Beta",
+                    "aliases": [
+                      "lab machine"
+                    ]
+                  }
+                }
+              }
+            },
+            "revision": {
+              "live": "example-live-1",
+              "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+            },
+            "freshness": "caller_attestation_only"
+          },
+          "matches": [
+            {
+              "frame": 0,
+              "slot": "patient",
+              "mention": "it",
+              "lookup": {
+                "term": "it",
+                "owner": null,
+                "status": "unknown",
+                "selected": [],
+                "candidates": [],
+                "evidence": [],
+                "issues": [],
+                "revision": {
+                  "live": "example-live-1",
+                  "sha256": "aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8"
+                }
+              },
+              "live_candidates": [],
+              "creates_description": false
+            }
+          ],
+          "bindings": [],
+          "lexical_mentions": [],
+          "issues": [],
+          "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+        }
+      }
+    }
+  ]
+}

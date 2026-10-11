@@ -1,0 +1,110 @@
+{
+  "reviewer": "coverage_review subagent; independent from runtime implementation",
+  "date": "2026-10-11",
+  "scope": "Read-only review of legacy ActiveLibrary/Archive/read_and_settle and new Kobra knowledge lookup integration; authored integration contract tests only.",
+  "checks": {
+    "command": "PYTHONPATH=src .venv-candidates/bin/python -m unittest discover -s tests -p test_knowledge_integration.py -v",
+    "exit_status": 0,
+    "tests": 21,
+    "passed": 21,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "log": "independent-integration-tests.log",
+    "model_calls": 0,
+    "calibration": "synthetic fixtures for gate branch tests only, not empirical calibration"
+  },
+  "findings": [
+    {
+      "finding": "Existing WORLD ID existence alone allowed incorrect pronoun target.",
+      "evidence": "Pre-change synthetic gate probe Move it., IDs intended-id/unrelated-existing-id and grounding it -> unrelated-existing-id returned ACCEPT.",
+      "resolution": "Optional knowledge path now requires unique exact role-mention candidate; unsupported pronouns ASK. No-knowledge compatibility path remains unchanged."
+    },
+    {
+      "finding": "Merged caller WORLD aliases could compete with library aliases.",
+      "resolution": "All merged live candidates checked; ambiguity forces ASK."
+    },
+    {
+      "finding": "Malformed model frames null/int crashed knowledge loop.",
+      "resolution": "Shape guard defers malformed frames to gate; regression tests passed."
+    },
+    {
+      "finding": "Model bindings validated against unresolved original frames could reject every valid AI named binding.",
+      "resolution": "Final role evidence validates model groundings; original issues retained. Positive scripted AI test passed."
+    },
+    {
+      "finding": "Negative archive entry was not initially a gate reason.",
+      "resolution": "Negative lookup with no matching live target now forces ASK; live target outranks negative memory."
+    },
+    {
+      "finding": "Creation descriptions and unmentioned existing world_references could imply unsupported identity.",
+      "resolution": "Creation groundings and world references outside exact supported role candidates rejected."
+    },
+    {
+      "finding": "Caller WORLD alias metadata was unvalidated by existing context ledger.",
+      "resolution": "Malformed aliases produce diagnostic ASK rather than accidental TypeError."
+    }
+  ],
+  "coverage_matrix": [
+    {
+      "responsibility": "Exact current entity name/alias lookup",
+      "status": "implemented and integration tested"
+    },
+    {
+      "responsibility": "Ambiguous identities, stale sources, conflicting IDs",
+      "status": "explicit ASK; tested"
+    },
+    {
+      "responsibility": "Archive pending/imported/superseded/negative distinctions",
+      "status": "snapshot lookup tests plus integration gate tests"
+    },
+    {
+      "responsibility": "Immutable source/evidence transport and resolver mutation isolation",
+      "status": "tested"
+    },
+    {
+      "responsibility": "Archive owned attributes and ancestor lookup",
+      "status": "lookup API supports owner checks; automatic owner extraction/integration still absent"
+    },
+    {
+      "responsibility": "Archive class/attribute chain settlement",
+      "status": "not migrated; unsupported chains retained"
+    },
+    {
+      "responsibility": "Active library fleet/network/template relation indices",
+      "status": "not migrated as query engine; flat caller records can carry data"
+    },
+    {
+      "responsibility": "Tool-effect updates, session events, sync, persistence",
+      "status": "caller adapter responsibilities; not implemented in Kobra snapshot"
+    },
+    {
+      "responsibility": "Cross-turn coreference",
+      "status": "evidence retained; unknown pronoun binding conservatively ASK in knowledge path"
+    },
+    {
+      "responsibility": "Legacy exclusions, reciprocal clauses, self-address, meta control, clone source, affordance settlement",
+      "status": "not established by this implementation; requires separate coverage work"
+    },
+    {
+      "responsibility": "Fully constrained role/context-only model interface",
+      "status": "not implemented; general model proposal remains gated"
+    },
+    {
+      "responsibility": "Language accuracy and READ closure",
+      "status": "not measured by these tests; READ remains open"
+    }
+  ],
+  "limitations": [
+    "Synthetic integration fixtures do not establish semantic accuracy or empirical confidence.",
+    "Current source freshness and provenance remain caller assertions, not independently verified facts.",
+    "Exact lookup is not arbitrary reference resolution; lexical definitions never establish live identity.",
+    "Generic Pipeline and tool authorization remain separate; ACCEPT here is an interpretation gate, not execution permission."
+  ],
+  "reviewed_sha256": {
+    "src/kobra/knowledge.py": "b62c530d8b46f44968a6755e7d7ba61fcdabe934e69a272f5c38c4e39f241ce1",
+    "src/kobra/knowledge_resolution.py": "e5fcc86656de587a9a5885f14fa249570def1c5ea057a2718796285cfa38b869",
+    "src/kobra/confidence_gate.py": "9b24dce9fed8d955cd506f7379315b0c8154fab0add8ec79adfa174672ec09e1",
+    "tests/test_knowledge_integration.py": "59ceb7bf2d0eb7d5b794260846f57700ebecec85b8d9b3aab99a23d7fe4e7d40"
+  }
+}

@@ -39,10 +39,10 @@ class ConfidenceGate:
         self.min_cases = min_cases
         self.validators = tuple(validators)
 
-    def assess(self, text, proposal, *, cohort, world_ids=(), missing_context=(), local_bindings=()):
+    def assess(self, text, proposal, *, cohort, world_ids=(), missing_context=(), local_bindings=(), validation_reasons=()):
         # cohort, world_ids and missing_context come from application code, not
         # fields inside the untrusted model proposal or Serpent teacher labels.
-        reasons = [f'missing_context:{x}' for x in missing_context]
+        reasons = [f'missing_context:{x}' for x in missing_context] + list(validation_reasons)
         if isinstance(proposal, dict) and proposal.get('route') == 'unresolved':
             reasons.append('unsupported_read_structure')
         frames = proposal.get('frames') if isinstance(proposal, dict) else None
@@ -117,16 +117,23 @@ class ConfidenceGate:
 
 class GatedRuleReader:
     """Code first, optional model proposal, external gate, explicit ASK handoff."""
-    def __init__(self, assigner, gate, resolver=None, model_cohort='model-unresolved-v1'):
+    def __init__(self, assigner, gate, resolver=None, model_cohort='model-unresolved-v1', knowledge=None):
         self.assigner, self.gate, self.resolver = assigner, gate, resolver
         self.model_cohort = model_cohort
+        self.knowledge = knowledge
 
     def read(self, text, *, world=None, history=(), missing_context=(), context_claims=()):
         world = deepcopy(world or {})
         history = deepcopy(list(history))
         ledger = context_snapshot(history, world, context_claims)
         code = self.assigner.assign(text)
-        proposal = code
+        knowledge_evidence = None
+        if self.knowledge is not None:
+            from .knowledge_resolution import resolve_knowledge
+            knowledge_evidence = resolve_knowledge(self.knowledge, text, code, world)
+            world = deepcopy(knowledge_evidence.pop('world'))
+            ledger = context_snapshot(history, world, context_claims)
+        proposal = deepcopy(code)
         origin = 'code' if code['route'] == 'code' else 'unresolved'
         cohort = 'code:' + '+'.join(sorted(code['rules']))
         if code['route'] != 'code':
@@ -136,15 +143,36 @@ class GatedRuleReader:
                 try:
                     proposal = self.resolver({'source':text, 'code_proposal':deepcopy(code),
                                               'world':deepcopy(world), 'history':deepcopy(history),
-                                              'context_ledger':deepcopy(ledger)})
+                                              'context_ledger':deepcopy(ledger),
+                                              **({'knowledge_evidence':deepcopy(knowledge_evidence)} if knowledge_evidence is not None else {})})
                 except Exception as exc:
                     proposal = {'error_type':type(exc).__name__}
         # Only trusted code-side links may satisfy a local reference. A model
         # cannot authorize invented local IDs by including them in its proposal.
         local_bindings = code.get('local_references', ()) if origin == 'code' else ()
+        knowledge_reasons = []
+        if knowledge_evidence is not None:
+            from .knowledge_resolution import resolve_knowledge, validate_knowledge_proposal
+            # Model may supply different roles: evaluate those mentions as well.
+            if origin == 'AI' and isinstance(proposal, dict):
+                final_evidence = resolve_knowledge(self.knowledge, text, proposal, world)
+                final_evidence.pop('world')
+                knowledge_evidence['model_matches'] = final_evidence['matches']
+                knowledge_reasons.extend(validate_knowledge_proposal(proposal, final_evidence))
+            if origin != 'AI':
+                knowledge_reasons.extend(validate_knowledge_proposal(proposal, knowledge_evidence))
+            else:
+                knowledge_reasons.extend(knowledge_evidence['issues'])
+            cohort += ':knowledge-resolution-1:' + knowledge_evidence['revision']
+            if origin == 'code':
+                for binding in knowledge_evidence['bindings']:
+                    proposal.setdefault('groundings', {})[binding['mention']] = binding['entity_id']
         result = self.gate.assess(text, proposal, cohort=cohort, world_ids=tuple(world),
-                                 missing_context=missing_context, local_bindings=local_bindings)
+                                 missing_context=missing_context, local_bindings=local_bindings,
+                                 validation_reasons=knowledge_reasons)
         result['context_ledger'] = ledger
         result['assignment_source'] = origin
         result['code_proposal'] = code
+        if knowledge_evidence is not None:
+            result['knowledge_evidence'] = knowledge_evidence
         return result

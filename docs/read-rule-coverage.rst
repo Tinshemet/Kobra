@@ -87,3 +87,10 @@ Acceptance criteria for closing READ
 
 READ is not closed at this checkpoint. The pipeline HTML shows actual outputs;
 no live model or calibration was installed for the surface boundary change.
+
+Knowledge integration checkpoint
+--------------------------------
+
+See knowledge-read.rst for active-library/archive lookup, candidate constraints,
+legacy responsibility coverage and the remaining persistence/refresh/relations
+gaps. This addition does not close grammar or general conversational resolution.

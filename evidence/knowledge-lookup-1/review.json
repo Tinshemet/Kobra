@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-11",
+  "scope": [
+    "src/kobra/knowledge.py",
+    "src/kobra/knowledge_resolution.py",
+    "src/kobra/confidence_gate.py",
+    "tests/test_knowledge.py",
+    "tests/test_knowledge_integration.py",
+    "tools/export_knowledge_examples.py"
+  ],
+  "review": "Parent inspected full new modules, actual gate diff, tests, independent findings and actual RuleAssigner example outputs.",
+  "result": "Bounded read-only snapshot integration verified; full legacy parity explicitly not claimed.",
+  "tests": "208 tests run, 207 passed, 1 optional dependency skip",
+  "new_model_calls": 0,
+  "accuracy_measurement": false,
+  "findings": [
+    {
+      "issue": "First real walkthrough assumed Restart Alpha would receive a patient role; actual spaCy role path leaves it unresolved.",
+      "resolution": "Retained the unresolved example, added lexical mention evidence independent of frames, and separately demonstrated supported alias Restart the server. No role/parser fix claimed."
+    },
+    {
+      "issue": "ID-existence checks alone allowed unrelated existing model bindings.",
+      "resolution": "Knowledge-enabled mode restricts grounding and WORLD references to unique exact role candidates; unsupported pronouns abstain."
+    }
+  ],
+  "limitations": [
+    "No persistence, remote refresh, tool-event synchronization, relation queries or automatic teaching.",
+    "Owner API is explicit; sentence owner extraction and general class target inheritance unsupported.",
+    "Model still proposes frames; restricted role/context-only schema unfinished.",
+    "No fresh accuracy or real calibration; fixture tests do not establish semantic correctness."
+  ],
+  "hashes": {
+    "src/kobra/knowledge.py": "3533bb71c51bab1f7d91ccd06d257317a96d06beac0829d7c20385152d15a666",
+    "src/kobra/knowledge_resolution.py": "4d25509e09590f2cbccfa5d333d5ab6d33a16d8fab4a8961d476042d1d4c33e8",
+    "src/kobra/confidence_gate.py": "9b24dce9fed8d955cd506f7379315b0c8154fab0add8ec79adfa174672ec09e1",
+    "tests/test_knowledge.py": "ab12b6d0e93865b0c55fd9015a74a797fd91a00388b23df00f7c1f8d5019b671",
+    "tests/test_knowledge_integration.py": "59ceb7bf2d0eb7d5b794260846f57700ebecec85b8d9b3aab99a23d7fe4e7d40",
+    "tools/export_knowledge_examples.py": "09d25eaad5a8100970328b00d7d99a77dbbdab9857806f80775a99599f15d44c"
+  },
+  "post_review_note": "Removed trailing blank line from knowledge.py after independent review; no behavior change."
+}

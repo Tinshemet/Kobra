@@ -1,0 +1,2648 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>READ: library and archive lookup</title><style>body{max-width:1000px;margin:40px auto;padding:20px;background:#101b2c;color:#edf3ff;font:17px/1.6 system-ui}article{border:1px solid #50647c;padding:20px;margin:20px 0;border-radius:12px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}summary{cursor:pointer}</style><h1>READ: active library and archive</h1><p>Actual local outputs using explicit fixture inventories. No live AI calls or accuracy measurement. Every example ends in ASK because no real calibration is installed; additional lookup problems are shown separately.</p><p>Library = current objects. Archive = learned definitions. Ledger = prior statements. A definition never manufactures an object.</p><p>This addition does not implement remote refresh, persistent archive storage, general group relations or conversational reference resolution.</p><article><h2>Unique live alias</h2><p>Restart the server.</p><p>Gate: uncalibrated_cohort</p><details><summary>Complete actual output</summary><pre>{
+  &quot;route&quot;: &quot;ASK&quot;,
+  &quot;source&quot;: &quot;Restart the server.&quot;,
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Restart the server.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the server&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 19,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;groundings&quot;: {
+      &quot;the server&quot;: &quot;vm-1&quot;
+    }
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ],
+  &quot;external_score&quot;: null,
+  &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+  &quot;calibration_evidence&quot;: null,
+  &quot;cohort&quot;: &quot;code:C002-active-roles:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29&quot;,
+  &quot;model_self_confidence_used&quot;: false,
+  &quot;context_ledger&quot;: {
+    &quot;version&quot;: &quot;context-ledger-1&quot;,
+    &quot;previous_turns&quot;: [],
+    &quot;world_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;vm-1&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Alpha&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;,
+            &quot;server&quot;
+          ]
+        },
+        &quot;mentions&quot;: [],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      },
+      {
+        &quot;id&quot;: &quot;vm-2&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Beta&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;
+          ]
+        },
+        &quot;mentions&quot;: [],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      }
+    ],
+    &quot;claims&quot;: [],
+    &quot;history_supplied&quot;: false,
+    &quot;world_supplied&quot;: true,
+    &quot;semantics&quot;: &quot;recorded evidence and caller assertions, not inferred or verified facts&quot;
+  },
+  &quot;assignment_source&quot;: &quot;code&quot;,
+  &quot;code_proposal&quot;: {
+    &quot;source&quot;: &quot;Restart the server.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the server&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 19,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;knowledge_evidence&quot;: {
+    &quot;version&quot;: &quot;knowledge-resolution-1&quot;,
+    &quot;revision&quot;: &quot;beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29&quot;,
+    &quot;snapshot&quot;: {
+      &quot;version&quot;: &quot;knowledge-snapshot-1&quot;,
+      &quot;sources&quot;: {
+        &quot;live&quot;: {
+          &quot;revision&quot;: &quot;example-live-1&quot;,
+          &quot;source&quot;: &quot;explicit-example-fixture&quot;,
+          &quot;status&quot;: &quot;current&quot;,
+          &quot;entities&quot;: {
+            &quot;vm-1&quot;: {
+              &quot;name&quot;: &quot;Alpha&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;,
+                &quot;server&quot;
+              ]
+            },
+            &quot;vm-2&quot;: {
+              &quot;name&quot;: &quot;Beta&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;
+              ]
+            }
+          }
+        }
+      },
+      &quot;revision&quot;: {
+        &quot;live&quot;: &quot;example-live-1&quot;,
+        &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+      },
+      &quot;freshness&quot;: &quot;caller_attestation_only&quot;
+    },
+    &quot;matches&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;the server&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;server&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [
+          &quot;vm-1&quot;
+        ],
+        &quot;creates_description&quot;: false
+      }
+    ],
+    &quot;bindings&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;the server&quot;,
+        &quot;entity_id&quot;: &quot;vm-1&quot;,
+        &quot;spans&quot;: [
+          {
+            &quot;start&quot;: 8,
+            &quot;end&quot;: 18,
+            &quot;text&quot;: &quot;the server&quot;
+          }
+        ],
+        &quot;evidence&quot;: &quot;exact_current_name_or_alias&quot;
+      }
+    ],
+    &quot;lexical_mentions&quot;: [
+      {
+        &quot;start&quot;: 12,
+        &quot;end&quot;: 18,
+        &quot;text&quot;: &quot;server&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;server&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+          }
+        }
+      }
+    ],
+    &quot;issues&quot;: [],
+    &quot;semantics&quot;: &quot;caller-supplied evidence; exact lookup is not verified real-world truth&quot;
+  }
+}</pre></details></article><article><h2>Duplicate alias stays ambiguous</h2><p>Restart the lab machine.</p><p>Gate: knowledge_ambiguous:0:patient, uncalibrated_cohort</p><details><summary>Complete actual output</summary><pre>{
+  &quot;route&quot;: &quot;ASK&quot;,
+  &quot;source&quot;: &quot;Restart the lab machine.&quot;,
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Restart the lab machine.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the lab machine&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Restart the lab machine&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Restart the lab machine&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 23,
+          &quot;end&quot;: 24,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;reasons&quot;: [
+    &quot;knowledge_ambiguous:0:patient&quot;,
+    &quot;uncalibrated_cohort&quot;
+  ],
+  &quot;external_score&quot;: null,
+  &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+  &quot;calibration_evidence&quot;: null,
+  &quot;cohort&quot;: &quot;code:C002-active-roles:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29&quot;,
+  &quot;model_self_confidence_used&quot;: false,
+  &quot;context_ledger&quot;: {
+    &quot;version&quot;: &quot;context-ledger-1&quot;,
+    &quot;previous_turns&quot;: [],
+    &quot;world_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;vm-1&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Alpha&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;,
+            &quot;server&quot;
+          ]
+        },
+        &quot;mentions&quot;: [],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      },
+      {
+        &quot;id&quot;: &quot;vm-2&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Beta&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;
+          ]
+        },
+        &quot;mentions&quot;: [],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      }
+    ],
+    &quot;claims&quot;: [],
+    &quot;history_supplied&quot;: false,
+    &quot;world_supplied&quot;: true,
+    &quot;semantics&quot;: &quot;recorded evidence and caller assertions, not inferred or verified facts&quot;
+  },
+  &quot;assignment_source&quot;: &quot;code&quot;,
+  &quot;code_proposal&quot;: {
+    &quot;source&quot;: &quot;Restart the lab machine.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the lab machine&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Restart the lab machine&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Restart the lab machine&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 23,
+          &quot;end&quot;: 24,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;knowledge_evidence&quot;: {
+    &quot;version&quot;: &quot;knowledge-resolution-1&quot;,
+    &quot;revision&quot;: &quot;beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29&quot;,
+    &quot;snapshot&quot;: {
+      &quot;version&quot;: &quot;knowledge-snapshot-1&quot;,
+      &quot;sources&quot;: {
+        &quot;live&quot;: {
+          &quot;revision&quot;: &quot;example-live-1&quot;,
+          &quot;source&quot;: &quot;explicit-example-fixture&quot;,
+          &quot;status&quot;: &quot;current&quot;,
+          &quot;entities&quot;: {
+            &quot;vm-1&quot;: {
+              &quot;name&quot;: &quot;Alpha&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;,
+                &quot;server&quot;
+              ]
+            },
+            &quot;vm-2&quot;: {
+              &quot;name&quot;: &quot;Beta&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;
+              ]
+            }
+          }
+        }
+      },
+      &quot;revision&quot;: {
+        &quot;live&quot;: &quot;example-live-1&quot;,
+        &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+      },
+      &quot;freshness&quot;: &quot;caller_attestation_only&quot;
+    },
+    &quot;matches&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;the lab machine&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;lab machine&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;ambiguous&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;vm-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Beta&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;vm-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Beta&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;vm-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Beta&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [
+          &quot;vm-1&quot;,
+          &quot;vm-2&quot;
+        ],
+        &quot;creates_description&quot;: false
+      }
+    ],
+    &quot;bindings&quot;: [],
+    &quot;lexical_mentions&quot;: [
+      {
+        &quot;start&quot;: 12,
+        &quot;end&quot;: 23,
+        &quot;text&quot;: &quot;lab machine&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;lab machine&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;ambiguous&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;vm-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Beta&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;vm-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Beta&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;vm-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Beta&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+          }
+        }
+      }
+    ],
+    &quot;issues&quot;: [
+      &quot;knowledge_ambiguous:0:patient&quot;
+    ],
+    &quot;semantics&quot;: &quot;caller-supplied evidence; exact lookup is not verified real-world truth&quot;
+  }
+}</pre></details></article><article><h2>Definition does not create an identity</h2><p>Create a jumpbox.</p><p>Gate: uncalibrated_cohort</p><details><summary>Complete actual output</summary><pre>{
+  &quot;route&quot;: &quot;ASK&quot;,
+  &quot;source&quot;: &quot;Create a jumpbox.&quot;,
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Create a jumpbox.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;a jumpbox&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create a jumpbox&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create a jumpbox&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 16,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ],
+  &quot;external_score&quot;: null,
+  &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+  &quot;calibration_evidence&quot;: null,
+  &quot;cohort&quot;: &quot;code:C002-active-roles:knowledge-resolution-1:4a9a1a6b5a443894c869c7e8fb743a8155908ee23afb2a98270c69c2f24bd192&quot;,
+  &quot;model_self_confidence_used&quot;: false,
+  &quot;context_ledger&quot;: {
+    &quot;version&quot;: &quot;context-ledger-1&quot;,
+    &quot;previous_turns&quot;: [],
+    &quot;world_entities&quot;: [],
+    &quot;claims&quot;: [],
+    &quot;history_supplied&quot;: false,
+    &quot;world_supplied&quot;: false,
+    &quot;semantics&quot;: &quot;recorded evidence and caller assertions, not inferred or verified facts&quot;
+  },
+  &quot;assignment_source&quot;: &quot;code&quot;,
+  &quot;code_proposal&quot;: {
+    &quot;source&quot;: &quot;Create a jumpbox.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;a jumpbox&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create a jumpbox&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create a jumpbox&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 16,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;knowledge_evidence&quot;: {
+    &quot;version&quot;: &quot;knowledge-resolution-1&quot;,
+    &quot;revision&quot;: &quot;4a9a1a6b5a443894c869c7e8fb743a8155908ee23afb2a98270c69c2f24bd192&quot;,
+    &quot;snapshot&quot;: {
+      &quot;version&quot;: &quot;knowledge-snapshot-1&quot;,
+      &quot;sources&quot;: {
+        &quot;archive&quot;: {
+          &quot;revision&quot;: &quot;example-archive-1&quot;,
+          &quot;source&quot;: &quot;explicit-example-fixture&quot;,
+          &quot;records&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;word&quot;: &quot;jumpbox&quot;,
+              &quot;type&quot;: &quot;class&quot;,
+              &quot;kind&quot;: &quot;vm&quot;,
+              &quot;source&quot;: &quot;told&quot;,
+              &quot;status&quot;: &quot;ratified&quot;,
+              &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+            }
+          ]
+        }
+      },
+      &quot;revision&quot;: {
+        &quot;archive&quot;: &quot;example-archive-1&quot;,
+        &quot;sha256&quot;: &quot;b30736f2155e0cf69f0f30de9874c0965c2bbd153d4e470ebf281dee8662d534&quot;
+      },
+      &quot;freshness&quot;: &quot;caller_attestation_only&quot;
+    },
+    &quot;matches&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;a jumpbox&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;jumpbox&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;archive&quot;: &quot;example-archive-1&quot;,
+            &quot;sha256&quot;: &quot;b30736f2155e0cf69f0f30de9874c0965c2bbd153d4e470ebf281dee8662d534&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [],
+        &quot;creates_description&quot;: true
+      }
+    ],
+    &quot;bindings&quot;: [],
+    &quot;lexical_mentions&quot;: [
+      {
+        &quot;start&quot;: 9,
+        &quot;end&quot;: 16,
+        &quot;text&quot;: &quot;jumpbox&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;jumpbox&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;archive&quot;: &quot;example-archive-1&quot;,
+            &quot;sha256&quot;: &quot;b30736f2155e0cf69f0f30de9874c0965c2bbd153d4e470ebf281dee8662d534&quot;
+          }
+        }
+      }
+    ],
+    &quot;issues&quot;: [],
+    &quot;semantics&quot;: &quot;caller-supplied evidence; exact lookup is not verified real-world truth&quot;
+  }
+}</pre></details></article><article><h2>Pending definition cannot settle</h2><p>Create a jumpbox.</p><p>Gate: knowledge_unsupported:0:patient, uncalibrated_cohort</p><details><summary>Complete actual output</summary><pre>{
+  &quot;route&quot;: &quot;ASK&quot;,
+  &quot;source&quot;: &quot;Create a jumpbox.&quot;,
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Create a jumpbox.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;a jumpbox&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create a jumpbox&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create a jumpbox&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 16,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;reasons&quot;: [
+    &quot;knowledge_unsupported:0:patient&quot;,
+    &quot;uncalibrated_cohort&quot;
+  ],
+  &quot;external_score&quot;: null,
+  &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+  &quot;calibration_evidence&quot;: null,
+  &quot;cohort&quot;: &quot;code:C002-active-roles:knowledge-resolution-1:b490c780e8146a0fc93cdb711cc1d2e3cff05054a4fad7b65664ac100a54c27c&quot;,
+  &quot;model_self_confidence_used&quot;: false,
+  &quot;context_ledger&quot;: {
+    &quot;version&quot;: &quot;context-ledger-1&quot;,
+    &quot;previous_turns&quot;: [],
+    &quot;world_entities&quot;: [],
+    &quot;claims&quot;: [],
+    &quot;history_supplied&quot;: false,
+    &quot;world_supplied&quot;: false,
+    &quot;semantics&quot;: &quot;recorded evidence and caller assertions, not inferred or verified facts&quot;
+  },
+  &quot;assignment_source&quot;: &quot;code&quot;,
+  &quot;code_proposal&quot;: {
+    &quot;source&quot;: &quot;Create a jumpbox.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;a jumpbox&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create a jumpbox&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create a jumpbox&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 16,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;knowledge_evidence&quot;: {
+    &quot;version&quot;: &quot;knowledge-resolution-1&quot;,
+    &quot;revision&quot;: &quot;b490c780e8146a0fc93cdb711cc1d2e3cff05054a4fad7b65664ac100a54c27c&quot;,
+    &quot;snapshot&quot;: {
+      &quot;version&quot;: &quot;knowledge-snapshot-1&quot;,
+      &quot;sources&quot;: {
+        &quot;archive&quot;: {
+          &quot;revision&quot;: &quot;example-archive-1&quot;,
+          &quot;source&quot;: &quot;explicit-example-fixture&quot;,
+          &quot;records&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;word&quot;: &quot;jumpbox&quot;,
+              &quot;type&quot;: &quot;class&quot;,
+              &quot;kind&quot;: &quot;vm&quot;,
+              &quot;source&quot;: &quot;told&quot;,
+              &quot;status&quot;: &quot;pending&quot;,
+              &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+            }
+          ]
+        }
+      },
+      &quot;revision&quot;: {
+        &quot;archive&quot;: &quot;example-archive-1&quot;,
+        &quot;sha256&quot;: &quot;41071947a64271d8b0062d42ca044b7dce2de9b82ce8f3581adc7af74d1d9124&quot;
+      },
+      &quot;freshness&quot;: &quot;caller_attestation_only&quot;
+    },
+    &quot;matches&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;a jumpbox&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;jumpbox&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;unsupported&quot;,
+          &quot;selected&quot;: [],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;pending&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: false,
+              &quot;reasons&quot;: [
+                &quot;pending&quot;
+              ]
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;pending&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: false,
+              &quot;reasons&quot;: [
+                &quot;pending&quot;
+              ]
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;archive&quot;: &quot;example-archive-1&quot;,
+            &quot;sha256&quot;: &quot;41071947a64271d8b0062d42ca044b7dce2de9b82ce8f3581adc7af74d1d9124&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [],
+        &quot;creates_description&quot;: true
+      }
+    ],
+    &quot;bindings&quot;: [],
+    &quot;lexical_mentions&quot;: [
+      {
+        &quot;start&quot;: 9,
+        &quot;end&quot;: 16,
+        &quot;text&quot;: &quot;jumpbox&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;jumpbox&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;unsupported&quot;,
+          &quot;selected&quot;: [],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;pending&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: false,
+              &quot;reasons&quot;: [
+                &quot;pending&quot;
+              ]
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;jumpbox&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;pending&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;
+              },
+              &quot;eligible&quot;: false,
+              &quot;reasons&quot;: [
+                &quot;pending&quot;
+              ]
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;archive&quot;: &quot;example-archive-1&quot;,
+            &quot;sha256&quot;: &quot;41071947a64271d8b0062d42ca044b7dce2de9b82ce8f3581adc7af74d1d9124&quot;
+          }
+        }
+      }
+    ],
+    &quot;issues&quot;: [
+      &quot;knowledge_unsupported:0:patient&quot;
+    ],
+    &quot;semantics&quot;: &quot;caller-supplied evidence; exact lookup is not verified real-world truth&quot;
+  }
+}</pre></details></article><article><h2>Stale inventory cannot bind</h2><p>Restart the server.</p><p>Gate: knowledge_live_stale, knowledge_unsupported:0:patient, uncalibrated_cohort</p><details><summary>Complete actual output</summary><pre>{
+  &quot;route&quot;: &quot;ASK&quot;,
+  &quot;source&quot;: &quot;Restart the server.&quot;,
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Restart the server.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the server&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 19,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;reasons&quot;: [
+    &quot;knowledge_live_stale&quot;,
+    &quot;knowledge_unsupported:0:patient&quot;,
+    &quot;uncalibrated_cohort&quot;
+  ],
+  &quot;external_score&quot;: null,
+  &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+  &quot;calibration_evidence&quot;: null,
+  &quot;cohort&quot;: &quot;code:C002-active-roles:knowledge-resolution-1:0d2d1e7dbca0fa9bbbd830c302ab7774a5158e6805673e289ece48b2c8a57732&quot;,
+  &quot;model_self_confidence_used&quot;: false,
+  &quot;context_ledger&quot;: {
+    &quot;version&quot;: &quot;context-ledger-1&quot;,
+    &quot;previous_turns&quot;: [],
+    &quot;world_entities&quot;: [],
+    &quot;claims&quot;: [],
+    &quot;history_supplied&quot;: false,
+    &quot;world_supplied&quot;: false,
+    &quot;semantics&quot;: &quot;recorded evidence and caller assertions, not inferred or verified facts&quot;
+  },
+  &quot;assignment_source&quot;: &quot;code&quot;,
+  &quot;code_proposal&quot;: {
+    &quot;source&quot;: &quot;Restart the server.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the server&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 19,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;knowledge_evidence&quot;: {
+    &quot;version&quot;: &quot;knowledge-resolution-1&quot;,
+    &quot;revision&quot;: &quot;0d2d1e7dbca0fa9bbbd830c302ab7774a5158e6805673e289ece48b2c8a57732&quot;,
+    &quot;snapshot&quot;: {
+      &quot;version&quot;: &quot;knowledge-snapshot-1&quot;,
+      &quot;sources&quot;: {
+        &quot;live&quot;: {
+          &quot;revision&quot;: &quot;example-live-1&quot;,
+          &quot;source&quot;: &quot;explicit-example-fixture&quot;,
+          &quot;status&quot;: &quot;stale&quot;,
+          &quot;entities&quot;: {
+            &quot;vm-1&quot;: {
+              &quot;name&quot;: &quot;Alpha&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;,
+                &quot;server&quot;
+              ]
+            },
+            &quot;vm-2&quot;: {
+              &quot;name&quot;: &quot;Beta&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;
+              ]
+            }
+          }
+        }
+      },
+      &quot;revision&quot;: {
+        &quot;live&quot;: &quot;example-live-1&quot;,
+        &quot;sha256&quot;: &quot;1ed52d5108f89013b7702d2089696043318c0a85cdb84d4053e67279ca07f68d&quot;
+      },
+      &quot;freshness&quot;: &quot;caller_attestation_only&quot;
+    },
+    &quot;matches&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;the server&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;server&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;unsupported&quot;,
+          &quot;selected&quot;: [],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: false,
+              &quot;reasons&quot;: [
+                &quot;live_stale&quot;
+              ]
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: false,
+              &quot;reasons&quot;: [
+                &quot;live_stale&quot;
+              ]
+            }
+          ],
+          &quot;issues&quot;: [
+            &quot;live_stale&quot;
+          ],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;sha256&quot;: &quot;1ed52d5108f89013b7702d2089696043318c0a85cdb84d4053e67279ca07f68d&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [],
+        &quot;creates_description&quot;: false
+      }
+    ],
+    &quot;bindings&quot;: [],
+    &quot;lexical_mentions&quot;: [
+      {
+        &quot;start&quot;: 12,
+        &quot;end&quot;: 18,
+        &quot;text&quot;: &quot;server&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;server&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;unsupported&quot;,
+          &quot;selected&quot;: [],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: false,
+              &quot;reasons&quot;: [
+                &quot;live_stale&quot;
+              ]
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: false,
+              &quot;reasons&quot;: [
+                &quot;live_stale&quot;
+              ]
+            }
+          ],
+          &quot;issues&quot;: [
+            &quot;live_stale&quot;
+          ],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;sha256&quot;: &quot;1ed52d5108f89013b7702d2089696043318c0a85cdb84d4053e67279ca07f68d&quot;
+          }
+        }
+      }
+    ],
+    &quot;issues&quot;: [
+      &quot;knowledge_live_stale&quot;,
+      &quot;knowledge_unsupported:0:patient&quot;
+    ],
+    &quot;semantics&quot;: &quot;caller-supplied evidence; exact lookup is not verified real-world truth&quot;
+  }
+}</pre></details></article><article><h2>Current entity outranks remembered meaning</h2><p>Restart the server.</p><p>Gate: uncalibrated_cohort</p><details><summary>Complete actual output</summary><pre>{
+  &quot;route&quot;: &quot;ASK&quot;,
+  &quot;source&quot;: &quot;Restart the server.&quot;,
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Restart the server.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the server&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 19,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;groundings&quot;: {
+      &quot;the server&quot;: &quot;vm-1&quot;
+    }
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ],
+  &quot;external_score&quot;: null,
+  &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+  &quot;calibration_evidence&quot;: null,
+  &quot;cohort&quot;: &quot;code:C002-active-roles:knowledge-resolution-1:9601e82ff9ce3811c3d9deb3f5db0a5e62b70772493f6acaaefea256054a2e16&quot;,
+  &quot;model_self_confidence_used&quot;: false,
+  &quot;context_ledger&quot;: {
+    &quot;version&quot;: &quot;context-ledger-1&quot;,
+    &quot;previous_turns&quot;: [],
+    &quot;world_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;vm-1&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Alpha&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;,
+            &quot;server&quot;
+          ]
+        },
+        &quot;mentions&quot;: [],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      },
+      {
+        &quot;id&quot;: &quot;vm-2&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Beta&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;
+          ]
+        },
+        &quot;mentions&quot;: [],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      }
+    ],
+    &quot;claims&quot;: [],
+    &quot;history_supplied&quot;: false,
+    &quot;world_supplied&quot;: true,
+    &quot;semantics&quot;: &quot;recorded evidence and caller assertions, not inferred or verified facts&quot;
+  },
+  &quot;assignment_source&quot;: &quot;code&quot;,
+  &quot;code_proposal&quot;: {
+    &quot;source&quot;: &quot;Restart the server.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the server&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Restart the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 19,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;knowledge_evidence&quot;: {
+    &quot;version&quot;: &quot;knowledge-resolution-1&quot;,
+    &quot;revision&quot;: &quot;9601e82ff9ce3811c3d9deb3f5db0a5e62b70772493f6acaaefea256054a2e16&quot;,
+    &quot;snapshot&quot;: {
+      &quot;version&quot;: &quot;knowledge-snapshot-1&quot;,
+      &quot;sources&quot;: {
+        &quot;live&quot;: {
+          &quot;revision&quot;: &quot;example-live-1&quot;,
+          &quot;source&quot;: &quot;explicit-example-fixture&quot;,
+          &quot;status&quot;: &quot;current&quot;,
+          &quot;entities&quot;: {
+            &quot;vm-1&quot;: {
+              &quot;name&quot;: &quot;Alpha&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;,
+                &quot;server&quot;
+              ]
+            },
+            &quot;vm-2&quot;: {
+              &quot;name&quot;: &quot;Beta&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;
+              ]
+            }
+          }
+        },
+        &quot;archive&quot;: {
+          &quot;revision&quot;: &quot;example-archive-1&quot;,
+          &quot;source&quot;: &quot;explicit-example-fixture&quot;,
+          &quot;records&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;word&quot;: &quot;server&quot;,
+              &quot;type&quot;: &quot;class&quot;,
+              &quot;kind&quot;: &quot;vm&quot;,
+              &quot;source&quot;: &quot;told&quot;,
+              &quot;status&quot;: &quot;ratified&quot;,
+              &quot;provenance&quot;: &quot;explicit-example-fixture&quot;,
+              &quot;holds&quot;: false
+            }
+          ]
+        }
+      },
+      &quot;revision&quot;: {
+        &quot;live&quot;: &quot;example-live-1&quot;,
+        &quot;archive&quot;: &quot;example-archive-1&quot;,
+        &quot;sha256&quot;: &quot;2bbfc8eadb9c956e8340fda2c8b5066f1cc8bec656ffcbcd440f892b10865688&quot;
+      },
+      &quot;freshness&quot;: &quot;caller_attestation_only&quot;
+    },
+    &quot;matches&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;the server&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;server&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;server&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;,
+                &quot;holds&quot;: false
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;server&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;,
+                &quot;holds&quot;: false
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;archive&quot;: &quot;example-archive-1&quot;,
+            &quot;sha256&quot;: &quot;2bbfc8eadb9c956e8340fda2c8b5066f1cc8bec656ffcbcd440f892b10865688&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [
+          &quot;vm-1&quot;
+        ],
+        &quot;creates_description&quot;: false
+      }
+    ],
+    &quot;bindings&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;the server&quot;,
+        &quot;entity_id&quot;: &quot;vm-1&quot;,
+        &quot;spans&quot;: [
+          {
+            &quot;start&quot;: 8,
+            &quot;end&quot;: 18,
+            &quot;text&quot;: &quot;the server&quot;
+          }
+        ],
+        &quot;evidence&quot;: &quot;exact_current_name_or_alias&quot;
+      }
+    ],
+    &quot;lexical_mentions&quot;: [
+      {
+        &quot;start&quot;: 12,
+        &quot;end&quot;: 18,
+        &quot;text&quot;: &quot;server&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;server&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;server&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;,
+                &quot;holds&quot;: false
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;server&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-example-fixture&quot;,
+                &quot;holds&quot;: false
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;archive&quot;: &quot;example-archive-1&quot;,
+            &quot;sha256&quot;: &quot;2bbfc8eadb9c956e8340fda2c8b5066f1cc8bec656ffcbcd440f892b10865688&quot;
+          }
+        }
+      }
+    ],
+    &quot;issues&quot;: [],
+    &quot;semantics&quot;: &quot;caller-supplied evidence; exact lookup is not verified real-world truth&quot;
+  }
+}</pre></details></article><article><h2>Parser gap: name evidence survives unresolved roles</h2><p>Restart Alpha.</p><p>Gate: uncalibrated_cohort, unsupported_read_structure</p><details><summary>Complete actual output</summary><pre>{
+  &quot;route&quot;: &quot;ASK&quot;,
+  &quot;source&quot;: &quot;Restart Alpha.&quot;,
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Restart Alpha.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;NONE&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [
+      &quot;C011-structured-imperative&quot;
+    ],
+    &quot;reasons&quot;: [
+      &quot;c1:missing_or_multiple_objects&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;Restart Alpha&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: []
+      }
+    ],
+    &quot;local_entities&quot;: [],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 13,
+        &quot;text&quot;: &quot;Restart Alpha&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 13,
+        &quot;end&quot;: 14,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;Restart Alpha&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;Restart Alpha&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 13,
+          &quot;end&quot;: 14,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;,
+    &quot;unsupported_read_structure&quot;
+  ],
+  &quot;external_score&quot;: null,
+  &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+  &quot;calibration_evidence&quot;: null,
+  &quot;cohort&quot;: &quot;model-unresolved-v1:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29&quot;,
+  &quot;model_self_confidence_used&quot;: false,
+  &quot;context_ledger&quot;: {
+    &quot;version&quot;: &quot;context-ledger-1&quot;,
+    &quot;previous_turns&quot;: [],
+    &quot;world_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;vm-1&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Alpha&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;,
+            &quot;server&quot;
+          ]
+        },
+        &quot;mentions&quot;: [],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      },
+      {
+        &quot;id&quot;: &quot;vm-2&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Beta&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;
+          ]
+        },
+        &quot;mentions&quot;: [],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      }
+    ],
+    &quot;claims&quot;: [],
+    &quot;history_supplied&quot;: false,
+    &quot;world_supplied&quot;: true,
+    &quot;semantics&quot;: &quot;recorded evidence and caller assertions, not inferred or verified facts&quot;
+  },
+  &quot;assignment_source&quot;: &quot;unresolved&quot;,
+  &quot;code_proposal&quot;: {
+    &quot;source&quot;: &quot;Restart Alpha.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;NONE&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [
+      &quot;C011-structured-imperative&quot;
+    ],
+    &quot;reasons&quot;: [
+      &quot;c1:missing_or_multiple_objects&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;Restart Alpha&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: []
+      }
+    ],
+    &quot;local_entities&quot;: [],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 13,
+        &quot;text&quot;: &quot;Restart Alpha&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 13,
+        &quot;end&quot;: 14,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;Restart Alpha&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;Restart Alpha&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 13,
+          &quot;end&quot;: 14,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;knowledge_evidence&quot;: {
+    &quot;version&quot;: &quot;knowledge-resolution-1&quot;,
+    &quot;revision&quot;: &quot;beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29&quot;,
+    &quot;snapshot&quot;: {
+      &quot;version&quot;: &quot;knowledge-snapshot-1&quot;,
+      &quot;sources&quot;: {
+        &quot;live&quot;: {
+          &quot;revision&quot;: &quot;example-live-1&quot;,
+          &quot;source&quot;: &quot;explicit-example-fixture&quot;,
+          &quot;status&quot;: &quot;current&quot;,
+          &quot;entities&quot;: {
+            &quot;vm-1&quot;: {
+              &quot;name&quot;: &quot;Alpha&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;,
+                &quot;server&quot;
+              ]
+            },
+            &quot;vm-2&quot;: {
+              &quot;name&quot;: &quot;Beta&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;
+              ]
+            }
+          }
+        }
+      },
+      &quot;revision&quot;: {
+        &quot;live&quot;: &quot;example-live-1&quot;,
+        &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+      },
+      &quot;freshness&quot;: &quot;caller_attestation_only&quot;
+    },
+    &quot;matches&quot;: [],
+    &quot;bindings&quot;: [],
+    &quot;lexical_mentions&quot;: [
+      {
+        &quot;start&quot;: 8,
+        &quot;end&quot;: 13,
+        &quot;text&quot;: &quot;Alpha&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;Alpha&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;vm-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;,
+                &quot;aliases&quot;: [
+                  &quot;lab machine&quot;,
+                  &quot;server&quot;
+                ]
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+          }
+        }
+      }
+    ],
+    &quot;issues&quot;: [],
+    &quot;semantics&quot;: &quot;caller-supplied evidence; exact lookup is not verified real-world truth&quot;
+  }
+}</pre></details></article><article><h2>Previous turn retained; pronoun still unresolved</h2><p>Restart it.</p><p>Gate: uncalibrated_cohort, ungrounded_reference:patient</p><details><summary>Complete actual output</summary><pre>{
+  &quot;route&quot;: &quot;ASK&quot;,
+  &quot;source&quot;: &quot;Restart it.&quot;,
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Restart it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 10,
+          &quot;text&quot;: &quot;Restart it&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 10,
+          &quot;text&quot;: &quot;Restart it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 10,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;,
+    &quot;ungrounded_reference:patient&quot;
+  ],
+  &quot;external_score&quot;: null,
+  &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+  &quot;calibration_evidence&quot;: null,
+  &quot;cohort&quot;: &quot;code:C002-active-roles:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29&quot;,
+  &quot;model_self_confidence_used&quot;: false,
+  &quot;context_ledger&quot;: {
+    &quot;version&quot;: &quot;context-ledger-1&quot;,
+    &quot;previous_turns&quot;: [
+      {
+        &quot;id&quot;: &quot;turn-1&quot;,
+        &quot;role&quot;: &quot;user&quot;,
+        &quot;content&quot;: &quot;We are working with Alpha.&quot;,
+        &quot;sha256&quot;: &quot;f085eb57877dacb96eb7d8dea1fb972b969a2ed986250222532ed6eea25976b3&quot;
+      }
+    ],
+    &quot;world_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;vm-1&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Alpha&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;,
+            &quot;server&quot;
+          ]
+        },
+        &quot;mentions&quot;: [
+          {
+            &quot;turn_id&quot;: &quot;turn-1&quot;,
+            &quot;start&quot;: 20,
+            &quot;end&quot;: 25,
+            &quot;text&quot;: &quot;Alpha&quot;
+          }
+        ],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      },
+      {
+        &quot;id&quot;: &quot;vm-2&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Beta&quot;,
+          &quot;aliases&quot;: [
+            &quot;lab machine&quot;
+          ]
+        },
+        &quot;mentions&quot;: [],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      }
+    ],
+    &quot;claims&quot;: [],
+    &quot;history_supplied&quot;: true,
+    &quot;world_supplied&quot;: true,
+    &quot;semantics&quot;: &quot;recorded evidence and caller assertions, not inferred or verified facts&quot;
+  },
+  &quot;assignment_source&quot;: &quot;code&quot;,
+  &quot;code_proposal&quot;: {
+    &quot;source&quot;: &quot;Restart it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 10,
+          &quot;text&quot;: &quot;Restart it&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;Restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 10,
+          &quot;text&quot;: &quot;Restart it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 10,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;knowledge_evidence&quot;: {
+    &quot;version&quot;: &quot;knowledge-resolution-1&quot;,
+    &quot;revision&quot;: &quot;beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29&quot;,
+    &quot;snapshot&quot;: {
+      &quot;version&quot;: &quot;knowledge-snapshot-1&quot;,
+      &quot;sources&quot;: {
+        &quot;live&quot;: {
+          &quot;revision&quot;: &quot;example-live-1&quot;,
+          &quot;source&quot;: &quot;explicit-example-fixture&quot;,
+          &quot;status&quot;: &quot;current&quot;,
+          &quot;entities&quot;: {
+            &quot;vm-1&quot;: {
+              &quot;name&quot;: &quot;Alpha&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;,
+                &quot;server&quot;
+              ]
+            },
+            &quot;vm-2&quot;: {
+              &quot;name&quot;: &quot;Beta&quot;,
+              &quot;aliases&quot;: [
+                &quot;lab machine&quot;
+              ]
+            }
+          }
+        }
+      },
+      &quot;revision&quot;: {
+        &quot;live&quot;: &quot;example-live-1&quot;,
+        &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+      },
+      &quot;freshness&quot;: &quot;caller_attestation_only&quot;
+    },
+    &quot;matches&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;it&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;unknown&quot;,
+          &quot;selected&quot;: [],
+          &quot;candidates&quot;: [],
+          &quot;evidence&quot;: [],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;example-live-1&quot;,
+            &quot;sha256&quot;: &quot;aa7c3aa5df0dba526a87fd2d1474cd27d50f3938c3c8ebca0886663db33f05b8&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [],
+        &quot;creates_description&quot;: false
+      }
+    ],
+    &quot;bindings&quot;: [],
+    &quot;lexical_mentions&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;semantics&quot;: &quot;caller-supplied evidence; exact lookup is not verified real-world truth&quot;
+  }
+}</pre></details></article></html>
