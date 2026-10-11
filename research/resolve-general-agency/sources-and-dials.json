@@ -1,0 +1,208 @@
+{
+  "status": "research proposal; not implemented or validated",
+  "accessed": "2026-10-11",
+  "sources": [
+    {
+      "id": "agi",
+      "title": "Levels of AGI",
+      "url": "https://arxiv.org/abs/2311.02462",
+      "use_and_limit": "Separates capability breadth/depth from autonomy; does not certify this proposal."
+    },
+    {
+      "id": "coala",
+      "title": "Cognitive Architectures for Language Agents",
+      "url": "https://arxiv.org/abs/2309.02427",
+      "use_and_limit": "Modular memory, internal/external actions and a decision cycle."
+    },
+    {
+      "id": "modulo",
+      "title": "LLM-Modulo planning",
+      "url": "https://arxiv.org/html/2402.01817v3",
+      "use_and_limit": "Candidate generation with external critics; guarantees depend on the verifiers and their domain models."
+    },
+    {
+      "id": "pddl",
+      "title": "PDDLStream",
+      "url": "https://arxiv.org/abs/1802.08705",
+      "use_and_limit": "Symbolic planning coupled to black-box generators; robotics evidence, not a demonstrated general cyber planner."
+    },
+    {
+      "id": "voyager",
+      "title": "Voyager",
+      "url": "https://arxiv.org/abs/2305.16291",
+      "use_and_limit": "Reusable acquired skills and transfer in Minecraft; not proof of general intelligence."
+    },
+    {
+      "id": "aixcc",
+      "title": "DARPA AI Cyber Challenge results",
+      "url": "https://www.darpa.mil/news/2025/aixcc-results",
+      "use_and_limit": "Specialized systems found and patched vulnerabilities, including real non-injected vulnerabilities; aggregate competition evidence."
+    },
+    {
+      "id": "zerodays",
+      "title": "Anthropic: LLM-discovered 0 days",
+      "url": "https://www.anthropic.com/research/zero-days",
+      "use_and_limit": "Vendor-reported discovery with human validation; not a fully autonomous completion benchmark."
+    },
+    {
+      "id": "cybergym",
+      "title": "CyberGym",
+      "url": "https://arxiv.org/abs/2506.02548",
+      "use_and_limit": "Primarily vulnerability reproduction from descriptions and codebases; distinguish that from blind discovery."
+    },
+    {
+      "id": "cybench",
+      "title": "Cybench",
+      "url": "https://arxiv.org/abs/2408.08926",
+      "use_and_limit": "Cybersecurity challenge evaluation; controlled tasks do not establish complete professional assessments."
+    },
+    {
+      "id": "rebench",
+      "title": "RE-Bench",
+      "url": "https://arxiv.org/abs/2411.15114",
+      "use_and_limit": "Open-ended research engineering evaluation against human experts at different budgets."
+    },
+    {
+      "id": "metr",
+      "title": "METR long-task methodology",
+      "url": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+      "use_and_limit": "Evaluate success against human task duration; a 50% horizon is not reliable unattended deployment."
+    }
+  ],
+  "dial_catalog": {
+    "Reins": [
+      "harness only",
+      "harness leads, model assists",
+      "model proposes",
+      "orchestrates short-term",
+      "orchestrates long-term"
+    ],
+    "Planning horizon": [
+      "reflex / now",
+      "short-term",
+      "long-term (arrange)",
+      null,
+      "long-term MAKE"
+    ],
+    "Complexity": [
+      "single op",
+      "short chain",
+      "deep tree",
+      null,
+      "open-ended"
+    ],
+    "Learning": [
+      "curated",
+      "self-tuning",
+      "self-composing",
+      "acquisitive (gated)",
+      "open self-improve"
+    ],
+    "Reach channel": [
+      "air-gapped",
+      "secure lane, peacetime",
+      "via ephemeral VM",
+      "via VPN",
+      "open internet"
+    ],
+    "Persistence": [
+      "one-shot",
+      "stored proc (on call)",
+      "routine (clock)",
+      "trigger (world)",
+      "self-registers unattended"
+    ],
+    "Intent": [
+      "execute given goals",
+      "pick sub-steps",
+      "choose sub-goals",
+      "reinterpret intent",
+      "set its own goals"
+    ],
+    "Delegation": [
+      "no spawning",
+      "one bounded helper",
+      "a bounded pool",
+      "agents spawn agents",
+      "open spawn"
+    ],
+    "Impact / blast": [
+      "read-only",
+      "reversible",
+      "acknowledge tier",
+      "name tier (re-auth)",
+      "destructive unattended"
+    ],
+    "Time unattended": [
+      "one-shot",
+      "a session",
+      "bounded standing run",
+      null,
+      "indefinite (dead-man)"
+    ],
+    "Scope / breadth": [
+      "one VM",
+      "a labelled set",
+      "the fleet",
+      null,
+      "many engagements"
+    ],
+    "Resource budget": [
+      "minimal",
+      "bounded",
+      "generous",
+      null,
+      "unbounded"
+    ],
+    "Trust / provenance": [
+      "operator only",
+      "grounded world",
+      "other agents",
+      "reached sources (as data)",
+      "external moves the gate"
+    ],
+    "Containment": [
+      "small prison",
+      "contract egress",
+      "hardened net",
+      "near-sealed",
+      "SUPERMAX"
+    ],
+    "Cunning (ethics)": [
+      "honest",
+      "obscures",
+      "misleads",
+      "false-flags",
+      "fully deceptive"
+    ],
+    "Cruelty (morality)": [
+      "careful",
+      null,
+      "some collateral",
+      null,
+      "wiper / no regard"
+    ]
+  },
+  "dial_controls_proposed": {
+    "Reins": "Controls whether code selects an existing method, asks a model for bounded proposals, or permits the model to choose the next research obligation. JSON construction, evidence status and dispatch remain code-owned at every level.",
+    "Planning horizon": "Sets commitment depth and how far ahead the system may plan. Long-horizon planning keeps distant work abstract and refines the next frontier. MAKE remains a separate, explicitly enabled extension, not implicit in a long deadline.",
+    "Complexity": "Limits active branches, graph size, nesting and concurrent hypotheses. Open-ended describes task structure, not infinite compute.",
+    "Learning": "Curated skills \u2192 evaluated parameter tuning \u2192 composition \u2192 separately validated acquisition. Store failures as well as successes. Proposed self-modifications are isolated candidates until external regression/promotion checks pass.",
+    "Reach channel": "Selects a host-enforced execution/network profile. VPN, VM and open internet are categorical environments, not interchangeable intelligence levels or proof of containment.",
+    "Persistence": "Separates a single run, saved callable procedure, scheduled run, event-triggered run and registration. Each persistent object has an owner, expiry and revocation behavior. No schedule is created merely because it would be useful.",
+    "Intent": "Controls substep/subgoal freedom within an explicit objective charter. A proposed reinterpretation records a new objective revision; self-selected goals need an authorized standing charter and do not create their own permissions.",
+    "Delegation": "Limits worker count, depth, scope and a shared budget. Workers return proposals/evidence; they cannot enlarge their grants. Worker agreement is not independent verification.",
+    "Impact / blast": "Controls permitted effects, affected resources, reversibility requirements and intervention thresholds. A useful plan may remain blocked because its necessary effect is not permitted.",
+    "Time unattended": "Sets an execution lease, checkpoints and stop conditions. Even a long-lived service needs renewable authorization and a stop mechanism; expiry must be enforced outside model memory.",
+    "Scope / breadth": "Defines explicit resource sets and discovery bounds. Finding a new target does not add it to the authorized set. Breadth is checked at each dispatch and each delegated task.",
+    "Resource budget": "Compiles into total tokens, calls, wall time, CPU/GPU, money, storage and child budgets. Unbounded in the catalog still requires finite platform limits and cancelability.",
+    "Trust / provenance": "Controls what evidence sources may inform beliefs, separately from who can authorize actions. External content and other agents cannot rewrite grants or overwrite user intent. High trust still carries provenance and contradictions.",
+    "Containment": "Requires observed host controls for the chosen profile. A UI label is not an attestation; stronger containment never compensates for forbidden scope or unsupported reasoning.",
+    "Cunning (ethics)": "Preserve the catalog as requested behavior, not an intelligence multiplier. Strategy creativity can vary, but evidence, audit records and user-facing claims stay truthful. Deception-related labels need separately specified application semantics; no covert behavior is inferred from a number.",
+    "Cruelty (morality)": "Preserve the source label, but compile only explicit effect and collateral-impact policies. It is not a reasoning-quality control. Undefined levels and destructive behavior without an executable policy remain unsupported."
+  },
+  "policy_source": "/home/tinshemet/Desktop/resolve-review-aawn6122/resolve_poc_v0_1/resolve_poc/policy.py",
+  "policy_sha256": "bbfa7ac826f6b7ef71d991c529861efb2d018c58c30a35ca0236ee9a604f8516",
+  "artifact": "reports/resolve-general-agency-proposal.html",
+  "user_override": "Current READ owns linguistic interpretation and grounding; proposed RESOLVE expansion concerns goal-directed investigation/planning."
+}
