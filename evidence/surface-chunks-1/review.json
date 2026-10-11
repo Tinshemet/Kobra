@@ -1,0 +1,32 @@
+{
+  "scope": [
+    "src/kobra/surface_chunks.py",
+    "src/kobra/structural_read.py",
+    "src/kobra/rule_assignment.py",
+    "tests/test_surface_chunks.py",
+    "tests/test_structural_read.py",
+    "tools/compare_code_replay.py",
+    "tools/export_read_examples.py"
+  ],
+  "review": "Reviewed actual source and diff for protected regions, source offsets, conservative scope rejection, parser-dependent role limitations, replay accounting and HTML rendering.",
+  "outcome": "No blocking findings. Removed unused dependency-boundary helpers. Added integration check that structural spans use source-only boundaries.",
+  "limitations": [
+    "Finite action vocabulary can confuse noun/action homographs; boundary supported status is not semantic verification.",
+    "Simple non-command grammar remains parser-based.",
+    "Resolver contract still general, not yet restricted to role/context selection.",
+    "No calibration installed; code-routed incorrect counter is not final gate acceptance.",
+    "Replay is reused development: 387/600 code-correct, zero ticks or regressions; no fresh accuracy claim."
+  ],
+  "tests": "172 tests run, 171 passed, 1 optional dependency skip; HTML JSON and inline JavaScript validated",
+  "new_model_calls": 0,
+  "files": {
+    "src/kobra/surface_chunks.py": "28c04825ed89f8dc776d00bce9588233799437d4f2559f8706cd2708bc2e06a1",
+    "src/kobra/structural_read.py": "fc042e6f4f4bdb6e4db8423b43a9fcf77970d044d4c4c3a26dfc559943823d9d",
+    "src/kobra/rule_assignment.py": "d3da5e17393419c475f26c74dd6a145b8c43b263c152c93d851bce3d13b3e48a",
+    "tests/test_surface_chunks.py": "d1a2320aac6140e20030c93ed9cd04bc39c78eb138e7c04ad4609f78567e1359",
+    "tests/test_structural_read.py": "e5b26ffcefbe19d4a65ffbdabb01e94e170b2363c23a64b3cc100b8a79da7ad6",
+    "tools/compare_code_replay.py": "dbc09499ba9fcaf6f47a42eda6bd0a03f83e6787afef50de7cfe7d885f5ed513",
+    "tools/export_read_examples.py": "4da37cf045ebafb20fe44edeb6d74072fabea00b401e8165d42f1eaf0b1e491e"
+  },
+  "replay_note": "Replay provenance precedes removal of unused INTRO/trim_end helpers; behavior unchanged."
+}

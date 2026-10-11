@@ -52,16 +52,17 @@ def main():
         traces.append(dict(title=e['title'],source=e['text'],explanation=e['explanation'],ai_state=ai_state,
             steps=[
                 dict(title='1 · Receive the source and supplied context',input=context_input,output=ledger,passes='The original sentence goes to the assigner. A preserved context snapshot is retained; copied context is available if the resolver is needed.'),
-                dict(title='2 · Dependency parser proposes syntax',input={'text':e['text']},output=parser,passes='Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver.'),
-                dict(title='3 · Code constructs the interpretation',input={'syntax':'Exact token records shown in stage 2'},output=code,passes='If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver.'),
-                dict(title='4 · Optional AI / resolver branch',input=calls[0] if calls else {'called':False,'reason':ai_state},output=result['proposal'] if calls else {'called':False},passes='A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal.'),
-                dict(title='5 · External validation and confidence',input=gate_input,output={k:result[k] for k in ('route','reasons','external_score','score_kind','calibration_evidence','model_self_confidence_used')},passes='The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null.'),
-                dict(title='6 · Final READ product',input={'gate_route':result['route'],'assignment_source':result['assignment_source']},output=result,passes='This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question.')
+                dict(title='2 · Deterministic command boundaries',input={'text':e['text']},output=code['surface_structure'],passes='Source-only rules preserve offsets and protected regions. Unsupported command grammar remains explicit. These boundaries do not depend on the learned parser.'),
+                dict(title='3 · Dependency parser proposes syntax',input={'text':e['text']},output=parser,passes='Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver.'),
+                dict(title='4 · Code constructs the interpretation',input={'syntax':'Exact token records shown in stage 3'},output=code,passes='If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver.'),
+                dict(title='5 · Optional AI / resolver branch',input=calls[0] if calls else {'called':False,'reason':ai_state},output=result['proposal'] if calls else {'called':False},passes='A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal.'),
+                dict(title='6 · External validation and confidence',input=gate_input,output={k:result[k] for k in ('route','reasons','external_score','score_kind','calibration_evidence','model_self_confidence_used')},passes='The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null.'),
+                dict(title='7 · Final READ product',input={'gate_route':result['route'],'assignment_source':result['assignment_source']},output=result,passes='This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question.')
             ]))
     evidence=ROOT/'evidence/read-pipeline-examples'
     evidence.mkdir(exist_ok=True)
     payload=dict(kind='development walkthrough; no accuracy measurement',new_model_calls=0,scripted_resolver_calls=1,
-                 source_hashes={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in ['src/kobra/rule_assignment.py','src/kobra/confidence_gate.py','src/kobra/context_ledger.py']},examples=traces)
+                 source_hashes={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in ['src/kobra/rule_assignment.py','src/kobra/surface_chunks.py','src/kobra/structural_read.py','src/kobra/confidence_gate.py','src/kobra/context_ledger.py']},examples=traces)
     (evidence/'traces.json').write_text(json.dumps(payload,indent=2,ensure_ascii=False)+'\n')
     (evidence/'inputs.json').write_text(json.dumps([{'id':str(i),'text':e['text']} for i,e in enumerate(examples,1)],indent=2)+'\n')
     page=ROOT/'reports/read-pipeline-current.html'
@@ -96,8 +97,8 @@ exampleSelect.addEventListener('change',renderExample);renderExample();
     text=text.replace('<h2>Explore the flow</h2>',section+'\n<h2>Explore the flow</h2>',1)
     page.write_text(text)
     assert all(e['steps'][-1]['output']['route']=='ASK' for e in traces)
-    assert traces[1]['steps'][2]['output']['frames'][0]['agent']=='Alex'
-    assert not traces[3]['steps'][3]['input']['called']
+    assert traces[1]['steps'][3]['output']['frames'][0]['agent']=='Alex'
+    assert not traces[3]['steps'][4]['input']['called']
     assert 'nonexistent_world_reference' in traces[-1]['steps'][-1]['output']['reasons']
     print(json.dumps({'examples':len(traces),'live_model_calls':0,'scripted_resolver_calls':1,'output':str(page)},indent=2))
 

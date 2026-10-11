@@ -11,6 +11,8 @@ class StructuralReadTests(unittest.TestCase):
     def test_nested_members_and_both_references(self):
         p=self.reader.assign(VM)
         self.assertEqual(p['route'],'code')
+        self.assertEqual(p['chunking_method'],'deterministic_surface_rules')
+        self.assertEqual([c['span']['start'] for c in p['chunks']], [c['start'] for c in p['surface_structure']['chunks']])
         self.assertEqual([f['predicate'] for f in p['frames']],['create','set','launch'])
         self.assertEqual([m['specification']['text'] for m in p['chunks'][0]['members']],['windows','metaspoitable','kali'])
         self.assertEqual([r['entity_id'] for r in p['local_references']],['e1','e1'])

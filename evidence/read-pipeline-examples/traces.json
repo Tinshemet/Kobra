@@ -3,7 +3,9 @@
   "new_model_calls": 0,
   "scripted_resolver_calls": 1,
   "source_hashes": {
-    "src/kobra/rule_assignment.py": "1196707b99afcd9c11ab8baf8501958a5fb31680024e92da74042c438d2e3f4e",
+    "src/kobra/rule_assignment.py": "d3da5e17393419c475f26c74dd6a145b8c43b263c152c93d851bce3d13b3e48a",
+    "src/kobra/surface_chunks.py": "28c04825ed89f8dc776d00bce9588233799437d4f2559f8706cd2708bc2e06a1",
+    "src/kobra/structural_read.py": "fc042e6f4f4bdb6e4db8423b43a9fcf77970d044d4c4c3a26dfc559943823d9d",
     "src/kobra/confidence_gate.py": "63c7e672b5f85709cafc22e0cb99067f915dfddd624a9076ebd9ddfadf3f594f",
     "src/kobra/context_ledger.py": "af65340227950da8cde5be0175ff7e8a5d7dc6f7d2c940944a4fade27895000f"
   },
@@ -33,7 +35,48 @@
           "passes": "The original sentence goes to the assigner. A preserved context snapshot is retained; copied context is available if the resolver is needed."
         },
         {
-          "title": "2 · Dependency parser proposes syntax",
+          "title": "2 · Deterministic command boundaries",
+          "input": {
+            "text": "Cancel the subscription."
+          },
+          "output": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 23,
+                "text": "Cancel the subscription",
+                "predicate": {
+                  "start": 0,
+                  "end": 6,
+                  "text": "Cancel"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 23,
+                "text": "Cancel the subscription",
+                "label": "chunk"
+              },
+              {
+                "start": 23,
+                "end": 24,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          },
+          "passes": "Source-only rules preserve offsets and protected regions. Unsupported command grammar remains explicit. These boundaries do not depend on the learned parser."
+        },
+        {
+          "title": "3 · Dependency parser proposes syntax",
           "input": {
             "text": "Cancel the subscription."
           },
@@ -66,9 +109,9 @@
           "passes": "Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver."
         },
         {
-          "title": "3 · Code constructs the interpretation",
+          "title": "4 · Code constructs the interpretation",
           "input": {
-            "syntax": "Exact token records shown in stage 2"
+            "syntax": "Exact token records shown in stage 3"
           },
           "output": {
             "source": "Cancel the subscription.",
@@ -93,12 +136,46 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-2"
+            "version": "rule-assignment-3",
+            "surface_structure": {
+              "version": "surface-chunks-1",
+              "method": "deterministic_surface_rules",
+              "status": "supported",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "start": 0,
+                  "end": 23,
+                  "text": "Cancel the subscription",
+                  "predicate": {
+                    "start": 0,
+                    "end": 6,
+                    "text": "Cancel"
+                  }
+                }
+              ],
+              "issues": [],
+              "protected_spans": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 23,
+                  "text": "Cancel the subscription",
+                  "label": "chunk"
+                },
+                {
+                  "start": 23,
+                  "end": 24,
+                  "text": ".",
+                  "label": "suffix"
+                }
+              ]
+            }
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
         {
-          "title": "4 · Optional AI / resolver branch",
+          "title": "5 · Optional AI / resolver branch",
           "input": {
             "called": false,
             "reason": "AI skipped: code assigned roles"
@@ -109,7 +186,7 @@
           "passes": "A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal."
         },
         {
-          "title": "5 · External validation and confidence",
+          "title": "6 · External validation and confidence",
           "input": {
             "source": "Cancel the subscription.",
             "proposal": {
@@ -135,7 +212,41 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 23,
+                    "text": "Cancel the subscription",
+                    "predicate": {
+                      "start": 0,
+                      "end": 6,
+                      "text": "Cancel"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 23,
+                    "text": "Cancel the subscription",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 23,
+                    "end": 24,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "cohort": "code:C002-active-roles",
             "world_ids": [],
@@ -156,7 +267,7 @@
           "passes": "The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null."
         },
         {
-          "title": "6 · Final READ product",
+          "title": "7 · Final READ product",
           "input": {
             "gate_route": "ASK",
             "assignment_source": "code"
@@ -187,7 +298,41 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 23,
+                    "text": "Cancel the subscription",
+                    "predicate": {
+                      "start": 0,
+                      "end": 6,
+                      "text": "Cancel"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 23,
+                    "text": "Cancel the subscription",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 23,
+                    "end": 24,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "reasons": [
               "uncalibrated_cohort"
@@ -230,7 +375,41 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 23,
+                    "text": "Cancel the subscription",
+                    "predicate": {
+                      "start": 0,
+                      "end": 6,
+                      "text": "Cancel"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 23,
+                    "text": "Cancel the subscription",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 23,
+                    "end": 24,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -262,7 +441,33 @@
           "passes": "The original sentence goes to the assigner. A preserved context snapshot is retained; copied context is available if the resolver is needed."
         },
         {
-          "title": "2 · Dependency parser proposes syntax",
+          "title": "2 · Deterministic command boundaries",
+          "input": {
+            "text": "Will the books be carried by Alex?"
+          },
+          "output": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "unresolved",
+            "chunks": [],
+            "issues": [
+              "scope_requires_separate_analysis",
+              "unsupported_initial_action"
+            ],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 34,
+                "text": "Will the books be carried by Alex?",
+                "label": "unassigned"
+              }
+            ]
+          },
+          "passes": "Source-only rules preserve offsets and protected regions. Unsupported command grammar remains explicit. These boundaries do not depend on the learned parser."
+        },
+        {
+          "title": "3 · Dependency parser proposes syntax",
           "input": {
             "text": "Will the books be carried by Alex?"
           },
@@ -319,9 +524,9 @@
           "passes": "Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver."
         },
         {
-          "title": "3 · Code constructs the interpretation",
+          "title": "4 · Code constructs the interpretation",
           "input": {
-            "syntax": "Exact token records shown in stage 2"
+            "syntax": "Exact token records shown in stage 3"
           },
           "output": {
             "source": "Will the books be carried by Alex?",
@@ -346,12 +551,31 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-2"
+            "version": "rule-assignment-3",
+            "surface_structure": {
+              "version": "surface-chunks-1",
+              "method": "deterministic_surface_rules",
+              "status": "unresolved",
+              "chunks": [],
+              "issues": [
+                "scope_requires_separate_analysis",
+                "unsupported_initial_action"
+              ],
+              "protected_spans": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 34,
+                  "text": "Will the books be carried by Alex?",
+                  "label": "unassigned"
+                }
+              ]
+            }
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
         {
-          "title": "4 · Optional AI / resolver branch",
+          "title": "5 · Optional AI / resolver branch",
           "input": {
             "called": false,
             "reason": "AI skipped: code assigned roles"
@@ -362,7 +586,7 @@
           "passes": "A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal."
         },
         {
-          "title": "5 · External validation and confidence",
+          "title": "6 · External validation and confidence",
           "input": {
             "source": "Will the books be carried by Alex?",
             "proposal": {
@@ -388,7 +612,26 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "unresolved",
+                "chunks": [],
+                "issues": [
+                  "scope_requires_separate_analysis",
+                  "unsupported_initial_action"
+                ],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 34,
+                    "text": "Will the books be carried by Alex?",
+                    "label": "unassigned"
+                  }
+                ]
+              }
             },
             "cohort": "code:C001-passive-roles",
             "world_ids": [],
@@ -409,7 +652,7 @@
           "passes": "The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null."
         },
         {
-          "title": "6 · Final READ product",
+          "title": "7 · Final READ product",
           "input": {
             "gate_route": "ASK",
             "assignment_source": "code"
@@ -440,7 +683,26 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "unresolved",
+                "chunks": [],
+                "issues": [
+                  "scope_requires_separate_analysis",
+                  "unsupported_initial_action"
+                ],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 34,
+                    "text": "Will the books be carried by Alex?",
+                    "label": "unassigned"
+                  }
+                ]
+              }
             },
             "reasons": [
               "uncalibrated_cohort"
@@ -483,7 +745,26 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "unresolved",
+                "chunks": [],
+                "issues": [
+                  "scope_requires_separate_analysis",
+                  "unsupported_initial_action"
+                ],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 34,
+                    "text": "Will the books be carried by Alex?",
+                    "label": "unassigned"
+                  }
+                ]
+              }
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -515,7 +796,48 @@
           "passes": "The original sentence goes to the assigner. A preserved context snapshot is retained; copied context is available if the resolver is needed."
         },
         {
-          "title": "2 · Dependency parser proposes syntax",
+          "title": "2 · Deterministic command boundaries",
+          "input": {
+            "text": "Move it."
+          },
+          "output": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 7,
+                "text": "Move it",
+                "predicate": {
+                  "start": 0,
+                  "end": 4,
+                  "text": "Move"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 7,
+                "text": "Move it",
+                "label": "chunk"
+              },
+              {
+                "start": 7,
+                "end": 8,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          },
+          "passes": "Source-only rules preserve offsets and protected regions. Unsupported command grammar remains explicit. These boundaries do not depend on the learned parser."
+        },
+        {
+          "title": "3 · Dependency parser proposes syntax",
           "input": {
             "text": "Move it."
           },
@@ -542,9 +864,9 @@
           "passes": "Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver."
         },
         {
-          "title": "3 · Code constructs the interpretation",
+          "title": "4 · Code constructs the interpretation",
           "input": {
-            "syntax": "Exact token records shown in stage 2"
+            "syntax": "Exact token records shown in stage 3"
           },
           "output": {
             "source": "Move it.",
@@ -569,12 +891,46 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-2"
+            "version": "rule-assignment-3",
+            "surface_structure": {
+              "version": "surface-chunks-1",
+              "method": "deterministic_surface_rules",
+              "status": "supported",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "start": 0,
+                  "end": 7,
+                  "text": "Move it",
+                  "predicate": {
+                    "start": 0,
+                    "end": 4,
+                    "text": "Move"
+                  }
+                }
+              ],
+              "issues": [],
+              "protected_spans": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Move it",
+                  "label": "chunk"
+                },
+                {
+                  "start": 7,
+                  "end": 8,
+                  "text": ".",
+                  "label": "suffix"
+                }
+              ]
+            }
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
         {
-          "title": "4 · Optional AI / resolver branch",
+          "title": "5 · Optional AI / resolver branch",
           "input": {
             "called": false,
             "reason": "AI skipped: code assigned roles"
@@ -585,7 +941,7 @@
           "passes": "A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal."
         },
         {
-          "title": "5 · External validation and confidence",
+          "title": "6 · External validation and confidence",
           "input": {
             "source": "Move it.",
             "proposal": {
@@ -611,7 +967,41 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "predicate": {
+                      "start": 0,
+                      "end": 4,
+                      "text": "Move"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 7,
+                    "end": 8,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "cohort": "code:C002-active-roles",
             "world_ids": [],
@@ -633,7 +1023,7 @@
           "passes": "The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null."
         },
         {
-          "title": "6 · Final READ product",
+          "title": "7 · Final READ product",
           "input": {
             "gate_route": "ASK",
             "assignment_source": "code"
@@ -664,7 +1054,41 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "predicate": {
+                      "start": 0,
+                      "end": 4,
+                      "text": "Move"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 7,
+                    "end": 8,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "reasons": [
               "uncalibrated_cohort",
@@ -708,7 +1132,41 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "predicate": {
+                      "start": 0,
+                      "end": 4,
+                      "text": "Move"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 7,
+                    "end": 8,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -774,7 +1232,48 @@
           "passes": "The original sentence goes to the assigner. A preserved context snapshot is retained; copied context is available if the resolver is needed."
         },
         {
-          "title": "2 · Dependency parser proposes syntax",
+          "title": "2 · Deterministic command boundaries",
+          "input": {
+            "text": "Move it."
+          },
+          "output": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 7,
+                "text": "Move it",
+                "predicate": {
+                  "start": 0,
+                  "end": 4,
+                  "text": "Move"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 7,
+                "text": "Move it",
+                "label": "chunk"
+              },
+              {
+                "start": 7,
+                "end": 8,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          },
+          "passes": "Source-only rules preserve offsets and protected regions. Unsupported command grammar remains explicit. These boundaries do not depend on the learned parser."
+        },
+        {
+          "title": "3 · Dependency parser proposes syntax",
           "input": {
             "text": "Move it."
           },
@@ -801,9 +1300,9 @@
           "passes": "Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver."
         },
         {
-          "title": "3 · Code constructs the interpretation",
+          "title": "4 · Code constructs the interpretation",
           "input": {
-            "syntax": "Exact token records shown in stage 2"
+            "syntax": "Exact token records shown in stage 3"
           },
           "output": {
             "source": "Move it.",
@@ -828,12 +1327,46 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-2"
+            "version": "rule-assignment-3",
+            "surface_structure": {
+              "version": "surface-chunks-1",
+              "method": "deterministic_surface_rules",
+              "status": "supported",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "start": 0,
+                  "end": 7,
+                  "text": "Move it",
+                  "predicate": {
+                    "start": 0,
+                    "end": 4,
+                    "text": "Move"
+                  }
+                }
+              ],
+              "issues": [],
+              "protected_spans": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 7,
+                  "text": "Move it",
+                  "label": "chunk"
+                },
+                {
+                  "start": 7,
+                  "end": 8,
+                  "text": ".",
+                  "label": "suffix"
+                }
+              ]
+            }
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
         {
-          "title": "4 · Optional AI / resolver branch",
+          "title": "5 · Optional AI / resolver branch",
           "input": {
             "called": false,
             "reason": "AI skipped: code assigned roles"
@@ -844,7 +1377,7 @@
           "passes": "A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal."
         },
         {
-          "title": "5 · External validation and confidence",
+          "title": "6 · External validation and confidence",
           "input": {
             "source": "Move it.",
             "proposal": {
@@ -870,7 +1403,41 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "predicate": {
+                      "start": 0,
+                      "end": 4,
+                      "text": "Move"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 7,
+                    "end": 8,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "cohort": "code:C002-active-roles",
             "world_ids": [
@@ -894,7 +1461,7 @@
           "passes": "The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null."
         },
         {
-          "title": "6 · Final READ product",
+          "title": "7 · Final READ product",
           "input": {
             "gate_route": "ASK",
             "assignment_source": "code"
@@ -925,7 +1492,41 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "predicate": {
+                      "start": 0,
+                      "end": 4,
+                      "text": "Move"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 7,
+                    "end": 8,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "reasons": [
               "uncalibrated_cohort",
@@ -993,7 +1594,41 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "predicate": {
+                      "start": 0,
+                      "end": 4,
+                      "text": "Move"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 7,
+                    "text": "Move it",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 7,
+                    "end": 8,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -1025,7 +1660,48 @@
           "passes": "The original sentence goes to the assigner. A preserved context snapshot is retained; copied context is available if the resolver is needed."
         },
         {
-          "title": "2 · Dependency parser proposes syntax",
+          "title": "2 · Deterministic command boundaries",
+          "input": {
+            "text": "Create three Debian VMs with 16 GB of RAM each."
+          },
+          "output": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 46,
+                "text": "Create three Debian VMs with 16 GB of RAM each",
+                "predicate": {
+                  "start": 0,
+                  "end": 6,
+                  "text": "Create"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 46,
+                "text": "Create three Debian VMs with 16 GB of RAM each",
+                "label": "chunk"
+              },
+              {
+                "start": 46,
+                "end": 47,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          },
+          "passes": "Source-only rules preserve offsets and protected regions. Unsupported command grammar remains explicit. These boundaries do not depend on the learned parser."
+        },
+        {
+          "title": "3 · Dependency parser proposes syntax",
           "input": {
             "text": "Create three Debian VMs with 16 GB of RAM each."
           },
@@ -1100,9 +1776,9 @@
           "passes": "Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver."
         },
         {
-          "title": "3 · Code constructs the interpretation",
+          "title": "4 · Code constructs the interpretation",
           "input": {
-            "syntax": "Exact token records shown in stage 2"
+            "syntax": "Exact token records shown in stage 3"
           },
           "output": {
             "source": "Create three Debian VMs with 16 GB of RAM each.",
@@ -1129,7 +1805,8 @@
               "c1:unresolved_attachment"
             ],
             "semantic_verified": false,
-            "version": "rule-assignment-2",
+            "version": "rule-assignment-3",
+            "chunking_method": "deterministic_surface_rules",
             "chunks": [
               {
                 "id": "c1",
@@ -1189,12 +1866,46 @@
                 "text": ".",
                 "label": "connective_or_unassigned"
               }
-            ]
+            ],
+            "surface_structure": {
+              "version": "surface-chunks-1",
+              "method": "deterministic_surface_rules",
+              "status": "supported",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "start": 0,
+                  "end": 46,
+                  "text": "Create three Debian VMs with 16 GB of RAM each",
+                  "predicate": {
+                    "start": 0,
+                    "end": 6,
+                    "text": "Create"
+                  }
+                }
+              ],
+              "issues": [],
+              "protected_spans": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 46,
+                  "text": "Create three Debian VMs with 16 GB of RAM each",
+                  "label": "chunk"
+                },
+                {
+                  "start": 46,
+                  "end": 47,
+                  "text": ".",
+                  "label": "suffix"
+                }
+              ]
+            }
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
         {
-          "title": "4 · Optional AI / resolver branch",
+          "title": "5 · Optional AI / resolver branch",
           "input": {
             "called": false,
             "reason": "AI unavailable: no resolver supplied"
@@ -1205,7 +1916,7 @@
           "passes": "A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal."
         },
         {
-          "title": "5 · External validation and confidence",
+          "title": "6 · External validation and confidence",
           "input": {
             "source": "Create three Debian VMs with 16 GB of RAM each.",
             "proposal": {
@@ -1233,7 +1944,8 @@
                 "c1:unresolved_attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-2",
+              "version": "rule-assignment-3",
+              "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
                   "id": "c1",
@@ -1293,7 +2005,41 @@
                   "text": ".",
                   "label": "connective_or_unassigned"
                 }
-              ]
+              ],
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 46,
+                    "text": "Create three Debian VMs with 16 GB of RAM each",
+                    "predicate": {
+                      "start": 0,
+                      "end": 6,
+                      "text": "Create"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 46,
+                    "text": "Create three Debian VMs with 16 GB of RAM each",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 46,
+                    "end": 47,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "cohort": "model-unresolved-v1",
             "world_ids": [],
@@ -1315,7 +2061,7 @@
           "passes": "The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null."
         },
         {
-          "title": "6 · Final READ product",
+          "title": "7 · Final READ product",
           "input": {
             "gate_route": "ASK",
             "assignment_source": "unresolved"
@@ -1348,7 +2094,8 @@
                 "c1:unresolved_attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-2",
+              "version": "rule-assignment-3",
+              "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
                   "id": "c1",
@@ -1408,7 +2155,41 @@
                   "text": ".",
                   "label": "connective_or_unassigned"
                 }
-              ]
+              ],
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 46,
+                    "text": "Create three Debian VMs with 16 GB of RAM each",
+                    "predicate": {
+                      "start": 0,
+                      "end": 6,
+                      "text": "Create"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 46,
+                    "text": "Create three Debian VMs with 16 GB of RAM each",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 46,
+                    "end": 47,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "reasons": [
               "uncalibrated_cohort",
@@ -1454,7 +2235,8 @@
                 "c1:unresolved_attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-2",
+              "version": "rule-assignment-3",
+              "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
                   "id": "c1",
@@ -1514,7 +2296,41 @@
                   "text": ".",
                   "label": "connective_or_unassigned"
                 }
-              ]
+              ],
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 46,
+                    "text": "Create three Debian VMs with 16 GB of RAM each",
+                    "predicate": {
+                      "start": 0,
+                      "end": 6,
+                      "text": "Create"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 46,
+                    "text": "Create three Debian VMs with 16 GB of RAM each",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 46,
+                    "end": 47,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -1546,7 +2362,100 @@
           "passes": "The original sentence goes to the assigner. A preserved context snapshot is retained; copied context is available if the resolver is needed."
         },
         {
-          "title": "2 · Dependency parser proposes syntax",
+          "title": "2 · Deterministic command boundaries",
+          "input": {
+            "text": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them."
+          },
+          "output": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "supported",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 28,
+                "end": 99,
+                "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                "predicate": {
+                  "start": 28,
+                  "end": 34,
+                  "text": "create"
+                }
+              },
+              {
+                "id": "c2",
+                "start": 101,
+                "end": 134,
+                "text": "set them  all in the same network",
+                "predicate": {
+                  "start": 101,
+                  "end": 104,
+                  "text": "set"
+                }
+              },
+              {
+                "id": "c3",
+                "start": 139,
+                "end": 150,
+                "text": "launch them",
+                "predicate": {
+                  "start": 139,
+                  "end": 145,
+                  "text": "launch"
+                }
+              }
+            ],
+            "issues": [],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 28,
+                "text": "Good morning gorgon, please ",
+                "label": "prefix"
+              },
+              {
+                "start": 28,
+                "end": 99,
+                "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                "label": "chunk"
+              },
+              {
+                "start": 99,
+                "end": 101,
+                "text": ", ",
+                "label": "connector"
+              },
+              {
+                "start": 101,
+                "end": 134,
+                "text": "set them  all in the same network",
+                "label": "chunk"
+              },
+              {
+                "start": 134,
+                "end": 139,
+                "text": " and ",
+                "label": "connector"
+              },
+              {
+                "start": 139,
+                "end": 150,
+                "text": "launch them",
+                "label": "chunk"
+              },
+              {
+                "start": 150,
+                "end": 151,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          },
+          "passes": "Source-only rules preserve offsets and protected regions. Unsupported command grammar remains explicit. These boundaries do not depend on the learned parser."
+        },
+        {
+          "title": "3 · Dependency parser proposes syntax",
           "input": {
             "text": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them."
           },
@@ -1747,9 +2656,9 @@
           "passes": "Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver."
         },
         {
-          "title": "3 · Code constructs the interpretation",
+          "title": "4 · Code constructs the interpretation",
           "input": {
-            "syntax": "Exact token records shown in stage 2"
+            "syntax": "Exact token records shown in stage 3"
           },
           "output": {
             "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
@@ -1803,7 +2712,8 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-2",
+            "version": "rule-assignment-3",
+            "chunking_method": "deterministic_surface_rules",
             "chunks": [
               {
                 "id": "c1",
@@ -2057,12 +2967,98 @@
                 "text": ".",
                 "label": "connective_or_unassigned"
               }
-            ]
+            ],
+            "surface_structure": {
+              "version": "surface-chunks-1",
+              "method": "deterministic_surface_rules",
+              "status": "supported",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "start": 28,
+                  "end": 99,
+                  "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                  "predicate": {
+                    "start": 28,
+                    "end": 34,
+                    "text": "create"
+                  }
+                },
+                {
+                  "id": "c2",
+                  "start": 101,
+                  "end": 134,
+                  "text": "set them  all in the same network",
+                  "predicate": {
+                    "start": 101,
+                    "end": 104,
+                    "text": "set"
+                  }
+                },
+                {
+                  "id": "c3",
+                  "start": 139,
+                  "end": 150,
+                  "text": "launch them",
+                  "predicate": {
+                    "start": 139,
+                    "end": 145,
+                    "text": "launch"
+                  }
+                }
+              ],
+              "issues": [],
+              "protected_spans": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 28,
+                  "text": "Good morning gorgon, please ",
+                  "label": "prefix"
+                },
+                {
+                  "start": 28,
+                  "end": 99,
+                  "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                  "label": "chunk"
+                },
+                {
+                  "start": 99,
+                  "end": 101,
+                  "text": ", ",
+                  "label": "connector"
+                },
+                {
+                  "start": 101,
+                  "end": 134,
+                  "text": "set them  all in the same network",
+                  "label": "chunk"
+                },
+                {
+                  "start": 134,
+                  "end": 139,
+                  "text": " and ",
+                  "label": "connector"
+                },
+                {
+                  "start": 139,
+                  "end": 150,
+                  "text": "launch them",
+                  "label": "chunk"
+                },
+                {
+                  "start": 150,
+                  "end": 151,
+                  "text": ".",
+                  "label": "suffix"
+                }
+              ]
+            }
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
         {
-          "title": "4 · Optional AI / resolver branch",
+          "title": "5 · Optional AI / resolver branch",
           "input": {
             "called": false,
             "reason": "AI skipped: code assigned roles"
@@ -2073,7 +3069,7 @@
           "passes": "A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal."
         },
         {
-          "title": "5 · External validation and confidence",
+          "title": "6 · External validation and confidence",
           "input": {
             "source": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them.",
             "proposal": {
@@ -2128,7 +3124,8 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2",
+              "version": "rule-assignment-3",
+              "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
                   "id": "c1",
@@ -2382,7 +3379,93 @@
                   "text": ".",
                   "label": "connective_or_unassigned"
                 }
-              ]
+              ],
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 28,
+                    "end": 99,
+                    "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                    "predicate": {
+                      "start": 28,
+                      "end": 34,
+                      "text": "create"
+                    }
+                  },
+                  {
+                    "id": "c2",
+                    "start": 101,
+                    "end": 134,
+                    "text": "set them  all in the same network",
+                    "predicate": {
+                      "start": 101,
+                      "end": 104,
+                      "text": "set"
+                    }
+                  },
+                  {
+                    "id": "c3",
+                    "start": 139,
+                    "end": 150,
+                    "text": "launch them",
+                    "predicate": {
+                      "start": 139,
+                      "end": 145,
+                      "text": "launch"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 28,
+                    "text": "Good morning gorgon, please ",
+                    "label": "prefix"
+                  },
+                  {
+                    "start": 28,
+                    "end": 99,
+                    "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 99,
+                    "end": 101,
+                    "text": ", ",
+                    "label": "connector"
+                  },
+                  {
+                    "start": 101,
+                    "end": 134,
+                    "text": "set them  all in the same network",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 134,
+                    "end": 139,
+                    "text": " and ",
+                    "label": "connector"
+                  },
+                  {
+                    "start": 139,
+                    "end": 150,
+                    "text": "launch them",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 150,
+                    "end": 151,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "cohort": "code:C010-imperative-coordination+C012-counted-member-specifications+C013-shared-location-constraint+C014-unique-local-number-agreement",
             "world_ids": [],
@@ -2432,7 +3515,7 @@
           "passes": "The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null."
         },
         {
-          "title": "6 · Final READ product",
+          "title": "7 · Final READ product",
           "input": {
             "gate_route": "ASK",
             "assignment_source": "code"
@@ -2492,7 +3575,8 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2",
+              "version": "rule-assignment-3",
+              "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
                   "id": "c1",
@@ -2746,7 +3830,93 @@
                   "text": ".",
                   "label": "connective_or_unassigned"
                 }
-              ]
+              ],
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 28,
+                    "end": 99,
+                    "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                    "predicate": {
+                      "start": 28,
+                      "end": 34,
+                      "text": "create"
+                    }
+                  },
+                  {
+                    "id": "c2",
+                    "start": 101,
+                    "end": 134,
+                    "text": "set them  all in the same network",
+                    "predicate": {
+                      "start": 101,
+                      "end": 104,
+                      "text": "set"
+                    }
+                  },
+                  {
+                    "id": "c3",
+                    "start": 139,
+                    "end": 150,
+                    "text": "launch them",
+                    "predicate": {
+                      "start": 139,
+                      "end": 145,
+                      "text": "launch"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 28,
+                    "text": "Good morning gorgon, please ",
+                    "label": "prefix"
+                  },
+                  {
+                    "start": 28,
+                    "end": 99,
+                    "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 99,
+                    "end": 101,
+                    "text": ", ",
+                    "label": "connector"
+                  },
+                  {
+                    "start": 101,
+                    "end": 134,
+                    "text": "set them  all in the same network",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 134,
+                    "end": 139,
+                    "text": " and ",
+                    "label": "connector"
+                  },
+                  {
+                    "start": 139,
+                    "end": 150,
+                    "text": "launch them",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 150,
+                    "end": 151,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "reasons": [
               "uncalibrated_cohort"
@@ -2818,7 +3988,8 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-2",
+              "version": "rule-assignment-3",
+              "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
                   "id": "c1",
@@ -3072,7 +4243,93 @@
                   "text": ".",
                   "label": "connective_or_unassigned"
                 }
-              ]
+              ],
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "supported",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 28,
+                    "end": 99,
+                    "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                    "predicate": {
+                      "start": 28,
+                      "end": 34,
+                      "text": "create"
+                    }
+                  },
+                  {
+                    "id": "c2",
+                    "start": 101,
+                    "end": 134,
+                    "text": "set them  all in the same network",
+                    "predicate": {
+                      "start": 101,
+                      "end": 104,
+                      "text": "set"
+                    }
+                  },
+                  {
+                    "id": "c3",
+                    "start": 139,
+                    "end": 150,
+                    "text": "launch them",
+                    "predicate": {
+                      "start": 139,
+                      "end": 145,
+                      "text": "launch"
+                    }
+                  }
+                ],
+                "issues": [],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 28,
+                    "text": "Good morning gorgon, please ",
+                    "label": "prefix"
+                  },
+                  {
+                    "start": 28,
+                    "end": 99,
+                    "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 99,
+                    "end": 101,
+                    "text": ", ",
+                    "label": "connector"
+                  },
+                  {
+                    "start": 101,
+                    "end": 134,
+                    "text": "set them  all in the same network",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 134,
+                    "end": 139,
+                    "text": " and ",
+                    "label": "connector"
+                  },
+                  {
+                    "start": 139,
+                    "end": 150,
+                    "text": "launch them",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 150,
+                    "end": 151,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -3118,7 +4375,50 @@
           "passes": "The original sentence goes to the assigner. A preserved context snapshot is retained; copied context is available if the resolver is needed."
         },
         {
-          "title": "2 · Dependency parser proposes syntax",
+          "title": "2 · Deterministic command boundaries",
+          "input": {
+            "text": "Refund the order if it was cancelled."
+          },
+          "output": {
+            "version": "surface-chunks-1",
+            "method": "deterministic_surface_rules",
+            "status": "unresolved",
+            "chunks": [
+              {
+                "id": "c1",
+                "start": 0,
+                "end": 36,
+                "text": "Refund the order if it was cancelled",
+                "predicate": {
+                  "start": 0,
+                  "end": 6,
+                  "text": "Refund"
+                }
+              }
+            ],
+            "issues": [
+              "scope_requires_separate_analysis"
+            ],
+            "protected_spans": [],
+            "source_ledger": [
+              {
+                "start": 0,
+                "end": 36,
+                "text": "Refund the order if it was cancelled",
+                "label": "chunk"
+              },
+              {
+                "start": 36,
+                "end": 37,
+                "text": ".",
+                "label": "suffix"
+              }
+            ]
+          },
+          "passes": "Source-only rules preserve offsets and protected regions. Unsupported command grammar remains explicit. These boundaries do not depend on the learned parser."
+        },
+        {
+          "title": "3 · Dependency parser proposes syntax",
           "input": {
             "text": "Refund the order if it was cancelled."
           },
@@ -3175,9 +4475,9 @@
           "passes": "Token text, part-of-speech tags and dependency relations are used internally by the role rules. This parser is a learned model, distinct from a generative AI resolver."
         },
         {
-          "title": "3 · Code constructs the interpretation",
+          "title": "4 · Code constructs the interpretation",
           "input": {
-            "syntax": "Exact token records shown in stage 2"
+            "syntax": "Exact token records shown in stage 3"
           },
           "output": {
             "source": "Refund the order if it was cancelled.",
@@ -3188,12 +4488,48 @@
               "multiple predicates or clause attachment"
             ],
             "semantic_verified": false,
-            "version": "rule-assignment-2"
+            "version": "rule-assignment-3",
+            "surface_structure": {
+              "version": "surface-chunks-1",
+              "method": "deterministic_surface_rules",
+              "status": "unresolved",
+              "chunks": [
+                {
+                  "id": "c1",
+                  "start": 0,
+                  "end": 36,
+                  "text": "Refund the order if it was cancelled",
+                  "predicate": {
+                    "start": 0,
+                    "end": 6,
+                    "text": "Refund"
+                  }
+                }
+              ],
+              "issues": [
+                "scope_requires_separate_analysis"
+              ],
+              "protected_spans": [],
+              "source_ledger": [
+                {
+                  "start": 0,
+                  "end": 36,
+                  "text": "Refund the order if it was cancelled",
+                  "label": "chunk"
+                },
+                {
+                  "start": 36,
+                  "end": 37,
+                  "text": ".",
+                  "label": "suffix"
+                }
+              ]
+            }
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
         {
-          "title": "4 · Optional AI / resolver branch",
+          "title": "5 · Optional AI / resolver branch",
           "input": {
             "source": "Refund the order if it was cancelled.",
             "code_proposal": {
@@ -3205,7 +4541,43 @@
                 "multiple predicates or clause attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "unresolved",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 36,
+                    "text": "Refund the order if it was cancelled",
+                    "predicate": {
+                      "start": 0,
+                      "end": 6,
+                      "text": "Refund"
+                    }
+                  }
+                ],
+                "issues": [
+                  "scope_requires_separate_analysis"
+                ],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 36,
+                    "text": "Refund the order if it was cancelled",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 36,
+                    "end": 37,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             },
             "world": {
               "order-1": {
@@ -3257,7 +4629,7 @@
           "passes": "A called resolver returns an untrusted proposal. No resolver confidence is used by the external gate. When skipped, the gate receives the code proposal."
         },
         {
-          "title": "5 · External validation and confidence",
+          "title": "6 · External validation and confidence",
           "input": {
             "source": "Refund the order if it was cancelled.",
             "proposal": {
@@ -3303,7 +4675,7 @@
           "passes": "The gate emits ACCEPT or ASK with reasons. There is no installed calibration for these examples; external_score remains null."
         },
         {
-          "title": "6 · Final READ product",
+          "title": "7 · Final READ product",
           "input": {
             "gate_route": "ASK",
             "assignment_source": "AI"
@@ -3370,7 +4742,43 @@
                 "multiple predicates or clause attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-2"
+              "version": "rule-assignment-3",
+              "surface_structure": {
+                "version": "surface-chunks-1",
+                "method": "deterministic_surface_rules",
+                "status": "unresolved",
+                "chunks": [
+                  {
+                    "id": "c1",
+                    "start": 0,
+                    "end": 36,
+                    "text": "Refund the order if it was cancelled",
+                    "predicate": {
+                      "start": 0,
+                      "end": 6,
+                      "text": "Refund"
+                    }
+                  }
+                ],
+                "issues": [
+                  "scope_requires_separate_analysis"
+                ],
+                "protected_spans": [],
+                "source_ledger": [
+                  {
+                    "start": 0,
+                    "end": 36,
+                    "text": "Refund the order if it was cancelled",
+                    "label": "chunk"
+                  },
+                  {
+                    "start": 36,
+                    "end": 37,
+                    "text": ".",
+                    "label": "suffix"
+                  }
+                ]
+              }
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."

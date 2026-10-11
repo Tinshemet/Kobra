@@ -1,0 +1,9 @@
+{
+  "baseline_sha256": "9d340a467fccdf1290a39b2694ee5292f848a2bd74db17f4e8f756bf091917f8",
+  "files": {
+    "src/kobra/rule_assignment.py": "d3da5e17393419c475f26c74dd6a145b8c43b263c152c93d851bce3d13b3e48a",
+    "src/kobra/structural_read.py": "fc921b3992f0215f5cdba61029306050e982411de0483e57169c50a585db5205",
+    "src/kobra/surface_chunks.py": "28c04825ed89f8dc776d00bce9588233799437d4f2559f8706cd2708bc2e06a1",
+    "tools/compare_code_replay.py": "dbc09499ba9fcaf6f47a42eda6bd0a03f83e6787afef50de7cfe7d885f5ed513"
+  }
+}

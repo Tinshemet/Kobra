@@ -1,0 +1,11 @@
+{
+  "kind": "paired reused development; literal-slot score, not full structure accuracy",
+  "cases": 600,
+  "before_correct": 387,
+  "after_correct": 387,
+  "code_routed": 387,
+  "ticks": 0,
+  "regressions": 0,
+  "accepted_incorrect": 0,
+  "new_model_calls": 0
+}

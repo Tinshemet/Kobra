@@ -9,51 +9,33 @@ from .selection_read import SLOTS
 
 COUNTS = {w:i for i,w in enumerate(('zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve'))}
 NUMBER = r'(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)'
-INTRO = re.compile(r'^(?:(?:good (?:morning|afternoon|evening)|hello|hi|hey)\b[^,;.!?]*[,;]?\s*)?(?:please\s+)?$',re.I)
 
 
 def span(text, start, end):
     return dict(start=start,end=end,text=text[start:end])
 
 
-def trim_end(text, start, end):
-    # A connector belongs to the coordination, not to either argument.
-    while end > start:
-        m=re.search(r'(?:[\s,;.!]+|\b(?:and|then)\s*)$',text[start:end],re.I)
-        if not m:break
-        end=start+m.start()
-    return end
 
-
-def assign_structure(doc):
+def assign_structure(doc, boundaries=None):
     text=doc.text
-    roots=[t for t in doc if t.dep_=='ROOT']
-    if len(roots)!=1:return None
-    root=roots[0]
-    if root.pos_!='VERB' or root.tag_!='VB' or text.rstrip().endswith('?'):
+    from .surface_chunks import chunk_commands
+    boundaries = boundaries if boundaries is not None else chunk_commands(text)
+    if boundaries['status'] != 'supported':
         return None
-    if any(t.dep_ in {'nsubj','nsubjpass','csubj'} for t in root.children):return None
-    if not INTRO.fullmatch(text[:root.idx]):return None
+    by_offset = {t.idx:t for t in doc}
+    try:
+        verbs = [by_offset[c['predicate']['start']] for c in boundaries['chunks']]
+    except KeyError:
+        return None
+    if not verbs:return None
     if any(t.dep_ in {'relcl','advcl','ccomp','xcomp','neg'} or t.tag_=='MD' for t in doc):return None
-    if any(t.lower_ in {'or','but','unless','if','until','before','after'} for t in doc):return None
-    verbs=[root]
-    for t in doc:
-        if t==root or t.pos_!='VERB':continue
-        parent=t.head
-        while parent.dep_=='conj' and parent.pos_=='VERB':parent=parent.head
-        coordinated=t.dep_=='conj' and parent==root
-        # Parser sometimes marks a comma + then imperative as generic dep.
-        explicit_then=t.dep_=='dep' and t.head==root and any(x.lower_=='then' for x in doc[max(root.i+1,t.i-2):t.i])
-        if not (coordinated or explicit_then):return None
-        if any(c.dep_ in {'nsubj','nsubjpass'} for c in t.children):return None
-        verbs.append(t)
-    verbs.sort(key=lambda t:t.i)
-    if len(verbs)>4:return None
+    if any(t.pos_=='VERB' and t not in verbs for t in doc):return None
+    if any(c.dep_ in {'nsubj','nsubjpass'} for v in verbs for c in v.children):return None
     chunks=[];frames=[];entities=[];references=[];issues=[];relations=[]
     rules=['C010-imperative-coordination'] if len(verbs)>1 else ['C011-structured-imperative']
     noun_chunks={c.root.i:c for c in doc.noun_chunks}
     for i,verb in enumerate(verbs):
-        end=trim_end(text,verb.idx,verbs[i+1].idx if i+1<len(verbs) else len(text))
+        end=boundaries['chunks'][i]['end']
         chunk=dict(id=f'c{i+1}',kind='action',span=span(text,verb.idx,end),frame=i,modifiers=[],members=[])
         chunks.append(chunk)
         frame=dict({s:'NONE' for s in SLOTS},act='request',predicate=verb.text)
@@ -152,5 +134,5 @@ def assign_structure(doc):
         ledger.append(dict(**span(text,a,b),label='action_chunk'));cursor=b
     if cursor<len(text):ledger.append(dict(**span(text,cursor,len(text)),label='connective_or_unassigned'))
     return dict(source=text,frames=frames,route='unresolved' if issues else 'code',rules=sorted(set(rules)),
-                reasons=issues,semantic_verified=False,version='rule-assignment-2',chunks=chunks,
+                reasons=issues,semantic_verified=False,version='rule-assignment-3',chunking_method='deterministic_surface_rules',chunks=chunks,
                 local_entities=entities,local_references=references,chunk_relations=relations,source_ledger=ledger)

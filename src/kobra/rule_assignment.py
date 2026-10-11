@@ -5,22 +5,36 @@ is not calibrated confidence. Original text always accompanies the proposal.
 """
 from .selection_read import SLOTS
 
-VERSION = 'rule-assignment-2'
+VERSION = 'rule-assignment-3'
 
 class RuleAssigner:
-    def __init__(self, nlp=None):
+    def __init__(self, nlp=None, action_words=None):
         if nlp is None:
             import spacy
             nlp = spacy.load('en_core_web_sm')
         self.nlp = nlp
+        from .surface_chunks import ACTIONS
+        self.action_words = ACTIONS if action_words is None else frozenset(action_words)
 
     def assign(self, text):
+        from .surface_chunks import chunk_commands
+        boundaries = chunk_commands(text, self.action_words)
         simple = self._assign_simple(text)
+        simple['surface_structure'] = boundaries
         if simple['route'] == 'code':
-            return simple
+            # The simple parser is not allowed to swallow an explicit command
+            # boundary or ignore unbalanced protected text.
+            if len(boundaries['chunks']) <= 1 and not any(
+                    issue in boundaries['issues'] for issue in ('unmatched_bracket','unclosed_quote_or_bracket')):
+                return simple
         from .structural_read import assign_structure
-        structured = assign_structure(self.nlp(text))
-        return structured if structured is not None else simple
+        structured = assign_structure(self.nlp(text), boundaries)
+        if structured is not None:
+            structured['surface_structure'] = boundaries
+            return structured
+        if simple['route'] == 'code':
+            simple.update(route='unresolved', reasons=['unsupported_surface_structure'])
+        return simple
 
     def _assign_simple(self, text):
         doc = self.nlp(text)

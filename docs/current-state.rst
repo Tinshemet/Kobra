@@ -1,4 +1,4 @@
-Kobra implementation state: 2026-10-09
+Kobra implementation state: 2026-10-11
 =====================================
 
 Kobra is an experimental interpretation toolkit, not a fully connected assistant.
@@ -8,7 +8,7 @@ There is no default production reader, concrete general resolver, memory service
 Medusa compiler, or executor wired into that pipeline.
 
 The current experimental READ path is RuleAssigner + GatedRuleReader:
-source -> dependency parser -> deterministic role assignment -> optional model
+source -> deterministic command boundaries -> dependency parser -> role rules -> optional model
 proposal on abstention -> external validation/calibration gate -> ACCEPT or ASK.
 This wrapper is opt-in and uses its own read(text, ...) API, not a drop-in
 implementation of the generic Pipeline Reader interface. The full earlier
@@ -75,3 +75,5 @@ references link to earlier sentence-local descriptions, without creating WORLD
 objects. Chunks retain original spans and a complete character ledger. Ambiguous
 links and unsupported structures remain unresolved. See structural-read.rst for
 primary references, regression evidence and the deliberately limited rule scope.
+
+See read-rule-coverage.rst for the closure checklist and surface boundary limits.

@@ -1,7 +1,7 @@
 Structural READ and sentence-local references
 ============================================
 
-RuleAssigner v2 keeps the previous simple-role path first. On abstention it tries
+RuleAssigner v3 computes source-only command boundaries before running the previous simple-role path. On abstention or multiple command boundaries it tries
 bounded imperative coordination. This is a selective extension, not a claim to
 implement all English grammar or all rules in any reference.
 
@@ -30,7 +30,7 @@ https://spacy.io/usage/linguistic-features#dependency-parse
 Implemented rules
 -----------------
 
-* C010/C011: split supported imperative action coordination on syntactic predicates,
+* C010/C011: split supported imperative action coordination with a configurable action vocabulary,
   preserving offsets and greetings. Commas inside an object list are not actions.
 * C012: preserve counted groups with repeated "one with ..." specifications.
   Attributes remain source text, not a domain-specific image/type resolution.
@@ -79,3 +79,20 @@ The other 213 cases still do not take the supported code route. This replay does
 not establish reference-link or modifier accuracy; separate structural tests
 check those new fields. First-run captures retain two failures caused by dropping
 "all"; the follow-up quantity rule recovers both. No model calls were made.
+
+Surface boundary revision (2026-10-11)
+-------------------------------------
+
+surface_chunks.py has no NLP dependency. It protects quotes and brackets, uses
+explicit separators and action words, and returns source offsets and a complete
+character ledger. At most four action chunks are supported. Scope markers,
+unbalanced delimiters and internal sentence punctuation make this command grammar
+unresolved. Vocabulary collisions (for example an action word used as a noun)
+remain a limitation: supported boundaries are proposals, not semantic proof.
+The old simple role grammar still handles non-command constructions separately.
+spaCy still supplies role candidates within the deterministic boundaries.
+
+The 600-case paired replay retains 387 correct code results, with zero gains and
+zero regressions relative to the previous structural implementation. This is a
+boundary architecture change, not evidence of an accuracy gain. See
+../evidence/surface-chunks-1/paired-replay/summary.json and read-rule-coverage.rst.
