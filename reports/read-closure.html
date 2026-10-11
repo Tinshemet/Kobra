@@ -1,0 +1,146 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>READ core closure</title><style>body{max-width:1100px;margin:30px auto;padding:20px;font:16px/1.6 system-ui;background:#112033;color:#edf3ff}pre{white-space:pre-wrap;overflow-wrap:anywhere}td,th{padding:8px;border:1px solid #657e97}table{border-collapse:collapse}details{padding:12px;margin:10px 0;border:1px solid #657e97}summary{cursor:pointer}</style><h1>READ core milestone closure</h1><p><strong>Fresh confirmation: 300/300 correct; zero wrong, zero unresolved.</strong></p><p>Current deterministic parsing milestone closed within the tested grammar. General READ, memory integration and production routing are not certified complete. All final routes still ASK because calibration is absent.</p><p>Prior fresh sets: 300/300, 300/300, 299/300 on version 6. Current confirmation uses version 7, unchanged during evaluation. The corrected 900/900 replay is development evidence.</p><h2>Do we need more vectors?</h2><p>No more generic templates now. Existing operator and domain vectors already cover commands, service requests, constraints, corrections and workflows. The needed addition is a bounded memory-and-ASK fixture set with independently authored expected IDs, ASK reasons and ledger/library/archive snapshots. Broader semantics also need graph-aware scoring.</p><h2>Actual Serpent inventory and examples</h2><p>Counts can overlap; these are available examples, not READ accuracy results. Clean options were used.</p><details><summary>canonical: 2607 cases, 21 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>clausal_coordination</td><td>12</td><td>Alex waits, and Mira reads the book.</td></tr><tr><td>clause_forms</td><td>140</td><td>Alex checks the server.</td></tr><tr><td>comparison</td><td>48</td><td>This server is faster than the old server.</td></tr><tr><td>conditional</td><td>24</td><td>If the server fails, Alex will check the server.</td></tr><tr><td>distributive</td><td>72</td><td>Alex gives each student one book.</td></tr><tr><td>ellipsis</td><td>18</td><td>Alex checked a server, and Mira a server.</td></tr><tr><td>fronting</td><td>120</td><td>This server, Alex checks.</td></tr><tr><td>missing</td><td>8</td><td>Check one.</td></tr><tr><td>modifiers</td><td>57</td><td>Alex waits quietly.</td></tr><tr><td>nominal_coordination</td><td>30</td><td>Alex and Mira check the server.</td></tr><tr><td>noun_phrases</td><td>170</td><td>Check the old server.</td></tr><tr><td>polite</td><td>20</td><td>Can you check the server?</td></tr><tr><td>pronoun</td><td>24</td><td>Alex checked the server, and Alex moved it.</td></tr><tr><td>quantifiers</td><td>90</td><td>Check the one server.</td></tr><tr><td>relative</td><td>108</td><td>The server that Alex checks restarts.</td></tr><tr><td>scope</td><td>300</td><td>Alex can check the server.</td></tr><tr><td>subordination</td><td>18</td><td>Alex waits because the server fails.</td></tr><tr><td>unresolved</td><td>6</td><td>Alex saw the engineer with the sensor.</td></tr><tr><td>verb_frames</td><td>205</td><td>Alex restarts the server.</td></tr><tr><td>verbal_coordination</td><td>18</td><td>Alex waits and hums.</td></tr><tr><td>voice_tense</td><td>1119</td><td>The server is checked by Alex.</td></tr></table></details><details><summary>operator-clean: 115 cases, 21 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>action_request</td><td>9</td><td>Open the configuration file.</td></tr><tr><td>cancellation</td><td>6</td><td>Cancel the backup.</td></tr><tr><td>conditional_request</td><td>2</td><td>If the tests fail, stop the deployment.</td></tr><tr><td>conflicting_request</td><td>2</td><td>Keep the service active but inactive.</td></tr><tr><td>continuation</td><td>4</td><td>Continue.</td></tr><tr><td>correction</td><td>4</td><td>Use staging instead of production.</td></tr><tr><td>desired_state_request</td><td>6</td><td>Keep the service paused.</td></tr><tr><td>diagnosis_request</td><td>3</td><td>Explain why the deployment failed.</td></tr><tr><td>exclusion_request</td><td>2</td><td>Inspect all failed files except the configuration file.</td></tr><tr><td>filtered_request</td><td>6</td><td>Inspect all failed files.</td></tr><tr><td>meta_request</td><td>8</td><td>Explain your changes.</td></tr><tr><td>output_constraint</td><td>4</td><td>Return only the commands.</td></tr><tr><td>policy_request</td><td>2</td><td>Always run the tests before committing the changes.</td></tr><tr><td>prohibition_request</td><td>3</td><td>Do not deploy the project.</td></tr><tr><td>recurring_request</td><td>9</td><td>Run the tests every 3 hours.</td></tr><tr><td>resource_request</td><td>18</td><td>Create two Ubuntu VMs with 4 GB of RAM each.</td></tr><tr><td>scheduled_request</td><td>6</td><td>Run the tests at 14:20.</td></tr><tr><td>sequenced_request</td><td>4</td><td>Run the tests before committing the changes.</td></tr><tr><td>status_query</td><td>12</td><td>Did you finish the backup?</td></tr><tr><td>teaching_request</td><td>2</td><td>Define &quot;check-pass&quot; as validating the configuration file.</td></tr><tr><td>undo_request</td><td>3</td><td>Undo the deployment.</td></tr></table></details><details><summary>operator-terse: 115 cases, 21 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>action_request</td><td>9</td><td>open configuration file</td></tr><tr><td>cancellation</td><td>6</td><td>cancel backup</td></tr><tr><td>conditional_request</td><td>2</td><td>if tests fail, stop deployment</td></tr><tr><td>conflicting_request</td><td>2</td><td>keep service active but inactive</td></tr><tr><td>continuation</td><td>4</td><td>continue</td></tr><tr><td>correction</td><td>4</td><td>use staging instead of production</td></tr><tr><td>desired_state_request</td><td>6</td><td>keep service paused</td></tr><tr><td>diagnosis_request</td><td>3</td><td>explain why deployment failed</td></tr><tr><td>exclusion_request</td><td>2</td><td>inspect all failed files except configuration file</td></tr><tr><td>filtered_request</td><td>6</td><td>inspect all failed files</td></tr><tr><td>meta_request</td><td>8</td><td>explain your changes</td></tr><tr><td>output_constraint</td><td>4</td><td>return only commands</td></tr><tr><td>policy_request</td><td>2</td><td>always run tests before committing changes</td></tr><tr><td>prohibition_request</td><td>3</td><td>do not deploy project</td></tr><tr><td>recurring_request</td><td>9</td><td>run tests every 3 hours</td></tr><tr><td>resource_request</td><td>18</td><td>create two Ubuntu VMs with 4 GB of RAM each</td></tr><tr><td>scheduled_request</td><td>6</td><td>run tests at 14:20</td></tr><tr><td>sequenced_request</td><td>4</td><td>run tests before committing changes</td></tr><tr><td>status_query</td><td>12</td><td>did you finish backup</td></tr><tr><td>teaching_request</td><td>2</td><td>define &quot;check-pass&quot; as validating configuration file</td></tr><tr><td>undo_request</td><td>3</td><td>undo deployment</td></tr></table></details><details><summary>operator-hesitant: 115 cases, 21 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>action_request</td><td>9</td><td>Open the configuration file.</td></tr><tr><td>cancellation</td><td>6</td><td>Cancel the backup.</td></tr><tr><td>conditional_request</td><td>2</td><td>If the tests fail, stop the deployment.</td></tr><tr><td>conflicting_request</td><td>2</td><td>Keep the service active but inactive.</td></tr><tr><td>continuation</td><td>4</td><td>Continue.</td></tr><tr><td>correction</td><td>4</td><td>Use staging instead of production.</td></tr><tr><td>desired_state_request</td><td>6</td><td>Keep the service paused.</td></tr><tr><td>diagnosis_request</td><td>3</td><td>Explain why the deployment failed.</td></tr><tr><td>exclusion_request</td><td>2</td><td>Inspect all failed files except the configuration file.</td></tr><tr><td>filtered_request</td><td>6</td><td>Inspect all failed files.</td></tr><tr><td>meta_request</td><td>8</td><td>Explain your changes.</td></tr><tr><td>output_constraint</td><td>4</td><td>Return only the commands.</td></tr><tr><td>policy_request</td><td>2</td><td>Always run the tests before committing the changes.</td></tr><tr><td>prohibition_request</td><td>3</td><td>Do not deploy the project.</td></tr><tr><td>recurring_request</td><td>9</td><td>Run the tests every 3 hours.</td></tr><tr><td>resource_request</td><td>18</td><td>Create two Ubuntu VMs with 4 GB of RAM each.</td></tr><tr><td>scheduled_request</td><td>6</td><td>Run the tests at 14:20.</td></tr><tr><td>sequenced_request</td><td>4</td><td>Run the tests before committing the changes.</td></tr><tr><td>status_query</td><td>12</td><td>Did you finish the backup?</td></tr><tr><td>teaching_request</td><td>2</td><td>Define &quot;check-pass&quot; as validating the configuration file.</td></tr><tr><td>undo_request</td><td>3</td><td>Undo the deployment.</td></tr></table></details><details><summary>personal-assistant: 52 cases, 11 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>action_request</td><td>5</td><td>Review the agenda.</td></tr><tr><td>cancellation</td><td>1</td><td>Cancel the reservation.</td></tr><tr><td>meta_request</td><td>1</td><td>Explain your plan.</td></tr><tr><td>output_constraint</td><td>1</td><td>Return only the appointments.</td></tr><tr><td>policy_request</td><td>2</td><td>Always review the agenda before scheduling the meeting.</td></tr><tr><td>prohibition_request</td><td>5</td><td>Do not review the agenda.</td></tr><tr><td>recurring_request</td><td>15</td><td>Review the agenda every 1 hour.</td></tr><tr><td>scheduled_request</td><td>10</td><td>Review the agenda at 08:30.</td></tr><tr><td>sequenced_request</td><td>2</td><td>Review the agenda before scheduling the meeting.</td></tr><tr><td>status_query</td><td>9</td><td>Did you review the agenda?</td></tr><tr><td>undo_request</td><td>1</td><td>Undo the changes.</td></tr></table></details><details><summary>software-project: 52 cases, 11 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>action_request</td><td>5</td><td>Run the tests.</td></tr><tr><td>cancellation</td><td>1</td><td>Cancel the build.</td></tr><tr><td>meta_request</td><td>1</td><td>Explain your assumptions.</td></tr><tr><td>output_constraint</td><td>1</td><td>Return only the diagnostics.</td></tr><tr><td>policy_request</td><td>2</td><td>Always run the tests before publishing the release.</td></tr><tr><td>prohibition_request</td><td>5</td><td>Do not run the tests.</td></tr><tr><td>recurring_request</td><td>15</td><td>Run the tests every 1 hour.</td></tr><tr><td>scheduled_request</td><td>10</td><td>Run the tests at 08:30.</td></tr><tr><td>sequenced_request</td><td>2</td><td>Run the tests before publishing the release.</td></tr><tr><td>status_query</td><td>9</td><td>Did you run the tests?</td></tr><tr><td>undo_request</td><td>1</td><td>Undo the migration.</td></tr></table></details><details><summary>gorgon: 150 cases, 11 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>action_request</td><td>16</td><td>Inspect the virtual machines.</td></tr><tr><td>cancellation</td><td>1</td><td>Cancel the pending task.</td></tr><tr><td>meta_request</td><td>3</td><td>Explain your plan.</td></tr><tr><td>output_constraint</td><td>2</td><td>Return only the summary.</td></tr><tr><td>policy_request</td><td>4</td><td>Always inspect the virtual machines before starting the virtual machine.</td></tr><tr><td>prohibition_request</td><td>16</td><td>Do not inspect the virtual machines.</td></tr><tr><td>recurring_request</td><td>48</td><td>Inspect the virtual machines every 1 hour.</td></tr><tr><td>scheduled_request</td><td>32</td><td>Inspect the virtual machines at 09:15.</td></tr><tr><td>sequenced_request</td><td>4</td><td>Inspect the virtual machines before starting the virtual machine.</td></tr><tr><td>status_query</td><td>23</td><td>Did you inspect the virtual machines?</td></tr><tr><td>undo_request</td><td>1</td><td>Undo the recent change.</td></tr></table></details><details><summary>general-assistant: 150 cases, 11 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>action_request</td><td>16</td><td>Review the agenda.</td></tr><tr><td>cancellation</td><td>1</td><td>Cancel the pending task.</td></tr><tr><td>meta_request</td><td>3</td><td>Explain your plan.</td></tr><tr><td>output_constraint</td><td>2</td><td>Return only the summary.</td></tr><tr><td>policy_request</td><td>4</td><td>Always review the agenda before organizing the notes.</td></tr><tr><td>prohibition_request</td><td>16</td><td>Do not review the agenda.</td></tr><tr><td>recurring_request</td><td>48</td><td>Review the agenda every 1 hour.</td></tr><tr><td>scheduled_request</td><td>32</td><td>Review the agenda at 09:15.</td></tr><tr><td>sequenced_request</td><td>4</td><td>Review the agenda before organizing the notes.</td></tr><tr><td>status_query</td><td>23</td><td>Did you review the agenda?</td></tr><tr><td>undo_request</td><td>1</td><td>Undo the recent change.</td></tr></table></details><details><summary>transcripts: 150 cases, 11 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>action_request</td><td>16</td><td>Read the message.</td></tr><tr><td>cancellation</td><td>1</td><td>Cancel the pending task.</td></tr><tr><td>meta_request</td><td>3</td><td>Explain your plan.</td></tr><tr><td>output_constraint</td><td>2</td><td>Return only the summary.</td></tr><tr><td>policy_request</td><td>4</td><td>Always read the message before describing the screen.</td></tr><tr><td>prohibition_request</td><td>16</td><td>Do not read the message.</td></tr><tr><td>recurring_request</td><td>48</td><td>Read the message every 1 hour.</td></tr><tr><td>scheduled_request</td><td>32</td><td>Read the message at 09:15.</td></tr><tr><td>sequenced_request</td><td>4</td><td>Read the message before describing the screen.</td></tr><tr><td>status_query</td><td>23</td><td>Did you read the message?</td></tr><tr><td>undo_request</td><td>1</td><td>Undo the recent change.</td></tr></table></details><details><summary>conversations: 333 cases, 3 families</summary><table><tr><th>Family</th><th>Count</th><th>Actual example</th></tr><tr><td>conversation_question</td><td>144</td><td>Will I carry the book?</td></tr><tr><td>conversation_statement</td><td>141</td><td>I will carry the book.</td></tr><tr><td>conversation_uncertainty</td><td>48</td><td>I might carry the book.</td></tr></table></details><h2>Full closure record and remaining boundaries</h2><pre>READ deterministic parsing milestone: closed within tested scope
+===============================================================
+
+Decision
+--------
+
+Close the current deterministic rule-expansion milestone at RuleAssigner version
+7. The bounded parsing core meets the requested repeated fresh-set threshold.
+Do not label unrestricted READ, production routing or memory grounding complete.
+This is a scope boundary, not evidence that every unresolved input is ambiguous.
+Earlier development data still contains 204 unresolved cases outside this narrow
+confirmation scope. No parser rules were changed during this closure run.
+
+Fresh confirmation
+------------------
+
+Set 13: 300 new normalized-distinct sentences, 300 correct literal-slot code
+proposals, zero wrong and zero unresolved. They were selected from the unseen
+remainder of the 12 existing lexical bindings, using unchanged Serpent grammar.
+The code, scorer, adapter and recipe were frozen before selection; teacher gold
+was loaded after capture. The audit recomputed scores and verified source and
+reference hashes. The version 7 reader made no generative AI calls.
+
+Earlier fresh version 6 sets scored 300/300, 300/300 and 299/300. The one failure
+was fixed in version 7 and replayed separately. Do not combine these versions as
+one frozen-model trial, or relabel the corrected 900/900 replay fresh evidence.
+Set 13 covers C018 in 44 correct cases; C020 is not exercised in this fresh set.
+Its evidence remains the saved regression case and controlled structural tests.
+
+Source retention is 300/300 by design. Full suite: 241 tests, 240 passed and one
+optional-jsonschema skip. Final routes remain ASK because calibration is absent;
+this is not a measured correct-ASK rate. No server was started.
+
+Serpent coverage review
+-----------------------
+
+Current local Serpent inventory was enumerated using clean surface options,
+with source hashes and actual examples captured separately from READ accuracy:
+
+* Canonical grammar: 2,607 cases across 21 families.
+* Operator clean, terse and hesitant: 115 cases each, 21 families each.
+* Personal assistant and software project: 52 cases each, 11 families each.
+* Gorgon, general assistant and transcripts: 150 cases each, 11 families each.
+* Conversations: 333 cases across three families.
+* Context scenarios: 16 fixtures (four tasks times unique, ambiguous, withheld
+  and correction conditions). These are not 16 independent natural workflows.
+
+These counts are separate inventories, may overlap, and are not additive unique
+coverage or evaluated READ success counts. The three conversation families are
+statements, questions and uncertainty using bounded first/second-person forms.
+The transcript vector with clean options is not evidence of noisy transcription
+coverage. Serpent&#x27;s source graphs encode richer relations than the current
+literal-slot scorer, including order, quantities, scope and references.
+
+Examples from the actual operator inventory include:
+
+* Open the configuration file.
+* If the tests fail, stop the deployment.
+* Use staging instead of production.
+* Inspect all failed files except the configuration file.
+* Create two Ubuntu VMs with 4 GB of RAM each.
+* Define &quot;check-pass&quot; as validating the configuration file.
+* Run the tests every 3 hours.
+
+Next-data decision
+------------------
+
+No new generic language templates or new broad domain vectors are needed now.
+Use the existing operator and general-assistant vectors for a bounded next-stage
+assessment. Evaluate source-graph relations as well as literal slots before
+claiming sequencing, negation, resource allocation or constraints are correct.
+Do not execute generated requests.
+
+A focused integration fixture set is needed before claiming memory/ASK readiness:
+unique live identity; aliases; duplicate/conflicting names; stale snapshots;
+ledger correction and supersession; ratified versus pending archive entries;
+local versus cross-turn references; absent context. Supply independent expected
+identity IDs and ASK reasons, plus exact history/library/archive snapshots.
+Score parsing, deterministic binding and ASK correctness separately. Do not
+teach the generator from READ predictions. Existing 16 context fixtures are a
+starting point, not archive/library lifecycle coverage.
+
+Implemented boundaries remain: code extracts source roles; deterministic evidence
+is authoritative for grounding; missing or ambiguous grounding blocks AI and
+hands off to ASK. General history/participant/ordinal resolution, persistent
+archive update/ratification, calibration and the ASK interaction loop are not
+certified by this closure. Keep these explicit in the integration backlog rather
+than implying the entire system is production-ready.
+
+Evidence
+--------
+
+reports/read-closure.html is the readable closure and inventory review.
+evidence/read300/batch-013 contains all new inputs, gold, captures and audit.
+evidence/read-closure-1 contains freeze hashes, inventory examples, contextual
+samples, tests and closure status. Older evidence and recipes are unchanged.
+</pre><h2>Machine-measured confirmation</h2><pre>{
+  &quot;cases&quot;: 300,
+  &quot;code_routed&quot;: 300,
+  &quot;code_correct&quot;: 300,
+  &quot;code_incorrect&quot;: 0,
+  &quot;unresolved&quot;: 0,
+  &quot;correct_code_over_all&quot;: 1.0,
+  &quot;code_precision&quot;: 1.0,
+  &quot;source_retained&quot;: 300,
+  &quot;required_slots_preserved&quot;: 1448,
+  &quot;required_slots_total&quot;: 1448,
+  &quot;new_model_calls&quot;: 0,
+  &quot;AI_correct&quot;: null,
+  &quot;correct_ASK&quot;: null,
+  &quot;final_routes&quot;: {
+    &quot;ASK&quot;: 300
+  },
+  &quot;gate_reasons&quot;: {
+    &quot;uncalibrated_cohort&quot;: 300
+  },
+  &quot;context_flagged&quot;: 0,
+  &quot;context_breakdown&quot;: {
+    &quot;requires_context&quot;: {
+      &quot;cases&quot;: 0,
+      &quot;code_correct&quot;: 0
+    },
+    &quot;no_external_requirement_identified&quot;: {
+      &quot;cases&quot;: 300,
+      &quot;code_correct&quot;: 300
+    }
+  },
+  &quot;by_group&quot;: {
+    &quot;voice_tense&quot;: {
+      &quot;cases&quot;: 300,
+      &quot;code_correct&quot;: 300
+    }
+  },
+  &quot;rule_coverage&quot;: {
+    &quot;C001-passive-roles&quot;: 149,
+    &quot;C002-active-roles&quot;: 151,
+    &quot;C018-passive-question-role-normalization&quot;: 44
+  },
+  &quot;adapter_errors&quot;: 0,
+  &quot;runtime_errors&quot;: 0,
+  &quot;seconds&quot;: 0.6214139810472261,
+  &quot;scope&quot;: &quot;Fresh sentences within existing Serpent grammar; bounded literal-slot scoring, not complete semantic accuracy.&quot;,
+  &quot;configuration&quot;: &quot;Current RuleAssigner + GatedRuleReader; no live resolver, calibration or knowledge snapshot supplied.&quot;,
+  &quot;ASK_note&quot;: &quot;No independent case-specific ASK-reason gold for this batch. Report routes/context flags, not a fabricated correct-ASK score.&quot;,
+  &quot;comparison_note&quot;: &quot;Earlier 86.67% involved a live AI arranger; 97.67% was a reused-data hybrid simulation. Neither is this configuration.&quot;
+}</pre></html>

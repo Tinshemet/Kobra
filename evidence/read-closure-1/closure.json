@@ -1,0 +1,29 @@
+{
+  "milestone": "deterministic parsing core",
+  "status": "closed_with_explicit_bounded_scope",
+  "rule_version": 7,
+  "fresh_confirmation": {
+    "cases": 300,
+    "correct": 300,
+    "wrong": 0,
+    "unresolved": 0,
+    "unique_and_disjoint_from_sets_1_to_12": true
+  },
+  "audit": {
+    "recomputed_summary_matches": true,
+    "source_unchanged": true,
+    "frozen_files_unchanged": true,
+    "source_retention_all": true,
+    "captures_sha256": "c5328d48e9b7f45eed6717c72214d5fe55902a5b4239d55ed89561bdbc74a3a9"
+  },
+  "production_ready": false,
+  "complete_general_READ": false,
+  "existing_vectors_sufficient_for_next_scope_review": true,
+  "new_fixture_need": "Memory grounding and independently justified ASK integration cases",
+  "limitations": [
+    "Current confirmation tests only voice_tense literal slots.",
+    "Final routes remain ASK without calibration.",
+    "C020 not exercised by this fresh set.",
+    "General discourse and persistent knowledge lifecycle remain incomplete."
+  ]
+}

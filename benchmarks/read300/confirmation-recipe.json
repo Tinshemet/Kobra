@@ -1,0 +1,94 @@
+{
+  "version": "same-scope-confirmation-1",
+  "construction": "voice_tense",
+  "constructor": "serpent.grammar.simple_clause(Clause)",
+  "seed_base": 2026101100,
+  "size": 300,
+  "people": [
+    "p_alex",
+    "p_mira",
+    "p_nia"
+  ],
+  "numbers": [
+    "singular",
+    "plural"
+  ],
+  "tenses": [
+    "present",
+    "past",
+    "future"
+  ],
+  "voices": [
+    "active",
+    "passive"
+  ],
+  "forms": [
+    "declarative",
+    "interrogative"
+  ],
+  "negative": [
+    false,
+    true
+  ],
+  "bindings_by_set": {
+    "13": [
+      [
+        "v_check",
+        "n_disk"
+      ],
+      [
+        "v_carry",
+        "n_key"
+      ],
+      [
+        "v_move",
+        "n_lamp"
+      ],
+      [
+        "v_repair",
+        "n_server"
+      ],
+      [
+        "v_check",
+        "n_box"
+      ],
+      [
+        "v_carry",
+        "n_disk"
+      ],
+      [
+        "v_move",
+        "n_book"
+      ],
+      [
+        "v_repair",
+        "n_sensor"
+      ],
+      [
+        "v_check",
+        "n_lamp"
+      ],
+      [
+        "v_carry",
+        "n_box"
+      ],
+      [
+        "v_move",
+        "n_key"
+      ],
+      [
+        "v_repair",
+        "n_train"
+      ]
+    ]
+  },
+  "selection": "Existing Serpent planner.select, balanced strength 2, normalized historical input exclusion only. No downstream predictions or performance filters.",
+  "freshness": "New sentences only, sampled from unseen remainder of the same 12 lexical bindings used in sets 10\u201312. No new vocabulary or constructions.",
+  "scope": "Confirmation of version 7 on the remaining existing voice_tense inventory; not disjoint lexical bindings or broad READ coverage.",
+  "limitations": [
+    "Bounded literal-slot score only",
+    "No archive, ledger, active-library or ASK correctness coverage",
+    "No new workflow or task families",
+    "Recipe is a new external inventory, not a Serpent core release change"
+  ]
+}

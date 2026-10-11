@@ -1,0 +1,7 @@
+{
+  "actual_diff_reviewed": true,
+  "outcome": "Generator now accepts an explicitly hashed recipe; original recipe and historical evidence preserved. No READ source changes. Inventory coverage is not confused with downstream accuracy. Broad READ completion explicitly not claimed.",
+  "tests_run": 241,
+  "tests_passed": 240,
+  "tests_skipped": 1
+}

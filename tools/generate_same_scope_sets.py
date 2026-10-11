@@ -40,23 +40,26 @@ def construct_pool(recipe, batch):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--batch', type=int, required=True, choices=(10, 11, 12))
+    parser.add_argument('--batch', type=int, required=True)
+    parser.add_argument('--recipe', type=Path, default=ROOT/'benchmarks/read300/same-scope-recipe.json')
     parser.add_argument('--reader-freeze', type=Path, required=True,
                         help='JSON mapping relative Kobra source paths to SHA256; requires exact current match')
     args = parser.parse_args()
+    recipe_path = args.recipe.resolve()
+    recipe = json.loads(recipe_path.read_text())
+    if str(args.batch) not in recipe['bindings_by_set']:
+        parser.error('batch is not declared in recipe')
     freeze = json.loads(args.reader_freeze.read_text())
     if not isinstance(freeze, dict) or not freeze or not any(p.startswith('src/kobra/') for p in freeze):
         parser.error('reader freeze must cover Kobra source files')
     required = {str(p.relative_to(ROOT)) for p in (ROOT/'src/kobra').glob('*.py')}
     required.update({'tools/evaluate_selection.py', 'tools/serpent_slots.py',
-                     'tools/generate_same_scope_sets.py', 'benchmarks/read300/same-scope-recipe.json'})
+                     'tools/generate_same_scope_sets.py', str(recipe_path.relative_to(ROOT))})
     if not required.issubset(freeze):
         parser.error('reader freeze must include all Kobra modules, scorer, adapter, generator and recipe')
     for relative, expected in freeze.items():
         if digest(ROOT / relative) != expected:
             parser.error(f'changed frozen source: {relative}')
-    recipe_path = ROOT/'benchmarks/read300/same-scope-recipe.json'
-    recipe = json.loads(recipe_path.read_text())
     seed = recipe['seed_base'] + args.batch
     options = Options(distribution='balanced', noise='off', typos='off', strength=2)
     pool = construct_pool(recipe, args.batch)

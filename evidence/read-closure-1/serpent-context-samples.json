@@ -1,0 +1,7440 @@
+{
+  "format": "serpent-scenarios",
+  "version": "1.0",
+  "generator_version": "1.2.1",
+  "seed": 20261011013,
+  "scenarios": [
+    {
+      "id": "S000001",
+      "kind": "unique",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the book."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "book",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Carry it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000001",
+        "sentence": "Carry it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "carry",
+              "lexical_id": "v_carry",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              6,
+              8
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 5,
+            "text": "Carry",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                5
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                8,
+                9
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000001",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the book.",
+              "sha256": "726723195c6b8e38bc9c179cae06ab1486c7530cd37d8f5df018b533c9d7d62b"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "book",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 26,
+                  "text": "book"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "4cc82f10bee1408412b512ea1881a6995fed5c41c1107367af46628f94537dd0",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "resolved",
+        "referents": [
+          "object_1"
+        ]
+      }
+    },
+    {
+      "id": "S000002",
+      "kind": "correction",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the book."
+        },
+        {
+          "role": "user",
+          "content": "Read the book."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "book",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Do not read it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000002",
+        "sentence": "Do not read it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "negative",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "negation",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "negative",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "read",
+              "lexical_id": "v_read",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          },
+          {
+            "id": "a5",
+            "type": "PROPERTY",
+            "realization": "realized",
+            "features": {
+              "kind": "negation",
+              "value": "not"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r4",
+            "type": "SCOPE_OVER",
+            "from": "a5",
+            "to": "a2",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "c4",
+            "class": "negation",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              12,
+              14
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "Do",
+            "kind": "marker",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "not",
+            "kind": "marker",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a5"
+              },
+              {
+                "kind": "relation",
+                "id": "r4"
+              },
+              {
+                "kind": "construction",
+                "id": "c4"
+              }
+            ]
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 7,
+            "end": 11,
+            "text": "read",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 11,
+            "end": 12,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 14,
+            "end": 15,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                11
+              ],
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                7,
+                11
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                3,
+                6
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a5"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                11
+              ],
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                11
+              ],
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                11
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                14,
+                15
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d9",
+            "intervals": [
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d10",
+            "intervals": [
+              [
+                3,
+                6
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c4"
+              }
+            ]
+          },
+          {
+            "id": "d11",
+            "intervals": [
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000002",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the book.",
+              "sha256": "726723195c6b8e38bc9c179cae06ab1486c7530cd37d8f5df018b533c9d7d62b"
+            },
+            {
+              "id": "turn-2",
+              "role": "user",
+              "content": "Read the book.",
+              "sha256": "271877c2718dd415873d4a92cb763d9e81ef33324c9da4c38e690b872578d528"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "book",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 26,
+                  "text": "book"
+                },
+                {
+                  "turn_id": "turn-2",
+                  "start": 9,
+                  "end": 13,
+                  "text": "book"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "e24335734e499350c21ae04fcd16ca1e3255a6cc917c6d6b0d8f06414e646ccd",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "resolved",
+        "referents": [
+          "object_1"
+        ]
+      }
+    },
+    {
+      "id": "S000003",
+      "kind": "withheld",
+      "history": [],
+      "context": {
+        "entities": []
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Read it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000003",
+        "sentence": "Read it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "read",
+              "lexical_id": "v_read",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              5,
+              7
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Read",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                4
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000003",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": false,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "53246a1ac440615c02b3191cb4ae92b22e8a465c163970dd42a6762ec33d80f5",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "missing-context",
+        "referents": []
+      }
+    },
+    {
+      "id": "S000004",
+      "kind": "withheld",
+      "history": [],
+      "context": {
+        "entities": []
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Move it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000004",
+        "sentence": "Move it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "move",
+              "lexical_id": "v_move",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              5,
+              7
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Move",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                4
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000004",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": false,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "48a8d39162f74ca1ce9cd8ace8d75660277e94f1108d96277d56837c12744225",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "missing-context",
+        "referents": []
+      }
+    },
+    {
+      "id": "S000005",
+      "kind": "correction",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the lamp."
+        },
+        {
+          "role": "user",
+          "content": "Check the lamp."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "lamp",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Do not check it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000005",
+        "sentence": "Do not check it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "negative",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "negation",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "negative",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "check",
+              "lexical_id": "v_check",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          },
+          {
+            "id": "a5",
+            "type": "PROPERTY",
+            "realization": "realized",
+            "features": {
+              "kind": "negation",
+              "value": "not"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r4",
+            "type": "SCOPE_OVER",
+            "from": "a5",
+            "to": "a2",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "c4",
+            "class": "negation",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              13,
+              15
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "Do",
+            "kind": "marker",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "not",
+            "kind": "marker",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a5"
+              },
+              {
+                "kind": "relation",
+                "id": "r4"
+              },
+              {
+                "kind": "construction",
+                "id": "c4"
+              }
+            ]
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 7,
+            "end": 12,
+            "text": "check",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 12,
+            "end": 13,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 15,
+            "end": 16,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                12
+              ],
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                7,
+                12
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                3,
+                6
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a5"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                12
+              ],
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                12
+              ],
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                12
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                15,
+                16
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d9",
+            "intervals": [
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d10",
+            "intervals": [
+              [
+                3,
+                6
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c4"
+              }
+            ]
+          },
+          {
+            "id": "d11",
+            "intervals": [
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000005",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the lamp.",
+              "sha256": "56cf4755ccc08eda5ed3e4574adff23791008d4f9e0aa8d6a7cdfac4ba8fb779"
+            },
+            {
+              "id": "turn-2",
+              "role": "user",
+              "content": "Check the lamp.",
+              "sha256": "44989e77d2c1e1f3de54570fec034d06a998b22e05d221e5a9555be1400e6115"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "lamp",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 26,
+                  "text": "lamp"
+                },
+                {
+                  "turn_id": "turn-2",
+                  "start": 10,
+                  "end": 14,
+                  "text": "lamp"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "4a9a6537f2c59ab2da6faf934c0649ea3118d23ea0bf26cf8f6b4e31bff9c071",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "resolved",
+        "referents": [
+          "object_1"
+        ]
+      }
+    },
+    {
+      "id": "S000006",
+      "kind": "withheld",
+      "history": [],
+      "context": {
+        "entities": []
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Check it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000006",
+        "sentence": "Check it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "check",
+              "lexical_id": "v_check",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              6,
+              8
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 5,
+            "text": "Check",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                5
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                8,
+                9
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000006",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": false,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "ce8d69f610d9c23a086aafa1d5d6c7b87d0bc1c073b26a3b0a1d7c4c82a71555",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "missing-context",
+        "referents": []
+      }
+    },
+    {
+      "id": "S000007",
+      "kind": "ambiguous",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the box and the lamp."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "box",
+            "number": "singular"
+          },
+          {
+            "id": "object_2",
+            "name": "lamp",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Move it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000007",
+        "sentence": "Move it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "move",
+              "lexical_id": "v_move",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              5,
+              7
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Move",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                4
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000007",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the box and the lamp.",
+              "sha256": "00d8bb0f2f6090b1c55ed9198815f5310ead6d16eff5d57963409011a5b2b074"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "box",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 25,
+                  "text": "box"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            },
+            {
+              "id": "object_2",
+              "record": {
+                "id": "object_2",
+                "name": "lamp",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 34,
+                  "end": 38,
+                  "text": "lamp"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "48a8d39162f74ca1ce9cd8ace8d75660277e94f1108d96277d56837c12744225",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "ambiguous",
+        "referents": [
+          "object_1",
+          "object_2"
+        ]
+      }
+    },
+    {
+      "id": "S000008",
+      "kind": "correction",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the book."
+        },
+        {
+          "role": "user",
+          "content": "Carry the book."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "book",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Do not carry it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000008",
+        "sentence": "Do not carry it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "negative",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "negation",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "negative",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "carry",
+              "lexical_id": "v_carry",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          },
+          {
+            "id": "a5",
+            "type": "PROPERTY",
+            "realization": "realized",
+            "features": {
+              "kind": "negation",
+              "value": "not"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r4",
+            "type": "SCOPE_OVER",
+            "from": "a5",
+            "to": "a2",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "c4",
+            "class": "negation",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              13,
+              15
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "Do",
+            "kind": "marker",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "not",
+            "kind": "marker",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a5"
+              },
+              {
+                "kind": "relation",
+                "id": "r4"
+              },
+              {
+                "kind": "construction",
+                "id": "c4"
+              }
+            ]
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 7,
+            "end": 12,
+            "text": "carry",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 12,
+            "end": 13,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 15,
+            "end": 16,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                12
+              ],
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                7,
+                12
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                3,
+                6
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a5"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                12
+              ],
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                12
+              ],
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                12
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                15,
+                16
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d9",
+            "intervals": [
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d10",
+            "intervals": [
+              [
+                3,
+                6
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c4"
+              }
+            ]
+          },
+          {
+            "id": "d11",
+            "intervals": [
+              [
+                13,
+                15
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000008",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the book.",
+              "sha256": "726723195c6b8e38bc9c179cae06ab1486c7530cd37d8f5df018b533c9d7d62b"
+            },
+            {
+              "id": "turn-2",
+              "role": "user",
+              "content": "Carry the book.",
+              "sha256": "5f2cc753d41f63c07a2d399b71d25ae750cc5b67349db6e440a781719c7b0354"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "book",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 26,
+                  "text": "book"
+                },
+                {
+                  "turn_id": "turn-2",
+                  "start": 10,
+                  "end": 14,
+                  "text": "book"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "be2c717aa88b93a6d9716ee56eb26287c9075e843c09d920a8d7a98f4dcf9409",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "resolved",
+        "referents": [
+          "object_1"
+        ]
+      }
+    },
+    {
+      "id": "S000009",
+      "kind": "ambiguous",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the book and the box."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "book",
+            "number": "singular"
+          },
+          {
+            "id": "object_2",
+            "name": "box",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Carry it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000009",
+        "sentence": "Carry it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "carry",
+              "lexical_id": "v_carry",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              6,
+              8
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 5,
+            "text": "Carry",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                5
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                8,
+                9
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000009",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the book and the box.",
+              "sha256": "4b98e0175daaeef361df9a5a04eedf8721c94b99eedd625fe2eebf1a5a0c8969"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "book",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 26,
+                  "text": "book"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            },
+            {
+              "id": "object_2",
+              "record": {
+                "id": "object_2",
+                "name": "box",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 35,
+                  "end": 38,
+                  "text": "box"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "4cc82f10bee1408412b512ea1881a6995fed5c41c1107367af46628f94537dd0",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "ambiguous",
+        "referents": [
+          "object_1",
+          "object_2"
+        ]
+      }
+    },
+    {
+      "id": "S000010",
+      "kind": "correction",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the box."
+        },
+        {
+          "role": "user",
+          "content": "Move the box."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "box",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Do not move it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000010",
+        "sentence": "Do not move it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "negative",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "negation",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "negative",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "move",
+              "lexical_id": "v_move",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          },
+          {
+            "id": "a5",
+            "type": "PROPERTY",
+            "realization": "realized",
+            "features": {
+              "kind": "negation",
+              "value": "not"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r4",
+            "type": "SCOPE_OVER",
+            "from": "a5",
+            "to": "a2",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "c4",
+            "class": "negation",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              12,
+              14
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "Do",
+            "kind": "marker",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "not",
+            "kind": "marker",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a5"
+              },
+              {
+                "kind": "relation",
+                "id": "r4"
+              },
+              {
+                "kind": "construction",
+                "id": "c4"
+              }
+            ]
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 7,
+            "end": 11,
+            "text": "move",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 11,
+            "end": 12,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 14,
+            "end": 15,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                11
+              ],
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                7,
+                11
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                3,
+                6
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a5"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                11
+              ],
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                11
+              ],
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                11
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r4"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                14,
+                15
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d9",
+            "intervals": [
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d10",
+            "intervals": [
+              [
+                3,
+                6
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c4"
+              }
+            ]
+          },
+          {
+            "id": "d11",
+            "intervals": [
+              [
+                12,
+                14
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000010",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the box.",
+              "sha256": "8bf6f8a8d438c6f40e9d8fb54fedcbe94a7d472247de337805f1ba6e9ac5ee51"
+            },
+            {
+              "id": "turn-2",
+              "role": "user",
+              "content": "Move the box.",
+              "sha256": "fd4574c0b4efe8de8e9988cabe38d7784abf2e78d46d1392bf45bf1c2cf55f2a"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "box",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 25,
+                  "text": "box"
+                },
+                {
+                  "turn_id": "turn-2",
+                  "start": 9,
+                  "end": 12,
+                  "text": "box"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "7aa21c5f94972e47b9dd3761ae9b6d49c188294a2761faf903466b00912c5e25",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "resolved",
+        "referents": [
+          "object_1"
+        ]
+      }
+    },
+    {
+      "id": "S000011",
+      "kind": "withheld",
+      "history": [],
+      "context": {
+        "entities": []
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Carry it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000011",
+        "sentence": "Carry it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "carry",
+              "lexical_id": "v_carry",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              6,
+              8
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 5,
+            "text": "Carry",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                5
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                8,
+                9
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000011",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [],
+          "world_entities": [],
+          "claims": [],
+          "history_supplied": false,
+          "world_supplied": false,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "4cc82f10bee1408412b512ea1881a6995fed5c41c1107367af46628f94537dd0",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "missing-context",
+        "referents": []
+      }
+    },
+    {
+      "id": "S000012",
+      "kind": "ambiguous",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the lamp and the box."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "lamp",
+            "number": "singular"
+          },
+          {
+            "id": "object_2",
+            "name": "box",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Check it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000012",
+        "sentence": "Check it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "check",
+              "lexical_id": "v_check",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              6,
+              8
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 5,
+            "text": "Check",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                5
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                8,
+                9
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000012",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the lamp and the box.",
+              "sha256": "d626c470b875d785c85875f904fa091c00bfdfc13b4082e227b5412a270e5306"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "lamp",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 26,
+                  "text": "lamp"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            },
+            {
+              "id": "object_2",
+              "record": {
+                "id": "object_2",
+                "name": "box",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 35,
+                  "end": 38,
+                  "text": "box"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "ce8d69f610d9c23a086aafa1d5d6c7b87d0bc1c073b26a3b0a1d7c4c82a71555",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "ambiguous",
+        "referents": [
+          "object_1",
+          "object_2"
+        ]
+      }
+    },
+    {
+      "id": "S000013",
+      "kind": "ambiguous",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the book and the letter."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "book",
+            "number": "singular"
+          },
+          {
+            "id": "object_2",
+            "name": "letter",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Read it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000013",
+        "sentence": "Read it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "read",
+              "lexical_id": "v_read",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              5,
+              7
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Read",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                4
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000013",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the book and the letter.",
+              "sha256": "8da4c0a5dff3f733b72f5619f876090433d17715b64cb145d7633cf497c8678c"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "book",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 26,
+                  "text": "book"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            },
+            {
+              "id": "object_2",
+              "record": {
+                "id": "object_2",
+                "name": "letter",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 35,
+                  "end": 41,
+                  "text": "letter"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "53246a1ac440615c02b3191cb4ae92b22e8a465c163970dd42a6762ec33d80f5",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "ambiguous",
+        "referents": [
+          "object_1",
+          "object_2"
+        ]
+      }
+    },
+    {
+      "id": "S000014",
+      "kind": "unique",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the lamp."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "lamp",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Check it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000014",
+        "sentence": "Check it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "check",
+              "lexical_id": "v_check",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              6,
+              8
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 5,
+            "text": "Check",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                5
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                8,
+                9
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                6,
+                8
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000014",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the lamp.",
+              "sha256": "56cf4755ccc08eda5ed3e4574adff23791008d4f9e0aa8d6a7cdfac4ba8fb779"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "lamp",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 26,
+                  "text": "lamp"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "ce8d69f610d9c23a086aafa1d5d6c7b87d0bc1c073b26a3b0a1d7c4c82a71555",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "resolved",
+        "referents": [
+          "object_1"
+        ]
+      }
+    },
+    {
+      "id": "S000015",
+      "kind": "unique",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the book."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "book",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Read it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000015",
+        "sentence": "Read it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "read",
+              "lexical_id": "v_read",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              5,
+              7
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Read",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                4
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000015",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the book.",
+              "sha256": "726723195c6b8e38bc9c179cae06ab1486c7530cd37d8f5df018b533c9d7d62b"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "book",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 26,
+                  "text": "book"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "53246a1ac440615c02b3191cb4ae92b22e8a465c163970dd42a6762ec33d80f5",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "resolved",
+        "referents": [
+          "object_1"
+        ]
+      }
+    },
+    {
+      "id": "S000016",
+      "kind": "unique",
+      "history": [
+        {
+          "role": "user",
+          "content": "We are discussing the box."
+        }
+      ],
+      "context": {
+        "entities": [
+          {
+            "id": "object_1",
+            "name": "box",
+            "number": "singular"
+          }
+        ]
+      },
+      "current": {
+        "role": "user",
+        "sentence": "Move it."
+      },
+      "read_gold": {
+        "format_version": "1.0",
+        "id": "S000016",
+        "sentence": "Move it.",
+        "factors": {
+          "clause_form": "imperative",
+          "clause_count": 1,
+          "clause_link": "none",
+          "verb_frame": "transitive",
+          "voice": "active",
+          "tense": "present",
+          "polarity": "positive",
+          "noun_number": "singular",
+          "quantification": "none",
+          "coordination": "none",
+          "modification": "none",
+          "reference": "pronoun",
+          "comparison": "none",
+          "word_order": "canonical",
+          "gap_type": "unresolved_reference",
+          "lexical_band": "everyday",
+          "noise_level": "off",
+          "typo_level": "off"
+        },
+        "tags": [
+          "imperative",
+          "pronoun",
+          "transitive",
+          "unresolved_reference"
+        ],
+        "atoms": [
+          {
+            "id": "a1",
+            "type": "CLAUSE",
+            "realization": "realized",
+            "features": {
+              "main": true,
+              "form": "imperative",
+              "frame": "transitive",
+              "tense": "present",
+              "voice": "active",
+              "polarity": "positive",
+              "interaction_family": "continuation",
+              "context_mode": "standalone",
+              "expression_style": "clean",
+              "speech_act": "request"
+            }
+          },
+          {
+            "id": "a2",
+            "type": "EVENT",
+            "realization": "realized",
+            "features": {
+              "lemma": "move",
+              "lexical_id": "v_move",
+              "tense": "present"
+            }
+          },
+          {
+            "id": "a3",
+            "type": "REFERENCE",
+            "realization": "unrealized",
+            "features": {
+              "role": "addressee"
+            }
+          },
+          {
+            "id": "a4",
+            "type": "REFERENCE",
+            "realization": "realized",
+            "features": {
+              "lemma": "it",
+              "person": 3,
+              "number": "singular",
+              "referent": "unspecified"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "id": "r1",
+            "type": "ACTOR",
+            "from": "a2",
+            "to": "a3",
+            "evidence": "unexpressed"
+          },
+          {
+            "id": "r2",
+            "type": "CLAUSE_OF",
+            "from": "a2",
+            "to": "a1",
+            "evidence": "explicit"
+          },
+          {
+            "id": "r3",
+            "type": "PATIENT",
+            "from": "a2",
+            "to": "a4",
+            "evidence": "explicit"
+          }
+        ],
+        "constructions": [
+          {
+            "id": "c1",
+            "class": "transitive",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "c2",
+            "class": "imperative",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "c3",
+            "class": "pronoun",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          }
+        ],
+        "insertions": [],
+        "gaps": [
+          {
+            "id": "g1",
+            "kind": "unresolved_reference",
+            "anchor": [
+              5,
+              7
+            ],
+            "candidates": []
+          }
+        ],
+        "surface": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Move",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": " ",
+            "kind": "spacing",
+            "sources": []
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "it",
+            "kind": "lexeme",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              },
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": ".",
+            "kind": "punctuation",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          }
+        ],
+        "derivation": [
+          {
+            "id": "d1",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a1"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "intervals": [
+              [
+                0,
+                4
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a2"
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "atom",
+                "id": "a4"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r2"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "intervals": [
+              [
+                0,
+                4
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "evidence",
+            "sources": [
+              {
+                "kind": "relation",
+                "id": "r3"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "intervals": [
+              [
+                7,
+                8
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c2"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "marker",
+            "sources": [
+              {
+                "kind": "construction",
+                "id": "c3"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "intervals": [
+              [
+                5,
+                7
+              ]
+            ],
+            "role": "gap",
+            "sources": [
+              {
+                "kind": "gap",
+                "id": "g1"
+              }
+            ]
+          }
+        ]
+      },
+      "context_requirements": {
+        "version": "context-requirements-2",
+        "case_id": "S000016",
+        "provided_context": {
+          "version": "context-ledger-1",
+          "previous_turns": [
+            {
+              "id": "turn-1",
+              "role": "user",
+              "content": "We are discussing the box.",
+              "sha256": "8bf6f8a8d438c6f40e9d8fb54fedcbe94a7d472247de337805f1ba6e9ac5ee51"
+            }
+          ],
+          "world_entities": [
+            {
+              "id": "object_1",
+              "record": {
+                "id": "object_1",
+                "name": "box",
+                "number": "singular"
+              },
+              "mentions": [
+                {
+                  "turn_id": "turn-1",
+                  "start": 22,
+                  "end": 25,
+                  "text": "box"
+                }
+              ],
+              "provenance": "fixture_supplied_WORLD",
+              "truth_status": "author_supplied"
+            }
+          ],
+          "claims": [],
+          "history_supplied": true,
+          "world_supplied": true,
+          "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+        },
+        "sentence_sha256": "48a8d39162f74ca1ce9cd8ace8d75660277e94f1108d96277d56837c12744225",
+        "requires_context": true,
+        "needs_previous_turns": "possible",
+        "needs_world": "possible",
+        "real_world_needed": "possible",
+        "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+        "read_extraction": "score_normally",
+        "reference_grounding": "context_required",
+        "ambiguity_score": 0.3333333333333333,
+        "ambiguity_level": 1,
+        "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+        "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+        "reasons": [
+          {
+            "kind": "unresolved_reference",
+            "source": "a4"
+          },
+          {
+            "kind": "unresolved_reference",
+            "source": "g1",
+            "candidate_count": 0
+          }
+        ]
+      },
+      "reference_gold": {
+        "status": "resolved",
+        "referents": [
+          "object_1"
+        ]
+      }
+    }
+  ]
+}
