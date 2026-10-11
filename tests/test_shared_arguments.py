@@ -107,7 +107,9 @@ class SharedArgumentsTests(unittest.TestCase):
                 return dict(route='unresolved', rules=[], frames=[])
         knowledge = KnowledgeSnapshot(live=dict(revision='w1', source='fixture', status='current',
             entities={'one': {'name': 'box'}, 'two': {'name': 'box'}}))
+        calls = []
         def resolver(_):
+            calls.append(_)
             return dict(frames=[dict({s: 'NONE' for s in SLOTS}, act='request', predicate='Move', patient='box')],
                         local_entities=[dict(id='e1', created_by=['c1'])],
                         chunks=[dict(frame=0, entity_id='e1')],
@@ -119,8 +121,8 @@ class SharedArgumentsTests(unittest.TestCase):
         gate.calibration[cohort] = Calibration(1000, 1000, 'synthetic-contract-only', cohort)
         r = reader.read('Move box.')
         self.assertEqual(r['route'], 'ASK')
-        self.assertIn('knowledge_ambiguous:0:patient', r['reasons'])
-        self.assertIn('knowledge_grounding_not_supported:box', r['reasons'])
+        self.assertEqual(calls, [])
+        self.assertIn('knowledge_unresolved_mention:box', r['reasons'])
 
     def test_different_shared_profiles_get_different_calibration_cohorts(self):
         text = 'Open the file.'

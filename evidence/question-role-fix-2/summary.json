@@ -1,0 +1,48 @@
+{
+  "kind": "reused development, not fresh accuracy",
+  "cases": 1087,
+  "before_correct": 942,
+  "after_correct": 1087,
+  "ticks": 145,
+  "regressions": 0,
+  "wrong_code": 0,
+  "unresolved": 0,
+  "ticks_by_new_rule": {
+    "C018-passive-question-role-normalization": 144,
+    "C019-ordered-double-object-roles": 1
+  },
+  "source_retained": 1087,
+  "new_model_calls": 0,
+  "final_routes": {
+    "ASK": 1087
+  },
+  "baseline_sha256": "65403a9bc27fd01f84dd27f6abc9f86cf4093eac6bb420014fb18cac42a7ef69",
+  "source_hashes": {
+    "src/kobra/_english_lexicon.py": "ced88da2b05864b80bf8050ce12e6ece692b87008b1a9e575fdc0ba3b921f117",
+    "src/kobra/context_ledger.py": "af65340227950da8cde5be0175ff7e8a5d7dc6f7d2c940944a4fade27895000f",
+    "src/kobra/_noise_prints.py": "0e781354bd025637e47927287c85d8ed34f74d2d2e6640db522a4d5855167498",
+    "src/kobra/__init__.py": "56e9c82fe051076ce6de091c9ede2d819a432447f8492794cbc5f115462d742b",
+    "src/kobra/clock_vocabulary.py": "5061846e7a8ab9f293ee2f949034baaa19a1a15232d52a9022d0cdd02b888373",
+    "src/kobra/pipeline.py": "2d87f690b1eeca4048ca6eb985355d1b5a1902e060f8693999744d82f1fdc7a9",
+    "src/kobra/mocks.py": "93120388623ad14dffb226035f4050a7523038b3f066fc59f1b28e3affb0c4f9",
+    "src/kobra/confidence_gate.py": "394f91da931fb8c521f89c5c9e4434e73f3f23d55c0bad172b881c4990f2db1f",
+    "src/kobra/knowledge_resolution.py": "e6c4285ad77c6ae1738d6ddbc87d9b0220b5402af193b44931780475d9b85924",
+    "src/kobra/structural_read.py": "0641dcc8d3bf715032624f49fed14b8afe807f83ba45a389154a67019ad53d12",
+    "src/kobra/question_roles.py": "d3da605fd3f6e655c54b68d90f312021a40c8e304c2c88940e3b3b965c4cce79",
+    "src/kobra/front_door.py": "dca5caebf5504b7bd3ca674986c0a24f97d485946c8bc0c544ea65cddebad90d",
+    "src/kobra/surface_chunks.py": "66e2f96d7b69a8bddc61f0608f52ec6ed15acde1e1f947e014392dc9b576d065",
+    "src/kobra/rule_assignment.py": "9e7402b4f87a196de08a44959c1e86443ec09513bf9600a918fd4231f77c939b",
+    "src/kobra/distillation.py": "0f712a2189e8e4d3f9df02bbd32461ef7ea47c00ccc2cf3a402a72fbeb3faebe",
+    "src/kobra/shared_patients.py": "7eb0c5ac6d819ad42f2981fa7320645d09914b8b1a73d2a8309f3daf72894853",
+    "src/kobra/read.py": "c79f9bef0111b4b19119148da5ae85aa1cdef346ba6b48f1e5ed90c06d9fbcf4",
+    "src/kobra/_english_front_door.py": "e8aac24af92d422009374a854947c6aac4ea0a483f4263be657d70284860eae7",
+    "src/kobra/selection_read.py": "b71059de32f84d0cd5aaebb7955f5e9fe26379be4ac5c940c892f1206b9f4088",
+    "src/kobra/structured_read.py": "5f581e524fa9930ecf6b417b1c47605395ec145708c79fd212916c035a0d73de",
+    "src/kobra/_read_surface.py": "cf09ef74ff9cfb6054fbbe8a223938c92d1b2deee9e989da6a77919ba8654d42",
+    "src/kobra/clock.py": "8ee12ed2b5d83fd0bd116ee37ab4563f542340e0ae0c5432867e03b20041ae6e",
+    "src/kobra/candidate_read.py": "6954484ac2c22b9b44cf5db46d1402a446a034fa473d16fb466735cb719dd62c",
+    "src/kobra/knowledge.py": "04dd06e5c9b67518adc497836a02551d36da86b2aa2b567775b441a84282ae04",
+    "src/kobra/contracts.py": "8f0db23f34b4900eb21bc0c8662c1681fe9cf0a4f143a831c2135d72ed27ebd3",
+    "src/kobra/ollama.py": "69efbfb0e3f5c7edbb27141fe72a840549b0bdfb1ccf0b2fc74019177743e574"
+  }
+}

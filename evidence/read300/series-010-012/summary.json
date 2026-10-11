@@ -1,0 +1,64 @@
+{
+  "kind": "fresh lexical combinations within existing voice_tense construction; not full READ accuracy",
+  "cases": 900,
+  "unique_sentences": 900,
+  "correct": 899,
+  "incorrect": 0,
+  "unresolved": 1,
+  "source_retained": 900,
+  "new_model_calls": 0,
+  "correct_AI": null,
+  "correct_ASK": null,
+  "accuracy": 0.9988888888888889,
+  "by_set": [
+    {
+      "set": 10,
+      "cases": 300,
+      "code_correct": 300,
+      "code_incorrect": 0,
+      "unresolved": 0,
+      "correct_code_over_all": 1.0
+    },
+    {
+      "set": 11,
+      "cases": 300,
+      "code_correct": 300,
+      "code_incorrect": 0,
+      "unresolved": 0,
+      "correct_code_over_all": 1.0
+    },
+    {
+      "set": 12,
+      "cases": 300,
+      "code_correct": 299,
+      "code_incorrect": 0,
+      "unresolved": 1,
+      "correct_code_over_all": 0.9966666666666667
+    }
+  ],
+  "correct_rule_coverage": {
+    "C002-active-roles": 438,
+    "C001-passive-roles": 461,
+    "C018-passive-question-role-normalization": 114,
+    "C017-inverted-passive-agent-evidence": 5
+  },
+  "final_routes": {
+    "ASK": 900
+  },
+  "read_seconds": 1.8393340178154176,
+  "context_flagged": 0,
+  "audit": {
+    "all_three_pass": true,
+    "all_unique": true,
+    "disjoint_from_sets_1_to_9": true,
+    "same_source_and_parser": true,
+    "reader_freeze_unchanged": true
+  },
+  "caveats": [
+    "Only existing voice_tense grammar and existing vocabulary with new bindings; no new workflow families.",
+    "Literal role-slot scoring does not verify all semantics, including tense representation.",
+    "No active library, archive, ledger or correct-ASK evaluation in these 900 cases.",
+    "Final ASK is from missing calibration; do not count it as justified semantic ASK.",
+    "Fresh rule coverage is not a causal ablation tick; paired replay ticks are reported separately."
+  ]
+}

@@ -1,0 +1,259 @@
+[
+  {
+    "set": 12,
+    "id": "S000217",
+    "text": "Is the key moved by Mira?",
+    "result": {
+      "route": "ASK",
+      "source": "Is the key moved by Mira?",
+      "proposal": {
+        "source": "Is the key moved by Mira?",
+        "frames": [],
+        "route": "unresolved",
+        "rules": [],
+        "reasons": [
+          "additional lexical verb"
+        ],
+        "semantic_verified": false,
+        "version": "rule-assignment-6",
+        "surface_structure": {
+          "version": "surface-chunks-2",
+          "method": "deterministic_surface_rules",
+          "status": "unresolved",
+          "chunks": [],
+          "issues": [
+            "unsupported_initial_action"
+          ],
+          "protected_spans": [],
+          "source_ledger": [
+            {
+              "start": 0,
+              "end": 25,
+              "text": "Is the key moved by Mira?",
+              "label": "unassigned"
+            }
+          ]
+        },
+        "configuration_id": "acfc5de6c355abd614245eb858357ede0553ba1d0cdb6e288b3cb9c43edff85f"
+      },
+      "reasons": [
+        "missing_or_invalid_frames",
+        "uncalibrated_cohort",
+        "unsupported_read_structure"
+      ],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "calibration_evidence": null,
+      "cohort": "model-unresolved-v1:assignment:acfc5de6c355abd614245eb858357ede0553ba1d0cdb6e288b3cb9c43edff85f",
+      "model_self_confidence_used": false,
+      "context_ledger": {
+        "version": "context-ledger-1",
+        "previous_turns": [],
+        "world_entities": [],
+        "claims": [],
+        "history_supplied": false,
+        "world_supplied": false,
+        "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+      },
+      "assignment_source": "unresolved",
+      "grounding_policy": "deterministic_evidence_or_ASK",
+      "resolver_blocked_reasons": [],
+      "code_proposal": {
+        "source": "Is the key moved by Mira?",
+        "frames": [],
+        "route": "unresolved",
+        "rules": [],
+        "reasons": [
+          "additional lexical verb"
+        ],
+        "semantic_verified": false,
+        "version": "rule-assignment-6",
+        "surface_structure": {
+          "version": "surface-chunks-2",
+          "method": "deterministic_surface_rules",
+          "status": "unresolved",
+          "chunks": [],
+          "issues": [
+            "unsupported_initial_action"
+          ],
+          "protected_spans": [],
+          "source_ledger": [
+            {
+              "start": 0,
+              "end": 25,
+              "text": "Is the key moved by Mira?",
+              "label": "unassigned"
+            }
+          ]
+        },
+        "configuration_id": "acfc5de6c355abd614245eb858357ede0553ba1d0cdb6e288b3cb9c43edff85f"
+      }
+    },
+    "seconds": 0.004109978006454185,
+    "group": "voice_tense",
+    "expected": [
+      {
+        "predicate": [
+          "moved"
+        ],
+        "agent": [
+          "Mira"
+        ],
+        "patient": [
+          "the key"
+        ],
+        "recipient": [
+          "NONE"
+        ],
+        "negation": [
+          "NONE"
+        ],
+        "condition": [
+          "NONE"
+        ],
+        "time": [
+          "NONE"
+        ],
+        "quantity": [
+          "NONE"
+        ],
+        "attribution": [
+          "NONE"
+        ],
+        "modality": [
+          "NONE"
+        ],
+        "act": [
+          "question"
+        ]
+      }
+    ],
+    "score": {
+      "exact": false,
+      "slots_correct": 0,
+      "slots_total": 11,
+      "required_preserved": 0,
+      "required_total": 4,
+      "mismatches": [
+        {
+          "frame": 0,
+          "slot": "act",
+          "expected": [
+            "question"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "predicate",
+          "expected": [
+            "moved"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "agent",
+          "expected": [
+            "Mira"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "patient",
+          "expected": [
+            "the key"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "recipient",
+          "expected": [
+            "NONE"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "negation",
+          "expected": [
+            "NONE"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "condition",
+          "expected": [
+            "NONE"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "time",
+          "expected": [
+            "NONE"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "quantity",
+          "expected": [
+            "NONE"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "attribution",
+          "expected": [
+            "NONE"
+          ],
+          "selected": null
+        },
+        {
+          "frame": 0,
+          "slot": "modality",
+          "expected": [
+            "NONE"
+          ],
+          "selected": null
+        }
+      ],
+      "unrepresented": false
+    },
+    "code_routed": false,
+    "correct_code_proposal": false,
+    "context": {
+      "version": "context-requirements-2",
+      "case_id": "S000217",
+      "provided_context": {
+        "version": "context-ledger-1",
+        "previous_turns": [],
+        "world_entities": [],
+        "claims": [],
+        "history_supplied": false,
+        "world_supplied": false,
+        "semantics": "supplied evidence; mentions do not resolve references or verify assertions"
+      },
+      "sentence_sha256": "9cc946557754fadbb23e66d73e186204ee26a90d3558e253bae344e4a644cce2",
+      "requires_context": false,
+      "needs_previous_turns": "not_indicated",
+      "needs_world": "not_indicated",
+      "real_world_needed": "not_indicated",
+      "channel_semantics": "alternative possible resolvers; physical sensing is not assumed mandatory",
+      "read_extraction": "score_normally",
+      "reference_grounding": "no_external_requirement_identified",
+      "ambiguity_score": 0.0,
+      "ambiguity_level": 0,
+      "score_kind": "ordinal_context_and_ambiguity_burden_not_probability",
+      "assessment_scope": "explicit source graph evidence; absence of a flag is not a universal guarantee",
+      "reasons": []
+    },
+    "source_retained": true
+  }
+]

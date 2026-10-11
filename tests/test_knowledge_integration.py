@@ -179,7 +179,7 @@ class KnowledgeIntegrationTests(unittest.TestCase):
         result = self.read(knowledge, patient='it', resolver=resolver,
                            history=[{'role': 'user', 'content': 'Move the red box first.'}])
         self.assertEqual(result['route'], 'ASK')
-        self.assertIn('knowledge_grounding_not_supported:it', result['reasons'])
+        self.assertIn('unresolved_reference_requires_ASK:it', result['reasons'])
 
     def test_malformed_empty_role_is_ask_not_lookup_crash(self):
         knowledge = KnowledgeSnapshot(live=library({'box-1': {'name': 'box'}}))

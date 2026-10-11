@@ -1,0 +1,54 @@
+{
+  "text": "Is the key moved by Mira?",
+  "tokens": [
+    {
+      "text": "Is",
+      "pos": "AUX",
+      "tag": "VBZ",
+      "dep": "ROOT",
+      "head": "Is"
+    },
+    {
+      "text": "the",
+      "pos": "DET",
+      "tag": "DT",
+      "dep": "det",
+      "head": "key"
+    },
+    {
+      "text": "key",
+      "pos": "NOUN",
+      "tag": "NN",
+      "dep": "amod",
+      "head": "moved"
+    },
+    {
+      "text": "moved",
+      "pos": "VERB",
+      "tag": "VBN",
+      "dep": "attr",
+      "head": "Is"
+    },
+    {
+      "text": "by",
+      "pos": "ADP",
+      "tag": "IN",
+      "dep": "agent",
+      "head": "moved"
+    },
+    {
+      "text": "Mira",
+      "pos": "PROPN",
+      "tag": "NNP",
+      "dep": "pobj",
+      "head": "by"
+    },
+    {
+      "text": "?",
+      "pos": "PUNCT",
+      "tag": ".",
+      "dep": "punct",
+      "head": "Is"
+    }
+  ]
+}

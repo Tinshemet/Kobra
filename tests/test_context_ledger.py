@@ -29,7 +29,7 @@ class ContextLedgerTests(unittest.TestCase):
             request['world']['ghost']={};request['context_ledger']['previous_turns'].clear()
             request['code_proposal']['rules'].append('invented')
             return {'frames':[],'world_references':['ghost']}
-        r=GatedRuleReader(A(),ConfidenceGate(),resolver).read('Move it.',history=[{'role':'user','content':'A box.'}])
+        r=GatedRuleReader(A(),ConfidenceGate(),resolver).read('Move the box.',history=[{'role':'user','content':'A box.'}])
         self.assertEqual(len(r['context_ledger']['previous_turns']),1)
         self.assertEqual(r['code_proposal']['rules'],[])
         self.assertIn('nonexistent_world_reference',r['reasons'])

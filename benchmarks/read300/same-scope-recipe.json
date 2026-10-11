@@ -1,0 +1,22 @@
+{
+  "version": "same-scope-bindings-1",
+  "construction": "voice_tense",
+  "constructor": "serpent.grammar.simple_clause(Clause)",
+  "seed_base": 2026101100,
+  "size": 300,
+  "people": ["p_alex", "p_mira", "p_nia"],
+  "numbers": ["singular", "plural"],
+  "tenses": ["present", "past", "future"],
+  "voices": ["active", "passive"],
+  "forms": ["declarative", "interrogative"],
+  "negative": [false, true],
+  "bindings_by_set": {
+    "10": [["v_check", "n_disk"], ["v_carry", "n_key"], ["v_move", "n_lamp"], ["v_repair", "n_server"]],
+    "11": [["v_check", "n_box"], ["v_carry", "n_disk"], ["v_move", "n_book"], ["v_repair", "n_sensor"]],
+    "12": [["v_check", "n_lamp"], ["v_carry", "n_box"], ["v_move", "n_key"], ["v_repair", "n_train"]]
+  },
+  "selection": "Existing Serpent planner.select, balanced strength 2, normalized historical input exclusion only. No downstream predictions or performance filters.",
+  "freshness": "New sentence combinations and disjoint verb-patient bindings across these three sets; existing vocabulary and existing grammar. Not vocabulary holdout or pretraining novelty.",
+  "scope": "Same voice/tense construction as sets 7-9, new lexical bindings through unchanged Serpent constructor; not an unchanged canonical pool and not a matched-distribution comparison.",
+  "limitations": ["Bounded literal-slot score only", "No archive, ledger, active-library or ASK correctness coverage", "No new workflow or task families", "Recipe is a new external inventory, not a Serpent core release change"]
+}

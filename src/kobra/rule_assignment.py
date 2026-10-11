@@ -7,7 +7,7 @@ import hashlib
 import json
 from .selection_read import SLOTS
 
-VERSION = 'rule-assignment-5'
+VERSION = 'rule-assignment-6'
 
 class RuleAssigner:
     def __init__(self, nlp=None, action_words=None, shared_patterns=None):
@@ -60,19 +60,32 @@ class RuleAssigner:
         root = next((t for t in doc if t.dep_ == 'ROOT'), None)
         if root is None or root.pos_ not in {'VERB','AUX'}:
             return stop('no supported predicate')
+        # Recognize a complete bounded passive-question surface before the
+        # additional-verb guard; never mutate the learned dependency tree.
+        chunks = {c.root.i:c for c in doc.noun_chunks}
+        from .question_roles import passive_question_subject, double_object_roles
+        repaired = passive_question_subject(doc, root, chunks)
+        repaired_subject = None
+        if repaired is not None:
+            root, repaired_subject = repaired
+            out['rules'].append('C018-passive-question-role-normalization')
         if any(t.pos_ == 'VERB' and t != root for t in doc):
             return stop('additional lexical verb')
         # Only complete, contiguous noun chunks; do not guess attachment.
-        chunks = {c.root.i:c for c in doc.noun_chunks}
         def phrase(t):
             c = chunks.get(t.i)
             return c.text if c is not None else (t.text if t.pos_ == 'PRON' else None)
         frame = {s:'NONE' for s in SLOTS}
         frame['act'] = 'question' if text.rstrip().endswith('?') else 'assertion'
         frame['predicate'] = root.text
-        subjects = [t for t in root.children if t.dep_ in {'nsubj','nsubjpass'}]
+        subjects = ([repaired_subject] if repaired_subject is not None else
+                    [t for t in root.children if t.dep_ in {'nsubj','nsubjpass'}])
         objects = [t for t in root.children if t.dep_ in {'dobj','obj'}]
         recipients = [t for t in root.children if t.dep_ == 'dative']
+        double_object = double_object_roles(doc, root, subjects, objects, recipients, chunks)
+        if double_object is not None:
+            objects, recipients = double_object
+            out['rules'].append('C019-ordered-double-object-roles')
         if max(len(subjects),len(objects),len(recipients)) > 1:
             return stop('multiple role candidates')
         agents = [t for t in root.children if t.dep_ == 'agent' and t.lower_ == 'by']
@@ -81,7 +94,8 @@ class RuleAssigner:
         supported_inverted_passive = (frame['act'] == 'question' and root.tag_ == 'VBN'
             and bool(agents) and any(t.dep_ == 'aux' and t.lemma_ == 'be' for t in root.children))
         passive = (any(t.dep_ == 'auxpass' for t in root.children)
-                   or any(t.dep_ == 'nsubjpass' for t in subjects) or supported_inverted_passive)
+                   or any(t.dep_ == 'nsubjpass' for t in subjects) or supported_inverted_passive
+                   or repaired_subject is not None)
         if agents and not passive:
             return stop('unresolved passive agent attachment')
         if supported_inverted_passive:

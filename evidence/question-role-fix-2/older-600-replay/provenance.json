@@ -1,0 +1,10 @@
+{
+  "baseline_sha256": "ecdcf2adf1fa9379ffec1427cd6e9b260a126558bb75e007abbbf892146b1ace",
+  "files": {
+    "src/kobra/rule_assignment.py": "9e7402b4f87a196de08a44959c1e86443ec09513bf9600a918fd4231f77c939b",
+    "src/kobra/structural_read.py": "0641dcc8d3bf715032624f49fed14b8afe807f83ba45a389154a67019ad53d12",
+    "src/kobra/surface_chunks.py": "66e2f96d7b69a8bddc61f0608f52ec6ed15acde1e1f947e014392dc9b576d065",
+    "src/kobra/shared_patients.py": "7eb0c5ac6d819ad42f2981fa7320645d09914b8b1a73d2a8309f3daf72894853",
+    "tools/compare_code_replay.py": "dc8c4fb198cd379fb274ac616fd0c10d3c36bbcef696f3bf4df16f891f3d5d43"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "review": "Actual changed source, tests, generator and recipe reviewed before commit.",
+  "findings": [
+    "C018 bounded to full passive question shape; relative-clause counterexamples abstain.",
+    "C019 explicit verb inventory; no person or sentence hardcoding.",
+    "Grounding blocks AI; general history and ordinal resolution remain incomplete.",
+    "Serpent core unchanged; new lexical-binding inventory explicitly labeled.",
+    "Fresh source hashes verified across all three sets; no post-test parser repair.",
+    "All final ASK routes are uncalibrated and not claimed correct ASK."
+  ],
+  "tests": {
+    "run": 238,
+    "passed": 237,
+    "skipped": 1
+  },
+  "scope": "review of implemented changes and saved evidence; not independent correctness certification"
+}

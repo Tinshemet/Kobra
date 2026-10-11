@@ -76,7 +76,7 @@ class ConfidenceGate:
                     continue
                 for slot in ('agent', 'patient', 'recipient'):
                     value = frame.get(slot)
-                    if isinstance(value, str) and re.match(r'^(it|them|he|she|they|this|that|these|those|here|there)(?:\s|$)', value, re.I):
+                    if isinstance(value, str) and _REFERENCE_CUE.match(value):
                         local_match = any(r.get('frame') == frame_index and r.get('slot') == slot
                             and r.get('status') == 'resolved' and r.get('mention',{}).get('text') == value
                             for r in local_bindings)
@@ -115,6 +115,42 @@ class ConfidenceGate:
                     model_self_confidence_used=False)
 
 
+_REFERENCE_CUE = re.compile(
+    r"\b(?:it|them|he|him|she|her|they|their|theirs|his|hers|its|"
+    r"this|that|these|those|here|there|I|me|my|mine|we|us|our|ours|"
+    r"you|your|yours|myself|yourself|himself|herself|itself|themselves)\b", re.I)
+
+
+def _grounding_blockers(text, code, knowledge_evidence, missing_context):
+    """Conservative source check even when a failed parse returned no frames.
+
+    This does not infer identities from recency or an AI proposal. Quoted and
+    bracketed cues also abstain until the grammar establishes their scope.
+    """
+    reasons = [f'missing_context:{x}' for x in missing_context]
+    references = code.get('local_references', ())
+    if any(r.get('status') != 'resolved' for r in references):
+        reasons.append('unresolved_local_reference')
+    supported = []
+    for reference in references:
+        if reference.get('status') == 'resolved':
+            mention = reference.get('mention', {})
+            if isinstance(mention.get('start'), int) and isinstance(mention.get('end'), int):
+                supported.append((mention['start'], mention['end']))
+    if knowledge_evidence is not None:
+        reasons.extend(knowledge_evidence['issues'])
+        for mention in knowledge_evidence.get('lexical_mentions', ()):
+            if mention['lookup']['status'] in ('ambiguous', 'unsupported', 'negative'):
+                reasons.append('knowledge_unresolved_mention:' + mention['text'])
+        supported.extend((span['start'], span['end'])
+                         for binding in knowledge_evidence['bindings']
+                         for span in binding['spans'])
+    for cue in _REFERENCE_CUE.finditer(text):
+        if not any(start <= cue.start() and cue.end() <= end for start, end in supported):
+            reasons.append('unresolved_reference_requires_ASK:' + cue.group().casefold())
+    return sorted(set(reasons))
+
+
 class GatedRuleReader:
     """Code first, optional model proposal, external gate, explicit ASK handoff."""
     def __init__(self, assigner, gate, resolver=None, model_cohort='model-unresolved-v1', knowledge=None):
@@ -134,12 +170,13 @@ class GatedRuleReader:
                                                    created_frames=created_patient_frames(code))
             world = deepcopy(knowledge_evidence.pop('world'))
             ledger = context_snapshot(history, world, context_claims)
+        grounding_blockers = _grounding_blockers(text, code, knowledge_evidence, missing_context)
         proposal = deepcopy(code)
         origin = 'code' if code['route'] == 'code' else 'unresolved'
         cohort = 'code:' + '+'.join(sorted(code['rules']))
         if code['route'] != 'code':
             cohort = self.model_cohort
-            if self.resolver is not None:
+            if self.resolver is not None and not grounding_blockers:
                 origin = 'AI'
                 try:
                     proposal = self.resolver({'source':text, 'code_proposal':deepcopy(code),
@@ -153,7 +190,8 @@ class GatedRuleReader:
         local_bindings = code.get('local_references', ()) if origin == 'code' else ()
         if code.get('configuration_id'):
             cohort += ':assignment:' + code['configuration_id']
-        knowledge_reasons = []
+        knowledge_reasons = list(grounding_blockers) if code['route'] != 'code' else []
+        deterministic_bindings = []
         if knowledge_evidence is not None:
             from .knowledge_resolution import resolve_knowledge, validate_knowledge_proposal
             # Model may supply different roles: evaluate those mentions as well.
@@ -161,6 +199,7 @@ class GatedRuleReader:
                 final_evidence = resolve_knowledge(self.knowledge, text, proposal, world)
                 final_evidence.pop('world')
                 knowledge_evidence['model_matches'] = final_evidence['matches']
+                deterministic_bindings = final_evidence['bindings']
                 knowledge_reasons.extend(validate_knowledge_proposal(proposal, final_evidence))
             if origin != 'AI':
                 knowledge_reasons.extend(validate_knowledge_proposal(proposal, knowledge_evidence))
@@ -168,13 +207,29 @@ class GatedRuleReader:
                 knowledge_reasons.extend(knowledge_evidence['issues'])
             cohort += ':' + knowledge_evidence['version'] + ':' + knowledge_evidence['revision']
             if origin == 'code':
-                for binding in knowledge_evidence['bindings']:
-                    proposal.setdefault('groundings', {})[binding['mention']] = binding['entity_id']
+                deterministic_bindings = knowledge_evidence['bindings']
+        if origin == 'AI' and isinstance(proposal, dict):
+            # Identity decisions never gain authority merely by naming an existing ID.
+            supplied = proposal.pop('groundings', {})
+            supplied_references = proposal.pop('world_references', [])
+            allowed = {b['mention']: b['entity_id'] for b in deterministic_bindings}
+            if not isinstance(supplied, dict) or any(allowed.get(m) != v for m, v in supplied.items()):
+                knowledge_reasons.append('model_identity_assignment_not_supported')
+            if not isinstance(supplied_references, list) or any(v not in allowed.values() for v in supplied_references):
+                knowledge_reasons.append('model_identity_assignment_not_supported')
+            if isinstance(supplied_references, list) and any(not isinstance(v, str) or v not in world for v in supplied_references):
+                knowledge_reasons.append('nonexistent_world_reference')
+            proposal.pop('local_references', None)
+        if isinstance(proposal, dict):
+            for binding in deterministic_bindings:
+                proposal.setdefault('groundings', {})[binding['mention']] = binding['entity_id']
         result = self.gate.assess(text, proposal, cohort=cohort, world_ids=tuple(world),
                                  missing_context=missing_context, local_bindings=local_bindings,
                                  validation_reasons=knowledge_reasons)
         result['context_ledger'] = ledger
         result['assignment_source'] = origin
+        result['grounding_policy'] = 'deterministic_evidence_or_ASK'
+        result['resolver_blocked_reasons'] = grounding_blockers if code['route'] != 'code' else []
         result['code_proposal'] = code
         if knowledge_evidence is not None:
             result['knowledge_evidence'] = knowledge_evidence
