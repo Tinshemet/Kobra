@@ -1,0 +1,106 @@
+{
+  "cases": 5000,
+  "correct": 2997,
+  "parsing_correct": 4997,
+  "incorrect_code_parses": 0,
+  "wrong_nonempty_bindings": 0,
+  "expected_binding_cases": 1000,
+  "correct_expected_bindings": 400,
+  "expected_ASK_cases": 2600,
+  "correct_ASK_reasons": 1200,
+  "runtime_errors": 0,
+  "source_retained": 5000,
+  "final_routes": {
+    "ASK": 5000
+  },
+  "new_model_calls": 0,
+  "by_family": {
+    "parsing_fresh": {
+      "cases": 1000,
+      "correct": 997
+    },
+    "live_exact": {
+      "cases": 200,
+      "correct": 200
+    },
+    "live_alias": {
+      "cases": 200,
+      "correct": 200
+    },
+    "ledger_confirmed": {
+      "cases": 200,
+      "correct": 0
+    },
+    "ledger_corrected": {
+      "cases": 200,
+      "correct": 0
+    },
+    "ledger_alias": {
+      "cases": 200,
+      "correct": 0
+    },
+    "live_collision": {
+      "cases": 200,
+      "correct": 200
+    },
+    "stale": {
+      "cases": 200,
+      "correct": 200
+    },
+    "unavailable": {
+      "cases": 200,
+      "correct": 200
+    },
+    "ledger_reported": {
+      "cases": 200,
+      "correct": 0
+    },
+    "ledger_disputed": {
+      "cases": 200,
+      "correct": 0
+    },
+    "ledger_missing": {
+      "cases": 200,
+      "correct": 0
+    },
+    "ledger_mismatch": {
+      "cases": 200,
+      "correct": 0
+    },
+    "ledger_number": {
+      "cases": 200,
+      "correct": 0
+    },
+    "ledger_conflict": {
+      "cases": 200,
+      "correct": 0
+    },
+    "no_history": {
+      "cases": 200,
+      "correct": 0
+    },
+    "archive_ratified": {
+      "cases": 200,
+      "correct": 200
+    },
+    "archive_pending": {
+      "cases": 200,
+      "correct": 200
+    },
+    "archive_imported": {
+      "cases": 200,
+      "correct": 200
+    },
+    "archive_negative": {
+      "cases": 200,
+      "correct": 200
+    },
+    "archive_superseded": {
+      "cases": 200,
+      "correct": 200
+    }
+  },
+  "seconds": 10.149786787675112,
+  "semantics": "Underlying parsing/binding/ASK-reason contract score; final acceptance unavailable without calibration. No AI-correct score.",
+  "source_and_gold_unchanged": true
+}

@@ -1,0 +1,2790 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>READ memory grounding</title><style>body{max-width:1100px;margin:30px auto;padding:20px;font:16px/1.6 system-ui;background:#112033;color:#edf3ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}td,th{padding:8px;border:1px solid #657e97}table{border-collapse:collapse}details{padding:12px;margin:10px 0;border:1px solid #657e97}summary{cursor:pointer}</style><h1>Memory grounding and mixed 5,000-case run</h1><p><strong>4,997/5,000 contract checks pass (99.94%): zero incorrect returned parses or nonempty identity bindings; three parsing abstentions.</strong></p><p>This is a bounded contract test. There are 1,007 unique current sentences and 5,000 distinct full contexts. The 4,000 memory cases repeat 20 patterns; caller-confirmed references are supplied, not inferred automatically.</p><table><tr><th>Family</th><th>Correct</th><th>Total</th></tr><tr><td>parsing_fresh</td><td>997</td><td>1000</td></tr><tr><td>live_exact</td><td>200</td><td>200</td></tr><tr><td>live_alias</td><td>200</td><td>200</td></tr><tr><td>ledger_confirmed</td><td>200</td><td>200</td></tr><tr><td>ledger_corrected</td><td>200</td><td>200</td></tr><tr><td>ledger_alias</td><td>200</td><td>200</td></tr><tr><td>live_collision</td><td>200</td><td>200</td></tr><tr><td>stale</td><td>200</td><td>200</td></tr><tr><td>unavailable</td><td>200</td><td>200</td></tr><tr><td>ledger_reported</td><td>200</td><td>200</td></tr><tr><td>ledger_disputed</td><td>200</td><td>200</td></tr><tr><td>ledger_missing</td><td>200</td><td>200</td></tr><tr><td>ledger_mismatch</td><td>200</td><td>200</td></tr><tr><td>ledger_number</td><td>200</td><td>200</td></tr><tr><td>ledger_conflict</td><td>200</td><td>200</td></tr><tr><td>no_history</td><td>200</td><td>200</td></tr><tr><td>archive_ratified</td><td>200</td><td>200</td></tr><tr><td>archive_pending</td><td>200</td><td>200</td></tr><tr><td>archive_imported</td><td>200</td><td>200</td></tr><tr><td>archive_negative</td><td>200</td><td>200</td></tr><tr><td>archive_superseded</td><td>200</td><td>200</td></tr></table><p>New bindings: 600. More specific ASK reasons: 1,400 (already abstained before). Regressions: zero. All final routes still ASK without calibration. No AI calls.</p><h2>One actual case from each memory family</h2><details><summary>live_exact — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M01001&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {
+      &quot;the box&quot;: &quot;live_exact-object-0&quot;
+    },
+    &quot;ask_reason&quot;: null,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;,
+    &quot;groundings&quot;: {
+      &quot;the box&quot;: &quot;live_exact-object-0&quot;
+    }
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;8623d115a65a3734b7ef96778e3c7e98e40a1d6f50f6fd73cf7a3089d5d52268&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>live_alias — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M01201&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {
+      &quot;the box&quot;: &quot;live_alias-object-0&quot;
+    },
+    &quot;ask_reason&quot;: null,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;,
+    &quot;groundings&quot;: {
+      &quot;the box&quot;: &quot;live_alias-object-0&quot;
+    }
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;b47f81facef55d105dddb0a0ddf9ac42414cb9a7aa38679303189fe5bce5f3eb&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>ledger_confirmed — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M01401&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {
+      &quot;it&quot;: &quot;ledger_confirmed-object-0&quot;
+    },
+    &quot;ask_reason&quot;: null,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;,
+    &quot;groundings&quot;: {
+      &quot;it&quot;: &quot;ledger_confirmed-object-0&quot;
+    }
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;093fee652cd62d0c3f9c9cdfce00906fdcbfbaae7ee2b5276fc1d4c5f3c70e0b&quot;,
+    &quot;bindings&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;entity_id&quot;: &quot;ledger_confirmed-object-0&quot;,
+        &quot;spans&quot;: [
+          {
+            &quot;start&quot;: 5,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;it&quot;
+          }
+        ],
+        &quot;evidence&quot;: &quot;client_confirmed_ledger_reference&quot;,
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;prior_spans&quot;: [
+          {
+            &quot;turn_id&quot;: &quot;t1&quot;,
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 3,
+            &quot;quote&quot;: &quot;box&quot;
+          }
+        ]
+      }
+    ],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [
+          &quot;ledger_confirmed-object-0&quot;
+        ],
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;reasons&quot;: []
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>ledger_corrected — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M01601&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {
+      &quot;it&quot;: &quot;ledger_corrected-other-0&quot;
+    },
+    &quot;ask_reason&quot;: null,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;,
+    &quot;groundings&quot;: {
+      &quot;it&quot;: &quot;ledger_corrected-other-0&quot;
+    }
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;1c8d397b21a43d40cdbe2d749136d7083e3acf608898f6aebd08ebbd68ca13ad&quot;,
+    &quot;bindings&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;entity_id&quot;: &quot;ledger_corrected-other-0&quot;,
+        &quot;spans&quot;: [
+          {
+            &quot;start&quot;: 5,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;it&quot;
+          }
+        ],
+        &quot;evidence&quot;: &quot;client_confirmed_ledger_reference&quot;,
+        &quot;claim_ids&quot;: [
+          &quot;c2&quot;
+        ],
+        &quot;prior_spans&quot;: [
+          {
+            &quot;turn_id&quot;: &quot;t2&quot;,
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;quote&quot;: &quot;lamp&quot;
+          }
+        ]
+      }
+    ],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [
+          &quot;ledger_corrected-other-0&quot;
+        ],
+        &quot;claim_ids&quot;: [
+          &quot;c2&quot;
+        ],
+        &quot;reasons&quot;: []
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>ledger_alias — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M01801&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {
+      &quot;it&quot;: &quot;ledger_alias-object-0&quot;
+    },
+    &quot;ask_reason&quot;: null,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;,
+    &quot;groundings&quot;: {
+      &quot;it&quot;: &quot;ledger_alias-object-0&quot;
+    }
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;28a0ccb44794cbd0423e34822778dc17e5bf151e470793ff99c94288a901392e&quot;,
+    &quot;bindings&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;entity_id&quot;: &quot;ledger_alias-object-0&quot;,
+        &quot;spans&quot;: [
+          {
+            &quot;start&quot;: 5,
+            &quot;end&quot;: 7,
+            &quot;text&quot;: &quot;it&quot;
+          }
+        ],
+        &quot;evidence&quot;: &quot;client_confirmed_ledger_reference&quot;,
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;prior_spans&quot;: [
+          {
+            &quot;turn_id&quot;: &quot;t1&quot;,
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 3,
+            &quot;quote&quot;: &quot;box&quot;
+          }
+        ]
+      }
+    ],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [
+          &quot;ledger_alias-object-0&quot;
+        ],
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;reasons&quot;: []
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>live_collision — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M02001&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;knowledge_ambiguous:0:patient&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;3398befd61b8e89b76a0d22ae885b6afdfe037ef8b4be45cd79987d097cbd8e5&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;knowledge_ambiguous:0:patient&quot;,
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>stale — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M02201&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;knowledge_live_stale&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;knowledge_live_stale&quot;,
+    &quot;knowledge_unsupported:0:patient&quot;,
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>unavailable — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M02401&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;knowledge_live_unavailable&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;knowledge_live_unavailable&quot;,
+    &quot;knowledge_unsupported:0:patient&quot;,
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>ledger_reported — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M02601&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;memory_unconfirmed_reference:it&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;cd5e90b51b0ae305a049f96b404fc28201bf9155ad193f4a6faccbdcbbdd1977&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [
+      &quot;memory_unconfirmed_reference:it&quot;
+    ],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [],
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;reasons&quot;: [
+          &quot;memory_unconfirmed_reference:it&quot;
+        ]
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;memory_unconfirmed_reference:it&quot;,
+    &quot;uncalibrated_cohort&quot;,
+    &quot;ungrounded_reference:patient&quot;
+  ]
+}</pre></details><details><summary>ledger_disputed — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M02801&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;memory_disputed_reference:it&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;67a8ba71c414cca04f0c2477fb42618e0844e2177d1c65af47d0b469bc67443e&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [
+      &quot;memory_disputed_reference:it&quot;
+    ],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [],
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;reasons&quot;: [
+          &quot;memory_disputed_reference:it&quot;
+        ]
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;memory_disputed_reference:it&quot;,
+    &quot;uncalibrated_cohort&quot;,
+    &quot;ungrounded_reference:patient&quot;
+  ]
+}</pre></details><details><summary>ledger_missing — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M03001&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;memory_missing_entity:it&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;b8b7f726388db1efb73589f50e23ca66f2ac79b355017a55535557279678d464&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [
+      &quot;memory_missing_entity:it&quot;
+    ],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [],
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;reasons&quot;: [
+          &quot;memory_missing_entity:it&quot;
+        ]
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;memory_missing_entity:it&quot;,
+    &quot;uncalibrated_cohort&quot;,
+    &quot;ungrounded_reference:patient&quot;
+  ]
+}</pre></details><details><summary>ledger_mismatch — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M03201&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;memory_evidence_name_mismatch:it&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;c5311a330477848a7709af0dd4f432b8bf5ae8c1aa824c8de875fc50cf720894&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [
+      &quot;memory_evidence_name_mismatch:it&quot;
+    ],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [],
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;reasons&quot;: [
+          &quot;memory_evidence_name_mismatch:it&quot;
+        ]
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;memory_evidence_name_mismatch:it&quot;,
+    &quot;uncalibrated_cohort&quot;,
+    &quot;ungrounded_reference:patient&quot;
+  ]
+}</pre></details><details><summary>ledger_number — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M03401&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;memory_number_not_supported:it&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;dafa245f8ce25b11231e09d958bf5a3133f31c8bf0a4557003ec9f8bea515659&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [
+      &quot;memory_number_not_supported:it&quot;
+    ],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [],
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;reasons&quot;: [
+          &quot;memory_number_not_supported:it&quot;
+        ]
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;memory_number_not_supported:it&quot;,
+    &quot;uncalibrated_cohort&quot;,
+    &quot;ungrounded_reference:patient&quot;
+  ]
+}</pre></details><details><summary>ledger_conflict — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M03601&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;memory_ambiguous_reference:it&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;897a52d0532fa3fb7cf15920359fc910b6c8f4b7e97fe7130f11a35751daabd6&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [
+      &quot;memory_ambiguous_reference:it&quot;
+    ],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [
+          &quot;ledger_conflict-object-0&quot;,
+          &quot;ledger_conflict-other-0&quot;
+        ],
+        &quot;claim_ids&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;
+        ],
+        &quot;reasons&quot;: [
+          &quot;memory_ambiguous_reference:it&quot;
+        ]
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;memory_ambiguous_reference:it&quot;,
+    &quot;uncalibrated_cohort&quot;,
+    &quot;ungrounded_reference:patient&quot;
+  ]
+}</pre></details><details><summary>no_history — Move it.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M03801&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;it&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;memory_unconfirmed_reference:it&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 7,
+          &quot;text&quot;: &quot;Move it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 7,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;24584b6f21e4d0478248a776e8d587b62821db0ff95a1dbe9d7257c2295f8b4d&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [
+      &quot;memory_unconfirmed_reference:it&quot;
+    ],
+    &quot;decisions&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;candidate_ids&quot;: [],
+        &quot;claim_ids&quot;: [],
+        &quot;reasons&quot;: [
+          &quot;memory_unconfirmed_reference:it&quot;
+        ]
+      }
+    ],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;memory_unconfirmed_reference:it&quot;,
+    &quot;uncalibrated_cohort&quot;,
+    &quot;ungrounded_reference:patient&quot;
+  ]
+}</pre></details><details><summary>archive_ratified — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M04001&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: null,
+    &quot;lexical&quot;: &quot;lex1&quot;
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>archive_pending — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M04201&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;knowledge_unsupported:0:patient&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;knowledge_unsupported:0:patient&quot;,
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>archive_imported — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M04401&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;knowledge_unsupported:0:patient&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;knowledge_unsupported:0:patient&quot;,
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>archive_negative — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M04601&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: &quot;knowledge_negative:0:patient&quot;,
+    &quot;lexical&quot;: null
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;knowledge_negative:0:patient&quot;,
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><details><summary>archive_superseded — Move the box.</summary><pre>{
+  &quot;expected&quot;: {
+    &quot;id&quot;: &quot;M04801&quot;,
+    &quot;expected&quot;: [
+      {
+        &quot;predicate&quot;: [
+          &quot;Move&quot;
+        ],
+        &quot;agent&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;patient&quot;: [
+          &quot;the box&quot;
+        ],
+        &quot;recipient&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;negation&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;condition&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;time&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;quantity&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;attribution&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;modality&quot;: [
+          &quot;NONE&quot;
+        ],
+        &quot;act&quot;: [
+          &quot;request&quot;
+        ]
+      }
+    ],
+    &quot;bindings&quot;: {},
+    &quot;ask_reason&quot;: null,
+    &quot;lexical&quot;: &quot;lex2&quot;
+  },
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Move the box.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Move&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the box&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C002-active-roles&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-7&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Move&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 12,
+          &quot;text&quot;: &quot;Move the box&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 12,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+  },
+  &quot;memory&quot;: {
+    &quot;version&quot;: &quot;memory-grounding-1&quot;,
+    &quot;revision&quot;: &quot;608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c&quot;,
+    &quot;bindings&quot;: [],
+    &quot;issues&quot;: [],
+    &quot;decisions&quot;: [],
+    &quot;semantics&quot;: &quot;caller confirms reference intent; code checks evidence, identity, number and conflicts&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ]
+}</pre></details><h2>Unresolved parsing cases</h2><details open><summary>Was the sensor not moved by Mira?</summary><pre>{
+  &quot;source&quot;: &quot;Was the sensor not moved by Mira?&quot;,
+  &quot;frames&quot;: [],
+  &quot;route&quot;: &quot;unresolved&quot;,
+  &quot;rules&quot;: [],
+  &quot;reasons&quot;: [
+    &quot;multiple predicates or clause attachment&quot;
+  ],
+  &quot;semantic_verified&quot;: false,
+  &quot;version&quot;: &quot;rule-assignment-7&quot;,
+  &quot;surface_structure&quot;: {
+    &quot;version&quot;: &quot;surface-chunks-2&quot;,
+    &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;status&quot;: &quot;unresolved&quot;,
+    &quot;chunks&quot;: [],
+    &quot;issues&quot;: [
+      &quot;scope_requires_separate_analysis&quot;,
+      &quot;unsupported_initial_action&quot;
+    ],
+    &quot;protected_spans&quot;: [],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 33,
+        &quot;text&quot;: &quot;Was the sensor not moved by Mira?&quot;,
+        &quot;label&quot;: &quot;unassigned&quot;
+      }
+    ]
+  },
+  &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+}</pre></details><details open><summary>Was the sensor not checked by Alex?</summary><pre>{
+  &quot;source&quot;: &quot;Was the sensor not checked by Alex?&quot;,
+  &quot;frames&quot;: [],
+  &quot;route&quot;: &quot;unresolved&quot;,
+  &quot;rules&quot;: [],
+  &quot;reasons&quot;: [
+    &quot;multiple predicates or clause attachment&quot;
+  ],
+  &quot;semantic_verified&quot;: false,
+  &quot;version&quot;: &quot;rule-assignment-7&quot;,
+  &quot;surface_structure&quot;: {
+    &quot;version&quot;: &quot;surface-chunks-2&quot;,
+    &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;status&quot;: &quot;unresolved&quot;,
+    &quot;chunks&quot;: [],
+    &quot;issues&quot;: [
+      &quot;scope_requires_separate_analysis&quot;,
+      &quot;unsupported_initial_action&quot;
+    ],
+    &quot;protected_spans&quot;: [],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 35,
+        &quot;text&quot;: &quot;Was the sensor not checked by Alex?&quot;,
+        &quot;label&quot;: &quot;unassigned&quot;
+      }
+    ]
+  },
+  &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+}</pre></details><details open><summary>Was the sensor not moved by Alex?</summary><pre>{
+  &quot;source&quot;: &quot;Was the sensor not moved by Alex?&quot;,
+  &quot;frames&quot;: [],
+  &quot;route&quot;: &quot;unresolved&quot;,
+  &quot;rules&quot;: [],
+  &quot;reasons&quot;: [
+    &quot;multiple predicates or clause attachment&quot;
+  ],
+  &quot;semantic_verified&quot;: false,
+  &quot;version&quot;: &quot;rule-assignment-7&quot;,
+  &quot;surface_structure&quot;: {
+    &quot;version&quot;: &quot;surface-chunks-2&quot;,
+    &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;status&quot;: &quot;unresolved&quot;,
+    &quot;chunks&quot;: [],
+    &quot;issues&quot;: [
+      &quot;scope_requires_separate_analysis&quot;,
+      &quot;unsupported_initial_action&quot;
+    ],
+    &quot;protected_spans&quot;: [],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 33,
+        &quot;text&quot;: &quot;Was the sensor not moved by Alex?&quot;,
+        &quot;label&quot;: &quot;unassigned&quot;
+      }
+    ]
+  },
+  &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+}</pre></details><h2>Contract, limitations and validation</h2><pre>Deterministic memory grounding: first implemented contract
+=========================================================
+
+READ can now bind a pronoun from a client-confirmed ledger reference without
+asking a model to choose identity. This is a bounded integration contract, not
+unrestricted natural-language discourse resolution or persistent memory storage.
+
+Authority and data flow
+-----------------------
+
+The client supplies exact prior turns, current WORLD/library entity records and
+context_claims. A reference claim extends the existing ledger claim with reference
+and entity_id. For example, prior turn t1 contains &quot;box&quot; and the client records:
+
+    {&quot;id&quot;:&quot;c1&quot;, &quot;turn_id&quot;:&quot;t1&quot;, &quot;start&quot;:0, &quot;end&quot;:3, &quot;quote&quot;:&quot;box&quot;,
+     &quot;status&quot;:&quot;confirmed_by_client&quot;, &quot;reference&quot;:&quot;it&quot;, &quot;entity_id&quot;:&quot;box-1&quot;}
+
+With current entity box-1 {name: box, number: singular}, &quot;Move it.&quot; keeps patient
+&quot;it&quot; in the frame and gains groundings {it: box-1}. memory_evidence records the
+claim IDs, exact prior spans, candidate IDs, source ledger hash and decisions.
+The client confirms reference intent; code checks that intent against evidence.
+A quote matching an entity name alone does not establish a pronoun&#x27;s referent.
+
+Supported references are it/this/that (singular) and them/these/those (plural).
+Code checks current entity existence, exact cited text, name or alias agreement,
+explicit number, claim status and conflicting candidates. Reported claims do not
+settle identity. Disputed claims, missing targets, mismatched names or number,
+conflicting confirmed claims and absent confirmation produce explicit ASK reasons.
+An explicit same-reference supersession chain handles a correction; newest-turn
+recency alone never chooses a referent. A replacement cannot silently change the
+reference cue. Existing ledger cycle/span checks still apply.
+
+Sentence-local bindings remain authoritative in their frames. The global public
+mention-to-ID map cannot represent distinct local and ledger targets for the same
+literal; that collision now abstains. Live and ledger bindings that disagree also
+abstain. AI identity suggestions remain subordinate to deterministic checks.
+The memory policy version participates in the gate cohort; no calibration is
+created from these tests or from schema validation.
+
+Archive and active library
+--------------------------
+
+Existing exact current names/aliases bind to active entities. Stale/unavailable
+snapshots and ambiguous aliases abstain. Archive ratified definitions remain
+lexical meanings, never invented live entity IDs. Pending/imported/negative
+records cannot authorize a binding; explicit ratified supersession selects the
+new lexical definition. The archive snapshot API is unchanged. This change does
+not implement persistent writes, automatic ratification, refresh, or an ASK UI.
+
+Mixed 5,000-case evaluation
+--------------------------
+
+Serpent supplied independent clause/reference source graphs. A separate external
+fixture recipe supplied explicit memory snapshots, expected identities and ASK
+reasons. No READ predictions affected generation or expected answers; Serpent core
+was unchanged. The reader received text and caller evidence, not expected outputs
+or family labels. Gold was loaded only after capture. No AI was called.
+
+* 1,000 fresh normalized-distinct parsing sentences: 997 correct, three unresolved,
+  zero incorrect returned parses. Expanded combinations of existing grammar.
+* 1,000 expected identity bindings: 1,000 correct (400 exact live/alias and 600
+  confirmed ledger, corrected ledger or ledger-alias cases).
+* 2,600 required ASK cases: all carried the declared semantic reason and no
+  incorrect binding. These were not scored correct merely because route was ASK.
+* 400 ratified/superseded archive definition cases: all selected the expected
+  lexical record without manufacturing a live identity.
+* Combined contract score: 4,997/5,000 (99.94%). Source retained: 5,000/5,000.
+
+The previous committed reader achieved 2,997/5,000 under this new contract:
+600 improvements are actual newly resolved ledger bindings; 1,400 are newly
+specific ASK diagnostics. Those 1,400 already abstained before, so this is not
+1,400 prevented unsafe actions. No formerly correct case regressed.
+
+There are 5,000 distinct full inputs but only 1,007 distinct current sentences.
+The 4,000 memory cases repeat 20 patterns across 200 contexts each, including ID
+and revision substitutions and only four noun choices. They are contract stress
+fixtures, not 4,000 independent language phenomena, natural-frequency data or a
+statistical grounding-confidence calibration. The first capture used frozen code;
+a later review added the local/ledger collision guard. Its separate development
+replay retained all scores. The pre-review source is preserved for reproduction.
+
+All 5,000 final routes remain ASK because no production calibration is installed.
+Correct binding means the underlying proposal/evidence contract passed, not that
+an executable request was accepted. No live AI correct-rate is claimed.
+
+Unresolved parsing cases, preserved unchanged:
+
+* Was the sensor not moved by Mira?
+* Was the sensor not checked by Alex?
+* Was the sensor not moved by Alex?
+
+All abstain at the multiple-predicates/clause-attachment guard. They do not require
+WORLD facts to parse. They are logged separately from memory failures.
+
+Validation and limits
+---------------------
+
+Full suite: 251 tests, 250 passed, one optional-jsonschema skip. Added tests cover
+confirmed references, reported/disputed status, absent IDs, mismatched evidence,
+number, correction/conflict, forged spans, supersession cues and local scope.
+Artifacts include before/after captures, gold, graphs, all failures, 2,000 ticks,
+source hashes and an audit. reports/read-memory-grounding.html is the summary.
+
+Remaining work includes automatic evidence-producing discourse tracking, richer
+references (participants, ownership, ordinals and relations), per-frame identity
+maps, lifecycle/persistence and separately calibrated acceptance. Confirming a
+claim is a caller responsibility; this implementation does not infer truth from
+quoted history or automatically turn an assistant claim into accepted memory.
+</pre><p><a href="../evidence/memory5000-1/audit.json">Audit JSON</a> · <a href="../evidence/memory5000-1/ticks.csv">All 2,000 improvements</a> · <a href="../evidence/memory5000-1/after-review/summary.json">Full summary</a></p></html>

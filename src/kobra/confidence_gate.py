@@ -170,7 +170,13 @@ class GatedRuleReader:
                                                    created_frames=created_patient_frames(code))
             world = deepcopy(knowledge_evidence.pop('world'))
             ledger = context_snapshot(history, world, context_claims)
-        grounding_blockers = _grounding_blockers(text, code, knowledge_evidence, missing_context)
+        from .memory_grounding import resolve_memory
+        memory_evidence = resolve_memory(text, code, ledger, world)
+        combined_evidence = deepcopy(knowledge_evidence) if knowledge_evidence is not None else dict(
+            issues=[], lexical_mentions=[], bindings=[])
+        combined_evidence['issues'].extend(memory_evidence['issues'])
+        combined_evidence['bindings'].extend(memory_evidence['bindings'])
+        grounding_blockers = _grounding_blockers(text, code, combined_evidence, missing_context)
         proposal = deepcopy(code)
         origin = 'code' if code['route'] == 'code' else 'unresolved'
         cohort = 'code:' + '+'.join(sorted(code['rules']))
@@ -208,6 +214,16 @@ class GatedRuleReader:
             cohort += ':' + knowledge_evidence['version'] + ':' + knowledge_evidence['revision']
             if origin == 'code':
                 deterministic_bindings = knowledge_evidence['bindings']
+        if origin == 'code':
+            knowledge_reasons.extend(memory_evidence['issues'])
+            deterministic_bindings = list(deterministic_bindings) + memory_evidence['bindings']
+            by_mention = {}
+            for binding in deterministic_bindings:
+                by_mention.setdefault(binding['mention'], set()).add(binding['entity_id'])
+            conflicts = {m for m, ids in by_mention.items() if len(ids) > 1}
+            knowledge_reasons.extend('memory_binding_conflict:' + m for m in conflicts)
+            deterministic_bindings = [b for b in deterministic_bindings if b['mention'] not in conflicts]
+        cohort += ':' + memory_evidence['version']
         if origin == 'AI' and isinstance(proposal, dict):
             # Identity decisions never gain authority merely by naming an existing ID.
             supplied = proposal.pop('groundings', {})
@@ -226,6 +242,7 @@ class GatedRuleReader:
         result = self.gate.assess(text, proposal, cohort=cohort, world_ids=tuple(world),
                                  missing_context=missing_context, local_bindings=local_bindings,
                                  validation_reasons=knowledge_reasons)
+        result['memory_evidence'] = memory_evidence
         result['context_ledger'] = ledger
         result['assignment_source'] = origin
         result['grounding_policy'] = 'deterministic_evidence_or_ASK'

@@ -43,11 +43,21 @@ def context_snapshot(history=(), world=None, claims=()):
             raise ValueError('claim quote does not match source')
         if c.get('status','reported') not in ('reported','confirmed_by_client','superseded','disputed'):
             raise ValueError('unknown claim status')
+        if 'reference' in c or 'entity_id' in c:
+            if (not isinstance(c.get('reference'), str) or c['reference'].casefold() not in
+                    {'it','this','that','them','these','those'} or
+                    not isinstance(c.get('entity_id'), str) or not c['entity_id']):
+                raise ValueError('reference claims require a supported pronoun and nonempty entity ID')
         c.setdefault('status','reported');claim_ids.add(c['id']);checked.append(c)
     for c in checked:
         target=c.get('superseded_by')
         if target is not None and (target not in claim_ids or target==c['id'] or c['status']!='superseded'):
             raise ValueError('supersession must link to another recorded claim')
+    for c in checked:
+        if c.get('reference') and c.get('superseded_by'):
+            replacement=next(x for x in checked if x['id']==c['superseded_by'])
+            if replacement.get('reference','').casefold()!=c['reference'].casefold():
+                raise ValueError('reference supersession must preserve the reference cue')
     successors={c['id']:c.get('superseded_by') for c in checked}
     for identifier in successors:
         seen=set()

@@ -1,0 +1,14 @@
+{
+  "cases": 5000,
+  "recomputed_all_three_scores": true,
+  "source_and_gold_hashes_verified": true,
+  "ticks": 2000,
+  "regressions": 0,
+  "after_review_changed_outcomes": 0,
+  "reviewed_changes": "Ledger claim validation, deterministic binding, ASK policy, local/global scope conflict, frozen fixtures/scoring. No synthetic calibration installed.",
+  "tests": {
+    "run": 251,
+    "passed": 250,
+    "skipped": 1
+  }
+}
