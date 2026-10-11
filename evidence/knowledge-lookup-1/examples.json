@@ -2,10 +2,10 @@
   "kind": "development examples; fixture inventories; actual local code; not accuracy",
   "new_model_calls": 0,
   "source_hashes": {
-    "src/kobra/knowledge.py": "3533bb71c51bab1f7d91ccd06d257317a96d06beac0829d7c20385152d15a666",
-    "src/kobra/knowledge_resolution.py": "4d25509e09590f2cbccfa5d333d5ab6d33a16d8fab4a8961d476042d1d4c33e8",
-    "src/kobra/confidence_gate.py": "9b24dce9fed8d955cd506f7379315b0c8154fab0add8ec79adfa174672ec09e1",
-    "src/kobra/rule_assignment.py": "d3da5e17393419c475f26c74dd6a145b8c43b263c152c93d851bce3d13b3e48a",
+    "src/kobra/knowledge.py": "04dd06e5c9b67518adc497836a02551d36da86b2aa2b567775b441a84282ae04",
+    "src/kobra/knowledge_resolution.py": "e6c4285ad77c6ae1738d6ddbc87d9b0220b5402af193b44931780475d9b85924",
+    "src/kobra/confidence_gate.py": "3aa1f366894afcb119471c3db6fc3d38e245748641c081a1dd6ba217aa09ac80",
+    "src/kobra/rule_assignment.py": "d77a74ee79f15589981a5bdf0ce678fc03dbaaeff193393c825f558221a09b9a",
     "tools/export_knowledge_examples.py": "09d25eaad5a8100970328b00d7d99a77dbbdab9857806f80775a99599f15d44c"
   },
   "examples": [
@@ -38,9 +38,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -49,6 +49,7 @@
                 "start": 0,
                 "end": 18,
                 "text": "Restart the server",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -73,6 +74,7 @@
               }
             ]
           },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
           "groundings": {
             "the server": "vm-1"
           }
@@ -83,7 +85,7 @@
         "external_score": null,
         "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
         "calibration_evidence": null,
-        "cohort": "code:C002-active-roles:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+        "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
         "model_self_confidence_used": false,
         "context_ledger": {
           "version": "context-ledger-1",
@@ -144,9 +146,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -155,6 +157,7 @@
                 "start": 0,
                 "end": 18,
                 "text": "Restart the server",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -178,10 +181,11 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "knowledge_evidence": {
-          "version": "knowledge-resolution-1",
+          "version": "knowledge-resolution-2",
           "revision": "beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
           "snapshot": {
             "version": "knowledge-snapshot-1",
@@ -391,9 +395,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -402,6 +406,7 @@
                 "start": 0,
                 "end": 23,
                 "text": "Restart the lab machine",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -425,7 +430,8 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "reasons": [
           "knowledge_ambiguous:0:patient",
@@ -434,7 +440,7 @@
         "external_score": null,
         "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
         "calibration_evidence": null,
-        "cohort": "code:C002-active-roles:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+        "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
         "model_self_confidence_used": false,
         "context_ledger": {
           "version": "context-ledger-1",
@@ -495,9 +501,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -506,6 +512,7 @@
                 "start": 0,
                 "end": 23,
                 "text": "Restart the lab machine",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -529,10 +536,11 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "knowledge_evidence": {
-          "version": "knowledge-resolution-1",
+          "version": "knowledge-resolution-2",
           "revision": "beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
           "snapshot": {
             "version": "knowledge-snapshot-1",
@@ -802,9 +810,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -813,6 +821,7 @@
                 "start": 0,
                 "end": 16,
                 "text": "Create a jumpbox",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 6,
@@ -836,7 +845,8 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "reasons": [
           "uncalibrated_cohort"
@@ -844,7 +854,7 @@
         "external_score": null,
         "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
         "calibration_evidence": null,
-        "cohort": "code:C002-active-roles:knowledge-resolution-1:4a9a1a6b5a443894c869c7e8fb743a8155908ee23afb2a98270c69c2f24bd192",
+        "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:4a9a1a6b5a443894c869c7e8fb743a8155908ee23afb2a98270c69c2f24bd192",
         "model_self_confidence_used": false,
         "context_ledger": {
           "version": "context-ledger-1",
@@ -879,9 +889,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -890,6 +900,7 @@
                 "start": 0,
                 "end": 16,
                 "text": "Create a jumpbox",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 6,
@@ -913,10 +924,11 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "knowledge_evidence": {
-          "version": "knowledge-resolution-1",
+          "version": "knowledge-resolution-2",
           "revision": "4a9a1a6b5a443894c869c7e8fb743a8155908ee23afb2a98270c69c2f24bd192",
           "snapshot": {
             "version": "knowledge-snapshot-1",
@@ -1116,9 +1128,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -1127,6 +1139,7 @@
                 "start": 0,
                 "end": 16,
                 "text": "Create a jumpbox",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 6,
@@ -1150,7 +1163,8 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "reasons": [
           "knowledge_unsupported:0:patient",
@@ -1159,7 +1173,7 @@
         "external_score": null,
         "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
         "calibration_evidence": null,
-        "cohort": "code:C002-active-roles:knowledge-resolution-1:b490c780e8146a0fc93cdb711cc1d2e3cff05054a4fad7b65664ac100a54c27c",
+        "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:b490c780e8146a0fc93cdb711cc1d2e3cff05054a4fad7b65664ac100a54c27c",
         "model_self_confidence_used": false,
         "context_ledger": {
           "version": "context-ledger-1",
@@ -1194,9 +1208,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -1205,6 +1219,7 @@
                 "start": 0,
                 "end": 16,
                 "text": "Create a jumpbox",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 6,
@@ -1228,10 +1243,11 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "knowledge_evidence": {
-          "version": "knowledge-resolution-1",
+          "version": "knowledge-resolution-2",
           "revision": "b490c780e8146a0fc93cdb711cc1d2e3cff05054a4fad7b65664ac100a54c27c",
           "snapshot": {
             "version": "knowledge-snapshot-1",
@@ -1409,9 +1425,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -1420,6 +1436,7 @@
                 "start": 0,
                 "end": 18,
                 "text": "Restart the server",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -1443,7 +1460,8 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "reasons": [
           "knowledge_live_stale",
@@ -1453,7 +1471,7 @@
         "external_score": null,
         "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
         "calibration_evidence": null,
-        "cohort": "code:C002-active-roles:knowledge-resolution-1:0d2d1e7dbca0fa9bbbd830c302ab7774a5158e6805673e289ece48b2c8a57732",
+        "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:0d2d1e7dbca0fa9bbbd830c302ab7774a5158e6805673e289ece48b2c8a57732",
         "model_self_confidence_used": false,
         "context_ledger": {
           "version": "context-ledger-1",
@@ -1488,9 +1506,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -1499,6 +1517,7 @@
                 "start": 0,
                 "end": 18,
                 "text": "Restart the server",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -1522,10 +1541,11 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "knowledge_evidence": {
-          "version": "knowledge-resolution-1",
+          "version": "knowledge-resolution-2",
           "revision": "0d2d1e7dbca0fa9bbbd830c302ab7774a5158e6805673e289ece48b2c8a57732",
           "snapshot": {
             "version": "knowledge-snapshot-1",
@@ -1705,9 +1725,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -1716,6 +1736,7 @@
                 "start": 0,
                 "end": 18,
                 "text": "Restart the server",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -1740,6 +1761,7 @@
               }
             ]
           },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
           "groundings": {
             "the server": "vm-1"
           }
@@ -1750,7 +1772,7 @@
         "external_score": null,
         "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
         "calibration_evidence": null,
-        "cohort": "code:C002-active-roles:knowledge-resolution-1:9601e82ff9ce3811c3d9deb3f5db0a5e62b70772493f6acaaefea256054a2e16",
+        "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:9601e82ff9ce3811c3d9deb3f5db0a5e62b70772493f6acaaefea256054a2e16",
         "model_self_confidence_used": false,
         "context_ledger": {
           "version": "context-ledger-1",
@@ -1811,9 +1833,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -1822,6 +1844,7 @@
                 "start": 0,
                 "end": 18,
                 "text": "Restart the server",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -1845,10 +1868,11 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "knowledge_evidence": {
-          "version": "knowledge-resolution-1",
+          "version": "knowledge-resolution-2",
           "revision": "9601e82ff9ce3811c3d9deb3f5db0a5e62b70772493f6acaaefea256054a2e16",
           "snapshot": {
             "version": "knowledge-snapshot-1",
@@ -2143,7 +2167,7 @@
             "c1:missing_or_multiple_objects"
           ],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "chunking_method": "deterministic_surface_rules",
           "chunks": [
             {
@@ -2159,6 +2183,7 @@
               "members": []
             }
           ],
+          "shared_arguments": [],
           "local_entities": [],
           "local_references": [],
           "chunk_relations": [],
@@ -2177,7 +2202,7 @@
             }
           ],
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -2186,6 +2211,7 @@
                 "start": 0,
                 "end": 13,
                 "text": "Restart Alpha",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -2209,7 +2235,8 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "reasons": [
           "uncalibrated_cohort",
@@ -2218,7 +2245,7 @@
         "external_score": null,
         "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
         "calibration_evidence": null,
-        "cohort": "model-unresolved-v1:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+        "cohort": "model-unresolved-v1:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
         "model_self_confidence_used": false,
         "context_ledger": {
           "version": "context-ledger-1",
@@ -2281,7 +2308,7 @@
             "c1:missing_or_multiple_objects"
           ],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "chunking_method": "deterministic_surface_rules",
           "chunks": [
             {
@@ -2297,6 +2324,7 @@
               "members": []
             }
           ],
+          "shared_arguments": [],
           "local_entities": [],
           "local_references": [],
           "chunk_relations": [],
@@ -2315,7 +2343,7 @@
             }
           ],
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -2324,6 +2352,7 @@
                 "start": 0,
                 "end": 13,
                 "text": "Restart Alpha",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -2347,10 +2376,11 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "knowledge_evidence": {
-          "version": "knowledge-resolution-1",
+          "version": "knowledge-resolution-2",
           "revision": "beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
           "snapshot": {
             "version": "knowledge-snapshot-1",
@@ -2480,9 +2510,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -2491,6 +2521,7 @@
                 "start": 0,
                 "end": 10,
                 "text": "Restart it",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -2514,7 +2545,8 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "reasons": [
           "uncalibrated_cohort",
@@ -2523,7 +2555,7 @@
         "external_score": null,
         "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
         "calibration_evidence": null,
-        "cohort": "code:C002-active-roles:knowledge-resolution-1:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
+        "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
         "model_self_confidence_used": false,
         "context_ledger": {
           "version": "context-ledger-1",
@@ -2598,9 +2630,9 @@
           ],
           "reasons": [],
           "semantic_verified": false,
-          "version": "rule-assignment-3",
+          "version": "rule-assignment-4",
           "surface_structure": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -2609,6 +2641,7 @@
                 "start": 0,
                 "end": 10,
                 "text": "Restart it",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 7,
@@ -2632,10 +2665,11 @@
                 "label": "suffix"
               }
             ]
-          }
+          },
+          "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
         },
         "knowledge_evidence": {
-          "version": "knowledge-resolution-1",
+          "version": "knowledge-resolution-2",
           "revision": "beca044babeb56a1cb2c8d7a211e90b5be382a7f37f0cd65adbeaabefb756c29",
           "snapshot": {
             "version": "knowledge-snapshot-1",

@@ -162,7 +162,7 @@ class KnowledgeSnapshot:
                 issues.extend(errors)
         return ancestors, issues
 
-    def lookup(self, term, owner=None):
+    def lookup(self, term, owner=None, *, include_live=True):
         _string(term, 'lookup term')
         if owner is not None:
             _string(owner, 'owner')
@@ -171,7 +171,7 @@ class KnowledgeSnapshot:
         live = self._sources.get('live', {})
         if live and live['status'] != 'current':
             issues.append('live_' + live['status'])
-        for identifier, row in live.get('entities', {}).items():
+        for identifier, row in (live.get('entities', {}) if include_live else {}).items():
             if key in {_key(v) for v in [row['name']] + row.get('aliases', [])}:
                 eligible = live['status'] == 'current'
                 candidates.append(dict(id=identifier, layer='live', record=row,

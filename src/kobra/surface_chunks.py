@@ -5,7 +5,7 @@ Quoted/bracketed regions are protected data. Action vocabulary is explicit.
 """
 import re
 
-VERSION = 'surface-chunks-1'
+VERSION = 'surface-chunks-2'
 ACTIONS = frozenset('archive attach cancel carry change check close configure connect copy create delete disable disconnect download draft enable export give inspect install launch list move open print read refund remove rename repair repeat restart restore run save schedule send set show sort start stop update upload verify'.split())
 WORD = re.compile(r"[\w]+(?:[-'’][\w]+)*", re.UNICODE)
 INTRO = re.compile(r'\s*(?:(?:good (?:morning|afternoon|evening)|hello|hi|hey)\b[^,;.!?]*[,;]\s*)?(?:please\s+)?', re.I)
@@ -81,9 +81,9 @@ def chunk_commands(text, action_words=ACTIONS):
     for i,(a,predicate_end) in enumerate(starts):
         b=separators[i][0] if i<len(separators) else len(text)
         while b>a and (text[b-1].isspace() or text[b-1] in '.!?'):b-=1
-        if b<=predicate_end:issues.append('missing_action_content')
+        if b<=predicate_end and i == len(starts)-1:issues.append('missing_action_content')
         if a>cursor:ledger.append(dict(start=cursor,end=a,text=text[cursor:a],label='prefix' if cursor==0 else 'connector'))
-        chunks.append(dict(id=f'c{i+1}',start=a,end=b,text=text[a:b],predicate=dict(start=a,end=predicate_end,text=text[a:predicate_end])))
+        chunks.append(dict(id=f'c{i+1}',start=a,end=b,text=text[a:b],argument_omitted=b<=predicate_end,predicate=dict(start=a,end=predicate_end,text=text[a:predicate_end])))
         ledger.append(dict(start=a,end=b,text=text[a:b],label='chunk'));cursor=b
     if cursor<len(text):ledger.append(dict(start=cursor,end=len(text),text=text[cursor:],label='unassigned' if not chunks else 'suffix'))
     return dict(version=VERSION,method='deterministic_surface_rules',status='unresolved' if issues else 'supported',

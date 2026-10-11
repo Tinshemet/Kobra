@@ -1,0 +1,1105 @@
+{
+  "kind": "selected development examples; no fresh accuracy measurement",
+  "new_model_calls": 0,
+  "newly_code_supported": [
+    "Create and launch three VMs.",
+    "Create, configure and launch three VMs.",
+    "Download and install the package.",
+    "Open and read the file.",
+    "Read and print the report.",
+    "Create and launch three VMs and restart them.",
+    "Create and launch the server."
+  ],
+  "retained_unresolved": 8,
+  "integration": {
+    "route": "ASK",
+    "source": "Create and launch Alpha, then delete it.",
+    "proposal": {
+      "source": "Create and launch Alpha, then delete it.",
+      "frames": [
+        {
+          "predicate": "Create",
+          "agent": "NONE",
+          "patient": "Alpha",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "launch",
+          "agent": "NONE",
+          "patient": "Alpha",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "delete",
+          "agent": "NONE",
+          "patient": "it",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C010-imperative-coordination",
+        "C014-unique-local-number-agreement",
+        "C016-trailing-shared-patient"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 6,
+            "text": "Create"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 23,
+            "text": "Alpha"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 11,
+            "end": 23,
+            "text": "launch Alpha"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 23,
+            "text": "Alpha"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c3",
+          "kind": "action",
+          "span": {
+            "start": 30,
+            "end": 39,
+            "text": "delete it"
+          },
+          "frame": 2,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 37,
+            "end": 39,
+            "text": "it"
+          }
+        }
+      ],
+      "shared_arguments": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "from_chunk": "c1",
+          "donor_chunk": "c2",
+          "span": {
+            "start": 18,
+            "end": 23,
+            "text": "Alpha"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        }
+      ],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 18,
+            "end": 23,
+            "text": "Alpha"
+          },
+          "number": "singular",
+          "quantity": null,
+          "introduced_in": "c1",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": [
+            "c1"
+          ],
+          "shared_by": [
+            "c1",
+            "c2"
+          ]
+        }
+      ],
+      "local_references": [
+        {
+          "frame": 2,
+          "slot": "patient",
+          "mention": {
+            "start": 37,
+            "end": 39,
+            "text": "it"
+          },
+          "candidates": [
+            "e1"
+          ],
+          "status": "resolved",
+          "entity_id": "e1"
+        }
+      ],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        },
+        {
+          "from_chunk": "c2",
+          "to_chunk": "c3",
+          "kind": "explicit_then"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "Create",
+          "label": "action_chunk"
+        },
+        {
+          "start": 6,
+          "end": 11,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 11,
+          "end": 23,
+          "text": "launch Alpha",
+          "label": "action_chunk"
+        },
+        {
+          "start": 23,
+          "end": 30,
+          "text": ", then ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 30,
+          "end": 39,
+          "text": "delete it",
+          "label": "action_chunk"
+        },
+        {
+          "start": 39,
+          "end": 40,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 23,
+            "text": "launch Alpha",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          },
+          {
+            "id": "c3",
+            "start": 30,
+            "end": 39,
+            "text": "delete it",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 30,
+              "end": 36,
+              "text": "delete"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 23,
+            "text": "launch Alpha",
+            "label": "chunk"
+          },
+          {
+            "start": 23,
+            "end": 30,
+            "text": ", then ",
+            "label": "connector"
+          },
+          {
+            "start": 30,
+            "end": 39,
+            "text": "delete it",
+            "label": "chunk"
+          },
+          {
+            "start": 39,
+            "end": 40,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      },
+      "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
+    },
+    "reasons": [
+      "uncalibrated_cohort"
+    ],
+    "external_score": null,
+    "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+    "calibration_evidence": null,
+    "cohort": "code:C010-imperative-coordination+C014-unique-local-number-agreement+C016-trailing-shared-patient:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:841e430078771ffc60c53829f23ea02e60635d4499b08af1fd453b3b5af75349",
+    "model_self_confidence_used": false,
+    "context_ledger": {
+      "version": "context-ledger-1",
+      "previous_turns": [
+        {
+          "id": "u1",
+          "role": "user",
+          "content": "Alpha was the old test machine.",
+          "sha256": "0e0a349017459a6ffa8ab4f09bb26bc9cafde971d83f9fab15877fdac31d9ca2"
+        }
+      ],
+      "world_entities": [
+        {
+          "id": "old-1",
+          "record": {
+            "name": "Alpha"
+          },
+          "mentions": [
+            {
+              "turn_id": "u1",
+              "start": 0,
+              "end": 5,
+              "text": "Alpha"
+            }
+          ],
+          "provenance": "caller_supplied_WORLD",
+          "truth_status": "not_verified_by_READ"
+        },
+        {
+          "id": "old-2",
+          "record": {
+            "name": "ALPHA"
+          },
+          "mentions": [
+            {
+              "turn_id": "u1",
+              "start": 0,
+              "end": 5,
+              "text": "Alpha"
+            }
+          ],
+          "provenance": "caller_supplied_WORLD",
+          "truth_status": "not_verified_by_READ"
+        }
+      ],
+      "claims": [],
+      "history_supplied": true,
+      "world_supplied": true,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "assignment_source": "code",
+    "code_proposal": {
+      "source": "Create and launch Alpha, then delete it.",
+      "frames": [
+        {
+          "predicate": "Create",
+          "agent": "NONE",
+          "patient": "Alpha",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "launch",
+          "agent": "NONE",
+          "patient": "Alpha",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "delete",
+          "agent": "NONE",
+          "patient": "it",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C010-imperative-coordination",
+        "C014-unique-local-number-agreement",
+        "C016-trailing-shared-patient"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 6,
+            "text": "Create"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 23,
+            "text": "Alpha"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 11,
+            "end": 23,
+            "text": "launch Alpha"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 23,
+            "text": "Alpha"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c3",
+          "kind": "action",
+          "span": {
+            "start": 30,
+            "end": 39,
+            "text": "delete it"
+          },
+          "frame": 2,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 37,
+            "end": 39,
+            "text": "it"
+          }
+        }
+      ],
+      "shared_arguments": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "from_chunk": "c1",
+          "donor_chunk": "c2",
+          "span": {
+            "start": 18,
+            "end": 23,
+            "text": "Alpha"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        }
+      ],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 18,
+            "end": 23,
+            "text": "Alpha"
+          },
+          "number": "singular",
+          "quantity": null,
+          "introduced_in": "c1",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": [
+            "c1"
+          ],
+          "shared_by": [
+            "c1",
+            "c2"
+          ]
+        }
+      ],
+      "local_references": [
+        {
+          "frame": 2,
+          "slot": "patient",
+          "mention": {
+            "start": 37,
+            "end": 39,
+            "text": "it"
+          },
+          "candidates": [
+            "e1"
+          ],
+          "status": "resolved",
+          "entity_id": "e1"
+        }
+      ],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        },
+        {
+          "from_chunk": "c2",
+          "to_chunk": "c3",
+          "kind": "explicit_then"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "Create",
+          "label": "action_chunk"
+        },
+        {
+          "start": 6,
+          "end": 11,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 11,
+          "end": 23,
+          "text": "launch Alpha",
+          "label": "action_chunk"
+        },
+        {
+          "start": 23,
+          "end": 30,
+          "text": ", then ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 30,
+          "end": 39,
+          "text": "delete it",
+          "label": "action_chunk"
+        },
+        {
+          "start": 39,
+          "end": 40,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 23,
+            "text": "launch Alpha",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          },
+          {
+            "id": "c3",
+            "start": 30,
+            "end": 39,
+            "text": "delete it",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 30,
+              "end": 36,
+              "text": "delete"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 23,
+            "text": "launch Alpha",
+            "label": "chunk"
+          },
+          {
+            "start": 23,
+            "end": 30,
+            "text": ", then ",
+            "label": "connector"
+          },
+          {
+            "start": 30,
+            "end": 39,
+            "text": "delete it",
+            "label": "chunk"
+          },
+          {
+            "start": 39,
+            "end": 40,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      },
+      "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
+    },
+    "knowledge_evidence": {
+      "version": "knowledge-resolution-2",
+      "revision": "841e430078771ffc60c53829f23ea02e60635d4499b08af1fd453b3b5af75349",
+      "snapshot": {
+        "version": "knowledge-snapshot-1",
+        "sources": {
+          "live": {
+            "revision": "shared-fixture-live-1",
+            "source": "explicit-fixture",
+            "status": "current",
+            "entities": {
+              "old-1": {
+                "name": "Alpha"
+              },
+              "old-2": {
+                "name": "ALPHA"
+              }
+            }
+          },
+          "archive": {
+            "revision": "shared-fixture-archive-1",
+            "source": "explicit-fixture",
+            "records": [
+              {
+                "id": "definition-1",
+                "word": "Alpha",
+                "type": "class",
+                "kind": "vm",
+                "source": "told",
+                "status": "ratified",
+                "provenance": "explicit-fixture"
+              }
+            ]
+          }
+        },
+        "revision": {
+          "live": "shared-fixture-live-1",
+          "archive": "shared-fixture-archive-1",
+          "sha256": "3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1"
+        },
+        "freshness": "caller_attestation_only"
+      },
+      "matches": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "mention": "Alpha",
+          "lookup": {
+            "term": "Alpha",
+            "owner": null,
+            "status": "resolved",
+            "selected": [
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "candidates": [
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "evidence": [
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "issues": [],
+            "revision": {
+              "live": "shared-fixture-live-1",
+              "archive": "shared-fixture-archive-1",
+              "sha256": "3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1"
+            }
+          },
+          "live_candidates": [
+            "old-1",
+            "old-2"
+          ],
+          "creates_description": true
+        },
+        {
+          "frame": 1,
+          "slot": "patient",
+          "mention": "Alpha",
+          "lookup": {
+            "term": "Alpha",
+            "owner": null,
+            "status": "resolved",
+            "selected": [
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "candidates": [
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "evidence": [
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "issues": [],
+            "revision": {
+              "live": "shared-fixture-live-1",
+              "archive": "shared-fixture-archive-1",
+              "sha256": "3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1"
+            }
+          },
+          "live_candidates": [
+            "old-1",
+            "old-2"
+          ],
+          "creates_description": true
+        },
+        {
+          "frame": 2,
+          "slot": "patient",
+          "mention": "it",
+          "lookup": {
+            "term": "it",
+            "owner": null,
+            "status": "unknown",
+            "selected": [],
+            "candidates": [],
+            "evidence": [],
+            "issues": [],
+            "revision": {
+              "live": "shared-fixture-live-1",
+              "archive": "shared-fixture-archive-1",
+              "sha256": "3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1"
+            }
+          },
+          "live_candidates": [],
+          "creates_description": true
+        }
+      ],
+      "bindings": [],
+      "lexical_mentions": [
+        {
+          "start": 18,
+          "end": 23,
+          "text": "Alpha",
+          "lookup": {
+            "term": "Alpha",
+            "owner": null,
+            "status": "ambiguous",
+            "selected": [
+              {
+                "id": "old-1",
+                "layer": "live",
+                "record": {
+                  "name": "Alpha"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "old-2",
+                "layer": "live",
+                "record": {
+                  "name": "ALPHA"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "candidates": [
+              {
+                "id": "old-1",
+                "layer": "live",
+                "record": {
+                  "name": "Alpha"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "old-2",
+                "layer": "live",
+                "record": {
+                  "name": "ALPHA"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "evidence": [
+              {
+                "id": "old-1",
+                "layer": "live",
+                "record": {
+                  "name": "Alpha"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "old-2",
+                "layer": "live",
+                "record": {
+                  "name": "ALPHA"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "issues": [],
+            "revision": {
+              "live": "shared-fixture-live-1",
+              "archive": "shared-fixture-archive-1",
+              "sha256": "3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1"
+            }
+          }
+        },
+        {
+          "start": 18,
+          "end": 23,
+          "text": "Alpha",
+          "lookup": {
+            "term": "Alpha",
+            "owner": null,
+            "status": "ambiguous",
+            "selected": [
+              {
+                "id": "old-1",
+                "layer": "live",
+                "record": {
+                  "name": "Alpha"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "old-2",
+                "layer": "live",
+                "record": {
+                  "name": "ALPHA"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "candidates": [
+              {
+                "id": "old-1",
+                "layer": "live",
+                "record": {
+                  "name": "Alpha"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "old-2",
+                "layer": "live",
+                "record": {
+                  "name": "ALPHA"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "evidence": [
+              {
+                "id": "old-1",
+                "layer": "live",
+                "record": {
+                  "name": "Alpha"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "old-2",
+                "layer": "live",
+                "record": {
+                  "name": "ALPHA"
+                },
+                "eligible": true,
+                "reasons": []
+              },
+              {
+                "id": "definition-1",
+                "layer": "archive",
+                "record": {
+                  "id": "definition-1",
+                  "word": "Alpha",
+                  "type": "class",
+                  "kind": "vm",
+                  "source": "told",
+                  "status": "ratified",
+                  "provenance": "explicit-fixture"
+                },
+                "eligible": true,
+                "reasons": []
+              }
+            ],
+            "issues": [],
+            "revision": {
+              "live": "shared-fixture-live-1",
+              "archive": "shared-fixture-archive-1",
+              "sha256": "3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1"
+            }
+          }
+        }
+      ],
+      "issues": [],
+      "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+    }
+  },
+  "source_hashes": {
+    "src/kobra/rule_assignment.py": "d77a74ee79f15589981a5bdf0ce678fc03dbaaeff193393c825f558221a09b9a",
+    "src/kobra/structural_read.py": "0641dcc8d3bf715032624f49fed14b8afe807f83ba45a389154a67019ad53d12",
+    "src/kobra/surface_chunks.py": "66e2f96d7b69a8bddc61f0608f52ec6ed15acde1e1f947e014392dc9b576d065",
+    "src/kobra/shared_patients.py": "7eb0c5ac6d819ad42f2981fa7320645d09914b8b1a73d2a8309f3daf72894853",
+    "src/kobra/knowledge.py": "04dd06e5c9b67518adc497836a02551d36da86b2aa2b567775b441a84282ae04",
+    "src/kobra/knowledge_resolution.py": "e6c4285ad77c6ae1738d6ddbc87d9b0220b5402af193b44931780475d9b85924",
+    "src/kobra/confidence_gate.py": "3aa1f366894afcb119471c3db6fc3d38e245748641c081a1dd6ba217aa09ac80",
+    "tools/export_shared_patient_examples.py": "370aae43f87231f16522231f825b9a026c52c661a0658fbf900035decc971971"
+  }
+}

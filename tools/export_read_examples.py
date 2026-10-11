@@ -62,7 +62,7 @@ def main():
     evidence=ROOT/'evidence/read-pipeline-examples'
     evidence.mkdir(exist_ok=True)
     payload=dict(kind='development walkthrough; no accuracy measurement',new_model_calls=0,scripted_resolver_calls=1,
-                 source_hashes={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in ['src/kobra/rule_assignment.py','src/kobra/surface_chunks.py','src/kobra/structural_read.py','src/kobra/confidence_gate.py','src/kobra/context_ledger.py']},examples=traces)
+                 source_hashes={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in ['src/kobra/rule_assignment.py','src/kobra/surface_chunks.py','src/kobra/structural_read.py','src/kobra/shared_patients.py','src/kobra/confidence_gate.py','src/kobra/context_ledger.py']},examples=traces)
     (evidence/'traces.json').write_text(json.dumps(payload,indent=2,ensure_ascii=False)+'\n')
     (evidence/'inputs.json').write_text(json.dumps([{'id':str(i),'text':e['text']} for i,e in enumerate(examples,1)],indent=2)+'\n')
     page=ROOT/'reports/read-pipeline-current.html'

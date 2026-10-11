@@ -1,0 +1,2763 @@
+[
+  {
+    "text": "Create and launch three VMs.",
+    "proposal": {
+      "source": "Create and launch three VMs.",
+      "frames": [
+        {
+          "predicate": "Create",
+          "agent": "NONE",
+          "patient": "three VMs",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "three",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "launch",
+          "agent": "NONE",
+          "patient": "three VMs",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "three",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C010-imperative-coordination",
+        "C016-trailing-shared-patient"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 6,
+            "text": "Create"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "from_chunk": "c1",
+          "donor_chunk": "c2",
+          "span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        }
+      ],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "number": "plural",
+          "quantity": 3,
+          "introduced_in": "c1",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": [
+            "c1"
+          ],
+          "shared_by": [
+            "c1",
+            "c2"
+          ]
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "Create",
+          "label": "action_chunk"
+        },
+        {
+          "start": 6,
+          "end": 11,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 11,
+          "end": 27,
+          "text": "launch three VMs",
+          "label": "action_chunk"
+        },
+        {
+          "start": 27,
+          "end": 28,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create, configure and launch three VMs.",
+    "proposal": {
+      "source": "Create, configure and launch three VMs.",
+      "frames": [
+        {
+          "predicate": "Create",
+          "agent": "NONE",
+          "patient": "three VMs",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "three",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "configure",
+          "agent": "NONE",
+          "patient": "three VMs",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "three",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "launch",
+          "agent": "NONE",
+          "patient": "three VMs",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "three",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C010-imperative-coordination",
+        "C016-trailing-shared-patient"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 6,
+            "text": "Create"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 29,
+            "end": 38,
+            "text": "three VMs"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 8,
+            "end": 17,
+            "text": "configure"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 29,
+            "end": 38,
+            "text": "three VMs"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c3",
+          "kind": "action",
+          "span": {
+            "start": 22,
+            "end": 38,
+            "text": "launch three VMs"
+          },
+          "frame": 2,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 29,
+            "end": 38,
+            "text": "three VMs"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "from_chunk": "c1",
+          "donor_chunk": "c3",
+          "span": {
+            "start": 29,
+            "end": 38,
+            "text": "three VMs"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        },
+        {
+          "frame": 1,
+          "slot": "patient",
+          "from_chunk": "c2",
+          "donor_chunk": "c3",
+          "span": {
+            "start": 29,
+            "end": 38,
+            "text": "three VMs"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        }
+      ],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 29,
+            "end": 38,
+            "text": "three VMs"
+          },
+          "number": "plural",
+          "quantity": 3,
+          "introduced_in": "c1",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": [
+            "c1"
+          ],
+          "shared_by": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        },
+        {
+          "from_chunk": "c2",
+          "to_chunk": "c3",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "Create",
+          "label": "action_chunk"
+        },
+        {
+          "start": 6,
+          "end": 8,
+          "text": ", ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 8,
+          "end": 17,
+          "text": "configure",
+          "label": "action_chunk"
+        },
+        {
+          "start": 17,
+          "end": 22,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 22,
+          "end": 38,
+          "text": "launch three VMs",
+          "label": "action_chunk"
+        },
+        {
+          "start": 38,
+          "end": 39,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 8,
+            "end": 17,
+            "text": "configure",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 8,
+              "end": 17,
+              "text": "configure"
+            }
+          },
+          {
+            "id": "c3",
+            "start": 22,
+            "end": 38,
+            "text": "launch three VMs",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 22,
+              "end": 28,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": ", ",
+            "label": "connector"
+          },
+          {
+            "start": 8,
+            "end": 17,
+            "text": "configure",
+            "label": "chunk"
+          },
+          {
+            "start": 17,
+            "end": 22,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 22,
+            "end": 38,
+            "text": "launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 38,
+            "end": 39,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Download and install the package.",
+    "proposal": {
+      "source": "Download and install the package.",
+      "frames": [
+        {
+          "predicate": "Download",
+          "agent": "NONE",
+          "patient": "the package",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "install",
+          "agent": "NONE",
+          "patient": "the package",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C010-imperative-coordination",
+        "C016-trailing-shared-patient"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 8,
+            "text": "Download"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 21,
+            "end": 32,
+            "text": "the package"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 13,
+            "end": 32,
+            "text": "install the package"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 21,
+            "end": 32,
+            "text": "the package"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "from_chunk": "c1",
+          "donor_chunk": "c2",
+          "span": {
+            "start": 21,
+            "end": 32,
+            "text": "the package"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        }
+      ],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 21,
+            "end": 32,
+            "text": "the package"
+          },
+          "number": "singular",
+          "quantity": null,
+          "introduced_in": "c1",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": [],
+          "shared_by": [
+            "c1",
+            "c2"
+          ]
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "Download",
+          "label": "action_chunk"
+        },
+        {
+          "start": 8,
+          "end": 13,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 13,
+          "end": 32,
+          "text": "install the package",
+          "label": "action_chunk"
+        },
+        {
+          "start": 32,
+          "end": 33,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 8,
+            "text": "Download",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 8,
+              "text": "Download"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 13,
+            "end": 32,
+            "text": "install the package",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 13,
+              "end": 20,
+              "text": "install"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 8,
+            "text": "Download",
+            "label": "chunk"
+          },
+          {
+            "start": 8,
+            "end": 13,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 13,
+            "end": 32,
+            "text": "install the package",
+            "label": "chunk"
+          },
+          {
+            "start": 32,
+            "end": 33,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Open and read the file.",
+    "proposal": {
+      "source": "Open and read the file.",
+      "frames": [
+        {
+          "predicate": "Open",
+          "agent": "NONE",
+          "patient": "the file",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "read",
+          "agent": "NONE",
+          "patient": "the file",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C010-imperative-coordination",
+        "C016-trailing-shared-patient"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 4,
+            "text": "Open"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 14,
+            "end": 22,
+            "text": "the file"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 9,
+            "end": 22,
+            "text": "read the file"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 14,
+            "end": 22,
+            "text": "the file"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "from_chunk": "c1",
+          "donor_chunk": "c2",
+          "span": {
+            "start": 14,
+            "end": 22,
+            "text": "the file"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        }
+      ],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 14,
+            "end": 22,
+            "text": "the file"
+          },
+          "number": "singular",
+          "quantity": null,
+          "introduced_in": "c1",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": [],
+          "shared_by": [
+            "c1",
+            "c2"
+          ]
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "Open",
+          "label": "action_chunk"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 9,
+          "end": 22,
+          "text": "read the file",
+          "label": "action_chunk"
+        },
+        {
+          "start": 22,
+          "end": 23,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 4,
+            "text": "Open",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 4,
+              "text": "Open"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 9,
+            "end": 22,
+            "text": "read the file",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 9,
+              "end": 13,
+              "text": "read"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Open",
+            "label": "chunk"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 9,
+            "end": 22,
+            "text": "read the file",
+            "label": "chunk"
+          },
+          {
+            "start": 22,
+            "end": 23,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Read and print the report.",
+    "proposal": {
+      "source": "Read and print the report.",
+      "frames": [
+        {
+          "predicate": "Read",
+          "agent": "NONE",
+          "patient": "the report",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "print",
+          "agent": "NONE",
+          "patient": "the report",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C010-imperative-coordination",
+        "C016-trailing-shared-patient"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 4,
+            "text": "Read"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 15,
+            "end": 25,
+            "text": "the report"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 9,
+            "end": 25,
+            "text": "print the report"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 15,
+            "end": 25,
+            "text": "the report"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "from_chunk": "c1",
+          "donor_chunk": "c2",
+          "span": {
+            "start": 15,
+            "end": 25,
+            "text": "the report"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        }
+      ],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 15,
+            "end": 25,
+            "text": "the report"
+          },
+          "number": "singular",
+          "quantity": null,
+          "introduced_in": "c1",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": [],
+          "shared_by": [
+            "c1",
+            "c2"
+          ]
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "Read",
+          "label": "action_chunk"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 9,
+          "end": 25,
+          "text": "print the report",
+          "label": "action_chunk"
+        },
+        {
+          "start": 25,
+          "end": 26,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 4,
+            "text": "Read",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 4,
+              "text": "Read"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 9,
+            "end": 25,
+            "text": "print the report",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 9,
+              "end": 14,
+              "text": "print"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Read",
+            "label": "chunk"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 9,
+            "end": 25,
+            "text": "print the report",
+            "label": "chunk"
+          },
+          {
+            "start": 25,
+            "end": 26,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch three VMs and restart them.",
+    "proposal": {
+      "source": "Create and launch three VMs and restart them.",
+      "frames": [
+        {
+          "predicate": "Create",
+          "agent": "NONE",
+          "patient": "three VMs",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "three",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "launch",
+          "agent": "NONE",
+          "patient": "three VMs",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "three",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "restart",
+          "agent": "NONE",
+          "patient": "them",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C010-imperative-coordination",
+        "C014-unique-local-number-agreement",
+        "C016-trailing-shared-patient"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 6,
+            "text": "Create"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c3",
+          "kind": "action",
+          "span": {
+            "start": 32,
+            "end": 44,
+            "text": "restart them"
+          },
+          "frame": 2,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 40,
+            "end": 44,
+            "text": "them"
+          }
+        }
+      ],
+      "shared_arguments": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "from_chunk": "c1",
+          "donor_chunk": "c2",
+          "span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        }
+      ],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "number": "plural",
+          "quantity": 3,
+          "introduced_in": "c1",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": [
+            "c1"
+          ],
+          "shared_by": [
+            "c1",
+            "c2"
+          ]
+        }
+      ],
+      "local_references": [
+        {
+          "frame": 2,
+          "slot": "patient",
+          "mention": {
+            "start": 40,
+            "end": 44,
+            "text": "them"
+          },
+          "candidates": [
+            "e1"
+          ],
+          "status": "resolved",
+          "entity_id": "e1"
+        }
+      ],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        },
+        {
+          "from_chunk": "c2",
+          "to_chunk": "c3",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "Create",
+          "label": "action_chunk"
+        },
+        {
+          "start": 6,
+          "end": 11,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 11,
+          "end": 27,
+          "text": "launch three VMs",
+          "label": "action_chunk"
+        },
+        {
+          "start": 27,
+          "end": 32,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 32,
+          "end": 44,
+          "text": "restart them",
+          "label": "action_chunk"
+        },
+        {
+          "start": 44,
+          "end": 45,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          },
+          {
+            "id": "c3",
+            "start": 32,
+            "end": 44,
+            "text": "restart them",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 32,
+              "end": 39,
+              "text": "restart"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 27,
+            "end": 32,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 32,
+            "end": 44,
+            "text": "restart them",
+            "label": "chunk"
+          },
+          {
+            "start": 44,
+            "end": 45,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch the server.",
+    "proposal": {
+      "source": "Create and launch the server.",
+      "frames": [
+        {
+          "predicate": "Create",
+          "agent": "NONE",
+          "patient": "the server",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "launch",
+          "agent": "NONE",
+          "patient": "the server",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "code",
+      "rules": [
+        "C010-imperative-coordination",
+        "C016-trailing-shared-patient"
+      ],
+      "reasons": [],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 6,
+            "text": "Create"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 28,
+            "text": "the server"
+          },
+          "entity_id": "e1"
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 11,
+            "end": 28,
+            "text": "launch the server"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 18,
+            "end": 28,
+            "text": "the server"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [
+        {
+          "frame": 0,
+          "slot": "patient",
+          "from_chunk": "c1",
+          "donor_chunk": "c2",
+          "span": {
+            "start": 18,
+            "end": 28,
+            "text": "the server"
+          },
+          "entity_id": "e1",
+          "rule": "C016-trailing-shared-patient"
+        }
+      ],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 18,
+            "end": 28,
+            "text": "the server"
+          },
+          "number": "singular",
+          "quantity": null,
+          "introduced_in": "c1",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": [
+            "c1"
+          ],
+          "shared_by": [
+            "c1",
+            "c2"
+          ]
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "Create",
+          "label": "action_chunk"
+        },
+        {
+          "start": 6,
+          "end": 11,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 11,
+          "end": 28,
+          "text": "launch the server",
+          "label": "action_chunk"
+        },
+        {
+          "start": 28,
+          "end": 29,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 28,
+            "text": "launch the server",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 28,
+            "text": "launch the server",
+            "label": "chunk"
+          },
+          {
+            "start": 28,
+            "end": 29,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Stop and inspect the server.",
+    "proposal": {
+      "source": "Stop and inspect the server.",
+      "frames": [
+        {
+          "predicate": "Stop",
+          "agent": "NONE",
+          "patient": "NONE",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "inspect",
+          "agent": "NONE",
+          "patient": "the server",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "unresolved",
+      "rules": [
+        "C010-imperative-coordination"
+      ],
+      "reasons": [
+        "c1:unsupported_shared_patient"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 4,
+            "text": "Stop"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": []
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 9,
+            "end": 27,
+            "text": "inspect the server"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 17,
+            "end": 27,
+            "text": "the server"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 17,
+            "end": 27,
+            "text": "the server"
+          },
+          "number": "singular",
+          "quantity": null,
+          "introduced_in": "c2",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": []
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "Stop",
+          "label": "action_chunk"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 9,
+          "end": 27,
+          "text": "inspect the server",
+          "label": "action_chunk"
+        },
+        {
+          "start": 27,
+          "end": 28,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 4,
+            "text": "Stop",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 4,
+              "text": "Stop"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 9,
+            "end": 27,
+            "text": "inspect the server",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 9,
+              "end": 16,
+              "text": "inspect"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Stop",
+            "label": "chunk"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 9,
+            "end": 27,
+            "text": "inspect the server",
+            "label": "chunk"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create or launch three VMs.",
+    "proposal": {
+      "source": "Create or launch three VMs.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 26,
+            "text": "Create or launch three VMs",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          }
+        ],
+        "issues": [
+          "scope_requires_separate_analysis"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 26,
+            "text": "Create or launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 26,
+            "end": 27,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch three VMs if approved.",
+    "proposal": {
+      "source": "Create and launch three VMs if approved.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 39,
+            "text": "launch three VMs if approved",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "scope_requires_separate_analysis"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 39,
+            "text": "launch three VMs if approved",
+            "label": "chunk"
+          },
+          {
+            "start": 39,
+            "end": 40,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create; launch three VMs.",
+    "proposal": {
+      "source": "Create; launch three VMs.",
+      "frames": [
+        {
+          "predicate": "Create",
+          "agent": "NONE",
+          "patient": "NONE",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "launch",
+          "agent": "NONE",
+          "patient": "three VMs",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "three",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "unresolved",
+      "rules": [
+        "C010-imperative-coordination"
+      ],
+      "reasons": [
+        "c1:unsupported_shared_patient"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 6,
+            "text": "Create"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": []
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 8,
+            "end": 24,
+            "text": "launch three VMs"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [],
+          "patient_span": {
+            "start": 15,
+            "end": 24,
+            "text": "three VMs"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 15,
+            "end": 24,
+            "text": "three VMs"
+          },
+          "number": "plural",
+          "quantity": 3,
+          "introduced_in": "c2",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": []
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "Create",
+          "label": "action_chunk"
+        },
+        {
+          "start": 6,
+          "end": 8,
+          "text": "; ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 8,
+          "end": 24,
+          "text": "launch three VMs",
+          "label": "action_chunk"
+        },
+        {
+          "start": 24,
+          "end": 25,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 8,
+            "end": 24,
+            "text": "launch three VMs",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 8,
+              "end": 14,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "; ",
+            "label": "connector"
+          },
+          {
+            "start": 8,
+            "end": 24,
+            "text": "launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 24,
+            "end": 25,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch.",
+    "proposal": {
+      "source": "Create and launch.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 17,
+            "text": "launch",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 17,
+            "text": "launch",
+            "label": "chunk"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create three VMs and launch.",
+    "proposal": {
+      "source": "Create three VMs and launch.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 16,
+            "text": "Create three VMs",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 21,
+            "end": 27,
+            "text": "launch",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 21,
+              "end": 27,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 16,
+            "text": "Create three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 21,
+            "end": 27,
+            "text": "launch",
+            "label": "chunk"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Open and read the file in the folder.",
+    "proposal": {
+      "source": "Open and read the file in the folder.",
+      "frames": [
+        {
+          "predicate": "Open",
+          "agent": "NONE",
+          "patient": "NONE",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "read",
+          "agent": "NONE",
+          "patient": "the file",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "unresolved",
+      "rules": [
+        "C010-imperative-coordination"
+      ],
+      "reasons": [
+        "c2:unresolved_attachment",
+        "c1:unsupported_shared_patient"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 4,
+            "text": "Open"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": []
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 9,
+            "end": 36,
+            "text": "read the file in the folder"
+          },
+          "frame": 1,
+          "modifiers": [
+            {
+              "kind": "unresolved_attachment",
+              "span": {
+                "start": 22,
+                "end": 36,
+                "text": " in the folder"
+              }
+            }
+          ],
+          "members": [],
+          "patient_span": {
+            "start": 14,
+            "end": 22,
+            "text": "the file"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 14,
+            "end": 22,
+            "text": "the file"
+          },
+          "number": "singular",
+          "quantity": null,
+          "introduced_in": "c2",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [],
+          "created_by": []
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "Open",
+          "label": "action_chunk"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 9,
+          "end": 36,
+          "text": "read the file in the folder",
+          "label": "action_chunk"
+        },
+        {
+          "start": 36,
+          "end": 37,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 4,
+            "text": "Open",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 4,
+              "text": "Open"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 9,
+            "end": 36,
+            "text": "read the file in the folder",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 9,
+              "end": 13,
+              "text": "read"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Open",
+            "label": "chunk"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 9,
+            "end": 36,
+            "text": "read the file in the folder",
+            "label": "chunk"
+          },
+          {
+            "start": 36,
+            "end": 37,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch three VMs, one with Windows, one with Kali and one with Debian.",
+    "proposal": {
+      "source": "Create and launch three VMs, one with Windows, one with Kali and one with Debian.",
+      "frames": [
+        {
+          "predicate": "Create",
+          "agent": "NONE",
+          "patient": "NONE",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "NONE",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        },
+        {
+          "predicate": "launch",
+          "agent": "NONE",
+          "patient": "three VMs",
+          "recipient": "NONE",
+          "negation": "NONE",
+          "condition": "NONE",
+          "time": "NONE",
+          "quantity": "three",
+          "attribution": "NONE",
+          "modality": "NONE",
+          "act": "request"
+        }
+      ],
+      "route": "unresolved",
+      "rules": [
+        "C010-imperative-coordination",
+        "C012-counted-member-specifications"
+      ],
+      "reasons": [
+        "c1:unsupported_shared_patient"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-4",
+      "chunking_method": "deterministic_surface_rules",
+      "chunks": [
+        {
+          "id": "c1",
+          "kind": "action",
+          "span": {
+            "start": 0,
+            "end": 6,
+            "text": "Create"
+          },
+          "frame": 0,
+          "modifiers": [],
+          "members": []
+        },
+        {
+          "id": "c2",
+          "kind": "action",
+          "span": {
+            "start": 11,
+            "end": 80,
+            "text": "launch three VMs, one with Windows, one with Kali and one with Debian"
+          },
+          "frame": 1,
+          "modifiers": [],
+          "members": [
+            {
+              "id": "c2.member1",
+              "quantity": 1,
+              "span": {
+                "start": 29,
+                "end": 45,
+                "text": "one with Windows"
+              },
+              "specification": {
+                "start": 38,
+                "end": 45,
+                "text": "Windows"
+              }
+            },
+            {
+              "id": "c2.member2",
+              "quantity": 1,
+              "span": {
+                "start": 47,
+                "end": 60,
+                "text": "one with Kali"
+              },
+              "specification": {
+                "start": 56,
+                "end": 60,
+                "text": "Kali"
+              }
+            },
+            {
+              "id": "c2.member3",
+              "quantity": 1,
+              "span": {
+                "start": 65,
+                "end": 80,
+                "text": "one with Debian"
+              },
+              "specification": {
+                "start": 74,
+                "end": 80,
+                "text": "Debian"
+              }
+            }
+          ],
+          "patient_span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "entity_id": "e1"
+        }
+      ],
+      "shared_arguments": [],
+      "local_entities": [
+        {
+          "id": "e1",
+          "span": {
+            "start": 18,
+            "end": 27,
+            "text": "three VMs"
+          },
+          "number": "plural",
+          "quantity": 3,
+          "introduced_in": "c2",
+          "status": "sentence_local_description_not_WORLD_object",
+          "members": [
+            {
+              "id": "c2.member1",
+              "quantity": 1,
+              "span": {
+                "start": 29,
+                "end": 45,
+                "text": "one with Windows"
+              },
+              "specification": {
+                "start": 38,
+                "end": 45,
+                "text": "Windows"
+              }
+            },
+            {
+              "id": "c2.member2",
+              "quantity": 1,
+              "span": {
+                "start": 47,
+                "end": 60,
+                "text": "one with Kali"
+              },
+              "specification": {
+                "start": 56,
+                "end": 60,
+                "text": "Kali"
+              }
+            },
+            {
+              "id": "c2.member3",
+              "quantity": 1,
+              "span": {
+                "start": 65,
+                "end": 80,
+                "text": "one with Debian"
+              },
+              "specification": {
+                "start": 74,
+                "end": 80,
+                "text": "Debian"
+              }
+            }
+          ],
+          "created_by": []
+        }
+      ],
+      "local_references": [],
+      "chunk_relations": [
+        {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      ],
+      "source_ledger": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "Create",
+          "label": "action_chunk"
+        },
+        {
+          "start": 6,
+          "end": 11,
+          "text": " and ",
+          "label": "connective_or_unassigned"
+        },
+        {
+          "start": 11,
+          "end": 80,
+          "text": "launch three VMs, one with Windows, one with Kali and one with Debian",
+          "label": "action_chunk"
+        },
+        {
+          "start": 80,
+          "end": 81,
+          "text": ".",
+          "label": "connective_or_unassigned"
+        }
+      ],
+      "surface_structure": {
+        "version": "surface-chunks-2",
+        "method": "deterministic_surface_rules",
+        "status": "supported",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "argument_omitted": true,
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 80,
+            "text": "launch three VMs, one with Windows, one with Kali and one with Debian",
+            "argument_omitted": false,
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 80,
+            "text": "launch three VMs, one with Windows, one with Kali and one with Debian",
+            "label": "chunk"
+          },
+          {
+            "start": 80,
+            "end": 81,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  }
+]

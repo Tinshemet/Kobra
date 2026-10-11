@@ -6,6 +6,7 @@ only to the original text; new local IDs are descriptions, not WORLD objects.
 """
 import re
 from .selection_read import SLOTS
+from .shared_patients import DEFAULT_PATTERNS, CREATION_ACTIONS, share_patients
 
 COUNTS = {w:i for i,w in enumerate(('zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve'))}
 NUMBER = r'(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)'
@@ -16,7 +17,7 @@ def span(text, start, end):
 
 
 
-def assign_structure(doc, boundaries=None):
+def assign_structure(doc, boundaries=None, shared_patterns=DEFAULT_PATTERNS):
     text=doc.text
     from .surface_chunks import chunk_commands
     boundaries = boundaries if boundaries is not None else chunk_commands(text)
@@ -44,6 +45,8 @@ def assign_structure(doc, boundaries=None):
         body_start=verb.idx+len(verb.text)
         while body_start<end and text[body_start].isspace():body_start+=1
         body=text[body_start:end]
+        if boundaries['chunks'][i].get('argument_omitted'):
+            continue
         enum=re.search(r'\bone\s+with\s+',body,re.I)
         patient=None;patient_start=None;patient_end=None;count=None;number=None
         if enum:
@@ -120,12 +123,16 @@ def assign_structure(doc, boundaries=None):
         else:
             entity=dict(id=f'e{len(entities)+1}',span=span(text,patient_start,patient_end),number=number,
                         quantity=count,introduced_in=chunk['id'],status='sentence_local_description_not_WORLD_object',
-                        members=chunk['members'])
+                        members=chunk['members'],created_by=[chunk['id']] if verb.lower_ in CREATION_ACTIONS else [])
             entities.append(entity);chunk['entity_id']=entity['id']
-        if i:
-            gap=text[chunks[i-1]['span']['end']:verb.idx]
-            relations.append(dict(from_chunk=chunks[i-1]['id'],to_chunk=chunk['id'],
-                                  kind='explicit_then' if re.search(r'\bthen\b',gap,re.I) else 'coordination_source_order_only'))
+    shared_arguments, shared_issues = share_patients(text, boundaries, chunks, frames, entities, shared_patterns)
+    issues.extend(shared_issues)
+    if shared_arguments:
+        rules.append('C016-trailing-shared-patient')
+    for i, chunk in enumerate(chunks[1:], 1):
+        gap=text[chunks[i-1]['span']['end']:chunk['span']['start']]
+        relations.append(dict(from_chunk=chunks[i-1]['id'],to_chunk=chunk['id'],
+                              kind='explicit_then' if re.search(r'\bthen\b',gap,re.I) else 'coordination_source_order_only'))
     if not frames:return None
     ledger=[];cursor=0
     for chunk in chunks:
@@ -134,5 +141,5 @@ def assign_structure(doc, boundaries=None):
         ledger.append(dict(**span(text,a,b),label='action_chunk'));cursor=b
     if cursor<len(text):ledger.append(dict(**span(text,cursor,len(text)),label='connective_or_unassigned'))
     return dict(source=text,frames=frames,route='unresolved' if issues else 'code',rules=sorted(set(rules)),
-                reasons=issues,semantic_verified=False,version='rule-assignment-3',chunking_method='deterministic_surface_rules',chunks=chunks,
-                local_entities=entities,local_references=references,chunk_relations=relations,source_ledger=ledger)
+                reasons=issues,semantic_verified=False,version='rule-assignment-4',chunking_method='deterministic_surface_rules',chunks=chunks,
+                shared_arguments=shared_arguments,local_entities=entities,local_references=references,chunk_relations=relations,source_ledger=ledger)

@@ -129,8 +129,9 @@ class GatedRuleReader:
         code = self.assigner.assign(text)
         knowledge_evidence = None
         if self.knowledge is not None:
-            from .knowledge_resolution import resolve_knowledge
-            knowledge_evidence = resolve_knowledge(self.knowledge, text, code, world)
+            from .knowledge_resolution import resolve_knowledge, created_patient_frames
+            knowledge_evidence = resolve_knowledge(self.knowledge, text, code, world,
+                                                   created_frames=created_patient_frames(code))
             world = deepcopy(knowledge_evidence.pop('world'))
             ledger = context_snapshot(history, world, context_claims)
         proposal = deepcopy(code)
@@ -150,6 +151,8 @@ class GatedRuleReader:
         # Only trusted code-side links may satisfy a local reference. A model
         # cannot authorize invented local IDs by including them in its proposal.
         local_bindings = code.get('local_references', ()) if origin == 'code' else ()
+        if code.get('configuration_id'):
+            cohort += ':assignment:' + code['configuration_id']
         knowledge_reasons = []
         if knowledge_evidence is not None:
             from .knowledge_resolution import resolve_knowledge, validate_knowledge_proposal
@@ -163,7 +166,7 @@ class GatedRuleReader:
                 knowledge_reasons.extend(validate_knowledge_proposal(proposal, knowledge_evidence))
             else:
                 knowledge_reasons.extend(knowledge_evidence['issues'])
-            cohort += ':knowledge-resolution-1:' + knowledge_evidence['revision']
+            cohort += ':' + knowledge_evidence['version'] + ':' + knowledge_evidence['revision']
             if origin == 'code':
                 for binding in knowledge_evidence['bindings']:
                     proposal.setdefault('groundings', {})[binding['mention']] = binding['entity_id']

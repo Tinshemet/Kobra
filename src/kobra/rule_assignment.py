@@ -3,24 +3,33 @@
 No gold, sentence inventory or generative model is consulted. Rule eligibility
 is not calibrated confidence. Original text always accompanies the proposal.
 """
+import hashlib
+import json
 from .selection_read import SLOTS
 
-VERSION = 'rule-assignment-3'
+VERSION = 'rule-assignment-4'
 
 class RuleAssigner:
-    def __init__(self, nlp=None, action_words=None):
+    def __init__(self, nlp=None, action_words=None, shared_patterns=None):
         if nlp is None:
             import spacy
             nlp = spacy.load('en_core_web_sm')
         self.nlp = nlp
+        from .shared_patients import DEFAULT_PATTERNS, validate_patterns
+        self.shared_patterns = validate_patterns(DEFAULT_PATTERNS if shared_patterns is None else shared_patterns)
         from .surface_chunks import ACTIONS
         self.action_words = ACTIONS if action_words is None else frozenset(action_words)
+        self.configuration_id = hashlib.sha256(json.dumps(dict(
+            version=VERSION, action_words=sorted(self.action_words), shared_patterns=self.shared_patterns,
+            parser=getattr(nlp, 'meta', {}).get('name'), parser_version=getattr(nlp, 'meta', {}).get('version')
+        ), sort_keys=True).encode()).hexdigest()
 
     def assign(self, text):
         from .surface_chunks import chunk_commands
         boundaries = chunk_commands(text, self.action_words)
         simple = self._assign_simple(text)
         simple['surface_structure'] = boundaries
+        simple['configuration_id'] = self.configuration_id
         if simple['route'] == 'code':
             # The simple parser is not allowed to swallow an explicit command
             # boundary or ignore unbalanced protected text.
@@ -28,9 +37,10 @@ class RuleAssigner:
                     issue in boundaries['issues'] for issue in ('unmatched_bracket','unclosed_quote_or_bracket')):
                 return simple
         from .structural_read import assign_structure
-        structured = assign_structure(self.nlp(text), boundaries)
+        structured = assign_structure(self.nlp(text), boundaries, self.shared_patterns)
         if structured is not None:
             structured['surface_structure'] = boundaries
+            structured['configuration_id'] = self.configuration_id
             return structured
         if simple['route'] == 'code':
             simple.update(route='unresolved', reasons=['unsupported_surface_structure'])

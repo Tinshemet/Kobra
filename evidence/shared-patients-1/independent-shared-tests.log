@@ -1,0 +1,18 @@
+test_action_vocabulary_alone_does_not_authorize_shared_pattern (test_shared_arguments.SharedArgumentsTests.test_action_vocabulary_alone_does_not_authorize_shared_pattern) ... ok
+test_configured_pattern_boundary_can_be_disabled (test_shared_arguments.SharedArgumentsTests.test_configured_pattern_boundary_can_be_disabled) ... ok
+test_different_shared_profiles_get_different_calibration_cohorts (test_shared_arguments.SharedArgumentsTests.test_different_shared_profiles_get_different_calibration_cohorts) ... ok
+test_following_pronoun_sees_one_shared_antecedent (test_shared_arguments.SharedArgumentsTests.test_following_pronoun_sees_one_shared_antecedent) ... ok
+test_model_created_metadata_does_not_override_live_candidate_check (test_shared_arguments.SharedArgumentsTests.test_model_created_metadata_does_not_override_live_candidate_check) ... ok
+test_new_shared_target_never_grounded_to_existing_names_and_keeps_history (test_shared_arguments.SharedArgumentsTests.test_new_shared_target_never_grounded_to_existing_names_and_keeps_history) ... ok
+test_no_left_object_propagation (test_shared_arguments.SharedArgumentsTests.test_no_left_object_propagation) ... ok
+test_noncreation_shared_entity_not_marked_created (test_shared_arguments.SharedArgumentsTests.test_noncreation_shared_entity_not_marked_created) ... ok
+test_operational_oddity_is_not_syntactic_rejection (test_shared_arguments.SharedArgumentsTests.test_operational_oddity_is_not_syntactic_rejection) ... ok
+test_same_literal_new_and_existing_role_cannot_get_global_grounding (test_shared_arguments.SharedArgumentsTests.test_same_literal_new_and_existing_role_cannot_get_global_grounding) ... ok
+test_shared_patient_has_one_entity_and_original_source_span (test_shared_arguments.SharedArgumentsTests.test_shared_patient_has_one_entity_and_original_source_span) ... ok
+test_three_actions_one_shared_description (test_shared_arguments.SharedArgumentsTests.test_three_actions_one_shared_description) ... ok
+test_unsupported_attachment_scope_and_private_object_stay_unresolved (test_shared_arguments.SharedArgumentsTests.test_unsupported_attachment_scope_and_private_object_stay_unresolved) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.643s
+
+OK

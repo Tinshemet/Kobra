@@ -69,7 +69,7 @@ from wrong accepts, unnecessary ASK and unrelated failure-based ASK. Contract
 tests are not empirical model accuracy. The 97.67% result remains a reused-data
 routing simulation with saved model answers, not a fresh multi-turn evaluation.
 
-Structural extension (rule-assignment-3)
+Structural extension (rule-assignment-4)
 --------------------------------------
 
 A fallback rule pass now parses bounded imperative coordination, counted member
@@ -80,3 +80,7 @@ links and unsupported structures remain unresolved. See structural-read.rst for
 primary references, regression evidence and the deliberately limited rule scope.
 
 See read-rule-coverage.rst for the closure checklist and surface boundary limits.
+
+C016 now handles explicit bounded shared-patient command patterns, with one local
+entity and trusted creation provenance across actions. See shared-patients.rst.
+Configuration changes invalidate the corresponding calibration cohort.

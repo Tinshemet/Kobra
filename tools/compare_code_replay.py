@@ -31,7 +31,7 @@ def main():
         regressions=sum(r['regression'] for r in results),accepted_incorrect=sum(r['after_code_routed'] and not r['after_correct'] for r in results),new_model_calls=0)
     (args.output/'cases.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in results))
     (args.output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
-    paths=['src/kobra/rule_assignment.py','src/kobra/structural_read.py','src/kobra/surface_chunks.py', 'tools/compare_code_replay.py']
+    paths=['src/kobra/rule_assignment.py','src/kobra/structural_read.py','src/kobra/surface_chunks.py', 'src/kobra/shared_patients.py', 'tools/compare_code_replay.py']
     (args.output/'provenance.json').write_text(json.dumps({'baseline_sha256':hashlib.sha256(args.before.read_bytes()).hexdigest(),'files':{f:hashlib.sha256((root/f).read_bytes()).hexdigest() for f in paths}},indent=2)+'\n')
     print(json.dumps(summary,indent=2))
 

@@ -3,10 +3,11 @@
   "new_model_calls": 0,
   "scripted_resolver_calls": 1,
   "source_hashes": {
-    "src/kobra/rule_assignment.py": "d3da5e17393419c475f26c74dd6a145b8c43b263c152c93d851bce3d13b3e48a",
-    "src/kobra/surface_chunks.py": "28c04825ed89f8dc776d00bce9588233799437d4f2559f8706cd2708bc2e06a1",
-    "src/kobra/structural_read.py": "fc042e6f4f4bdb6e4db8423b43a9fcf77970d044d4c4c3a26dfc559943823d9d",
-    "src/kobra/confidence_gate.py": "63c7e672b5f85709cafc22e0cb99067f915dfddd624a9076ebd9ddfadf3f594f",
+    "src/kobra/rule_assignment.py": "d77a74ee79f15589981a5bdf0ce678fc03dbaaeff193393c825f558221a09b9a",
+    "src/kobra/surface_chunks.py": "66e2f96d7b69a8bddc61f0608f52ec6ed15acde1e1f947e014392dc9b576d065",
+    "src/kobra/structural_read.py": "0641dcc8d3bf715032624f49fed14b8afe807f83ba45a389154a67019ad53d12",
+    "src/kobra/shared_patients.py": "7eb0c5ac6d819ad42f2981fa7320645d09914b8b1a73d2a8309f3daf72894853",
+    "src/kobra/confidence_gate.py": "3aa1f366894afcb119471c3db6fc3d38e245748641c081a1dd6ba217aa09ac80",
     "src/kobra/context_ledger.py": "af65340227950da8cde5be0175ff7e8a5d7dc6f7d2c940944a4fade27895000f"
   },
   "examples": [
@@ -40,7 +41,7 @@
             "text": "Cancel the subscription."
           },
           "output": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -49,6 +50,7 @@
                 "start": 0,
                 "end": 23,
                 "text": "Cancel the subscription",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 6,
@@ -136,9 +138,9 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-3",
+            "version": "rule-assignment-4",
             "surface_structure": {
-              "version": "surface-chunks-1",
+              "version": "surface-chunks-2",
               "method": "deterministic_surface_rules",
               "status": "supported",
               "chunks": [
@@ -147,6 +149,7 @@
                   "start": 0,
                   "end": 23,
                   "text": "Cancel the subscription",
+                  "argument_omitted": false,
                   "predicate": {
                     "start": 0,
                     "end": 6,
@@ -170,7 +173,8 @@
                   "label": "suffix"
                 }
               ]
-            }
+            },
+            "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -212,9 +216,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -223,6 +227,7 @@
                     "start": 0,
                     "end": 23,
                     "text": "Cancel the subscription",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 6,
@@ -246,9 +251,10 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
-            "cohort": "code:C002-active-roles",
+            "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "world_ids": [],
             "missing_context": [],
             "calibration_registry": {},
@@ -298,9 +304,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -309,6 +315,7 @@
                     "start": 0,
                     "end": 23,
                     "text": "Cancel the subscription",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 6,
@@ -332,7 +339,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
             "reasons": [
               "uncalibrated_cohort"
@@ -340,7 +348,7 @@
             "external_score": null,
             "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
             "calibration_evidence": null,
-            "cohort": "code:C002-active-roles",
+            "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "model_self_confidence_used": false,
             "context_ledger": {
               "version": "context-ledger-1",
@@ -375,9 +383,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -386,6 +394,7 @@
                     "start": 0,
                     "end": 23,
                     "text": "Cancel the subscription",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 6,
@@ -409,7 +418,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -446,7 +456,7 @@
             "text": "Will the books be carried by Alex?"
           },
           "output": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "unresolved",
             "chunks": [],
@@ -551,9 +561,9 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-3",
+            "version": "rule-assignment-4",
             "surface_structure": {
-              "version": "surface-chunks-1",
+              "version": "surface-chunks-2",
               "method": "deterministic_surface_rules",
               "status": "unresolved",
               "chunks": [],
@@ -570,7 +580,8 @@
                   "label": "unassigned"
                 }
               ]
-            }
+            },
+            "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -612,9 +623,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "unresolved",
                 "chunks": [],
@@ -631,9 +642,10 @@
                     "label": "unassigned"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
-            "cohort": "code:C001-passive-roles",
+            "cohort": "code:C001-passive-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "world_ids": [],
             "missing_context": [],
             "calibration_registry": {},
@@ -683,9 +695,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "unresolved",
                 "chunks": [],
@@ -702,7 +714,8 @@
                     "label": "unassigned"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
             "reasons": [
               "uncalibrated_cohort"
@@ -710,7 +723,7 @@
             "external_score": null,
             "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
             "calibration_evidence": null,
-            "cohort": "code:C001-passive-roles",
+            "cohort": "code:C001-passive-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "model_self_confidence_used": false,
             "context_ledger": {
               "version": "context-ledger-1",
@@ -745,9 +758,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "unresolved",
                 "chunks": [],
@@ -764,7 +777,8 @@
                     "label": "unassigned"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -801,7 +815,7 @@
             "text": "Move it."
           },
           "output": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -810,6 +824,7 @@
                 "start": 0,
                 "end": 7,
                 "text": "Move it",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 4,
@@ -891,9 +906,9 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-3",
+            "version": "rule-assignment-4",
             "surface_structure": {
-              "version": "surface-chunks-1",
+              "version": "surface-chunks-2",
               "method": "deterministic_surface_rules",
               "status": "supported",
               "chunks": [
@@ -902,6 +917,7 @@
                   "start": 0,
                   "end": 7,
                   "text": "Move it",
+                  "argument_omitted": false,
                   "predicate": {
                     "start": 0,
                     "end": 4,
@@ -925,7 +941,8 @@
                   "label": "suffix"
                 }
               ]
-            }
+            },
+            "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -967,9 +984,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -978,6 +995,7 @@
                     "start": 0,
                     "end": 7,
                     "text": "Move it",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 4,
@@ -1001,9 +1019,10 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
-            "cohort": "code:C002-active-roles",
+            "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "world_ids": [],
             "missing_context": [],
             "calibration_registry": {},
@@ -1054,9 +1073,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -1065,6 +1084,7 @@
                     "start": 0,
                     "end": 7,
                     "text": "Move it",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 4,
@@ -1088,7 +1108,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
             "reasons": [
               "uncalibrated_cohort",
@@ -1097,7 +1118,7 @@
             "external_score": null,
             "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
             "calibration_evidence": null,
-            "cohort": "code:C002-active-roles",
+            "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "model_self_confidence_used": false,
             "context_ledger": {
               "version": "context-ledger-1",
@@ -1132,9 +1153,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -1143,6 +1164,7 @@
                     "start": 0,
                     "end": 7,
                     "text": "Move it",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 4,
@@ -1166,7 +1188,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -1237,7 +1260,7 @@
             "text": "Move it."
           },
           "output": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -1246,6 +1269,7 @@
                 "start": 0,
                 "end": 7,
                 "text": "Move it",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 4,
@@ -1327,9 +1351,9 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-3",
+            "version": "rule-assignment-4",
             "surface_structure": {
-              "version": "surface-chunks-1",
+              "version": "surface-chunks-2",
               "method": "deterministic_surface_rules",
               "status": "supported",
               "chunks": [
@@ -1338,6 +1362,7 @@
                   "start": 0,
                   "end": 7,
                   "text": "Move it",
+                  "argument_omitted": false,
                   "predicate": {
                     "start": 0,
                     "end": 4,
@@ -1361,7 +1386,8 @@
                   "label": "suffix"
                 }
               ]
-            }
+            },
+            "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -1403,9 +1429,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -1414,6 +1440,7 @@
                     "start": 0,
                     "end": 7,
                     "text": "Move it",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 4,
@@ -1437,9 +1464,10 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
-            "cohort": "code:C002-active-roles",
+            "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "world_ids": [
               "box-1"
             ],
@@ -1492,9 +1520,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -1503,6 +1531,7 @@
                     "start": 0,
                     "end": 7,
                     "text": "Move it",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 4,
@@ -1526,7 +1555,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
             "reasons": [
               "uncalibrated_cohort",
@@ -1535,7 +1565,7 @@
             "external_score": null,
             "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
             "calibration_evidence": null,
-            "cohort": "code:C002-active-roles",
+            "cohort": "code:C002-active-roles:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "model_self_confidence_used": false,
             "context_ledger": {
               "version": "context-ledger-1",
@@ -1594,9 +1624,9 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -1605,6 +1635,7 @@
                     "start": 0,
                     "end": 7,
                     "text": "Move it",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 4,
@@ -1628,7 +1659,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -1665,7 +1697,7 @@
             "text": "Create three Debian VMs with 16 GB of RAM each."
           },
           "output": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -1674,6 +1706,7 @@
                 "start": 0,
                 "end": 46,
                 "text": "Create three Debian VMs with 16 GB of RAM each",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 6,
@@ -1805,7 +1838,7 @@
               "c1:unresolved_attachment"
             ],
             "semantic_verified": false,
-            "version": "rule-assignment-3",
+            "version": "rule-assignment-4",
             "chunking_method": "deterministic_surface_rules",
             "chunks": [
               {
@@ -1836,6 +1869,7 @@
                 "entity_id": "e1"
               }
             ],
+            "shared_arguments": [],
             "local_entities": [
               {
                 "id": "e1",
@@ -1848,7 +1882,10 @@
                 "quantity": 3,
                 "introduced_in": "c1",
                 "status": "sentence_local_description_not_WORLD_object",
-                "members": []
+                "members": [],
+                "created_by": [
+                  "c1"
+                ]
               }
             ],
             "local_references": [],
@@ -1868,7 +1905,7 @@
               }
             ],
             "surface_structure": {
-              "version": "surface-chunks-1",
+              "version": "surface-chunks-2",
               "method": "deterministic_surface_rules",
               "status": "supported",
               "chunks": [
@@ -1877,6 +1914,7 @@
                   "start": 0,
                   "end": 46,
                   "text": "Create three Debian VMs with 16 GB of RAM each",
+                  "argument_omitted": false,
                   "predicate": {
                     "start": 0,
                     "end": 6,
@@ -1900,7 +1938,8 @@
                   "label": "suffix"
                 }
               ]
-            }
+            },
+            "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -1944,7 +1983,7 @@
                 "c1:unresolved_attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
@@ -1975,6 +2014,7 @@
                   "entity_id": "e1"
                 }
               ],
+              "shared_arguments": [],
               "local_entities": [
                 {
                   "id": "e1",
@@ -1987,7 +2027,10 @@
                   "quantity": 3,
                   "introduced_in": "c1",
                   "status": "sentence_local_description_not_WORLD_object",
-                  "members": []
+                  "members": [],
+                  "created_by": [
+                    "c1"
+                  ]
                 }
               ],
               "local_references": [],
@@ -2007,7 +2050,7 @@
                 }
               ],
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -2016,6 +2059,7 @@
                     "start": 0,
                     "end": 46,
                     "text": "Create three Debian VMs with 16 GB of RAM each",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 6,
@@ -2039,9 +2083,10 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
-            "cohort": "model-unresolved-v1",
+            "cohort": "model-unresolved-v1:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "world_ids": [],
             "missing_context": [],
             "calibration_registry": {},
@@ -2094,7 +2139,7 @@
                 "c1:unresolved_attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
@@ -2125,6 +2170,7 @@
                   "entity_id": "e1"
                 }
               ],
+              "shared_arguments": [],
               "local_entities": [
                 {
                   "id": "e1",
@@ -2137,7 +2183,10 @@
                   "quantity": 3,
                   "introduced_in": "c1",
                   "status": "sentence_local_description_not_WORLD_object",
-                  "members": []
+                  "members": [],
+                  "created_by": [
+                    "c1"
+                  ]
                 }
               ],
               "local_references": [],
@@ -2157,7 +2206,7 @@
                 }
               ],
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -2166,6 +2215,7 @@
                     "start": 0,
                     "end": 46,
                     "text": "Create three Debian VMs with 16 GB of RAM each",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 6,
@@ -2189,7 +2239,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
             "reasons": [
               "uncalibrated_cohort",
@@ -2198,7 +2249,7 @@
             "external_score": null,
             "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
             "calibration_evidence": null,
-            "cohort": "model-unresolved-v1",
+            "cohort": "model-unresolved-v1:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "model_self_confidence_used": false,
             "context_ledger": {
               "version": "context-ledger-1",
@@ -2235,7 +2286,7 @@
                 "c1:unresolved_attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
@@ -2266,6 +2317,7 @@
                   "entity_id": "e1"
                 }
               ],
+              "shared_arguments": [],
               "local_entities": [
                 {
                   "id": "e1",
@@ -2278,7 +2330,10 @@
                   "quantity": 3,
                   "introduced_in": "c1",
                   "status": "sentence_local_description_not_WORLD_object",
-                  "members": []
+                  "members": [],
+                  "created_by": [
+                    "c1"
+                  ]
                 }
               ],
               "local_references": [],
@@ -2298,7 +2353,7 @@
                 }
               ],
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -2307,6 +2362,7 @@
                     "start": 0,
                     "end": 46,
                     "text": "Create three Debian VMs with 16 GB of RAM each",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 6,
@@ -2330,7 +2386,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -2367,7 +2424,7 @@
             "text": "Good morning gorgon, please create 3 vms one with windows, one with metaspoitable and one with kali, set them  all in the same network and launch them."
           },
           "output": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "supported",
             "chunks": [
@@ -2376,6 +2433,7 @@
                 "start": 28,
                 "end": 99,
                 "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 28,
                   "end": 34,
@@ -2387,6 +2445,7 @@
                 "start": 101,
                 "end": 134,
                 "text": "set them  all in the same network",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 101,
                   "end": 104,
@@ -2398,6 +2457,7 @@
                 "start": 139,
                 "end": 150,
                 "text": "launch them",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 139,
                   "end": 145,
@@ -2712,7 +2772,7 @@
             ],
             "reasons": [],
             "semantic_verified": false,
-            "version": "rule-assignment-3",
+            "version": "rule-assignment-4",
             "chunking_method": "deterministic_surface_rules",
             "chunks": [
               {
@@ -2824,6 +2884,7 @@
                 }
               }
             ],
+            "shared_arguments": [],
             "local_entities": [
               {
                 "id": "e1",
@@ -2879,6 +2940,9 @@
                       "text": "kali"
                     }
                   }
+                ],
+                "created_by": [
+                  "c1"
                 ]
               }
             ],
@@ -2969,7 +3033,7 @@
               }
             ],
             "surface_structure": {
-              "version": "surface-chunks-1",
+              "version": "surface-chunks-2",
               "method": "deterministic_surface_rules",
               "status": "supported",
               "chunks": [
@@ -2978,6 +3042,7 @@
                   "start": 28,
                   "end": 99,
                   "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                  "argument_omitted": false,
                   "predicate": {
                     "start": 28,
                     "end": 34,
@@ -2989,6 +3054,7 @@
                   "start": 101,
                   "end": 134,
                   "text": "set them  all in the same network",
+                  "argument_omitted": false,
                   "predicate": {
                     "start": 101,
                     "end": 104,
@@ -3000,6 +3066,7 @@
                   "start": 139,
                   "end": 150,
                   "text": "launch them",
+                  "argument_omitted": false,
                   "predicate": {
                     "start": 139,
                     "end": 145,
@@ -3053,7 +3120,8 @@
                   "label": "suffix"
                 }
               ]
-            }
+            },
+            "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -3124,7 +3192,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
@@ -3236,6 +3304,7 @@
                   }
                 }
               ],
+              "shared_arguments": [],
               "local_entities": [
                 {
                   "id": "e1",
@@ -3291,6 +3360,9 @@
                         "text": "kali"
                       }
                     }
+                  ],
+                  "created_by": [
+                    "c1"
                   ]
                 }
               ],
@@ -3381,7 +3453,7 @@
                 }
               ],
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -3390,6 +3462,7 @@
                     "start": 28,
                     "end": 99,
                     "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 28,
                       "end": 34,
@@ -3401,6 +3474,7 @@
                     "start": 101,
                     "end": 134,
                     "text": "set them  all in the same network",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 101,
                       "end": 104,
@@ -3412,6 +3486,7 @@
                     "start": 139,
                     "end": 150,
                     "text": "launch them",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 139,
                       "end": 145,
@@ -3465,9 +3540,10 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
-            "cohort": "code:C010-imperative-coordination+C012-counted-member-specifications+C013-shared-location-constraint+C014-unique-local-number-agreement",
+            "cohort": "code:C010-imperative-coordination+C012-counted-member-specifications+C013-shared-location-constraint+C014-unique-local-number-agreement:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "world_ids": [],
             "missing_context": [],
             "calibration_registry": {},
@@ -3575,7 +3651,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
@@ -3687,6 +3763,7 @@
                   }
                 }
               ],
+              "shared_arguments": [],
               "local_entities": [
                 {
                   "id": "e1",
@@ -3742,6 +3819,9 @@
                         "text": "kali"
                       }
                     }
+                  ],
+                  "created_by": [
+                    "c1"
                   ]
                 }
               ],
@@ -3832,7 +3912,7 @@
                 }
               ],
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -3841,6 +3921,7 @@
                     "start": 28,
                     "end": 99,
                     "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 28,
                       "end": 34,
@@ -3852,6 +3933,7 @@
                     "start": 101,
                     "end": 134,
                     "text": "set them  all in the same network",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 101,
                       "end": 104,
@@ -3863,6 +3945,7 @@
                     "start": 139,
                     "end": 150,
                     "text": "launch them",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 139,
                       "end": 145,
@@ -3916,7 +3999,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
             "reasons": [
               "uncalibrated_cohort"
@@ -3924,7 +4008,7 @@
             "external_score": null,
             "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
             "calibration_evidence": null,
-            "cohort": "code:C010-imperative-coordination+C012-counted-member-specifications+C013-shared-location-constraint+C014-unique-local-number-agreement",
+            "cohort": "code:C010-imperative-coordination+C012-counted-member-specifications+C013-shared-location-constraint+C014-unique-local-number-agreement:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "model_self_confidence_used": false,
             "context_ledger": {
               "version": "context-ledger-1",
@@ -3988,7 +4072,7 @@
               ],
               "reasons": [],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "chunking_method": "deterministic_surface_rules",
               "chunks": [
                 {
@@ -4100,6 +4184,7 @@
                   }
                 }
               ],
+              "shared_arguments": [],
               "local_entities": [
                 {
                   "id": "e1",
@@ -4155,6 +4240,9 @@
                         "text": "kali"
                       }
                     }
+                  ],
+                  "created_by": [
+                    "c1"
                   ]
                 }
               ],
@@ -4245,7 +4333,7 @@
                 }
               ],
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "supported",
                 "chunks": [
@@ -4254,6 +4342,7 @@
                     "start": 28,
                     "end": 99,
                     "text": "create 3 vms one with windows, one with metaspoitable and one with kali",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 28,
                       "end": 34,
@@ -4265,6 +4354,7 @@
                     "start": 101,
                     "end": 134,
                     "text": "set them  all in the same network",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 101,
                       "end": 104,
@@ -4276,6 +4366,7 @@
                     "start": 139,
                     "end": 150,
                     "text": "launch them",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 139,
                       "end": 145,
@@ -4329,7 +4420,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."
@@ -4380,7 +4472,7 @@
             "text": "Refund the order if it was cancelled."
           },
           "output": {
-            "version": "surface-chunks-1",
+            "version": "surface-chunks-2",
             "method": "deterministic_surface_rules",
             "status": "unresolved",
             "chunks": [
@@ -4389,6 +4481,7 @@
                 "start": 0,
                 "end": 36,
                 "text": "Refund the order if it was cancelled",
+                "argument_omitted": false,
                 "predicate": {
                   "start": 0,
                   "end": 6,
@@ -4488,9 +4581,9 @@
               "multiple predicates or clause attachment"
             ],
             "semantic_verified": false,
-            "version": "rule-assignment-3",
+            "version": "rule-assignment-4",
             "surface_structure": {
-              "version": "surface-chunks-1",
+              "version": "surface-chunks-2",
               "method": "deterministic_surface_rules",
               "status": "unresolved",
               "chunks": [
@@ -4499,6 +4592,7 @@
                   "start": 0,
                   "end": 36,
                   "text": "Refund the order if it was cancelled",
+                  "argument_omitted": false,
                   "predicate": {
                     "start": 0,
                     "end": 6,
@@ -4524,7 +4618,8 @@
                   "label": "suffix"
                 }
               ]
-            }
+            },
+            "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
           },
           "passes": "If route=code, frames go directly to the gate and bypass the resolver. If route=unresolved, the original text and proposal may be sent to a resolver."
         },
@@ -4541,9 +4636,9 @@
                 "multiple predicates or clause attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "unresolved",
                 "chunks": [
@@ -4552,6 +4647,7 @@
                     "start": 0,
                     "end": 36,
                     "text": "Refund the order if it was cancelled",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 6,
@@ -4577,7 +4673,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             },
             "world": {
               "order-1": {
@@ -4653,7 +4750,7 @@
               ],
               "confidence": 1.0
             },
-            "cohort": "model-unresolved-v1",
+            "cohort": "model-unresolved-v1:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "world_ids": [
               "order-1"
             ],
@@ -4711,7 +4808,7 @@
             "external_score": null,
             "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
             "calibration_evidence": null,
-            "cohort": "model-unresolved-v1",
+            "cohort": "model-unresolved-v1:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732",
             "model_self_confidence_used": false,
             "context_ledger": {
               "version": "context-ledger-1",
@@ -4742,9 +4839,9 @@
                 "multiple predicates or clause attachment"
               ],
               "semantic_verified": false,
-              "version": "rule-assignment-3",
+              "version": "rule-assignment-4",
               "surface_structure": {
-                "version": "surface-chunks-1",
+                "version": "surface-chunks-2",
                 "method": "deterministic_surface_rules",
                 "status": "unresolved",
                 "chunks": [
@@ -4753,6 +4850,7 @@
                     "start": 0,
                     "end": 36,
                     "text": "Refund the order if it was cancelled",
+                    "argument_omitted": false,
                     "predicate": {
                       "start": 0,
                       "end": 6,
@@ -4778,7 +4876,8 @@
                     "label": "suffix"
                   }
                 ]
-              }
+              },
+              "configuration_id": "1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732"
             }
           },
           "passes": "This record is returned to the caller. It does not execute cancellation, refunds, movement or provisioning, and does not itself ask a conversational question."

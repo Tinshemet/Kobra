@@ -44,7 +44,9 @@ removing an initial article. It merges current live entities with caller WORLD;
 conflicting records for the same ID or duplicate names across sources yield ASK.
 A unique exact live match can add a grounding while leaving source role strings
 unchanged. Create/provision/clone/copy descriptions are not automatically bound to
-existing objects. These four verbs are a bounded guard, not a full creation grammar.
+existing objects. Trusted code creation provenance also propagates through shared arguments and
+later local patient references. These four verbs are a bounded guard, not a full
+creation grammar. See shared-patients.rst.
 
 Archive definitions produce lexical annotations, never WORLD IDs. Unsupported,
 ambiguous or negative matching knowledge yields explicit ASK reasons unless live

@@ -17,7 +17,7 @@ Implemented or partially implemented
   This is not yet a parser-independent role system.
 * Imperative coordination: up to four explicit actions; counted member lists,
   shared-location constraints, explicit all, local it/them number agreement.
-  Tests: test_structural_read. Shared objects, general subject propagation,
+  Tests: test_structural_read. Bounded shared-patient patterns are implemented (shared-patients.rst); general shared arguments and subject propagation,
   animacy, reflexives and competing antecedents need further work.
 * Context evidence: previous turns, WORLD records and attributed claims retained.
   Tests: test_context_ledger. Automatic conversational binding is not implemented.
@@ -94,3 +94,7 @@ Knowledge integration checkpoint
 See knowledge-read.rst for active-library/archive lookup, candidate constraints,
 legacy responsibility coverage and the remaining persistence/refresh/relations
 gaps. This addition does not close grammar or general conversational resolution.
+
+C016 checkpoint: bounded trailing shared patients now preserve one entity and
+creation provenance through knowledge lookup. General shared arguments, scope,
+modifiers and cross-turn bindings remain open.

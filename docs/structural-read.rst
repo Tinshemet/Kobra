@@ -1,7 +1,7 @@
 Structural READ and sentence-local references
 ============================================
 
-RuleAssigner v3 computes source-only command boundaries before running the previous simple-role path. On abstention or multiple command boundaries it tries
+RuleAssigner v4 computes source-only command boundaries before running the previous simple-role path. On abstention or multiple command boundaries it tries
 bounded imperative coordination. This is a selective extension, not a claim to
 implement all English grammar or all rules in any reference.
 
@@ -57,7 +57,7 @@ Limits and next rule families
 ----------------------------
 
 This path abstains on negated/modal coordination, conditionals, relative clauses,
-control/raising complements, alternatives using or/but, implicit shared objects,
+control/raising complements, alternatives using or/but, general implicit shared objects,
 and unsupported prepositional attachments. It currently supports at most four
 predicates. General shared-subject propagation, full nominal-group trees, temporal
 scope, reflexives, animacy-aware anaphora and conversational reference resolution
@@ -96,3 +96,6 @@ The 600-case paired replay retains 387 correct code results, with zero gains and
 zero regressions relative to the previous structural implementation. This is a
 boundary architecture change, not evidence of an accuracy gain. See
 ../evidence/surface-chunks-1/paired-replay/summary.json and read-rule-coverage.rst.
+
+C016 adds a bounded trailing shared-patient rule; see shared-patients.rst for
+patterns, exact span links, creation provenance and integration checks.

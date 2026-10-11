@@ -4,10 +4,19 @@ import hashlib
 import json
 import re
 
-VERSION = 'knowledge-resolution-1'
+VERSION = 'knowledge-resolution-2'
 
 
-def resolve_knowledge(knowledge, text, proposal, world):
+def created_patient_frames(code):
+    """Only call with trusted code output, never an AI proposal."""
+    created = {e['id'] for e in code.get('local_entities', []) if e.get('created_by')}
+    frames = {c['frame'] for c in code.get('chunks', []) if c.get('entity_id') in created}
+    frames.update(r['frame'] for r in code.get('local_references', [])
+                  if r.get('entity_id') in created and r.get('slot') == 'patient')
+    return frames
+
+
+def resolve_knowledge(knowledge, text, proposal, world, *, created_frames=()):
     snapshot = knowledge.snapshot()
     revision = hashlib.sha256(json.dumps(snapshot, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     merged = deepcopy(world)
@@ -34,7 +43,9 @@ def resolve_knowledge(knowledge, text, proposal, world):
             if not term.strip():
                 issues.append(f'knowledge_invalid_mention:{index}:{slot}')
                 continue
-            lookup = knowledge.lookup(term)
+            creating = slot == 'patient' and (index in created_frames or
+                str(frame.get('predicate', '')).casefold() in {'create', 'provision', 'clone', 'copy'})
+            lookup = knowledge.lookup(term, include_live=not creating)
             live_candidates = []
             for identifier, record in merged.items():
                 aliases = record.get('aliases', [])
@@ -46,13 +57,12 @@ def resolve_knowledge(knowledge, text, proposal, world):
                     live_candidates.append(identifier)
             matches.append(dict(frame=index, slot=slot, mention=value, lookup=lookup,
                                 live_candidates=live_candidates,
-                                creates_description=str(frame.get('predicate', '')).casefold() in {'create', 'provision', 'clone', 'copy'}))
-            if len(live_candidates) > 1:
+                                creates_description=creating))
+            if not creating and len(live_candidates) > 1:
                 issues.append(f'knowledge_ambiguous:{index}:{slot}')
-            elif not live_candidates and lookup['status'] in ('ambiguous', 'unsupported', 'negative'):
+            elif (creating or not live_candidates) and lookup['status'] in ('ambiguous', 'unsupported', 'negative'):
                 issues.append(f'knowledge_{lookup["status"]}:{index}:{slot}')
             # A creation description is not an assertion that an object exists.
-            creating = str(frame.get('predicate', '')).casefold() in {'create', 'provision', 'clone', 'copy'}
             if not creating and len(live_candidates) == 1:
                 spans = [dict(start=m.start(), end=m.end(), text=m.group()) for m in
                          re.finditer(r'(?<!\w)' + re.escape(value) + r'(?!\w)', text)]
@@ -60,6 +70,13 @@ def resolve_knowledge(knowledge, text, proposal, world):
                     bindings.append(dict(frame=index, slot=slot, mention=value,
                                          entity_id=live_candidates[0], spans=spans,
                                          evidence='exact_current_name_or_alias'))
+    # The current grounding contract is mention -> ID, not frame -> ID.
+    # One literal cannot safely mean a created entity in one frame and a live
+    # entity in another. Preserve both candidates and abstain instead.
+    created_mentions = {m['mention'] for m in matches if m['creates_description']}
+    conflicting_mentions = created_mentions.intersection(b['mention'] for b in bindings)
+    issues.extend('knowledge_conflicting_mention_roles:' + m for m in conflicting_mentions)
+    bindings = [b for b in bindings if b['mention'] not in conflicting_mentions]
     return dict(version=VERSION, revision=revision, snapshot=snapshot, matches=matches,
                 bindings=bindings, lexical_mentions=knowledge.annotate(text)['mentions'],
                 issues=sorted(set(issues)), world=merged,

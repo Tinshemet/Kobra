@@ -1,0 +1,67 @@
+{
+  "reviewer": "coverage_review subagent; independent runtime reviewer/test author",
+  "date": "2026-10-11",
+  "scope": "Bounded trailing shared patients, shared local entity creation, archive/ledger/live-library interactions",
+  "command": "PYTHONPATH=src .venv-candidates/bin/python -m unittest discover -s tests -p test_shared_arguments.py -v",
+  "test_result": {
+    "exit_status": 0,
+    "passed": 13,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "log": "independent-shared-tests.log",
+    "model_calls": 0
+  },
+  "evidence_kind": "Development contract tests with actual RuleAssigner plus synthetic calibration and scripted model; not held-out accuracy.",
+  "independent_finding": {
+    "source": "Create and launch Alpha, then inspect Alpha.",
+    "world": {
+      "old": {
+        "name": "Alpha"
+      }
+    },
+    "before": {
+      "route_with_synthetic_calibration": "ACCEPT",
+      "proposal_groundings": {
+        "Alpha": "old"
+      },
+      "problem": "Global literal-to-ID grounding from final inspection leaked into newly created/shared Alpha mentions."
+    },
+    "fix": "Knowledge helper detects literal used both for newly created description and prospective live binding, adds knowledge_conflicting_mention_roles:Alpha and removes global binding.",
+    "after": {
+      "route_with_synthetic_calibration": "ASK",
+      "proposal_groundings": null
+    },
+    "regression_test": "test_same_literal_new_and_existing_role_cannot_get_global_grounding"
+  },
+  "coverage": [
+    "one entity across two/three predicates and later them",
+    "source span preserved outside receiving predicate chunk",
+    "quantity copied with exact source literal",
+    "plain and does not assert temporal sequencing",
+    "unsupported negation/or/semicolon/then-only/private-object/PP/enumeration/pronoun donors abstain",
+    "no automatic left-object propagation",
+    "profile configuration changes calibration cohort",
+    "custom action vocabulary alone cannot authorize shared pattern",
+    "creation provenance blocks live binding for all shared and later local-pronoun frames",
+    "archive stays lexical and full prior history retained",
+    "AI cannot forge trusted creation provenance to suppress live ambiguity",
+    "mixed new/live same literal abstains"
+  ],
+  "remaining_limits": [
+    "Shared-patient patterns are explicit supported construction profiles, not general English valency proofs.",
+    "Learned parser remains involved in NP/role extraction.",
+    "Shared modifiers, argument scope and nominal coordination are unsupported in this rule.",
+    "Bindings remain keyed by literal; per-frame/per-span binding contract is still needed for general repeated-mention disambiguation.",
+    "Archive/library snapshots remain caller-attested; no automatic refresh/persistence or complete legacy migration.",
+    "No new empirical calibration, fresh corpus, or model accuracy was measured."
+  ],
+  "sha256": {
+    "src/kobra/shared_patients.py": "7eb0c5ac6d819ad42f2981fa7320645d09914b8b1a73d2a8309f3daf72894853",
+    "src/kobra/structural_read.py": "0641dcc8d3bf715032624f49fed14b8afe807f83ba45a389154a67019ad53d12",
+    "src/kobra/rule_assignment.py": "d77a74ee79f15589981a5bdf0ce678fc03dbaaeff193393c825f558221a09b9a",
+    "src/kobra/knowledge_resolution.py": "e6c4285ad77c6ae1738d6ddbc87d9b0220b5402af193b44931780475d9b85924",
+    "src/kobra/confidence_gate.py": "3aa1f366894afcb119471c3db6fc3d38e245748641c081a1dd6ba217aa09ac80",
+    "tests/test_shared_arguments.py": "7806c8d89b2a30b2dad2fdce39e60710df19376521da121ae15392587766f791"
+  }
+}

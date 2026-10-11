@@ -1,0 +1,1121 @@
+[
+  {
+    "text": "Create and launch three VMs.",
+    "proposal": {
+      "source": "Create and launch three VMs.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs",
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create, configure and launch three VMs.",
+    "proposal": {
+      "source": "Create, configure and launch three VMs.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 8,
+            "end": 17,
+            "text": "configure",
+            "predicate": {
+              "start": 8,
+              "end": 17,
+              "text": "configure"
+            }
+          },
+          {
+            "id": "c3",
+            "start": 22,
+            "end": 38,
+            "text": "launch three VMs",
+            "predicate": {
+              "start": 22,
+              "end": 28,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": ", ",
+            "label": "connector"
+          },
+          {
+            "start": 8,
+            "end": 17,
+            "text": "configure",
+            "label": "chunk"
+          },
+          {
+            "start": 17,
+            "end": 22,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 22,
+            "end": 38,
+            "text": "launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 38,
+            "end": 39,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Download and install the package.",
+    "proposal": {
+      "source": "Download and install the package.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 8,
+            "text": "Download",
+            "predicate": {
+              "start": 0,
+              "end": 8,
+              "text": "Download"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 13,
+            "end": 32,
+            "text": "install the package",
+            "predicate": {
+              "start": 13,
+              "end": 20,
+              "text": "install"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 8,
+            "text": "Download",
+            "label": "chunk"
+          },
+          {
+            "start": 8,
+            "end": 13,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 13,
+            "end": 32,
+            "text": "install the package",
+            "label": "chunk"
+          },
+          {
+            "start": 32,
+            "end": 33,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Open and read the file.",
+    "proposal": {
+      "source": "Open and read the file.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 4,
+            "text": "Open",
+            "predicate": {
+              "start": 0,
+              "end": 4,
+              "text": "Open"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 9,
+            "end": 22,
+            "text": "read the file",
+            "predicate": {
+              "start": 9,
+              "end": 13,
+              "text": "read"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Open",
+            "label": "chunk"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 9,
+            "end": 22,
+            "text": "read the file",
+            "label": "chunk"
+          },
+          {
+            "start": 22,
+            "end": 23,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Read and print the report.",
+    "proposal": {
+      "source": "Read and print the report.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 4,
+            "text": "Read",
+            "predicate": {
+              "start": 0,
+              "end": 4,
+              "text": "Read"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 9,
+            "end": 25,
+            "text": "print the report",
+            "predicate": {
+              "start": 9,
+              "end": 14,
+              "text": "print"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Read",
+            "label": "chunk"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 9,
+            "end": 25,
+            "text": "print the report",
+            "label": "chunk"
+          },
+          {
+            "start": 25,
+            "end": 26,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch three VMs and restart them.",
+    "proposal": {
+      "source": "Create and launch three VMs and restart them.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs",
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          },
+          {
+            "id": "c3",
+            "start": 32,
+            "end": 44,
+            "text": "restart them",
+            "predicate": {
+              "start": 32,
+              "end": 39,
+              "text": "restart"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 27,
+            "text": "launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 27,
+            "end": 32,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 32,
+            "end": 44,
+            "text": "restart them",
+            "label": "chunk"
+          },
+          {
+            "start": 44,
+            "end": 45,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch the server.",
+    "proposal": {
+      "source": "Create and launch the server.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 28,
+            "text": "launch the server",
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 28,
+            "text": "launch the server",
+            "label": "chunk"
+          },
+          {
+            "start": 28,
+            "end": 29,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Stop and inspect the server.",
+    "proposal": {
+      "source": "Stop and inspect the server.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 4,
+            "text": "Stop",
+            "predicate": {
+              "start": 0,
+              "end": 4,
+              "text": "Stop"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 9,
+            "end": 27,
+            "text": "inspect the server",
+            "predicate": {
+              "start": 9,
+              "end": 16,
+              "text": "inspect"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Stop",
+            "label": "chunk"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 9,
+            "end": 27,
+            "text": "inspect the server",
+            "label": "chunk"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create or launch three VMs.",
+    "proposal": {
+      "source": "Create or launch three VMs.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 26,
+            "text": "Create or launch three VMs",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          }
+        ],
+        "issues": [
+          "scope_requires_separate_analysis"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 26,
+            "text": "Create or launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 26,
+            "end": 27,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch three VMs if approved.",
+    "proposal": {
+      "source": "Create and launch three VMs if approved.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 39,
+            "text": "launch three VMs if approved",
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content",
+          "scope_requires_separate_analysis"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 39,
+            "text": "launch three VMs if approved",
+            "label": "chunk"
+          },
+          {
+            "start": 39,
+            "end": 40,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create; launch three VMs.",
+    "proposal": {
+      "source": "Create; launch three VMs.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 8,
+            "end": 24,
+            "text": "launch three VMs",
+            "predicate": {
+              "start": 8,
+              "end": 14,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "; ",
+            "label": "connector"
+          },
+          {
+            "start": 8,
+            "end": 24,
+            "text": "launch three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 24,
+            "end": 25,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch.",
+    "proposal": {
+      "source": "Create and launch.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 17,
+            "text": "launch",
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 17,
+            "text": "launch",
+            "label": "chunk"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create three VMs and launch.",
+    "proposal": {
+      "source": "Create three VMs and launch.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 16,
+            "text": "Create three VMs",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 21,
+            "end": 27,
+            "text": "launch",
+            "predicate": {
+              "start": 21,
+              "end": 27,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 16,
+            "text": "Create three VMs",
+            "label": "chunk"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 21,
+            "end": 27,
+            "text": "launch",
+            "label": "chunk"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Open and read the file in the folder.",
+    "proposal": {
+      "source": "Open and read the file in the folder.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 4,
+            "text": "Open",
+            "predicate": {
+              "start": 0,
+              "end": 4,
+              "text": "Open"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 9,
+            "end": 36,
+            "text": "read the file in the folder",
+            "predicate": {
+              "start": 9,
+              "end": 13,
+              "text": "read"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Open",
+            "label": "chunk"
+          },
+          {
+            "start": 4,
+            "end": 9,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 9,
+            "end": 36,
+            "text": "read the file in the folder",
+            "label": "chunk"
+          },
+          {
+            "start": 36,
+            "end": 37,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "text": "Create and launch three VMs, one with Windows, one with Kali and one with Debian.",
+    "proposal": {
+      "source": "Create and launch three VMs, one with Windows, one with Kali and one with Debian.",
+      "frames": [],
+      "route": "unresolved",
+      "rules": [],
+      "reasons": [
+        "multiple predicates or clause attachment"
+      ],
+      "semantic_verified": false,
+      "version": "rule-assignment-3",
+      "surface_structure": {
+        "version": "surface-chunks-1",
+        "method": "deterministic_surface_rules",
+        "status": "unresolved",
+        "chunks": [
+          {
+            "id": "c1",
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "predicate": {
+              "start": 0,
+              "end": 6,
+              "text": "Create"
+            }
+          },
+          {
+            "id": "c2",
+            "start": 11,
+            "end": 80,
+            "text": "launch three VMs, one with Windows, one with Kali and one with Debian",
+            "predicate": {
+              "start": 11,
+              "end": 17,
+              "text": "launch"
+            }
+          }
+        ],
+        "issues": [
+          "missing_action_content"
+        ],
+        "protected_spans": [],
+        "source_ledger": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Create",
+            "label": "chunk"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": " and ",
+            "label": "connector"
+          },
+          {
+            "start": 11,
+            "end": 80,
+            "text": "launch three VMs, one with Windows, one with Kali and one with Debian",
+            "label": "chunk"
+          },
+          {
+            "start": 80,
+            "end": 81,
+            "text": ".",
+            "label": "suffix"
+          }
+        ]
+      }
+    }
+  }
+]

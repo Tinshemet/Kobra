@@ -1,0 +1,4901 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>READ shared objects</title><style>body{max-width:1000px;margin:40px auto;padding:20px;background:#101b2c;color:#edf3ff;font:17px/1.6 system-ui}article{border:1px solid #50647c;padding:20px;margin:20px 0;border-radius:12px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}summary{cursor:pointer}</style><h1>Shared objects across actions</h1><p>15 selected development cases: 7 newly code-supported, 8 remain unresolved. This is not a fresh accuracy sample. No live AI calls. Code-supported proposals still require external calibration.</p><p>Supported patterns preserve one noun-phrase span and one local entity. Creation stays distinct from current library identity. General scope and attachment remain unfinished.</p><article><h2>Create and launch three VMs.</h2><p>Before: unresolved → After: code</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create and launch three VMs.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 27,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create and launch three VMs.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;three VMs&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;three&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;launch&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;three VMs&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;three&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C016-trailing-shared-patient&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;donor_chunk&quot;: &quot;c2&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      }
+    ],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;number&quot;: &quot;plural&quot;,
+        &quot;quantity&quot;: 3,
+        &quot;introduced_in&quot;: &quot;c1&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;shared_by&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;
+        ]
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 6,
+        &quot;text&quot;: &quot;Create&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 6,
+        &quot;end&quot;: 11,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 11,
+        &quot;end&quot;: 27,
+        &quot;text&quot;: &quot;launch three VMs&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 27,
+        &quot;end&quot;: 28,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 27,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Create, configure and launch three VMs.</h2><p>Before: unresolved → After: code</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create, configure and launch three VMs.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;configure&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 8,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;configure&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c3&quot;,
+          &quot;start&quot;: 22,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 22,
+            &quot;end&quot;: 28,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;, &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;configure&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 17,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 22,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 38,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create, configure and launch three VMs.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;three VMs&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;three&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;configure&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;three VMs&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;three&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;launch&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;three VMs&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;three&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C016-trailing-shared-patient&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 29,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;configure&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 29,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c3&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 22,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;launch three VMs&quot;
+        },
+        &quot;frame&quot;: 2,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 29,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;donor_chunk&quot;: &quot;c3&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 29,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      },
+      {
+        &quot;frame&quot;: 1,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c2&quot;,
+        &quot;donor_chunk&quot;: &quot;c3&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 29,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      }
+    ],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 29,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;number&quot;: &quot;plural&quot;,
+        &quot;quantity&quot;: 3,
+        &quot;introduced_in&quot;: &quot;c1&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;shared_by&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;,
+          &quot;c3&quot;
+        ]
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      },
+      {
+        &quot;from_chunk&quot;: &quot;c2&quot;,
+        &quot;to_chunk&quot;: &quot;c3&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 6,
+        &quot;text&quot;: &quot;Create&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 6,
+        &quot;end&quot;: 8,
+        &quot;text&quot;: &quot;, &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 8,
+        &quot;end&quot;: 17,
+        &quot;text&quot;: &quot;configure&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 17,
+        &quot;end&quot;: 22,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 22,
+        &quot;end&quot;: 38,
+        &quot;text&quot;: &quot;launch three VMs&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 38,
+        &quot;end&quot;: 39,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;configure&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 8,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;configure&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c3&quot;,
+          &quot;start&quot;: 22,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 22,
+            &quot;end&quot;: 28,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;, &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;configure&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 17,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 22,
+          &quot;end&quot;: 38,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 38,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Download and install the package.</h2><p>Before: unresolved → After: code</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Download and install the package.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;Download&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 8,
+            &quot;text&quot;: &quot;Download&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 13,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot;install the package&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 13,
+            &quot;end&quot;: 20,
+            &quot;text&quot;: &quot;install&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;Download&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 13,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot;install the package&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 32,
+          &quot;end&quot;: 33,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Download and install the package.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Download&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the package&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;install&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the package&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C016-trailing-shared-patient&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;Download&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 21,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot;the package&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 13,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot;install the package&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 21,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot;the package&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;donor_chunk&quot;: &quot;c2&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 21,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot;the package&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      }
+    ],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 21,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot;the package&quot;
+        },
+        &quot;number&quot;: &quot;singular&quot;,
+        &quot;quantity&quot;: null,
+        &quot;introduced_in&quot;: &quot;c1&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: [],
+        &quot;shared_by&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;
+        ]
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 8,
+        &quot;text&quot;: &quot;Download&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 8,
+        &quot;end&quot;: 13,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 13,
+        &quot;end&quot;: 32,
+        &quot;text&quot;: &quot;install the package&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 32,
+        &quot;end&quot;: 33,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;Download&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 8,
+            &quot;text&quot;: &quot;Download&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 13,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot;install the package&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 13,
+            &quot;end&quot;: 20,
+            &quot;text&quot;: &quot;install&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;Download&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 13,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 13,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot;install the package&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 32,
+          &quot;end&quot;: 33,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Open and read the file.</h2><p>Before: unresolved → After: code</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Open and read the file.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Open&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;read the file&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 9,
+            &quot;end&quot;: 13,
+            &quot;text&quot;: &quot;read&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 4,
+          &quot;end&quot;: 9,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;read the file&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 22,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Open and read the file.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Open&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the file&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;read&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the file&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C016-trailing-shared-patient&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 14,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;the file&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;read the file&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 14,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;the file&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;donor_chunk&quot;: &quot;c2&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 14,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;the file&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      }
+    ],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 14,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;the file&quot;
+        },
+        &quot;number&quot;: &quot;singular&quot;,
+        &quot;quantity&quot;: null,
+        &quot;introduced_in&quot;: &quot;c1&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: [],
+        &quot;shared_by&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;
+        ]
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 4,
+        &quot;text&quot;: &quot;Open&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 4,
+        &quot;end&quot;: 9,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 9,
+        &quot;end&quot;: 22,
+        &quot;text&quot;: &quot;read the file&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 22,
+        &quot;end&quot;: 23,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Open&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;read the file&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 9,
+            &quot;end&quot;: 13,
+            &quot;text&quot;: &quot;read&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 4,
+          &quot;end&quot;: 9,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;read the file&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 22,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Read and print the report.</h2><p>Before: unresolved → After: code</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Read and print the report.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Read&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Read&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;print the report&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 9,
+            &quot;end&quot;: 14,
+            &quot;text&quot;: &quot;print&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Read&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 4,
+          &quot;end&quot;: 9,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;print the report&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 25,
+          &quot;end&quot;: 26,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Read and print the report.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Read&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the report&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;print&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the report&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C016-trailing-shared-patient&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Read&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 15,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;the report&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;print the report&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 15,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;the report&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;donor_chunk&quot;: &quot;c2&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 15,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;the report&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      }
+    ],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 15,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;the report&quot;
+        },
+        &quot;number&quot;: &quot;singular&quot;,
+        &quot;quantity&quot;: null,
+        &quot;introduced_in&quot;: &quot;c1&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: [],
+        &quot;shared_by&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;
+        ]
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 4,
+        &quot;text&quot;: &quot;Read&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 4,
+        &quot;end&quot;: 9,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 9,
+        &quot;end&quot;: 25,
+        &quot;text&quot;: &quot;print the report&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 25,
+        &quot;end&quot;: 26,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Read&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Read&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;print the report&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 9,
+            &quot;end&quot;: 14,
+            &quot;text&quot;: &quot;print&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Read&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 4,
+          &quot;end&quot;: 9,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;print the report&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 25,
+          &quot;end&quot;: 26,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Create and launch three VMs and restart them.</h2><p>Before: unresolved → After: code</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create and launch three VMs and restart them.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c3&quot;,
+          &quot;start&quot;: 32,
+          &quot;end&quot;: 44,
+          &quot;text&quot;: &quot;restart them&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 32,
+            &quot;end&quot;: 39,
+            &quot;text&quot;: &quot;restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 27,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 32,
+          &quot;end&quot;: 44,
+          &quot;text&quot;: &quot;restart them&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 44,
+          &quot;end&quot;: 45,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create and launch three VMs and restart them.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;three VMs&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;three&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;launch&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;three VMs&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;three&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;restart&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;them&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C014-unique-local-number-agreement&quot;,
+      &quot;C016-trailing-shared-patient&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c3&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 32,
+          &quot;end&quot;: 44,
+          &quot;text&quot;: &quot;restart them&quot;
+        },
+        &quot;frame&quot;: 2,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 40,
+          &quot;end&quot;: 44,
+          &quot;text&quot;: &quot;them&quot;
+        }
+      }
+    ],
+    &quot;shared_arguments&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;donor_chunk&quot;: &quot;c2&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      }
+    ],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;number&quot;: &quot;plural&quot;,
+        &quot;quantity&quot;: 3,
+        &quot;introduced_in&quot;: &quot;c1&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;shared_by&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;
+        ]
+      }
+    ],
+    &quot;local_references&quot;: [
+      {
+        &quot;frame&quot;: 2,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: {
+          &quot;start&quot;: 40,
+          &quot;end&quot;: 44,
+          &quot;text&quot;: &quot;them&quot;
+        },
+        &quot;candidates&quot;: [
+          &quot;e1&quot;
+        ],
+        &quot;status&quot;: &quot;resolved&quot;,
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      },
+      {
+        &quot;from_chunk&quot;: &quot;c2&quot;,
+        &quot;to_chunk&quot;: &quot;c3&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 6,
+        &quot;text&quot;: &quot;Create&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 6,
+        &quot;end&quot;: 11,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 11,
+        &quot;end&quot;: 27,
+        &quot;text&quot;: &quot;launch three VMs&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 27,
+        &quot;end&quot;: 32,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 32,
+        &quot;end&quot;: 44,
+        &quot;text&quot;: &quot;restart them&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 44,
+        &quot;end&quot;: 45,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c3&quot;,
+          &quot;start&quot;: 32,
+          &quot;end&quot;: 44,
+          &quot;text&quot;: &quot;restart them&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 32,
+            &quot;end&quot;: 39,
+            &quot;text&quot;: &quot;restart&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 27,
+          &quot;end&quot;: 32,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 32,
+          &quot;end&quot;: 44,
+          &quot;text&quot;: &quot;restart them&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 44,
+          &quot;end&quot;: 45,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Create and launch the server.</h2><p>Before: unresolved → After: code</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create and launch the server.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;launch the server&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;launch the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 28,
+          &quot;end&quot;: 29,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create and launch the server.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the server&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;launch&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the server&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C016-trailing-shared-patient&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;the server&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;launch the server&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;the server&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;donor_chunk&quot;: &quot;c2&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;the server&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      }
+    ],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;the server&quot;
+        },
+        &quot;number&quot;: &quot;singular&quot;,
+        &quot;quantity&quot;: null,
+        &quot;introduced_in&quot;: &quot;c1&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;shared_by&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;
+        ]
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 6,
+        &quot;text&quot;: &quot;Create&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 6,
+        &quot;end&quot;: 11,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 11,
+        &quot;end&quot;: 28,
+        &quot;text&quot;: &quot;launch the server&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 28,
+        &quot;end&quot;: 29,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;launch the server&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;launch the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 28,
+          &quot;end&quot;: 29,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Stop and inspect the server.</h2><p>Before: unresolved → After: unresolved</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Stop and inspect the server.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Stop&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Stop&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;inspect the server&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 9,
+            &quot;end&quot;: 16,
+            &quot;text&quot;: &quot;inspect&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Stop&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 4,
+          &quot;end&quot;: 9,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;inspect the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 27,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Stop and inspect the server.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Stop&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;NONE&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;inspect&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the server&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;
+    ],
+    &quot;reasons&quot;: [
+      &quot;c1:unsupported_shared_patient&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Stop&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: []
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;inspect the server&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 17,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;the server&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 17,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;the server&quot;
+        },
+        &quot;number&quot;: &quot;singular&quot;,
+        &quot;quantity&quot;: null,
+        &quot;introduced_in&quot;: &quot;c2&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: []
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 4,
+        &quot;text&quot;: &quot;Stop&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 4,
+        &quot;end&quot;: 9,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 9,
+        &quot;end&quot;: 27,
+        &quot;text&quot;: &quot;inspect the server&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 27,
+        &quot;end&quot;: 28,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Stop&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Stop&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;inspect the server&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 9,
+            &quot;end&quot;: 16,
+            &quot;text&quot;: &quot;inspect&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Stop&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 4,
+          &quot;end&quot;: 9,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;inspect the server&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 27,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Create or launch three VMs.</h2><p>Before: unresolved → After: unresolved</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create or launch three VMs.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 26,
+          &quot;text&quot;: &quot;Create or launch three VMs&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;scope_requires_separate_analysis&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 26,
+          &quot;text&quot;: &quot;Create or launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 26,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create or launch three VMs.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 26,
+          &quot;text&quot;: &quot;Create or launch three VMs&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;scope_requires_separate_analysis&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 26,
+          &quot;text&quot;: &quot;Create or launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 26,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Create and launch three VMs if approved.</h2><p>Before: unresolved → After: unresolved</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create and launch three VMs if approved.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;launch three VMs if approved&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;,
+        &quot;scope_requires_separate_analysis&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;launch three VMs if approved&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 39,
+          &quot;end&quot;: 40,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create and launch three VMs if approved.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;launch three VMs if approved&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;scope_requires_separate_analysis&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;launch three VMs if approved&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 39,
+          &quot;end&quot;: 40,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Create; launch three VMs.</h2><p>Before: unresolved → After: unresolved</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create; launch three VMs.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 24,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 8,
+            &quot;end&quot;: 14,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;; &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 24,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 24,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create; launch three VMs.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;NONE&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;launch&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;three VMs&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;three&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;
+    ],
+    &quot;reasons&quot;: [
+      &quot;c1:unsupported_shared_patient&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: []
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 24,
+          &quot;text&quot;: &quot;launch three VMs&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 15,
+          &quot;end&quot;: 24,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 15,
+          &quot;end&quot;: 24,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;number&quot;: &quot;plural&quot;,
+        &quot;quantity&quot;: 3,
+        &quot;introduced_in&quot;: &quot;c2&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: []
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 6,
+        &quot;text&quot;: &quot;Create&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 6,
+        &quot;end&quot;: 8,
+        &quot;text&quot;: &quot;; &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 8,
+        &quot;end&quot;: 24,
+        &quot;text&quot;: &quot;launch three VMs&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 24,
+        &quot;end&quot;: 25,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 24,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 8,
+            &quot;end&quot;: 14,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;; &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 8,
+          &quot;end&quot;: 24,
+          &quot;text&quot;: &quot;launch three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 24,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Create and launch.</h2><p>Before: unresolved → After: unresolved</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create and launch.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;launch&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;launch&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 17,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create and launch.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;launch&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 17,
+          &quot;text&quot;: &quot;launch&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 17,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Create three VMs and launch.</h2><p>Before: unresolved → After: unresolved</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create three VMs and launch.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create three VMs&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 21,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 21,
+            &quot;end&quot;: 27,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 16,
+          &quot;end&quot;: 21,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 21,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 27,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create three VMs and launch.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create three VMs&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 21,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 21,
+            &quot;end&quot;: 27,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 16,
+          &quot;text&quot;: &quot;Create three VMs&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 16,
+          &quot;end&quot;: 21,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 21,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;launch&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 27,
+          &quot;end&quot;: 28,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Open and read the file in the folder.</h2><p>Before: unresolved → After: unresolved</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Open and read the file in the folder.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Open&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 36,
+          &quot;text&quot;: &quot;read the file in the folder&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 9,
+            &quot;end&quot;: 13,
+            &quot;text&quot;: &quot;read&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 4,
+          &quot;end&quot;: 9,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 36,
+          &quot;text&quot;: &quot;read the file in the folder&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 36,
+          &quot;end&quot;: 37,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Open and read the file in the folder.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Open&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;NONE&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;read&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;the file&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;
+    ],
+    &quot;reasons&quot;: [
+      &quot;c2:unresolved_attachment&quot;,
+      &quot;c1:unsupported_shared_patient&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: []
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 36,
+          &quot;text&quot;: &quot;read the file in the folder&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [
+          {
+            &quot;kind&quot;: &quot;unresolved_attachment&quot;,
+            &quot;span&quot;: {
+              &quot;start&quot;: 22,
+              &quot;end&quot;: 36,
+              &quot;text&quot;: &quot; in the folder&quot;
+            }
+          }
+        ],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 14,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;the file&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 14,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;the file&quot;
+        },
+        &quot;number&quot;: &quot;singular&quot;,
+        &quot;quantity&quot;: null,
+        &quot;introduced_in&quot;: &quot;c2&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: []
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 4,
+        &quot;text&quot;: &quot;Open&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 4,
+        &quot;end&quot;: 9,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 9,
+        &quot;end&quot;: 36,
+        &quot;text&quot;: &quot;read the file in the folder&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 36,
+        &quot;end&quot;: 37,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 4,
+            &quot;text&quot;: &quot;Open&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 36,
+          &quot;text&quot;: &quot;read the file in the folder&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 9,
+            &quot;end&quot;: 13,
+            &quot;text&quot;: &quot;read&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 4,
+          &quot;end&quot;: 9,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 36,
+          &quot;text&quot;: &quot;read the file in the folder&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 36,
+          &quot;end&quot;: 37,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><article><h2>Create and launch three VMs, one with Windows, one with Kali and one with Debian.</h2><p>Before: unresolved → After: unresolved</p><details><summary>Actual before and after JSON</summary><pre>{
+  &quot;before&quot;: {
+    &quot;source&quot;: &quot;Create and launch three VMs, one with Windows, one with Kali and one with Debian.&quot;,
+    &quot;frames&quot;: [],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [],
+    &quot;reasons&quot;: [
+      &quot;multiple predicates or clause attachment&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-3&quot;,
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-1&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;unresolved&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 80,
+          &quot;text&quot;: &quot;launch three VMs, one with Windows, one with Kali and one with Debian&quot;,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [
+        &quot;missing_action_content&quot;
+      ],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 80,
+          &quot;text&quot;: &quot;launch three VMs, one with Windows, one with Kali and one with Debian&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 80,
+          &quot;end&quot;: 81,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    }
+  },
+  &quot;after&quot;: {
+    &quot;source&quot;: &quot;Create and launch three VMs, one with Windows, one with Kali and one with Debian.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;NONE&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;launch&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;three VMs&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;three&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;unresolved&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C012-counted-member-specifications&quot;
+    ],
+    &quot;reasons&quot;: [
+      &quot;c1:unsupported_shared_patient&quot;
+    ],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: []
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 80,
+          &quot;text&quot;: &quot;launch three VMs, one with Windows, one with Kali and one with Debian&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [
+          {
+            &quot;id&quot;: &quot;c2.member1&quot;,
+            &quot;quantity&quot;: 1,
+            &quot;span&quot;: {
+              &quot;start&quot;: 29,
+              &quot;end&quot;: 45,
+              &quot;text&quot;: &quot;one with Windows&quot;
+            },
+            &quot;specification&quot;: {
+              &quot;start&quot;: 38,
+              &quot;end&quot;: 45,
+              &quot;text&quot;: &quot;Windows&quot;
+            }
+          },
+          {
+            &quot;id&quot;: &quot;c2.member2&quot;,
+            &quot;quantity&quot;: 1,
+            &quot;span&quot;: {
+              &quot;start&quot;: 47,
+              &quot;end&quot;: 60,
+              &quot;text&quot;: &quot;one with Kali&quot;
+            },
+            &quot;specification&quot;: {
+              &quot;start&quot;: 56,
+              &quot;end&quot;: 60,
+              &quot;text&quot;: &quot;Kali&quot;
+            }
+          },
+          {
+            &quot;id&quot;: &quot;c2.member3&quot;,
+            &quot;quantity&quot;: 1,
+            &quot;span&quot;: {
+              &quot;start&quot;: 65,
+              &quot;end&quot;: 80,
+              &quot;text&quot;: &quot;one with Debian&quot;
+            },
+            &quot;specification&quot;: {
+              &quot;start&quot;: 74,
+              &quot;end&quot;: 80,
+              &quot;text&quot;: &quot;Debian&quot;
+            }
+          }
+        ],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;shared_arguments&quot;: [],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 27,
+          &quot;text&quot;: &quot;three VMs&quot;
+        },
+        &quot;number&quot;: &quot;plural&quot;,
+        &quot;quantity&quot;: 3,
+        &quot;introduced_in&quot;: &quot;c2&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [
+          {
+            &quot;id&quot;: &quot;c2.member1&quot;,
+            &quot;quantity&quot;: 1,
+            &quot;span&quot;: {
+              &quot;start&quot;: 29,
+              &quot;end&quot;: 45,
+              &quot;text&quot;: &quot;one with Windows&quot;
+            },
+            &quot;specification&quot;: {
+              &quot;start&quot;: 38,
+              &quot;end&quot;: 45,
+              &quot;text&quot;: &quot;Windows&quot;
+            }
+          },
+          {
+            &quot;id&quot;: &quot;c2.member2&quot;,
+            &quot;quantity&quot;: 1,
+            &quot;span&quot;: {
+              &quot;start&quot;: 47,
+              &quot;end&quot;: 60,
+              &quot;text&quot;: &quot;one with Kali&quot;
+            },
+            &quot;specification&quot;: {
+              &quot;start&quot;: 56,
+              &quot;end&quot;: 60,
+              &quot;text&quot;: &quot;Kali&quot;
+            }
+          },
+          {
+            &quot;id&quot;: &quot;c2.member3&quot;,
+            &quot;quantity&quot;: 1,
+            &quot;span&quot;: {
+              &quot;start&quot;: 65,
+              &quot;end&quot;: 80,
+              &quot;text&quot;: &quot;one with Debian&quot;
+            },
+            &quot;specification&quot;: {
+              &quot;start&quot;: 74,
+              &quot;end&quot;: 80,
+              &quot;text&quot;: &quot;Debian&quot;
+            }
+          }
+        ],
+        &quot;created_by&quot;: []
+      }
+    ],
+    &quot;local_references&quot;: [],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 6,
+        &quot;text&quot;: &quot;Create&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 6,
+        &quot;end&quot;: 11,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 11,
+        &quot;end&quot;: 80,
+        &quot;text&quot;: &quot;launch three VMs, one with Windows, one with Kali and one with Debian&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 80,
+        &quot;end&quot;: 81,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 80,
+          &quot;text&quot;: &quot;launch three VMs, one with Windows, one with Kali and one with Debian&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 80,
+          &quot;text&quot;: &quot;launch three VMs, one with Windows, one with Kali and one with Debian&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 80,
+          &quot;end&quot;: 81,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  }
+}</pre></details></article><h2>Archive, library and ledger together</h2><p>Two old objects named Alpha remain in WORLD. The new Alpha stays a sentence-local description, its archive type is retained, and the previous turn survives. Final route is ASK because calibration is absent.</p><pre>{
+  &quot;route&quot;: &quot;ASK&quot;,
+  &quot;source&quot;: &quot;Create and launch Alpha, then delete it.&quot;,
+  &quot;proposal&quot;: {
+    &quot;source&quot;: &quot;Create and launch Alpha, then delete it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;Alpha&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;launch&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;Alpha&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;delete&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C014-unique-local-number-agreement&quot;,
+      &quot;C016-trailing-shared-patient&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Alpha&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;launch Alpha&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Alpha&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c3&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 30,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;delete it&quot;
+        },
+        &quot;frame&quot;: 2,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 37,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;it&quot;
+        }
+      }
+    ],
+    &quot;shared_arguments&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;donor_chunk&quot;: &quot;c2&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Alpha&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      }
+    ],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Alpha&quot;
+        },
+        &quot;number&quot;: &quot;singular&quot;,
+        &quot;quantity&quot;: null,
+        &quot;introduced_in&quot;: &quot;c1&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;shared_by&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;
+        ]
+      }
+    ],
+    &quot;local_references&quot;: [
+      {
+        &quot;frame&quot;: 2,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: {
+          &quot;start&quot;: 37,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;it&quot;
+        },
+        &quot;candidates&quot;: [
+          &quot;e1&quot;
+        ],
+        &quot;status&quot;: &quot;resolved&quot;,
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      },
+      {
+        &quot;from_chunk&quot;: &quot;c2&quot;,
+        &quot;to_chunk&quot;: &quot;c3&quot;,
+        &quot;kind&quot;: &quot;explicit_then&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 6,
+        &quot;text&quot;: &quot;Create&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 6,
+        &quot;end&quot;: 11,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 11,
+        &quot;end&quot;: 23,
+        &quot;text&quot;: &quot;launch Alpha&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 23,
+        &quot;end&quot;: 30,
+        &quot;text&quot;: &quot;, then &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 30,
+        &quot;end&quot;: 39,
+        &quot;text&quot;: &quot;delete it&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 39,
+        &quot;end&quot;: 40,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;launch Alpha&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c3&quot;,
+          &quot;start&quot;: 30,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;delete it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 30,
+            &quot;end&quot;: 36,
+            &quot;text&quot;: &quot;delete&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;launch Alpha&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 23,
+          &quot;end&quot;: 30,
+          &quot;text&quot;: &quot;, then &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 30,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;delete it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 39,
+          &quot;end&quot;: 40,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  },
+  &quot;reasons&quot;: [
+    &quot;uncalibrated_cohort&quot;
+  ],
+  &quot;external_score&quot;: null,
+  &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+  &quot;calibration_evidence&quot;: null,
+  &quot;cohort&quot;: &quot;code:C010-imperative-coordination+C014-unique-local-number-agreement+C016-trailing-shared-patient:assignment:1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732:knowledge-resolution-2:841e430078771ffc60c53829f23ea02e60635d4499b08af1fd453b3b5af75349&quot;,
+  &quot;model_self_confidence_used&quot;: false,
+  &quot;context_ledger&quot;: {
+    &quot;version&quot;: &quot;context-ledger-1&quot;,
+    &quot;previous_turns&quot;: [
+      {
+        &quot;id&quot;: &quot;u1&quot;,
+        &quot;role&quot;: &quot;user&quot;,
+        &quot;content&quot;: &quot;Alpha was the old test machine.&quot;,
+        &quot;sha256&quot;: &quot;0e0a349017459a6ffa8ab4f09bb26bc9cafde971d83f9fab15877fdac31d9ca2&quot;
+      }
+    ],
+    &quot;world_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;old-1&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;Alpha&quot;
+        },
+        &quot;mentions&quot;: [
+          {
+            &quot;turn_id&quot;: &quot;u1&quot;,
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 5,
+            &quot;text&quot;: &quot;Alpha&quot;
+          }
+        ],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      },
+      {
+        &quot;id&quot;: &quot;old-2&quot;,
+        &quot;record&quot;: {
+          &quot;name&quot;: &quot;ALPHA&quot;
+        },
+        &quot;mentions&quot;: [
+          {
+            &quot;turn_id&quot;: &quot;u1&quot;,
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 5,
+            &quot;text&quot;: &quot;Alpha&quot;
+          }
+        ],
+        &quot;provenance&quot;: &quot;caller_supplied_WORLD&quot;,
+        &quot;truth_status&quot;: &quot;not_verified_by_READ&quot;
+      }
+    ],
+    &quot;claims&quot;: [],
+    &quot;history_supplied&quot;: true,
+    &quot;world_supplied&quot;: true,
+    &quot;semantics&quot;: &quot;recorded evidence and caller assertions, not inferred or verified facts&quot;
+  },
+  &quot;assignment_source&quot;: &quot;code&quot;,
+  &quot;code_proposal&quot;: {
+    &quot;source&quot;: &quot;Create and launch Alpha, then delete it.&quot;,
+    &quot;frames&quot;: [
+      {
+        &quot;predicate&quot;: &quot;Create&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;Alpha&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;launch&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;Alpha&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      },
+      {
+        &quot;predicate&quot;: &quot;delete&quot;,
+        &quot;agent&quot;: &quot;NONE&quot;,
+        &quot;patient&quot;: &quot;it&quot;,
+        &quot;recipient&quot;: &quot;NONE&quot;,
+        &quot;negation&quot;: &quot;NONE&quot;,
+        &quot;condition&quot;: &quot;NONE&quot;,
+        &quot;time&quot;: &quot;NONE&quot;,
+        &quot;quantity&quot;: &quot;NONE&quot;,
+        &quot;attribution&quot;: &quot;NONE&quot;,
+        &quot;modality&quot;: &quot;NONE&quot;,
+        &quot;act&quot;: &quot;request&quot;
+      }
+    ],
+    &quot;route&quot;: &quot;code&quot;,
+    &quot;rules&quot;: [
+      &quot;C010-imperative-coordination&quot;,
+      &quot;C014-unique-local-number-agreement&quot;,
+      &quot;C016-trailing-shared-patient&quot;
+    ],
+    &quot;reasons&quot;: [],
+    &quot;semantic_verified&quot;: false,
+    &quot;version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;chunking_method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;chunks&quot;: [
+      {
+        &quot;id&quot;: &quot;c1&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;
+        },
+        &quot;frame&quot;: 0,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Alpha&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;launch Alpha&quot;
+        },
+        &quot;frame&quot;: 1,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Alpha&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;c3&quot;,
+        &quot;kind&quot;: &quot;action&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 30,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;delete it&quot;
+        },
+        &quot;frame&quot;: 2,
+        &quot;modifiers&quot;: [],
+        &quot;members&quot;: [],
+        &quot;patient_span&quot;: {
+          &quot;start&quot;: 37,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;it&quot;
+        }
+      }
+    ],
+    &quot;shared_arguments&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;donor_chunk&quot;: &quot;c2&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Alpha&quot;
+        },
+        &quot;entity_id&quot;: &quot;e1&quot;,
+        &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+      }
+    ],
+    &quot;local_entities&quot;: [
+      {
+        &quot;id&quot;: &quot;e1&quot;,
+        &quot;span&quot;: {
+          &quot;start&quot;: 18,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Alpha&quot;
+        },
+        &quot;number&quot;: &quot;singular&quot;,
+        &quot;quantity&quot;: null,
+        &quot;introduced_in&quot;: &quot;c1&quot;,
+        &quot;status&quot;: &quot;sentence_local_description_not_WORLD_object&quot;,
+        &quot;members&quot;: [],
+        &quot;created_by&quot;: [
+          &quot;c1&quot;
+        ],
+        &quot;shared_by&quot;: [
+          &quot;c1&quot;,
+          &quot;c2&quot;
+        ]
+      }
+    ],
+    &quot;local_references&quot;: [
+      {
+        &quot;frame&quot;: 2,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: {
+          &quot;start&quot;: 37,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;it&quot;
+        },
+        &quot;candidates&quot;: [
+          &quot;e1&quot;
+        ],
+        &quot;status&quot;: &quot;resolved&quot;,
+        &quot;entity_id&quot;: &quot;e1&quot;
+      }
+    ],
+    &quot;chunk_relations&quot;: [
+      {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      },
+      {
+        &quot;from_chunk&quot;: &quot;c2&quot;,
+        &quot;to_chunk&quot;: &quot;c3&quot;,
+        &quot;kind&quot;: &quot;explicit_then&quot;
+      }
+    ],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 6,
+        &quot;text&quot;: &quot;Create&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 6,
+        &quot;end&quot;: 11,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 11,
+        &quot;end&quot;: 23,
+        &quot;text&quot;: &quot;launch Alpha&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 23,
+        &quot;end&quot;: 30,
+        &quot;text&quot;: &quot;, then &quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      },
+      {
+        &quot;start&quot;: 30,
+        &quot;end&quot;: 39,
+        &quot;text&quot;: &quot;delete it&quot;,
+        &quot;label&quot;: &quot;action_chunk&quot;
+      },
+      {
+        &quot;start&quot;: 39,
+        &quot;end&quot;: 40,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;label&quot;: &quot;connective_or_unassigned&quot;
+      }
+    ],
+    &quot;surface_structure&quot;: {
+      &quot;version&quot;: &quot;surface-chunks-2&quot;,
+      &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+      &quot;status&quot;: &quot;supported&quot;,
+      &quot;chunks&quot;: [
+        {
+          &quot;id&quot;: &quot;c1&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;argument_omitted&quot;: true,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 6,
+            &quot;text&quot;: &quot;Create&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c2&quot;,
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;launch Alpha&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 17,
+            &quot;text&quot;: &quot;launch&quot;
+          }
+        },
+        {
+          &quot;id&quot;: &quot;c3&quot;,
+          &quot;start&quot;: 30,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;delete it&quot;,
+          &quot;argument_omitted&quot;: false,
+          &quot;predicate&quot;: {
+            &quot;start&quot;: 30,
+            &quot;end&quot;: 36,
+            &quot;text&quot;: &quot;delete&quot;
+          }
+        }
+      ],
+      &quot;issues&quot;: [],
+      &quot;protected_spans&quot;: [],
+      &quot;source_ledger&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 6,
+          &quot;text&quot;: &quot;Create&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 6,
+          &quot;end&quot;: 11,
+          &quot;text&quot;: &quot; and &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 11,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;launch Alpha&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 23,
+          &quot;end&quot;: 30,
+          &quot;text&quot;: &quot;, then &quot;,
+          &quot;label&quot;: &quot;connector&quot;
+        },
+        {
+          &quot;start&quot;: 30,
+          &quot;end&quot;: 39,
+          &quot;text&quot;: &quot;delete it&quot;,
+          &quot;label&quot;: &quot;chunk&quot;
+        },
+        {
+          &quot;start&quot;: 39,
+          &quot;end&quot;: 40,
+          &quot;text&quot;: &quot;.&quot;,
+          &quot;label&quot;: &quot;suffix&quot;
+        }
+      ]
+    },
+    &quot;configuration_id&quot;: &quot;1395d7851a0782a6e8fb484efad1f7cde8ff966d7a9f5fc19a63b21545c3e732&quot;
+  },
+  &quot;knowledge_evidence&quot;: {
+    &quot;version&quot;: &quot;knowledge-resolution-2&quot;,
+    &quot;revision&quot;: &quot;841e430078771ffc60c53829f23ea02e60635d4499b08af1fd453b3b5af75349&quot;,
+    &quot;snapshot&quot;: {
+      &quot;version&quot;: &quot;knowledge-snapshot-1&quot;,
+      &quot;sources&quot;: {
+        &quot;live&quot;: {
+          &quot;revision&quot;: &quot;shared-fixture-live-1&quot;,
+          &quot;source&quot;: &quot;explicit-fixture&quot;,
+          &quot;status&quot;: &quot;current&quot;,
+          &quot;entities&quot;: {
+            &quot;old-1&quot;: {
+              &quot;name&quot;: &quot;Alpha&quot;
+            },
+            &quot;old-2&quot;: {
+              &quot;name&quot;: &quot;ALPHA&quot;
+            }
+          }
+        },
+        &quot;archive&quot;: {
+          &quot;revision&quot;: &quot;shared-fixture-archive-1&quot;,
+          &quot;source&quot;: &quot;explicit-fixture&quot;,
+          &quot;records&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;word&quot;: &quot;Alpha&quot;,
+              &quot;type&quot;: &quot;class&quot;,
+              &quot;kind&quot;: &quot;vm&quot;,
+              &quot;source&quot;: &quot;told&quot;,
+              &quot;status&quot;: &quot;ratified&quot;,
+              &quot;provenance&quot;: &quot;explicit-fixture&quot;
+            }
+          ]
+        }
+      },
+      &quot;revision&quot;: {
+        &quot;live&quot;: &quot;shared-fixture-live-1&quot;,
+        &quot;archive&quot;: &quot;shared-fixture-archive-1&quot;,
+        &quot;sha256&quot;: &quot;3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1&quot;
+      },
+      &quot;freshness&quot;: &quot;caller_attestation_only&quot;
+    },
+    &quot;matches&quot;: [
+      {
+        &quot;frame&quot;: 0,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;Alpha&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;Alpha&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;shared-fixture-live-1&quot;,
+            &quot;archive&quot;: &quot;shared-fixture-archive-1&quot;,
+            &quot;sha256&quot;: &quot;3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [
+          &quot;old-1&quot;,
+          &quot;old-2&quot;
+        ],
+        &quot;creates_description&quot;: true
+      },
+      {
+        &quot;frame&quot;: 1,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;Alpha&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;Alpha&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;shared-fixture-live-1&quot;,
+            &quot;archive&quot;: &quot;shared-fixture-archive-1&quot;,
+            &quot;sha256&quot;: &quot;3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [
+          &quot;old-1&quot;,
+          &quot;old-2&quot;
+        ],
+        &quot;creates_description&quot;: true
+      },
+      {
+        &quot;frame&quot;: 2,
+        &quot;slot&quot;: &quot;patient&quot;,
+        &quot;mention&quot;: &quot;it&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;it&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;unknown&quot;,
+          &quot;selected&quot;: [],
+          &quot;candidates&quot;: [],
+          &quot;evidence&quot;: [],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;shared-fixture-live-1&quot;,
+            &quot;archive&quot;: &quot;shared-fixture-archive-1&quot;,
+            &quot;sha256&quot;: &quot;3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1&quot;
+          }
+        },
+        &quot;live_candidates&quot;: [],
+        &quot;creates_description&quot;: true
+      }
+    ],
+    &quot;bindings&quot;: [],
+    &quot;lexical_mentions&quot;: [
+      {
+        &quot;start&quot;: 18,
+        &quot;end&quot;: 23,
+        &quot;text&quot;: &quot;Alpha&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;Alpha&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;ambiguous&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;old-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;old-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;ALPHA&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;old-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;old-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;ALPHA&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;old-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;old-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;ALPHA&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;shared-fixture-live-1&quot;,
+            &quot;archive&quot;: &quot;shared-fixture-archive-1&quot;,
+            &quot;sha256&quot;: &quot;3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1&quot;
+          }
+        }
+      },
+      {
+        &quot;start&quot;: 18,
+        &quot;end&quot;: 23,
+        &quot;text&quot;: &quot;Alpha&quot;,
+        &quot;lookup&quot;: {
+          &quot;term&quot;: &quot;Alpha&quot;,
+          &quot;owner&quot;: null,
+          &quot;status&quot;: &quot;ambiguous&quot;,
+          &quot;selected&quot;: [
+            {
+              &quot;id&quot;: &quot;old-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;old-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;ALPHA&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;candidates&quot;: [
+            {
+              &quot;id&quot;: &quot;old-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;old-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;ALPHA&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;evidence&quot;: [
+            {
+              &quot;id&quot;: &quot;old-1&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;Alpha&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;old-2&quot;,
+              &quot;layer&quot;: &quot;live&quot;,
+              &quot;record&quot;: {
+                &quot;name&quot;: &quot;ALPHA&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            },
+            {
+              &quot;id&quot;: &quot;definition-1&quot;,
+              &quot;layer&quot;: &quot;archive&quot;,
+              &quot;record&quot;: {
+                &quot;id&quot;: &quot;definition-1&quot;,
+                &quot;word&quot;: &quot;Alpha&quot;,
+                &quot;type&quot;: &quot;class&quot;,
+                &quot;kind&quot;: &quot;vm&quot;,
+                &quot;source&quot;: &quot;told&quot;,
+                &quot;status&quot;: &quot;ratified&quot;,
+                &quot;provenance&quot;: &quot;explicit-fixture&quot;
+              },
+              &quot;eligible&quot;: true,
+              &quot;reasons&quot;: []
+            }
+          ],
+          &quot;issues&quot;: [],
+          &quot;revision&quot;: {
+            &quot;live&quot;: &quot;shared-fixture-live-1&quot;,
+            &quot;archive&quot;: &quot;shared-fixture-archive-1&quot;,
+            &quot;sha256&quot;: &quot;3a15e26ea53fca73db9c521fe1934dc1289197278cf9cac3fa30bacc316740c1&quot;
+          }
+        }
+      }
+    ],
+    &quot;issues&quot;: [],
+    &quot;semantics&quot;: &quot;caller-supplied evidence; exact lookup is not verified real-world truth&quot;
+  }
+}</pre></html>

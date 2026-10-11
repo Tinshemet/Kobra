@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-11",
+  "scope": [
+    "src/kobra/rule_assignment.py",
+    "src/kobra/structural_read.py",
+    "src/kobra/surface_chunks.py",
+    "src/kobra/shared_patients.py",
+    "src/kobra/knowledge.py",
+    "src/kobra/knowledge_resolution.py",
+    "src/kobra/confidence_gate.py",
+    "tests/test_shared_arguments.py",
+    "tools/compare_code_replay.py",
+    "tools/export_shared_patient_examples.py"
+  ],
+  "actual_diff_review": true,
+  "findings": [
+    "Shared complement propagation is bounded by explicit pattern contracts, not parser conjunction alone.",
+    "One donor span and entity are preserved across all shared frames; local pronouns see one candidate.",
+    "Trusted creation provenance excludes current identity binding through shared frames.",
+    "Independent reviewer found mixed created/existing literal grounding leak; added explicit ASK and removed conflicting code bindings."
+  ],
+  "tests": {
+    "command": "PYTHONPATH=src .venv-candidates/bin/python -m unittest discover -s tests -q",
+    "exit_code": 0,
+    "run": 221,
+    "passed": 220,
+    "skipped": 1
+  },
+  "html": "JSON payloads and inline JavaScript checked; no browser or playground started",
+  "development": {
+    "selected": 15,
+    "newly_code_supported": 7,
+    "retained_unresolved": 8,
+    "fresh_accuracy": false
+  },
+  "paired_replay": {
+    "cases": 600,
+    "before_correct": 387,
+    "after_correct": 387,
+    "ticks": 0,
+    "regressions": 0,
+    "kind": "reused literal-slot development",
+    "note": "Capture preceded configuration-ID metadata addition and knowledge-only identity fixes; final structural checks are in full suite and after.json. Imported shared module hashes appear in this final review; comparison tool now includes it for future captures."
+  },
+  "new_model_calls": 0,
+  "limits": [
+    "Learned parser still supplies donor noun phrase roles.",
+    "No general scope/modifier/ellipsis resolution.",
+    "Mention-to-ID WORLD grounding cannot express mixed per-frame identities; these abstain.",
+    "Archive update loop, persistence and live refresh remain explicit pending requirements."
+  ],
+  "source_hashes": {
+    "src/kobra/rule_assignment.py": "d77a74ee79f15589981a5bdf0ce678fc03dbaaeff193393c825f558221a09b9a",
+    "src/kobra/structural_read.py": "0641dcc8d3bf715032624f49fed14b8afe807f83ba45a389154a67019ad53d12",
+    "src/kobra/surface_chunks.py": "66e2f96d7b69a8bddc61f0608f52ec6ed15acde1e1f947e014392dc9b576d065",
+    "src/kobra/shared_patients.py": "7eb0c5ac6d819ad42f2981fa7320645d09914b8b1a73d2a8309f3daf72894853",
+    "src/kobra/knowledge.py": "04dd06e5c9b67518adc497836a02551d36da86b2aa2b567775b441a84282ae04",
+    "src/kobra/knowledge_resolution.py": "e6c4285ad77c6ae1738d6ddbc87d9b0220b5402af193b44931780475d9b85924",
+    "src/kobra/confidence_gate.py": "3aa1f366894afcb119471c3db6fc3d38e245748641c081a1dd6ba217aa09ac80",
+    "tests/test_shared_arguments.py": "7806c8d89b2a30b2dad2fdce39e60710df19376521da121ae15392587766f791",
+    "tools/compare_code_replay.py": "dc8c4fb198cd379fb274ac616fd0c10d3c36bbcef696f3bf4df16f891f3d5d43",
+    "tools/export_shared_patient_examples.py": "370aae43f87231f16522231f825b9a026c52c661a0658fbf900035decc971971"
+  }
+}
