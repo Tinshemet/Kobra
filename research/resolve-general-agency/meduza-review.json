@@ -1,0 +1,16 @@
+{
+  "review": "Meduza boundary source inspection",
+  "date": "2026-10-11",
+  "runtime_tests_run": false,
+  "implementation_migrated": false,
+  "source_hashes": {
+    "planner/ir/intent.py": "c9d50cea51e0c271f2cb17dfb64b2d9ade2979b68de18480195b224f3ed34a14",
+    "planner/ir/execute.py": "4c1ec62676e0af3b793417df1abf87dda45b44c4ca0774d39606f26b37fac95e",
+    "planner/ir/derive.py": "a8afe4f7aabe9e92cfc773849a61fe0cee136556178b6b4feede5e48c0d29bfd",
+    "planner/ir/lower.py": "9f959a1badbb161bec63bc0c268b8999c1ca9a36361c9ad41e3882ef1256b70b",
+    "planner/ir/classes.py": "02fc8224c5b700fb1684eaa5db13f1db1005dd4029fb5f3178d1814fec7ee826",
+    "engines/medusa/engine.py": "3c4fbf920040bfba7f6f0889bd945864399e0c57888912b1553c6bc59fd0428f"
+  },
+  "contract": "docs/resolve-meduza-boundary.rst",
+  "no_gorgon_imports_added": true
+}
