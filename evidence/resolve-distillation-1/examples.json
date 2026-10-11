@@ -1,0 +1,708 @@
+[
+  {
+    "version": "resolve-distillation-1",
+    "source": {
+      "id": "request",
+      "text": "Was the sensor not moved by Mira?",
+      "sha256": "9117a439209357c8a5949f8e1306899f6bbb05e2ae615c00801a6943d7593588"
+    },
+    "points": [
+      {
+        "id": "p1",
+        "act": "question",
+        "predicate": "moved",
+        "arguments": {
+          "agent": "Mira",
+          "patient": "the sensor"
+        },
+        "qualifiers": {
+          "negation": "not"
+        },
+        "summary": "Question: predicate=\"moved\"; agent=\"Mira\"; patient=\"the sensor\"; negation=\"not\"",
+        "source_text": "Was the sensor not moved by Mira?",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 0,
+            "end": 33,
+            "text": "Was the sensor not moved by Mira?"
+          }
+        ],
+        "identity_bindings": [],
+        "local_references": [],
+        "shared_arguments": [],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "uncalibrated_cohort"
+        ]
+      }
+    ],
+    "relations": [],
+    "local_entities": [],
+    "retained_remainder": [],
+    "state": {
+      "read_route": "ASK",
+      "assignment_source": "code",
+      "ready_for_resolve": false,
+      "reasons": [
+        "uncalibrated_cohort"
+      ],
+      "distillation_diagnostics": [],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "cohort": "code:C001-passive-roles+C021-passive-question-complement-repair:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1",
+      "semantic_reverified": false
+    },
+    "memory_context": {
+      "version": "context-ledger-1",
+      "previous_turns": [],
+      "world_entities": [],
+      "claims": [],
+      "history_supplied": false,
+      "world_supplied": false,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "grounding_evidence": {
+      "memory": {
+        "version": "memory-grounding-1",
+        "revision": "608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c",
+        "bindings": [],
+        "issues": [],
+        "decisions": [],
+        "semantics": "caller confirms reference intent; code checks evidence, identity, number and conflicts"
+      },
+      "knowledge": {}
+    },
+    "rules": [
+      "C021-passive-question-complement-repair",
+      "C001-passive-roles"
+    ],
+    "semantics": "Source-backed READ proposal for RESOLVE; not a verified fact, answer, execution plan or authorization."
+  },
+  {
+    "version": "resolve-distillation-1",
+    "source": {
+      "id": "request",
+      "text": "Open and read the file.",
+      "sha256": "1014021821878158dc9f9c869ae2bf601584de5e85615a6374cb8d44eeeb7008"
+    },
+    "points": [
+      {
+        "id": "p1",
+        "act": "request",
+        "predicate": "Open",
+        "arguments": {
+          "patient": "the file"
+        },
+        "qualifiers": {},
+        "summary": "Request: predicate=\"Open\"; patient=\"the file\"",
+        "source_text": "Open",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 0,
+            "end": 4,
+            "text": "Open"
+          },
+          {
+            "source_id": "request",
+            "start": 14,
+            "end": 22,
+            "text": "the file"
+          }
+        ],
+        "identity_bindings": [],
+        "local_references": [],
+        "shared_arguments": [
+          {
+            "frame": 0,
+            "slot": "patient",
+            "from_chunk": "c1",
+            "donor_chunk": "c2",
+            "span": {
+              "start": 14,
+              "end": 22,
+              "text": "the file"
+            },
+            "entity_id": "e1",
+            "rule": "C016-trailing-shared-patient"
+          }
+        ],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "uncalibrated_cohort"
+        ]
+      },
+      {
+        "id": "p2",
+        "act": "request",
+        "predicate": "read",
+        "arguments": {
+          "patient": "the file"
+        },
+        "qualifiers": {},
+        "summary": "Request: predicate=\"read\"; patient=\"the file\"",
+        "source_text": "read the file",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 9,
+            "end": 22,
+            "text": "read the file"
+          }
+        ],
+        "identity_bindings": [],
+        "local_references": [],
+        "shared_arguments": [],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "uncalibrated_cohort"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "from_point": "p1",
+        "to_point": "p2",
+        "relationship": "coordination_source_order_only",
+        "evidence": {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      }
+    ],
+    "local_entities": [
+      {
+        "id": "e1",
+        "span": {
+          "start": 14,
+          "end": 22,
+          "text": "the file"
+        },
+        "number": "singular",
+        "quantity": null,
+        "introduced_in": "c1",
+        "status": "sentence_local_description_not_WORLD_object",
+        "members": [],
+        "created_by": [],
+        "shared_by": [
+          "c1",
+          "c2"
+        ]
+      }
+    ],
+    "retained_remainder": [
+      {
+        "source_id": "request",
+        "start": 4,
+        "end": 9,
+        "text": " and "
+      },
+      {
+        "source_id": "request",
+        "start": 22,
+        "end": 23,
+        "text": "."
+      }
+    ],
+    "state": {
+      "read_route": "ASK",
+      "assignment_source": "code",
+      "ready_for_resolve": false,
+      "reasons": [
+        "uncalibrated_cohort"
+      ],
+      "distillation_diagnostics": [],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "cohort": "code:C010-imperative-coordination+C016-trailing-shared-patient:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1",
+      "semantic_reverified": false
+    },
+    "memory_context": {
+      "version": "context-ledger-1",
+      "previous_turns": [],
+      "world_entities": [],
+      "claims": [],
+      "history_supplied": false,
+      "world_supplied": false,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "grounding_evidence": {
+      "memory": {
+        "version": "memory-grounding-1",
+        "revision": "608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c",
+        "bindings": [],
+        "issues": [],
+        "decisions": [],
+        "semantics": "caller confirms reference intent; code checks evidence, identity, number and conflicts"
+      },
+      "knowledge": {}
+    },
+    "rules": [
+      "C010-imperative-coordination",
+      "C016-trailing-shared-patient"
+    ],
+    "semantics": "Source-backed READ proposal for RESOLVE; not a verified fact, answer, execution plan or authorization."
+  },
+  {
+    "version": "resolve-distillation-1",
+    "source": {
+      "id": "request",
+      "text": "Create two servers and launch them.",
+      "sha256": "f1175e41f268a7bfbe6a8c7d8e919754331ad759c917bff7fa1a20941e168ee8"
+    },
+    "points": [
+      {
+        "id": "p1",
+        "act": "request",
+        "predicate": "Create",
+        "arguments": {
+          "patient": "two servers"
+        },
+        "qualifiers": {
+          "quantity": "two"
+        },
+        "summary": "Request: predicate=\"Create\"; patient=\"two servers\"; quantity=\"two\"",
+        "source_text": "Create two servers",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 0,
+            "end": 18,
+            "text": "Create two servers"
+          }
+        ],
+        "identity_bindings": [],
+        "local_references": [],
+        "shared_arguments": [],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "uncalibrated_cohort"
+        ]
+      },
+      {
+        "id": "p2",
+        "act": "request",
+        "predicate": "launch",
+        "arguments": {
+          "patient": "them"
+        },
+        "qualifiers": {},
+        "summary": "Request: predicate=\"launch\"; patient=\"them\"",
+        "source_text": "launch them",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 23,
+            "end": 34,
+            "text": "launch them"
+          }
+        ],
+        "identity_bindings": [],
+        "local_references": [
+          {
+            "frame": 1,
+            "slot": "patient",
+            "mention": {
+              "start": 30,
+              "end": 34,
+              "text": "them"
+            },
+            "candidates": [
+              "e1"
+            ],
+            "status": "resolved",
+            "entity_id": "e1"
+          }
+        ],
+        "shared_arguments": [],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "uncalibrated_cohort"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "from_point": "p1",
+        "to_point": "p2",
+        "relationship": "coordination_source_order_only",
+        "evidence": {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      }
+    ],
+    "local_entities": [
+      {
+        "id": "e1",
+        "span": {
+          "start": 7,
+          "end": 18,
+          "text": "two servers"
+        },
+        "number": "plural",
+        "quantity": 2,
+        "introduced_in": "c1",
+        "status": "sentence_local_description_not_WORLD_object",
+        "members": [],
+        "created_by": [
+          "c1"
+        ]
+      }
+    ],
+    "retained_remainder": [
+      {
+        "source_id": "request",
+        "start": 18,
+        "end": 23,
+        "text": " and "
+      },
+      {
+        "source_id": "request",
+        "start": 34,
+        "end": 35,
+        "text": "."
+      }
+    ],
+    "state": {
+      "read_route": "ASK",
+      "assignment_source": "code",
+      "ready_for_resolve": false,
+      "reasons": [
+        "uncalibrated_cohort"
+      ],
+      "distillation_diagnostics": [],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "cohort": "code:C010-imperative-coordination+C014-unique-local-number-agreement:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1",
+      "semantic_reverified": false
+    },
+    "memory_context": {
+      "version": "context-ledger-1",
+      "previous_turns": [],
+      "world_entities": [],
+      "claims": [],
+      "history_supplied": false,
+      "world_supplied": false,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "grounding_evidence": {
+      "memory": {
+        "version": "memory-grounding-1",
+        "revision": "608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c",
+        "bindings": [],
+        "issues": [],
+        "decisions": [],
+        "semantics": "caller confirms reference intent; code checks evidence, identity, number and conflicts"
+      },
+      "knowledge": {}
+    },
+    "rules": [
+      "C010-imperative-coordination",
+      "C014-unique-local-number-agreement"
+    ],
+    "semantics": "Source-backed READ proposal for RESOLVE; not a verified fact, answer, execution plan or authorization."
+  },
+  {
+    "version": "resolve-distillation-1",
+    "source": {
+      "id": "request",
+      "text": "Tell me what she wanted yesterday.",
+      "sha256": "505713978f5814aa4810075e7baf8b1cff7c6782ef149ab4bfba27f6836fc828"
+    },
+    "points": [],
+    "relations": [],
+    "local_entities": [],
+    "retained_remainder": [
+      {
+        "source_id": "request",
+        "start": 0,
+        "end": 34,
+        "text": "Tell me what she wanted yesterday."
+      }
+    ],
+    "state": {
+      "read_route": "ASK",
+      "assignment_source": "unresolved",
+      "ready_for_resolve": false,
+      "reasons": [
+        "missing_or_invalid_frames",
+        "uncalibrated_cohort",
+        "unresolved_reference_requires_ASK:me",
+        "unresolved_reference_requires_ASK:she",
+        "unsupported_read_structure"
+      ],
+      "distillation_diagnostics": [],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "cohort": "model-unresolved-v1:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1",
+      "semantic_reverified": false
+    },
+    "memory_context": {
+      "version": "context-ledger-1",
+      "previous_turns": [],
+      "world_entities": [],
+      "claims": [],
+      "history_supplied": false,
+      "world_supplied": false,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "grounding_evidence": {
+      "memory": {
+        "version": "memory-grounding-1",
+        "revision": "608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c",
+        "bindings": [],
+        "issues": [],
+        "decisions": [],
+        "semantics": "caller confirms reference intent; code checks evidence, identity, number and conflicts"
+      },
+      "knowledge": {}
+    },
+    "rules": [],
+    "semantics": "Source-backed READ proposal for RESOLVE; not a verified fact, answer, execution plan or authorization."
+  },
+  {
+    "version": "resolve-distillation-1",
+    "source": {
+      "id": "request",
+      "text": "Move it.",
+      "sha256": "48a8d39162f74ca1ce9cd8ace8d75660277e94f1108d96277d56837c12744225"
+    },
+    "points": [
+      {
+        "id": "p1",
+        "act": "request",
+        "predicate": "Move",
+        "arguments": {
+          "patient": "it"
+        },
+        "qualifiers": {},
+        "summary": "Request: predicate=\"Move\"; patient=\"it\"",
+        "source_text": "Move it.",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 0,
+            "end": 8,
+            "text": "Move it."
+          }
+        ],
+        "identity_bindings": [
+          {
+            "slot": "patient",
+            "mention": "it",
+            "entity_id": "ledger_confirmed-object-0",
+            "namespace": "WORLD",
+            "evidence": [
+              {
+                "frame": 0,
+                "slot": "patient",
+                "mention": "it",
+                "entity_id": "ledger_confirmed-object-0",
+                "spans": [
+                  {
+                    "start": 5,
+                    "end": 7,
+                    "text": "it"
+                  }
+                ],
+                "evidence": "client_confirmed_ledger_reference",
+                "claim_ids": [
+                  "c1"
+                ],
+                "prior_spans": [
+                  {
+                    "turn_id": "t1",
+                    "start": 0,
+                    "end": 3,
+                    "quote": "box"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "local_references": [],
+        "shared_arguments": [],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "uncalibrated_cohort"
+        ]
+      }
+    ],
+    "relations": [],
+    "local_entities": [],
+    "retained_remainder": [],
+    "state": {
+      "read_route": "ASK",
+      "assignment_source": "code",
+      "ready_for_resolve": false,
+      "reasons": [
+        "uncalibrated_cohort"
+      ],
+      "distillation_diagnostics": [],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "cohort": "code:C002-active-roles:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:knowledge-resolution-2:940815e3bb1f068071ea2ae3587abd27a864a4384ea7675b53409c7dca2ce38c:memory-grounding-1",
+      "semantic_reverified": false
+    },
+    "memory_context": {
+      "version": "context-ledger-1",
+      "previous_turns": [
+        {
+          "id": "t1",
+          "role": "user",
+          "content": "box",
+          "sha256": "26f8567f2569182294c3fa5b9f9cb2270b554eef628b4c149cf82a42888ff4ae"
+        }
+      ],
+      "world_entities": [
+        {
+          "id": "ledger_confirmed-object-0",
+          "record": {
+            "name": "box",
+            "number": "singular"
+          },
+          "mentions": [
+            {
+              "turn_id": "t1",
+              "start": 0,
+              "end": 3,
+              "text": "box"
+            }
+          ],
+          "provenance": "caller_supplied_WORLD",
+          "truth_status": "not_verified_by_READ"
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "turn_id": "t1",
+          "start": 0,
+          "end": 3,
+          "quote": "box",
+          "status": "confirmed_by_client",
+          "reference": "it",
+          "entity_id": "ledger_confirmed-object-0"
+        }
+      ],
+      "history_supplied": true,
+      "world_supplied": true,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "grounding_evidence": {
+      "memory": {
+        "version": "memory-grounding-1",
+        "revision": "093fee652cd62d0c3f9c9cdfce00906fdcbfbaae7ee2b5276fc1d4c5f3c70e0b",
+        "bindings": [
+          {
+            "frame": 0,
+            "slot": "patient",
+            "mention": "it",
+            "entity_id": "ledger_confirmed-object-0",
+            "spans": [
+              {
+                "start": 5,
+                "end": 7,
+                "text": "it"
+              }
+            ],
+            "evidence": "client_confirmed_ledger_reference",
+            "claim_ids": [
+              "c1"
+            ],
+            "prior_spans": [
+              {
+                "turn_id": "t1",
+                "start": 0,
+                "end": 3,
+                "quote": "box"
+              }
+            ]
+          }
+        ],
+        "issues": [],
+        "decisions": [
+          {
+            "frame": 0,
+            "slot": "patient",
+            "mention": "it",
+            "candidate_ids": [
+              "ledger_confirmed-object-0"
+            ],
+            "claim_ids": [
+              "c1"
+            ],
+            "reasons": []
+          }
+        ],
+        "semantics": "caller confirms reference intent; code checks evidence, identity, number and conflicts"
+      },
+      "knowledge": {
+        "version": "knowledge-resolution-2",
+        "revision": "940815e3bb1f068071ea2ae3587abd27a864a4384ea7675b53409c7dca2ce38c",
+        "snapshot": {
+          "version": "knowledge-snapshot-1",
+          "sources": {
+            "live": {
+              "revision": "live-ledger_confirmed-0",
+              "source": "independent-fixture",
+              "status": "current",
+              "entities": {
+                "ledger_confirmed-object-0": {
+                  "name": "box",
+                  "number": "singular"
+                }
+              }
+            }
+          },
+          "revision": {
+            "live": "live-ledger_confirmed-0",
+            "sha256": "4a7803d42df464f0e85e112786cf8c953bac823f3da70cef6109dff4199e1d9b"
+          },
+          "freshness": "caller_attestation_only"
+        },
+        "matches": [
+          {
+            "frame": 0,
+            "slot": "patient",
+            "mention": "it",
+            "lookup": {
+              "term": "it",
+              "owner": null,
+              "status": "unknown",
+              "selected": [],
+              "candidates": [],
+              "evidence": [],
+              "issues": [],
+              "revision": {
+                "live": "live-ledger_confirmed-0",
+                "sha256": "4a7803d42df464f0e85e112786cf8c953bac823f3da70cef6109dff4199e1d9b"
+              }
+            },
+            "live_candidates": [],
+            "creates_description": false
+          }
+        ],
+        "bindings": [],
+        "lexical_mentions": [],
+        "issues": [],
+        "semantics": "caller-supplied evidence; exact lookup is not verified real-world truth"
+      }
+    },
+    "rules": [
+      "C002-active-roles"
+    ],
+    "semantics": "Source-backed READ proposal for RESOLVE; not a verified fact, answer, execution plan or authorization."
+  }
+]

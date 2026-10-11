@@ -102,3 +102,19 @@ class PassiveQuestionFixTests(unittest.TestCase):
             self.assertEqual((predicate.text,subject.text,patient.text),(verb,noun,'the '+noun))
         d=document(['Is','every','parcel','carried','by','Ravi','?'])
         self.assertIsNone(passive_question_subject(d,d[0],{c.root.i:c for c in d.noun_chunks}))
+
+    def test_three_sensor_questions_preserve_negative_question(self):
+        for verb,actor in [('moved','Mira'),('checked','Alex'),('moved','Alex')]:
+            p=self.reader.assign(f'Was the sensor not {verb} by {actor}?')
+            self.assertEqual(p['route'],'code')
+            self.assertIn('C021-passive-question-complement-repair',p['rules'])
+            f=p['frames'][0]
+            self.assertEqual((f['act'],f['predicate'],f['agent'],f['patient'],f['negation']),
+                             ('question',verb,actor,'the sensor','not'))
+
+    def test_real_complement_is_not_passive_repair(self):
+        for text in ('Did Mira say the sensor was moved?', 'Was the sensor that Alex checked moved by Mira?',
+                     'Was the sensor not moved by Mira because it failed?'):
+            p=self.reader.assign(text)
+            self.assertEqual(p['route'],'unresolved')
+            self.assertNotIn('C021-passive-question-complement-repair',p['rules'])

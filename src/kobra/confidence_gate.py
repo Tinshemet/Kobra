@@ -158,6 +158,11 @@ class GatedRuleReader:
         self.model_cohort = model_cohort
         self.knowledge = knowledge
 
+    def read_for_resolve(self, text, **context):
+        """Run the existing gated reader, then project its result without new authority."""
+        from .resolve_distillation import distill_for_resolve
+        return distill_for_resolve(self.read(text, **context))
+
     def read(self, text, *, world=None, history=(), missing_context=(), context_claims=()):
         world = deepcopy(world or {})
         history = deepcopy(list(history))
@@ -205,6 +210,7 @@ class GatedRuleReader:
                 final_evidence = resolve_knowledge(self.knowledge, text, proposal, world)
                 final_evidence.pop('world')
                 knowledge_evidence['model_matches'] = final_evidence['matches']
+                knowledge_evidence['model_bindings'] = deepcopy(final_evidence['bindings'])
                 deterministic_bindings = final_evidence['bindings']
                 knowledge_reasons.extend(validate_knowledge_proposal(proposal, final_evidence))
             if origin != 'AI':

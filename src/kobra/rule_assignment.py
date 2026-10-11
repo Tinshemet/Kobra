@@ -7,7 +7,7 @@ import hashlib
 import json
 from .selection_read import SLOTS
 
-VERSION = 'rule-assignment-7'
+VERSION = 'rule-assignment-8'
 
 class RuleAssigner:
     def __init__(self, nlp=None, action_words=None, shared_patterns=None):
@@ -55,8 +55,6 @@ class RuleAssigner:
             return out
         if len(list(doc.sents)) != 1:
             return stop('requires one sentence')
-        if any(t.dep_ in {'conj','relcl','advcl','ccomp','xcomp','parataxis'} for t in doc):
-            return stop('multiple predicates or clause attachment')
         root = next((t for t in doc if t.dep_ == 'ROOT'), None)
         if root is None or root.pos_ not in {'VERB','AUX'}:
             return stop('no supported predicate')
@@ -65,12 +63,16 @@ class RuleAssigner:
         chunks = {c.root.i:c for c in doc.noun_chunks}
         from .question_roles import passive_question_subject, double_object_roles
         repaired = passive_question_subject(doc, root, chunks)
+        if any(t.dep_ in {'conj','relcl','advcl','ccomp','xcomp','parataxis'}
+               and not (repaired is not None and t == repaired[0] and t.dep_ == 'ccomp') for t in doc):
+            return stop('multiple predicates or clause attachment')
         repaired_subject = None
         if repaired is not None:
             root, repaired_subject, patient_chunk = repaired
             chunks[repaired_subject.i] = patient_chunk
-            out['rules'].append('C020-passive-question-noun-recovery' if root.dep_ == 'attr'
-                                else 'C018-passive-question-role-normalization')
+            out['rules'].append({'attr':'C020-passive-question-noun-recovery',
+                                 'ccomp':'C021-passive-question-complement-repair'}.get(
+                                     root.dep_, 'C018-passive-question-role-normalization'))
         if any(t.pos_ == 'VERB' and t != root for t in doc):
             return stop('additional lexical verb')
         # Only complete, contiguous noun chunks; do not guess attachment.

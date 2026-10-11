@@ -1,0 +1,14 @@
+{
+  "actual_diff_reviewed": true,
+  "source_and_baseline_hashes_verified": true,
+  "tests_run": 262,
+  "tests_passed": 261,
+  "tests_skipped": 1,
+  "findings": [
+    "Only complete passive question exempts its ccomp; genuine clauses remain guarded.",
+    "Distillation projects rather than reinterprets roles, source or identity.",
+    "Gate status is never upgraded; full source remains necessary for unrepresented distinctions.",
+    "Local entities and WORLD bindings remain distinct.",
+    "5k replay fixes three cases without regressions; not fresh accuracy evidence."
+  ]
+}

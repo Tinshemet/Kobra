@@ -1,0 +1,406 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>READ distillation for RESOLVE</title><style>body{max-width:1100px;margin:30px auto;padding:20px;font:16px/1.6 system-ui;background:#112033;color:#edf3ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}</style><h1>READ → distillation → RESOLVE</h1><p>Code-only projection of source roles, qualifications, relations and grounding evidence. No answers, action execution or new identity decisions. Source wording remains part of the contract.</p><p>All three sensor questions now parse correctly. Reused 5,000-case contract replay: 5,000 correct, three improvements, zero regressions. This does not replace the historical fresh result.</p><p>Every replay preserved all frame fields and identity bindings, retained source characters and kept the gate outcome unchanged. These checks establish representation preservation, not complete semantic accuracy. All final routes remain ASK without calibration.</p><h2>Was the sensor not moved by Mira?</h2><pre>{
+  &quot;points&quot;: [
+    {
+      &quot;id&quot;: &quot;p1&quot;,
+      &quot;act&quot;: &quot;question&quot;,
+      &quot;predicate&quot;: &quot;moved&quot;,
+      &quot;arguments&quot;: {
+        &quot;agent&quot;: &quot;Mira&quot;,
+        &quot;patient&quot;: &quot;the sensor&quot;
+      },
+      &quot;qualifiers&quot;: {
+        &quot;negation&quot;: &quot;not&quot;
+      },
+      &quot;summary&quot;: &quot;Question: predicate=\&quot;moved\&quot;; agent=\&quot;Mira\&quot;; patient=\&quot;the sensor\&quot;; negation=\&quot;not\&quot;&quot;,
+      &quot;source_text&quot;: &quot;Was the sensor not moved by Mira?&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 33,
+          &quot;text&quot;: &quot;Was the sensor not moved by Mira?&quot;
+        }
+      ],
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    }
+  ],
+  &quot;relations&quot;: [],
+  &quot;retained_remainder&quot;: [],
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C001-passive-roles+C021-passive-question-complement-repair:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>Open and read the file.</h2><pre>{
+  &quot;points&quot;: [
+    {
+      &quot;id&quot;: &quot;p1&quot;,
+      &quot;act&quot;: &quot;request&quot;,
+      &quot;predicate&quot;: &quot;Open&quot;,
+      &quot;arguments&quot;: {
+        &quot;patient&quot;: &quot;the file&quot;
+      },
+      &quot;qualifiers&quot;: {},
+      &quot;summary&quot;: &quot;Request: predicate=\&quot;Open\&quot;; patient=\&quot;the file\&quot;&quot;,
+      &quot;source_text&quot;: &quot;Open&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;
+        },
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 14,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;the file&quot;
+        }
+      ],
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [
+        {
+          &quot;frame&quot;: 0,
+          &quot;slot&quot;: &quot;patient&quot;,
+          &quot;from_chunk&quot;: &quot;c1&quot;,
+          &quot;donor_chunk&quot;: &quot;c2&quot;,
+          &quot;span&quot;: {
+            &quot;start&quot;: 14,
+            &quot;end&quot;: 22,
+            &quot;text&quot;: &quot;the file&quot;
+          },
+          &quot;entity_id&quot;: &quot;e1&quot;,
+          &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+        }
+      ],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;p2&quot;,
+      &quot;act&quot;: &quot;request&quot;,
+      &quot;predicate&quot;: &quot;read&quot;,
+      &quot;arguments&quot;: {
+        &quot;patient&quot;: &quot;the file&quot;
+      },
+      &quot;qualifiers&quot;: {},
+      &quot;summary&quot;: &quot;Request: predicate=\&quot;read\&quot;; patient=\&quot;the file\&quot;&quot;,
+      &quot;source_text&quot;: &quot;read the file&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;read the file&quot;
+        }
+      ],
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    }
+  ],
+  &quot;relations&quot;: [
+    {
+      &quot;from_point&quot;: &quot;p1&quot;,
+      &quot;to_point&quot;: &quot;p2&quot;,
+      &quot;relationship&quot;: &quot;coordination_source_order_only&quot;,
+      &quot;evidence&quot;: {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    }
+  ],
+  &quot;retained_remainder&quot;: [
+    {
+      &quot;source_id&quot;: &quot;request&quot;,
+      &quot;start&quot;: 4,
+      &quot;end&quot;: 9,
+      &quot;text&quot;: &quot; and &quot;
+    },
+    {
+      &quot;source_id&quot;: &quot;request&quot;,
+      &quot;start&quot;: 22,
+      &quot;end&quot;: 23,
+      &quot;text&quot;: &quot;.&quot;
+    }
+  ],
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C010-imperative-coordination+C016-trailing-shared-patient:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>Create two servers and launch them.</h2><pre>{
+  &quot;points&quot;: [
+    {
+      &quot;id&quot;: &quot;p1&quot;,
+      &quot;act&quot;: &quot;request&quot;,
+      &quot;predicate&quot;: &quot;Create&quot;,
+      &quot;arguments&quot;: {
+        &quot;patient&quot;: &quot;two servers&quot;
+      },
+      &quot;qualifiers&quot;: {
+        &quot;quantity&quot;: &quot;two&quot;
+      },
+      &quot;summary&quot;: &quot;Request: predicate=\&quot;Create\&quot;; patient=\&quot;two servers\&quot;; quantity=\&quot;two\&quot;&quot;,
+      &quot;source_text&quot;: &quot;Create two servers&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 18,
+          &quot;text&quot;: &quot;Create two servers&quot;
+        }
+      ],
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;p2&quot;,
+      &quot;act&quot;: &quot;request&quot;,
+      &quot;predicate&quot;: &quot;launch&quot;,
+      &quot;arguments&quot;: {
+        &quot;patient&quot;: &quot;them&quot;
+      },
+      &quot;qualifiers&quot;: {},
+      &quot;summary&quot;: &quot;Request: predicate=\&quot;launch\&quot;; patient=\&quot;them\&quot;&quot;,
+      &quot;source_text&quot;: &quot;launch them&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 23,
+          &quot;end&quot;: 34,
+          &quot;text&quot;: &quot;launch them&quot;
+        }
+      ],
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [
+        {
+          &quot;frame&quot;: 1,
+          &quot;slot&quot;: &quot;patient&quot;,
+          &quot;mention&quot;: {
+            &quot;start&quot;: 30,
+            &quot;end&quot;: 34,
+            &quot;text&quot;: &quot;them&quot;
+          },
+          &quot;candidates&quot;: [
+            &quot;e1&quot;
+          ],
+          &quot;status&quot;: &quot;resolved&quot;,
+          &quot;entity_id&quot;: &quot;e1&quot;
+        }
+      ],
+      &quot;shared_arguments&quot;: [],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    }
+  ],
+  &quot;relations&quot;: [
+    {
+      &quot;from_point&quot;: &quot;p1&quot;,
+      &quot;to_point&quot;: &quot;p2&quot;,
+      &quot;relationship&quot;: &quot;coordination_source_order_only&quot;,
+      &quot;evidence&quot;: {
+        &quot;from_chunk&quot;: &quot;c1&quot;,
+        &quot;to_chunk&quot;: &quot;c2&quot;,
+        &quot;kind&quot;: &quot;coordination_source_order_only&quot;
+      }
+    }
+  ],
+  &quot;retained_remainder&quot;: [
+    {
+      &quot;source_id&quot;: &quot;request&quot;,
+      &quot;start&quot;: 18,
+      &quot;end&quot;: 23,
+      &quot;text&quot;: &quot; and &quot;
+    },
+    {
+      &quot;source_id&quot;: &quot;request&quot;,
+      &quot;start&quot;: 34,
+      &quot;end&quot;: 35,
+      &quot;text&quot;: &quot;.&quot;
+    }
+  ],
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C010-imperative-coordination+C014-unique-local-number-agreement:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>Tell me what she wanted yesterday.</h2><pre>{
+  &quot;points&quot;: [],
+  &quot;relations&quot;: [],
+  &quot;retained_remainder&quot;: [
+    {
+      &quot;source_id&quot;: &quot;request&quot;,
+      &quot;start&quot;: 0,
+      &quot;end&quot;: 34,
+      &quot;text&quot;: &quot;Tell me what she wanted yesterday.&quot;
+    }
+  ],
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;unresolved&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;missing_or_invalid_frames&quot;,
+      &quot;uncalibrated_cohort&quot;,
+      &quot;unresolved_reference_requires_ASK:me&quot;,
+      &quot;unresolved_reference_requires_ASK:she&quot;,
+      &quot;unsupported_read_structure&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;model-unresolved-v1:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>Move it.</h2><pre>{
+  &quot;points&quot;: [
+    {
+      &quot;id&quot;: &quot;p1&quot;,
+      &quot;act&quot;: &quot;request&quot;,
+      &quot;predicate&quot;: &quot;Move&quot;,
+      &quot;arguments&quot;: {
+        &quot;patient&quot;: &quot;it&quot;
+      },
+      &quot;qualifiers&quot;: {},
+      &quot;summary&quot;: &quot;Request: predicate=\&quot;Move\&quot;; patient=\&quot;it\&quot;&quot;,
+      &quot;source_text&quot;: &quot;Move it.&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 8,
+          &quot;text&quot;: &quot;Move it.&quot;
+        }
+      ],
+      &quot;identity_bindings&quot;: [
+        {
+          &quot;slot&quot;: &quot;patient&quot;,
+          &quot;mention&quot;: &quot;it&quot;,
+          &quot;entity_id&quot;: &quot;ledger_confirmed-object-0&quot;,
+          &quot;namespace&quot;: &quot;WORLD&quot;,
+          &quot;evidence&quot;: [
+            {
+              &quot;frame&quot;: 0,
+              &quot;slot&quot;: &quot;patient&quot;,
+              &quot;mention&quot;: &quot;it&quot;,
+              &quot;entity_id&quot;: &quot;ledger_confirmed-object-0&quot;,
+              &quot;spans&quot;: [
+                {
+                  &quot;start&quot;: 5,
+                  &quot;end&quot;: 7,
+                  &quot;text&quot;: &quot;it&quot;
+                }
+              ],
+              &quot;evidence&quot;: &quot;client_confirmed_ledger_reference&quot;,
+              &quot;claim_ids&quot;: [
+                &quot;c1&quot;
+              ],
+              &quot;prior_spans&quot;: [
+                {
+                  &quot;turn_id&quot;: &quot;t1&quot;,
+                  &quot;start&quot;: 0,
+                  &quot;end&quot;: 3,
+                  &quot;quote&quot;: &quot;box&quot;
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    }
+  ],
+  &quot;relations&quot;: [],
+  &quot;retained_remainder&quot;: [],
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C002-active-roles:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:knowledge-resolution-2:940815e3bb1f068071ea2ae3587abd27a864a4384ea7675b53409c7dca2ce38c:memory-grounding-1&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>Measured replay</h2><pre>{
+  &quot;kind&quot;: &quot;reused development replay; distillation checks are representation invariants, not semantic proof&quot;,
+  &quot;cases&quot;: 5000,
+  &quot;before_correct&quot;: 4997,
+  &quot;after_correct&quot;: 5000,
+  &quot;ticks&quot;: 3,
+  &quot;regressions&quot;: 0,
+  &quot;frame_roundtrips&quot;: 5000,
+  &quot;grounding_roundtrips&quot;: 5000,
+  &quot;source_coverage_checks&quot;: 5000,
+  &quot;unchanged_gate_checks&quot;: 5000,
+  &quot;new_model_calls&quot;: 0,
+  &quot;final_routes&quot;: {
+    &quot;ASK&quot;: 5000
+  },
+  &quot;baseline_hashes&quot;: {
+    &quot;inputs.jsonl&quot;: &quot;5c4acdf7361919831c22f78935b16aebca3bd7d662add369fbc56a0f7b3efba4&quot;,
+    &quot;gold.jsonl&quot;: &quot;73bda64b529f2260a621b5ddf5c07d99d406825183f2435900a61af3345d5f73&quot;,
+    &quot;after-review/scored.jsonl&quot;: &quot;d68ed0d1c9cae95d8d57c755e00eb0cd5bd02d697afef7ecee2ded9ab5528537&quot;
+  },
+  &quot;capture_sha256&quot;: &quot;79736e1345cd4a256ae5eb00b3bf2b54b829e11337255faee286e5c88352189c&quot;
+}</pre></html>

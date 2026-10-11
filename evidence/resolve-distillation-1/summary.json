@@ -1,0 +1,22 @@
+{
+  "kind": "reused development replay; distillation checks are representation invariants, not semantic proof",
+  "cases": 5000,
+  "before_correct": 4997,
+  "after_correct": 5000,
+  "ticks": 3,
+  "regressions": 0,
+  "frame_roundtrips": 5000,
+  "grounding_roundtrips": 5000,
+  "source_coverage_checks": 5000,
+  "unchanged_gate_checks": 5000,
+  "new_model_calls": 0,
+  "final_routes": {
+    "ASK": 5000
+  },
+  "baseline_hashes": {
+    "inputs.jsonl": "5c4acdf7361919831c22f78935b16aebca3bd7d662add369fbc56a0f7b3efba4",
+    "gold.jsonl": "73bda64b529f2260a621b5ddf5c07d99d406825183f2435900a61af3345d5f73",
+    "after-review/scored.jsonl": "d68ed0d1c9cae95d8d57c755e00eb0cd5bd02d697afef7ecee2ded9ab5528537"
+  },
+  "capture_sha256": "79736e1345cd4a256ae5eb00b3bf2b54b829e11337255faee286e5c88352189c"
+}

@@ -20,6 +20,12 @@ def passive_question_subject(doc, auxiliary, noun_chunks):
     if len(subjects)==1 and predicate.dep_=='acl' and predicate.head==subjects[0]:
         subject=subjects[0]
         patient=noun_chunks.get(subject.i)
+    elif not subjects and predicate.dep_=='ccomp' and predicate.head==auxiliary:
+        attached=[t for t in predicate.children if t.dep_ in {'nsubj','nsubjpass'}]
+        if len(attached)!=1:
+            return None
+        subject=attached[0]
+        patient=noun_chunks.get(subject.i)
     elif not subjects and predicate.dep_=='attr' and predicate.head==auxiliary:
         # Another observed parser error: determiner + noun is absorbed into
         # the participle, with the noun mislabeled amod and no noun chunk.
