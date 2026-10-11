@@ -1,0 +1,34 @@
+{
+  "scope": [
+    "src/kobra/rule_assignment.py",
+    "tests/test_passive_question_fix.py",
+    "tools/replay_passive_fix.py"
+  ],
+  "actual_diff_review": true,
+  "observed_cause": "aux/nsubj labels hid passive despite participle + be auxiliary + explicit by-agent",
+  "checks": {
+    "suite_run": 226,
+    "passed": 225,
+    "skipped": 1,
+    "exit_code": 0,
+    "replay_1087_ticks": 4,
+    "replay_1087_regressions": 0,
+    "older_600_regressions": 0
+  },
+  "unresolved_parser_patterns": {
+    "('be', (('acl', 'nsubj'),))": 144,
+    "('show', ())": 1
+  },
+  "limitations": [
+    "Bounded passive evidence repair, not a general passive parser",
+    "All 145 unresolved cases remain unresolved",
+    "Replay after seeing failures is development, not fresh accuracy",
+    "Gate calibration absent; zero AI calls"
+  ],
+  "source_hashes": {
+    "src/kobra/rule_assignment.py": "55758ae190f8f1a7c52a9bef965d0c1f90c444e611f03d6386a1a8c7f88139e2",
+    "tests/test_passive_question_fix.py": "5236dcf9a5309b44a68d5bfc5e98de2ee5488a3d2cd066cc78c622d738eed1b3",
+    "tools/replay_passive_fix.py": "dec017cc50af98ebcebf13ef86951c1c3e5e0aa722975f0de51c6a94f92453c2"
+  },
+  "formatting_note": "Normalized CSV output to LF after capture; predictions and scores unchanged. Summary retains pre-normalization capture-tool hash."
+}

@@ -7,7 +7,7 @@ import hashlib
 import json
 from .selection_read import SLOTS
 
-VERSION = 'rule-assignment-4'
+VERSION = 'rule-assignment-5'
 
 class RuleAssigner:
     def __init__(self, nlp=None, action_words=None, shared_patterns=None):
@@ -75,7 +75,17 @@ class RuleAssigner:
         recipients = [t for t in root.children if t.dep_ == 'dative']
         if max(len(subjects),len(objects),len(recipients)) > 1:
             return stop('multiple role candidates')
-        passive = any(t.dep_ == 'auxpass' for t in root.children) or any(t.dep_=='nsubjpass' for t in subjects)
+        agents = [t for t in root.children if t.dep_ == 'agent' and t.lower_ == 'by']
+        # Some inverted passives are tagged aux/nsubj instead of auxpass/
+        # nsubjpass. Require a participle, be auxiliary and explicit agent.
+        supported_inverted_passive = (frame['act'] == 'question' and root.tag_ == 'VBN'
+            and bool(agents) and any(t.dep_ == 'aux' and t.lemma_ == 'be' for t in root.children))
+        passive = (any(t.dep_ == 'auxpass' for t in root.children)
+                   or any(t.dep_ == 'nsubjpass' for t in subjects) or supported_inverted_passive)
+        if agents and not passive:
+            return stop('unresolved passive agent attachment')
+        if supported_inverted_passive:
+            out['rules'].append('C017-inverted-passive-agent-evidence')
         if passive:
             if not subjects: return stop('passive without subject')
             frame['patient'] = phrase(subjects[0])

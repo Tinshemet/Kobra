@@ -84,3 +84,6 @@ See read-rule-coverage.rst for the closure checklist and surface boundary limits
 C016 now handles explicit bounded shared-patient command patterns, with one local
 entity and trusted creation provenance across actions. See shared-patients.rst.
 Configuration changes invalidate the corresponding calibration cohort.
+
+RuleAssigner v5 adds C017 for inverted passive questions with explicit by-agent
+evidence; see passive-question-fix.rst for the correction and remaining 145 cases.

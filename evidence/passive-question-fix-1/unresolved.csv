@@ -1,0 +1,146 @@
+category,set,id,sentence,reason
+Past affirmative passive question,9,S000082,Was the book carried by Alex?,additional lexical verb
+Past affirmative passive question,7,S000088,Was the book carried by Nia?,additional lexical verb
+Past affirmative passive question,8,S000240,Was the book read by Mira?,additional lexical verb
+Past affirmative passive question,7,S000030,Was the book read by Nia?,additional lexical verb
+Past affirmative passive question,7,S000011,Was the box moved by Alex?,additional lexical verb
+Past affirmative passive question,6,S000157,Was the box moved by Nia?,additional lexical verb
+Past affirmative passive question,6,S000286,Was the lamp repaired by Alex?,additional lexical verb
+Past affirmative passive question,8,S000021,Was the lamp repaired by Mira?,additional lexical verb
+Past affirmative passive question,9,S000087,Was the lamp repaired by Nia?,additional lexical verb
+Past affirmative passive question,7,S000108,Was the sensor configured by Alex?,additional lexical verb
+Past affirmative passive question,9,S000187,Was the sensor configured by Mira?,additional lexical verb
+Past affirmative passive question,8,S000100,Was the sensor configured by Nia?,additional lexical verb
+Past affirmative passive question,9,S000049,Was the sensor seen by Alex?,additional lexical verb
+Past affirmative passive question,6,S000085,Was the sensor seen by Mira?,additional lexical verb
+Past affirmative passive question,6,S000291,Was the sensor seen by Nia?,additional lexical verb
+Past affirmative passive question,6,S000123,Was the server checked by Alex?,additional lexical verb
+Past affirmative passive question,8,S000014,Was the server checked by Mira?,additional lexical verb
+Past affirmative passive question,8,S000180,Was the server checked by Nia?,additional lexical verb
+Past affirmative passive question,8,S000052,Was the server restarted by Nia?,additional lexical verb
+Past affirmative passive question,8,S000067,Were the books carried by Alex?,additional lexical verb
+Past affirmative passive question,6,S000173,Were the books carried by Mira?,additional lexical verb
+Past affirmative passive question,7,S000092,Were the books carried by Nia?,additional lexical verb
+Past affirmative passive question,7,S000246,Were the books read by Alex?,additional lexical verb
+Past affirmative passive question,8,S000289,Were the books read by Mira?,additional lexical verb
+Past affirmative passive question,8,S000198,Were the books read by Nia?,additional lexical verb
+Past affirmative passive question,9,S000043,Were the boxes moved by Alex?,additional lexical verb
+Past affirmative passive question,7,S000158,Were the boxes moved by Mira?,additional lexical verb
+Past affirmative passive question,6,S000281,Were the boxes moved by Nia?,additional lexical verb
+Past affirmative passive question,8,S000077,Were the lamps repaired by Alex?,additional lexical verb
+Past affirmative passive question,7,S000021,Were the sensors configured by Alex?,additional lexical verb
+Past affirmative passive question,9,S000144,Were the sensors configured by Mira?,additional lexical verb
+Past affirmative passive question,7,S000063,Were the sensors configured by Nia?,additional lexical verb
+Past affirmative passive question,8,S000254,Were the sensors seen by Mira?,additional lexical verb
+Past affirmative passive question,9,S000034,Were the sensors seen by Nia?,additional lexical verb
+Past affirmative passive question,7,S000146,Were the servers checked by Nia?,additional lexical verb
+Past affirmative passive question,7,S000232,Were the servers restarted by Mira?,additional lexical verb
+Past affirmative passive question,9,S000143,Were the servers restarted by Nia?,additional lexical verb
+Past negative passive question,8,S000017,Was the book not carried by Alex?,additional lexical verb
+Past negative passive question,9,S000121,Was the book not carried by Mira?,additional lexical verb
+Past negative passive question,8,S000191,Was the book not carried by Nia?,additional lexical verb
+Past negative passive question,7,S000111,Was the box not moved by Mira?,additional lexical verb
+Past negative passive question,7,S000179,Was the box not moved by Nia?,additional lexical verb
+Past negative passive question,8,S000220,Was the lamp not repaired by Alex?,additional lexical verb
+Past negative passive question,8,S000162,Was the lamp not repaired by Mira?,additional lexical verb
+Past negative passive question,7,S000211,Was the lamp not repaired by Nia?,additional lexical verb
+Past negative passive question,8,S000222,Was the sensor not configured by Alex?,additional lexical verb
+Past negative passive question,8,S000209,Was the sensor not configured by Mira?,additional lexical verb
+Past negative passive question,9,S000166,Was the sensor not configured by Nia?,additional lexical verb
+Past negative passive question,6,S000127,Was the sensor not seen by Mira?,additional lexical verb
+Past negative passive question,8,S000051,Was the sensor not seen by Nia?,additional lexical verb
+Past negative passive question,7,S000240,Was the server not checked by Alex?,additional lexical verb
+Past negative passive question,7,S000207,Was the server not checked by Mira?,additional lexical verb
+Past negative passive question,8,S000043,Was the server not checked by Nia?,additional lexical verb
+Past negative passive question,6,S000261,Was the server not restarted by Alex?,additional lexical verb
+Past negative passive question,7,S000038,Was the server not restarted by Mira?,additional lexical verb
+Past negative passive question,6,S000073,Was the server not restarted by Nia?,additional lexical verb
+Past negative passive question,9,S000163,Were the books not carried by Alex?,additional lexical verb
+Past negative passive question,8,S000196,Were the books not carried by Mira?,additional lexical verb
+Past negative passive question,6,S000273,Were the books not carried by Nia?,additional lexical verb
+Past negative passive question,8,S000142,Were the books not read by Mira?,additional lexical verb
+Past negative passive question,6,S000296,Were the books not read by Nia?,additional lexical verb
+Past negative passive question,6,S000007,Were the lamps not repaired by Alex?,additional lexical verb
+Past negative passive question,9,S000100,Were the lamps not repaired by Mira?,additional lexical verb
+Past negative passive question,7,S000150,Were the lamps not repaired by Nia?,additional lexical verb
+Past negative passive question,6,S000163,Were the sensors not configured by Alex?,additional lexical verb
+Past negative passive question,7,S000221,Were the sensors not configured by Mira?,additional lexical verb
+Past negative passive question,7,S000276,Were the sensors not configured by Nia?,additional lexical verb
+Past negative passive question,8,S000164,Were the sensors not seen by Alex?,additional lexical verb
+Past negative passive question,8,S000118,Were the sensors not seen by Mira?,additional lexical verb
+Present affirmative passive question,8,S000097,Are the books carried by Alex?,additional lexical verb
+Present affirmative passive question,8,S000065,Are the books carried by Mira?,additional lexical verb
+Present affirmative passive question,9,S000117,Are the books carried by Nia?,additional lexical verb
+Present affirmative passive question,7,S000196,Are the books read by Alex?,additional lexical verb
+Present affirmative passive question,6,S000040,Are the books read by Mira?,additional lexical verb
+Present affirmative passive question,9,S000118,Are the books read by Nia?,additional lexical verb
+Present affirmative passive question,6,S000225,Are the boxes moved by Mira?,additional lexical verb
+Present affirmative passive question,7,S000144,Are the boxes moved by Nia?,additional lexical verb
+Present affirmative passive question,8,S000107,Are the lamps repaired by Alex?,additional lexical verb
+Present affirmative passive question,8,S000263,Are the lamps repaired by Mira?,additional lexical verb
+Present affirmative passive question,8,S000186,Are the lamps repaired by Nia?,additional lexical verb
+Present affirmative passive question,7,S000129,Are the sensors configured by Alex?,additional lexical verb
+Present affirmative passive question,9,S000165,Are the sensors configured by Mira?,additional lexical verb
+Present affirmative passive question,8,S000073,Are the sensors configured by Nia?,additional lexical verb
+Present affirmative passive question,6,S000028,Are the sensors seen by Alex?,additional lexical verb
+Present affirmative passive question,6,S000274,Are the sensors seen by Mira?,additional lexical verb
+Present affirmative passive question,7,S000027,Are the sensors seen by Nia?,additional lexical verb
+Present affirmative passive question,6,S000287,Are the servers checked by Mira?,additional lexical verb
+Present affirmative passive question,9,S000108,Are the servers checked by Nia?,additional lexical verb
+Present affirmative passive question,8,S000182,Are the servers restarted by Alex?,additional lexical verb
+Present affirmative passive question,6,S000129,Are the servers restarted by Mira?,additional lexical verb
+Present affirmative passive question,6,S000270,Is the book carried by Mira?,additional lexical verb
+Present affirmative passive question,8,S000143,Is the book carried by Nia?,additional lexical verb
+Present affirmative passive question,6,S000207,Is the book read by Alex?,additional lexical verb
+Present affirmative passive question,8,S000225,Is the book read by Nia?,additional lexical verb
+Present affirmative passive question,8,S000257,Is the box moved by Mira?,additional lexical verb
+Present affirmative passive question,9,S000114,Is the box moved by Nia?,additional lexical verb
+Present affirmative passive question,7,S000097,Is the lamp repaired by Alex?,additional lexical verb
+Present affirmative passive question,7,S000199,Is the lamp repaired by Mira?,additional lexical verb
+Present affirmative passive question,8,S000082,Is the lamp repaired by Nia?,additional lexical verb
+Present affirmative passive question,8,S000265,Is the sensor configured by Alex?,additional lexical verb
+Present affirmative passive question,9,S000132,Is the sensor configured by Mira?,additional lexical verb
+Present affirmative passive question,9,S000180,Is the sensor configured by Nia?,additional lexical verb
+Present affirmative passive question,7,S000236,Is the sensor seen by Alex?,additional lexical verb
+Present affirmative passive question,9,S000028,Is the sensor seen by Mira?,additional lexical verb
+Present affirmative passive question,7,S000182,Is the sensor seen by Nia?,additional lexical verb
+Present affirmative passive question,9,S000046,Is the server checked by Alex?,additional lexical verb
+Present affirmative passive question,8,S000255,Is the server checked by Nia?,additional lexical verb
+Present affirmative passive question,9,S000058,Is the server restarted by Alex?,additional lexical verb
+Present affirmative passive question,8,S000004,Is the server restarted by Mira?,additional lexical verb
+Present affirmative passive question,9,S000122,Is the server restarted by Nia?,additional lexical verb
+Present negative passive question,7,S000289,Are the books not carried by Nia?,additional lexical verb
+Present negative passive question,9,S000069,Are the books not read by Mira?,additional lexical verb
+Present negative passive question,8,S000026,Are the lamps not repaired by Alex?,additional lexical verb
+Present negative passive question,7,S000209,Are the lamps not repaired by Mira?,additional lexical verb
+Present negative passive question,8,S000204,Are the lamps not repaired by Nia?,additional lexical verb
+Present negative passive question,9,S000054,Are the sensors not configured by Alex?,additional lexical verb
+Present negative passive question,7,S000128,Are the sensors not configured by Mira?,additional lexical verb
+Present negative passive question,8,S000187,Are the sensors not configured by Nia?,additional lexical verb
+Present negative passive question,9,S000147,Are the sensors not seen by Alex?,additional lexical verb
+Present negative passive question,9,S000010,Are the sensors not seen by Mira?,additional lexical verb
+Present negative passive question,8,S000269,Are the sensors not seen by Nia?,additional lexical verb
+Present negative passive question,9,S000030,Are the servers not restarted by Mira?,additional lexical verb
+Present negative passive question,8,S000215,Is the book not carried by Alex?,additional lexical verb
+Present negative passive question,7,S000117,Is the book not carried by Mira?,additional lexical verb
+Present negative passive question,7,S000095,Is the book not carried by Nia?,additional lexical verb
+Present negative passive question,8,S000016,Is the book not read by Alex?,additional lexical verb
+Present negative passive question,8,S000296,Is the book not read by Mira?,additional lexical verb
+Present negative passive question,7,S000113,Is the book not read by Nia?,additional lexical verb
+Present negative passive question,6,S000137,Is the box not moved by Alex?,additional lexical verb
+Present negative passive question,6,S000002,Is the box not moved by Mira?,additional lexical verb
+Present negative passive question,7,S000241,Is the box not moved by Nia?,additional lexical verb
+Present negative passive question,8,S000279,Is the lamp not repaired by Mira?,additional lexical verb
+Present negative passive question,7,S000008,Is the lamp not repaired by Nia?,additional lexical verb
+Present negative passive question,9,S000183,Is the sensor not configured by Alex?,additional lexical verb
+Present negative passive question,6,S000149,Is the sensor not configured by Mira?,additional lexical verb
+Present negative passive question,8,S000170,Is the sensor not configured by Nia?,additional lexical verb
+Present negative passive question,7,S000222,Is the sensor not seen by Alex?,additional lexical verb
+Present negative passive question,7,S000032,Is the sensor not seen by Mira?,additional lexical verb
+Present negative passive question,9,S000083,Is the sensor not seen by Nia?,additional lexical verb
+Present negative passive question,9,S000164,Is the server not checked by Alex?,additional lexical verb
+Present negative passive question,7,S000206,Is the server not checked by Nia?,additional lexical verb
+Present negative passive question,7,S000212,Is the server not restarted by Alex?,additional lexical verb
+Present negative passive question,6,S000181,Is the server not restarted by Mira?,additional lexical verb
+Present negative passive question,7,S000169,Is the server not restarted by Nia?,additional lexical verb
+Recipient/patient ambiguity,6,S000030,Alex shows Mira a key.,multiple role candidates
