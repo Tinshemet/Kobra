@@ -7,7 +7,7 @@ import hashlib
 import json
 from .selection_read import SLOTS
 
-VERSION = 'rule-assignment-8'
+VERSION = 'rule-assignment-9'
 
 class RuleAssigner:
     def __init__(self, nlp=None, action_words=None, shared_patterns=None):
@@ -138,6 +138,8 @@ class RuleAssigner:
             return stop('quantity or temporal interpretation')
         if any(t.dep_=='advmod' and t.lower_ not in {'very','not'} for t in doc):
             return stop('adverbial interpretation')
+        from .interpretation import clause_grammar
+        out['clause_grammar'] = [clause_grammar(doc, root, frame, passive)]
         out.update(frames=[frame],route='code',reasons=[])
         return out
 

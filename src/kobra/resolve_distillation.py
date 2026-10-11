@@ -8,7 +8,7 @@ import hashlib
 import json
 from .selection_read import ACTS, SLOTS, SPECIAL
 
-VERSION = 'resolve-distillation-2'
+VERSION = 'resolve-distillation-3'
 ARGUMENTS = ('agent', 'patient', 'recipient')
 QUALIFIERS = tuple(s for s in SLOTS if s not in ('predicate', *ARGUMENTS))
 
@@ -71,9 +71,15 @@ def distill_for_resolve(result, *, metadata=None, annotations=()):
         qualifiers = {s: frame[s] for s in QUALIFIERS if frame[s] != 'NONE'}
         bindings = []
         for slot, mention in arguments.items():
-            if mention not in groundings:
+            scoped = [b for b in proposal.get('role_bindings', [])
+                      if b.get('frame')==i and b.get('slot')==slot and b.get('mention')==mention]
+            ids={b['entity_id'] for b in scoped}
+            if len(ids)>1:
+                diagnostics.append(f'conflicting_role_binding:{i}:{slot}')
                 continue
-            identifier = groundings[mention]
+            if not ids and mention not in groundings:
+                continue
+            identifier = next(iter(ids)) if ids else groundings[mention]
             proof = [deepcopy(b) for b in deterministic_evidence
                      if b.get('frame') == i and b.get('slot') == slot
                      and b.get('mention') == mention and b.get('entity_id') == identifier]
@@ -90,6 +96,7 @@ def distill_for_resolve(result, *, metadata=None, annotations=()):
         points.append(dict(id=f'p{i+1}', act=frame['act'], predicate=frame['predicate'],
             arguments=arguments, qualifiers=qualifiers, summary=summary,
             source_text=main['text'], evidence=evidence,
+            grammar=deepcopy(code.get('clause_grammar', [])[i]) if use_code_structure and i<len(code.get('clause_grammar', [])) else {},
             identity_bindings=bindings,
             local_references=[deepcopy(r) for r in local_refs if r.get('frame') == i],
             shared_arguments=point_shared,
@@ -118,13 +125,13 @@ def distill_for_resolve(result, *, metadata=None, annotations=()):
     from .distillation_metadata import describe_text
     metadata, text_accounting = describe_text(source, points, relations, result, metadata, annotations)
     metadata['distillation_version'] = VERSION
-    return dict(version=VERSION, metadata=metadata, text_accounting=text_accounting,
+    return dict(version=VERSION, interpretation=deepcopy(result.get('interpretation', {})), acceptance=deepcopy(result.get('acceptance', {})), metadata=metadata, text_accounting=text_accounting,
         source=dict(id='request',text=source,sha256=hashlib.sha256(source.encode()).hexdigest()),
         points=points, relations=relations,
         local_entities=deepcopy(code.get('local_entities', [])) if use_code_structure else [],
         retained_remainder=remainder,
         state=dict(read_route=result.get('route'),assignment_source=result.get('assignment_source'),
-            ready_for_resolve=result.get('route')=='ACCEPT' and bool(points) and not diagnostics,
+            ready_for_resolve=result.get('route')=='ACCEPT' and bool(points) and not diagnostics and result.get('interpretation', {}).get('status')=='supported',
             reasons=reasons,distillation_diagnostics=sorted(set(diagnostics)),
             external_score=result.get('external_score'),score_kind=result.get('score_kind'),
             cohort=result.get('cohort'),semantic_reverified=False),

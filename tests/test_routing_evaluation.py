@@ -45,7 +45,7 @@ class RoutingTests(unittest.TestCase):
             def __init__(self,resolved):self.resolved=resolved
             def assign(self,text):
                 return dict(route='code' if self.resolved else 'unresolved',rules=['fixture'],frames=[frame()] if self.resolved else [],source=text)
-        calibration={c:Calibration(1000,1000,'synthetic-test-only',c) for c in ('code:fixture:memory-grounding-1','model-unresolved-v1:memory-grounding-1')}
+        calibration={c:Calibration(1000,1000,'synthetic-test-only',c) for c in ('code:fixture:memory-grounding-2','model-unresolved-v1:memory-grounding-2')}
         gate=ConfidenceGate(calibration)
         code=GatedRuleReader(Assigner(True),gate).read('Move the parcel.')
         ai=GatedRuleReader(Assigner(False),gate,lambda request:{'frames':[frame()]}).read('Move the parcel.')

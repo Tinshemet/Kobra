@@ -67,8 +67,8 @@ class GroundingPolicyTests(unittest.TestCase):
         self.assertNotIn('world_references', result['proposal'])
 
     def test_question_parse_does_not_require_world_answer(self):
-        proposal = dict(route='code', rules=['test'], frames=[dict(
-            frame('the books'), act='question', predicate='carried', agent='Mira')])
+        from kobra.rule_assignment import RuleAssigner
+        proposal = RuleAssigner().assign('Were the books carried by Mira?')
         result = GatedRuleReader(FixedAssigner(proposal), ConfidenceGate()).read(
             'Were the books carried by Mira?')
         self.assertEqual(result['reasons'], ['uncalibrated_cohort'])

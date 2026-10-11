@@ -3,13 +3,14 @@ import hashlib
 import json
 import re
 
-VERSION = 'memory-grounding-1'
+VERSION = 'memory-grounding-2'
 REFERENCES = {'it': 'singular', 'this': 'singular', 'that': 'singular', 'them': 'plural', 'these': 'plural', 'those': 'plural'}
 
 
 def resolve_memory(text, code, ledger, world):
     bindings, issues, decisions = [], [], []
     claims = ledger['claims']
+    source_hash=hashlib.sha256(text.encode()).hexdigest()
     for index, frame in enumerate(code.get('frames', [])):
         for slot in ('agent', 'patient', 'recipient'):
             mention = frame.get(slot, '')
@@ -18,7 +19,8 @@ def resolve_memory(text, code, ledger, world):
             if any(r.get('frame') == index and r.get('slot') == slot and r.get('status') == 'resolved'
                    for r in code.get('local_references', [])):
                 continue
-            relevant = [c for c in claims if c.get('reference', '').casefold() == mention.casefold()]
+            relevant = [c for c in claims if c.get('reference', '').casefold() == mention.casefold()
+                        and ('reference_scope' not in c or c['reference_scope']==dict(source_sha256=source_hash,frame=index,slot=slot))]
             active = [c for c in relevant if c['status'] != 'superseded']
             candidates = []
             failures = []
@@ -60,13 +62,6 @@ def resolve_memory(text, code, ledger, world):
                 bindings.append(dict(frame=index, slot=slot, mention=mention, entity_id=ids[0], spans=spans,
                     evidence='client_confirmed_ledger_reference', claim_ids=[c['id'] for c in candidates],
                     prior_spans=[dict(turn_id=c['turn_id'],start=c['start'],end=c['end'],quote=c['quote']) for c in candidates]))
-    # The public map is mention -> ID, so it cannot express different targets
-    # for the same literal across local and ledger-bound frames.
-    local_mentions = {r.get('mention', {}).get('text') for r in code.get('local_references', [])
-                      if r.get('status') == 'resolved'}
-    conflicts = {b['mention'] for b in bindings if b['mention'] in local_mentions}
-    issues.extend('memory_local_scope_conflict:' + mention for mention in conflicts)
-    bindings = [b for b in bindings if b['mention'] not in conflicts]
     revision = hashlib.sha256(json.dumps(ledger, sort_keys=True).encode()).hexdigest()
     return dict(version=VERSION, revision=revision, bindings=bindings, issues=sorted(set(issues)), decisions=decisions,
                 semantics='caller confirms reference intent; code checks evidence, identity, number and conflicts')

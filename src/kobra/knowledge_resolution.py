@@ -4,7 +4,7 @@ import hashlib
 import json
 import re
 
-VERSION = 'knowledge-resolution-2'
+VERSION = 'knowledge-resolution-3'
 
 
 def created_patient_frames(code):
@@ -70,13 +70,12 @@ def resolve_knowledge(knowledge, text, proposal, world, *, created_frames=()):
                     bindings.append(dict(frame=index, slot=slot, mention=value,
                                          entity_id=live_candidates[0], spans=spans,
                                          evidence='exact_current_name_or_alias'))
-    # The current grounding contract is mention -> ID, not frame -> ID.
-    # One literal cannot safely mean a created entity in one frame and a live
-    # entity in another. Preserve both candidates and abstain instead.
-    created_mentions = {m['mention'] for m in matches if m['creates_description']}
-    conflicting_mentions = created_mentions.intersection(b['mention'] for b in bindings)
-    issues.extend('knowledge_conflicting_mention_roles:' + m for m in conflicting_mentions)
-    bindings = [b for b in bindings if b['mention'] not in conflicting_mentions]
+    # Distinct role storage does not settle a repeated name that could refer to
+    # either a just-created description or a pre-existing live object.
+    created_mentions={m['mention'] for m in matches if m['creates_description']}
+    conflicts=created_mentions.intersection(b['mention'] for b in bindings)
+    issues.extend('knowledge_conflicting_mention_roles:' + m for m in conflicts)
+    bindings=[b for b in bindings if b['mention'] not in conflicts]
     return dict(version=VERSION, revision=revision, snapshot=snapshot, matches=matches,
                 bindings=bindings, lexical_mentions=knowledge.annotate(text)['mentions'],
                 issues=sorted(set(issues)), world=merged,

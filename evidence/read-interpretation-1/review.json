@@ -1,0 +1,22 @@
+{
+  "review": "Local implementation and evidence review",
+  "checks": [
+    "No model authority for scoped grounding",
+    "Calibration separated from interpretation",
+    "Uninterpreted source blocks calibrated readiness",
+    "Legacy frame/identity/source invariants pass saved 5000 replay",
+    "Historical evidence preserved",
+    "Production calibration absent; no new held-out accuracy claim"
+  ],
+  "tests": {
+    "run": 276,
+    "passed": 275,
+    "skipped": 1
+  },
+  "limitations": [
+    "Reused development set, not fresh accuracy or calibration.",
+    "Gold checks existing frames, grounding and ASK policy; new grammar features have targeted tests, not 5000 independent labels.",
+    "1007 unique current sentences; repeated memory patterns limit diversity.",
+    "All legacy routes ASK because production calibration is absent."
+  ]
+}

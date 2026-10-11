@@ -45,7 +45,7 @@ class MemoryGroundingTests(unittest.TestCase):
         claims=[dict(id='c1',turn_id='t1',start=0,end=3,quote='box',status='superseded',reference='it',entity_id='b1',superseded_by='c2'),dict(id='c2',turn_id='t1',start=0,end=3,quote='box',status='confirmed_by_client',reference='them',entity_id='b1')]
         with self.assertRaises(ValueError):self.read(claims=claims)
 
-    def test_global_map_cannot_override_local_reference_scope(self):
+    def test_scoped_binding_keeps_local_and_ledger_roles_separate(self):
         from kobra.memory_grounding import resolve_memory
         from kobra.context_ledger import context_snapshot
         from kobra.selection_read import SLOTS
@@ -54,5 +54,7 @@ class MemoryGroundingTests(unittest.TestCase):
         world={'b1':dict(name='box',number='singular')}
         ledger=context_snapshot([dict(id='t1',role='user',content='box')],world,[dict(id='c1',turn_id='t1',start=0,end=3,quote='box',reference='it',entity_id='b1',status='confirmed_by_client')])
         r=resolve_memory('Move it. Move it.',code,ledger,world)
-        self.assertEqual(r['bindings'],[])
-        self.assertIn('memory_local_scope_conflict:it',r['issues'])
+        self.assertEqual(len(r['bindings']),1)
+        self.assertEqual(r['bindings'][0]['frame'],1)
+        self.assertEqual(r['bindings'][0]['entity_id'],'b1')
+        self.assertEqual(r['issues'],[])

@@ -140,6 +140,6 @@ def assign_structure(doc, boundaries=None, shared_patterns=DEFAULT_PATTERNS):
         if a>cursor:ledger.append(dict(**span(text,cursor,a),label='greeting_or_politeness' if cursor==0 else 'connective_or_unassigned'))
         ledger.append(dict(**span(text,a,b),label='action_chunk'));cursor=b
     if cursor<len(text):ledger.append(dict(**span(text,cursor,len(text)),label='connective_or_unassigned'))
-    return dict(source=text,frames=frames,route='unresolved' if issues else 'code',rules=sorted(set(rules)),
+    return dict(source=text,frames=frames,clause_grammar=[dict(tense='not_applicable',aspect='simple',voice='active',polarity='positive',markers=[]) for f in frames],route='unresolved' if issues else 'code',rules=sorted(set(rules)),
                 reasons=issues,semantic_verified=False,version='rule-assignment-4',chunking_method='deterministic_surface_rules',chunks=chunks,
                 shared_arguments=shared_arguments,local_entities=entities,local_references=references,chunk_relations=relations,source_ledger=ledger)

@@ -1,7 +1,7 @@
 Deterministic distillation for RESOLVE
 ======================================
 
-The new resolve-distillation-1 contract projects the current gated READ result
+The current resolve-distillation-3 contract projects the current gated READ result
 into one structured point per frame. Its main consumer is RESOLVE, so the compact
 roles and qualifiers are authoritative representations of the upstream proposal;
 a role-labelled summary is provided for inspection. This is not the older
@@ -45,7 +45,8 @@ the original frame exactly. MISSING and UNKNOWN remain explicit. Negation,
 condition, time, quantity, attribution and modality remain on their owning point.
 Questions remain questions; assertions remain attributed input, not verified
 facts. Original wording is necessary: current slots do not encode every
-linguistic distinction, including all tense information. The summary must never
+linguistic distinction, including unsupported scope and discourse distinctions. Version 3 adds explicit
+tense, aspect, voice and polarity for the supported grammar. The summary must never
 be used as a replacement for the source-backed structured point.
 
 Evidence for simple clauses covers the full source. Supported structural frames
@@ -53,7 +54,7 @@ use exact chunk spans plus shared-argument spans. Multiple frames without a
 trusted chunk map use full-source support rather than invented offsets. Unmapped
 relations and unsupported groundings produce diagnostics; invalid frames preserve
 source as unresolved text. ready_for_resolve requires upstream ACCEPT, usable
-points and no distillation diagnostics. No new confidence or authorization is
+points, a supported interpretation and no distillation diagnostics. No new confidence or authorization is
 created. Current uncalibrated runs remain ASK and ready_for_resolve is false.
 
 Example
@@ -110,7 +111,7 @@ free-form discourse inference and calibrated acceptance remain separate work.
 Version 2: metadata, garbage/noise annotations and open issues
 ------------------------------------------------------------
 
-The current output version is resolve-distillation-2. Existing points, grounding,
+Version 2 introduced resolve-distillation-2. Existing points, grounding,
 relations, source and gate fields are unchanged. Added fields:
 
 * metadata: producer and versions, READ configuration ID, assignment origin,
@@ -147,3 +148,70 @@ Validation: 269 tests run, 268 passed, one optional dependency skip. A replay
 of 5,000 saved handoffs verified unchanged existing fields and exact source
 partitions, with zero characters discarded. This is schema/retention verification,
 not a fresh language accuracy claim. New report: reports/read-distillation-metadata.html.
+
+Version 3: interpretation belongs to READ
+----------------------------------------
+
+READ owns interpretation and grounded reference decisions. RESOLVE receives
+supported meaning; it must not silently finish missing linguistic interpretation.
+Unsupported or ambiguous meaning remains an explicit READ ASK condition.
+
+* interpretation.status is supported or unresolved; needs_ASK describes meaning,
+  grounding and validation blockers. Calibration reasons are excluded here.
+* acceptance records operational acceptance and separate calibration reasons.
+  A well-parsed question may have supported interpretation while its legacy route
+  is ASK because its cohort lacks calibration. This is not a request to clarify
+  an already understood question. Consumers should distinguish these states.
+* Each supported point has grammar: tense, aspect, voice, polarity and exact
+  auxiliary/voice marker spans. Existing modality and other qualifiers remain.
+* The source audit accounts for tokens through literal slots, grammatical markers,
+  structural members/modifiers, supported connectors and bounded social prefixes.
+  Full-source evidence alone cannot mark every word interpreted. Unrepresented
+  words produce uninterpreted_source_material and prevent readiness, even with
+  calibration. Caller garbage/noise annotations cannot bypass this audit.
+* Identity bindings belong to a frame and argument slot. Different occurrences
+  of "it" may have different caller-confirmed identities. The old mention-to-ID
+  map is emitted only when it represents all occurrences without conflict.
+
+Confirmed ledger claims may optionally include::
+
+    "reference_scope": {
+        "source_sha256": "<SHA256 of the exact current source>",
+        "frame": 0,
+        "slot": "patient"
+    }
+
+A scope applies only to that source, zero-based frame and agent/patient/recipient
+slot. It is not inferred confirmation. Exact prior-turn quotes, existing WORLD
+IDs, number, status and conflict checks still apply. AI-supplied role bindings
+cannot grant identity authority. Created/live repeated-name ambiguity still asks;
+per-role storage alone does not resolve intent. Unscoped claims retain their
+existing all-matching-roles behavior and conflicting claims abstain.
+
+Examples:
+
+* "Was the sensor not moved by Mira?": question, Mira as agent, sensor as
+  patient, negative polarity, past tense, simple aspect, passive voice.
+  Interpretation is supported; missing calibration still blocks acceptance.
+* "The server is very quiet.": the current slots omit the degree word "very".
+  READ exposes that token and asks; source retention does not excuse lost meaning.
+* Two scoped confirmed claims can bind frame 0 patient "it" to a box and frame 1
+  patient "it" to a lamp. This is tested as a contract fixture, not evidence that
+  free-form conversational references can be inferred automatically.
+
+The audit establishes bounded representation coverage, not universal entailment.
+It uses exact literal matching, so repeated identical wording is not independently
+proved to have the correct scope. Unsupported clauses, qualifiers and discourse
+remain ASK. AI-origin proposals without verified code interpretation cannot become
+ready_for_resolve through distillation. Legacy route checks remain compatible.
+
+Validation: 276 tests, 275 passed and one optional-jsonschema skip. The saved
+5,000-case development replay still matches all existing gold outcomes: 2,400
+supported interpretations and 2,600 expected ASK cases, zero regressions. There
+are 1,007 distinct current sentences; many contexts repeat memory templates.
+All 5,000 legacy routes remain ASK without production calibration. New grammar
+features are covered by targeted tests, not 5,000 independently labelled grammar
+examples. This is not a new accuracy sample or production calibration.
+
+Evidence: evidence/read-interpretation-1. Walkthrough:
+reports/read-interpretation.html. Historical evaluations remain unchanged.

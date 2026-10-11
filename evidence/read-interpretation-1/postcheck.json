@@ -1,0 +1,6 @@
+{
+  "check": "Interpretation needs_ASK agrees with saved independent ASK gold",
+  "cases": 5000,
+  "correct": 5000,
+  "evaluator_sha256": "13c3a62a5fb58148d59ed5564dfd381eb1ef297fc4eb5290b3ad20a70828693c"
+}

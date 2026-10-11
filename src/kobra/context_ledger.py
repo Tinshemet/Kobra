@@ -48,6 +48,13 @@ def context_snapshot(history=(), world=None, claims=()):
                     {'it','this','that','them','these','those'} or
                     not isinstance(c.get('entity_id'), str) or not c['entity_id']):
                 raise ValueError('reference claims require a supported pronoun and nonempty entity ID')
+        if 'reference_scope' in c:
+            scope=c['reference_scope']
+            if (not c.get('reference') or not isinstance(scope,dict) or set(scope)!={'source_sha256','frame','slot'}
+                    or not isinstance(scope['source_sha256'],str) or not re.fullmatch(r'[0-9a-f]{64}',scope['source_sha256'])
+                    or type(scope['frame']) is not int or scope['frame']<0
+                    or scope['slot'] not in {'agent','patient','recipient'}):
+                raise ValueError('reference scope requires source hash, frame and role')
         c.setdefault('status','reported');claim_ids.add(c['id']);checked.append(c)
     for c in checked:
         target=c.get('superseded_by')

@@ -1,0 +1,34 @@
+{
+  "kind": "reused development replay; distillation checks are representation invariants, not semantic proof",
+  "cases": 5000,
+  "before_correct": 5000,
+  "after_correct": 5000,
+  "ticks": 0,
+  "regressions": 0,
+  "frame_roundtrips": 5000,
+  "grounding_roundtrips": 5000,
+  "source_coverage_checks": 5000,
+  "unchanged_gate_checks": 5000,
+  "new_model_calls": 0,
+  "interpretation_status": {
+    "supported": 2400,
+    "unresolved": 2600
+  },
+  "final_routes": {
+    "ASK": 5000
+  },
+  "baseline_hashes": {
+    "inputs.jsonl": "5c4acdf7361919831c22f78935b16aebca3bd7d662add369fbc56a0f7b3efba4",
+    "gold.jsonl": "73bda64b529f2260a621b5ddf5c07d99d406825183f2435900a61af3345d5f73"
+  },
+  "capture_sha256": "a9a2b36af6ab67966d92bca2005ddadf4e711808f61f96b366ff61ba803bfdef",
+  "comparison_baseline_sha256": "046ae99162404bffacb506dd167bfea56b33e87b313ff846b17842ff2a374326",
+  "interpretation_policy_checks": 5000,
+  "unique_current_sentences": 1007,
+  "limitations": [
+    "Reused development set, not fresh accuracy or calibration.",
+    "Gold checks existing frames, grounding and ASK policy; new grammar features have targeted tests, not 5000 independent labels.",
+    "1007 unique current sentences; repeated memory patterns limit diversity.",
+    "All legacy routes ASK because production calibration is absent."
+  ]
+}

@@ -1,0 +1,596 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>READ interpretation</title><style>body{max-width:1100px;margin:30px auto;padding:20px;font:16px/1.6 system-ui;background:#112033;color:#edf3ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}</style><h1>READ owns interpretation</h1><p>Source → parsing and structural relations → grounded roles → interpretation audit → acceptance gate → distillation → RESOLVE.</p><p>Unresolved meaning stays with READ and triggers ASK. RESOLVE receives structured points, original wording and evidence. Distillation calls no generative model.</p><h2>Meaning and acceptance are separate</h2><p>Supported interpretation means the bounded rules account for the input and required references. Acceptance additionally requires calibration. A lack of calibration does not mean the user wrote an ambiguous sentence.</p><h2>What changed</h2><ul><li>Explicit tense, aspect, voice and polarity per point.</li><li>Bindings belong to a frame and role; confirmed ledger claims can name a source hash and role.</li><li>Unrepresented words block readiness even when full-source evidence retains them.</li><li>Unknown text is retained; garbage/noise annotations cannot override meaning checks.</li></ul><h2>Was the sensor not moved by Mira?</h2><pre>{
+  &quot;interpretation&quot;: {
+    &quot;version&quot;: &quot;read-interpretation-1&quot;,
+    &quot;status&quot;: &quot;supported&quot;,
+    &quot;tokens&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 3,
+        &quot;text&quot;: &quot;Was&quot;,
+        &quot;roles&quot;: [
+          &quot;grammar_marker&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 4,
+        &quot;end&quot;: 7,
+        &quot;text&quot;: &quot;the&quot;,
+        &quot;roles&quot;: [
+          &quot;role:patient&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 8,
+        &quot;end&quot;: 14,
+        &quot;text&quot;: &quot;sensor&quot;,
+        &quot;roles&quot;: [
+          &quot;role:patient&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 15,
+        &quot;end&quot;: 18,
+        &quot;text&quot;: &quot;not&quot;,
+        &quot;roles&quot;: [
+          &quot;role:negation&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 19,
+        &quot;end&quot;: 24,
+        &quot;text&quot;: &quot;moved&quot;,
+        &quot;roles&quot;: [
+          &quot;role:predicate&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 25,
+        &quot;end&quot;: 27,
+        &quot;text&quot;: &quot;by&quot;,
+        &quot;roles&quot;: [
+          &quot;grammar_marker&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 28,
+        &quot;end&quot;: 32,
+        &quot;text&quot;: &quot;Mira&quot;,
+        &quot;roles&quot;: [
+          &quot;role:agent&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 32,
+        &quot;end&quot;: 33,
+        &quot;text&quot;: &quot;?&quot;,
+        &quot;roles&quot;: [
+          &quot;punctuation&quot;
+        ]
+      }
+    ],
+    &quot;unassigned&quot;: [],
+    &quot;reasons&quot;: [],
+    &quot;scope&quot;: &quot;bounded code grammar and explicit semantic roles; not universal entailment proof&quot;,
+    &quot;needs_ASK&quot;: false
+  },
+  &quot;acceptance&quot;: {
+    &quot;status&quot;: &quot;blocked&quot;,
+    &quot;calibration_reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ]
+  },
+  &quot;points&quot;: [
+    {
+      &quot;id&quot;: &quot;p1&quot;,
+      &quot;act&quot;: &quot;question&quot;,
+      &quot;predicate&quot;: &quot;moved&quot;,
+      &quot;arguments&quot;: {
+        &quot;agent&quot;: &quot;Mira&quot;,
+        &quot;patient&quot;: &quot;the sensor&quot;
+      },
+      &quot;qualifiers&quot;: {
+        &quot;negation&quot;: &quot;not&quot;
+      },
+      &quot;summary&quot;: &quot;Question: predicate=\&quot;moved\&quot;; agent=\&quot;Mira\&quot;; patient=\&quot;the sensor\&quot;; negation=\&quot;not\&quot;&quot;,
+      &quot;source_text&quot;: &quot;Was the sensor not moved by Mira?&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 33,
+          &quot;text&quot;: &quot;Was the sensor not moved by Mira?&quot;
+        }
+      ],
+      &quot;grammar&quot;: {
+        &quot;tense&quot;: &quot;past&quot;,
+        &quot;aspect&quot;: &quot;simple&quot;,
+        &quot;voice&quot;: &quot;passive&quot;,
+        &quot;polarity&quot;: &quot;negative&quot;,
+        &quot;markers&quot;: [
+          {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 3,
+            &quot;text&quot;: &quot;Was&quot;
+          },
+          {
+            &quot;start&quot;: 25,
+            &quot;end&quot;: 27,
+            &quot;text&quot;: &quot;by&quot;
+          }
+        ]
+      },
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    }
+  ],
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C001-passive-roles+C021-passive-question-complement-repair:assignment:4817eaee66bbd80c33771f8c37935338437bf32c5584b17216d6a1b1a1c79801:memory-grounding-2&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>Mira has moved the box.</h2><pre>{
+  &quot;interpretation&quot;: {
+    &quot;version&quot;: &quot;read-interpretation-1&quot;,
+    &quot;status&quot;: &quot;supported&quot;,
+    &quot;tokens&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 4,
+        &quot;text&quot;: &quot;Mira&quot;,
+        &quot;roles&quot;: [
+          &quot;role:agent&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 5,
+        &quot;end&quot;: 8,
+        &quot;text&quot;: &quot;has&quot;,
+        &quot;roles&quot;: [
+          &quot;grammar_marker&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 9,
+        &quot;end&quot;: 14,
+        &quot;text&quot;: &quot;moved&quot;,
+        &quot;roles&quot;: [
+          &quot;role:predicate&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 15,
+        &quot;end&quot;: 18,
+        &quot;text&quot;: &quot;the&quot;,
+        &quot;roles&quot;: [
+          &quot;role:patient&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 19,
+        &quot;end&quot;: 22,
+        &quot;text&quot;: &quot;box&quot;,
+        &quot;roles&quot;: [
+          &quot;role:patient&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 22,
+        &quot;end&quot;: 23,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;roles&quot;: [
+          &quot;punctuation&quot;
+        ]
+      }
+    ],
+    &quot;unassigned&quot;: [],
+    &quot;reasons&quot;: [],
+    &quot;scope&quot;: &quot;bounded code grammar and explicit semantic roles; not universal entailment proof&quot;,
+    &quot;needs_ASK&quot;: false
+  },
+  &quot;acceptance&quot;: {
+    &quot;status&quot;: &quot;blocked&quot;,
+    &quot;calibration_reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ]
+  },
+  &quot;points&quot;: [
+    {
+      &quot;id&quot;: &quot;p1&quot;,
+      &quot;act&quot;: &quot;assertion&quot;,
+      &quot;predicate&quot;: &quot;moved&quot;,
+      &quot;arguments&quot;: {
+        &quot;agent&quot;: &quot;Mira&quot;,
+        &quot;patient&quot;: &quot;the box&quot;
+      },
+      &quot;qualifiers&quot;: {},
+      &quot;summary&quot;: &quot;Assertion: predicate=\&quot;moved\&quot;; agent=\&quot;Mira\&quot;; patient=\&quot;the box\&quot;&quot;,
+      &quot;source_text&quot;: &quot;Mira has moved the box.&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 23,
+          &quot;text&quot;: &quot;Mira has moved the box.&quot;
+        }
+      ],
+      &quot;grammar&quot;: {
+        &quot;tense&quot;: &quot;present&quot;,
+        &quot;aspect&quot;: &quot;perfect&quot;,
+        &quot;voice&quot;: &quot;active&quot;,
+        &quot;polarity&quot;: &quot;positive&quot;,
+        &quot;markers&quot;: [
+          {
+            &quot;start&quot;: 5,
+            &quot;end&quot;: 8,
+            &quot;text&quot;: &quot;has&quot;
+          }
+        ]
+      },
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    }
+  ],
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C002-active-roles:assignment:4817eaee66bbd80c33771f8c37935338437bf32c5584b17216d6a1b1a1c79801:memory-grounding-2&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>Open and read the file.</h2><pre>{
+  &quot;interpretation&quot;: {
+    &quot;version&quot;: &quot;read-interpretation-1&quot;,
+    &quot;status&quot;: &quot;supported&quot;,
+    &quot;tokens&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 4,
+        &quot;text&quot;: &quot;Open&quot;,
+        &quot;roles&quot;: [
+          &quot;role:predicate&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 5,
+        &quot;end&quot;: 8,
+        &quot;text&quot;: &quot;and&quot;,
+        &quot;roles&quot;: [
+          &quot;connector&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 9,
+        &quot;end&quot;: 13,
+        &quot;text&quot;: &quot;read&quot;,
+        &quot;roles&quot;: [
+          &quot;role:predicate&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 14,
+        &quot;end&quot;: 17,
+        &quot;text&quot;: &quot;the&quot;,
+        &quot;roles&quot;: [
+          &quot;role:patient&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 18,
+        &quot;end&quot;: 22,
+        &quot;text&quot;: &quot;file&quot;,
+        &quot;roles&quot;: [
+          &quot;role:patient&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 22,
+        &quot;end&quot;: 23,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;roles&quot;: [
+          &quot;connector&quot;
+        ]
+      }
+    ],
+    &quot;unassigned&quot;: [],
+    &quot;reasons&quot;: [],
+    &quot;scope&quot;: &quot;bounded code grammar and explicit semantic roles; not universal entailment proof&quot;,
+    &quot;needs_ASK&quot;: false
+  },
+  &quot;acceptance&quot;: {
+    &quot;status&quot;: &quot;blocked&quot;,
+    &quot;calibration_reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ]
+  },
+  &quot;points&quot;: [
+    {
+      &quot;id&quot;: &quot;p1&quot;,
+      &quot;act&quot;: &quot;request&quot;,
+      &quot;predicate&quot;: &quot;Open&quot;,
+      &quot;arguments&quot;: {
+        &quot;patient&quot;: &quot;the file&quot;
+      },
+      &quot;qualifiers&quot;: {},
+      &quot;summary&quot;: &quot;Request: predicate=\&quot;Open\&quot;; patient=\&quot;the file\&quot;&quot;,
+      &quot;source_text&quot;: &quot;Open&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 4,
+          &quot;text&quot;: &quot;Open&quot;
+        },
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 14,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;the file&quot;
+        }
+      ],
+      &quot;grammar&quot;: {
+        &quot;tense&quot;: &quot;not_applicable&quot;,
+        &quot;aspect&quot;: &quot;simple&quot;,
+        &quot;voice&quot;: &quot;active&quot;,
+        &quot;polarity&quot;: &quot;positive&quot;,
+        &quot;markers&quot;: []
+      },
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [
+        {
+          &quot;frame&quot;: 0,
+          &quot;slot&quot;: &quot;patient&quot;,
+          &quot;from_chunk&quot;: &quot;c1&quot;,
+          &quot;donor_chunk&quot;: &quot;c2&quot;,
+          &quot;span&quot;: {
+            &quot;start&quot;: 14,
+            &quot;end&quot;: 22,
+            &quot;text&quot;: &quot;the file&quot;
+          },
+          &quot;entity_id&quot;: &quot;e1&quot;,
+          &quot;rule&quot;: &quot;C016-trailing-shared-patient&quot;
+        }
+      ],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;p2&quot;,
+      &quot;act&quot;: &quot;request&quot;,
+      &quot;predicate&quot;: &quot;read&quot;,
+      &quot;arguments&quot;: {
+        &quot;patient&quot;: &quot;the file&quot;
+      },
+      &quot;qualifiers&quot;: {},
+      &quot;summary&quot;: &quot;Request: predicate=\&quot;read\&quot;; patient=\&quot;the file\&quot;&quot;,
+      &quot;source_text&quot;: &quot;read the file&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 9,
+          &quot;end&quot;: 22,
+          &quot;text&quot;: &quot;read the file&quot;
+        }
+      ],
+      &quot;grammar&quot;: {
+        &quot;tense&quot;: &quot;not_applicable&quot;,
+        &quot;aspect&quot;: &quot;simple&quot;,
+        &quot;voice&quot;: &quot;active&quot;,
+        &quot;polarity&quot;: &quot;positive&quot;,
+        &quot;markers&quot;: []
+      },
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;
+      ]
+    }
+  ],
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C010-imperative-coordination+C016-trailing-shared-patient:assignment:4817eaee66bbd80c33771f8c37935338437bf32c5584b17216d6a1b1a1c79801:memory-grounding-2&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>The server is very quiet.</h2><pre>{
+  &quot;interpretation&quot;: {
+    &quot;version&quot;: &quot;read-interpretation-1&quot;,
+    &quot;status&quot;: &quot;unresolved&quot;,
+    &quot;tokens&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 3,
+        &quot;text&quot;: &quot;The&quot;,
+        &quot;roles&quot;: [
+          &quot;role:agent&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 4,
+        &quot;end&quot;: 10,
+        &quot;text&quot;: &quot;server&quot;,
+        &quot;roles&quot;: [
+          &quot;role:agent&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 11,
+        &quot;end&quot;: 13,
+        &quot;text&quot;: &quot;is&quot;,
+        &quot;roles&quot;: [
+          &quot;grammar_marker&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 14,
+        &quot;end&quot;: 18,
+        &quot;text&quot;: &quot;very&quot;,
+        &quot;roles&quot;: []
+      },
+      {
+        &quot;start&quot;: 19,
+        &quot;end&quot;: 24,
+        &quot;text&quot;: &quot;quiet&quot;,
+        &quot;roles&quot;: [
+          &quot;role:predicate&quot;
+        ]
+      },
+      {
+        &quot;start&quot;: 24,
+        &quot;end&quot;: 25,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;roles&quot;: [
+          &quot;punctuation&quot;
+        ]
+      }
+    ],
+    &quot;unassigned&quot;: [
+      {
+        &quot;start&quot;: 14,
+        &quot;end&quot;: 18,
+        &quot;text&quot;: &quot;very&quot;,
+        &quot;roles&quot;: []
+      }
+    ],
+    &quot;reasons&quot;: [
+      &quot;uninterpreted_source_material&quot;
+    ],
+    &quot;scope&quot;: &quot;bounded code grammar and explicit semantic roles; not universal entailment proof&quot;,
+    &quot;needs_ASK&quot;: true
+  },
+  &quot;acceptance&quot;: {
+    &quot;status&quot;: &quot;blocked&quot;,
+    &quot;calibration_reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ]
+  },
+  &quot;points&quot;: [
+    {
+      &quot;id&quot;: &quot;p1&quot;,
+      &quot;act&quot;: &quot;assertion&quot;,
+      &quot;predicate&quot;: &quot;quiet&quot;,
+      &quot;arguments&quot;: {
+        &quot;agent&quot;: &quot;The server&quot;
+      },
+      &quot;qualifiers&quot;: {},
+      &quot;summary&quot;: &quot;Assertion: predicate=\&quot;quiet\&quot;; agent=\&quot;The server\&quot;&quot;,
+      &quot;source_text&quot;: &quot;The server is very quiet.&quot;,
+      &quot;evidence&quot;: [
+        {
+          &quot;source_id&quot;: &quot;request&quot;,
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 25,
+          &quot;text&quot;: &quot;The server is very quiet.&quot;
+        }
+      ],
+      &quot;grammar&quot;: {
+        &quot;tense&quot;: &quot;present&quot;,
+        &quot;aspect&quot;: &quot;simple&quot;,
+        &quot;voice&quot;: &quot;active&quot;,
+        &quot;polarity&quot;: &quot;positive&quot;,
+        &quot;markers&quot;: [
+          {
+            &quot;start&quot;: 11,
+            &quot;end&quot;: 13,
+            &quot;text&quot;: &quot;is&quot;
+          }
+        ]
+      },
+      &quot;identity_bindings&quot;: [],
+      &quot;local_references&quot;: [],
+      &quot;shared_arguments&quot;: [],
+      &quot;members&quot;: [],
+      &quot;modifiers&quot;: [],
+      &quot;uncertainty&quot;: [
+        &quot;uncalibrated_cohort&quot;,
+        &quot;uninterpreted_source_material&quot;
+      ]
+    }
+  ],
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;,
+      &quot;uninterpreted_source_material&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C002-active-roles+C003-adjective-state:assignment:4817eaee66bbd80c33771f8c37935338437bf32c5584b17216d6a1b1a1c79801:memory-grounding-2&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>Validation and limits</h2><p>276 tests: 275 passed, one optional dependency skip. Reused 5,000-case replay: 5,000 matching expected outcomes, no regressions. 2,400 supported interpretations; 2,600 expected ASK cases. All legacy routes remain ASK without calibration. Only 1,007 unique current sentences: this is regression evidence, not a fresh accuracy claim.</p><p>This does not finish all English rules. Unsupported constructions, omitted qualifiers and unresolved context remain READ ASK cases. Literal token coverage alone does not prove semantic equivalence or correct scope.</p><pre>{
+  &quot;kind&quot;: &quot;reused development replay; distillation checks are representation invariants, not semantic proof&quot;,
+  &quot;cases&quot;: 5000,
+  &quot;before_correct&quot;: 5000,
+  &quot;after_correct&quot;: 5000,
+  &quot;ticks&quot;: 0,
+  &quot;regressions&quot;: 0,
+  &quot;frame_roundtrips&quot;: 5000,
+  &quot;grounding_roundtrips&quot;: 5000,
+  &quot;source_coverage_checks&quot;: 5000,
+  &quot;unchanged_gate_checks&quot;: 5000,
+  &quot;new_model_calls&quot;: 0,
+  &quot;interpretation_status&quot;: {
+    &quot;supported&quot;: 2400,
+    &quot;unresolved&quot;: 2600
+  },
+  &quot;final_routes&quot;: {
+    &quot;ASK&quot;: 5000
+  },
+  &quot;baseline_hashes&quot;: {
+    &quot;inputs.jsonl&quot;: &quot;5c4acdf7361919831c22f78935b16aebca3bd7d662add369fbc56a0f7b3efba4&quot;,
+    &quot;gold.jsonl&quot;: &quot;73bda64b529f2260a621b5ddf5c07d99d406825183f2435900a61af3345d5f73&quot;
+  },
+  &quot;capture_sha256&quot;: &quot;a9a2b36af6ab67966d92bca2005ddadf4e711808f61f96b366ff61ba803bfdef&quot;,
+  &quot;comparison_baseline_sha256&quot;: &quot;046ae99162404bffacb506dd167bfea56b33e87b313ff846b17842ff2a374326&quot;,
+  &quot;interpretation_policy_checks&quot;: 5000,
+  &quot;unique_current_sentences&quot;: 1007,
+  &quot;limitations&quot;: [
+    &quot;Reused development set, not fresh accuracy or calibration.&quot;,
+    &quot;Gold checks existing frames, grounding and ASK policy; new grammar features have targeted tests, not 5000 independent labels.&quot;,
+    &quot;1007 unique current sentences; repeated memory patterns limit diversity.&quot;,
+    &quot;All legacy routes ASK because production calibration is absent.&quot;
+  ]
+}</pre></html>

@@ -39,7 +39,7 @@ class ConfidenceGate:
         self.min_cases = min_cases
         self.validators = tuple(validators)
 
-    def assess(self, text, proposal, *, cohort, world_ids=(), missing_context=(), local_bindings=(), validation_reasons=()):
+    def assess(self, text, proposal, *, cohort, world_ids=(), missing_context=(), local_bindings=(), role_bindings=(), validation_reasons=()):
         # cohort, world_ids and missing_context come from application code, not
         # fields inside the untrusted model proposal or Serpent teacher labels.
         reasons = [f'missing_context:{x}' for x in missing_context] + list(validation_reasons)
@@ -80,7 +80,9 @@ class ConfidenceGate:
                         local_match = any(r.get('frame') == frame_index and r.get('slot') == slot
                             and r.get('status') == 'resolved' and r.get('mention',{}).get('text') == value
                             for r in local_bindings)
-                        if value not in groundings and not local_match:
+                        scoped_match = any(b.get('frame') == frame_index and b.get('slot') == slot
+                            and b.get('mention') == value and b.get('entity_id') in world_ids for b in role_bindings)
+                        if value not in groundings and not local_match and not scoped_match:
                             reasons.append(f'ungrounded_reference:{slot}')
         references = proposal.get('world_references', []) if isinstance(proposal, dict) else []
         if not isinstance(references, list) or any(not isinstance(r, str) or r not in world_ids for r in references):
@@ -168,6 +170,8 @@ class GatedRuleReader:
         history = deepcopy(list(history))
         ledger = context_snapshot(history, world, context_claims)
         code = self.assigner.assign(text)
+        from .interpretation import audit_source, CALIBRATION_REASONS
+        source_audit = audit_source(text, code)
         knowledge_evidence = None
         if self.knowledge is not None:
             from .knowledge_resolution import resolve_knowledge, created_patient_frames
@@ -223,12 +227,13 @@ class GatedRuleReader:
         if origin == 'code':
             knowledge_reasons.extend(memory_evidence['issues'])
             deterministic_bindings = list(deterministic_bindings) + memory_evidence['bindings']
-            by_mention = {}
+            by_role = {}
             for binding in deterministic_bindings:
-                by_mention.setdefault(binding['mention'], set()).add(binding['entity_id'])
-            conflicts = {m for m, ids in by_mention.items() if len(ids) > 1}
-            knowledge_reasons.extend('memory_binding_conflict:' + m for m in conflicts)
-            deterministic_bindings = [b for b in deterministic_bindings if b['mention'] not in conflicts]
+                key=(binding['frame'],binding['slot'])
+                by_role.setdefault(key,set()).add(binding['entity_id'])
+            conflicts={key for key,ids in by_role.items() if len(ids)>1}
+            knowledge_reasons.extend(f'memory_binding_conflict:{f}:{slot}' for f,slot in conflicts)
+            deterministic_bindings=[b for b in deterministic_bindings if (b['frame'],b['slot']) not in conflicts]
         cohort += ':' + memory_evidence['version']
         if origin == 'AI' and isinstance(proposal, dict):
             # Identity decisions never gain authority merely by naming an existing ID.
@@ -242,12 +247,30 @@ class GatedRuleReader:
             if isinstance(supplied_references, list) and any(not isinstance(v, str) or v not in world for v in supplied_references):
                 knowledge_reasons.append('nonexistent_world_reference')
             proposal.pop('local_references', None)
+            proposal.pop('role_bindings', None)
         if isinstance(proposal, dict):
+            proposal['role_bindings'] = deepcopy(deterministic_bindings)
+            # Compatibility map only when a literal has one interpretation in
+            # every role occurrence and does not also name a local entity.
+            global_ids={}
             for binding in deterministic_bindings:
-                proposal.setdefault('groundings', {})[binding['mention']] = binding['entity_id']
+                global_ids.setdefault(binding['mention'],set()).add(binding['entity_id'])
+            local_mentions={r.get('mention',{}).get('text') for r in local_bindings}
+            for mention,ids in global_ids.items():
+                occurrences={(i,slot) for i,f in enumerate(proposal.get('frames',[])) if isinstance(f,dict)
+                             for slot in ('agent','patient','recipient') if f.get(slot)==mention}
+                bound={(b['frame'],b['slot']) for b in deterministic_bindings if b['mention']==mention}
+                if len(ids)==1 and occurrences==bound and mention not in local_mentions:
+                    proposal.setdefault('groundings',{})[mention]=next(iter(ids))
+        if origin=='code':knowledge_reasons.extend(source_audit['reasons'])
         result = self.gate.assess(text, proposal, cohort=cohort, world_ids=tuple(world),
                                  missing_context=missing_context, local_bindings=local_bindings,
-                                 validation_reasons=knowledge_reasons)
+                                 validation_reasons=knowledge_reasons, role_bindings=deterministic_bindings)
+        semantic_reasons=[r for r in result['reasons'] if r not in CALIBRATION_REASONS]
+        result['interpretation']=dict(source_audit, status='supported' if source_audit['status']=='supported' and not semantic_reasons else 'unresolved',
+            needs_ASK=bool(semantic_reasons) or source_audit['status']!='supported',reasons=semantic_reasons)
+        result['acceptance']=dict(status='accepted' if result['route']=='ACCEPT' else 'blocked',
+            calibration_reasons=[r for r in result['reasons'] if r in CALIBRATION_REASONS])
         result['memory_evidence'] = memory_evidence
         result['context_ledger'] = ledger
         result['assignment_source'] = origin
