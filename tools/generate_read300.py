@@ -65,9 +65,12 @@ def known_inputs():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--batch', type=int, required=True)
+    parser.add_argument('--size', type=int, default=300, help='Explicit set size; smaller final set when the unseen inventory is exhausted')
     parser.add_argument('--context-policy', choices=['account','self-contained','read-resolvable'], default='account')
     parser.add_argument('--max-ambiguity', type=float, default=1.0)
     args = parser.parse_args()
+    if not 1 <= args.size <= 300:
+        parser.error('--size must be between 1 and 300')
     if not 0 <= args.max_ambiguity <= 1:
         parser.error('--max-ambiguity must be between 0 and 1')
     protocol_path = ROOT/'benchmarks/read300/protocol.json'
@@ -86,7 +89,7 @@ def main():
         (kept if allowed else excluded).append(item if allowed else {'text':item.case.sentence,'context_requirements':annotation})
     eligible = tuple(kept)
     # Selection sees only generator factors, never READ output or candidate coverage.
-    cases = select(eligible, protocol['batch_size'], seed, options)
+    cases = select(eligible, args.size, seed, options)
     families = {item.case.sentence: item.family for item in eligible}
     output = ROOT/f'evidence/read300/batch-{args.batch:03d}'
     output.mkdir(exist_ok=False)
@@ -102,12 +105,12 @@ def main():
             row['adapter_error'] = f'{type(exc).__name__}: {exc}'
             errors.append({'id':case.id,'error':row['adapter_error']})
         references.append(row)
-    assert len({normalized(c.sentence) for c in cases}) == 300
+    assert len({normalized(c.sentence) for c in cases}) == args.size
     assert not {normalized(c.sentence) for c in cases} & known
     serpent_root = Path(__import__('serpent').__file__).resolve().parent
     dump(output/'generator-manifest.json', {
         'created_utc':datetime.now(timezone.utc).isoformat(), 'serpent_version':__version__,
-        'seed':seed, 'protocol':protocol, 'protocol_sha256':hashlib.sha256(protocol_path.read_bytes()).hexdigest(),
+        'seed':seed, 'requested_size':args.size, 'protocol':protocol, 'protocol_sha256':hashlib.sha256(protocol_path.read_bytes()).hexdigest(),
         'pool_sha256':pool_hash,'pool_count':len(pool),'eligible_count':len(eligible),'seen_count':len(known),
         'known_normalized_sha256':hashlib.sha256(json.dumps(sorted(known)).encode()).hexdigest(),
         'generator_source_hashes':{str(p.relative_to(serpent_root)):hashlib.sha256(p.read_bytes()).hexdigest()
@@ -122,7 +125,7 @@ def main():
     dump(output/'context-requirements.json', context_report(cases))
     dump(output/'context-exclusions.json', excluded)
     dump(output/'inputs.json', [{'id':c.id,'text':c.sentence} for c in cases])
-    print(json.dumps({'output':str(output),'cases':300,'adapter_errors':errors},indent=2))
+    print(json.dumps({'output':str(output),'cases':len(cases),'adapter_errors':errors},indent=2))
 
 
 if __name__ == '__main__':

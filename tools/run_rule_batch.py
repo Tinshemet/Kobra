@@ -31,7 +31,8 @@ def summarize(batch, output):
     inputs = json.loads((batch/'inputs.json').read_text())
     records = [json.loads(line) for line in (output/'captures.jsonl').read_text().splitlines()]
     assert [r['id'] for r in records] == [r['id'] for r in inputs]
-    assert len(records) == len(gold) == 300
+    expected_size = json.loads((batch/'generator-manifest.json').read_text()).get('requested_size', 300)
+    assert len(records) == len(gold) == expected_size
     rows = []
     for record, source in zip(records, inputs):
         assert source['text'] == record['text'] == gold[record['id']]['text']
@@ -96,7 +97,8 @@ def main():
         return
     output.mkdir(exist_ok=False)
     inputs=json.loads((batch/'inputs.json').read_text())
-    assert len(inputs)==300 and len({r['id'] for r in inputs})==300
+    count=json.loads((batch/'generator-manifest.json').read_text()).get('requested_size',300)
+    assert 1 <= count <= 300 and len(inputs)==count and len({r['id'] for r in inputs})==count
     assigner=RuleAssigner()
     reader=GatedRuleReader(assigner,ConfidenceGate())
     paths=list((ROOT/'src/kobra').glob('*.py'))+list((ROOT/'tools').glob('*.py'))
@@ -104,14 +106,14 @@ def main():
     for p in paths:
         dest=output/'source-snapshot'/p.relative_to(ROOT);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,dest)
     modelpath=Path(assigner.nlp.path)
-    manifest=dict(started_utc=datetime.now(timezone.utc).isoformat(),cases=300,
+    manifest=dict(started_utc=datetime.now(timezone.utc).isoformat(),cases=count,
                   source_hashes=hashes,assignment_configuration=assigner.configuration_id,
                   parser_hashes={str(p.relative_to(modelpath)):digest(p) for p in modelpath.rglob('*') if p.is_file()},
                   batch_hashes={p.name:digest(p) for p in batch.glob('*.json')},
                   gold_excluded_from_reader=True,context_teacher_labels_excluded=True,
                   split='fresh sentences; same generator grammar',new_model_calls=0,no_retries=True)
     dump(output/'manifest.json',manifest)
-    print('STARTED fresh 300-case current code-first READ batch',flush=True)
+    print(f'STARTED fresh {count}-case current code-first READ set',flush=True)
     with (output/'captures.jsonl').open('x') as capture:
         for i,row in enumerate(inputs,1):
             started=time.monotonic()
@@ -122,7 +124,7 @@ def main():
                 record=dict(row,result={'route':'ERROR','source':row['text']},runtime_error=type(exc).__name__)
             record['seconds']=time.monotonic()-started
             capture.write(json.dumps(record)+'\n');capture.flush()
-            if i%50==0: print(f'{i}/300 captured',flush=True)
+            if i%50==0: print(f'{i}/{count} captured',flush=True)
     # Reference and teacher context labels are loaded only after capture completes.
     rows,summary=summarize(batch,output)
     dump(output/'summary.json',summary)
@@ -130,7 +132,7 @@ def main():
         for row in rows:
             handle.write(json.dumps(row)+'\n')
             if not row['correct_code_proposal']: failures.write(json.dumps(row)+'\n')
-    body='<h1>Fresh READ batch '+str(args.batch)+'</h1><p>300 new sentences; current code-first configuration. No live AI or calibration. Source retention is not semantic preservation. All-case proposal coverage and correctness are reported separately from gate outcomes.</p><pre>'+html.escape(json.dumps(summary,indent=2))+'</pre>'
+    body='<h1>Fresh READ batch '+str(args.batch)+'</h1><p>'+str(summary['cases'])+' new sentences; current code-first configuration. No live AI or calibration. Source retention is not semantic preservation. All-case proposal coverage and correctness are reported separately from gate outcomes.</p><pre>'+html.escape(json.dumps(summary,indent=2))+'</pre>'
     for row in rows:
         body+='<details><summary>'+html.escape(row['id']+' — '+row['text']+' — '+('code correct' if row['correct_code_proposal'] else 'code wrong' if row['code_routed'] else 'unresolved'))+'</summary><pre>'+html.escape(json.dumps(row,indent=2))+'</pre></details>'
     page='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Fresh READ batch</title><style>body{max-width:1100px;margin:30px auto;padding:20px;font:16px/1.6 system-ui;background:#112033;color:#edf3ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}details{border:1px solid #667f99;padding:12px;margin:10px 0}summary{cursor:pointer}</style>'+body+'</html>'

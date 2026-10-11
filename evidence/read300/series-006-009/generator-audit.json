@@ -1,0 +1,23 @@
+{
+  "sets": [
+    {
+      "set": 7,
+      "cases": 300,
+      "projection_recomputed": true,
+      "context_recomputed": true
+    },
+    {
+      "set": 8,
+      "cases": 300,
+      "projection_recomputed": true,
+      "context_recomputed": true
+    },
+    {
+      "set": 9,
+      "cases": 187,
+      "projection_recomputed": true,
+      "context_recomputed": true
+    }
+  ],
+  "remaining_unseen_in_unchanged_inventory": 0
+}

@@ -1,0 +1,38 @@
+{
+  "scope": [
+    "tools/generate_read300.py",
+    "tools/run_rule_batch.py",
+    "tools/summarize_rule_sets.py"
+  ],
+  "actual_diff_review": true,
+  "outcome": "No READ runtime, parser, reference projection or slot scorer changed. Explicit cardinality support permits final 187-case inventory remainder. Source snapshots retain each executed harness version.",
+  "verification": [
+    "All four summaries recomputed from raw captures",
+    "Frozen batch-file hashes checked",
+    "READ runtime and scorer hashes identical across four sets and current tree",
+    "Parser and assignment configuration identical across sets",
+    "1087 normalized unique sentences and zero overlap with earlier input files",
+    "Serpent gold projections and context labels recomputed for all additional sets",
+    "Independent inventory count confirms zero unseen sentences remain under unchanged grammar",
+    "HTML includes all 145 unresolved sentences and all four wrong code proposals"
+  ],
+  "results": {
+    "total": 1087,
+    "correct": 938,
+    "wrong_code": 4,
+    "unresolved": 145,
+    "source_retained": 1087,
+    "new_model_calls": 0
+  },
+  "limits": [
+    "Later sets contain only voice/tense cases",
+    "No calibration means final ASK on every case; this is proposal correctness",
+    "No general shared-object, knowledge-store or AI fallback evaluation",
+    "Offline replay uses same scorer and is reproducibility evidence, not an independent semantic judge"
+  ],
+  "source_hashes": {
+    "tools/generate_read300.py": "a87bd5bdcf0b051a082802c01576bab0bd2a86fca63269013262fc2cba0e251d",
+    "tools/run_rule_batch.py": "2e0d2edbabaa49bf8e39dce06d3a3e8dcb5c7aee6fa66b5ea05aeab0c9329f15",
+    "tools/summarize_rule_sets.py": "577c3a9eb40e04174dda8456d28aafdbc1ff3941bbdd9d6973e52753440a9c38"
+  }
+}

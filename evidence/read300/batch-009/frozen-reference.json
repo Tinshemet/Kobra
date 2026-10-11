@@ -1,0 +1,7858 @@
+{
+  "cases": [
+    {
+      "id": "S000001",
+      "text": "Will the book be carried by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000002",
+      "text": "Mira did not restart the servers.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restart"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000003",
+      "text": "The server is checked by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000004",
+      "text": "Does Nia not carry the books?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carry"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000005",
+      "text": "Mira will check the servers.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "check"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000006",
+      "text": "The box was not moved by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The box"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000007",
+      "text": "Did Mira configure the sensor?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configure"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000008",
+      "text": "The servers will not be checked by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000009",
+      "text": "Did Mira move the boxes?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "move"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000010",
+      "text": "Are the sensors not seen by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000011",
+      "text": "Will Mira carry the book?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carry"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000012",
+      "text": "Will the sensor be seen by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000013",
+      "text": "The sensors were configured by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000014",
+      "text": "Mira carried the books.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000015",
+      "text": "The lamps were not repaired by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000016",
+      "text": "Nia carries the books.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carries"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000017",
+      "text": "Were the servers not checked by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000018",
+      "text": "Will Nia read the book?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000019",
+      "text": "Did Mira see the sensors?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "see"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000020",
+      "text": "Did Nia not repair the lamp?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000021",
+      "text": "Alex read the books.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000022",
+      "text": "Alex moves the boxes.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moves"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000023",
+      "text": "The server was not checked by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000024",
+      "text": "The sensors are seen by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000025",
+      "text": "Are the boxes not moved by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000026",
+      "text": "Does Nia read the books?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000027",
+      "text": "Does Nia repair the lamp?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000028",
+      "text": "Is the sensor seen by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000029",
+      "text": "The sensors will be configured by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000030",
+      "text": "Are the servers not restarted by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000031",
+      "text": "The sensors are not configured by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000032",
+      "text": "The sensor is not configured by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000033",
+      "text": "Alex repairs the lamps.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repairs"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000034",
+      "text": "Were the sensors seen by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000035",
+      "text": "Nia does not read the books.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000036",
+      "text": "Will Mira not repair the lamp?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000037",
+      "text": "Will Alex not repair the lamps?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000038",
+      "text": "The servers will be restarted by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000039",
+      "text": "Will the sensors be configured by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000040",
+      "text": "Mira did not carry the books.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carry"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000041",
+      "text": "The servers were checked by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000042",
+      "text": "Did Nia not read the books?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000043",
+      "text": "Were the boxes moved by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000044",
+      "text": "Will Alex not see the sensors?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "see"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000045",
+      "text": "Does Alex move the boxes?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "move"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000046",
+      "text": "Is the server checked by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000047",
+      "text": "Mira will read the books.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000048",
+      "text": "Will the boxes not be moved by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000049",
+      "text": "Was the sensor seen by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000050",
+      "text": "Alex does not read the book.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000051",
+      "text": "The box is not moved by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The box"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000052",
+      "text": "Alex does not repair the lamps.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000053",
+      "text": "Will Alex not check the servers?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "check"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000054",
+      "text": "Are the sensors not configured by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000055",
+      "text": "Will the lamp not be repaired by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000056",
+      "text": "Will the sensor be configured by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000057",
+      "text": "Are the servers not checked by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000058",
+      "text": "Is the server restarted by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000059",
+      "text": "Mira configured the sensor.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000060",
+      "text": "Nia will check the servers.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "check"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000061",
+      "text": "Mira saw the sensors.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "saw"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000062",
+      "text": "The books are read by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000063",
+      "text": "Did Nia read the book?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000064",
+      "text": "Does Mira not move the box?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "move"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the box"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000065",
+      "text": "The sensor will not be seen by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000066",
+      "text": "Does Mira carry the book?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carry"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000067",
+      "text": "Will the lamps not be repaired by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000068",
+      "text": "Does Mira not configure the sensors?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configure"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000069",
+      "text": "Are the books not read by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000070",
+      "text": "The sensor is seen by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000071",
+      "text": "Were the boxes not moved by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000072",
+      "text": "Will the server not be restarted by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000073",
+      "text": "Mira sees the sensors.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "sees"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000074",
+      "text": "Nia checked the server.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000075",
+      "text": "The sensors will not be configured by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000076",
+      "text": "Will Nia not read the books?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000077",
+      "text": "Mira did not move the boxes.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "move"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000078",
+      "text": "Alex will not repair the lamp.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000079",
+      "text": "The server will not be restarted by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000080",
+      "text": "Will Alex restart the server?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restart"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000081",
+      "text": "Did Alex not repair the lamp?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000082",
+      "text": "Was the book carried by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000083",
+      "text": "Is the sensor not seen by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000084",
+      "text": "Alex does not see the sensor.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "see"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000085",
+      "text": "The sensor will be seen by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000086",
+      "text": "Will Mira see the sensors?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "see"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000087",
+      "text": "Was the lamp repaired by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000088",
+      "text": "Were the servers not restarted by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000089",
+      "text": "The book was read by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000090",
+      "text": "Does Mira read the book?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000091",
+      "text": "Will Nia not carry the book?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carry"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000092",
+      "text": "The boxes will be moved by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000093",
+      "text": "Did Nia not restart the server?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restart"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000094",
+      "text": "Nia will read the books.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000095",
+      "text": "Will Nia not restart the servers?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restart"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000096",
+      "text": "The boxes are moved by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000097",
+      "text": "Were the boxes not moved by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000098",
+      "text": "Did Nia not check the server?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "check"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000099",
+      "text": "The sensors will be seen by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000100",
+      "text": "Were the lamps not repaired by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000101",
+      "text": "Was the book not read by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000102",
+      "text": "Will the servers not be checked by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000103",
+      "text": "Will Alex read the books?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000104",
+      "text": "Mira configured the sensors.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000105",
+      "text": "Alex restarts the servers.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarts"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000106",
+      "text": "The books will be carried by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000107",
+      "text": "The servers will not be checked by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000108",
+      "text": "Are the servers checked by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000109",
+      "text": "The sensor will be seen by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000110",
+      "text": "Nia carried the book.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000111",
+      "text": "Mira does not restart the servers.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restart"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000112",
+      "text": "Alex will see the sensors.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "see"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000113",
+      "text": "Will the sensors be seen by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000114",
+      "text": "Is the box moved by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the box"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000115",
+      "text": "The sensor is not seen by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000116",
+      "text": "Will the lamp be repaired by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000117",
+      "text": "Are the books carried by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000118",
+      "text": "Are the books read by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000119",
+      "text": "Alex will see the sensor.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "see"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000120",
+      "text": "Will the server be restarted by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000121",
+      "text": "Was the book not carried by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000122",
+      "text": "Is the server restarted by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000123",
+      "text": "Did Alex configure the sensor?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configure"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000124",
+      "text": "Does Mira not restart the servers?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restart"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000125",
+      "text": "Will Alex repair the lamps?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000126",
+      "text": "The server was not checked by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000127",
+      "text": "Mira does not carry the book.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carry"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000128",
+      "text": "Nia does not repair the lamps.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000129",
+      "text": "The sensors are not configured by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000130",
+      "text": "Were the servers not restarted by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000131",
+      "text": "Alex will not see the sensor.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "see"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000132",
+      "text": "Is the sensor configured by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000133",
+      "text": "Does Alex not move the box?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "move"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the box"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000134",
+      "text": "Will Alex not configure the sensors?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configure"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000135",
+      "text": "Alex moved the boxes.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000136",
+      "text": "Did Alex not move the box?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "move"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the box"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000137",
+      "text": "Did Mira repair the lamp?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000138",
+      "text": "The book is read by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000139",
+      "text": "The servers are restarted by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000140",
+      "text": "Did Alex restart the server?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restart"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000141",
+      "text": "The lamps were not repaired by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000142",
+      "text": "Nia did not carry the book.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carry"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000143",
+      "text": "Were the servers restarted by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000144",
+      "text": "Were the sensors configured by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000145",
+      "text": "The server will be checked by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000146",
+      "text": "The lamp will not be repaired by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000147",
+      "text": "Are the sensors not seen by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000148",
+      "text": "Nia did not move the boxes.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "move"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000149",
+      "text": "Will Mira not read the books?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000150",
+      "text": "The book will be carried by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000151",
+      "text": "Did Alex not see the sensor?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "see"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000152",
+      "text": "Will the boxes be moved by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000153",
+      "text": "Will the book not be read by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000154",
+      "text": "Mira does not repair the lamp.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repair"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the lamp"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000155",
+      "text": "Mira does not see the sensor.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "see"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000156",
+      "text": "Will the book be read by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000157",
+      "text": "The server is not restarted by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000158",
+      "text": "The servers were checked by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000159",
+      "text": "The book was carried by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000160",
+      "text": "Did Mira not move the boxes?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "move"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000161",
+      "text": "Nia did not read the books.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000162",
+      "text": "The boxes are not moved by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000163",
+      "text": "Were the books not carried by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carried"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000164",
+      "text": "Is the server not checked by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000165",
+      "text": "Are the sensors configured by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensors"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000166",
+      "text": "Was the sensor not configured by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000167",
+      "text": "Does Alex configure the sensor?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configure"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000168",
+      "text": "The server will be restarted by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restarted"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000169",
+      "text": "Nia does not restart the server.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restart"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000170",
+      "text": "The book will not be read by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000171",
+      "text": "Are the boxes not moved by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the boxes"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000172",
+      "text": "Did Mira read the book?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000173",
+      "text": "Alex moved the box.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "moved"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the box"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000174",
+      "text": "Nia read the books.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000175",
+      "text": "The book will be read by Alex.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "The book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000176",
+      "text": "The sensor was not seen by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "seen"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000177",
+      "text": "Will Alex carry the books?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "carry"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the books"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "Will"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000178",
+      "text": "Mira did not restart the server.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "restart"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000179",
+      "text": "The lamps are not repaired by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000180",
+      "text": "Is the sensor configured by Nia?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000181",
+      "text": "The lamps are repaired by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "repaired"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The lamps"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000182",
+      "text": "The servers were not checked by Nia.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Nia"
+          ],
+          "patient": [
+            "The servers"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000183",
+      "text": "Is the sensor not configured by Alex?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Alex"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000184",
+      "text": "Mira does not read the book.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "read"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the book"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000185",
+      "text": "Does Mira not configure the sensor?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configure"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000186",
+      "text": "The server will not be checked by Mira.",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "checked"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "The server"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "not"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "will"
+          ],
+          "act": [
+            "assertion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S000187",
+      "text": "Was the sensor configured by Mira?",
+      "group": "voice_tense",
+      "expected": [
+        {
+          "predicate": [
+            "configured"
+          ],
+          "agent": [
+            "Mira"
+          ],
+          "patient": [
+            "the sensor"
+          ],
+          "recipient": [
+            "NONE"
+          ],
+          "negation": [
+            "NONE"
+          ],
+          "condition": [
+            "NONE"
+          ],
+          "time": [
+            "NONE"
+          ],
+          "quantity": [
+            "NONE"
+          ],
+          "attribution": [
+            "NONE"
+          ],
+          "modality": [
+            "NONE"
+          ],
+          "act": [
+            "question"
+          ]
+        }
+      ]
+    }
+  ]
+}

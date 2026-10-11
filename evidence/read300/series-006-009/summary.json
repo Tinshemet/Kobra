@@ -1,0 +1,101 @@
+{
+  "sets": [
+    {
+      "set": 6,
+      "cases": 300,
+      "code_correct": 273,
+      "code_incorrect": 0,
+      "unresolved": 27,
+      "correct_code_over_all": 0.91
+    },
+    {
+      "set": 7,
+      "cases": 300,
+      "code_correct": 257,
+      "code_incorrect": 2,
+      "unresolved": 41,
+      "correct_code_over_all": 0.8566666666666667
+    },
+    {
+      "set": 8,
+      "cases": 300,
+      "code_correct": 253,
+      "code_incorrect": 1,
+      "unresolved": 46,
+      "correct_code_over_all": 0.8433333333333334
+    },
+    {
+      "set": 9,
+      "cases": 187,
+      "code_correct": 155,
+      "code_incorrect": 1,
+      "unresolved": 31,
+      "correct_code_over_all": 0.8288770053475936
+    }
+  ],
+  "total": 1087,
+  "unique_sentences": 1087,
+  "correct_code": 938,
+  "wrong_code": 4,
+  "unresolved": 145,
+  "correct_over_all": 0.8629254829806807,
+  "precision_when_code_routed": 0.9957537154989384,
+  "source_retained": 1087,
+  "new_model_calls": 0,
+  "final_routes": {
+    "ASK": 1087
+  },
+  "unresolved_reasons": {
+    "additional lexical verb": 144,
+    "multiple role candidates": 1
+  },
+  "by_group": {
+    "voice_tense": 940,
+    "verb_frames": 26,
+    "scope": 121
+  },
+  "context_flagged": 0,
+  "required_slots_preserved": 4662,
+  "required_slots_total": 5317,
+  "checks": {
+    "per_set": [
+      {
+        "set": 6,
+        "recomputed_summary_matches": true,
+        "frozen_inputs_unchanged": true,
+        "captures_sha256": "0772f93396505c0365c4a579cc002fe5867a3402d7b944d74ef7f344353f7a27"
+      },
+      {
+        "set": 7,
+        "recomputed_summary_matches": true,
+        "frozen_inputs_unchanged": true,
+        "captures_sha256": "cc284e2f9a0f459f50b57a2e7cce79245e9cfb448e866685c79e3a68fb3ca0bc"
+      },
+      {
+        "set": 8,
+        "recomputed_summary_matches": true,
+        "frozen_inputs_unchanged": true,
+        "captures_sha256": "73ea3a424fb1591d5a564bc528a35b2a42f101af826cf5ddd5eeae5b55eb3ec5"
+      },
+      {
+        "set": 9,
+        "recomputed_summary_matches": true,
+        "frozen_inputs_unchanged": true,
+        "captures_sha256": "aaeed7cd19c77f26b28cd7de79f6f2fb543f367ee617130538e10eb362f5a255"
+      }
+    ],
+    "identical_runtime_and_scorer": true,
+    "identical_parser": true,
+    "identical_configuration": true,
+    "duplicate_count": 0,
+    "overlap_with_prior_inputs": 0
+  },
+  "final_set_note": "The unchanged finite Serpent inventory had only 187 unseen cases left; final set uses all of them. Cardinality handling changed, not grammar, READ rules or scoring.",
+  "limits": [
+    "Literal-slot correctness, not full semantic accuracy.",
+    "Later sets are entirely voice/tense because other unseen construction families were exhausted.",
+    "No new shared-object, archive/library, context-grounding or AI-resolution coverage.",
+    "All gate routes are ASK because real calibration is absent; correct-ASK is not scored.",
+    "Same frozen rules throughout; differing set scores are not improvement or regression measurements."
+  ]
+}
