@@ -1,0 +1,721 @@
+[
+  {
+    "version": "resolve-distillation-2",
+    "metadata": {
+      "producer": "kobra",
+      "read_version": "rule-assignment-4",
+      "read_configuration_id": "7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2",
+      "assignment_source": "code",
+      "generative_assignment_used": false,
+      "offset_unit": "unicode_code_points",
+      "point_count": 2,
+      "relation_count": 1,
+      "source_characters": 23,
+      "accounted_characters": 23,
+      "discarded_characters": 0,
+      "semantic_coverage": "not_measured",
+      "caller": {
+        "request_id": "example-1",
+        "channel": "text",
+        "language": "en"
+      },
+      "caller_metadata_authority": "descriptive_only_not_grounding_or_routing_authority",
+      "distillation_version": "resolve-distillation-2"
+    },
+    "text_accounting": {
+      "partition": [
+        {
+          "source_id": "request",
+          "start": 0,
+          "end": 4,
+          "text": "Open",
+          "category": "point_evidence",
+          "reason": "covered_by_point_evidence_not_semantic_completeness",
+          "point_ids": [
+            "p1"
+          ],
+          "retained": true
+        },
+        {
+          "source_id": "request",
+          "start": 4,
+          "end": 9,
+          "text": " and ",
+          "category": "connector",
+          "reason": "source_connector_with_recorded_relation",
+          "point_ids": [],
+          "retained": true
+        },
+        {
+          "source_id": "request",
+          "start": 9,
+          "end": 14,
+          "text": "read ",
+          "category": "point_evidence",
+          "reason": "covered_by_point_evidence_not_semantic_completeness",
+          "point_ids": [
+            "p2"
+          ],
+          "retained": true
+        },
+        {
+          "source_id": "request",
+          "start": 14,
+          "end": 22,
+          "text": "the file",
+          "category": "point_evidence",
+          "reason": "covered_by_point_evidence_not_semantic_completeness",
+          "point_ids": [
+            "p1",
+            "p2"
+          ],
+          "retained": true
+        },
+        {
+          "source_id": "request",
+          "start": 22,
+          "end": 23,
+          "text": ".",
+          "category": "surface_syntax",
+          "reason": "punctuation_retained_for_scope_and_sentence_form",
+          "point_ids": [],
+          "retained": true
+        }
+      ],
+      "annotations": [],
+      "open_items": [
+        {
+          "kind": "calibration",
+          "reason": "uncalibrated_cohort",
+          "origin": "gate",
+          "status": "open"
+        }
+      ],
+      "garbage": [],
+      "noise": [],
+      "social": [],
+      "unclassified": [],
+      "unresolved": [],
+      "policy": "Preserve all text. Unclassified does not mean garbage. Annotations cannot alter points, grounding or gate status."
+    },
+    "source": {
+      "id": "request",
+      "text": "Open and read the file.",
+      "sha256": "1014021821878158dc9f9c869ae2bf601584de5e85615a6374cb8d44eeeb7008"
+    },
+    "points": [
+      {
+        "id": "p1",
+        "act": "request",
+        "predicate": "Open",
+        "arguments": {
+          "patient": "the file"
+        },
+        "qualifiers": {},
+        "summary": "Request: predicate=\"Open\"; patient=\"the file\"",
+        "source_text": "Open",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 0,
+            "end": 4,
+            "text": "Open"
+          },
+          {
+            "source_id": "request",
+            "start": 14,
+            "end": 22,
+            "text": "the file"
+          }
+        ],
+        "identity_bindings": [],
+        "local_references": [],
+        "shared_arguments": [
+          {
+            "frame": 0,
+            "slot": "patient",
+            "from_chunk": "c1",
+            "donor_chunk": "c2",
+            "span": {
+              "start": 14,
+              "end": 22,
+              "text": "the file"
+            },
+            "entity_id": "e1",
+            "rule": "C016-trailing-shared-patient"
+          }
+        ],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "uncalibrated_cohort"
+        ]
+      },
+      {
+        "id": "p2",
+        "act": "request",
+        "predicate": "read",
+        "arguments": {
+          "patient": "the file"
+        },
+        "qualifiers": {},
+        "summary": "Request: predicate=\"read\"; patient=\"the file\"",
+        "source_text": "read the file",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 9,
+            "end": 22,
+            "text": "read the file"
+          }
+        ],
+        "identity_bindings": [],
+        "local_references": [],
+        "shared_arguments": [],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "uncalibrated_cohort"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "from_point": "p1",
+        "to_point": "p2",
+        "relationship": "coordination_source_order_only",
+        "evidence": {
+          "from_chunk": "c1",
+          "to_chunk": "c2",
+          "kind": "coordination_source_order_only"
+        }
+      }
+    ],
+    "local_entities": [
+      {
+        "id": "e1",
+        "span": {
+          "start": 14,
+          "end": 22,
+          "text": "the file"
+        },
+        "number": "singular",
+        "quantity": null,
+        "introduced_in": "c1",
+        "status": "sentence_local_description_not_WORLD_object",
+        "members": [],
+        "created_by": [],
+        "shared_by": [
+          "c1",
+          "c2"
+        ]
+      }
+    ],
+    "retained_remainder": [
+      {
+        "source_id": "request",
+        "start": 4,
+        "end": 9,
+        "text": " and "
+      },
+      {
+        "source_id": "request",
+        "start": 22,
+        "end": 23,
+        "text": "."
+      }
+    ],
+    "state": {
+      "read_route": "ASK",
+      "assignment_source": "code",
+      "ready_for_resolve": false,
+      "reasons": [
+        "uncalibrated_cohort"
+      ],
+      "distillation_diagnostics": [],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "cohort": "code:C010-imperative-coordination+C016-trailing-shared-patient:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1",
+      "semantic_reverified": false
+    },
+    "memory_context": {
+      "version": "context-ledger-1",
+      "previous_turns": [],
+      "world_entities": [],
+      "claims": [],
+      "history_supplied": false,
+      "world_supplied": false,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "grounding_evidence": {
+      "memory": {
+        "version": "memory-grounding-1",
+        "revision": "608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c",
+        "bindings": [],
+        "issues": [],
+        "decisions": [],
+        "semantics": "caller confirms reference intent; code checks evidence, identity, number and conflicts"
+      },
+      "knowledge": {}
+    },
+    "rules": [
+      "C010-imperative-coordination",
+      "C016-trailing-shared-patient"
+    ],
+    "semantics": "Source-backed READ proposal for RESOLVE; not a verified fact, answer, execution plan or authorization."
+  },
+  {
+    "version": "resolve-distillation-2",
+    "metadata": {
+      "producer": "kobra",
+      "read_version": "rule-assignment-8",
+      "read_configuration_id": "7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2",
+      "assignment_source": "code",
+      "generative_assignment_used": false,
+      "offset_unit": "unicode_code_points",
+      "point_count": 1,
+      "relation_count": 0,
+      "source_characters": 8,
+      "accounted_characters": 8,
+      "discarded_characters": 0,
+      "semantic_coverage": "not_measured",
+      "caller": {
+        "request_id": "example-2"
+      },
+      "caller_metadata_authority": "descriptive_only_not_grounding_or_routing_authority",
+      "distillation_version": "resolve-distillation-2"
+    },
+    "text_accounting": {
+      "partition": [
+        {
+          "source_id": "request",
+          "start": 0,
+          "end": 8,
+          "text": "Move it.",
+          "category": "point_evidence",
+          "reason": "covered_by_point_evidence_not_semantic_completeness",
+          "point_ids": [
+            "p1"
+          ],
+          "retained": true
+        }
+      ],
+      "annotations": [],
+      "open_items": [
+        {
+          "kind": "reference_resolution",
+          "reason": "memory_unconfirmed_reference:it",
+          "origin": "gate",
+          "status": "open"
+        },
+        {
+          "kind": "missing_context",
+          "reason": "missing_context:target",
+          "origin": "gate",
+          "status": "open"
+        },
+        {
+          "kind": "calibration",
+          "reason": "uncalibrated_cohort",
+          "origin": "gate",
+          "status": "open"
+        },
+        {
+          "kind": "reference_resolution",
+          "reason": "ungrounded_reference:patient",
+          "origin": "gate",
+          "status": "open"
+        }
+      ],
+      "garbage": [],
+      "noise": [],
+      "social": [],
+      "unclassified": [],
+      "unresolved": [],
+      "policy": "Preserve all text. Unclassified does not mean garbage. Annotations cannot alter points, grounding or gate status."
+    },
+    "source": {
+      "id": "request",
+      "text": "Move it.",
+      "sha256": "48a8d39162f74ca1ce9cd8ace8d75660277e94f1108d96277d56837c12744225"
+    },
+    "points": [
+      {
+        "id": "p1",
+        "act": "request",
+        "predicate": "Move",
+        "arguments": {
+          "patient": "it"
+        },
+        "qualifiers": {},
+        "summary": "Request: predicate=\"Move\"; patient=\"it\"",
+        "source_text": "Move it.",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 0,
+            "end": 8,
+            "text": "Move it."
+          }
+        ],
+        "identity_bindings": [],
+        "local_references": [],
+        "shared_arguments": [],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "memory_unconfirmed_reference:it",
+          "missing_context:target",
+          "uncalibrated_cohort",
+          "ungrounded_reference:patient"
+        ]
+      }
+    ],
+    "relations": [],
+    "local_entities": [],
+    "retained_remainder": [],
+    "state": {
+      "read_route": "ASK",
+      "assignment_source": "code",
+      "ready_for_resolve": false,
+      "reasons": [
+        "memory_unconfirmed_reference:it",
+        "missing_context:target",
+        "uncalibrated_cohort",
+        "ungrounded_reference:patient"
+      ],
+      "distillation_diagnostics": [],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "cohort": "code:C002-active-roles:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1",
+      "semantic_reverified": false
+    },
+    "memory_context": {
+      "version": "context-ledger-1",
+      "previous_turns": [],
+      "world_entities": [],
+      "claims": [],
+      "history_supplied": false,
+      "world_supplied": false,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "grounding_evidence": {
+      "memory": {
+        "version": "memory-grounding-1",
+        "revision": "608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c",
+        "bindings": [],
+        "issues": [
+          "memory_unconfirmed_reference:it"
+        ],
+        "decisions": [
+          {
+            "frame": 0,
+            "slot": "patient",
+            "mention": "it",
+            "candidate_ids": [],
+            "claim_ids": [],
+            "reasons": [
+              "memory_unconfirmed_reference:it"
+            ]
+          }
+        ],
+        "semantics": "caller confirms reference intent; code checks evidence, identity, number and conflicts"
+      },
+      "knowledge": {}
+    },
+    "rules": [
+      "C002-active-roles"
+    ],
+    "semantics": "Source-backed READ proposal for RESOLVE; not a verified fact, answer, execution plan or authorization."
+  },
+  {
+    "version": "resolve-distillation-2",
+    "metadata": {
+      "producer": "kobra",
+      "read_version": "rule-assignment-8",
+      "read_configuration_id": "7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2",
+      "assignment_source": "unresolved",
+      "generative_assignment_used": false,
+      "offset_unit": "unicode_code_points",
+      "point_count": 0,
+      "relation_count": 0,
+      "source_characters": 32,
+      "accounted_characters": 32,
+      "discarded_characters": 0,
+      "semantic_coverage": "not_measured",
+      "caller": {},
+      "caller_metadata_authority": "descriptive_only_not_grounding_or_routing_authority",
+      "distillation_version": "resolve-distillation-2"
+    },
+    "text_accounting": {
+      "partition": [
+        {
+          "source_id": "request",
+          "start": 0,
+          "end": 32,
+          "text": "If the server fails, restart it.",
+          "category": "unresolved",
+          "reason": "no_supported_points",
+          "point_ids": [],
+          "retained": true
+        }
+      ],
+      "annotations": [],
+      "open_items": [
+        {
+          "kind": "validation",
+          "reason": "missing_or_invalid_frames",
+          "origin": "gate",
+          "status": "open"
+        },
+        {
+          "kind": "calibration",
+          "reason": "uncalibrated_cohort",
+          "origin": "gate",
+          "status": "open"
+        },
+        {
+          "kind": "reference_resolution",
+          "reason": "unresolved_reference_requires_ASK:it",
+          "origin": "gate",
+          "status": "open"
+        },
+        {
+          "kind": "validation",
+          "reason": "unsupported_read_structure",
+          "origin": "gate",
+          "status": "open"
+        },
+        {
+          "kind": "parsing",
+          "reason": "multiple predicates or clause attachment",
+          "origin": "parser",
+          "status": "open"
+        }
+      ],
+      "garbage": [],
+      "noise": [],
+      "social": [],
+      "unclassified": [],
+      "unresolved": [
+        {
+          "source_id": "request",
+          "start": 0,
+          "end": 32,
+          "text": "If the server fails, restart it.",
+          "category": "unresolved",
+          "reason": "no_supported_points",
+          "point_ids": [],
+          "retained": true
+        }
+      ],
+      "policy": "Preserve all text. Unclassified does not mean garbage. Annotations cannot alter points, grounding or gate status."
+    },
+    "source": {
+      "id": "request",
+      "text": "If the server fails, restart it.",
+      "sha256": "4603b294f35c35769a0f53ee28368778f7941537c23cacc62d7b855adcb5480f"
+    },
+    "points": [],
+    "relations": [],
+    "local_entities": [],
+    "retained_remainder": [
+      {
+        "source_id": "request",
+        "start": 0,
+        "end": 32,
+        "text": "If the server fails, restart it."
+      }
+    ],
+    "state": {
+      "read_route": "ASK",
+      "assignment_source": "unresolved",
+      "ready_for_resolve": false,
+      "reasons": [
+        "missing_or_invalid_frames",
+        "uncalibrated_cohort",
+        "unresolved_reference_requires_ASK:it",
+        "unsupported_read_structure"
+      ],
+      "distillation_diagnostics": [],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "cohort": "model-unresolved-v1:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1",
+      "semantic_reverified": false
+    },
+    "memory_context": {
+      "version": "context-ledger-1",
+      "previous_turns": [],
+      "world_entities": [],
+      "claims": [],
+      "history_supplied": false,
+      "world_supplied": false,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "grounding_evidence": {
+      "memory": {
+        "version": "memory-grounding-1",
+        "revision": "608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c",
+        "bindings": [],
+        "issues": [],
+        "decisions": [],
+        "semantics": "caller confirms reference intent; code checks evidence, identity, number and conflicts"
+      },
+      "knowledge": {}
+    },
+    "rules": [],
+    "semantics": "Source-backed READ proposal for RESOLVE; not a verified fact, answer, execution plan or authorization."
+  },
+  {
+    "version": "resolve-distillation-2",
+    "metadata": {
+      "producer": "kobra",
+      "read_version": "rule-assignment-8",
+      "read_configuration_id": "7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2",
+      "assignment_source": "code",
+      "generative_assignment_used": false,
+      "offset_unit": "unicode_code_points",
+      "point_count": 1,
+      "relation_count": 0,
+      "source_characters": 33,
+      "accounted_characters": 33,
+      "discarded_characters": 0,
+      "semantic_coverage": "not_measured",
+      "caller": {},
+      "caller_metadata_authority": "descriptive_only_not_grounding_or_routing_authority",
+      "distillation_version": "resolve-distillation-2"
+    },
+    "text_accounting": {
+      "partition": [
+        {
+          "source_id": "request",
+          "start": 0,
+          "end": 33,
+          "text": "[transport-marker] Open the file.",
+          "category": "point_evidence",
+          "reason": "covered_by_point_evidence_not_semantic_completeness",
+          "point_ids": [
+            "p1"
+          ],
+          "retained": true
+        }
+      ],
+      "annotations": [
+        {
+          "source_id": "request",
+          "start": 0,
+          "end": 18,
+          "text": "[transport-marker]",
+          "category": "garbage",
+          "reason": "fixture transport marker, retained verbatim",
+          "provenance": "caller-fixture",
+          "status": "caller_annotation_not_semantically_verified",
+          "retained": true,
+          "overlaps_point_evidence": true
+        }
+      ],
+      "open_items": [
+        {
+          "kind": "calibration",
+          "reason": "uncalibrated_cohort",
+          "origin": "gate",
+          "status": "open"
+        }
+      ],
+      "garbage": [
+        {
+          "source_id": "request",
+          "start": 0,
+          "end": 18,
+          "text": "[transport-marker]",
+          "category": "garbage",
+          "reason": "fixture transport marker, retained verbatim",
+          "provenance": "caller-fixture",
+          "status": "caller_annotation_not_semantically_verified",
+          "retained": true,
+          "overlaps_point_evidence": true
+        }
+      ],
+      "noise": [],
+      "social": [],
+      "unclassified": [],
+      "unresolved": [],
+      "policy": "Preserve all text. Unclassified does not mean garbage. Annotations cannot alter points, grounding or gate status."
+    },
+    "source": {
+      "id": "request",
+      "text": "[transport-marker] Open the file.",
+      "sha256": "378c401ce60933df344904f32b4f2dfdef5ed6f04c08faa0a6b1c2f918154dbb"
+    },
+    "points": [
+      {
+        "id": "p1",
+        "act": "assertion",
+        "predicate": "Open",
+        "arguments": {
+          "agent": "transport-marker",
+          "patient": "the file"
+        },
+        "qualifiers": {},
+        "summary": "Assertion: predicate=\"Open\"; agent=\"transport-marker\"; patient=\"the file\"",
+        "source_text": "[transport-marker] Open the file.",
+        "evidence": [
+          {
+            "source_id": "request",
+            "start": 0,
+            "end": 33,
+            "text": "[transport-marker] Open the file."
+          }
+        ],
+        "identity_bindings": [],
+        "local_references": [],
+        "shared_arguments": [],
+        "members": [],
+        "modifiers": [],
+        "uncertainty": [
+          "uncalibrated_cohort"
+        ]
+      }
+    ],
+    "relations": [],
+    "local_entities": [],
+    "retained_remainder": [],
+    "state": {
+      "read_route": "ASK",
+      "assignment_source": "code",
+      "ready_for_resolve": false,
+      "reasons": [
+        "uncalibrated_cohort"
+      ],
+      "distillation_diagnostics": [],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "cohort": "code:C002-active-roles:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1",
+      "semantic_reverified": false
+    },
+    "memory_context": {
+      "version": "context-ledger-1",
+      "previous_turns": [],
+      "world_entities": [],
+      "claims": [],
+      "history_supplied": false,
+      "world_supplied": false,
+      "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+    },
+    "grounding_evidence": {
+      "memory": {
+        "version": "memory-grounding-1",
+        "revision": "608d618c5d046f911d49ddbc2d0f84914f6a63f8dad327de46664c3c97fd376c",
+        "bindings": [],
+        "issues": [],
+        "decisions": [],
+        "semantics": "caller confirms reference intent; code checks evidence, identity, number and conflicts"
+      },
+      "knowledge": {}
+    },
+    "rules": [
+      "C002-active-roles"
+    ],
+    "semantics": "Source-backed READ proposal for RESOLVE; not a verified fact, answer, execution plan or authorization."
+  }
+]

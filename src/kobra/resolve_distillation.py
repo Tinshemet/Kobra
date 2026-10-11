@@ -8,12 +8,12 @@ import hashlib
 import json
 from .selection_read import ACTS, SLOTS, SPECIAL
 
-VERSION = 'resolve-distillation-1'
+VERSION = 'resolve-distillation-2'
 ARGUMENTS = ('agent', 'patient', 'recipient')
 QUALIFIERS = tuple(s for s in SLOTS if s not in ('predicate', *ARGUMENTS))
 
 
-def distill_for_resolve(result):
+def distill_for_resolve(result, *, metadata=None, annotations=()):
     """Return a detached, JSON-compatible handoff; never upgrade gate authority."""
     source = result.get('source')
     if not isinstance(source, str):
@@ -115,7 +115,10 @@ def distill_for_resolve(result):
         relations.append(dict(from_point=chunk_ids[relation['from_chunk']],
             to_point=chunk_ids[relation['to_chunk']], relationship=relation['kind'], evidence=deepcopy(relation)))
     reasons = list(result.get('reasons', []))
-    return dict(version=VERSION,
+    from .distillation_metadata import describe_text
+    metadata, text_accounting = describe_text(source, points, relations, result, metadata, annotations)
+    metadata['distillation_version'] = VERSION
+    return dict(version=VERSION, metadata=metadata, text_accounting=text_accounting,
         source=dict(id='request',text=source,sha256=hashlib.sha256(source.encode()).hexdigest()),
         points=points, relations=relations,
         local_entities=deepcopy(code.get('local_entities', [])) if use_code_structure else [],

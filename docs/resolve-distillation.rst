@@ -106,3 +106,44 @@ Evidence is in evidence/resolve-distillation-1, including compressed full
 captures, baseline/source hashes, per-case ticks and examples. The HTML walkthrough
 is reports/read-resolve-distillation.html. Broader language coverage, automatic
 free-form discourse inference and calibrated acceptance remain separate work.
+
+Version 2: metadata, garbage/noise annotations and open issues
+------------------------------------------------------------
+
+The current output version is resolve-distillation-2. Existing points, grounding,
+relations, source and gate fields are unchanged. Added fields:
+
+* metadata: producer and versions, READ configuration ID, assignment origin,
+  whether generative assignment was used, Unicode offset units, point/relation
+  counts, source/accounted/discarded character counts and caller metadata.
+* text_accounting.partition: non-overlapping source intervals that concatenate
+  exactly to the original input. Categories distinguish point evidence,
+  formatting, punctuation, recorded connectors, unresolved and unclassified text.
+  Point evidence coverage does not establish complete semantic interpretation.
+* text_accounting.garbage, noise, social, unclassified and unresolved: retained
+  spans with reasons. Unknown or unsupported input is never automatically garbage.
+* text_accounting.annotations: exact caller annotations with provenance, an
+  explicit unverified status and whether they overlap point evidence. They cannot
+  delete text, override negation, authorize grounding or change gate status.
+* text_accounting.open_items: separate parsing, missing-context, reference,
+  knowledge, calibration and validation issues with original reason codes.
+
+Optional API arguments:
+
+    reader.read_for_resolve(text,
+        metadata={"request_id": "r1", "channel": "text", "language": "en"},
+        annotations=[{"start": 0, "end": 18, "text": "[transport-marker]",
+                      "category": "garbage", "reason": "transport artifact",
+                      "provenance": "caller-transport"}])
+
+The example annotation requires the input to begin with exactly that span.
+Metadata is copied into a caller namespace and must be finite JSON; it is not
+promoted into identity or routing authority. The implementation does not infer
+language, timestamps, speakers or disposable meaning. Garbage/noise/social
+labels require caller annotations for now and remain assertions rather than
+verified semantic classifications. Their text is retained for future turns.
+
+Validation: 269 tests run, 268 passed, one optional dependency skip. A replay
+of 5,000 saved handoffs verified unchanged existing fields and exact source
+partitions, with zero characters discarded. This is schema/retention verification,
+not a fresh language accuracy claim. New report: reports/read-distillation-metadata.html.

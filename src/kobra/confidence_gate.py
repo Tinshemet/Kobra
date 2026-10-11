@@ -158,10 +158,10 @@ class GatedRuleReader:
         self.model_cohort = model_cohort
         self.knowledge = knowledge
 
-    def read_for_resolve(self, text, **context):
+    def read_for_resolve(self, text, *, metadata=None, annotations=(), **context):
         """Run the existing gated reader, then project its result without new authority."""
         from .resolve_distillation import distill_for_resolve
-        return distill_for_resolve(self.read(text, **context))
+        return distill_for_resolve(self.read(text, **context), metadata=metadata, annotations=annotations)
 
     def read(self, text, *, world=None, history=(), missing_context=(), context_claims=()):
         world = deepcopy(world or {})

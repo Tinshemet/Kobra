@@ -1,0 +1,383 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Distillation metadata</title><style>body{max-width:1050px;margin:30px auto;padding:20px;background:#112033;color:#edf3ff;font:16px/1.6 system-ui}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}</style><h1>Distillation metadata and retained text</h1><p>Version 2 adds metadata, a complete source partition, annotation buckets and categorized open issues. No text is discarded. Existing points, bindings and gate outcomes are unchanged across 5,000 saved handoffs.</p><p>Garbage/noise/social labels may be supplied as exact caller annotations; they are not semantically verified and cannot override the interpretation. Unclassified text remains available for later turns. Evidence coverage does not mean every word was understood.</p><h2>Open and read the file.</h2><pre>{
+  &quot;metadata&quot;: {
+    &quot;producer&quot;: &quot;kobra&quot;,
+    &quot;read_version&quot;: &quot;rule-assignment-4&quot;,
+    &quot;read_configuration_id&quot;: &quot;7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;generative_assignment_used&quot;: false,
+    &quot;offset_unit&quot;: &quot;unicode_code_points&quot;,
+    &quot;point_count&quot;: 2,
+    &quot;relation_count&quot;: 1,
+    &quot;source_characters&quot;: 23,
+    &quot;accounted_characters&quot;: 23,
+    &quot;discarded_characters&quot;: 0,
+    &quot;semantic_coverage&quot;: &quot;not_measured&quot;,
+    &quot;caller&quot;: {
+      &quot;request_id&quot;: &quot;example-1&quot;,
+      &quot;channel&quot;: &quot;text&quot;,
+      &quot;language&quot;: &quot;en&quot;
+    },
+    &quot;caller_metadata_authority&quot;: &quot;descriptive_only_not_grounding_or_routing_authority&quot;,
+    &quot;distillation_version&quot;: &quot;resolve-distillation-2&quot;
+  },
+  &quot;text_accounting&quot;: {
+    &quot;partition&quot;: [
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 4,
+        &quot;text&quot;: &quot;Open&quot;,
+        &quot;category&quot;: &quot;point_evidence&quot;,
+        &quot;reason&quot;: &quot;covered_by_point_evidence_not_semantic_completeness&quot;,
+        &quot;point_ids&quot;: [
+          &quot;p1&quot;
+        ],
+        &quot;retained&quot;: true
+      },
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 4,
+        &quot;end&quot;: 9,
+        &quot;text&quot;: &quot; and &quot;,
+        &quot;category&quot;: &quot;connector&quot;,
+        &quot;reason&quot;: &quot;source_connector_with_recorded_relation&quot;,
+        &quot;point_ids&quot;: [],
+        &quot;retained&quot;: true
+      },
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 9,
+        &quot;end&quot;: 14,
+        &quot;text&quot;: &quot;read &quot;,
+        &quot;category&quot;: &quot;point_evidence&quot;,
+        &quot;reason&quot;: &quot;covered_by_point_evidence_not_semantic_completeness&quot;,
+        &quot;point_ids&quot;: [
+          &quot;p2&quot;
+        ],
+        &quot;retained&quot;: true
+      },
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 14,
+        &quot;end&quot;: 22,
+        &quot;text&quot;: &quot;the file&quot;,
+        &quot;category&quot;: &quot;point_evidence&quot;,
+        &quot;reason&quot;: &quot;covered_by_point_evidence_not_semantic_completeness&quot;,
+        &quot;point_ids&quot;: [
+          &quot;p1&quot;,
+          &quot;p2&quot;
+        ],
+        &quot;retained&quot;: true
+      },
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 22,
+        &quot;end&quot;: 23,
+        &quot;text&quot;: &quot;.&quot;,
+        &quot;category&quot;: &quot;surface_syntax&quot;,
+        &quot;reason&quot;: &quot;punctuation_retained_for_scope_and_sentence_form&quot;,
+        &quot;point_ids&quot;: [],
+        &quot;retained&quot;: true
+      }
+    ],
+    &quot;annotations&quot;: [],
+    &quot;open_items&quot;: [
+      {
+        &quot;kind&quot;: &quot;calibration&quot;,
+        &quot;reason&quot;: &quot;uncalibrated_cohort&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      }
+    ],
+    &quot;garbage&quot;: [],
+    &quot;noise&quot;: [],
+    &quot;social&quot;: [],
+    &quot;unclassified&quot;: [],
+    &quot;unresolved&quot;: [],
+    &quot;policy&quot;: &quot;Preserve all text. Unclassified does not mean garbage. Annotations cannot alter points, grounding or gate status.&quot;
+  },
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C010-imperative-coordination+C016-trailing-shared-patient:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>Move it.</h2><pre>{
+  &quot;metadata&quot;: {
+    &quot;producer&quot;: &quot;kobra&quot;,
+    &quot;read_version&quot;: &quot;rule-assignment-8&quot;,
+    &quot;read_configuration_id&quot;: &quot;7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;generative_assignment_used&quot;: false,
+    &quot;offset_unit&quot;: &quot;unicode_code_points&quot;,
+    &quot;point_count&quot;: 1,
+    &quot;relation_count&quot;: 0,
+    &quot;source_characters&quot;: 8,
+    &quot;accounted_characters&quot;: 8,
+    &quot;discarded_characters&quot;: 0,
+    &quot;semantic_coverage&quot;: &quot;not_measured&quot;,
+    &quot;caller&quot;: {
+      &quot;request_id&quot;: &quot;example-2&quot;
+    },
+    &quot;caller_metadata_authority&quot;: &quot;descriptive_only_not_grounding_or_routing_authority&quot;,
+    &quot;distillation_version&quot;: &quot;resolve-distillation-2&quot;
+  },
+  &quot;text_accounting&quot;: {
+    &quot;partition&quot;: [
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 8,
+        &quot;text&quot;: &quot;Move it.&quot;,
+        &quot;category&quot;: &quot;point_evidence&quot;,
+        &quot;reason&quot;: &quot;covered_by_point_evidence_not_semantic_completeness&quot;,
+        &quot;point_ids&quot;: [
+          &quot;p1&quot;
+        ],
+        &quot;retained&quot;: true
+      }
+    ],
+    &quot;annotations&quot;: [],
+    &quot;open_items&quot;: [
+      {
+        &quot;kind&quot;: &quot;reference_resolution&quot;,
+        &quot;reason&quot;: &quot;memory_unconfirmed_reference:it&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;missing_context&quot;,
+        &quot;reason&quot;: &quot;missing_context:target&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;calibration&quot;,
+        &quot;reason&quot;: &quot;uncalibrated_cohort&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;reference_resolution&quot;,
+        &quot;reason&quot;: &quot;ungrounded_reference:patient&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      }
+    ],
+    &quot;garbage&quot;: [],
+    &quot;noise&quot;: [],
+    &quot;social&quot;: [],
+    &quot;unclassified&quot;: [],
+    &quot;unresolved&quot;: [],
+    &quot;policy&quot;: &quot;Preserve all text. Unclassified does not mean garbage. Annotations cannot alter points, grounding or gate status.&quot;
+  },
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;memory_unconfirmed_reference:it&quot;,
+      &quot;missing_context:target&quot;,
+      &quot;uncalibrated_cohort&quot;,
+      &quot;ungrounded_reference:patient&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C002-active-roles:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>If the server fails, restart it.</h2><pre>{
+  &quot;metadata&quot;: {
+    &quot;producer&quot;: &quot;kobra&quot;,
+    &quot;read_version&quot;: &quot;rule-assignment-8&quot;,
+    &quot;read_configuration_id&quot;: &quot;7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2&quot;,
+    &quot;assignment_source&quot;: &quot;unresolved&quot;,
+    &quot;generative_assignment_used&quot;: false,
+    &quot;offset_unit&quot;: &quot;unicode_code_points&quot;,
+    &quot;point_count&quot;: 0,
+    &quot;relation_count&quot;: 0,
+    &quot;source_characters&quot;: 32,
+    &quot;accounted_characters&quot;: 32,
+    &quot;discarded_characters&quot;: 0,
+    &quot;semantic_coverage&quot;: &quot;not_measured&quot;,
+    &quot;caller&quot;: {},
+    &quot;caller_metadata_authority&quot;: &quot;descriptive_only_not_grounding_or_routing_authority&quot;,
+    &quot;distillation_version&quot;: &quot;resolve-distillation-2&quot;
+  },
+  &quot;text_accounting&quot;: {
+    &quot;partition&quot;: [
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 32,
+        &quot;text&quot;: &quot;If the server fails, restart it.&quot;,
+        &quot;category&quot;: &quot;unresolved&quot;,
+        &quot;reason&quot;: &quot;no_supported_points&quot;,
+        &quot;point_ids&quot;: [],
+        &quot;retained&quot;: true
+      }
+    ],
+    &quot;annotations&quot;: [],
+    &quot;open_items&quot;: [
+      {
+        &quot;kind&quot;: &quot;validation&quot;,
+        &quot;reason&quot;: &quot;missing_or_invalid_frames&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;calibration&quot;,
+        &quot;reason&quot;: &quot;uncalibrated_cohort&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;reference_resolution&quot;,
+        &quot;reason&quot;: &quot;unresolved_reference_requires_ASK:it&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;validation&quot;,
+        &quot;reason&quot;: &quot;unsupported_read_structure&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      },
+      {
+        &quot;kind&quot;: &quot;parsing&quot;,
+        &quot;reason&quot;: &quot;multiple predicates or clause attachment&quot;,
+        &quot;origin&quot;: &quot;parser&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      }
+    ],
+    &quot;garbage&quot;: [],
+    &quot;noise&quot;: [],
+    &quot;social&quot;: [],
+    &quot;unclassified&quot;: [],
+    &quot;unresolved&quot;: [
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 32,
+        &quot;text&quot;: &quot;If the server fails, restart it.&quot;,
+        &quot;category&quot;: &quot;unresolved&quot;,
+        &quot;reason&quot;: &quot;no_supported_points&quot;,
+        &quot;point_ids&quot;: [],
+        &quot;retained&quot;: true
+      }
+    ],
+    &quot;policy&quot;: &quot;Preserve all text. Unclassified does not mean garbage. Annotations cannot alter points, grounding or gate status.&quot;
+  },
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;unresolved&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;missing_or_invalid_frames&quot;,
+      &quot;uncalibrated_cohort&quot;,
+      &quot;unresolved_reference_requires_ASK:it&quot;,
+      &quot;unsupported_read_structure&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;model-unresolved-v1:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre><h2>[transport-marker] Open the file.</h2><pre>{
+  &quot;metadata&quot;: {
+    &quot;producer&quot;: &quot;kobra&quot;,
+    &quot;read_version&quot;: &quot;rule-assignment-8&quot;,
+    &quot;read_configuration_id&quot;: &quot;7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;generative_assignment_used&quot;: false,
+    &quot;offset_unit&quot;: &quot;unicode_code_points&quot;,
+    &quot;point_count&quot;: 1,
+    &quot;relation_count&quot;: 0,
+    &quot;source_characters&quot;: 33,
+    &quot;accounted_characters&quot;: 33,
+    &quot;discarded_characters&quot;: 0,
+    &quot;semantic_coverage&quot;: &quot;not_measured&quot;,
+    &quot;caller&quot;: {},
+    &quot;caller_metadata_authority&quot;: &quot;descriptive_only_not_grounding_or_routing_authority&quot;,
+    &quot;distillation_version&quot;: &quot;resolve-distillation-2&quot;
+  },
+  &quot;text_accounting&quot;: {
+    &quot;partition&quot;: [
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 33,
+        &quot;text&quot;: &quot;[transport-marker] Open the file.&quot;,
+        &quot;category&quot;: &quot;point_evidence&quot;,
+        &quot;reason&quot;: &quot;covered_by_point_evidence_not_semantic_completeness&quot;,
+        &quot;point_ids&quot;: [
+          &quot;p1&quot;
+        ],
+        &quot;retained&quot;: true
+      }
+    ],
+    &quot;annotations&quot;: [
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 18,
+        &quot;text&quot;: &quot;[transport-marker]&quot;,
+        &quot;category&quot;: &quot;garbage&quot;,
+        &quot;reason&quot;: &quot;fixture transport marker, retained verbatim&quot;,
+        &quot;provenance&quot;: &quot;caller-fixture&quot;,
+        &quot;status&quot;: &quot;caller_annotation_not_semantically_verified&quot;,
+        &quot;retained&quot;: true,
+        &quot;overlaps_point_evidence&quot;: true
+      }
+    ],
+    &quot;open_items&quot;: [
+      {
+        &quot;kind&quot;: &quot;calibration&quot;,
+        &quot;reason&quot;: &quot;uncalibrated_cohort&quot;,
+        &quot;origin&quot;: &quot;gate&quot;,
+        &quot;status&quot;: &quot;open&quot;
+      }
+    ],
+    &quot;garbage&quot;: [
+      {
+        &quot;source_id&quot;: &quot;request&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 18,
+        &quot;text&quot;: &quot;[transport-marker]&quot;,
+        &quot;category&quot;: &quot;garbage&quot;,
+        &quot;reason&quot;: &quot;fixture transport marker, retained verbatim&quot;,
+        &quot;provenance&quot;: &quot;caller-fixture&quot;,
+        &quot;status&quot;: &quot;caller_annotation_not_semantically_verified&quot;,
+        &quot;retained&quot;: true,
+        &quot;overlaps_point_evidence&quot;: true
+      }
+    ],
+    &quot;noise&quot;: [],
+    &quot;social&quot;: [],
+    &quot;unclassified&quot;: [],
+    &quot;unresolved&quot;: [],
+    &quot;policy&quot;: &quot;Preserve all text. Unclassified does not mean garbage. Annotations cannot alter points, grounding or gate status.&quot;
+  },
+  &quot;state&quot;: {
+    &quot;read_route&quot;: &quot;ASK&quot;,
+    &quot;assignment_source&quot;: &quot;code&quot;,
+    &quot;ready_for_resolve&quot;: false,
+    &quot;reasons&quot;: [
+      &quot;uncalibrated_cohort&quot;
+    ],
+    &quot;distillation_diagnostics&quot;: [],
+    &quot;external_score&quot;: null,
+    &quot;score_kind&quot;: &quot;held_out_cohort_95pct_wilson_lower_bound&quot;,
+    &quot;cohort&quot;: &quot;code:C002-active-roles:assignment:7abd5007f37e48769fa562347e896d3445038d1146841d992918d1dd5342c0b2:memory-grounding-1&quot;,
+    &quot;semantic_reverified&quot;: false
+  }
+}</pre></html>

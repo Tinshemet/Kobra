@@ -1,0 +1,7 @@
+{
+  "actual_diff_reviewed": true,
+  "outcome": "Metadata namespaced, finite JSON enforced, annotations require exact spans and remain non-authoritative. Source partitions cover input without deletion. Existing handoff fields unchanged on 5000 saved results.",
+  "tests_run": 269,
+  "tests_passed": 268,
+  "tests_skipped": 1
+}
