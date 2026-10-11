@@ -1,0 +1,171 @@
+[
+  {
+    "group": "sets10-12",
+    "id": "S000217",
+    "text": "Is the key moved by Mira?",
+    "expected": [
+      {
+        "predicate": [
+          "moved"
+        ],
+        "agent": [
+          "Mira"
+        ],
+        "patient": [
+          "the key"
+        ],
+        "recipient": [
+          "NONE"
+        ],
+        "negation": [
+          "NONE"
+        ],
+        "condition": [
+          "NONE"
+        ],
+        "time": [
+          "NONE"
+        ],
+        "quantity": [
+          "NONE"
+        ],
+        "attribution": [
+          "NONE"
+        ],
+        "modality": [
+          "NONE"
+        ],
+        "act": [
+          "question"
+        ]
+      }
+    ],
+    "before_correct": false,
+    "after_correct": true,
+    "tick": true,
+    "regression": false,
+    "result": {
+      "route": "ASK",
+      "source": "Is the key moved by Mira?",
+      "proposal": {
+        "source": "Is the key moved by Mira?",
+        "frames": [
+          {
+            "predicate": "moved",
+            "agent": "Mira",
+            "patient": "the key",
+            "recipient": "NONE",
+            "negation": "NONE",
+            "condition": "NONE",
+            "time": "NONE",
+            "quantity": "NONE",
+            "attribution": "NONE",
+            "modality": "NONE",
+            "act": "question"
+          }
+        ],
+        "route": "code",
+        "rules": [
+          "C020-passive-question-noun-recovery",
+          "C001-passive-roles"
+        ],
+        "reasons": [],
+        "semantic_verified": false,
+        "version": "rule-assignment-7",
+        "surface_structure": {
+          "version": "surface-chunks-2",
+          "method": "deterministic_surface_rules",
+          "status": "unresolved",
+          "chunks": [],
+          "issues": [
+            "unsupported_initial_action"
+          ],
+          "protected_spans": [],
+          "source_ledger": [
+            {
+              "start": 0,
+              "end": 25,
+              "text": "Is the key moved by Mira?",
+              "label": "unassigned"
+            }
+          ]
+        },
+        "configuration_id": "ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc"
+      },
+      "reasons": [
+        "uncalibrated_cohort"
+      ],
+      "external_score": null,
+      "score_kind": "held_out_cohort_95pct_wilson_lower_bound",
+      "calibration_evidence": null,
+      "cohort": "code:C001-passive-roles+C020-passive-question-noun-recovery:assignment:ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc",
+      "model_self_confidence_used": false,
+      "context_ledger": {
+        "version": "context-ledger-1",
+        "previous_turns": [],
+        "world_entities": [],
+        "claims": [],
+        "history_supplied": false,
+        "world_supplied": false,
+        "semantics": "recorded evidence and caller assertions, not inferred or verified facts"
+      },
+      "assignment_source": "code",
+      "grounding_policy": "deterministic_evidence_or_ASK",
+      "resolver_blocked_reasons": [],
+      "code_proposal": {
+        "source": "Is the key moved by Mira?",
+        "frames": [
+          {
+            "predicate": "moved",
+            "agent": "Mira",
+            "patient": "the key",
+            "recipient": "NONE",
+            "negation": "NONE",
+            "condition": "NONE",
+            "time": "NONE",
+            "quantity": "NONE",
+            "attribution": "NONE",
+            "modality": "NONE",
+            "act": "question"
+          }
+        ],
+        "route": "code",
+        "rules": [
+          "C020-passive-question-noun-recovery",
+          "C001-passive-roles"
+        ],
+        "reasons": [],
+        "semantic_verified": false,
+        "version": "rule-assignment-7",
+        "surface_structure": {
+          "version": "surface-chunks-2",
+          "method": "deterministic_surface_rules",
+          "status": "unresolved",
+          "chunks": [],
+          "issues": [
+            "unsupported_initial_action"
+          ],
+          "protected_spans": [],
+          "source_ledger": [
+            {
+              "start": 0,
+              "end": 25,
+              "text": "Is the key moved by Mira?",
+              "label": "unassigned"
+            }
+          ]
+        },
+        "configuration_id": "ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc"
+      }
+    },
+    "score": {
+      "exact": true,
+      "slots_correct": 11,
+      "slots_total": 11,
+      "required_preserved": 4,
+      "required_total": 4,
+      "mismatches": [],
+      "unrepresented": false
+    }
+  }
+]

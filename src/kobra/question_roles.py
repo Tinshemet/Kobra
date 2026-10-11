@@ -2,7 +2,7 @@
 
 
 def passive_question_subject(doc, auxiliary, noun_chunks):
-    """Recognize BE + NP + [not] + VBN + by + NP + ? despite acl attachment.
+    """Recognize BE + NP + [not] + VBN + by + NP + ? despite bounded acl or attr attachment errors.
 
     Returns the lexical predicate and grammatical subject only when every segment
     fits this shape. Does not promote general relative clauses or answer questions.
@@ -12,10 +12,31 @@ def passive_question_subject(doc, auxiliary, noun_chunks):
         return None
     subjects=[t for t in auxiliary.children if t.dep_ in {'nsubj','nsubjpass'}]
     lexical=[t for t in doc if t.pos_=='VERB' and t!=auxiliary]
-    if len(subjects)!=1 or len(lexical)!=1:
+    if len(lexical)!=1:
         return None
-    subject=subjects[0];predicate=lexical[0]
-    if predicate.tag_!='VBN' or predicate.dep_!='acl' or predicate.head!=subject:
+    predicate=lexical[0]
+    if predicate.tag_!='VBN':
+        return None
+    if len(subjects)==1 and predicate.dep_=='acl' and predicate.head==subjects[0]:
+        subject=subjects[0]
+        patient=noun_chunks.get(subject.i)
+    elif not subjects and predicate.dep_=='attr' and predicate.head==auxiliary:
+        # Another observed parser error: determiner + noun is absorbed into
+        # the participle, with the noun mislabeled amod and no noun chunk.
+        # Recover only that complete two-token NP, never an arbitrary prefix.
+        end=predicate.i
+        if end>auxiliary.i+1 and doc[end-1].lower_=='not':
+            end-=1
+        patient=doc[auxiliary.i+1:end]
+        if len(patient)!=2:
+            return None
+        determiner,subject=patient
+        if (determiner.lower_ not in {'a','an','the'} or determiner.pos_!='DET'
+                or determiner.dep_!='det' or determiner.head!=subject
+                or subject.pos_!='NOUN' or subject.dep_!='amod' or subject.head!=predicate
+                or list(subject.children)!=[determiner]):
+            return None
+    else:
         return None
     agents=[t for t in predicate.children if t.dep_=='agent' and t.lower_=='by']
     if len(agents)!=1:
@@ -23,7 +44,7 @@ def passive_question_subject(doc, auxiliary, noun_chunks):
     by=agents[0];actors=[t for t in by.children if t.dep_=='pobj']
     if len(actors)!=1:
         return None
-    patient=noun_chunks.get(subject.i);actor=noun_chunks.get(actors[0].i)
+    actor=noun_chunks.get(actors[0].i)
     if patient is None or actor is None:
         return None
     if not (auxiliary.idx+len(auxiliary.text) <= patient.start_char < patient.end_char <= predicate.idx
@@ -37,7 +58,7 @@ def passive_question_subject(doc, auxiliary, noun_chunks):
         return None
     if text[actor.end_char:].strip()!='?':
         return None
-    return predicate,subject
+    return predicate,subject,patient
 
 
 DOUBLE_OBJECT_VERBS = frozenset({'give','show','send','hand','lend','offer','teach','tell'})

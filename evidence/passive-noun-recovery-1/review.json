@@ -1,0 +1,13 @@
+{
+  "actual_diff_reviewed": true,
+  "source_and_baseline_hashes_verified": true,
+  "regressions": 0,
+  "tests_run": 241,
+  "tests_passed": 240,
+  "tests_skipped": 1,
+  "notes": [
+    "Narrow attr/amod fallback; no lexical hardcoding.",
+    "Source reconstructed only from exact two-token determiner plus noun.",
+    "Original fresh captures unchanged; replay labeled development."
+  ]
+}

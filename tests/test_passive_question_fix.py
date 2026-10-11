@@ -66,3 +66,39 @@ class PassiveQuestionFixTests(unittest.TestCase):
         p=self.reader.assign('Alex shows a key.')
         self.assertNotIn('C019-ordered-double-object-roles',p['rules'])
         self.assertEqual(p['frames'][0]['patient'],'a key')
+
+    def test_absorbed_noun_passive_question(self):
+        p=self.reader.assign('Is the key moved by Mira?')
+        self.assertEqual(p['route'],'code')
+        self.assertIn('C020-passive-question-noun-recovery',p['rules'])
+        f=p['frames'][0]
+        self.assertEqual((f['act'],f['predicate'],f['agent'],f['patient']),
+                         ('question','moved','Mira','the key'))
+
+    def test_absorbed_noun_repair_rejects_other_clause_shapes(self):
+        for text in ('Is the key moved by Mira broken?',
+                     'Is the key that Mira moved broken?',
+                     'Is the key moved by the river?',
+                     'Is the key moved?', 'The key moved by Mira.'):
+            with self.subTest(text=text):
+                p=self.reader.assign(text)
+                self.assertNotIn('C020-passive-question-noun-recovery',p['rules'])
+
+    def test_attr_recovery_depends_on_structure_not_vocabulary(self):
+        from spacy.tokens import Doc
+        from kobra.question_roles import passive_question_subject
+        # A controlled parser-error fixture, not fresh accuracy evidence.
+        def document(words):
+            return Doc(self.reader.nlp.vocab, words=words,
+                heads=[0,2,3,0,3,4,0], deps=['ROOT','det','amod','attr','agent','pobj','punct'],
+                pos=['AUX','DET','NOUN','VERB','ADP','PROPN','PUNCT'],
+                tags=['VBZ','DT','NN','VBN','IN','NNP','.'],
+                lemmas=['be',words[1],words[2],words[3],'by',words[5],'?'])
+        for noun,verb,actor in [('parcel','carried','Ravi'),('engine','repaired','Sam')]:
+            d=document(['Is','the',noun,verb,'by',actor,'?'])
+            repaired=passive_question_subject(d,d[0],{c.root.i:c for c in d.noun_chunks})
+            self.assertIsNotNone(repaired)
+            predicate,subject,patient=repaired
+            self.assertEqual((predicate.text,subject.text,patient.text),(verb,noun,'the '+noun))
+        d=document(['Is','every','parcel','carried','by','Ravi','?'])
+        self.assertIsNone(passive_question_subject(d,d[0],{c.root.i:c for c in d.noun_chunks}))

@@ -7,7 +7,7 @@ import hashlib
 import json
 from .selection_read import SLOTS
 
-VERSION = 'rule-assignment-6'
+VERSION = 'rule-assignment-7'
 
 class RuleAssigner:
     def __init__(self, nlp=None, action_words=None, shared_patterns=None):
@@ -67,8 +67,10 @@ class RuleAssigner:
         repaired = passive_question_subject(doc, root, chunks)
         repaired_subject = None
         if repaired is not None:
-            root, repaired_subject = repaired
-            out['rules'].append('C018-passive-question-role-normalization')
+            root, repaired_subject, patient_chunk = repaired
+            chunks[repaired_subject.i] = patient_chunk
+            out['rules'].append('C020-passive-question-noun-recovery' if root.dep_ == 'attr'
+                                else 'C018-passive-question-role-normalization')
         if any(t.pos_ == 'VERB' and t != root for t in doc):
             return stop('additional lexical verb')
         # Only complete, contiguous noun chunks; do not guess attachment.

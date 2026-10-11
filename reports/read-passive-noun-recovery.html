@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>READ passive noun recovery</title><style>body{max-width:1000px;margin:30px auto;padding:20px;font:16px/1.6 system-ui;background:#112033;color:#edf3ff}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style><h1>READ: remaining passive-question fix</h1><p>C020 recovers a determiner + noun absorbed into a participle by the dependency parser. It requires the complete bounded passive question shape, explicit by-agent and no extra clause. No sentence or name is hardcoded.</p><p>The original fresh score remains 899/900 (99.89%). Results below are development replay after inspecting that failure, not a new fresh 100% claim. Final ASK routes still reflect absent calibration.</p><pre>{
+  &quot;sets10-12&quot;: {
+    &quot;cases&quot;: 900,
+    &quot;before_correct&quot;: 899,
+    &quot;after_correct&quot;: 900,
+    &quot;ticks&quot;: 1,
+    &quot;regressions&quot;: 0,
+    &quot;incorrect&quot;: 0,
+    &quot;unresolved&quot;: 0,
+    &quot;retained&quot;: 900,
+    &quot;final_routes&quot;: {
+      &quot;ASK&quot;: 900
+    }
+  },
+  &quot;sets6-9&quot;: {
+    &quot;cases&quot;: 1087,
+    &quot;before_correct&quot;: 1087,
+    &quot;after_correct&quot;: 1087,
+    &quot;ticks&quot;: 0,
+    &quot;regressions&quot;: 0,
+    &quot;incorrect&quot;: 0,
+    &quot;unresolved&quot;: 0,
+    &quot;retained&quot;: 1087,
+    &quot;final_routes&quot;: {
+      &quot;ASK&quot;: 1087
+    }
+  },
+  &quot;older600&quot;: {
+    &quot;cases&quot;: 600,
+    &quot;before_correct&quot;: 396,
+    &quot;after_correct&quot;: 396,
+    &quot;ticks&quot;: 0,
+    &quot;regressions&quot;: 0,
+    &quot;incorrect&quot;: 0,
+    &quot;unresolved&quot;: 204,
+    &quot;retained&quot;: 600,
+    &quot;final_routes&quot;: {
+      &quot;ASK&quot;: 600
+    }
+  }
+}</pre><h2>Is the key moved by Mira?</h2><pre>{
+  &quot;source&quot;: &quot;Is the key moved by Mira?&quot;,
+  &quot;frames&quot;: [
+    {
+      &quot;predicate&quot;: &quot;moved&quot;,
+      &quot;agent&quot;: &quot;Mira&quot;,
+      &quot;patient&quot;: &quot;the key&quot;,
+      &quot;recipient&quot;: &quot;NONE&quot;,
+      &quot;negation&quot;: &quot;NONE&quot;,
+      &quot;condition&quot;: &quot;NONE&quot;,
+      &quot;time&quot;: &quot;NONE&quot;,
+      &quot;quantity&quot;: &quot;NONE&quot;,
+      &quot;attribution&quot;: &quot;NONE&quot;,
+      &quot;modality&quot;: &quot;NONE&quot;,
+      &quot;act&quot;: &quot;question&quot;
+    }
+  ],
+  &quot;route&quot;: &quot;code&quot;,
+  &quot;rules&quot;: [
+    &quot;C020-passive-question-noun-recovery&quot;,
+    &quot;C001-passive-roles&quot;
+  ],
+  &quot;reasons&quot;: [],
+  &quot;semantic_verified&quot;: false,
+  &quot;version&quot;: &quot;rule-assignment-7&quot;,
+  &quot;surface_structure&quot;: {
+    &quot;version&quot;: &quot;surface-chunks-2&quot;,
+    &quot;method&quot;: &quot;deterministic_surface_rules&quot;,
+    &quot;status&quot;: &quot;unresolved&quot;,
+    &quot;chunks&quot;: [],
+    &quot;issues&quot;: [
+      &quot;unsupported_initial_action&quot;
+    ],
+    &quot;protected_spans&quot;: [],
+    &quot;source_ledger&quot;: [
+      {
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 25,
+        &quot;text&quot;: &quot;Is the key moved by Mira?&quot;,
+        &quot;label&quot;: &quot;unassigned&quot;
+      }
+    ]
+  },
+  &quot;configuration_id&quot;: &quot;ef79df860fbd8a8466f553aadda713f35de8ed72f9ae7b800e140bbe24c1c1bc&quot;
+}</pre><p>The earlier large gain came from repairing one repeated parser pattern in 144 passive questions, plus one double-object case. New lexical combinations in the same limited grammar then scored 899/900. This does not measure general language or memory-grounding accuracy.</p></html>
