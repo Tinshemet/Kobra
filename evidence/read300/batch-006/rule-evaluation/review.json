@@ -1,0 +1,29 @@
+{
+  "scope": [
+    "tools/generate_read300.py",
+    "tools/run_rule_batch.py"
+  ],
+  "actual_diff_review": true,
+  "checks": [
+    "300 captures complete, offline score recomputation matches summary",
+    "All source and frozen batch hashes unchanged",
+    "Serpent source projection and context labels recomputed separately",
+    "No overlap with earlier inputs; broad generator exclusion additionally covers JSON/JSONL development evidence and test/tool literals",
+    "No parser/rule/scorer fixes made from observed batch results"
+  ],
+  "limitations": [
+    "Same finite generator grammar; remaining eligible pool only contributed three families",
+    "No AI resolver, knowledge snapshot, real calibration, or independently labelled ASK reason gold",
+    "Earlier model/hybrid scores are not directly comparable",
+    "Literal-slot score excludes relationships, full scope, and complete semantic preservation"
+  ],
+  "results": {
+    "correct_code": 273,
+    "total": 300,
+    "unresolved": 27,
+    "wrong_code": 0,
+    "source_retained": 300,
+    "model_calls": 0
+  },
+  "freshness_adjustment": "Expanded deduplication before generation, without reading READ output; no performance filtering or context exclusions."
+}

@@ -1,0 +1,26 @@
+{
+  "cases": 27,
+  "by_code_reason": {
+    "additional lexical verb": 26,
+    "multiple role candidates": 1
+  },
+  "findings": [
+    {
+      "count": 26,
+      "family": "passive questions",
+      "observed_reason": "additional lexical verb",
+      "example": "Are the sensors seen by Alex?",
+      "next_investigation": "Inspect learned parser root/auxiliary assignments before changing passive rule."
+    },
+    {
+      "count": 1,
+      "family": "ditransitive assertion",
+      "observed_reason": "multiple role candidates",
+      "example": "Alex shows Mira a key.",
+      "next_investigation": "Inspect recipient versus patient dependency candidates."
+    }
+  ],
+  "fixes_applied_during_or_after_run": [],
+  "new_rules_exercised": false,
+  "new_rule_coverage_note": "No C016 shared-patient cases; no knowledge snapshots or multi-turn contexts supplied."
+}

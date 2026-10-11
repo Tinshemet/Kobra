@@ -1,0 +1,7 @@
+{
+  "source_projection_recomputed": true,
+  "context_labels_recomputed": true,
+  "unique_normalized": 300,
+  "overlap_with_prior_input_files": 0,
+  "note": "Generator manifest additionally records broader JSON/JSONL and test/tool literal exclusion before generation."
+}

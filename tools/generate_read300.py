@@ -1,5 +1,6 @@
 """Generate fresh batches through Serpent with independent pre-reader context accounting."""
 import argparse
+import ast
 from collections import Counter
 from datetime import datetime, timezone
 import hashlib
@@ -32,6 +33,8 @@ def known_inputs():
         if isinstance(value, dict):
             if isinstance(value.get('text'), str):
                 known.add(normalized(value['text']))
+            if isinstance(value.get('source'), str):
+                known.add(normalized(value['source']))
             if isinstance(value.get('sentence'), str):
                 known.add(normalized(value['sentence']))
             for v in value.values():
@@ -39,12 +42,21 @@ def known_inputs():
         elif isinstance(value, list):
             for v in value:
                 visit(v)
-    paths = list((ROOT/'tests/fixtures').glob('*.json'))
-    paths += list((ROOT/'evidence').rglob('inputs.json'))
-    paths += list((ROOT/'evidence/arrangement-development-20261009').glob('*case*.json'))
-    paths += list((ROOT/'benchmarks/read300').glob('*development*.json'))
+    paths = list((ROOT/'tests/fixtures').rglob('*.json'))
+    paths += list((ROOT/'evidence').rglob('*.json'))
+    paths += list((ROOT/'benchmarks').rglob('*.json'))
     for path in paths:
         visit(json.loads(path.read_text()))
+    for path in (ROOT/'evidence').rglob('*.jsonl'):
+        for line in path.read_text().splitlines():
+            if line.strip():
+                visit(json.loads(line))
+    # Include explicit examples in tests/tools, not only archived batch inputs.
+    for folder in ('tests', 'tools'):
+        for path in (ROOT/folder).rglob('*.py'):
+            for node in ast.walk(ast.parse(path.read_text())):
+                if isinstance(node, ast.Constant) and isinstance(node.value, str):
+                    known.add(normalized(node.value))
     for line in ('Close the gate.', 'Never paint the door.', 'If Sam agrees, send Jo the parcel.', 'Rin says the motor stopped.'):
         known.add(normalized(line))
     return known

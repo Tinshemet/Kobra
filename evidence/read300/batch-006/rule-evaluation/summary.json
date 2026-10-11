@@ -1,0 +1,60 @@
+{
+  "cases": 300,
+  "code_routed": 273,
+  "code_correct": 273,
+  "code_incorrect": 0,
+  "unresolved": 27,
+  "correct_code_over_all": 0.91,
+  "code_precision": 1.0,
+  "source_retained": 300,
+  "required_slots_preserved": 1381,
+  "required_slots_total": 1501,
+  "new_model_calls": 0,
+  "AI_correct": null,
+  "correct_ASK": null,
+  "final_routes": {
+    "ASK": 300
+  },
+  "gate_reasons": {
+    "uncalibrated_cohort": 300,
+    "missing_or_invalid_frames": 27,
+    "unsupported_read_structure": 27
+  },
+  "context_flagged": 0,
+  "context_breakdown": {
+    "requires_context": {
+      "cases": 0,
+      "code_correct": 0
+    },
+    "no_external_requirement_identified": {
+      "cases": 300,
+      "code_correct": 273
+    }
+  },
+  "by_group": {
+    "scope": {
+      "cases": 121,
+      "code_correct": 121
+    },
+    "verb_frames": {
+      "cases": 26,
+      "code_correct": 25
+    },
+    "voice_tense": {
+      "cases": 153,
+      "code_correct": 127
+    }
+  },
+  "rule_coverage": {
+    "C002-active-roles": 216,
+    "C003-adjective-state": 11,
+    "C001-passive-roles": 57
+  },
+  "adapter_errors": 0,
+  "runtime_errors": 0,
+  "seconds": 0.6639018720452441,
+  "scope": "Fresh sentences within existing Serpent grammar; bounded literal-slot scoring, not complete semantic accuracy.",
+  "configuration": "Current RuleAssigner + GatedRuleReader; no live resolver, calibration or knowledge snapshot supplied.",
+  "ASK_note": "No independent case-specific ASK-reason gold for this batch. Report routes/context flags, not a fabricated correct-ASK score.",
+  "comparison_note": "Earlier 86.67% involved a live AI arranger; 97.67% was a reused-data hybrid simulation. Neither is this configuration."
+}
